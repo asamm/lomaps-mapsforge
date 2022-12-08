@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px"
+	 height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="Vrstva_3">
+	<path id="bg" fill="#FFFFFF" d="M54,44v-4h-2V28v-2v-2v-2h-0.174C50.59,14.12,42.18,8,32,8s-18.59,6.12-19.826,14H12v2v2v2v12h-2v4
+		H8v4v4v4h4h40h4v-4v-4v-4H54z"/>
+</g>
+<g id="Vrstva_3_kopie">
+	<g>
+		<path fill="#755741" d="M32,12c-8.836,0-16,5.373-16,12h32C48,17.373,40.837,12,32,12z"/>
+	</g>
+	<g>
+		<rect x="16" y="26" fill="#755741" width="8" height="16"/>
+	</g>
+	<g>
+		<rect x="40" y="26" fill="#755741" width="8" height="16"/>
+	</g>
+	<g>
+		<rect x="28" y="26" fill="#755741" width="8" height="16"/>
+	</g>
+	<g>
+		<polygon fill="#755741" points="50,48 50,44 14,44 14,48 12,48 12,52 52,52 52,48 		"/>
+	</g>
+</g>
+</svg>

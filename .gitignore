@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+__init__.py
+
+# Intellij
+*.iml
+.idea/
+
+# temp file
+base_output.xml

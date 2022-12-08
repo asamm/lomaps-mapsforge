@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px"
+	 height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="Vrstva_3">
+	<path id="bg" fill="#FFFFFF" d="M52,28h-4h-1.073c-0.274-0.473-0.607-0.905-0.97-1.311C47.246,24.777,48,22.475,48,20
+		c0-6.617-5.383-12-12-12c-3.075,0-5.875,1.172-8,3.081C25.875,9.172,23.075,8,20,8C13.383,8,8,13.383,8,20
+		c0,2.472,0.752,4.771,2.039,6.683C8.775,28.098,8,29.958,8,32v16c0,4.411,3.589,8,8,8h24c2.955,0,5.541-1.61,6.927-4H48h4h4v-4V32
+		v-4H52z"/>
+</g>
+<g id="Vrstva_3_kopie">
+	<g>
+		<circle fill="#755741" cx="20" cy="20" r="8"/>
+	</g>
+	<g>
+		<circle fill="#755741" cx="36" cy="20" r="8"/>
+	</g>
+	<g>
+		<path fill="#755741" d="M48,32l-4,2.667V32c0-2.209-1.791-4-4-4H16c-2.209,0-4,1.791-4,4v16c0,2.209,1.791,4,4,4h24
+			c2.209,0,4-1.791,4-4v-2.667L48,48h4V32H48z"/>
+	</g>
+</g>
+</svg>
