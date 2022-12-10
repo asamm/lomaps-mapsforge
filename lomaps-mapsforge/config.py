@@ -141,8 +141,6 @@ class TemplateVariables(Template):
     railway_spur_narrow_width_z16 = 	2
 
     ### AERIALWAYS
-    #color_aerialway_core = "#3a3a3a"
-    #color_aerialway_core = "#666666"
     color_aerialway_core = "#4d4d4d"
     color_aerialway_cablecar_fill = "#EDEDED"
 
@@ -175,8 +173,14 @@ class TemplateVariables(Template):
     color_cycle_icn_ncn = '#A90073'
     color_cycle_text_ref = '#B11BB9'
 
-
+    ##############
     ## TEXT & SYMBOL PRIORITIES
+
+    text_halo = 4
+    street_text_size_z15 = 11
+    street_text_size_z18 = 11 * scale_factor * scale_factor
+
+    # Priorities
 
     priority_city_1 = 500
     priority_city_2 = 490
@@ -187,6 +191,11 @@ class TemplateVariables(Template):
     priority_suburb = 440
     priority_hamlet = 430
     priority_locality = 420
+    priority_street = 400
+
+    priority_tourist_route_name = 200
+
+
 
     priority_river = 390
     prioriry_stream =  380

@@ -190,7 +190,11 @@ class GeneratorActions:
             rule.line.extend([bridge_case, bridge_core])
 
     def add_osmc_colors(self, source_rule):
-
+        """
+        For every defined color use original definition (for red color) and duplicate it
+        :param source_rule:
+        :return:
+        """
         color_rules = []
 
         for key in TemplateVariables.osmc_colors:
@@ -204,7 +208,12 @@ class GeneratorActions:
         return source_rule
 
     def create_osmc_color_definition (self, source_rule, color_key):
-
+        """
+        Replace the color line from original definition
+        :param source_rule: xml template section
+        :param color_key: color to set
+        :return:
+        """
         if source_rule.k == 'osmc_color':
             source_rule.v = color_key
 
@@ -212,13 +221,43 @@ class GeneratorActions:
             # inherit zoom and parent rules
             self.create_osmc_color_definition(child_rule, color_key)
 
+        for pathText in source_rule.path_text:
+            pathText.fill = TemplateVariables.osmc_colors[color_key]
+
         for line in source_rule.line:
+
             line.stroke = TemplateVariables.osmc_colors[color_key]
             line.stroke_linecap = Cap.BUTT
 
+            if color_key == 'green':
+
+                # remove the line from original rule
+                source_rule.line.remove(line)
+
+                # part for standard green
+                rule = Rule()
+                rule.e = 'way'
+                rule.k = 'osmc_foreground'
+                rule.v = '~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x'
+
+                # part for educational green lines
+                rule_edu = copy.deepcopy(rule)
+                rule_edu.v = 'green_backslash'
+                line_edu = copy.deepcopy(line)
+                line_edu.stroke_linecap = Cap.ROUND
+                line_edu.stroke_dasharray = '1,8,8,8'
+                line_edu.stroke_width = line_edu.stroke_width * 0.75
+
+                # add line into the new rule
+                rule.line.append(line)
+                rule_edu.line.append(line_edu)
+
+                # append the new rules into parent rule
+                source_rule.rule.append(rule)
+                source_rule.rule.append(rule_edu)
+
         return source_rule
 
-    ## --------------------------
 
     def create_cycle_sections(self, source_rule: Rule, cycle_line_color):
         """

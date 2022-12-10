@@ -1268,27 +1268,33 @@ version 2.4.0
 								<rule e="way" k="osmc_order" v="~">
 									<rule e="way" k="osmc_highway" v="track|~">
 										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" />
+										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="unclassified">
 										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16"/>
+										<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="class">
 										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" />
+										<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="1">
 									<rule e="way" k="osmc_highway" v="track|~">
 										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="unclassified">
 										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+										<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="class">
 										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
+										<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="2">
@@ -1326,27 +1332,33 @@ version 2.4.0
 								<rule e="way" k="osmc_order" v="~">
 									<rule e="way" k="osmc_highway" v="track|~">
 										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="unclassified">
 										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18"/>
+										<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="class">
 										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="1">
 									<rule e="way" k="osmc_highway" v="track|~">
 										<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($track_grade3_4_width_z15) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="unclassified">
 										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
 
 									<rule e="way" k="osmc_highway" v="class">
 										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="2">
@@ -1958,20 +1970,20 @@ version 2.4.0
 						</rule>
 						<rule e="way" k="highway" v="path|via_ferrata|bridleway">
 							<line stroke="$color_path" stroke-width="0.3" stroke-dasharray="4,3" stroke-linecap="butt"/>
-							<rule e="way" k="*" v="*" zoom-min="14">
-								<pathText k="name" dy="-2.3" font-style="bold" font-size="8" stroke="#ffffff" stroke-width="1.5"/>
+							<rule e="way" k="*" v="*" zoom-min="15">
+								<pathText k="name" dy="-2.3" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="$text_halo"/>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="cycleway" zoom-max="15">
 							<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
-							<rule e="way" k="*" v="*" zoom-min="14">
-								<pathText k="name" dy="2.3" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="1.5"/>
+							<rule e="way" k="*" v="*" zoom-min="15">
+								<pathText k="name" dy="2.3" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="$text_halo"/>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="pedestrian">
 							<line stroke="$color_pedestrian" stroke-width="0.3"/>
-							<rule e="way" k="*" v="*" zoom-min="14">
-								<pathText k="name" font-style="bold" font-size="8" stroke="#FFFFFF" stroke-width="4.0"/>
+							<rule e="way" k="*" v="*" zoom-min="16">
+								<pathText k="name" font-style="bold" font-size="10" stroke="#FFFFFF" stroke-width="$text_halo"/>
 							</rule>
 						</rule>
 					</rule>
@@ -2107,29 +2119,22 @@ version 2.4.0
 						</rule>
 						<rule e="way" k="highway" v="cycleway" >
 							<line stroke="#ffffff" stroke-width="$track_grade1_width_z16"/>
-							<pathText k="name" dy="2.3" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="1.5"/>
 						</rule>
 						<rule e="way" k="highway" v="track">
 							<rule e="way" k="tracktype" v="grade1">
 								<line stroke="#ffffff" stroke-width="$track_grade1_width_z16"/>
-								<rule cat="base_summer" e="way" k="*" v="*" zoom-min="15">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
+								<rule cat="base_summer" e="way" k="*" v="*" zoom-min="16">
+									<pathText k="name" font-style="normal" font-size="$street_text_size_z15" stroke="#ffffff" stroke-width="$text_halo"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade2">
 								<line stroke="$color_track" stroke-width="$track_grade2_width_z15"/>
-								<rule cat="base_summer" e="way" k="*" v="*" zoom-min="15">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
+								<rule cat="base_summer" e="way" k="*" v="*" zoom-min="16">
+									<pathText k="name" font-style="normal" font-size="$street_text_size_z15" stroke="#ffffff" stroke-width="$text_halo"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade3|grade4">
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z15" stroke-dasharray="2.5,1.5" scale="all"/>
-								<rule cat="base_summer" e="way" k="*" v="*" zoom-min="15">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
-								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade5">
 								<line stroke="$color_track" stroke-width="$track_grade5_width_z15" stroke-dasharray="1.5,1" scale="all"/>
@@ -2138,10 +2143,8 @@ version 2.4.0
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z15" stroke-dasharray="2.5,1.5"  scale="all"/>
 							</rule>
 						</rule>
-						<rule e="way" k="*" v="residential|living_street|service|unclassified|road|service">
+						<rule e="way" k="*" v="residential|living_street|service|unclassified|road|service|steps">
 							<line stroke="#ffffff" stroke-width="$unclassified_width_z16"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold" font-size="8" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 
 						<rule e="way" k="highway" v="tertiary_link">
@@ -2161,36 +2164,47 @@ version 2.4.0
 						</rule>
 						<rule e="way" k="highway" v="raceway">
 							<line stroke="#fff6e6" stroke-width="$unclassified_width_z16"/>
-							<pathText k="name" font-style="bold" font-size="8" stroke="#FFFFFF" stroke-width="4.0"/>
+							<pathText k="name" font-style="bold" font-size="10" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 						<rule e="way" k="highway" v="tertiary">
 							<line stroke="$color_tertiary" stroke-width="$tertiary_width_z16"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold" font-size="8" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 						<rule e="way" k="highway" v="secondary">
 							<line stroke="$color_secondary" stroke-width="$secondary_width_z16"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold" font-size="10" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 						<rule e="way" k="highway" v="primary">
 							<line stroke="$color_primary" stroke-width="$primary_width_z16"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold" font-size="10" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 						<rule e="way" k="highway" v="trunk">
 							<line stroke="$color_trunk" stroke-width="$trunk_width_z16"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold" font-size="11" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 						<rule e="way" k="highway" v="motorway">
 							<line stroke="$color_motorway" stroke-width="$motorway_width_z16" stroke-linecap="round"/>
 						</rule>
 					</rule>
+
+					<!-- highway names of streets -->
+					<rule e="way" k="highway" v="residential|living_street|service|unclassified|road">
+						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+							<pathText k="name" font-style="normal" font-size="$street_text_size_z15" fill="#000000" repeat-gap="300" stroke="#FFFFFF" stroke-width="${$text_halo/1.2}" priority="$priority_street"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="18" >
+							<pathText k="name" font-style="normal" font-size="${$street_text_size_z18/1.2}" fill="#000000" repeat-gap="300" stroke="#FFFFFF" stroke-width="$text_halo" priority="$priority_street"/>
+						</rule>
+					</rule>
+					<rule e="way" k="highway" v="trunk|primary|secondary|tertiary" zoom-min="15">
+						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+							<pathText k="name" font-style="normal" font-size="$street_text_size_z15" fill="#000000" repeat-gap="300" stroke="#FFFFFF" stroke-width="${$text_halo/1.2}" priority="$priority_street"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="18" >
+							<pathText k="name" font-style="normal" font-size="$street_text_size_z18" fill="#000000" repeat-gap="300" stroke="#FFFFFF" stroke-width="$text_halo" priority="$priority_street"/>
+						</rule>
+					</rule>
+
 					<!-- highway one-way markers -->
 					<rule e="way" k="highway" v="*" zoom-min="15">
 						<rule e="way" k="oneway" v="yes|true" zoom-min="15">
-							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="18" repeat="true" repeat-gap="100" position="center"/>
+							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" position="center"/>
 						</rule>
 					</rule>
 					<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
@@ -2203,6 +2217,7 @@ version 2.4.0
 					</rule>
 				</rule>
 				<!-- END off no area core for topo highways-->
+
 				<!-- CITY Highways core   -->
 				<rule cat="highways_city" e="way" k="area" v="~|no|false">
 					<rule e="way" k="*" v="*" zoom-max="8">
@@ -2520,7 +2535,7 @@ version 2.4.0
 					<!-- highway one-way markers -->
 					<rule e="way" k="highway" v="*" zoom-min="15">
 						<rule e="way" k="oneway" v="yes|true" zoom-min="15">
-							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="21" repeat="true" repeat-gap="150" position="center"/>
+							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" position="center"/>
 						</rule>
 					</rule>
 				</rule>
@@ -4821,10 +4836,10 @@ version 2.4.0
 		<rule e="any" k="place" v="city" zoom-max="12">
 			<rule e="any" k="place" v="city" zoom-min="6" zoom-max="9">
 				<!--#TODO removed attribute: upper-case="true"-->
-				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="14" fill="#000000" stroke="#FFFFFF" stroke-width="3" priority="$priority_city_1"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="14" fill="#000000" stroke="#FFFFFF" stroke-width="$text_halo" priority="$priority_city_1"/>
 			</rule>
 			<rule e="any" k="place" v="city" zoom-min="10" zoom-max="13">
-				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="22" fill="#000000" stroke="#FFFFFF" stroke-width="3" priority="$priority_city_1"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="24" fill="#000000" stroke="#FFFFFF" stroke-width="${$text_halo*1.2}" priority="$priority_city_1"/>
 			</rule>
 
 			<rule e="any" k="*" v="*" zoom-min="6" zoom-max="9">
@@ -4834,13 +4849,13 @@ version 2.4.0
 
 		<rule e="any" k="place" v="town" zoom-min="8" zoom-max="14">
 			<rule e="any" k="*" v="*" zoom-min="8" zoom-max="9">
-				<caption k="name" dy="12" font-family="sans_serif"  font-size="12" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_town_1"/>
+				<caption k="name" dy="10" font-family="sans_serif"  font-size="12" fill="#000000" stroke="#ffffff" stroke-width="${$text_halo}" priority="$priority_town_1"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="11">
-				<caption k="name" dy="12" font-family="sans_serif"  font-size="16" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_town_1"/>
+				<caption k="name" dy="12" font-family="sans_serif"  font-size="16" fill="#000000" stroke="#ffffff" stroke-width="${$text_halo*1.2}" priority="$priority_town_1"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="12" zoom-max="14">
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="21" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_town_1"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="24" fill="#000000" stroke="#ffffff" stroke-width="${$text_halo*1.2}" priority="$priority_town_1"/>
 			</rule>
 
 			<!-- circles for towns -->
@@ -4859,36 +4874,36 @@ version 2.4.0
 		<rule e="any" k="place" v="village" zoom-min="12" zoom-max="16">
 			<rule e="any" k="*" v="*" zoom-min="12" zoom-max="13">
 				<!--#TODO removed attribute: scale-font-size="13,1.1"-->
-				<caption k="name" font-family="sans_serif" font-size="18" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_village_1"/>
+				<caption k="name" font-family="sans_serif" font-size="17" fill="#000000" stroke="#ffffff" stroke-width="${$text_halo}" priority="$priority_village_1"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="14" zoom-max="16">
 				<!--#TODO removed attribute: scale-font-size="15,1.2"-->
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="20" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_village_1"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="20" fill="#000000" stroke="#ffffff" stroke-width="$text_halo" priority="$priority_village_1"/>
 			</rule>
 		</rule>
 
 		<rule e="any" k="place" v="suburb" zoom-min="13" zoom-max="16">
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-				<caption k="name" font-size="14" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_suburb"/>
+				<caption k="name" font-size="14" fill="#000000" stroke="#ffffff" stroke-width="${$text_halo}" priority="$priority_suburb"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 				<!--#TODO removed attribute: upper-case="true"-->
-				<caption k="name" font-size="15" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_suburb"/>
+				<caption k="name" font-size="15" fill="#000000" stroke="#ffffff" stroke-width="$text_halo" priority="$priority_suburb"/>
 			</rule>
 		</rule>
 
 		<rule e="any" k="place" v="hamlet" zoom-min="13" zoom-max="16">
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-				<caption k="name" font-family="sans_serif" font-size="15" fill="#000000" stroke="#ffffff" stroke-width="2.5" priority="$priority_hamlet"/>
+				<caption k="name" font-family="sans_serif" font-size="15" fill="#000000" stroke="#ffffff" stroke-width="$text_halo" priority="$priority_hamlet"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="17" fill="#000000" stroke="#ffffff" stroke-width="3" priority="$priority_hamlet"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="17" fill="#000000" stroke="#ffffff" stroke-width="$text_halo" priority="$priority_hamlet"/>
 			</rule>
 		</rule>
 
 		<!-- TODO country="*|!ES" -->
-		<rule e="any" k="place" v="locality" zoom-min="14">
-			<caption k="name" font-size="12" fill="#000000" stroke="#ffffff" stroke-width="2.5" priority="$priority_locality"/>
+		<rule e="any" k="place" v="locality" zoom-min="15">
+			<caption k="name" font-size="12" fill="#000000" stroke="#ffffff" stroke-width="${$text_halo}" priority="$priority_locality"/>
 		</rule>
 
 		<rule e="any" k="place" v="island" zoom-min="8" zoom-max="14">
