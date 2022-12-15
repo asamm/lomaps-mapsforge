@@ -36,6 +36,7 @@ class SortAttributes(XMLFormatter):
                 new_order.append(pair)
         return new_order
 
+
 class GeneratorActions:
 
     def __init__(self, options: Options):
@@ -47,6 +48,8 @@ class GeneratorActions:
             TemplateVariables.gen_action_create_highway_tunnels,
             TemplateVariables.gen_action_create_railway_bridge,
             TemplateVariables.gen_action_osmc_colors,
+            TemplateVariables.gen_action_sac_scale2lwn,
+
             TemplateVariables.gen_action_cycle_icn,
             TemplateVariables.gen_action_cycle_basic_to_mtb_scale_0,
             TemplateVariables.gen_action_osmc_symbols_order,
@@ -87,6 +90,9 @@ class GeneratorActions:
 
                 elif action_name == TemplateVariables.gen_action_osmc_colors:
                     source_rule = self.add_osmc_colors(source_rule)
+
+                elif action_name == TemplateVariables.gen_action_sac_scale2lwn:
+                    source_rule = self.gen_action_sac_scale2lwn(source_rule)
 
                 elif action_name == TemplateVariables.gen_action_osmc_symbols_order:
                     source_rule = self.add_osmc_symbols_order(source_rule)
@@ -305,7 +311,59 @@ class GeneratorActions:
 
         return source_rule
 
+    def gen_action_sac_scale2lwn(self, source_rule:Rule) -> Rule:
 
+        # filter rules for sac_scale different to "sac_scale=hiking" (only style for hiking sac is used as style for LWN pr IWN)
+
+        if source_rule.k == "osmc_order":
+            filtered_rules = [child_rule for child_rule in source_rule.rule if self._is_sac_scale_hiking(child_rule)]
+            source_rule.rule = filtered_rules
+
+        for child_rule in source_rule.rule:
+            # inherit zoom and parent rules
+            self.gen_action_sac_scale2lwn(child_rule)
+        return source_rule
+
+    def _is_sac_scale_hiking(self, rule: Rule):
+        if rule.k == "sac_scale":
+            return rule.v == "~" or rule.v == "hiking"
+
+        return False
+
+
+
+class Osmc2SacScale():
+
+    def add_sac_scale(self, source_rule, parent_rule = None, zoom_min=0):
+
+        if source_rule.zoom_min and source_rule.zoom_min > zoom_min:
+            zoom_min = source_rule.zoom_min
+
+        # iterate child rules
+        for child_rule in source_rule.rule:
+
+            if self._is_osmc_order_rule(child_rule):
+                # this rule will be converted into SAC SCALE
+                rule = copy.deepcopy(child_rule)
+
+                self._order_rule_2_sac(rule)
+
+                sac_rules = self._order2sac(child_rule)
+
+
+            # inherit zoom and parent rules
+            self.convert_to_highway_tunnel(child_rule, parent_rule, zoom_min)
+
+
+    def _is_osmc_order_rule(self, rule: Rule):
+        return rule.k == "osmc_order" and (rule.v == "~" or rule.v == "1")
+
+    def _order_rule_2_sac(self, rule):
+
+        pass
+
+
+##################################
 def transform(base_xml, result_xml):
     """
     Read input template xml with python variables and replace variables by value using cheetah

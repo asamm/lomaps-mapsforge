@@ -149,9 +149,19 @@ class TemplateVariables(Template):
 
     # Hiking
 
-    osmc_hiking_width_z13 = 1.2
-    osmc_hiking_width_z16 = 0.7
-    osmc_hiking_width_z18 = 0.4
+    osmc_hiking_width_z13 = 1.1
+    osmc_hiking_width_z16 = 0.6
+    osmc_hiking_width_z18 = 0.3
+
+    # sac scales
+    sac_scale_T2_dash_z12 = "11,9"
+    sac_scale_T3_dash_z12 = "1,5"
+
+    sac_scale_T2_dash_z16 = "11,9"
+    sac_scale_T3_dash_z16 = "0.5,7"
+
+    sac_scale_T2_dash_z18 = "11,9"
+    sac_scale_T3_dash_z18 = "1,10"
 
     osmc_colors = {
         "red": "#EA3200",
@@ -211,6 +221,9 @@ class TemplateVariables(Template):
 
     # OSMC colored lines
     gen_action_osmc_colors = "action_create_osmc_colors"
+    # replace osmc by sac scale
+    gen_action_sac_scale2lwn = "action_sac_scales_to_lwn"
+
 
     # Duplicate style of RCN to ICN cycle routes to change it's color
     gen_action_cycle_icn = "action_create_cycle_icn"
