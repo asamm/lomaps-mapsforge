@@ -192,13 +192,14 @@ version 2.4.0
 			</rule>
 		</rule>
 		<!-- forest -->
-		<rule e="way" k="natural|landuse|wood" v="forest|wood|scrub" zoom-min="10" closed="yes">
+		<rule e="way" k="natural|landuse|wood" v="forest|wood|scrub" zoom-min="9" closed="yes">
 			<!-- wood for SUMMER -->
-			<rule cat="base_summer" e="way" k="*" v="*" zoom-min="10">
-				<rule e="way" k="*" v="*" zoom-max="12">
-					<area fill="#cce1b2"/>
+			<rule cat="base_summer" e="way" k="*" v="*">
+				<rule e="way" k="*" v="*" zoom-max="13">
+					<area fill="#C9DEA6"/>
 				</rule>
-				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="13">
+				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
+					<!--					<area fill="#80a0ca6c"/>-->
 					<area fill="#80a0ca6c"/>
 					<rule e="way" k="leaf_type" v="*" zoom-min="15">
 						<rule e="way" k="leaf_type" v="needleleaved">
@@ -1214,10 +1215,10 @@ version 2.4.0
 						</rule>
 					</rule>
 				</rule>
-				<!-- OFFSET HIKING International, regional network -->
+				<!-- OFFSET HIKING International, regional network that not defined by OSMC symbol or color -->
 				<rule cat="hik_routes" e="way" k="route" v="hiking|foot">
 					<rule e="way" k="osmc" v="~">
-						<!-- copy SAC section -->
+						<!-- copy SAC section these routes are drown as red lines-->
 						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" closed="any">
 							<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 								<rule e="way" k="sac_scale" v="hiking" zoom-min="0" zoom-max="127" closed="any">
@@ -3222,7 +3223,7 @@ version 2.4.0
 							<rule e="way" k="highway" v="unclassified" zoom-min="12">
 								<line stroke="#8a8a8a" stroke-width="0.6"/>
 							</rule>
-							<rule e="way" k="highway" v="tertiary|tertiary_link">
+							<rule e="way" k="highway" v="tertiary|tertiary_link" zoom-min="12">
 								<line stroke="#707070" stroke-width="4.2"/>
 							</rule>
 							<rule e="way" k="highway" v="secondary|secondary_link">
@@ -3495,7 +3496,7 @@ version 2.4.0
 						</rule>
 						<rule e="way" k="highway" v="path|via_ferrata|bridleway">
 							<line stroke="#747474" stroke-width="0.3" stroke-dasharray="4,3" stroke-linecap="butt"/>
-							<rule e="way" k="*" v="*" zoom-min="15">
+							<rule e="way" k="*" v="via_ferrata" zoom-min="15">
 								<pathText k="name" dy="-2.3" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
 							</rule>
 						</rule>
@@ -4079,34 +4080,34 @@ version 2.4.0
 				<!-- highway tunnel casings -->
 				<rule e="way" k="*" v="*" zoom-min="11" zoom-max="12" closed="any">
 					<rule e="way" k="highway" v="unclassified" zoom-min="12" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
-					<rule e="way" k="highway" v="tertiary|tertiary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#707070" stroke-width="4.2" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+					<rule e="way" k="highway" v="tertiary|tertiary_link" zoom-min="12" zoom-max="127" closed="any">
+						<line dy="0.0" scale="stroke" stroke="#90707070" stroke-width="4.2" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary|secondary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#938C7A" stroke-width="5.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90938C7A" stroke-width="5.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary|primary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#C6523D" stroke-width="6.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90C6523D" stroke-width="6.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk|trunk_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="6.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="6.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway|motorway_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="7.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="7.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" closed="any">
 					<rule e="way" k="highway" v="residential" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="127" closed="any">
 						<rule e="way" k="highway" v="living_street|service|unclassified|road" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="highway" v="cycleway|pedestrian" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="highway" v="path|via_ferrata" zoom-min="0" zoom-max="127" closed="any">
 							<rule e="way" k="sac_scale" v="~" zoom-min="0" zoom-max="127" closed="any">
@@ -4115,56 +4116,56 @@ version 2.4.0
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="raceway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#707070" stroke-width="2.1" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90707070" stroke-width="2.1" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#707070" stroke-width="2.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90707070" stroke-width="2.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#938C7A" stroke-width="2.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90938C7A" stroke-width="2.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#938C7A" stroke-width="2.9" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90938C7A" stroke-width="2.9" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#C6523D" stroke-width="2.9000000000000004" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90C6523D" stroke-width="2.9000000000000004" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#C6523D" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90C6523D" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="3.3000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="3.3000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="4.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="4.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="3.3000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="3.3000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="4.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="4.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
 					<rule e="way" k="highway" v="cycleway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.8200000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.8200000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="track" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="tracktype" v="grade1" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.8200000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.8200000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="residential" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="1.1533333333333333" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.1533333333333333" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="living_street|service|unclassified|road" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="1.2333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.2333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="pedestrian" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="path|via_ferrata" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="sac_scale" v="~" zoom-min="0" zoom-max="127" closed="any">
@@ -4172,196 +4173,196 @@ version 2.4.0
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="raceway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="1.2333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.2333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#707070" stroke-width="1.2192" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90707070" stroke-width="1.2192" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#707070" stroke-width="1.424" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90707070" stroke-width="1.424" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#938C7A" stroke-width="1.424" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90938C7A" stroke-width="1.424" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#938C7A" stroke-width="1.6800000000000002" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90938C7A" stroke-width="1.6800000000000002" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#C6523D" stroke-width="1.6288" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90C6523D" stroke-width="1.6288" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#C6523D" stroke-width="1.936" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90C6523D" stroke-width="1.936" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="1.8336000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="1.8336000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="2.592" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="2.592" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="1.8336000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="1.8336000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="2.592" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="2.592" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="11" zoom-max="12" closed="any">
 					<rule e="way" k="highway" v="tertiary|tertiary_link" zoom-min="0" zoom-max="11" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#B4B4B4" stroke-width="1.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90B4B4B4" stroke-width="1.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary|tertiary_link" zoom-min="12" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FFFEE6" stroke-width="3.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FFFEE6" stroke-width="3.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary|secondary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffee54" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffee54" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary|primary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FCC57C" stroke-width="4.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FCC57C" stroke-width="4.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk|trunk_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E5DA1A" stroke-width="5.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E5DA1A" stroke-width="5.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway|motorway_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#F7F008" stroke-width="5.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
-						<line dy="0.0" scale="stroke" stroke="#E52C2C" stroke-width="0.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90F7F008" stroke-width="5.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="0.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" closed="any">
 					<rule e="way" k="highway" v="track" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="tracktype" v="grade1|grade2" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="14" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="~|no|false" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="residential" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffffff" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13" closed="any">
 						<rule e="way" k="highway" v="living_street|service|unclassified|road|service" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="127" closed="any">
 						<rule e="way" k="highway" v="living_street|service|unclassified|road|service" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#ffffff" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="raceway" zoom-min="13" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#fff6e6" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90fff6e6" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FFFEE6" stroke-width="1.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FFFEE6" stroke-width="1.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FFFEE6" stroke-width="2.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FFFEE6" stroke-width="2.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffee54" stroke-width="2.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffee54" stroke-width="2.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffee54" stroke-width="2.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffee54" stroke-width="2.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FCC57C" stroke-width="2.4000000000000004" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FCC57C" stroke-width="2.4000000000000004" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FCC57C" stroke-width="3.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FCC57C" stroke-width="3.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E5DA1A" stroke-width="2.8000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E5DA1A" stroke-width="2.8000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E5DA1A" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E5DA1A" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#F7F008" stroke-width="2.8000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90F7F008" stroke-width="2.8000000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#F7F008" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90F7F008" stroke-width="3.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
 					<rule e="way" k="highway" v="steps" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.48" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.48" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="footway|corridor" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="indoor" v="~|no" zoom-min="0" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#40FFFFFF" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="indoor" v="yes" zoom-min="0" zoom-max="127" closed="any">
 							<rule e="way" k="highway" v="corridor|footway" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.0" scale="stroke" stroke="#ffffff" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+								<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="cycleway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="track" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="tracktype" v="grade1" zoom-min="0" zoom-max="127" closed="any">
 							<rule cat="base_summer" e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
 								<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="normal" font-size="11.0" fill="#000000" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true"/>
 							</rule>
-							<line dy="0.0" scale="stroke" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="grade2" zoom-min="0" zoom-max="127" closed="any">
 							<rule cat="base_summer" e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
 								<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="normal" font-size="11.0" fill="#000000" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true"/>
 							</rule>
-							<line dy="0.0" scale="stroke" stroke="#8a8a8a" stroke-width="0.384" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.384" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="all" stroke="#8a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="all" stroke="#908a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="grade5" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="all" stroke="#8a8a8a" stroke-width="0.192" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="all" stroke="#908a8a8a" stroke-width="0.192" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="~|no|false" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="all" stroke="#8a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="all" stroke="#908a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
 					<rule e="way" k="*" v="residential|living_street|service|unclassified|road|service|steps" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffffff" stroke-width="0.8333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.8333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FFFEE6" stroke-width="0.8192" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FFFEE6" stroke-width="0.8192" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffee54" stroke-width="1.024" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffee54" stroke-width="1.024" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FCC57C" stroke-width="1.2288000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FCC57C" stroke-width="1.2288000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E5DA1A" stroke-width="1.4336000000000002" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E5DA1A" stroke-width="1.4336000000000002" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway_link" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#F7F008" stroke-width="1.4336000000000002" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90F7F008" stroke-width="1.4336000000000002" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="raceway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#fff6e6" stroke-width="0.8333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90fff6e6" stroke-width="0.8333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="bold" font-size="10.0" fill="#000000" priority="0" scale="stroke" stroke="#FFFFFF" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FFFEE6" stroke-width="1.024" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FFFEE6" stroke-width="1.024" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="secondary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#ffee54" stroke-width="1.28" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90ffee54" stroke-width="1.28" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="primary" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#FCC57C" stroke-width="1.536" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90FCC57C" stroke-width="1.536" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="trunk" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#E5DA1A" stroke-width="1.792" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90E5DA1A" stroke-width="1.792" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="motorway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#F7F008" stroke-width="1.792" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#90F7F008" stroke-width="1.792" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 				</rule>
 			</rule>
@@ -7655,11 +7656,9 @@ version 2.4.0
 		<!-- guide post summer -->
 		<rule cat="base_summer" e="any" k="tourism" v="information" zoom-min="14">
 			<rule e="any" k="information" v="guidepost">
-				<symbol src="file:symbols/poi_guidepost.svg" symbol-width="24"/>
+				<symbol id="poi_guidepost" src="file:symbols/poi_guidepost.svg" symbol-width="24"/>
 				<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="17">
-					<!--#TODO removed attribute: scale-font-size="14,1.1"-->
-					<!--#TODO removed attribute: scale-dy-size="14,1.1"-->
-					<caption k="name" dy="14" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
+					<caption k="name" symbol-id="poi_guidepost" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
 				</rule>
 			</rule>
 		</rule>
@@ -7668,8 +7667,6 @@ version 2.4.0
 			<rule e="any" k="information" v="guidepost">
 				<symbol src="file:symbols/poi_guidepost.svg" symbol-width="24"/>
 				<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="17">
-					<!--#TODO removed attribute: scale-font-size="14,1.1"-->
-					<!--#TODO removed attribute: scale-dy-size="14,1.1"-->
 					<caption k="name" dy="14" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
 				</rule>
 			</rule>
@@ -7911,54 +7908,42 @@ version 2.4.0
 	</rule>
 	<!-- BELGIUM CYCLE CROSS -->
 	<rule cat="cyc_routes" e="node" k="cycle_node" v="NLBE">
-		<rule e="node" k="cycle_node" v="*" zoom-min="12" zoom-max="12">
+		<rule e="node" k="cycle_node" v="*" zoom-min="12" zoom-max="13">
 			<rule e="node" k="cycle_node" v="*">
-				<circle r="6" fill="#ffffff" stroke="#BE1DC6" stroke-width="1"/>
-				<caption k="name" dy="3.3" font-style="bold" font-size="11" fill="#BE1DC6" stroke="#ffffff" stroke-width="1"/>
-			</rule>
-		</rule>
-		<rule e="node" k="cycle_node" v="*" zoom-min="13" zoom-max="13">
-			<rule e="node" k="cycle_node" v="*">
-				<circle r="8" fill="#ffffff" stroke="#BE1DC6" stroke-width="1.2"/>
-				<caption k="name" dy="4" font-style="bold" font-size="15" fill="#BE1DC6" stroke="#ffffff" stroke-width="1"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="17" priority="410"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="10" fill="#B11BB9" stroke="#ffffff" stroke-width="1.5" priority="411"/>
 			</rule>
 		</rule>
 		<rule e="node" k="cycle_node" v="*" zoom-min="14" zoom-max="16">
 			<rule e="node" k="cycle_node" v="*">
-				<circle r="8.5" fill="#ffffff" stroke="#BE1DC6" stroke-width="1.5"/>
-				<caption k="name" dy="4.5" font-style="bold" font-size="15" fill="#BE1DC6" stroke="#ffffff" stroke-width="1.5"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="20" priority="410"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="12.0" fill="#B11BB9" stroke="#ffffff" stroke-width="1.5" priority="411"/>
 			</rule>
 		</rule>
 		<rule e="node" k="cycle_node" v="*" zoom-min="17" zoom-max="19">
 			<rule e="node" k="cycle_node" v="*">
-				<circle r="9" fill="#ffffff" stroke="#BE1DC6" stroke-width="1.5"/>
-				<caption k="name" dy="5" font-style="bold" font-size="17" fill="#BE1DC6" stroke="#ffffff" stroke-width="1.5"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="26" priority="410"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="14.399999999999999" fill="#B11BB9" stroke="#ffffff" stroke-width="1.5" priority="411"/>
 			</rule>
 		</rule>
 	</rule>
 	<rule cat="hik_routes" e="node" k="hiking_node" v="NLBE">
-		<rule e="node" k="hiking_node" v="*" zoom-min="13" zoom-max="13">
+		<rule e="node" k="hiking_node" v="*" zoom-min="12" zoom-max="13">
 			<rule e="node" k="hiking_node" v="*">
-				<circle r="4" fill="#ffffff" stroke="#d12d00" stroke-width="0.8"/>
-				<caption k="name" dy="2" font-style="bold" font-size="7" fill="#d12d00" stroke="#ffffff" stroke-width="0.8"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="17" priority="410"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="411"/>
 			</rule>
 		</rule>
-		<rule e="node" k="hiking_node" v="*" zoom-min="14" zoom-max="14">
+		<rule e="node" k="hiking_node" v="*" zoom-min="14" zoom-max="16">
 			<rule e="node" k="hiking_node" v="*">
-				<circle r="6" fill="#ffffff" stroke="#d12d00" stroke-width="1"/>
-				<caption k="name" dy="3" font-style="bold" font-size="10" fill="#d12d00" stroke="#ffffff" stroke-width="1"/>
-			</rule>
-		</rule>
-		<rule e="node" k="hiking_node" v="*" zoom-min="15" zoom-max="16">
-			<rule e="node" k="hiking_node" v="*">
-				<circle r="8.5" fill="#ffffff" stroke="#d12d00" stroke-width="1.5"/>
-				<caption k="name" dy="4.5" font-style="bold" font-size="15" fill="#d12d00" stroke="#ffffff" stroke-width="1.5"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="20" priority="410"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="12.0" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="411"/>
 			</rule>
 		</rule>
 		<rule e="node" k="hiking_node" v="*" zoom-min="17" zoom-max="19">
 			<rule e="node" k="hiking_node" v="*">
-				<circle r="9" fill="#ffffff" stroke="#d12d00" stroke-width="1.5"/>
-				<caption k="name" dy="5" font-style="bold" font-size="17" fill="#d12d00" stroke="#ffffff" stroke-width="1.5"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="26" priority="410"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="14.399999999999999" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="411"/>
 			</rule>
 		</rule>
 	</rule>

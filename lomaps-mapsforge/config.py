@@ -183,6 +183,10 @@ class TemplateVariables(Template):
     color_cycle_icn_ncn = '#A90073'
     color_cycle_text_ref = '#B11BB9'
 
+    text_size_nlbe_junction_z12 = 10
+    text_size_nlbe_junction_z14 = text_size_nlbe_junction_z12 * scale_factor
+    text_size_nlbe_junction_z17 = text_size_nlbe_junction_z14 * scale_factor
+
     ##############
     ## TEXT & SYMBOL PRIORITIES
 
@@ -202,6 +206,9 @@ class TemplateVariables(Template):
     priority_hamlet = 430
     priority_locality = 420
     priority_street = 400
+
+    priority_cyclo_nlbe_junction_circle = 410
+    priority_cyclo_nlbe_junction_number = priority_cyclo_nlbe_junction_circle + 1
 
     priority_tourist_route_name = 200
 

@@ -168,6 +168,8 @@ class GeneratorActions:
             # customize the line
             line.stroke_dasharray = TemplateVariables.highway_tunnel_dash_array
             line.stroke_linecap = Cap.BUTT
+            if len(line.stroke) == 7:
+                line.stroke = line.stroke.replace("#", "#90")
 
     def convert_to_railway_bridge(self, rule: Rule, parent_rules=[], zoom_min = 0):
         """
