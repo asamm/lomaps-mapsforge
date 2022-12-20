@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" base-stroke-width="0.8" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--
 		LOCUS INTERNAL THEME FOR LOMAPS
 				Release July, 2016
@@ -294,11 +294,9 @@ version 2.4.0
 			</rule>
 			<!-- Natural captions -->
 			<rule e="way" k="natural" v="heath|marsh|wetland|cliff" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="15,1.2"-->
 				<caption k="name" font-style="normal" font-family="default" font-size="11" fill="#797979" stroke="#ffffff" stroke-width="2"/>
 			</rule>
 			<rule e="way" k="natural" v="valley" zoom-min="14" zoom-max="17">
-				<!--#TODO removed attribute: scale-font-size="15,1.1"-->
 				<pathText k="name" dy="4.7" font-style="italic" font-family="default" font-size="17" fill="#797979" stroke="#ffffff" stroke-width="1.5"/>
 			</rule>
 		</rule>
@@ -547,8 +545,7 @@ version 2.4.0
 				<line stroke="#604f9cbf" stroke-width="0.8" stroke-linecap="butt"/>
 				<line dy="-0.3" stroke="#404f9cbf" stroke-width="0.2" stroke-linecap="butt"/>
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-					<caption k="name" font-style="bold_italic" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
+					<caption k="name" font-style="bold_italic" font-family="serif" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="4"/>
 				</rule>
 			</rule>
 		</rule>
@@ -649,7 +646,7 @@ version 2.4.0
 			<area fill="#9CC9E8"/>
 			<rule e="way" k="*" v="*" zoom-min="14">
 				<!--#TODO removed attribute: scale-font-size="17,1.2"-->
-				<caption k="name" font-style="bold_italic" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" priority="395"/>
 			</rule>
 		</rule>
 		<!-- waterways -->
@@ -665,10 +662,13 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="9" zoom-max="12">
 							<line stroke="#9CC9E8" stroke-width="0.8"/>
 						</rule>
-						<rule e="way" k="*" v="*" zoom-min="13">
-							<line stroke="#9CC9E8" stroke-width="1"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold_italic" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5"/>
+						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+							<line stroke="#9CC9E8" stroke-width="0.9"/>
+							<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="385"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="16">
+							<line stroke="#9CC9E8" stroke-width="0.9"/>
+							<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="385"/>
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="stream" zoom-min="12">
@@ -676,21 +676,28 @@ version 2.4.0
 							<!--#TODO removed attribute: curve="cubic"-->
 							<line stroke="#9CC9E8" stroke-width="0.5"/>
 						</rule>
-						<rule e="way" k="*" v="*" zoom-min="14">
+						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 							<!--#TODO removed attribute: curve="cubic"-->
-							<line stroke="#9CC9E8" stroke-width="0.3"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold_italic" font-size="11" dy="-1.8" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
+							<line stroke="#9CC9E8" stroke-width="0.4"/>
+							<pathText k="name" font-style="italic" font-family="serif" dy="-1.8" font-size="10" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="380"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="16">
+							<!--#TODO removed attribute: curve="cubic"-->
+							<line stroke="#9CC9E8" stroke-width="0.4"/>
+							<pathText k="name" font-style="italic" font-family="serif" dy="-1.8" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="380"/>
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="river">
 						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="12">
 							<line stroke="#9CC9E8" stroke-width="0.8"/>
 						</rule>
-						<rule e="way" k="*" v="*" zoom-min="13">
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
 							<line stroke="#9CC9E8" stroke-width="1.3"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold_italic" font-size="15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2.5"/>
+							<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="390"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="15">
+							<line stroke="#9CC9E8" stroke-width="1.3"/>
+							<pathText k="name" font-style="italic" font-family="serif" font-size="14" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="390"/>
 						</rule>
 					</rule>
 				</rule>
@@ -707,8 +714,7 @@ version 2.4.0
 							<rule e="way" k="*" v="*" zoom-min="16">
 								<line stroke="#9CC9E8" stroke-width="0.6" stroke-dasharray="10,9" stroke-linecap="butt"/>
 							</rule>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<pathText k="name" font-style="bold_italic" font-size="15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
+							<pathText k="name" font-style="italic" font-family="serif" font-size="14" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400"/>
 						</rule>
 					</rule>
 				</rule>
@@ -732,8 +738,7 @@ version 2.4.0
 				<rule e="way" k="waterway" v="river|canal">
 					<rule e="way" k="*" v="*" zoom-min="13">
 						<line stroke="#9CC9E8" stroke-width="0.6" stroke-dasharray="1,7"/>
-						<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-						<pathText k="name" font-style="bold_italic" font-size="15" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
+						<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="390"/>
 					</rule>
 				</rule>
 			</rule>
@@ -760,11 +765,11 @@ version 2.4.0
 		<rule cat="base_topo" e="way" k="natural|wetland" v="*" zoom-min="12">
 			<rule e="way" k="wetland" v="~">
 				<rule e="way" k="natural" v="wetland">
-					<area src="file:/patterns/marsh.svg" symbol-width="48"/>
+					<area src="file:/patterns/marsh.svg" symbol-width="28"/>
 				</rule>
 			</rule>
 			<rule e="way" k="wetland" v="marsh|swamp|bog|fen|wet_meadow|reedbed|saltmarsh">
-				<area src="file:/patterns/marsh.svg" symbol-width="48"/>
+				<area src="file:/patterns/marsh.svg" symbol-width="28"/>
 			</rule>
 			<rule e="way" k="wetland" v="tidalflat">
 				<area src="file:/patterns/tidalflat_64.svg" symbol-width="96"/>
@@ -957,262 +962,6 @@ version 2.4.0
 					<rule cat="base_city" e="way" k="highway" v="pedestrian" zoom-min="14">
 						<!--#TODO removed attribute: scale-font-size="16,1.15"-->
 						<caption k="name" font-size="13" stroke="#FFFFFF" stroke-width="4.0"/>
-					</rule>
-				</rule>
-				<!-- ==== MTB & Cyclo ==== -->
-				<!-- MTB Routes without mtb:scale values  -->
-				<rule cat="cyc_mtb_routes" e="way" k="route" v="mtb" zoom-min="12">
-					<rule e="way" k="mtb:scale" v="~">
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-							<line dy="0.5" stroke="#E588ED" stroke-width="1" stroke-dasharray="14,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-							<line dy="0.8" stroke="#E588ED" stroke-width="0.7" stroke-dasharray="14,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
-							<line dy="1.0" stroke="#E588ED" stroke-width="0.7" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
-							<line dy="1.2" stroke="#E588ED" stroke-width="0.7" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18">
-							<line dy="1.6" stroke="#E588ED" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="19">
-							<line dy="2.1" stroke="#E588ED" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
-						</rule>
-						<!--#TODO removed attribute: scale-font-size="14,1.1"-->
-						<pathText k="ref" font-style="bold" font-size="11" dy="1.4" fill="#B11BB9" stroke="#ffffff" stroke-width="2"/>
-					</rule>
-				</rule>
-				<!-- MTB and designated cyclo routes with defined mtb:scale -->
-				<rule cat="cyc_mtb_routes" e="way" k="route|bicycle" v="mtb|yes|designated" zoom-min="12">
-					<rule e="way" k="mtb:scale" v="0" zoom-min="13">
-						<!-- copy style from simple cycle ways for mtb:scale=0 -->
-						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" closed="any">
-							<rule e="way" k="highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="1.15" scale="stroke" stroke="#E588ED" stroke-width="1.1" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="highway" v="living_street|service|unclassified|road|raceway|residential|cycleway|footway|tertiary_link|tertiary" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="1.3" scale="stroke" stroke="#E588ED" stroke-width="1.1" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="highway" v="secondary_link|secondary|primary|primary_link|trunk_link|trunk" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="3.4833333333333334" scale="stroke" stroke="#E588ED" stroke-width="1.1" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" closed="any">
-							<rule e="way" k="highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.728" scale="stroke" stroke="#E588ED" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="highway" v="living_street|service|unclassified|road|raceway|residential|cycleway|footway|tertiary_link|tertiary" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.95" scale="stroke" stroke="#E588ED" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="highway" v="secondary_link|secondary|primary|primary_link|trunk_link|trunk" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="1.1733333333333333" scale="stroke" stroke="#E588ED" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18" zoom-max="127" closed="any">
-							<rule e="way" k="highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.428" scale="stroke" stroke="#E588ED" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="highway" v="living_street|service|unclassified|road|raceway|residential|cycleway|footway|tertiary_link|tertiary" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.7833333333333333" scale="stroke" stroke="#E588ED" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="highway" v="secondary_link|secondary|primary|primary_link|trunk_link|trunk" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="1.0066666666666668" scale="stroke" stroke="#E588ED" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-							</rule>
-						</rule>
-					</rule>
-					<rule e="way" k="mtb:scale" v="1|2" zoom-min="13">
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-							<line dy="0.5" stroke="#E588ED" stroke-width="1" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-							<line dy="0.8" stroke="#E588ED" stroke-width="0.8" stroke-dasharray="14,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-							<line dy="1.0" stroke="#E588ED" stroke-width="0.7" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18">
-							<line dy="1.0" stroke="#E588ED" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
-						</rule>
-					</rule>
-					<rule e="way" k="mtb:scale" v="3|4" zoom-min="13">
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-							<line dy="0.6" stroke="#E588ED" stroke-width="1.6" stroke-dasharray="7,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-							<line dy="0.9" stroke="#E588ED" stroke-width="1.1" stroke-dasharray="6,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-							<line dy="1.0" stroke="#E588ED" stroke-width="0.9" stroke-dasharray="5,8" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18">
-							<line dy="1.3" stroke="#E588ED" stroke-width="0.6" stroke-dasharray="5,8" stroke-linecap="butt"/>
-						</rule>
-					</rule>
-					<rule e="way" k="mtb:scale" v="5|6" zoom-min="13">
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-							<line dy="0.6" stroke="#E588ED" stroke-width="1.8" stroke-dasharray="3,6" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-							<line dy="0.9" stroke="#E588ED" stroke-width="1.3" stroke-dasharray="2,6" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-							<line dy="1.0" stroke="#E588ED" stroke-width="1" stroke-dasharray="2,6" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18">
-							<line dy="1.3" stroke="#E588ED" stroke-width="0.8" stroke-dasharray="2,6" stroke-linecap="butt"/>
-						</rule>
-					</rule>
-				</rule>
-				<!-- Basic cycleway -->
-				<rule cat="cyc_routes" e="way" k="highway" v="cycleway">
-					<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">
-						<rule e="way" k="highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~">
-							<line stroke="#d320dc" dy="1.15" stroke-width="1.1" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="highway" v="living_street|service|unclassified|road|raceway|residential|cycleway|footway|tertiary_link|tertiary">
-							<line stroke="#d320dc" dy="1.3" stroke-width="1.1" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="highway" v="secondary_link|secondary|primary|primary_link|trunk_link|trunk">
-							<line stroke="#d320dc" dy="3.4833333333333334" stroke-width="1.1" stroke-linecap="butt"/>
-						</rule>
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-						<rule e="way" k="highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~">
-							<line stroke="#d320dc" dy="0.728" stroke-width="0.6" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="highway" v="living_street|service|unclassified|road|raceway|residential|cycleway|footway|tertiary_link|tertiary">
-							<line stroke="#d320dc" dy="0.95" stroke-width="0.6" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="highway" v="secondary_link|secondary|primary|primary_link|trunk_link|trunk">
-							<line stroke="#d320dc" dy="1.1733333333333333" stroke-width="0.6" stroke-linecap="butt"/>
-						</rule>
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="18">
-						<rule e="way" k="highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~">
-							<line stroke="#d320dc" dy="0.428" stroke-width="0.3"/>
-						</rule>
-						<rule e="way" k="highway" v="living_street|service|unclassified|road|raceway|residential|cycleway|footway|tertiary_link|tertiary">
-							<line stroke="#d320dc" dy="0.7833333333333333" stroke-width="0.3"/>
-						</rule>
-						<rule e="way" k="highway" v="secondary_link|secondary|primary|primary_link|trunk_link|trunk">
-							<line stroke="#d320dc" dy="1.0066666666666668" stroke-width="0.3"/>
-						</rule>
-					</rule>
-				</rule>
-				<!-- OSMC CYCLE ROUTES -->
-				<rule cat="cyc_routes" e="way" k="route" v="bicycle">
-					<rule e="way" k="network" v="lcn|rcn">
-						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">
-							<rule e="way" k="osmc_highway" v="track|~">
-								<line stroke="#d320dc" dy="1.15" stroke-width="1.1" stroke-linecap="butt"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="unclassified">
-								<line stroke="#d320dc" dy="1.3611111111111112" stroke-width="1.1" stroke-linecap="butt"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="class">
-								<line stroke="#d320dc" dy="2.2333333333333334" stroke-width="1.1" stroke-linecap="butt"/>
-							</rule>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-							<rule e="way" k="osmc_highway" v="track|~">
-								<line stroke="#d320dc" dy="0.608" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="1.816" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
-								<pathText k="ref" font-style="bold" font-size="10" dy="2.2560000000000002" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="unclassified">
-								<line stroke="#d320dc" dy="0.95" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="2.1933333333333334" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
-								<pathText k="ref" font-style="bold" font-size="10" dy="2.5833333333333335" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="class">
-								<line stroke="#d320dc" dy="1.1733333333333333" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="2.64" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
-								<pathText k="ref" font-style="bold" font-size="10" dy="2.48" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
-							</rule>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18">
-							<rule e="way" k="osmc_highway" v="track|~">
-								<line stroke="#d320dc" dy="0.428" stroke-width="0.3" stroke-linecap="butt"/>
-								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19">
-									<!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="1.036" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
-									<pathText k="ref" font-style="bold" font-size="12" dy="1.356" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
-								</rule>
-							</rule>
-							<rule e="way" k="osmc_highway" v="unclassified">
-								<line stroke="#d320dc" dy="0.7833333333333333" stroke-width="0.3" stroke-linecap="butt"/>
-								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19">
-									<!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="1.5633333333333335" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
-									<pathText k="ref" font-style="bold" font-size="12" dy="1.6333333333333333" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
-								</rule>
-							</rule>
-							<rule e="way" k="osmc_highway" v="class">
-								<line stroke="#d320dc" dy="1.0066666666666668" stroke-width="0.3" stroke-linecap="butt"/>
-								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19">
-									<!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="2.0100000000000002" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
-									<pathText k="ref" font-style="bold" font-size="12" dy="1.88" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
-								</rule>
-							</rule>
-						</rule>
-					</rule>
-					<!-- Create ICN rules fron RCN (different color but same rules) -->
-					<rule e="way" k="network" v="icn|ncn">
-						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" closed="any">
-							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="1.15" scale="stroke" stroke="#A90073" stroke-width="1.1" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="1.3611111111111112" scale="stroke" stroke="#A90073" stroke-width="1.1" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="2.2333333333333334" scale="stroke" stroke="#A90073" stroke-width="1.1" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" closed="any">
-							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.608" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="1.816" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true"/>
-								<pathText k="ref" display="ifspace" dy="2.2560000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.95" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="2.1933333333333334" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true"/>
-								<pathText k="ref" display="ifspace" dy="2.5833333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="1.1733333333333333" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="2.64" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true"/>
-								<pathText k="ref" display="ifspace" dy="2.48" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
-							</rule>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18" zoom-max="127" closed="any">
-							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
-								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
-									<lineSymbol display="ifspace" dy="1.036" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true"/>
-									<pathText k="ref" display="ifspace" dy="1.356" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
-								</rule>
-								<line dy="0.428" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
-								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
-									<lineSymbol display="ifspace" dy="1.5633333333333335" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true"/>
-									<pathText k="ref" display="ifspace" dy="1.6333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
-								</rule>
-								<line dy="0.7833333333333333" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
-								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
-									<lineSymbol display="ifspace" dy="2.0100000000000002" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true"/>
-									<pathText k="ref" display="ifspace" dy="1.88" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
-								</rule>
-								<line dy="1.0066666666666668" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-							</rule>
-						</rule>
 					</rule>
 				</rule>
 				<!-- OFFSET HIKING International, regional network that not defined by OSMC symbol or color -->
@@ -3502,9 +3251,6 @@ version 2.4.0
 						</rule>
 						<rule e="way" k="highway" v="cycleway" zoom-max="15">
 							<line stroke="#8a8a8a" stroke-width="0.6"/>
-							<rule e="way" k="*" v="*" zoom-min="15">
-								<pathText k="name" dy="2.3" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
-							</rule>
 						</rule>
 						<rule e="way" k="highway" v="pedestrian">
 							<line stroke="#d0d0d0" stroke-width="0.3"/>

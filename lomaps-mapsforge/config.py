@@ -212,10 +212,10 @@ class TemplateVariables(Template):
 
     priority_tourist_route_name = 200
 
-
-
+    priority_water_area = 395
     priority_river = 390
-    prioriry_stream =  380
+    priority_canal = 385
+    priority_stream =  380
 
 
 
