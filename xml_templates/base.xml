@@ -2234,10 +2234,9 @@ version 2.4.0
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z15" stroke-dasharray="2.5,1.5"  scale="all"/>
 							</rule>
 						</rule>
-						<rule e="way" k="*" v="residential|living_street|service|unclassified|road|service|steps">
+						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road|service|steps">
 							<line stroke="#ffffff" stroke-width="$unclassified_width_z16"/>
 						</rule>
-
 						<rule e="way" k="highway" v="tertiary_link">
 							<line stroke="$color_tertiary" stroke-width="${tertiary_width_z16 * 0.8}"/>
 						</rule>
