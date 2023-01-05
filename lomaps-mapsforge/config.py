@@ -190,6 +190,11 @@ class TemplateVariables(Template):
     ##############
     ## TEXT & SYMBOL PRIORITIES
 
+    color_standard_poi_text = '#303030'
+    color_attraction_poi_text = '#5e5146'
+    color_gray_poi_text = '#747474'
+    color_house_number_z18 = '#747474'
+
     text_halo = 4
     street_text_size_z15 = 11
     street_text_size_z18 = 11 * scale_factor * scale_factor
@@ -206,6 +211,12 @@ class TemplateVariables(Template):
     priority_hamlet = 430
     priority_locality = 420
     priority_street = 400
+
+
+    priority_poi_caption_cat1 = 415
+    priority_poi_caption_cat2 = 414
+    priority_poi_caption_cat3 = 413
+
 
     priority_cyclo_nlbe_junction_circle = 410
     priority_cyclo_nlbe_junction_number = priority_cyclo_nlbe_junction_circle + 1
