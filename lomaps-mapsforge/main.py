@@ -53,8 +53,9 @@ class GeneratorActions:
             TemplateVariables.gen_action_cycle_icn,
             TemplateVariables.gen_action_cycle_basic_to_mtb_scale_0,
             TemplateVariables.gen_action_osmc_symbols_order,
-
         ]
+
+        self.non_supported_attributes = ['poidb']
 
     def process_actions(self):
 
@@ -117,12 +118,14 @@ class GeneratorActions:
                     # append the created tunnel section into defined place in the tree
                     input_section.parent.extend(tunnel_soup.children)
 
-
+                # remove attribute defining the source section for generation
                 del section_soup['gen_section']
 
-            # remove the
+            # remove the input section from the base xml tree
             input_section.extract()
 
+        # remove other non-supported tags or attributes
+        self.remove_nonsupported_attributes(self.soup)
 
         # write results to final XML file
         self.write_to_file(self.options.result_xml, self.soup)
@@ -331,6 +334,14 @@ class GeneratorActions:
             return rule.v == "~" or rule.v == "hiking"
 
         return False
+
+    def remove_nonsupported_attributes(self, soup):
+
+        for attribute_name in self.non_supported_attributes:
+            tags = soup.select('[{}]'.format(attribute_name))
+            for tag in tags:
+                del tag[attribute_name]
+
 
 
 
