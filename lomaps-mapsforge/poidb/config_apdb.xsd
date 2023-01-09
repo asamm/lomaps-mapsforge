@@ -1,0 +1,109 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="configuration" type="configuration"/>
+
+  <xs:complexType name="tag" mixed="true">
+    <xs:sequence>
+      <xs:element type="filter" name="filter" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="key" use="optional"/>
+    <xs:attribute type="xs:string" name="value" use="optional"/>
+    <xs:attribute type="xs:string" name="type" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="sub-folder">
+    <xs:sequence>
+      <xs:element type="tag" name="tag" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+      <xs:element type="filter" name="filter" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+    <xs:attribute type="xs:byte" name="zoom-min" use="optional"/>
+    <xs:attribute type="xs:string" name="icon" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="folder">
+    <xs:sequence>
+      <xs:element type="sub-folder" name="sub-folder" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation><![CDATA[
+            <sub-folder name="telephone" zoom-min="17" icon="toilets" >
+            <tag key="amenity" value="telephone" type="poi,way" /> Deleted first revision 2014-10-24
+            </sub-folder>
+
+            <sub-folder name="map" zoom-min="15" icon="hiking_cycling" >
+                <tag key="information" value="map" type="poi" /> Deleted first revision 2014-10-24
+            </sub-folder>
+]]></xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+    <xs:attribute type="xs:byte" name="zoom-min" use="optional"/>
+    <xs:attribute type="xs:string" name="icon" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="filter">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="key" use="required"/>
+        <xs:attribute type="xs:string" name="value" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="pois">
+    <xs:sequence>
+      <xs:element type="folder" name="folder" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="poi-details">
+    <xs:sequence>
+      <xs:element type="tag" name="tag" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation> name a company for hotel, restaurant, shop ...  hotel classification  Is human readable title of the article, eg: wikipedia=en:St Paul's Cathedral </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="poi-email">
+    <xs:sequence>
+      <xs:element type="tag" name="tag" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="poi-phone">
+    <xs:sequence>
+      <xs:element type="tag" name="tag" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="poi-url">
+    <xs:sequence>
+      <xs:element type="tag" name="tag" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation> OSM suggest to use web site but URL key is also possible</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="params">
+    <xs:sequence>
+      <xs:element type="poi-details" name="poi-details"/>
+      <xs:element type="poi-email" name="poi-email"/>
+      <xs:element type="poi-phone" name="poi-phone"/>
+      <xs:element type="poi-url" name="poi-url"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="configuration">
+    <xs:sequence>
+      <xs:element type="pois" name="pois"/>
+      <xs:element type="params" name="params"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
