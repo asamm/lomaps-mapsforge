@@ -13,6 +13,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from config import TemplateVariables
+from poi_theme import PoiThemeGenerator
 
 from mapsforge import Rule, Cap, Line, Linejoin, LineSymbol
 
@@ -23,10 +24,11 @@ class Options:
     output_template: str
     result_xml: str
 
+
 class SortAttributes(XMLFormatter):
     def attributes(self, tag):
         """Reorder a tag's attributes however you want."""
-        attrib_order = ['cat','e', 'k', 'v', 'zoom-min', 'zoom-max']
+        attrib_order = ['cat', 'e', 'k', 'v', 'zoom-min', 'zoom-max']
         new_order = []
         for element in attrib_order:
             if element in tag.attrs:
@@ -99,10 +101,10 @@ class GeneratorActions:
                     source_rule = self.add_osmc_symbols_order(source_rule)
 
                 elif action_name == TemplateVariables.gen_action_cycle_icn:
-                    source_rule = self.create_cycle_sections(source_rule,TemplateVariables.color_cycle_icn_ncn )
+                    source_rule = self.create_cycle_sections(source_rule, TemplateVariables.color_cycle_icn_ncn)
 
                 elif action_name == TemplateVariables.gen_action_cycle_basic_to_mtb_scale_0:
-                    source_rule = self.create_cycle_sections(source_rule,TemplateVariables.color_cycle_mtb )
+                    source_rule = self.create_cycle_sections(source_rule, TemplateVariables.color_cycle_mtb)
 
                 else:
                     print("Warning unsupported action {}".format(action_name))
@@ -110,7 +112,7 @@ class GeneratorActions:
                 # convert back xsdata object into soup
                 tunnel_soup = BeautifulSoup(serializer.render(source_rule), 'xml')
 
-                if action_name == TemplateVariables.gen_action_osmc_colors or action_name ==  TemplateVariables.gen_action_osmc_symbols_order:
+                if action_name == TemplateVariables.gen_action_osmc_colors or action_name == TemplateVariables.gen_action_osmc_symbols_order:
                     # replace all childs in specific section by new child from created rules
                     child = tunnel_soup.findChild()
                     section_soup.replaceWith(child)
@@ -149,7 +151,7 @@ class GeneratorActions:
         file = open(output_template, "r")
         return BeautifulSoup(file.read(), 'xml')
 
-    def convert_to_highway_tunnel(self, rule: Rule, parent_rules=[], zoom_min = 0):
+    def convert_to_highway_tunnel(self, rule: Rule, parent_rules=[], zoom_min=0):
         """
         Find lines in the rulles and make them dashed
         :param rule:
@@ -162,7 +164,7 @@ class GeneratorActions:
         if rule.zoom_min and rule.zoom_min > zoom_min:
             zoom_min = rule.zoom_min
 
-        #iterate child rules
+        # iterate child rules
         for child_rule in rule.rule:
             # inherit zoom and parent rules
             self.convert_to_highway_tunnel(child_rule, parent_rules, zoom_min)
@@ -174,7 +176,7 @@ class GeneratorActions:
             if len(line.stroke) == 7:
                 line.stroke = line.stroke.replace("#", "#90")
 
-    def convert_to_railway_bridge(self, rule: Rule, parent_rules=[], zoom_min = 0):
+    def convert_to_railway_bridge(self, rule: Rule, parent_rules=[], zoom_min=0):
         """
         Find lines in the rulles and make them dashed
         :param rule:
@@ -187,16 +189,16 @@ class GeneratorActions:
         if rule.zoom_min and rule.zoom_min > zoom_min:
             zoom_min = rule.zoom_min
 
-        #iterate child rules
+        # iterate child rules
         for child_rule in rule.rule:
             # inherit zoom and parent rules
             self.convert_to_railway_bridge(child_rule, parent_rules, zoom_min)
 
         if len(rule.line) > 0:
             # railway style can consist from multiple line > find the max width to know the width for bridge
-            max_width = max (line.stroke_width for line in rule.line)
-            bridge_case = Line(stroke_width = max_width + 0.5, stroke = "#000000", stroke_linecap = Cap.BUTT)
-            bridge_core = Line(stroke_width = max_width + 0.25, stroke="#F7F7F7", stroke_linecap = Cap.BUTT)
+            max_width = max(line.stroke_width for line in rule.line)
+            bridge_case = Line(stroke_width=max_width + 0.5, stroke="#000000", stroke_linecap=Cap.BUTT)
+            bridge_core = Line(stroke_width=max_width + 0.25, stroke="#F7F7F7", stroke_linecap=Cap.BUTT)
             rule.line.clear()
             rule.line.extend([bridge_case, bridge_core])
 
@@ -212,13 +214,13 @@ class GeneratorActions:
             # definition of line width,etc that will be recreated for every osmc color
             color_rule = copy.deepcopy(source_rule.rule[0])
 
-            color_rules.append(self.create_osmc_color_definition(color_rule,key))
+            color_rules.append(self.create_osmc_color_definition(color_rule, key))
 
         source_rule.rule = color_rules
 
         return source_rule
 
-    def create_osmc_color_definition (self, source_rule, color_key):
+    def create_osmc_color_definition(self, source_rule, color_key):
         """
         Replace the color line from original definition
         :param source_rule: xml template section
@@ -241,7 +243,6 @@ class GeneratorActions:
             line.stroke_linecap = Cap.BUTT
 
             if color_key == 'green':
-
                 # remove the line from original rule
                 source_rule.line.remove(line)
 
@@ -269,7 +270,6 @@ class GeneratorActions:
 
         return source_rule
 
-
     def create_cycle_sections(self, source_rule: Rule, cycle_line_color):
         """
         Find lines in the rules and set color for ICN
@@ -277,7 +277,7 @@ class GeneratorActions:
                 """
         # iterate child rules
         for child_rule in source_rule.rule:
-            self.create_cycle_sections(child_rule,cycle_line_color)
+            self.create_cycle_sections(child_rule, cycle_line_color)
 
         for line in source_rule.line:
             # customize the line
@@ -299,11 +299,11 @@ class GeneratorActions:
 
         return source_rule
 
-    def create_osmc_symbol_order(self, source_rule, order:int):
+    def create_osmc_symbol_order(self, source_rule, order: int):
 
         if source_rule.k == 'osmc_order':
             if order == 0:
-                source_rule.v = "~"  #for first order do not print counter
+                source_rule.v = "~"  # for first order do not print counter
             else:
                 source_rule.v = str(order)
 
@@ -316,7 +316,7 @@ class GeneratorActions:
 
         return source_rule
 
-    def gen_action_sac_scale2lwn(self, source_rule:Rule) -> Rule:
+    def gen_action_sac_scale2lwn(self, source_rule: Rule) -> Rule:
 
         # filter rules for sac_scale different to "sac_scale=hiking" (only style for hiking sac is used as style for LWN pr IWN)
 
@@ -343,11 +343,9 @@ class GeneratorActions:
                 del tag[attribute_name]
 
 
-
-
 class Osmc2SacScale():
 
-    def add_sac_scale(self, source_rule, parent_rule = None, zoom_min=0):
+    def add_sac_scale(self, source_rule, parent_rule=None, zoom_min=0):
 
         if source_rule.zoom_min and source_rule.zoom_min > zoom_min:
             zoom_min = source_rule.zoom_min
@@ -363,10 +361,8 @@ class Osmc2SacScale():
 
                 sac_rules = self._order2sac(child_rule)
 
-
             # inherit zoom and parent rules
             self.convert_to_highway_tunnel(child_rule, parent_rule, zoom_min)
-
 
     def _is_osmc_order_rule(self, rule: Rule):
         return rule.k == "osmc_order" and (rule.v == "~" or rule.v == "1")
@@ -376,6 +372,58 @@ class Osmc2SacScale():
         pass
 
 
+class IconValidator():
+
+    def __init__(self, theme_soup, theme_location):
+
+        self.soup = theme_soup
+        self.theme_location = theme_location
+
+    def validate(self):
+        """
+        Check if all icons(symbols) defined in the base xml are available in the theme folder
+        Missing icons are reported in txt file "missing_icons.txt"
+        """
+        icon_paths = self._get_icon_paths()
+        missing_icons = []
+        for icon in icon_paths:
+            full_path = os.path.normpath(os.path.join(os.path.dirname(self.theme_location), icon))
+            if not os.path.exists(full_path):
+                if icon not in missing_icons:
+                    missing_icons.append(icon)
+
+        self._write_missing_icons_to_file(missing_icons)
+
+    def _write_missing_icons_to_file(self, missing_icons):
+        log_file = 'missing_icons.txt'
+
+        # remove file if exist
+        if os.path.exists(log_file):
+            os.remove(log_file)
+
+        if len(missing_icons) > 0:
+            # sort alphbetically the icons paths
+            missing_icons.sort()
+            with open(log_file, 'w') as f:
+                f.writelines('\n'.join(missing_icons))
+
+            print("WARNING: the theme contains definition of symbols that doesn't exist in theme folder. Check " +
+                  "missing icons in text file: {}".format(log_file))
+
+    def _get_icon_paths(self) -> list:
+        """
+
+        :return: list of local path used as sources for symbols
+        """
+        tags = self.soup.select('[src]')
+
+        paths = []
+        for tag in self.soup.select('[src]'):
+            if tag['src'].startswith('file:'):
+                paths.append(tag['src'].replace('file:/', '').replace('file:', ''))
+        return paths
+
+
 ##################################
 def transform(base_xml, result_xml):
     """
@@ -383,7 +431,7 @@ def transform(base_xml, result_xml):
     :param base_xml: path to xml template
     :param result_xml:
     """
-    template = TemplateVariables(file = base_xml)
+    template = TemplateVariables(file=base_xml)
 
     f = open(result_xml, "w")
     f.write(str(template))
@@ -392,25 +440,35 @@ def transform(base_xml, result_xml):
 
 def copy_theme_to_device(result_xml):
     # copy xml theme file to android device
-    os.popen( "adb push {} /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/lomaps_v4/lomaps_v4.xml"
+    os.popen(
+        "adb push {} /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/lomaps_v4/lomaps_v4.xml"
         .format(result_xml))
     # os.popen("adb shell am force-stop menion.android.locus")
     # os.popen("adb shell monkey -p menion.android.locus -c android.intent.category.LAUNCHER 1")
-    os.popen("adb shell am broadcast -p menion.android.locus -a com.asamm.locus.ACTION_TASK --es tasks '''{ map_reload_theme: {} }'''")
+    os.popen(
+        "adb shell am broadcast -p menion.android.locus -a com.asamm.locus.ACTION_TASK --es tasks '''{ map_reload_theme: {} }'''")
 
 
 if __name__ == '__main__':
-    #options = parseOptions()
+    # options = parseOptions()
     options = Options('../xml_templates/base.xml',
                       '../xml_templates/base_output.xml',
                       '../lomaps_v4/lomaps_v4.xml')
 
+    # replace colors, width, etc in source XML
     transform(options.input_template, options.output_template)
 
-    GeneratorActions(options).process_actions()
+    # generate custom parts (bridges, tourist paths)
+    generator_actions = GeneratorActions(options)
+    generator_actions.process_actions()
+
+    # result of generation action in soup object
+    theme_soup = generator_actions.soup
+    icon_validator = IconValidator(theme_soup, options.result_xml)
+    icon_validator.validate()
+
+    poi_theme_generator = PoiThemeGenerator("poidb/config_apDb.xml")
 
     copy_theme_to_device(options.result_xml)
-
-
 
     print("=============  DONE  ================= ")

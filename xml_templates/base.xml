@@ -4320,16 +4320,16 @@ version 2.4.0
 			<symbol src="file:symbols/poi_lifeguard.svg" symbol-width="20" poidb="true"/>
 		</rule>
 		<rule e="any" k="emergency" v="assembly_point|access_point" zoom-min="17">
-			<symbol src="file:symbols/poi_emergency_point.svg" symbol-width="20" poidb="true"/>
+			<symbol src="file:symbols/poi_emergency.svg" symbol-width="20" poidb="true"/>
 		</rule>
 		<rule e="any" k="emergency" v="landing_site" zoom-min="17">
-			<symbol src="file:symbols/poi_emergency_helipad.svg" symbol-width="20" poidb="true"/>
+			<symbol src="file:symbols/poi_heliport_emergency.svg" symbol-width="20" poidb="true"/>
 		</rule>
 		<rule e="any" k="emergency" v="phone" zoom-min="17">
 			<symbol src="file:symbols/poi_emergency_phone.svg" symbol-width="20" poidb="true"/>
 		</rule>
 		<rule e="any" k="emergency" v="defibrillator" zoom-min="17">
-			<symbol src="file:symbols/poi_defibrillator.svg" symbol-width="20" poidb="true"/>
+			<symbol src="file:symbols/poi_aed.svg" symbol-width="20" poidb="true"/>
 		</rule>
 	</rule>
 

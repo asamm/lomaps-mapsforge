@@ -59,7 +59,7 @@ version 2.4.0
 			<cat id="base_car"/>
 			<cat id="accommodation_car"/>
 			<cat id="highways_car"/>
-			<cat id="shopping_car"/>
+			<cat id="shopping"/>
 			<cat id="transportation_car"/>
 			<overlay id="pub_rest_car"/>
 		</layer>
@@ -72,7 +72,7 @@ version 2.4.0
 			<cat id="health_city"/>
 			<cat id="highways_city"/>
 			<cat id="religion_city"/>
-			<cat id="shopping_city"/>
+			<cat id="shopping"/>
 			<cat id="tourism_city"/>
 			<cat id="transportation_city"/>
 			<overlay id="pub_rest_city"/>
@@ -88,7 +88,7 @@ version 2.4.0
 			<cat id="natural_topo"/>
 			<cat id="highways_topo"/>
 			<cat id="health_topo"/>
-			<cat id="shopping_topo"/>
+			<cat id="shopping"/>
 			<cat id="tourism_topo"/>
 			<cat id="transportation_topo"/>
 			<overlay id="cycling_routes"/>
@@ -108,7 +108,7 @@ version 2.4.0
 			<cat id="highways_topo"/>
 			<cat id="pistes"/>
 			<cat id="health_topo"/>
-			<cat id="shopping_topo"/>
+			<cat id="shopping"/>
 			<cat id="snowmobiles_cat"/>
 			<cat id="tourism_topo"/>
 			<cat id="transportation_topo"/>
@@ -260,12 +260,18 @@ version 2.4.0
 				<rule e="way" k="natural" v="glacier">
 					<area fill="#50D3E9FF"/>
 					<area src="file:/patterns/glacier.svg" symbol-width="20"/>
+					<rule e="way" k="*" v="*" zoom-min="14" closed="yes">
+						<symbol src="file:symbols/poi_glacier.svg" symbol-width="20"/>
+					</rule>
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="*" zoom-min="11" closed="yes">
 				<rule e="way" k="natural" v="beach">
 					<area fill="#FCF5E0"/>
 					<area src="file:/patterns/beach.png"/>
+					<rule e="way" k="natural" v="beach" zoom-min="16" closed="yes">
+						<symbol src="file:symbols/poi_beach.svg" symbol-width="20"/>
+					</rule>
 				</rule>
 				<rule e="way" k="natural" v="heath">
 					<area fill="#F1F2E9"/>
@@ -282,7 +288,7 @@ version 2.4.0
 				</rule>
 				<rule e="way" k="natural" v="cliff">
 					<line stroke="#80CCA78B" stroke-width="0.2"/>
-					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="0" symbol-width="18" position="center"/>
+					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="0" symbol-width="20" position="center"/>
 				</rule>
 				<rule e="way" k="natural" v="grassland" closed="yes">
 					<area src="file:/patterns/medow.svg" symbol-width="24"/>
@@ -312,35 +318,32 @@ version 2.4.0
 			<!-- parks City -->
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
 				<area fill="#80a0ca6c"/>
-				<rule e="way" k="*" v="*" zoom-min="15">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2"/>
+				<rule e="way" k="*" v="*" zoom-min="16">
+					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 				</rule>
 			</rule>
 			<rule cat="base_summer" e="way" k="*" v="*">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2"/>
+					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 				</rule>
 			</rule>
 			<!-- park for WINTER -->
 			<rule cat="base_winter" e="way" k="*" v="*">
 				<area fill="#80a6bec9"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<!--#TODO removed attribute: scale-font-size="15,1.2"-->
-					<caption k="name" font-style="bold" font-size="10" fill="#333333" stroke="#60FFFFFF"/>
+					<caption k="name" font-style="bold" font-size="10" fill="#333333" stroke="#60FFFFFF" stroke-width="3" position="below" priority="415"/>
 				</rule>
 			</rule>
 			<rule cat="base_car" e="way" k="leisure" v="park" zoom-min="13">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2"/>
+					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 				</rule>
+			</rule>
+			<!-- Symbol for parks-->
+			<rule e="way" k="leisure" v="park" zoom-min="16" closed="yes">
+				<symbol src="file:symbols/poi_park.svg" symbol-width="20"/>
 			</rule>
 		</rule>
 		<!-- Orchards and meadows, cemetery -->
@@ -357,9 +360,10 @@ version 2.4.0
 				<rule cat="base_summer" e="way" k="landuse" v="cemetery">
 					<area fill="#80bdd16c" stroke="#e4e4e4" stroke-width="0.2"/>
 					<area src="file:/patterns/graveyard.svg" symbol-width="24"/>
+					<rule e="any" k="*" v="*" zoom-min="17">
+						<symbol src="file:symbols/poi_grave_yard.svg" symbol-width="20"/>
+					</rule>
 					<rule e="way" k="*" v="grave_yard" zoom-min="16">
-						<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-						<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
 						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2"/>
 					</rule>
 				</rule>
@@ -406,20 +410,10 @@ version 2.4.0
 			<rule e="way" k="landuse" v="cemetery">
 				<area fill="#80bdd16c" stroke="#e4e4e4" stroke-width="0.2"/>
 				<area src="file:/patterns/graveyard.svg" symbol-width="24"/>
-				<rule e="way" k="*" v="*" zoom-min="16">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2"/>
+				<rule e="any" k="*" v="*" zoom-min="17">
+					<symbol src="file:symbols/poi_grave_yard.svg" symbol-width="20"/>
 				</rule>
-			</rule>
-		</rule>
-		<!-- cemetery car -->
-		<rule cat="base_city" e="way" k="landuse" v="*" zoom-min="13" closed="yes">
-			<rule e="way" k="landuse" v="cemetery">
-				<area fill="#80bdd16c" stroke="#e4e4e4" stroke-width="0.2"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
 					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2"/>
 				</rule>
 			</rule>
@@ -495,18 +489,18 @@ version 2.4.0
 			<!-- Nature protected areas -->
 			<rule e="way" k="leisure" v="nature_reserve" zoom-min="12">
 				<line stroke="#6fc18e" stroke-width="0.7" stroke-dasharray="2,6" stroke-linecap="square"/>
+				<symbol src="file:symbols/poi_nature.svg" symbol-width="20"/>
+				<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415"/>
 			</rule>
 			<!-- Marina -->
 			<rule e="way" k="leisure" v="marina" zoom-min="13">
 				<line stroke="#604f9cbf" stroke-width="0.8" stroke-linecap="butt"/>
 				<line dy="-0.3" stroke="#404f9cbf" stroke-width="0.2" stroke-linecap="butt"/>
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 					<caption k="name" font-style="bold_italic" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
 				</rule>
 			</rule>
 			<rule e="way" k="leisure" v="stadium|sports_centre|water_park|golf_course|playing_fields|pitch|" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 				<caption k="name" font-style="italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
 			</rule>
 		</rule>
@@ -519,7 +513,6 @@ version 2.4.0
 				<line stroke="#604f9cbf" stroke-width="0.8" stroke-linecap="butt"/>
 				<line dy="-0.3" stroke="#404f9cbf" stroke-width="0.2" stroke-linecap="butt"/>
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 					<caption k="name" font-style="bold_italic" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
 				</rule>
 			</rule>
@@ -902,13 +895,13 @@ version 2.4.0
 		<rule cat="base_topo" e="way" k="boundary" v="*">
 			<rule e="way" k="boundary" v="protected_area" zoom-min="12">
 				<line stroke="#3FB637" stroke-width="0.6" stroke-dasharray="16,7" stroke-linecap="butt"/>
-				<!--#TODO removed attribute: scale-font-size="13,1.2"-->
-				<caption k="name" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="2.0"/>
+				<symbol src="file:symbols/poi_nature.svg" symbol-width="20"/>
+				<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415"/>
 			</rule>
 			<rule e="way" k="boundary" v="national_park" zoom-min="11">
 				<line stroke="#9040BE39" stroke-width="2" stroke-dasharray="20, 12" stroke-linecap="butt"/>
-				<!--#TODO removed attribute: scale-font-size="14,1"-->
-				<caption k="name" font-style="bold_italic" font-size="18" fill="#34972D" stroke="#FFFFFF" stroke-width="2.0"/>
+				<symbol src="file:symbols/poi_nature.svg" symbol-width="20"/>
+				<caption k="name" dy="16" font-style="bold_italic" font-size="18" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 		<!-- ferry routes -->
@@ -3663,7 +3656,7 @@ version 2.4.0
 								<line stroke="#8a8a8a" stroke-width="0.256" stroke-dasharray="2.5,1.5" scale="all"/>
 							</rule>
 						</rule>
-						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road|service|steps">
+						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road|service">
 							<line stroke="#ffffff" stroke-width="0.8333333333333334"/>
 						</rule>
 						<rule e="way" k="highway" v="tertiary_link">
@@ -4037,7 +4030,7 @@ version 2.4.0
 					<rule e="way" k="highway" v="*" zoom-min="15">
 						<rule e="way" k="motor_vehicle" v="no" zoom-min="17">
 							<!--#TODO removed attribute: dx="20dp"-->
-							<lineSymbol src="file:symbols/poi_no_entry.svg" symbol-width="21"/>
+							<lineSymbol src="file:symbols/poi_no_entry.svg" symbol-width="20"/>
 						</rule>
 					</rule>
 					<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
@@ -4329,7 +4322,7 @@ version 2.4.0
 							<line dy="0.0" scale="all" stroke="#908a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
-					<rule e="way" k="highway" v="residential|living_street|service|unclassified|road|service|steps" zoom-min="0" zoom-max="127" closed="any">
+					<rule e="way" k="highway" v="residential|living_street|service|unclassified|road|service" zoom-min="0" zoom-max="127" closed="any">
 						<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.8333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary_link" zoom-min="0" zoom-max="127" closed="any">
@@ -5070,8 +5063,6 @@ version 2.4.0
 			</rule>
 			<!-- print names of aerial wasy only for SKI -->
 			<rule cat="base_winter" e="way" k="*" v="*" zoom-min="14">
-				<!--#TODO removed attribute: scale-font-size="17,1.2"-->
-				<!--#TODO removed attribute: dx="30dp"-->
 				<pathText k="name" font-style="italic" font-family="serif" font-size="11" dy="-1.2" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
 			</rule>
 		</rule>
@@ -7004,82 +6995,69 @@ version 2.4.0
 			<circle r="2.5" fill="#ffffff" stroke="#ff5b58" stroke-width="0.5 "/>
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="14" zoom-max="14">
-			<!--#TODO removed attribute: scale-font-size="13,1.15"-->
 			<caption k="name" dy="-10" font-style="bold" font-size="13" fill="#d97f05" stroke="#ffffff" stroke-width="2.5"/>
 		</rule>
 	</rule>
 	<!-- Tourism attraction before any other pois because lower priority-->
 	<rule cat="tourism_city" e="any" k="tourism" v="*" zoom-min="15">
 		<rule e="any" k="tourism" v="attraction">
-			<symbol src="file:symbols/poi_other.svg" symbol-width="18"/>
-			<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-			<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
+			<symbol src="file:symbols/poi_other.svg" symbol-width="20"/>
 			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5"/>
 		</rule>
 	</rule>
 	<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="14">
 		<rule e="any" k="tourism" v="attraction">
-			<symbol src="file:symbols/poi_other.svg" symbol-width="18"/>
-			<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-			<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
+			<symbol src="file:symbols/poi_other.svg" symbol-width="20"/>
 			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5"/>
 		</rule>
 	</rule>
 	<rule cat="base_car" e="any" k="tourism" v="*" zoom-min="16">
 		<rule e="any" k="tourism" v="attraction">
-			<symbol src="file:symbols/poi_other.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_other.svg" symbol-width="20"/>
 		</rule>
 	</rule>
 	<!-- amenity -->
 	<rule e="any" k="amenity" v="*" zoom-min="13">
 		<rule cat="base_topo" e="any" k="amenity" v="hospital">
-			<symbol src="file:symbols/poi_hospital.svg" symbol-width="21"/>
+			<symbol src="file:symbols/poi_hospital.svg" symbol-width="20"/>
 			<rule e="any" k="amenity" v="hospital" zoom-min="16">
-				<!--#TODO removed attribute: scale-font-size="16,1.1"-->
-				<!--#TODO removed attribute: scale-dy-size="16,1.2"-->
-				<caption k="name" dy="14" font-style="bold_italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
+				<caption k="name" dy="20" font-style="italic" font-family="serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" priority="415"/>
 			</rule>
 		</rule>
-		<rule e="any" k="amenity" v="*" zoom-min="13">
+		<rule e="any" k="amenity" v="*" zoom-min="14">
 			<!-- church or cathedral for topo -->
 			<rule cat="base_topo" e="any" k="amenity" v="place_of_worship">
+				<rule e="any" k="religion" v="buddhist">
+					<symbol src="file:symbols/poi_buddhist.svg" symbol-width="20"/>
+				</rule>
 				<rule e="any" k="religion" v="christian">
-					<symbol src="file:symbols/poi_church.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_church.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="religion" v="jewish">
-					<symbol src="file:symbols/poi_jewish_star.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_jewish_star.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="religion" v="muslim">
-					<symbol src="file:symbols/poi_muslim.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_muslim.svg" symbol-width="20"/>
 				</rule>
-				<rule e="any" k="religion" v="buddhist">
-					<symbol src="file:symbols/poi_buddhist.svg" symbol-width="21"/>
+				<rule e="any" k="religion" v="shinto">
+					<symbol src="file:symbols/poi_shinto.svg" symbol-width="20"/>
+				</rule>
+				<rule e="any" k="religion" v="taoist">
+					<symbol src="file:symbols/poi_taoist.svg" symbol-width="20"/>
 				</rule>
 				<!-- captions > 16 -->
 				<rule e="any" k="amenity" v="place_of_worship" zoom-min="16">
-					<!--#TODO removed attribute: scale-font-size="16,1.2"-->
-					<caption k="name" dy="12" font-style="italic" font-family="serif" font-size="10" fill="#333333" stroke="#60FF7B00" stroke-width="1"/>
+					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 				</rule>
 			</rule>
 			<!--  CAR amenities > 14 -->
 			<rule cat="base_car" e="any" k="amenity" v="*" zoom-min="13">
 				<rule e="any" k="amenity" v="fuel">
-					<symbol src="file:symbols/poi_gas_station.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_gas_station.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="charging_station">
-					<symbol src="file:symbols/poi_charging_station.svg" symbol-width="21"/>
-				</rule>
-			</rule>
-		</rule>
-		<rule e="any" k="amenity" v="*" zoom-min="14">
-			<!-- CITY amenities > 15 -->
-			<rule cat="transportation_city" e="any" k="amenity" v="*" zoom-min="14">
-				<rule e="any" k="amenity" v="bus_station">
-					<symbol src="file:symbols/poi_bus_station.svg" symbol-width="21"/>
-					<rule e="any" k="*" v="*" zoom-min="14">
-						<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-						<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#5160ab" stroke="#ffffff" stroke-width="2"/>
+					<rule e="any" k="bicycle" v="~|no">
+						<symbol src="file:symbols/poi_charging_station.svg" symbol-width="20"/>
 					</rule>
 				</rule>
 			</rule>
@@ -7087,286 +7065,347 @@ version 2.4.0
 		<rule e="any" k="amenity" v="*" zoom-min="15">
 			<rule cat="city" e="any" k="amenity" v="*">
 				<rule e="any" k="amenity" v="hospital">
-					<symbol src="file:symbols/poi_hospital.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_hospital.svg" symbol-width="20"/>
 					<rule e="any" k="amenity" v="hospital" zoom-min="16">
-						<!--#TODO removed attribute: scale-font-size="16,1.15"-->
-						<!--#TODO removed attribute: scale-dy-size="16,1.2"-->
 						<caption k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
 					</rule>
 				</rule>
 				<!-- worships for CITY > 16 -->
 				<rule cat="religion_city" e="any" k="amenity" v="place_of_worship">
+					<rule e="any" k="religion" v="buddhist">
+						<symbol src="file:symbols/poi_buddhist.svg" symbol-width="20"/>
+					</rule>
 					<rule e="any" k="religion" v="christian">
-						<symbol src="file:symbols/poi_church.svg" symbol-width="21"/>
+						<symbol src="file:symbols/poi_church.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="religion" v="jewish">
-						<symbol src="file:symbols/poi_jewish_star.svg" symbol-width="21"/>
+						<symbol src="file:symbols/poi_jewish_star.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="religion" v="muslim">
-						<symbol src="file:symbols/poi_muslim.svg" symbol-width="21"/>
+						<symbol src="file:symbols/poi_muslim.svg" symbol-width="20"/>
 					</rule>
-					<rule e="any" k="religion" v="buddhist">
-						<symbol src="file:symbols/poi_buddhist.svg" symbol-width="21"/>
+					<rule e="any" k="religion" v="shinto">
+						<symbol src="file:symbols/poi_shinto.svg" symbol-width="20"/>
+					</rule>
+					<rule e="any" k="religion" v="taoist">
+						<symbol src="file:symbols/poi_taoist.svg" symbol-width="20"/>
 					</rule>
 					<!-- captions > 17 -->
 					<rule e="any" k="*" v="*" zoom-min="17">
-						<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-						<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
 						<caption k="name" dy="15" font-style="bold_italic" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" stroke-width="1.5"/>
 					</rule>
 				</rule>
 				<rule e="any" k="amenity" v="post_office">
-					<symbol src="file:symbols/poi_post_office.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_post_office.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="university|theatre" zoom-min="16">
-					<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
 					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" stroke-width="1.5"/>
 				</rule>
 			</rule>
-			<!-- TOPO AMENITIES > 16-->
+			<!-- TOPO AMENITIES > 15-->
 			<rule cat="base_topo" e="any" k="amenity" v="*">
 				<rule e="any" k="amenity" v="bbq">
-					<symbol src="file:symbols/poi_bbq.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_bbq.svg" symbol-width="20"/>
 				</rule>
-				<rule e="any" k="amenity" v="drinking_water">
-					<symbol src="file:symbols/poi_drinking_water.svg" symbol-width="18"/>
+				<rule e="any" k="amenity" v="fuel">
+					<symbol src="file:symbols/poi_gas_station.svg" symbol-width="20"/>
+				</rule>
+				<rule e="any" k="amenity" v="charging_station">
+					<rule e="any" k="bicycle" v="~|no">
+						<symbol src="file:symbols/poi_charging_station.svg" symbol-width="20"/>
+					</rule>
 				</rule>
 				<rule e="any" k="amenity" v="parking">
-					<rule e="any" k="access" v="~|yes|public">
+					<rule e="any" k="access" v="~|yes|public|customers">
 						<symbol src="file:symbols/poi_parking.svg" symbol-width="15"/>
 					</rule>
 				</rule>
 				<rule e="any" k="amenity" v="post_office">
-					<symbol src="file:symbols/poi_post_office.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_post_office.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="public_bath" zoom-min="15">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_swimming.svg" symbol-width="20"/>
 				</rule>
 				<rule cat="pub_rest_topo" e="any" k="*" v="*">
 					<rule e="any" k="amenity" v="restaurant">
-						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="20"/>
 					</rule>
 				</rule>
 				<rule e="any" k="amenity" v="shelter">
-					<symbol src="file:symbols/poi_shelter.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_shelter.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="theatre">
-					<symbol src="file:symbols/poi_theatre.svg" symbol-width="26"/>
+					<symbol src="file:symbols/poi_theatre.svg" symbol-width="22"/>
 				</rule>
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="*" zoom-min="16">
-			<!--  CITY amenities > 17 -->
+			<!--  CITY amenities > 16 -->
 			<rule cat="city" e="any" k="amenity" v="*" zoom-min="16">
 				<rule e="any" k="amenity" v="bbq">
-					<symbol src="file:symbols/poi_bbq.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_bbq.svg" symbol-width="20"/>
 				</rule>
-				<rule e="any" k="amenity" v="police">
-					<symbol src="file:symbols/poi_police.svg" symbol-width="15"/>
-				</rule>
-				<rule e="any" k="amenity" v="pharmacy">
-					<symbol src="file:symbols/poi_pharmacy.svg" symbol-width="21"/>
+				<rule e="any" k="amenity" v="doctors">
+					<symbol src="file:symbols/poi_doctor.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="public_bath">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_swimming.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="theatre">
-					<symbol src="file:symbols/poi_theatre.svg" symbol-width="26"/>
-				</rule>
-				<rule e="any" k="amenity" v="toilets">
-					<symbol src="file:symbols/poi_toilets.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_theatre.svg" symbol-width="22"/>
 				</rule>
 				<rule cat="pub_rest_city" e="any" k="*" v="*">
 					<rule e="any" k="amenity" v="pub|bar" zoom-min="17">
-						<symbol src="file:symbols/poi_clubs_dancing.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_clubs_dancing.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="cafe">
-						<symbol src="file:symbols/poi_cafe.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_cafe.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="restaurant">
-						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="fast_food" zoom-min="17">
-						<symbol src="file:symbols/poi_fast_food.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_fast_food.svg" symbol-width="20"/>
 					</rule>
 					<!-- Captions for city pubs > 18 -->
 					<rule e="any" k="amenity" v="pub|bar|restaurant|cafe|fast_food" zoom-min="18">
-						<!--#TODO removed attribute: scale-font-size="18,1.15"-->
-						<!--#TODO removed attribute: scale-dy-size="18,1.15"-->
 						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff"/>
 					</rule>
 				</rule>
 			</rule>
-			<!--  TOPO amenities > 17 -->
+			<!--  TOPO amenities > 16 -->
 			<rule cat="base_topo" e="any" k="amenity" v="*" zoom-min="16">
 				<rule e="any" k="amenity" v="bbq">
-					<symbol src="file:symbols/poi_bbq.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_bbq.svg" symbol-width="20"/>
 				</rule>
-				<rule e="any" k="amenity" v="pharmacy">
-					<symbol src="file:symbols/poi_pharmacy.svg" symbol-width="21"/>
+				<rule e="any" k="amenity" v="drinking_water">
+					<symbol src="file:symbols/poi_drinking_water.svg" symbol-width="20"/>
 				</rule>
-				<rule e="any" k="amenity" v="police">
-					<symbol src="file:symbols/poi_police.svg" symbol-width="18"/>
+				<rule e="any" k="amenity" v="doctors">
+					<symbol src="file:symbols/poi_doctor.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="fountain" closed="yes">
-					<symbol src="file:symbols/poi_fountain.svg" symbol-width="15"/>
+					<symbol src="file:symbols/poi_fountain.svg" symbol-width="20"/>
 				</rule>
-				<rule e="any" k="amenity" v="fuel">
-					<symbol src="file:symbols/poi_gas_station.svg" symbol-width="21"/>
-				</rule>
-				<rule e="any" k="amenity" v="charging_station">
-					<symbol src="file:symbols/poi_charging_station.svg" symbol-width="21"/>
+				<rule e="any" k="amenity" v="hunting_stand">
+					<symbol src="file:symbols/poi_hunting_post.svg" symbol-width="20"/>
 				</rule>
 				<rule cat="pub_rest_topo" e="any" k="*" v="*">
 					<rule e="any" k="amenity" v="pub|bar">
-						<symbol src="file:symbols/poi_clubs_dancing.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_clubs_dancing.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="restaurant">
-						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="20"/>
 					</rule>
-					<rule e="any" k="amenity" v="cafe">
-						<symbol src="file:symbols/poi_cafe.svg" symbol-width="18"/>
+					<rule e="any" k="amenity" v="cafe" zoom-min="17">
+						<symbol src="file:symbols/poi_cafe.svg" symbol-width="20"/>
 					</rule>
-					<rule e="any" k="amenity" v="fast_food" zoom-min="16">
-						<symbol src="file:symbols/poi_fast_food.svg" symbol-width="18"/>
+					<rule e="any" k="amenity" v="fast_food" zoom-min="17">
+						<symbol src="file:symbols/poi_fast_food.svg" symbol-width="20"/>
 					</rule>
-				</rule>
-				<rule e="any" k="amenity" v="toilets">
-					<symbol src="file:symbols/poi_toilets.svg" symbol-width="18"/>
-				</rule>
-				<rule e="any" k="amenity" v="college|university|school|theatre">
-					<!--#TODO removed attribute: scale-font-size="17,1.2"-->
-					<caption k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="13" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
 				</rule>
 			</rule>
 			<!--  CAR amenities > 17 -->
 			<rule cat="base_car" e="any" k="amenity" v="*" zoom-min="16">
 				<rule e="any" k="amenity" v="police">
-					<symbol src="file:symbols/poi_police.svg" symbol-width="18"/>
-				</rule>
-				<rule e="any" k="amenity" v="bus_station">
-					<symbol src="file:symbols/poi_bus_station.svg" symbol-width="21"/>
-					<!--#TODO removed attribute: scale-font-size="17,1.2"-->
-					<caption k="name" dy="20" font-style="bold" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
+					<symbol src="file:symbols/poi_police.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="fuel">
-					<symbol src="file:symbols/poi_gas_station.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_gas_station.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="charging_station">
-					<symbol src="file:symbols/poi_charging_station.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_charging_station.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="hospital">
-					<symbol src="file:symbols/poi_hospital.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_hospital.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="parking">
-					<rule e="any" k="access" v="~|yes|public">
+					<rule e="any" k="access" v="~|yes|public|customers">
 						<symbol src="file:symbols/poi_parking.svg" symbol-width="15"/>
 					</rule>
 				</rule>
 				<rule e="any" k="amenity" v="post_office">
-					<symbol src="file:symbols/poi_post_office.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_post_office.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="public_bath">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_swimming.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="amenity" v="theatre">
 					<symbol src="file:symbols/poi_theatre.svg" symbol-width="26"/>
 				</rule>
-				<rule e="any" k="amenity" v="toilets" zoom-min="17">
-					<symbol src="file:symbols/poi_toilets.svg" symbol-width="18"/>
-				</rule>
 				<rule cat="pub_rest_car" e="any" k="*" v="*">
 					<rule e="any" k="amenity" v="pub|bar" zoom-min="17">
-						<symbol src="file:symbols/poi_clubs_dancing.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_clubs_dancing.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="restaurant">
-						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="21"/>
+						<symbol src="file:symbols/poi_restaurant.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="cafe">
-						<symbol src="file:symbols/poi_cafe.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_cafe.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="fast_food" zoom-min="17">
-						<symbol src="file:symbols/poi_fast_food.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_fast_food.svg" symbol-width="20"/>
 					</rule>
 					<rule e="any" k="amenity" v="pub|bar|restaurant|cafe|fast_food" zoom-min="18">
-						<!--#TODO removed attribute: scale-font-size="18,1.15"-->
-						<!--#TODO removed attribute: scale-dy-size="18,1.15"-->
 						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff"/>
 					</rule>
 				</rule>
 				<rule e="any" k="amenity" v="college|university|school|theatre|hospital">
-					<!--#TODO removed attribute: scale-font-size="18,1.2"-->
 					<caption k="name" dy="15" font-style="bold" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
 				</rule>
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="*" zoom-min="17">
 			<rule e="any" k="amenity" v="atm">
-				<symbol src="file:symbols/poi_atm.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_atm.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="amenity" v="bank">
-				<symbol src="file:symbols/poi_bank.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_bank.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="amenity" v="cinema" zoom-min="16">
-				<symbol src="file:symbols/poi_cinema.svg" symbol-width="21"/>
+			<rule e="any" k="amenity" v="bicycle_parking">
+				<symbol src="file:symbols/poi_bicycle_parking.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="bus_station">
+				<symbol src="file:symbols/poi_bus_station.svg" symbol-width="20"/>
+				<caption k="name" dy="20" font-style="bold" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
+			</rule>
+			<rule e="any" k="amenity" v="charging_station">
+				<rule e="any" k="bicycle" v="yes">
+					<symbol src="file:symbols/poi_charging_station_bikes.svg" symbol-width="20"/>
+				</rule>
+			</rule>
+			<rule e="any" k="amenity" v="bureau_de_change">
+				<symbol src="file:symbols/poi_exchange.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="dentist">
+				<symbol src="file:symbols/poi_cinema.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="doctors">
+				<symbol src="file:symbols/poi_doctor_dentist.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="amenity" v="drinking_water">
-				<symbol src="file:symbols/poi_drinking_water.svg" symbol-width="15"/>
+				<symbol src="file:symbols/poi_drinking_water.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="embassy">
+				<symbol src="file:symbols/poi_embassy.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="grave_yard">
+				<symbol src="file:symbols/poi_grave_yard.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="kindergarten">
+				<symbol src="file:symbols/poi_kindergarten.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="amenity" v="library">
-				<symbol src="file:symbols/poi_library.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_library.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="parcel_locker">
+				<symbol src="file:symbols/poi_parcel_locker.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="pharmacy">
+				<symbol src="file:symbols/poi_pharmacy.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="amenity" v="post_box">
 				<symbol src="file:symbols/poi_post_box.svg" symbol-width="15"/>
 			</rule>
-			<rule e="any" k="amenity" v="university|college">
-				<symbol src="file:symbols/poi_education.svg" symbol-width="21"/>
+			<rule e="any" k="amenity" v="police">
+				<symbol src="file:symbols/poi_police.svg" symbol-width="20"/>
 			</rule>
-			<rule cat="city" e="any" k="amenity" v="cinema|library">
-				<!--#TODO removed attribute: scale-font-size="18,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="18,1.15"-->
-				<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff"/>
+			<rule e="any" k="amenity" v="toilets">
+				<symbol src="file:symbols/poi_toilets.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="townhall">
+				<symbol src="file:symbols/poi_townhall.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="school|university|college">
+				<symbol src="file:symbols/poi_education.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="amenity" v="veterinary">
+				<symbol src="file:symbols/poi_veterinary.svg" symbol-width="20"/>
+			</rule>
+			<!-- labels from zl > 17-->
+			<rule e="any" k="amenity" v="college|university|school|theatre|cinema|library">
+				<caption k="name" dy="16" font-family="sans_serif" font-size="12" fill="#747474" stroke="#ffffff" stroke-width="3" priority="415"/>
 			</rule>
 		</rule>
 	</rule>
 	<!-- end of amenity -->
+	<!-- additional foor & drinks -->
+	<rule cat="pub_rest_topo" e="any" k="*" v="*" zoom-min="16">
+		<rule e="any" k="product|craft|microbrewery" v="beer|brewery|yes">
+			<symbol src="file:symbols/poi_brewery.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="pastry|confectionery">
+			<symbol src="file:symbols/poi_confectionery.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="diet:vegetarian|diet:lacto_vegetarian|diet:ovo_vegetarian|diet:vegan|diet:fruitarian|vegetarian" v="yes">
+			<symbol src="file:symbols/poi_veg_food.svg" symbol-width="20"/>
+		</rule>
+	</rule>
+	<rule cat="pub_rest_city" e="any" k="*" v="*" zoom-min="16">
+		<rule e="any" k="product|craft|microbrewery" v="beer|brewery|yes">
+			<symbol src="file:symbols/poi_brewery.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="pastry|confectionery">
+			<symbol src="file:symbols/poi_confectionery.svg" symbol-width="20"/>
+		</rule>
+	</rule>
+	<!-- Emergency -->
+	<rule cat="base_topo" e="any" k="emergency|lifeguard" v="*" zoom-min="15">
+		<rule e="any" k="emergency" v="mountain_rescue" zoom-min="15">
+			<symbol src="file:symbols/poi_mountain_rescue.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="emergency|lifeguard" v="lifeguard|yes" zoom-min="17">
+			<symbol src="file:symbols/poi_lifeguard.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="emergency" v="assembly_point|access_point" zoom-min="17">
+			<symbol src="file:symbols/poi_emergency.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="emergency" v="landing_site" zoom-min="17">
+			<symbol src="file:symbols/poi_heliport_emergency.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="emergency" v="phone" zoom-min="17">
+			<symbol src="file:symbols/poi_emergency_phone.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="emergency" v="defibrillator" zoom-min="17">
+			<symbol src="file:symbols/poi_aed.svg" symbol-width="20"/>
+		</rule>
+	</rule>
 	<!-- barrier -->
 	<rule cat="base_topo" e="any" k="barrier" v="*" zoom-min="15">
 		<rule e="any" k="barrier" v="bollard">
 			<circle r="1.5" fill="#707070"/>
 		</rule>
 		<rule e="any" k="barrier" v="gate|lift_gate|swing_gate" zoom-min="15">
-			<symbol src="file:symbols/poi_barrier_liftgate.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_barrier_liftgate.svg" symbol-width="20"/>
 		</rule>
 		<rule e="any" k="barrier" v="kissing_gate" zoom-min="15">
-			<symbol src="file:symbols/poi_barrier_kissing_gate.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_barrier_kissing_gate.svg" symbol-width="20"/>
 		</rule>
 		<rule e="any" k="barrier" v="turnstile|full-height_turnstile" zoom-min="15">
-			<symbol src="file:symbols/poi_barrier_turnstile.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_barrier_turnstile.svg" symbol-width="20"/>
 		</rule>
 		<rule cat="base_topo" e="any" k="barrier" v="stile" zoom-min="15">
-			<symbol src="file:symbols/poi_ladder.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_ladder.svg" symbol-width="20"/>
 		</rule>
 	</rule>
 	<rule cat="base_car" e="any" k="barrier" v="*" zoom-min="17">
 		<rule e="any" k="barrier" v="bollard">
-			<circle r="1.5" fill="#488bc2"/>
+			<circle r="2" fill="#488bc2"/>
 		</rule>
 		<rule e="any" k="barrier" v="gate|lift_gate|swing_gate" zoom-min="15">
-			<symbol src="file:symbols/poi_barrier_liftgate.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_barrier_liftgate.svg" symbol-width="20"/>
 		</rule>
 	</rule>
 	<!-- highway -->
 	<rule e="any" k="highway" v="*" zoom-min="14">
 		<rule cat="transportation_city" e="any" k="highway" v="bus_stop" zoom-min="16">
-			<symbol src="file:symbols/poi_bus_and_tram_stop.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_bus_and_tram_stop.svg" symbol-width="20"/>
 		</rule>
 		<rule cat="transportation_topo" e="any" k="highway" v="bus_stop" zoom-min="16">
-			<symbol src="file:symbols/poi_bus_and_tram_stop.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_bus_and_tram_stop.svg" symbol-width="20"/>
 		</rule>
 		<rule cat="base_car" e="any" k="highway" v="bus_stop" zoom-min="17">
-			<symbol src="file:symbols/poi_bus_and_tram_stop.svg" symbol-width="18"/>
+			<symbol src="file:symbols/poi_bus_and_tram_stop.svg" symbol-width="20"/>
 		</rule>
 		<rule cat="base_car" e="any" k="highway" v="traffic_signals" zoom-min="17">
 			<symbol src="file:symbols/poi_traffic_signal.svg" symbol-width="15"/>
@@ -7380,10 +7419,10 @@ version 2.4.0
 		<!-- Historic for topo themes -->
 		<rule cat="tourism_city" e="any" k="historic" v="*" zoom-min="15">
 			<rule e="any" k="historic" v="castle" zoom-min="15">
-				<symbol src="file:symbols/poi_castle.svg" symbol-width="18"/>
+				<symbol src="file:symbols/poi_castle.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="historic" v="ruins" zoom-min="15">
-				<symbol src="file:symbols/poi_castle_ruin.svg" symbol-width="18"/>
+				<symbol src="file:symbols/poi_castle_ruin.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="historic" v="monument" zoom-min="15">
 				<symbol src="file:symbols/poi_monument.svg" symbol-width="15"/>
@@ -7393,173 +7432,133 @@ version 2.4.0
 			</rule>
 			<!-- show name only for castle or ruins-->
 			<rule e="any" k="historic" v="castle|ruins" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="16,1.15"-->
-				<caption k="name" dy="15" font-style="bold_italic" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" stroke-width="1.5"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 		<!-- Historic for topo themes -->
-		<rule cat="tourism_topo" e="any" k="historic" v="*" zoom-min="12">
-			<rule e="any" k="historic" v="castle" zoom-min="12">
-				<symbol src="file:symbols/poi_castle.svg" symbol-width="21"/>
+		<rule cat="tourism_topo" e="any" k="historic" v="*" zoom-min="14">
+			<rule e="any" k="historic" v="castle" zoom-min="14">
+				<symbol src="file:symbols/poi_castle.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="historic" v="ruins" zoom-min="12">
-				<symbol src="file:symbols/poi_castle_ruin.svg" symbol-width="21"/>
+			<rule e="any" k="historic" v="aqueduct" zoom-min="17">
+				<symbol src="file:symbols/poi_aqueduct.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="historic" v="monument" zoom-min="13">
-				<symbol src="file:symbols/poi_monument.svg" symbol-width="18"/>
+			<rule e="any" k="historic" v="ruins" zoom-min="14">
+				<symbol src="file:symbols/poi_castle_ruin.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="historic" v="memorial" zoom-min="14">
-				<symbol src="file:symbols/poi_memorial.svg" symbol-width="15"/>
+			<rule e="any" k="historic" v="monument" zoom-min="14">
+				<symbol src="file:symbols/poi_monument.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="historic" v="wayside_shrine" zoom-min="14">
-				<symbol src="file:symbols/poi_wayside_shrine.svg" symbol-width="15"/>
+			<rule e="any" k="historic" v="memorial" zoom-min="15">
+				<symbol src="file:symbols/poi_memorial.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="historic" v="wayside_cross" zoom-min="14">
-				<symbol src="file:symbols/poi_cross.svg" symbol-width="15"/>
+			<rule e="any" k="historic" v="wayside_shrine" zoom-min="15">
+				<symbol src="file:symbols/poi_wayside_shrine.svg" symbol-width="16"/>
+			</rule>
+			<rule e="any" k="historic" v="wayside_cross" zoom-min="15">
+				<symbol src="file:symbols/poi_cross.svg" symbol-width="16"/>
 			</rule>
 			<!-- show name only for castle or ruins-->
-			<rule e="any" k="historic" v="castle|ruins" zoom-min="14">
-				<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="16,1.1"-->
-				<caption k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
+			<rule e="any" k="historic" v="castle|ruins" zoom-min="15">
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
+			</rule>
+			<rule e="any" k="historic" v="monument" zoom-min="16">
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="414"/>
+			</rule>
+			<rule e="any" k="historic" v="memorial|aqueduct" zoom-min="17">
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="413"/>
 			</rule>
 		</rule>
 		<rule cat="base_car" e="any" k="historic" v="*" zoom-min="17">
 			<rule e="any" k="historic" v="castle" zoom-min="16">
-				<symbol src="file:symbols/poi_castle.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_castle.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="historic" v="ruins" zoom-min="17">
-				<symbol src="file:symbols/poi_castle_ruin.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_castle_ruin.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="historic" v="monument">
-				<symbol src="file:symbols/poi_monument.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_monument.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="historic" v="memorial">
 				<symbol src="file:symbols/poi_memorial.svg" symbol-width="15"/>
 			</rule>
 			<rule e="any" k="historic" v="castle|ruins" zoom-min="16">
-				<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="16,1.1"-->
-				<caption k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 	</rule>
 	<!-- end of historic -->
 	<!-- leisure -->
 	<rule e="any" k="leisure" v="*" zoom-min="14">
-		<!-- leisure for topo -->
-		<rule cat="base_topo" e="any" k="*" v="*">
+		<rule e="any" k="*" v="*">
 			<rule e="any" k="leisure" v="golf_course">
-				<symbol src="file:symbols/poi_golf.svg" symbol-width="18" position="above"/>
+				<symbol src="file:symbols/poi_golf.svg" symbol-width="20" position="above"/>
 			</rule>
 			<rule e="any" k="leisure" v="marina" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="17,1.1"-->
-				<caption k="name" font-style="bold_italic" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
+				<symbol src="file:symbols/poi_marina.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="leisure" v="firepit" zoom-min="15">
-				<symbol src="file:symbols/poi_firepit.svg" symbol-width="18"/>
+			<rule e="any" k="leisure" v="firepit" zoom-min="16">
+				<symbol src="file:symbols/poi_firepit.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="leisure" v="water_park" zoom-min="15">
-				<rule e="any" k="access" v="~|yes|customers|permissive|public">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
-				</rule>
+			<rule e="any" k="leisure" v="nightclub" zoom-min="16">
+				<symbol src="file:symbols/poi_clubs_dancing.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="leisure" v="swimming_pool" zoom-min="15">
+			<rule e="any" k="leisure" v="playground" zoom-min="18">
+				<symbol src="file:symbols/poi_playground.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="leisure" v="pitch" zoom-min="15">
 				<rule e="any" k="access" v="yes|customers|permissive|public">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_sport_pitch.svg" symbol-width="20"/>
 				</rule>
 			</rule>
 			<rule e="any" k="leisure" v="sports_centre" zoom-min="15">
 				<rule e="any" k="sport" v="swimming">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_swimming.svg" symbol-width="20"/>
 				</rule>
 			</rule>
-		</rule>
-		<!-- leisure for car -->
-		<rule cat="base_car" e="any" k="*" v="*">
-			<rule e="any" k="leisure" v="golf_course">
-				<symbol src="file:symbols/poi_golf.svg" symbol-width="18" position="above"/>
-			</rule>
-			<rule e="any" k="leisure" v="marina" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="17,1.1"-->
-				<caption k="name" font-style="bold_italic" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
-			</rule>
-			<rule e="any" k="leisure" v="water_park" zoom-min="16">
-				<rule e="any" k="access" v="~|yes|customers|permissive|public">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
-				</rule>
-			</rule>
-			<rule e="any" k="leisure" v="swimming_pool" zoom-min="16">
+			<rule e="any" k="leisure" v="swimming_pool" zoom-min="15">
 				<rule e="any" k="access" v="yes|customers|permissive|public">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_swimming.svg" symbol-width="20"/>
 				</rule>
 			</rule>
-			<rule e="any" k="leisure" v="sports_centre" zoom-min="16">
-				<rule e="any" k="sport" v="swimming">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
-				</rule>
-			</rule>
-		</rule>
-		<!-- leisure for city -->
-		<rule cat="base_city" e="any" k="*" v="*">
-			<rule e="any" k="leisure" v="golf_course">
-				<symbol src="file:symbols/poi_golf.svg" symbol-width="18" position="above"/>
-			</rule>
-			<rule e="any" k="leisure" v="playground" zoom-min="17">
-				<symbol src="file:symbols/poi_playground.svg" symbol-width="21"/>
-			</rule>
-			<rule e="any" k="leisure" v="water_park" zoom-min="16">
+			<rule e="any" k="leisure" v="water_park" zoom-min="15">
 				<rule e="any" k="access" v="~|yes|customers|permissive|public">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_swimming.svg" symbol-width="20"/>
 				</rule>
-			</rule>
-			<rule e="any" k="leisure" v="swimming_pool" zoom-min="16">
-				<rule e="any" k="access" v="yes|customers|permissive|public">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
-				</rule>
-			</rule>
-			<rule e="any" k="leisure" v="sports_centre" zoom-min="16">
-				<rule e="any" k="sport" v="swimming">
-					<symbol src="file:symbols/poi_swimming.svg" symbol-width="21"/>
-				</rule>
-			</rule>
-			<rule e="any" k="leisure" v="marina" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="17,1.1"-->
-				<caption k="name" font-style="bold_italic" font-size="13" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
 			</rule>
 		</rule>
 	</rule>
 	<!-- man_made -->
-	<rule e="any" k="man_made|tower:type" v="*" zoom-min="13">
+	<rule e="any" k="man_made|tower:type" v="*" zoom-min="14">
 		<!-- man_made features -->
 		<rule cat="base_topo" e="any" k="man_made|tower:type" v="*">
-			<rule e="any" k="man_made" v="adit" zoom-min="13">
-				<symbol src="file:symbols/poi_cave_entrance.svg" symbol-width="21"/>
+			<rule e="any" k="man_made" v="adit" zoom-min="14">
+				<symbol src="file:symbols/poi_cave_entrance.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="man_made" v="mineshaft" zoom-min="13">
-				<symbol src="file:symbols/poi_mineshaft.svg" symbol-width="21"/>
+			<rule e="any" k="man_made" v="cross" zoom-min="16">
+				<symbol src="file:symbols/poi_cross.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="man_made" v="mineshaft">
+				<symbol src="file:symbols/poi_mineshaft.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="man_made" v="lighthouse">
-				<symbol src="file:symbols/poi_lighthouse_on.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_lighthouse_on.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="man_made" v="watermill">
-				<symbol src="file:symbols/poi_watermill.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_watermill.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="man_made" v="windmill">
-				<symbol src="file:symbols/poi_windmill.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_windmill.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tower:type" v="communication">
-				<symbol src="file:symbols/poi_tower_communication.svg" symbol-width="18"/>
+				<symbol src="file:symbols/poi_tower_communication.svg" symbol-width="12"/>
 			</rule>
 			<rule e="any" k="tower:type" v="observation">
-				<symbol src="file:symbols/poi_tower_observation.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_tower_observation.svg" symbol-width="20"/>
 			</rule>
 			<!-- captions -->
-			<rule e="any" k="man_made" v="adit|observation|communication|lighthouse" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="16,1.1"-->
-				<caption k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="11" fill="#333333" stroke="#F1D581" stroke-width="1.5"/>
+			<rule e="any" k="man_made" v="adit|observation|communication|lighthouse" zoom-min="16">
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="413"/>
 			</rule>
 		</rule>
 	</rule>
@@ -7568,167 +7567,215 @@ version 2.4.0
 		<!-- hotels CITY -->
 		<rule cat="accommodation_city" e="any" k="tourism" v="*" zoom-min="17">
 			<rule e="any" k="tourism" v="hotel">
-				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="tourism" v="hostel|guest_house|motel|apartment">
-				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="18"/>
+			<rule e="any" k="tourism" v="hostel|guest_house|motel|apartment|guest_house_chalet">
+				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="20"/>
 			</rule>
 		</rule>
 		<!-- hotels CAR -->
 		<rule cat="accommodation_car" e="any" k="tourism" v="*" zoom-min="17">
 			<rule e="any" k="tourism" v="hotel">
-				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="hostel|guest_house|motel|apartment">
-				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="18"/>
+				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="20"/>
 			</rule>
 		</rule>
 		<!-- hotels and alpine huts for topo -->
 		<rule cat="accommodation_topo" e="any" k="tourism" v="*" zoom-min="14">
 			<rule e="any" k="tourism" v="hotel" zoom-min="16">
-				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="hostel|guest_house|apartment" zoom-min="16">
-				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="18"/>
+				<symbol src="file:symbols/poi_hotel_hostel.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="alpine_hut">
 				<symbol src="file:symbols/poi_alpine_hut.svg" symbol-width="27"/>
 				<rule e="any" k="tourism" v="alpine_hut" zoom-min="15">
-					<!--#TODO removed attribute: scale-font-size="16,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="16,1.15"-->
-					<caption k="ele" dy="-15" font-style="bold" font-size="10" fill="#333333" stroke="#ffffff" stroke-width="2"/>
-					<!--#TODO removed attribute: scale-font-size="16,1.15"-->
-					<!--#TODO removed attribute: scale-dy-size="16,1.15"-->
-					<caption k="name" dy="15" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
+					<caption k="ele" dy="-20" font-family="serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="above" priority="414"/>
+					<caption k="name" dy="13" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 				</rule>
 			</rule>
 			<rule e="any" k="tourism" v="wilderness_hut">
-				<symbol src="file:symbols/poi_alpine_hut.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_alpine_hut.svg" symbol-width="20"/>
 			</rule>
 			<!-- tourism areas -->
 			<rule e="any" k="tourism" v="camp_site|caravan_site">
-				<symbol src="file:symbols/poi_camp_caravan.svg" symbol-width="24"/>
+				<symbol src="file:symbols/poi_camp_caravan.svg" symbol-width="20"/>
 			</rule>
 		</rule>
 		<!-- musuem, zoo, for CITY -->
 		<rule cat="tourism_city" e="any" k="tourism" v="*" zoom-min="15">
 			<rule e="any" k="information" v="office">
 				<rule e="any" k="*" v="*">
-					<symbol src="file:symbols/poi_info_square.svg" symbol-width="18"/>
+					<symbol src="file:symbols/poi_info_square.svg" symbol-width="20"/>
 				</rule>
 			</rule>
+			<rule e="any" k="tourism" v="gallery">
+				<symbol src="file:symbols/poi_gallery.svg" symbol-width="20"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
+			</rule>
 			<rule e="any" k="tourism" v="museum">
-				<symbol src="file:symbols/poi_museum.svg" symbol-width="21"/>
-				<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-				<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5"/>
+				<symbol src="file:symbols/poi_museum.svg" symbol-width="20"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 			<rule e="any" k="tourism" v="zoo">
-				<symbol src="file:symbols/poi_zoo.svg" symbol-width="21"/>
-				<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-				<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2"/>
+				<symbol src="file:symbols/poi_zoo.svg" symbol-width="20"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 		<!-- musuem, zoo, info for topo -->
-		<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="14">
+		<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="15">
 			<rule e="any" k="tourism" v="information">
 				<rule e="any" k="information" v="office">
 					<rule e="any" k="*" v="*">
-						<symbol src="file:symbols/poi_info_square.svg" symbol-width="18"/>
+						<symbol src="file:symbols/poi_info_square.svg" symbol-width="20"/>
 					</rule>
 				</rule>
 				<rule e="any" k="information" v="~|map|board" zoom-min="16">
-					<symbol src="file:symbols/poi_infoboard.svg" symbol-width="9"/>
+					<symbol src="file:symbols/poi_infoboard.svg" symbol-width="16"/>
 				</rule>
 			</rule>
+			<rule e="any" k="tourism" v="gallery">
+				<symbol src="file:symbols/poi_gallery.svg" symbol-width="20"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
+			</rule>
 			<rule e="any" k="tourism" v="museum">
-				<symbol src="file:symbols/poi_museum.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_museum.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="picnic_site">
-				<symbol src="file:symbols/poi_picnic_site.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_picnic_site.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="viewpoint">
-				<symbol src="file:symbols/poi_viewpoint.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_viewpoint.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="zoo">
-				<symbol src="file:symbols/poi_zoo.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_zoo.svg" symbol-width="20"/>
 			</rule>
 		</rule>
 		<!-- guide post summer -->
 		<rule cat="base_summer" e="any" k="tourism" v="information" zoom-min="14">
 			<rule e="any" k="information" v="guidepost">
-				<symbol id="poi_guidepost" src="file:symbols/poi_guidepost.svg" symbol-width="24"/>
-				<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="17">
-					<caption k="name" symbol-id="poi_guidepost" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
+				<symbol id="poi_guidepost" src="file:symbols/poi_guidepost.svg" symbol-width="20"/>
+				<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="18">
+					<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 				</rule>
 			</rule>
 		</rule>
 		<!-- guide post winter -->
 		<rule cat="pistes_nordic" e="any" k="tourism" v="information" zoom-min="14">
 			<rule e="any" k="information" v="guidepost">
-				<symbol src="file:symbols/poi_guidepost.svg" symbol-width="24"/>
-				<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="17">
-					<caption k="name" dy="14" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2"/>
+				<symbol src="file:symbols/poi_guidepost.svg" symbol-width="20"/>
+				<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="18">
+					<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 				</rule>
 			</rule>
 		</rule>
 		<rule cat="base_car" e="any" k="tourism" v="*" zoom-min="16">
 			<rule e="any" k="tourism" v="museum">
-				<symbol src="file:symbols/poi_museum.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_museum.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="zoo">
-				<symbol src="file:symbols/poi_zoo.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_zoo.svg" symbol-width="20"/>
 			</rule>
 			<rule e="any" k="tourism" v="information">
 				<rule e="any" k="information" v="office">
-					<symbol src="file:symbols/poi_infoboard.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_infoboard.svg" symbol-width="20"/>
 				</rule>
 			</rule>
 			<rule e="any" k="tourism" v="attraction|museum|zoo" zoom-min="16">
-				<!--#TODO removed attribute: scale-font-size="18,1.25"-->
-				<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#222222" stroke="#ffffff" stroke-width="2"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 	</rule>
+	<!-- winter sports, downhill -->
+	<rule cat="base_winter" e="any" k="*" v="*" zoom-min="16">
+		<rule cat="base_winter" e="any" k="aerialway" v="*" zoom-min="16">
+			<rule e="any" k="aerialway" v="magic_carpet|rope_tow|platter|drag_lift|t-bar|j-bar">
+				<symbol src="file:symbols/poi_drag_lift.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="aerialway" v="chair_lift|mixed_lift">
+				<symbol src="file:symbols/poi_chair_lift.svg" symbol-width="20"/>
+			</rule>
+		</rule>
+		<rule e="any" k="landuse" v="winter_sports" zoom-min="13">
+			<symbol src="file:symbols/poi_skiing.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="sport|piste:type|man_made" v="ski_jumping|ski_jump">
+			<symbol src="file:symbols/poi_skijumping.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="amenity" v="ski_school" zoom-min="17">
+			<symbol src="file:symbols/poi_skiing_school.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="ski" zoom-min="17">
+			<symbol src="file:symbols/poi_skiing_shop.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="ski:rental|ski:repair" v="*" zoom-min="17">
+			<symbol src="file:symbols/poi_skiing_shop.svg" symbol-width="20"/>
+		</rule>
+	</rule>
 	<!-- OTHER 	 -->
-	<rule e="any" k="*" v="*" zoom-min="13">
+	<rule e="any" k="*" v="*" zoom-min="14">
 		<!-- Ladders for via ferrata and other hiking -->
 		<rule cat="base_topo" e="any" k="ladder" v="*" zoom-min="15">
-			<!--#TODO removed attribute: dx="12dp"-->
-			<symbol src="file:symbols/poi_ladder.svg" symbol-width="21" position="above"/>
+			<symbol src="file:symbols/poi_ladder.svg" symbol-width="20" position="above"/>
 		</rule>
 		<!-- aeroway -->
 		<rule e="any" k="aeroway" v="*">
-			<rule e="any" k="aeroway" v="helipad" zoom-min="16">
-				<symbol src="file:symbols/poi_heliport.svg" symbol-width="21"/>
+			<rule e="any" k="aeroway" v="helipad|heliport" zoom-min="16">
+				<symbol src="file:symbols/poi_heliport.svg" symbol-width="20"/>
 			</rule>
-			<rule e="any" k="aeroway" v="aerodrome|airport" zoom-max="14">
-				<symbol src="file:symbols/poi_airport.svg" symbol-width="21"/>
+			<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="14">
+				<symbol src="file:symbols/poi_airport.svg" symbol-width="20"/>
+			</rule>
+		</rule>
+		<!-- ferries -->
+		<rule e="any" k="amenity" v="*">
+			<rule e="any" k="amenity" v="ferry_terminal" zoom-min="15">
+				<symbol src="file:symbols/poi_ferries.svg" symbol-width="20"/>
+			</rule>
+		</rule>
+		<!-- cable gondola -->
+		<rule e="any" k="aerialway" v="*">
+			<rule e="any" k="aerialway" v="cable_car|gondola" zoom-min="15">
+				<symbol src="file:symbols/poi_cable_car.svg" symbol-width="20"/>
+			</rule>
+		</rule>
+		<!-- funicular -->
+		<rule e="any" k="aerialway" v="*">
+			<rule e="any" k="aerialway" v="funicular" zoom-min="16">
+				<symbol src="file:symbols/poi_funicular.svg" symbol-width="20"/>
 			</rule>
 		</rule>
 		<rule cat="base_topo" e="any" k="military" v="bunker">
 			<symbol src="file:symbols/poi_bunker_pillbox.svg" symbol-width="15"/>
 		</rule>
-		<rule cat="base_topo" e="any" k="mountain_pass" v="yes">
+		<rule cat="base_topo" e="any" k="mountain_pass" v="yes" zoom-min="14">
 			<rule e="any" k="name" v="*">
-				<symbol src="file:symbols/poi_pass.svg" symbol-width="15"/>
-				<!--#TODO removed attribute: scale-font-size="14,1.2"-->
-				<!--#TODO removed attribute: scale-dy-size="14,1.2"-->
-				<caption k="name" dy="-6" font-style="italic" font-size="8" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+				<symbol src="file:symbols/poi_pass.svg" symbol-width="18"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-style="italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414"/>
 			</rule>
+		</rule>
+		<!-- botanical garden -->
+		<rule e="way" k="garden:type" v="botanical" zoom-min="15">
+			<symbol src="file:symbols/poi_botanical_garden.svg" symbol-width="20"/>
+			<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415"/>
+		</rule>
+		<rule e="way" k="highway" v="rest_area" zoom-min="16">
+			<symbol src="file:symbols/poi_rest_area.svg" symbol-width="20"/>
 		</rule>
 		<!-- power generator and power tover -->
 		<rule e="any" k="power" v="*">
 			<rule cat="base_topo" e="any" k="power" v="generator">
 				<rule e="any" k="generator:source" v="nuclear">
-					<symbol src="file:symbols/poi_power_generator_nuclear.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_power_generator_nuclear.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="generator:source" v="wind">
-					<symbol src="file:symbols/poi_power_generator_wind.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_power_generator_wind.svg" symbol-width="20"/>
 				</rule>
 				<rule e="any" k="generator:source" v="classic">
-					<symbol src="file:symbols/poi_power_generator_clasic.svg" symbol-width="21"/>
+					<symbol src="file:symbols/poi_power_generator_clasic.svg" symbol-width="20"/>
 				</rule>
 			</rule>
 			<rule cat="base_topo" e="any" k="power" v="tower" zoom-min="15">
@@ -7739,56 +7786,73 @@ version 2.4.0
 	<!-- NATURAL -->
 	<rule cat="natural_topo" e="any" k="natural" v="*" zoom-min="13">
 		<rule e="any" k="natural" v="cave_entrance">
-			<symbol src="file:symbols/poi_cave_entrance.svg" symbol-width="21"/>
-			<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-			<caption k="name" font-style="bold_italic" font-family="serif" dy="15" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+			<symbol src="file:symbols/poi_cave_entrance.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="natural" v="cliff" zoom-min="15">
+			<rule e="any" k="denotation" v="natural_monument|landmark" zoom-min="15">
+				<symbol src="file:symbols/poi_cliff.svg" symbol-width="20" priority="415"/>
+			</rule>
+		</rule>
+		<rule e="any" k="natural" v="geyser" zoom-min="16">
+			<symbol src="file:symbols/poi_geyser.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="natural" v="hot_spring" zoom-min="16">
+			<symbol src="file:symbols/poi_hot_spring.svg" symbol-width="20"/>
 		</rule>
 		<rule e="any" k="natural" v="peak" zoom-min="13">
-			<symbol src="file:symbols/poi_peak.svg" symbol-width="8"/>
+			<symbol src="file:symbols/poi_peak.svg" symbol-width="20" priority="415"/>
 		</rule>
 		<rule e="any" k="natural" v="volcano" zoom-min="13">
-			<symbol src="file:symbols/poi_volcano.svg" symbol-width="9"/>
+			<symbol src="file:symbols/poi_volcano.svg" symbol-width="20"/>
 		</rule>
 		<rule e="any" k="natural" v="tree" zoom-min="15">
-			<symbol src="file:symbols/poi_tree.svg" symbol-width="1"/>
-			<!--#TODO removed attribute: scale-font-size="15,1.2"-->
-			<caption k="name" font-style="bold_italic" font-size="11" fill="#34972D" stroke="#FFFFFF" stroke-width="2.0"/>
+			<rule e="any" k="denotation" v="natural_monument|landmark" zoom-min="15">
+				<symbol src="file:symbols/poi_tree.svg" symbol-width="18"/>
+			</rule>
 		</rule>
 		<rule e="any" k="natural" v="spring" zoom-min="14">
-			<symbol src="file:symbols/poi_spring.svg" symbol-width="21"/>
+			<symbol src="file:symbols/poi_spring.svg" symbol-width="20"/>
 		</rule>
-		<rule e="any" k="natural" v="rock" zoom-min="14">
-			<symbol src="file:symbols/poi_rock.svg" symbol-width="21"/>
+		<rule e="any" k="natural" v="rock" zoom-min="15">
+			<symbol src="file:symbols/poi_rock.svg" symbol-width="20"/>
 		</rule>
-		<rule e="any" k="natural" v="sinkhole" zoom-min="14">
-			<symbol src="file:symbols/poi_sinkhole.svg" symbol-width="21"/>
+		<rule e="any" k="natural" v="sinkhole" zoom-min="15">
+			<symbol src="file:symbols/poi_sinkhole.svg" symbol-width="20"/>
 		</rule>
-		<rule e="any" k="natural" v="stone" zoom-min="14">
-			<symbol src="file:symbols/poi_stone.svg" symbol-width="18"/>
+		<rule e="any" k="natural" v="stone" zoom-min="16">
+			<symbol src="file:symbols/poi_stone.svg" symbol-width="20"/>
 		</rule>
-		<rule e="any" k="natural" v="peak|volcano" zoom-min="12">
-			<!--#TODO removed attribute: scale-font-size="15,1.2"-->
-			<!--#TODO removed attribute: scale-dy-size="14,1.2"-->
-			<caption k="ele" dy="10" font-style="normal" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
-			<!--#TODO removed attribute: scale-font-size="14,1.2"-->
-			<!--#TODO removed attribute: scale-dy-size="14,1.2"-->
-			<caption k="name" dy="-6" font-style="italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+		<!-- captions for nature -->
+		<rule e="any" k="natural" v="peak|volcano" zoom-min="13">
+			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
+				<caption k="name" dy="11" font-family="sans_serif" font-style="italic" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="15">
+				<caption k="ele" dy="-11" font-family="sans_serif" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="3" position="above" priority="414"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-style="italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
+			</rule>
+		</rule>
+		<rule e="any" k="natural" v="cave_entrance|geyser|sinkhole" zoom-min="15">
+			<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414"/>
+		</rule>
+		<rule e="any" k="natural" v="hot_spring|drinking_water|" zoom-min="16">
+			<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414"/>
+		</rule>
+		<rule e="any" k="natural" v="fountain|rock|tree" zoom-min="17">
+			<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414"/>
 		</rule>
 	</rule>
 	<!-- waterfall -->
-	<rule cat="natural_topo" e="any" k="waterway" v="waterfall">
-		<symbol src="file:symbols/poi_waterfall.svg" symbol-width="26"/>
-		<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-		<caption k="name" dy="14" font-style="bold_italic" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="2"/>
+	<rule cat="natural_topo" e="any" k="waterway" v="waterfall" zoom-min="15">
+		<symbol src="file:symbols/poi_waterfall.svg" symbol-width="20"/>
+		<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414"/>
 	</rule>
 	<!-- railway city -->
 	<rule cat="transportation_city" e="any" k="railway" v="*" zoom-min="13">
 		<rule e="any" k="railway" v="station" zoom-min="13">
 			<rule e="any" k="station" v="~" zoom-min="13">
 				<symbol src="file:symbols/poi_railway_station.svg" symbol-width="26"/>
-				<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-				<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-				<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#5160ab" stroke="#ffffff" stroke-width="2"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="tram_stop">
@@ -7796,21 +7860,18 @@ version 2.4.0
 				<circle r="3" fill="#b8462e" stroke="#AAFFFFFF" stroke-width="1"/>
 			</rule>
 			<rule e="any" k="railway" v="tram_stop" zoom-min="16">
-				<symbol src="file:symbols/poi_tram.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_bus_and_tram_stop.svg" symbol-width="20"/>
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
 			<circle r="3" fill="#FFFFFF" stroke="#606060" stroke-width="1"/>
-			<!--#TODO removed attribute: scale-font-size="14,1.2"-->
-			<caption k="name" dy="15" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+			<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 		</rule>
 		<rule e="any" k="station" v="subway" zoom-min="14">
 			<rule e="any" k="*" v="*">
-				<symbol src="file:symbols/poi_subway.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_subway.svg" symbol-width="20"/>
 			</rule>
-			<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-			<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#5160ab" stroke="#ffffff" stroke-width="2"/>
+			<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 		</rule>
 		<!-- subway entrance -->
 		<rule e="any" k="railway" v="subway_entrance" zoom-min="17">
@@ -7821,26 +7882,22 @@ version 2.4.0
 	<rule cat="transportation_topo" e="any" k="railway" v="*" zoom-min="13">
 		<rule e="any" k="railway" v="station" zoom-min="13">
 			<rule e="any" k="station" v="~" zoom-min="13">
-				<symbol src="file:symbols/poi_railway_station.svg" symbol-width="26"/>
-				<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-				<caption k="name" dy="15" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+				<symbol src="file:symbols/poi_railway_station.svg" symbol-width="20"/>
+				<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="tram_stop" zoom-min="16">
-			<symbol src="file:symbols/poi_tram.svg" symbol-width="21"/>
+			<symbol src="file:symbols/poi_tram.svg" symbol-width="20"/>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
 			<circle r="3" fill="#FFFFFF" stroke="#606060" stroke-width="1"/>
-			<!--#TODO removed attribute: scale-font-size="14,1.2"-->
-			<caption k="name" dy="15" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+			<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 		</rule>
 		<rule e="any" k="station" v="subway" zoom-min="14" zoom-max="16">
 			<rule e="any" k="*" v="*">
-				<symbol src="file:symbols/poi_subway.svg" symbol-width="21"/>
+				<symbol src="file:symbols/poi_subway.svg" symbol-width="20"/>
 			</rule>
-			<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-			<!--#TODO removed attribute: scale-dy-size="17,1.15"-->
-			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#5160ab" stroke="#ffffff" stroke-width="2"/>
+			<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 		</rule>
 		<!-- subway entrance -->
 		<rule e="any" k="railway" v="subway_entrance" zoom-min="17">
@@ -7851,62 +7908,50 @@ version 2.4.0
 		<rule e="any" k="railway" v="station">
 			<rule e="any" k="station" v="~" zoom-min="15">
 				<symbol src="file:symbols/poi_railway_station.svg" symbol-width="26"/>
-				<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-				<caption k="name" dy="15" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+				<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="tram_stop" zoom-min="17">
-			<symbol src="file:symbols/poi_tram.svg" symbol-width="21"/>
+			<symbol src="file:symbols/poi_tram.svg" symbol-width="20"/>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
 			<circle r="2" fill="#FFFFFF" stroke="#606060" stroke-width="1"/>
-			<!--#TODO removed attribute: scale-font-size="14,1.2"-->
-			<caption k="name" dy="15" font-style="bold_italic" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+			<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415"/>
 		</rule>
 	</rule>
 	<!-- shop -->
-	<rule cat="shopping_city" e="any" k="shop" v="*" zoom-min="17">
-		<rule e="any" k="shop" v="supermarket|organic">
-			<symbol src="file:symbols/poi_shopping.svg" symbol-width="21"/>
-			<!--#TODO removed attribute: scale-font-size="18,1.15"-->
-			<!--#TODO removed attribute: scale-dy-size="18,1.15"-->
-			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff"/>
+	<rule cat="shopping" e="any" k="shop" v="*" zoom-min="16">
+		<rule e="any" k="shop" v="bakery" zoom-min="17">
+			<symbol src="file:symbols/poi_bakery.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="kiosk" zoom-min="17">
+			<symbol src="file:symbols/poi_kiosk.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="convenience|supermarket|organic" zoom-min="17">
+			<symbol src="file:symbols/poi_supermarket_convenience.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="department_store|mall">
+			<symbol src="file:symbols/poi_department_store.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="bicycle|dive|scuba_diving|outdoor|sports|water_sports" zoom-min="17">
+			<symbol src="file:symbols/poi_sport_outdoor.svg" symbol-width="20"/>
+		</rule>
+		<rule e="any" k="shop" v="department_store|mall|supermarket|organic" zoom-min="17">
+			<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414"/>
+		</rule>
+		<rule e="any" k="shop" v="car|car_repair|car_parts">
+			<symbol src="file:symbols/poi_car_shop_and_repair.svg" symbol-width="20"/>
 		</rule>
 	</rule>
-	<rule cat="shopping_topo" e="any" k="shop" v="*" zoom-min="16">
-		<rule e="any" k="shop" v="bakery">
-			<symbol src="file:symbols/poi_bakery.svg" symbol-width="18"/>
-		</rule>
-		<rule e="any" k="shop" v="supermarket|organic">
-			<symbol src="file:symbols/poi_shopping.svg" symbol-width="21"/>
-			<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-			<caption k="name" font-style="italic" font-family="serif" font-size="13" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
-		</rule>
-	</rule>
-	<rule cat="shopping_car" e="any" k="shop" v="*" zoom-min="17">
-		<rule e="any" k="shop" v="bakery">
-			<symbol src="file:symbols/poi_bakery.svg" symbol-width="18"/>
-		</rule>
-		<rule e="any" k="shop" v="supermarket|organic">
-			<symbol src="file:symbols/poi_shopping.svg" symbol-width="21"/>
-			<!--#TODO removed attribute: scale-font-size="18,1.25"-->
-			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#333333" stroke="#ffffff" stroke-width="2"/>
-		</rule>
-	</rule>
+	<!-- house numbers -->
 	<rule cat="base_city" e="any" k="*" v="*" zoom-min="18">
-		<!-- house numbers -->
-		<!--#TODO removed attribute: scale-font-size="19,1.15"-->
-		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="#333333" stroke="#ffffff" stroke-width="0.5"/>
+		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="#747474" stroke="#747474"/>
 	</rule>
-	<rule cat="base_topo" e="any" k="*" v="*" zoom-min="17">
-		<!-- house numbers -->
-		<!--#TODO removed attribute: scale-font-size="18,1.15"-->
-		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="#333333" stroke="#ffffff" stroke-width="1"/>
+	<rule cat="base_topo" e="any" k="*" v="*" zoom-min="18">
+		<caption k="addr:housenumber" font-family="sans_serif" font-size="9" fill="#747474" stroke="#747474"/>
 	</rule>
 	<rule cat="base_car" e="any" k="*" v="*" zoom-min="18">
-		<!-- house numbers -->
-		<!--#TODO removed attribute: scale-font-size="18,1.15"-->
-		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="#333333" stroke="#ffffff" stroke-width="1"/>
+		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="#747474" stroke="#747474"/>
 	</rule>
 	<!-- BELGIUM CYCLE CROSS -->
 	<rule cat="cyc_routes" e="node" k="cycle_node" v="NLBE">
@@ -7954,10 +7999,10 @@ version 2.4.0
 		<rule e="any" k="place" v="city" zoom-max="12">
 			<rule e="any" k="place" v="city" zoom-min="6" zoom-max="9">
 				<!--#TODO removed attribute: upper-case="true"-->
-				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="14" fill="#000000" stroke="#FFFFFF" stroke-width="4" priority="500"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="14" fill="#303030" stroke="#FFFFFF" stroke-width="4" priority="500"/>
 			</rule>
 			<rule e="any" k="place" v="city" zoom-min="10" zoom-max="13">
-				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="24" fill="#000000" stroke="#FFFFFF" stroke-width="4.8" priority="500"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="24" fill="#303030" stroke="#FFFFFF" stroke-width="4.8" priority="500"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="6" zoom-max="9">
 				<circle r="3.5" stroke="#8E8E8E" stroke-width="1.5"/>
@@ -7965,13 +8010,13 @@ version 2.4.0
 		</rule>
 		<rule e="any" k="place" v="town" zoom-min="8" zoom-max="14">
 			<rule e="any" k="*" v="*" zoom-min="8" zoom-max="9">
-				<caption k="name" dy="10" font-family="sans_serif" font-size="12" fill="#000000" stroke="#ffffff" stroke-width="4" priority="480"/>
+				<caption k="name" dy="10" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="4" priority="480"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="11">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="16" fill="#000000" stroke="#ffffff" stroke-width="4.8" priority="480"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="16" fill="#303030" stroke="#ffffff" stroke-width="4.4" priority="480"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="12" zoom-max="14">
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="24" fill="#000000" stroke="#ffffff" stroke-width="4.8" priority="480"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="24" fill="#303030" stroke="#ffffff" stroke-width="4.8" priority="480"/>
 			</rule>
 			<!-- circles for towns -->
 			<rule e="any" k="place" v="town" zoom-min="9" zoom-max="9">
@@ -7987,42 +8032,40 @@ version 2.4.0
 		</rule>
 		<rule e="any" k="place" v="village" zoom-min="12" zoom-max="16">
 			<rule e="any" k="*" v="*" zoom-min="12" zoom-max="13">
-				<!--#TODO removed attribute: scale-font-size="13,1.1"-->
-				<caption k="name" font-family="sans_serif" font-size="17" fill="#000000" stroke="#ffffff" stroke-width="4" priority="460"/>
+				<caption k="name" font-family="sans_serif" font-size="17" fill="#303030" stroke="#ffffff" stroke-width="4" priority="460"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="14" zoom-max="16">
-				<!--#TODO removed attribute: scale-font-size="15,1.2"-->
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="20" fill="#000000" stroke="#ffffff" stroke-width="4" priority="460"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="20" fill="#303030" stroke="#ffffff" stroke-width="4" priority="460"/>
 			</rule>
 		</rule>
 		<rule e="any" k="place" v="suburb" zoom-min="13" zoom-max="16">
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-				<caption k="name" font-size="14" fill="#000000" stroke="#ffffff" stroke-width="4" priority="440"/>
+				<caption k="name" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="4" priority="440"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 				<!--#TODO removed attribute: upper-case="true"-->
-				<caption k="name" font-size="15" fill="#000000" stroke="#ffffff" stroke-width="4" priority="440"/>
+				<caption k="name" font-size="15" fill="#303030" stroke="#ffffff" stroke-width="4" priority="440"/>
 			</rule>
 		</rule>
 		<rule e="any" k="place" v="hamlet" zoom-min="13" zoom-max="16">
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-				<caption k="name" font-family="sans_serif" font-size="15" fill="#000000" stroke="#ffffff" stroke-width="4" priority="430"/>
+				<caption k="name" font-family="sans_serif" font-size="15" fill="#303030" stroke="#ffffff" stroke-width="4" priority="430"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="17" fill="#000000" stroke="#ffffff" stroke-width="4" priority="430"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="17" fill="#303030" stroke="#ffffff" stroke-width="4" priority="430"/>
 			</rule>
 		</rule>
 		<!-- TODO country="*|!ES" -->
 		<rule e="any" k="place" v="locality" zoom-min="15">
-			<caption k="name" font-size="12" fill="#000000" stroke="#ffffff" stroke-width="4" priority="420"/>
+			<caption k="name" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="4" priority="420"/>
 		</rule>
 		<rule e="any" k="place" v="island" zoom-min="8" zoom-max="14">
 			<!--#TODO removed attribute: scale-font-size="9,1.2"-->
-			<caption k="name" font-style="bold" font-size="17" fill="#000000" stroke="#ffffff" stroke-width="3.0"/>
+			<caption k="name" font-style="bold" font-size="17" fill="#303030" stroke="#ffffff" stroke-width="3.0"/>
 		</rule>
 		<rule e="any" k="place" v="country" zoom-max="6">
 			<!--#TODO removed attribute: upper-case="true"-->
-			<caption k="name" font-style="bold" font-size="35" fill="#000000" stroke="#ffffff" stroke-width="2.0"/>
+			<caption k="name" font-style="bold" font-size="28" fill="#303030" stroke="#ffffff" stroke-width="2.0"/>
 		</rule>
 	</rule>
 </rendertheme>
