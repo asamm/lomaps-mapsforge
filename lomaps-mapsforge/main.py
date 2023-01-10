@@ -15,7 +15,7 @@ from xsdata.formats.dataclass.serializers import XmlSerializer
 from config import TemplateVariables
 from poi_theme import PoiThemeGenerator
 
-from mapsforge import Rule, Cap, Line, Linejoin, LineSymbol
+from mapsforge.render_theme import Rule, Cap, Line, Linejoin, LineSymbol
 
 
 @dataclass
@@ -441,8 +441,8 @@ def transform(base_xml, result_xml):
 def copy_theme_to_device(result_xml):
     # copy xml theme file to android device
     os.popen(
-        "adb push {} /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/lomaps_v4/lomaps_v4.xml"
-        .format(result_xml))
+        "adb push {} /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/lomaps_v4/{}"
+        .format(result_xml, os.path.basename(result_xml)))
     # os.popen("adb shell am force-stop menion.android.locus")
     # os.popen("adb shell monkey -p menion.android.locus -c android.intent.category.LAUNCHER 1")
     os.popen(
@@ -455,20 +455,22 @@ if __name__ == '__main__':
                       '../xml_templates/base_output.xml',
                       '../lomaps_v4/lomaps_v4.xml')
 
-    # replace colors, width, etc in source XML
-    transform(options.input_template, options.output_template)
+    # # replace colors, width, etc in source XML
+    # transform(options.input_template, options.output_template)
+    #
+    # # generate custom parts (bridges, tourist paths)
+    # generator_actions = GeneratorActions(options)
+    # generator_actions.process_actions()
+    #
+    # # result of generation action in soup object
+    # theme_soup = generator_actions.soup
+    # icon_validator = IconValidator(theme_soup, options.result_xml)
+    # icon_validator.validate()
 
-    # generate custom parts (bridges, tourist paths)
-    generator_actions = GeneratorActions(options)
-    generator_actions.process_actions()
-
-    # result of generation action in soup object
-    theme_soup = generator_actions.soup
-    icon_validator = IconValidator(theme_soup, options.result_xml)
-    icon_validator.validate()
-
-    poi_theme_generator = PoiThemeGenerator("poidb/config_apDb.xml")
+    poi_theme_generator = PoiThemeGenerator('poidb/config_apDb.xml', '../lomaps_v4/lomaps_v4_poidb.xml')
+    poi_theme_generator.generate_render_theme()
 
     copy_theme_to_device(options.result_xml)
+    copy_theme_to_device('../lomaps_v4/lomaps_v4_poidb.xml')
 
     print("=============  DONE  ================= ")
