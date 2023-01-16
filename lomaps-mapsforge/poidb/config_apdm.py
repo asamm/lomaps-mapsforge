@@ -158,6 +158,12 @@ class SubFolder:
             "type": "Attribute",
         }
     )
+    theme: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
 
 
 @dataclass
@@ -198,6 +204,12 @@ class Folder:
         }
     )
     icon: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    theme: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
