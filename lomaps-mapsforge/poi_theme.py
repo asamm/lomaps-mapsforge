@@ -181,7 +181,7 @@ class PoiThemeGenerator:
             filename_part = pathlib.Path(self.map_theme_f).stem
             filename_suffix = pathlib.Path(self.map_theme_f).suffix
 
-            file = os.path.join(os.path.dirname(self.map_theme_f), '{}_{}{}'.format(filename_part,theme_id,filename_suffix))
+            file = os.path.join(os.path.dirname(self.map_theme_f), '{}_{}.poi{}'.format(filename_part,theme_id,filename_suffix))
             self.write_result_to_file(file, render_theme)
             poi_theme_files.append(file)
 

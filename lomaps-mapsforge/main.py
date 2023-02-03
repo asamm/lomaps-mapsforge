@@ -465,12 +465,13 @@ if __name__ == '__main__':
     icon_validator = IconValidator(theme_soup, options.result_xml)
     icon_validator.validate()
 
+    # copy map theme
+    copy_theme_to_device(options.result_xml)
+
     # Generate custom theme that render only POI icons
     poi_theme_generator = PoiThemeGenerator('poidb/config_apDb.xml', options.result_xml)
     poi_theme_files = poi_theme_generator.generate_render_themes()
-
-    # copy map theme
-    copy_theme_to_device(options.result_xml)
+    # copy POI themes do device
     for poi_theme_file in poi_theme_files:
         # copy poi theme
         copy_theme_to_device(poi_theme_file)
