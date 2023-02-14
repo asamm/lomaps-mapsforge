@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" base-stroke-width="0.8" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4"
+			 base-stroke-width="0.7" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--
 		LOCUS INTERNAL THEME FOR LOMAPS
 				Release July, 2016
@@ -203,20 +204,20 @@ version 2.4.0
 					<area fill="#80a0ca6c"/>
 					<rule e="way" k="leaf_type" v="*" zoom-min="15">
 						<rule e="way" k="leaf_type" v="needleleaved">
-							<area src="file:/patterns/wood_coniferous_transparent.svg" symbol-width="48"/>
+							<area src="file:patterns/wood_coniferous_transparent.svg" symbol-width="48"/>
 						</rule>
 						<rule e="way" k="leaf_type" v="broadleaved">
-							<area src="file:/patterns/wood_deciduous_transparent.svg" symbol-width="48"/>
+							<area src="file:patterns/wood_deciduous_transparent.svg" symbol-width="48"/>
 						</rule>
 						<rule e="way" k="leaf_type" v="mixed">
-							<area src="file:/patterns/wood_mixed_transparent.svg" symbol-width="48"/>
+							<area src="file:patterns/wood_mixed_transparent.svg" symbol-width="48"/>
 						</rule>
 					</rule>
 				</rule>
 				<rule e="way" k="natural" v="scrub" zoom-min="13">
 					<area fill="#30a0ca6c"/>
 					<rule e="way" k="*" v="*" zoom-min="15">
-						<area src="file:/patterns/scrub.svg" symbol-width="20"/>
+						<area src="file:patterns/scrub.svg" symbol-width="20"/>
 					</rule>
 				</rule>
 				<rule e="way" k="natural" v="fell" zoom-min="13">
@@ -258,41 +259,41 @@ version 2.4.0
 			<rule e="way" k="natural" v="*" zoom-min="8" closed="yes">
 				<rule e="way" k="natural" v="glacier">
 					<area fill="#50D3E9FF"/>
-					<area src="file:/patterns/glacier.svg" symbol-width="20"/>
+					<area src="file:patterns/glacier.svg" symbol-width="20"/>
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="*" zoom-min="11" closed="yes">
 				<rule e="way" k="natural" v="beach">
 					<area fill="#FCF5E0"/>
-					<area src="file:/patterns/beach.png"/>
+					<area src="file:patterns/beach.png"/>
 					<rule e="way" k="natural" v="beach" zoom-min="16" closed="yes">
 					</rule>
 				</rule>
 				<rule e="way" k="natural" v="heath">
 					<area fill="#F1F2E9"/>
 					<rule e="way" k="*" v="*" zoom-min="15">
-						<area src="file:/patterns/heath.svg" symbol-width="32"/>
+						<area src="file:patterns/heath.svg" symbol-width="32"/>
 					</rule>
 				</rule>
 				<rule e="way" k="natural" v="scree|shingle">
 					<area fill="#80dddfe5"/>
-					<area src="file:/patterns/beach.png" symbol-width="96"/>
+					<area src="file:patterns/beach.png" symbol-width="96"/>
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="*" zoom-min="13">
 				<rule e="way" k="natural" v="bare_rock" closed="yes">
-					<area src="file:/patterns/bare_rock.png" symbol-width="96"/>
+					<area src="file:patterns/bare_rock.png" symbol-width="96"/>
 				</rule>
 				<rule e="way" k="natural" v="cliff">
 					<line stroke="#80CCA78B" stroke-width="0.2"/>
 					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="0" symbol-width="20" position="center"/>
 				</rule>
 				<rule e="way" k="natural" v="grassland" closed="yes" zoom-min="15">
-					<area src="file:/patterns/medow.svg" symbol-width="24"/>
+					<area src="file:patterns/medow.svg" symbol-width="24"/>
 				</rule>
 				<rule e="way" k="natural" v="sand">
 					<area fill="#faeec9"/>
-					<area src="file:/patterns/beach.png"/>
+					<area src="file:patterns/beach.png"/>
 				</rule>
 			</rule>
 			<!-- Natural captions -->
@@ -350,7 +351,7 @@ version 2.4.0
 				<!-- meadow  -->
 				<rule e="way" k="landuse" v="meadow|grass">
 					<rule e="way" k="*" v="*" zoom-min="15">
-						<area src="file:/patterns/medow.svg" symbol-width="24"/>
+						<area src="file:patterns/medow.svg" symbol-width="24"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="16">
 						<caption k="name" font-style="bold_italic" font-size="17" fill="#34972D" stroke="#FFFFFF"
@@ -360,10 +361,10 @@ version 2.4.0
 				<rule cat="base_summer" e="way" k="landuse" v="cemetery">
 					<area fill="#80bdd16c" stroke="#e4e4e4" stroke-width="0.2"/>
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-						<area src="file:/patterns/graveyard.svg" symbol-width="24"/>
+						<area src="file:patterns/graveyard.svg" symbol-width="24"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="16">
-						<area src="file:/patterns/graveyard.svg" symbol-width="32"/>
+						<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 					</rule>
 					<rule e="way" k="*" v="grave_yard" zoom-min="16">
 						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
@@ -373,10 +374,10 @@ version 2.4.0
 				<rule cat="base_winter" e="way" k="landuse" v="cemetery">
 					<area fill="#8096bfbe" stroke="#e4e4e4" stroke-width="0.2"/>
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-						<area src="file:/patterns/graveyard.svg" symbol-width="24"/>
+						<area src="file:patterns/graveyard.svg" symbol-width="24"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="16">
-						<area src="file:/patterns/graveyard.svg" symbol-width="32"/>
+						<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 					</rule>
 					<rule e="way" k="*" v="grave_yard" zoom-min="16">
 						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
@@ -394,24 +395,24 @@ version 2.4.0
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 						<rule e="way" k="landuse" v="vineyard">
-							<area src="file:/patterns/vineyard.svg" />
+							<area src="file:patterns/vineyard.svg" />
 						</rule>
 						<rule e="way" k="landuse" v="orchard">
-							<area src="file:/patterns/orchard.svg" />
+							<area src="file:patterns/orchard.svg" />
 						</rule>
 						<rule e="way" k="landuse" v="hop_garden">
-							<area src="file:/patterns/hop_garden.svg" />
+							<area src="file:patterns/hop_garden.svg" />
 						</rule>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="16">
 						<rule e="way" k="landuse" v="vineyard">
-							<area src="file:/patterns/vineyard.svg" symbol-width="32"/>
+							<area src="file:patterns/vineyard.svg" symbol-width="32"/>
 						</rule>
 						<rule e="way" k="landuse" v="orchard">
-							<area src="file:/patterns/orchard.svg" symbol-width="32"/>
+							<area src="file:patterns/orchard.svg" symbol-width="32"/>
 						</rule>
 						<rule e="way" k="landuse" v="hop_garden">
-							<area src="file:/patterns/hop_garden.svg" symbol-width="32"/>
+							<area src="file:patterns/hop_garden.svg" symbol-width="32"/>
 						</rule>
 					</rule>
 				</rule>
@@ -422,10 +423,10 @@ version 2.4.0
 			<rule e="way" k="landuse" v="cemetery">
 				<area fill="#80bdd16c" stroke="#e4e4e4" stroke-width="0.2"/>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-					<area src="file:/patterns/graveyard.svg" symbol-width="24"/>
+					<area src="file:patterns/graveyard.svg" symbol-width="24"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<area src="file:/patterns/graveyard.svg" symbol-width="32"/>
+					<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
@@ -437,10 +438,10 @@ version 2.4.0
 			<rule cat="base_summer" e="way" k="*" v="grave_yard">
 				<area fill="#80bdd16c" stroke="#e4e4e4" stroke-width="0.2"/>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-					<area src="file:/patterns/graveyard.svg" symbol-width="24"/>
+					<area src="file:patterns/graveyard.svg" symbol-width="24"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<area src="file:/patterns/graveyard.svg" symbol-width="32"/>
+					<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 				</rule>
 				<rule e="way" k="*" v="grave_yard" zoom-min="16">
 					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
@@ -449,10 +450,10 @@ version 2.4.0
 			<rule cat="base_winter" e="way" k="amenity" v="grave_yard">
 				<area fill="#8096bfbe" stroke="#e4e4e4" stroke-width="0.2"/>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-					<area src="file:/patterns/graveyard.svg" symbol-width="24"/>
+					<area src="file:patterns/graveyard.svg" symbol-width="24"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<area src="file:/patterns/graveyard.svg" symbol-width="32"/>
+					<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 				</rule>
 				<rule e="way" k="*" v="grave_yard" zoom-min="16">
 					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
@@ -775,14 +776,14 @@ version 2.4.0
 		<rule cat="base_topo" e="way" k="natural|wetland" v="*" zoom-min="12">
 			<rule e="way" k="wetland" v="~">
 				<rule e="way" k="natural" v="wetland">
-					<area src="file:/patterns/marsh.svg" symbol-width="28"/>
+					<area src="file:patterns/marsh.svg" symbol-width="28"/>
 				</rule>
 			</rule>
 			<rule e="way" k="wetland" v="marsh|swamp|bog|fen|wet_meadow|reedbed|saltmarsh">
-				<area src="file:/patterns/marsh.svg" symbol-width="28"/>
+				<area src="file:patterns/marsh.svg" symbol-width="28"/>
 			</rule>
 			<rule e="way" k="wetland" v="tidalflat">
-				<area src="file:/patterns/tidalflat_64.svg" symbol-width="96"/>
+				<area src="file:patterns/tidalflat_64.svg" symbol-width="96"/>
 			</rule>
 		</rule>
 		<!-- runways casings and areas TODO terminal based -->
@@ -875,7 +876,6 @@ version 2.4.0
 				<area fill="#b8b8b8" stroke="#A8A8A8" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="18">
-				<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 				<caption k="name" font-style="italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
@@ -883,7 +883,6 @@ version 2.4.0
 		<rule cat="base_car" e="way" k="building" v="*" zoom-min="16">
 			<area fill="#d0d0d0"/>
 			<rule e="way" k="*" v="*" zoom-min="17">
-				<!--#TODO removed attribute: scale-font-size="18,1.25"-->
 				<caption k="name" dy="15" font-family="sans_serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
@@ -911,11 +910,24 @@ version 2.4.0
 		<rule cat="base_topo" e="way" k="boundary" v="*">
 			<rule e="way" k="boundary" v="protected_area" zoom-min="12">
 				<line stroke="#3FB637" stroke-width="0.6" stroke-dasharray="16,7" stroke-linecap="butt"/>
-				<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+				<rule e="way" k="*" v="*" zoom-min="14">
+					<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+				</rule>
 			</rule>
-			<rule e="way" k="boundary" v="national_park" zoom-min="11">
-				<line stroke="#9040BE39" stroke-width="2" stroke-dasharray="20, 12" stroke-linecap="butt"/>
-				<caption k="name" dy="16" font-style="bold_italic" font-size="18" fill="#34972D" stroke="#FFFFFF"  stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+			<rule e="way" k="boundary" v="national_park" zoom-min="10">
+				<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
+					<line stroke="#CC40BE39" stroke-width="5" stroke-dasharray="20, 12" stroke-linecap="butt"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+					<line stroke="#9040BE39" stroke-width="3" stroke-dasharray="22, 12" stroke-linecap="butt"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="16" >
+					<line stroke="#9040BE39" stroke-width="1.5" stroke-dasharray="22, 12" stroke-linecap="butt"/>
+				</rule>
+
+				<rule e="way" k="*" v="*" zoom-max="15">
+					<caption k="name" dy="16" text-transform="uppercase" font-style="bold_italic" font-size="18" fill="#34972D" stroke="#FFFFFF"  stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+				</rule>
 			</rule>
 		</rule>
 		<!-- ferry routes -->
@@ -3021,83 +3033,61 @@ version 2.4.0
 			<!-- piste areas -->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="13" closed="yes">
 				<rule e="way" k="piste:difficulty" v="novice">
-					<area fill="#6040ff40"/>
+					<area fill="$color_downhill_novice"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<area fill="#6052c1fe"/>
+					<area fill="$color_downhill_easy"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<area fill="#60FF4A4A"/>
+					<area fill="$color_downhill_intermediate"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<area fill="#60000000"/>
+					<area fill="$color_downhill_advanced"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
-					<area fill="#60f6dd0a"/>
+					<area fill="$color_downhill_freeride"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<area fill="#307173FF"/>
+					<area fill="$color_downhill_easy"/>
 				</rule>
 			</rule>
 			<!-- piste ways -->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="13" closed="no">
 				<rule e="way" k="piste:difficulty" v="novice">
-					<line stroke="#6040ff40" stroke-width="2"/>
+					<line stroke="$color_downhill_novice" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<line stroke="#6052c1fe" stroke-width="2"/>
+					<line stroke="$color_downhill_easy" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<line stroke="#60FF4A4A" stroke-width="2"/>
+					<line stroke="$color_downhill_intermediate" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<line stroke="#60000000" stroke-width="2"/>
+					<line stroke="$color_downhill_advanced" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
-					<line stroke="#60f6dd0a" stroke-width="2"/>
+					<line stroke="$color_downhill_freeride" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<line stroke="#307173FF" stroke-width="2"/>
+					<line stroke="$color_downhill_easy" stroke-width="3"/>
 				</rule>
 			</rule>
 			<!-- Captions for downhill-->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="15">
 				<rule e="way" k="piste:difficulty" v="novice">
-					<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-					<pathText k="name" font-style="bold" font-size="10" dy="5" fill="#00e900" stroke="#ffffff" stroke-width="2.5"/>
+					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#00e900" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-					<pathText k="name" font-style="bold" font-size="10" dy="5" fill="#07a6fe" stroke="#ffffff" stroke-width="2.5"/>
+					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#07a6fe" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-					<pathText k="name" font-style="bold" font-size="10" dy="5" fill="#ff4040" stroke="#ffffff" stroke-width="2.5"/>
+					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#ff4040" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-					<pathText k="name" font-style="bold" font-size="10" dy="5" fill="#000000" stroke="#ffffff" stroke-width="2.5"/>
+					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#000000" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
-					<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-					<pathText k="name" font-style="bold" font-size="10" dy="5" fill="#edd509" stroke="#ffffff" stroke-width="2.5"/>
-				</rule>
-			</rule>
-			<!-- Ski Tours -->
-			<rule e="way" k="piste:type" v="skitour">
-				<rule e="way" k="*" v="*" zoom-min="14">
-					<line stroke="#BBFFFFFF" stroke-width="1.2"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14">
-					<line stroke="#efa710" stroke-width="0.9" stroke-dasharray="9,9"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
-					<line stroke="#efa710" stroke-width="0.8" stroke-dasharray="10,10"/>
-					<!--#TODO removed attribute: scale-font-size="16,1.15"-->
-					<pathText k="name" font-style="bold_italic" font-size="13" dy="2.8" fill="#d7960e" stroke="#ffffff" stroke-width="2"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="17">
-					<line stroke="#efa710" stroke-width="0.8" stroke-dasharray="12,12"/>
+					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#edd509" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 			</rule>
 			<rule e="way" k="piste:type" v="sled">
@@ -3106,121 +3096,117 @@ version 2.4.0
 					<line stroke="#77BF79" stroke-width="0.9"/>
 				</rule>
 			</rule>
+			<!-- Nordic and Backcountry SKI -->
 			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine|nordic;skitour">
-				<rule e="way" k="*" v="*" zoom-min="12" zoom-max="14">
-					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate">
-						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="#FFFFFF" stroke-width="1.9"/>
-							<line stroke="#006BD6" stroke-width="1.3"/>
+				<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">
+					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate|~">
+						<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
+							<line stroke="#FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z13}"/>
+							<line stroke="$color_nordic_easy" stroke-width="$pistes_nordic_width_z13" />
 						</rule>
-						<rule e="way" k="*" v="backcountry">
-							<line stroke="#90FFFFFF" stroke-width="1.2"/>
-							<line stroke="#006BD6" stroke-width="0.7" stroke-dasharray="9,5" stroke-linecap="butt"/>
+						<rule e="way" k="piste:grooming" v="backcountry">
+							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
+							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="4,3" stroke-linecap="round" scale="all"/>
 						</rule>
-						<!-- Fallback for openandromaps without tags -->
 						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="#006BD6" stroke-width="0.7"/>
+							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z13}"/>
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
-						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="#FFFFFF" stroke-width="1.9"/>
-							<line stroke="#590992" stroke-width="1.3"/>
+						<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
+							<line stroke="#FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z13}"/>
+							<line stroke="$color_nordic_advanced" stroke-width="$pistes_nordic_width_z13"/>
 						</rule>
-						<rule e="way" k="*" v="backcountry">
-							<line stroke="#90FFFFFF" stroke-width="1.2"/>
-							<line stroke="#590992" stroke-width="0.7" stroke-dasharray="9,5" stroke-linecap="butt"/>
+						<rule e="way" k="piste:grooming" v="backcountry">
+							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
+							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="5,4" stroke-linecap="round" scale="all"/>
 						</rule>
-						<!-- Fallback for openandromaps without tags -->
 						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="#590992" stroke-width="0.7"/>
+							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="5,4" stroke-linecap="round" scale="all"/>
 						</rule>
-					</rule>
-					<rule e="way" k="piste:difficulty" v="~">
-						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="#FFFFFF" stroke-width="1.9"/>
-							<line stroke="#006BD6" stroke-width="1.3"/>
-						</rule>
-						<rule e="way" k="*" v="backcountry">
-							<line stroke="#90FFFFFF" stroke-width="1.2"/>
-							<line stroke="#006BD6" stroke-width="0.7" stroke-dasharray="9,5" stroke-linecap="butt"/>
-						</rule>
-					</rule>
-					<!-- Fallback for old version of LoMaps -->
-					<rule e="way" k="piste:difficulty|piste:grooming" v="~">
-						<line stroke="#006BD6" stroke-width="1.1"/>
 					</rule>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15">
-					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate">
-						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="#90FFFFFF" stroke-width="1.9"/>
-							<line stroke="#006BD6" stroke-width="1.2"/>
+				<rule e="way" k="*" v="*" zoom-min="16">
+					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate|~">
+						<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
+							<line stroke="#90FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
+							<line stroke="$color_nordic_easy" stroke-width="$pistes_nordic_width_z16"/>
 						</rule>
-						<rule e="way" k="*" v="backcountry">
-							<line stroke="#90FFFFFF" stroke-width="1.2"/>
-							<line stroke="#006BD6" stroke-width="0.8" stroke-dasharray="9,5" stroke-linecap="butt"/>
+						<rule e="way" k="piste:grooming" v="backcountry">
+							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
+							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z16}" stroke-dasharray="2.5,2" stroke-linecap="round" scale="all" />
 						</rule>
-						<!-- Fallback for openandromaps without tags -->
 						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="#006BD6" stroke-width="0.7"/>
+							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z16}"/>
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
-						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="#90FFFFFF" stroke-width="1.9"/>
-							<line stroke="#590992" stroke-width="1.2"/>
+						<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
+							<line stroke="#90FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
+							<line stroke="$color_nordic_advanced" stroke-width="$pistes_nordic_width_z16"/>
 						</rule>
-						<rule e="way" k="*" v="backcountry">
-							<line stroke="#90FFFFFF" stroke-width="1.2"/>
-							<line stroke="#590992" stroke-width="0.8" stroke-dasharray="9,5" stroke-linecap="butt"/>
+						<rule e="way" k="piste:grooming" v="backcountry">
+							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
+							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z16}" stroke-dasharray="9,5" stroke-linecap="butt"/>
 						</rule>
-						<!-- Fallback for openandromaps without tags -->
 						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="#590992" stroke-width="0.7"/>
-						</rule>
-					</rule>
-					<rule e="way" k="piste:difficulty" v="~">
-						<rule e="way" k="*" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="#90FFFFFF" stroke-width="1.9"/>
-							<line stroke="#006BD6" stroke-width="1.2"/>
-						</rule>
-						<rule e="way" k="*" v="backcountry">
-							<line stroke="#90FFFFFF" stroke-width="1.2"/>
-							<line stroke="#006BD6" stroke-width="0.8" stroke-dasharray="9,5" stroke-linecap="butt"/>
+							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z16}"/>
 						</rule>
 					</rule>
 				</rule>
 				<!-- Captions for nordic-->
-				<rule e="way" k="*" v="*" zoom-min="15">
-					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate">
-						<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-						<pathText k="name" font-style="bold" font-size="11" dy="3.5" fill="#005ebd" stroke="#ffffff" stroke-width="2.5"/>
+				<rule e="way" k="*" v="*" zoom-min="14">
+					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate|~">
+						<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#005ebd" stroke="#ffffff"
+								  stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name" scale="none" />
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
-						<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-						<pathText k="name" font-style="bold" font-size="11" dy="3.5" fill="#810EDA" stroke="#ffffff" stroke-width="2.5"/>
+						<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#810EDA" stroke="#ffffff"
+								  stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 					</rule>
 				</rule>
 			</rule>
+
+			<!-- Ski Hike -->
 			<rule e="way" k="piste:type" v="hike" zoom-min="13">
 				<rule e="way" k="*" v="*" zoom-min="13">
 					<line stroke="#90FFFFFF" stroke-width="1.7"/>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-					<line stroke="#326F9E" stroke-width="1.1" stroke-dasharray="1,8"/>
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
+					<line stroke="$color_piste_hike" stroke-width="${1.3 * $pistes_nordic_width_z13}" stroke-dasharray="0.1,5" scale="all"/>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-					<line stroke="#326F9E" stroke-width="1" stroke-dasharray="1,9"/>
+				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
+					<line stroke="$color_piste_hike" stroke-width="${1 * $pistes_nordic_width_z13}" stroke-dasharray="0.1,3" scale="all"/>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="18">
-					<line stroke="#326F9E" stroke-width="1" stroke-dasharray="1,10"/>
+				<rule e="way" k="*" v="*" zoom-min="17" >
+					<line stroke="$color_piste_hike" stroke-width="${1 * $pistes_nordic_width_z16}" stroke-dasharray="0.1,2" scale="all"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-					<pathText k="name" font-style="bold_italic" font-size="13" dy="3.5" fill="#2c618b" stroke="#ffffff" stroke-width="2"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#2c618b" stroke="#ffffff"
+								  stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name" scale="none" />
 				</rule>
 			</rule>
+
+			<!-- Ski Tours -->
+			<rule e="way" k="piste:type" v="skitour">
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
+					<line stroke="#CCFFFFFF" stroke-width="${1.6 * 0.9 * $pistes_nordic_width_z13}"/>
+					<line stroke="$color_piste_skitour" stroke-width="${ 0.9 *$pistes_nordic_width_z13}" stroke-dasharray="5,4" scale="all"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
+					<line stroke="#CCFFFFFF" stroke-width="${1.6 * 0.7 * $pistes_nordic_width_z13}"/>
+					<line stroke="$color_piste_skitour" stroke-width="${ 0.7 * $pistes_nordic_width_z13}" stroke-dasharray="4,3.2" scale="all"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="17" >
+					<line stroke="#CCFFFFFF" stroke-width="${1.6 * 0.8 * $pistes_nordic_width_z16}"/>
+					<line stroke="$color_piste_skitour" stroke-width="${ 0.8 * $pistes_nordic_width_z16}" stroke-dasharray="2,2" scale="all"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="15">
+					<pathText k="name" font-style="bold" font-size="11" dy="10" fill="#d7960e" stroke="#ffffff"
+								  stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name" scale="none" />
+				</rule>
+			</rule>
+
 		</rule>
 		<!-- end of pistes -->
 		<!-- aerial ways only for topo themes-->
@@ -3297,645 +3283,645 @@ version 2.4.0
 
 						<!-- =============== FRG BLACK	 ================ -->
 						<rule e="way" k="osmc_foreground" v="black">
-							<lineSymbol src="file:/osmc/frg_black.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_arch">
-							<lineSymbol src="file:/osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_backslash">
-							<lineSymbol src="file:/osmc/frg_black_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_bar">
-							<lineSymbol src="file:/osmc/frg_black_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_bowl">
-							<lineSymbol src="file:/osmc/frg_black_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_circle">
-							<lineSymbol src="file:/osmc/frg_black_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_corner">
-							<lineSymbol src="file:/osmc/frg_black_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_crest">
-							<lineSymbol src="file:/osmc/frg_black_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_cross">
-							<lineSymbol src="file:/osmc/frg_black_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_diamond">
-							<lineSymbol src="file:/osmc/frg_black_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_diamond_line">
-							<lineSymbol src="file:/osmc/frg_black_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_dot">
-							<lineSymbol src="file:/osmc/frg_black_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_drop">
-							<lineSymbol src="file:/osmc/frg_black_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_drop_line">
-							<lineSymbol src="file:/osmc/frg_black_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_fork">
-							<lineSymbol src="file:/osmc/frg_black_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_horse">
-							<lineSymbol src="file:/osmc/frg_black_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_L">
-							<lineSymbol src="file:/osmc/frg_black_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_lower">
-							<lineSymbol src="file:/osmc/frg_black_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_pointer">
-							<lineSymbol src="file:/osmc/frg_black_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_rectangle">
-							<lineSymbol src="file:/osmc/frg_black_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_rectangle_line">
-							<lineSymbol src="file:/osmc/frg_black_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_red_diamond">
-							<lineSymbol src="file:/osmc/frg_black_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_right">
-							<lineSymbol src="file:/osmc/frg_black_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_slash">
-							<lineSymbol src="file:/osmc/frg_black_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_stripe">
-							<lineSymbol src="file:/osmc/frg_black_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_triangle">
-							<lineSymbol src="file:/osmc/frg_black_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_triangle_line">
-							<lineSymbol src="file:/osmc/frg_black_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_triangle_turned">
-							<lineSymbol src="file:/osmc/frg_black_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_turned_T">
-							<lineSymbol src="file:/osmc/frg_black_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_x">
-							<lineSymbol src="file:/osmc/frg_black_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<!-- =============== FRG BLUE	 ================ -->
 						<rule e="way" k="osmc_foreground" v="blue_arch">
-							<lineSymbol src="file:/osmc/frg_blue_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_backslash">
-							<lineSymbol src="file:/osmc/frg_blue_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_bar">
-							<lineSymbol src="file:/osmc/frg_blue_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_bowl">
-							<lineSymbol src="file:/osmc/frg_blue_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_circle">
-							<lineSymbol src="file:/osmc/frg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_corner">
-							<lineSymbol src="file:/osmc/frg_blue_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_cross">
-							<lineSymbol src="file:/osmc/frg_blue_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_diamond">
-							<lineSymbol src="file:/osmc/frg_blue_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_diamond_line">
-							<lineSymbol src="file:/osmc/frg_blue_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_dot">
-							<lineSymbol src="file:/osmc/frg_blue_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_fork">
-							<lineSymbol src="file:/osmc/frg_blue_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_hiker">
-							<lineSymbol src="file:/osmc/frg_blue_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_horse">
-							<lineSymbol src="file:/osmc/frg_blue_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_L">
-							<lineSymbol src="file:/osmc/frg_blue_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_lower">
-							<lineSymbol src="file:/osmc/frg_blue_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_pointer">
-							<lineSymbol src="file:/osmc/frg_blue_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_rectangle">
-							<lineSymbol src="file:/osmc/frg_blue_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_rectangle_line">
-							<lineSymbol src="file:/osmc/frg_blue_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_right">
-							<lineSymbol src="file:/osmc/frg_blue_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_slash">
-							<lineSymbol src="file:/osmc/frg_blue_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_stripe">
-							<lineSymbol src="file:/osmc/frg_blue_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_triangle">
-							<lineSymbol src="file:/osmc/frg_blue_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_triangle_line">
-							<lineSymbol src="file:/osmc/frg_blue_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_triangle_turned">
-							<lineSymbol src="file:/osmc/frg_blue_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_turned_T">
-							<lineSymbol src="file:/osmc/frg_blue_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_wheelchair">
-							<lineSymbol src="file:/osmc/frg_blue_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_x">
-							<lineSymbol src="file:/osmc/frg_blue_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<!-- =============== FRG GREEN ================ -->
 						<rule e="way" k="osmc_foreground" v="green_arch">
-							<lineSymbol src="file:/osmc/frg_green_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_backslash">
-							<lineSymbol src="file:/osmc/frg_green_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_bar">
-							<lineSymbol src="file:/osmc/frg_green_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_bowl">
-							<lineSymbol src="file:/osmc/frg_green_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_circle">
-							<lineSymbol src="file:/osmc/frg_green_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_corner">
-							<lineSymbol src="file:/osmc/frg_green_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_crest">
-							<lineSymbol src="file:/osmc/frg_green_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_cross">
-							<lineSymbol src="file:/osmc/frg_green_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_diamond">
-							<lineSymbol src="file:/osmc/frg_green_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_dot">
-							<lineSymbol src="file:/osmc/frg_green_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_drop">
-							<lineSymbol src="file:/osmc/frg_green_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_drop_line">
-							<lineSymbol src="file:/osmc/frg_green_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_fork">
-							<lineSymbol src="file:/osmc/frg_green_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_hiker">
-							<lineSymbol src="file:/osmc/frg_green_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_horse">
-							<lineSymbol src="file:/osmc/frg_green_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_L">
-							<lineSymbol src="file:/osmc/frg_green_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_lower">
-							<lineSymbol src="file:/osmc/frg_green_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_pointer">
-							<lineSymbol src="file:/osmc/frg_green_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_rectangle">
-							<lineSymbol src="file:/osmc/frg_green_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_rectangle_line">
-							<lineSymbol src="file:/osmc/frg_green_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_right">
-							<lineSymbol src="file:/osmc/frg_green_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_slash">
-							<lineSymbol src="file:/osmc/frg_green_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_stripe">
-							<lineSymbol src="file:/osmc/frg_green_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_triangle">
-							<lineSymbol src="file:/osmc/frg_green_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_triangle_line">
-							<lineSymbol src="file:/osmc/frg_green_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_triangle_turned">
-							<lineSymbol src="file:/osmc/frg_green_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_turned_T">
-							<lineSymbol src="file:/osmc/frg_green_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_x">
-							<lineSymbol src="file:/osmc/frg_green_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<!-- =============== FRG ORANGE ================ -->
 						<rule e="way" k="osmc_foreground" v="orange_bar">
-							<lineSymbol src="file:/osmc/frg_orange_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_cross">
-							<lineSymbol src="file:/osmc/frg_orange_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_diamond">
-							<lineSymbol src="file:/osmc/frg_orange_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_diamond_line">
-							<lineSymbol src="file:/osmc/frg_orange_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_dot">
-							<lineSymbol src="file:/osmc/frg_orange_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_lower">
-							<lineSymbol src="file:/osmc/frg_orange_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_pointer">
-							<lineSymbol src="file:/osmc/frg_orange_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_rectangle">
-							<lineSymbol src="file:/osmc/frg_orange_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_right">
-							<lineSymbol src="file:/osmc/frg_orange_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_stripe">
-							<lineSymbol src="file:/osmc/frg_orange_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_triangle">
-							<lineSymbol src="file:/osmc/frg_orange_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<!-- =============== FRG RED ================ -->
 						<rule e="way" k="osmc_foreground" v="red_arch">
-							<lineSymbol src="file:/osmc/frg_red_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_backslash">
-							<lineSymbol src="file:/osmc/frg_red_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_bar">
-							<lineSymbol src="file:/osmc/frg_red_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_bowl">
-							<lineSymbol src="file:/osmc/frg_red_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_circle">
-							<lineSymbol src="file:/osmc/frg_red_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_corner">
-							<lineSymbol src="file:/osmc/frg_red_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_crest">
-							<lineSymbol src="file:/osmc/frg_red_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_cross">
-							<lineSymbol src="file:/osmc/frg_red_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_diamond">
-							<lineSymbol src="file:/osmc/frg_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_diamond_line">
-							<lineSymbol src="file:/osmc/frg_red_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_dot">
-							<lineSymbol src="file:/osmc/frg_red_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_drop">
-							<lineSymbol src="file:/osmc/frg_red_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_drop_line">
-							<lineSymbol src="file:/osmc/frg_red_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_fork">
-							<lineSymbol src="file:/osmc/frg_red_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_hiker">
-							<lineSymbol src="file:/osmc/frg_red_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_L">
-							<lineSymbol src="file:/osmc/frg_red_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_lower">
-							<lineSymbol src="file:/osmc/frg_red_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_pointer">
-							<lineSymbol src="file:/osmc/frg_red_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_rectangle">
-							<lineSymbol src="file:/osmc/frg_red_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_rectangle_line">
-							<lineSymbol src="file:/osmc/frg_red_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_right">
-							<lineSymbol src="file:/osmc/frg_red_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_slash">
-							<lineSymbol src="file:/osmc/frg_red_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_stripe">
-							<lineSymbol src="file:/osmc/frg_red_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_triangle">
-							<lineSymbol src="file:/osmc/frg_red_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_triangle_line">
-							<lineSymbol src="file:/osmc/frg_red_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_triangle_turned">
-							<lineSymbol src="file:/osmc/frg_red_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_turned_T">
-							<lineSymbol src="file:/osmc/frg_red_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_wheelchair">
-							<lineSymbol src="file:/osmc/frg_red_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_x">
-							<lineSymbol src="file:/osmc/frg_red_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<!-- =============== FRG YELLOW ================ -->
 						<rule e="way" k="osmc_foreground" v="yellow_arch">
-							<lineSymbol src="file:/osmc/frg_yellow_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_backslash">
-							<lineSymbol src="file:/osmc/frg_yellow_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_bar">
-							<lineSymbol src="file:/osmc/frg_yellow_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_bowl">
-							<lineSymbol src="file:/osmc/frg_yellow_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_circle">
-							<lineSymbol src="file:/osmc/frg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_corner">
-							<lineSymbol src="file:/osmc/frg_yellow_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_cross">
-							<lineSymbol src="file:/osmc/frg_yellow_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_diamond">
-							<lineSymbol src="file:/osmc/frg_yellow_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_diamond_line">
-							<lineSymbol src="file:/osmc/frg_yellow_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_dot">
-							<lineSymbol src="file:/osmc/frg_yellow_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_fork">
-							<lineSymbol src="file:/osmc/frg_yellow_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_hiker">
-							<lineSymbol src="file:/osmc/frg_yellow_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_L">
-							<lineSymbol src="file:/osmc/frg_yellow_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_lower">
-							<lineSymbol src="file:/osmc/frg_yellow_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_pointer">
-							<lineSymbol src="file:/osmc/frg_yellow_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_rectangle">
-							<lineSymbol src="file:/osmc/frg_yellow_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_rectangle_line">
-							<lineSymbol src="file:/osmc/frg_yellow_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_right">
-							<lineSymbol src="file:/osmc/frg_yellow_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_slash">
-							<lineSymbol src="file:/osmc/frg_yellow_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_stripe">
-							<lineSymbol src="file:/osmc/frg_yellow_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_triangle">
-							<lineSymbol src="file:/osmc/frg_yellow_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_triangle_line">
-							<lineSymbol src="file:/osmc/frg_yellow_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_triangle_turned">
-							<lineSymbol src="file:/osmc/frg_yellow_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_turned_T">
-							<lineSymbol src="file:/osmc/frg_yellow_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_x">
-							<lineSymbol src="file:/osmc/frg_yellow_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<!-- =============== FRG WHITE	 ================ -->
 						<rule e="way" k="osmc_foreground" v="white_arch">
-							<lineSymbol src="file:/osmc/frg_white_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_backslash">
-							<lineSymbol src="file:/osmc/frg_white_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_bar">
-							<lineSymbol src="file:/osmc/frg_white_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_circle">
-							<lineSymbol src="file:/osmc/frg_white_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_corner">
-							<lineSymbol src="file:/osmc/frg_white_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_crest">
-							<lineSymbol src="file:/osmc/frg_white_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_cross">
-							<lineSymbol src="file:/osmc/frg_white_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_diamond">
-							<lineSymbol src="file:/osmc/frg_white_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_diamond_line">
-							<lineSymbol src="file:/osmc/frg_white_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_dot">
-							<lineSymbol src="file:/osmc/frg_white_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_fork">
-							<lineSymbol src="file:/osmc/frg_white_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_hiker">
-							<lineSymbol src="file:/osmc/frg_white_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_horse">
-							<lineSymbol src="file:/osmc/frg_white_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_L">
-							<lineSymbol src="file:/osmc/frg_white_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_lower">
-							<lineSymbol src="file:/osmc/frg_white_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_pointer">
-							<lineSymbol src="file:/osmc/frg_white_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_rectangle">
-							<lineSymbol src="file:/osmc/frg_white_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_rectangle_line">
-							<lineSymbol src="file:/osmc/frg_white_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_red_diamond">
-							<lineSymbol src="file:/osmc/frg_white_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_right">
-							<lineSymbol src="file:/osmc/frg_white_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_slash">
-							<lineSymbol src="file:/osmc/frg_white_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_stripe">
-							<lineSymbol src="file:/osmc/frg_white_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_triangle">
-							<lineSymbol src="file:/osmc/frg_white_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_triangle_line">
-							<lineSymbol src="file:/osmc/frg_white_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_triangle_turned">
-							<lineSymbol src="file:/osmc/frg_white_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_turned_T">
-							<lineSymbol src="file:/osmc/frg_white_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_wheelchair">
-							<lineSymbol src="file:/osmc/frg_white_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_x">
-							<lineSymbol src="file:/osmc/frg_white_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<!-- =============== FRG SYMBOLS	 ================ -->
 						<rule e="way" k="osmc_foreground" v="ammonit">
-							<lineSymbol src="file:/osmc/frg_ammonit.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_ammonit.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="bridleway">
-							<lineSymbol src="file:/osmc/frg_bridleway.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_bridleway.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="heart">
-							<lineSymbol src="file:/osmc/frg_heart.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_heart.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="hiker">
-							<lineSymbol src="file:/osmc/frg_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="mine">
-							<lineSymbol src="file:/osmc/frg_mine.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_mine.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="shell">
-							<lineSymbol src="file:/osmc/frg_shell.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_shell.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="shell_modern">
-							<lineSymbol src="file:/osmc/frg_shell_modern.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_shell_modern.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="tower">
-							<lineSymbol src="file:/osmc/frg_tower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_tower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="wolfshook">
-							<lineSymbol src="file:/osmc/frg_wolfshook.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_wolfshook.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
 						</rule>
 
 
 						<!--  ================= OSMC_BACKGROUND ======================== -->
 						<rule e="way" k="osmc_background" v="*" >
 							<rule e="way" k="osmc_background" v="black">
-								<lineSymbol src="file:/osmc/bcg_black.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_black.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_circle">
-								<lineSymbol src="file:/osmc/bcg_black_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_black_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue">
-								<lineSymbol src="file:/osmc/bcg_blue.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_circle">
-								<lineSymbol src="file:/osmc/bcg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_frame">
-								<lineSymbol src="file:/osmc/bcg_blue_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_round">
-								<lineSymbol src="file:/osmc/bcg_blue_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown">
-								<lineSymbol src="file:/osmc/bcg_brown.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_brown.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green">
-								<lineSymbol src="file:/osmc/bcg_green.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_circle">
-								<lineSymbol src="file:/osmc/bcg_green_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_frame">
-								<lineSymbol src="file:/osmc/bcg_green_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_round">
-								<lineSymbol src="file:/osmc/bcg_green_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange">
-								<lineSymbol src="file:/osmc/bcg_orange.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_orange.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple">
-								<lineSymbol src="file:/osmc/bcg_purple.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_purple.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red">
-								<lineSymbol src="file:/osmc/bcg_red.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_circle">
-								<lineSymbol src="file:/osmc/bcg_red_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_frame">
-								<lineSymbol src="file:/osmc/bcg_red_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_round">
-								<lineSymbol src="file:/osmc/bcg_red_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white">
-								<lineSymbol src="file:/osmc/bcg_white.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_white.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_circle">
-								<lineSymbol src="file:/osmc/bcg_white_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_white_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_round">
-								<lineSymbol src="file:/osmc/bcg_white_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_white_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow">
-								<lineSymbol src="file:/osmc/bcg_yellow.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_yellow.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_circle">
-								<lineSymbol src="file:/osmc/bcg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_frame">
-								<lineSymbol src="file:/osmc/bcg_yellow_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_yellow_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
 							</rule>
 						</rule>
 					</rule>

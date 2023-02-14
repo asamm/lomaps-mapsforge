@@ -141,7 +141,7 @@ class TemplateVariables(Template):
     railway_spur_narrow_width_z16 = 	2
 
     ### AERIALWAYS
-    color_aerialway_core = "#4d4d4d"
+    color_aerialway_core =          "#4d4d4d"
     color_aerialway_cablecar_fill = "#EDEDED"
 
 
@@ -178,22 +178,41 @@ class TemplateVariables(Template):
 
     ## MTB && Cyclo
 
-    color_cycle_mtb = '#E588ED'
-    color_cycle_standard = '#d320dc'
-    color_cycle_icn_ncn = '#A90073'
-    color_cycle_text_ref = '#B11BB9'
+    color_cycle_mtb =           '#E588ED'
+    color_cycle_standard =      '#d320dc'
+    color_cycle_icn_ncn =       '#A90073'
+    color_cycle_text_ref =      '#B11BB9'
 
     text_size_nlbe_junction_z12 = 10
     text_size_nlbe_junction_z14 = text_size_nlbe_junction_z12 * scale_factor
     text_size_nlbe_junction_z17 = text_size_nlbe_junction_z14 * scale_factor
 
     ##############
+    ## WINTER / SKI
+
+    pistes_nordic_width_z13 = 1.6
+    pistes_nordic_width_z16 = 0.9
+
+    color_downhill_novice =     '#9940ff40'
+    color_downhill_easy =       '#9952c1fe'
+    color_downhill_intermediate='#99FF4A4A'
+    color_downhill_advanced =   '#90000000'
+    color_downhill_freeride =   '#99f7e337'
+
+    color_nordic_easy =         '#006BD6'
+    color_nordic_advanced =     '#590992'
+    color_piste_hike =          '#326F9E'
+    color_piste_skitour =       '#efa710'
+    color_piste_sled =          '#77BF79'
+
+
+    ##############
     ## TEXT & SYMBOL PRIORITIES
 
-    color_standard_poi_text = '#303030'
+    color_standard_poi_text =   '#303030'
     color_attraction_poi_text = '#5e5146'
-    color_gray_poi_text = '#747474'
-    color_house_number_z18 = '#747474'
+    color_gray_poi_text =       '#747474'
+    color_house_number_z18 =    '#747474'
 
     text_halo = 4
     text_wrap_standard = 275
@@ -227,7 +246,9 @@ class TemplateVariables(Template):
     priority_water_area = 395
     priority_river = 390
     priority_canal = 385
-    priority_stream =  380
+    priority_stream = 1
+
+
 
 
 
