@@ -458,19 +458,6 @@ def copy_theme_to_android_module(options: Options):
             for line in file:
                 print(line.replace('file:', 'assets:'), end='')
 
-        # # Read in the file
-        # with open(filename, 'r') as file :
-        #     file_data = file.read()
-        #     file.close()
-        #
-        # # Replace the target string
-        # file_data = file_data.replace('file:', 'assets:')
-        #
-        # # Write the file out again
-        # with open(filename, 'w') as f:
-        #     file.write(file_data)
-        #     file.close()
-
 def copy_theme_to_device(result_xml):
     # copy xml theme file to android device
     os.popen(
@@ -496,7 +483,7 @@ if __name__ == '__main__':
     # options = parseOptions()
     options = Options('xml_templates/base.xml',
                       'xml_templates/base_output.xml',
-                      '../theme/theme_v4.xml')
+                      '../theme/theme.xml')
 
     # replace colors, width, etc in source XML
     transform(options.input_template, options.output_template)
