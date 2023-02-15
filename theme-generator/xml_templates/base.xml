@@ -979,7 +979,6 @@ version 2.4.0
 					</rule>
 					<!-- captions for squares -->
 					<rule cat="base_city" e="way" k="highway" v="pedestrian" zoom-min="14">
-						<!--#TODO removed attribute: scale-font-size="16,1.15"-->
 						<caption k="name" font-size="13" stroke="#FFFFFF" stroke-width="4.0" text-wrap-width="$text_wrap_standard"/>
 					</rule>
 				</rule>
@@ -1006,7 +1005,6 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="19">
 							<line dy="2.1" stroke="$color_cycle_mtb" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
 						</rule>
-						<!--#TODO removed attribute: scale-font-size="14,1.1"-->
 						<pathText k="ref" font-style="bold" font-size="11" dy="1.4" fill="#B11BB9" stroke="#ffffff" stroke-width="2"/>
 					</rule>
 				</rule>
@@ -3090,12 +3088,7 @@ version 2.4.0
 					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#edd509" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 			</rule>
-			<rule e="way" k="piste:type" v="sled">
-				<rule e="way" k="*" v="*" zoom-min="14">
-					<line stroke="#BBFFFFFF" stroke-width="1.3"/>
-					<line stroke="#77BF79" stroke-width="0.9"/>
-				</rule>
-			</rule>
+
 			<!-- Nordic and Backcountry SKI -->
 			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine|nordic;skitour">
 				<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">
@@ -3204,6 +3197,17 @@ version 2.4.0
 				<rule e="way" k="*" v="*" zoom-min="15">
 					<pathText k="name" font-style="bold" font-size="11" dy="10" fill="#d7960e" stroke="#ffffff"
 								  stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name" scale="none" />
+				</rule>
+			</rule>
+
+			<rule e="way" k="piste:type" v="sled" zoom-min="14">
+				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+					<line stroke="#CCFFFFFF" stroke-width="${1.6 * 0.6 * $pistes_nordic_width_z13}"/>
+					<line stroke="$color_piste_sled" stroke-width="${0.6 * $pistes_nordic_width_z13}"/>
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="16" >
+					<line stroke="#CCFFFFFF" stroke-width="${1.6 * 0.6 * $pistes_nordic_width_z16}"/>
+					<line stroke="$color_piste_sled" stroke-width="${0.6 * $pistes_nordic_width_z16}"/>
 				</rule>
 			</rule>
 

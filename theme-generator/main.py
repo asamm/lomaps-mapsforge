@@ -1,7 +1,11 @@
 # Generator of Mapsforge LoMaps V4 theme using templates and other variables
 import copy
+import fileinput
+import glob
 import os
+import shutil
 from dataclasses import dataclass
+from distutils.dir_util import copy_tree
 
 from bs4.formatter import XMLFormatter
 from xsdata.formats.dataclass.parsers.config import ParserConfig
@@ -23,6 +27,7 @@ class Options:
     input_template: str
     output_template: str
     result_xml: str
+    android_module_path: str = '../android/src/main/assets/themes/mapsforgeV4/base/'
 
 
 class SortAttributes(XMLFormatter):
@@ -435,6 +440,36 @@ def transform(base_xml, result_xml):
     f.write(str(template))
     f.close()
 
+def copy_theme_to_android_module(options: Options):
+
+    # remove previous files
+    delete_folder_content(options.android_module_path)
+
+    # copy new generated theme
+    copy_tree(os.path.dirname(options.result_xml), options.android_module_path)
+
+    # replace path in theme files from 'file:' to 'assets:'
+    for filename in os.listdir(options.android_module_path):
+        if not filename.endswith('.xml'): continue
+
+        filename = os.path.join(options.android_module_path, filename)
+
+        with fileinput.FileInput(filename, inplace=True) as file:
+            for line in file:
+                print(line.replace('file:', 'assets:'), end='')
+
+        # # Read in the file
+        # with open(filename, 'r') as file :
+        #     file_data = file.read()
+        #     file.close()
+        #
+        # # Replace the target string
+        # file_data = file_data.replace('file:', 'assets:')
+        #
+        # # Write the file out again
+        # with open(filename, 'w') as f:
+        #     file.write(file_data)
+        #     file.close()
 
 def copy_theme_to_device(result_xml):
     # copy xml theme file to android device
@@ -446,12 +481,22 @@ def copy_theme_to_device(result_xml):
     os.popen(
         "adb shell am broadcast -p menion.android.locus -a com.asamm.locus.ACTION_TASK --es tasks '''{ map_reload_theme: {} }'''")
 
+def delete_folder_content(folder):
+    for filename in os.listdir(folder):
+        file_path = os.path.join(folder, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print('Failed to delete {}}. Reason: {}}'.format(file_path, e))
 
 if __name__ == '__main__':
     # options = parseOptions()
-    options = Options('../xml_templates/base.xml',
-                      '../xml_templates/base_output.xml',
-                      '../lomaps_v4/lomaps_v4.xml')
+    options = Options('xml_templates/base.xml',
+                      'xml_templates/base_output.xml',
+                      '../theme/theme_v4.xml')
 
     # replace colors, width, etc in source XML
     transform(options.input_template, options.output_template)
@@ -465,6 +510,9 @@ if __name__ == '__main__':
     icon_validator = IconValidator(theme_soup, options.result_xml)
     icon_validator.validate()
 
+    # delete temp file
+    os.remove(options.output_template)
+
     # copy map theme
     copy_theme_to_device(options.result_xml)
 
@@ -475,6 +523,10 @@ if __name__ == '__main__':
     for poi_theme_file in poi_theme_files:
         # copy poi theme
         copy_theme_to_device(poi_theme_file)
+
+    # for release
+    copy_theme_to_android_module(options)
+
 
 
     print("=============  DONE  ================= ")
