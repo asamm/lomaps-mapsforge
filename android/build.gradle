@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply from: '../global.gradle'
+
+def group = 'com.asamm.locus'
+def artifactId = 'mapsforge-v3-theme-base'
+def versionId = 1
+//version = '1.0-SNAPSHOT'
+def version = '0.94'
+
+android {
+    defaultConfig {
+        versionCode versionId
+        versionName version
+    }
+}
+
+dependencies {
+    // MapsForge API
+    api project(':libMapsForgeV3:mapsforge-v3')
+}

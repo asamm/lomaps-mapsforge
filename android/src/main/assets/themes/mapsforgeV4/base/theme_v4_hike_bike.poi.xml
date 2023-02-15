@@ -1,0 +1,403 @@
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" map-background="#ebeade" base-stroke-width="0.8">
+  <rule e="any" k="tourism" v="*" cat="accommodation" zoom-min="15">
+    <rule e="any" k="tourism" v="alpine_hut" cat="alpine_hut" zoom-min="15">
+      <symbol src="assets:symbols/poi_alpine_hut.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="wilderness_hut" cat="wilderness_hut" zoom-min="15">
+      <symbol src="assets:symbols/poi_wilderness_hut.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="camp_site|caravan_site" cat="camp_caravan" zoom-min="15">
+      <symbol src="assets:symbols/poi_camp_caravan.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="motel" cat="motel" zoom-min="18">
+      <symbol src="assets:symbols/poi_motel.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="hostel" cat="hostel" zoom-min="17">
+      <symbol src="assets:symbols/poi_hostel.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="hotel" cat="hotel" zoom-min="17">
+      <symbol src="assets:symbols/poi_hostel.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="guest_house|chalet" cat="guest_house_chalet" zoom-min="17">
+      <symbol src="assets:symbols/poi_hostel.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="amenity" v="*" cat="financial_post_services" zoom-min="16">
+    <rule e="any" k="amenity" v="bank" cat="bank" zoom-min="18">
+      <symbol src="assets:symbols/poi_bank.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="bureau_de_change" cat="exchange" zoom-min="18">
+      <symbol src="assets:symbols/poi_exchange.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="atm" cat="atm" zoom-min="18">
+      <symbol src="assets:symbols/poi_atm.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="parcel_locker" cat="parcel_locker" zoom-min="18">
+      <symbol src="assets:symbols/poi_parcel_locker.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="post_office" cat="post_office" zoom-min="16">
+      <symbol src="assets:symbols/poi_post_office.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="post_box" cat="post_box" zoom-min="18">
+      <symbol src="assets:symbols/poi_post_box.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="information|tourism|amenity|historic|man_made" v="*" cat="culture_tourism" zoom-min="13">
+    <rule e="any" k="information" v="office" cat="info" zoom-min="15">
+      <symbol src="assets:symbols/poi_info-square.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="information" v="board" cat="info_board" zoom-min="17">
+      <symbol src="assets:symbols/poi_infoboard.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="museum" cat="museum" zoom-min="15">
+      <symbol src="assets:symbols/poi_museum.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="gallery" cat="gallery" zoom-min="15">
+      <symbol src="assets:symbols/poi_gallery.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="cinema" cat="cinema" zoom-min="17">
+      <symbol src="assets:symbols/poi_cinema.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="theatre" cat="theatre" zoom-min="16">
+      <symbol src="assets:symbols/poi_theatre.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="historic" v="castle" cat="castle" zoom-min="15">
+      <symbol src="assets:symbols/poi_castle.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="historic" v="memorial" cat="memorial" zoom-min="15">
+      <symbol src="assets:symbols/poi_memorial.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="historic" v="monument" cat="monument" zoom-min="14">
+      <symbol src="assets:symbols/poi_monument.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="historic" v="ruins" cat="ruin" zoom-min="13">
+      <symbol src="assets:symbols/poi_castle_ruin.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="attraction|artwork" cat="attraction" zoom-min="15">
+      <symbol src="assets:symbols/poi_attraction.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="zoo" cat="zoo" zoom-min="15">
+      <symbol src="assets:symbols/poi_zoo.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="man_made" v="watermill" cat="watermill" zoom-min="14">
+      <symbol src="assets:symbols/poi_watermill.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="historic" v="aqueduct" cat="aqueduct" zoom-min="17">
+      <symbol src="assets:symbols/poi_aqueduct.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="man_made" v="windmill" cat="windmill" zoom-min="14">
+      <symbol src="assets:symbols/poi_windmill.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="man_made" v="lighthouse" cat="lighthouse" zoom-min="14">
+      <symbol src="assets:symbols/poi_lighthouse.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="fountain" cat="fountain" zoom-min="17">
+      <symbol src="assets:symbols/poi_fountain.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="toilets" cat="toilets" zoom-min="17">
+      <symbol src="assets:symbols/poi_toilets.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="amenity|landuse" v="*" cat="public_services" zoom-min="17">
+    <rule e="any" k="amenity" v="townhall" cat="townhall" zoom-min="17">
+      <symbol src="assets:symbols/poi_townhall.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="library" cat="library" zoom-min="18">
+      <symbol src="assets:symbols/poi_library.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="kindergarten" cat="kindergarten" zoom-min="17">
+      <symbol src="assets:symbols/poi_kindergarten.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="college|school|university" cat="education" zoom-min="17">
+      <symbol src="assets:symbols/poi_education.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="embassy" cat="embassy" zoom-min="17">
+      <symbol src="assets:symbols/poi_embassy.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="landuse|amenity" v="cemetery|grave_yard" cat="grave_yard" zoom-min="17">
+      <symbol src="assets:symbols/poi_grave_yard.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="amenity|information|tourism|leisure" v="*" cat="hiking_cycling" zoom-min="15">
+    <rule e="any" k="amenity" v="bicycle_parking" cat="bicycle_parking" zoom-min="17">
+      <symbol src="assets:symbols/poi_bicycle_parking.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="information" v="guidepost" cat="guidepost" zoom-min="15">
+      <symbol src="assets:symbols/poi_guidepost.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="charging_station" cat="charging_station_bikes" zoom-min="16">
+      <symbol src="assets:symbols/poi_charging_station_bikes.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="picnic_site" cat="picnic_site" zoom-min="15">
+      <symbol src="assets:symbols/poi_picnic_site.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure" v="firepit" cat="fire_pit" zoom-min="16">
+      <symbol src="assets:symbols/poi_firepit.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="shelter" cat="shelter" zoom-min="16">
+      <symbol src="assets:symbols/poi_shelter.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="hunting_stand" cat="hunting_stand" zoom-min="16">
+      <symbol src="assets:symbols/poi_hunting_post.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="tourism" v="viewpoint" cat="viewpoint" zoom-min="16">
+      <symbol src="assets:symbols/poi_viewpoint.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="boundary|leisure|natural|mountain_pass|garden:type|waterway|man_made" v="*" cat="nature" zoom-min="13">
+    <rule e="any" k="boundary|leisure" v="protected_area|nature_reserve|natural_park" cat="protected_area" zoom-min="14">
+      <symbol src="assets:symbols/poi_nature.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="rock" cat="rock" zoom-min="15">
+      <symbol src="assets:symbols/poi_rock.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="stone" cat="stone" zoom-min="16">
+      <symbol src="assets:symbols/poi_stone.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="peak" cat="peak" zoom-min="13">
+      <symbol src="assets:symbols/poi_peak.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="mountain_pass" v="yes" cat="mountain_pass" zoom-min="14">
+      <symbol src="assets:symbols/poi_pass.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="spring" cat="spring" zoom-min="15">
+      <symbol src="assets:symbols/poi_spring.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="garden:type" v="botanical" cat="botanical_garden" zoom-min="15">
+      <symbol src="assets:symbols/poi_botanical_garden.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure" v="park" cat="park" zoom-min="16">
+      <symbol src="assets:symbols/poi_park.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="beach" cat="beach" zoom-min="16">
+      <symbol src="assets:symbols/poi_beach.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="waterway" v="waterfall" cat="waterfall" zoom-min="15">
+      <symbol src="assets:symbols/poi_waterfall.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="man_made" v="adit|mineshaft" cat="mine" zoom-min="14">
+      <symbol src="assets:symbols/poi_mineshaft.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="cave_entrance" cat="cave" zoom-min="14">
+      <symbol src="assets:symbols/poi_cave_entrance.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="sinkhole" cat="sinkhole" zoom-min="15">
+      <symbol src="assets:symbols/poi_sinkhole.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="cliff" cat="cliff" zoom-min="15">
+      <symbol src="assets:symbols/poi_cliff.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="tree" cat="tree" zoom-min="16">
+      <symbol src="assets:symbols/poi_tree.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="volcano" cat="volcano" zoom-min="13">
+      <symbol src="assets:symbols/poi_volcano.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="geyser" cat="geyser" zoom-min="16">
+      <symbol src="assets:symbols/poi_geyser.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="hot_spring" cat="hot_spring" zoom-min="17">
+      <symbol src="assets:symbols/poi_hot_spring.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="natural" v="glacier" cat="glacier" zoom-min="14">
+      <symbol src="assets:symbols/poi_glacier.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="amenity|emergency|lifeguard" v="*" cat="emergency_health" zoom-min="14">
+    <rule e="any" k="amenity" v="fire_station" cat="fire_station" zoom-min="17">
+      <symbol src="assets:symbols/poi_fire_station.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="emergency" v="mountain_rescue" cat="mountain_rescue" zoom-min="15">
+      <symbol src="assets:symbols/poi_mountain_rescue.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="lifeguard|emergency" v="yes|lifeguard" cat="lifeguard" zoom-min="17">
+      <symbol src="assets:symbols/poi_lifeguard.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="emergency" v="assembly_point|access_point" cat="emergency_point" zoom-min="17">
+      <symbol src="assets:symbols/poi_emergency.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="emergency" v="landing_site" cat="emergency_helipad" zoom-min="17">
+      <symbol src="assets:symbols/poi_heliport_emergency.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="emergency" v="phone" cat="emergency_phone" zoom-min="17">
+      <symbol src="assets:symbols/poi_emergency_phone.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="emergency" v="defibrillator" cat="defibrillator" zoom-min="18">
+      <symbol src="assets:symbols/poi_aed.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="police" cat="police" zoom-min="17">
+      <symbol src="assets:symbols/poi_police.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="doctors" cat="doctor" zoom-min="16">
+      <symbol src="assets:symbols/poi_doctor.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="dentist" cat="dentist" zoom-min="17">
+      <symbol src="assets:symbols/poi_doctor_dentist.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="hospital" cat="hospital" zoom-min="14">
+      <symbol src="assets:symbols/poi_hospital.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="clinic" cat="clinic" zoom-min="14">
+      <symbol src="assets:symbols/poi_clinic.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="veterinary" cat="veterinary" zoom-min="16">
+      <symbol src="assets:symbols/poi_veterinary.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="historic|man_made|religion" v="*" cat="place_of_worship" zoom-min="14">
+    <rule e="any" k="historic" v="wayside_shrine" cat="wayside_shrine" zoom-min="15">
+      <symbol src="assets:symbols/poi_wayside_shrine.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="historic" v="wayside_cross" cat="wayside_cross" zoom-min="15">
+      <symbol src="assets:symbols/poi_cross.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="man_made" v="cross" cat="cross" zoom-min="16">
+      <symbol src="assets:symbols/poi_cross.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="religion" v="buddhist" cat="buddhist" zoom-min="14">
+      <symbol src="assets:symbols/poi_buddhist.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="religion" v="christian" cat="christian" zoom-min="14">
+      <symbol src="assets:symbols/poi_church.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="religion" v="hindu" cat="hindu" zoom-min="14">
+      <symbol src="assets:symbols/poi_hindu.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="religion" v="jewish" cat="jewish" zoom-min="14">
+      <symbol src="assets:symbols/poi_jewish_star.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="religion" v="muslim" cat="muslim" zoom-min="14">
+      <symbol src="assets:symbols/poi_muslim.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="religion" v="shinto" cat="shinto" zoom-min="14">
+      <symbol src="assets:symbols/poi_shinto.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="religion" v="taoist" cat="taoist" zoom-min="14">
+      <symbol src="assets:symbols/poi_taoist.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="amenity|product|craft|microbrewery|shop|diet:vegetarian|diet:lacto_vegetarian|diet:ovo_vegetarian|diet:vegan|diet:fruitarian|vegetarian" v="*" cat="food_drink" zoom-min="16">
+    <rule e="any" k="amenity" v="bar|pub" cat="bar_pub" zoom-min="18">
+      <symbol src="assets:symbols/poi_bar_pub.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="cafe" cat="cafe" zoom-min="17">
+      <symbol src="assets:symbols/poi_cafe.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="restaurant" cat="restaurant" zoom-min="16">
+      <symbol src="assets:symbols/poi_restaurant.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="product|craft|microbrewery" v="beer|brewery|yes" cat="brewery" zoom-min="16">
+      <symbol src="assets:symbols/poi_brewery.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="fast_food" cat="fast_food" zoom-min="17">
+      <symbol src="assets:symbols/poi_fast_food.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop" v="pastry|confectionery" cat="confectionery" zoom-min="18">
+      <symbol src="assets:symbols/poi_confectionery.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="drinking_water" cat="drinking_water" zoom-min="16">
+      <symbol src="assets:symbols/poi_drinking_water.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="diet:vegetarian|diet:lacto_vegetarian|diet:ovo_vegetarian|diet:vegan|diet:fruitarian|vegetarian" v="yes" cat="veg_food" zoom-min="17">
+      <symbol src="assets:symbols/poi_veg_food.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="shop|amenity" v="*" cat="shopping" zoom-min="16">
+    <rule e="any" k="shop" v="kiosk" cat="kiosk" zoom-min="16">
+      <symbol src="assets:symbols/poi_kiosk.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop" v="department_store|mall" cat="department_store" zoom-min="17">
+      <symbol src="assets:symbols/poi_department_store.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="pharmacy" cat="pharmacy" zoom-min="17">
+      <symbol src="assets:symbols/poi_pharmacy.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop" v="bakery" cat="bakery" zoom-min="17">
+      <symbol src="assets:symbols/poi_bakery.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop" v="general" cat="other" zoom-min="18">
+      <symbol src="assets:symbols/poi_other.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop" v="convenience|supermarket" cat="supermarket_convenience" zoom-min="17">
+      <symbol src="assets:symbols/poi_supermarket_convenience.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop" v="bicycle|dive|scuba_diving|outdoor|sports|water_sports" cat="sport_outdoor" zoom-min="16">
+      <symbol src="assets:symbols/poi_sport_outdoor.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="leisure|amenity|sport|aerialway|piste:type|man_made|landuse|shop|ski:rental|ski:repair|club" v="*" cat="sport_leisure" zoom-min="13">
+    <rule e="any" k="leisure" v="golf_course" cat="golf" zoom-min="15">
+      <symbol src="assets:symbols/poi_golf.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure|amenity|sport" v="swimming_pool|water_park|swimming" cat="swimming" zoom-min="16">
+      <symbol src="assets:symbols/poi_swimming.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure" v="sports_centre" cat="sport_centre" zoom-min="16">
+      <symbol src="assets:symbols/poi_sport_centre.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure" v="pitch" cat="sport_pitch" zoom-min="16">
+      <symbol src="assets:symbols/poi_sport_pitch.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure" v="stadium" cat="stadium" zoom-min="16">
+      <symbol src="assets:symbols/poi_stadium.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="sport|piste:type|man_made" v="ski_jumping|ski_jump" cat="ski_jumping" zoom-min="16">
+      <symbol src="assets:symbols/poi_skijumping.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure" v="marina" cat="marina" zoom-min="16">
+      <symbol src="assets:symbols/poi_marina.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure" v="playground" cat="playground" zoom-min="18">
+      <symbol src="assets:symbols/poi_playground.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="leisure|club" v="nightclub|music" cat="clubs_dancing" zoom-min="17">
+      <symbol src="assets:symbols/poi_clubs_dancing.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="amenity|highway|shop" v="*" cat="car_services" zoom-min="14">
+    <rule e="any" k="amenity" v="fuel" cat="gas_station" zoom-min="14">
+      <symbol src="assets:symbols/poi_gas_station.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="charging_station" cat="charging_station_cars" zoom-min="14">
+      <symbol src="assets:symbols/poi_charging_station.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="highway" v="rest_area" cat="rest_area" zoom-min="16">
+      <symbol src="assets:symbols/poi_rest_area.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="parking" cat="parking" zoom-min="16">
+      <symbol src="assets:symbols/poi_parking.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop" v="car|car_repair|car_parts" cat="car_shop_and_repair" zoom-min="17">
+      <symbol src="assets:symbols/poi_car_shop_and_repair.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+  <rule e="any" k="highway|railway|amenity|station|aeroway|aerialway" v="*" cat="transportation" zoom-min="14">
+    <rule e="any" k="highway|railway" v="bus_stop|tram_stop" cat="bus_and_tram_stop" zoom-min="17">
+      <symbol src="assets:symbols/poi_bus_and_tram_stop.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="bus_station" cat="bus_station" zoom-min="15">
+      <symbol src="assets:symbols/poi_bus_station.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="railway" v="halt|station" cat="railway_station" zoom-min="15">
+      <symbol src="assets:symbols/poi_railway_station.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="station" v="subway" cat="subway" zoom-min="15">
+      <symbol src="assets:symbols/poi_subway.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="aeroway" v="aerodrome" cat="airport" zoom-min="14">
+      <symbol src="assets:symbols/poi_airport.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="aeroway" v="helipad|heliport" cat="helipad" zoom-min="16">
+      <symbol src="assets:symbols/poi_heliport.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="ferry_terminal" cat="ferries" zoom-min="15">
+      <symbol src="assets:symbols/poi_ferries.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="aerialway" v="cable_car|gondola" cat="cable_car" zoom-min="15">
+      <symbol src="assets:symbols/poi_cable_car.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="railway" v="funicular" cat="funicular" zoom-min="16">
+      <symbol src="assets:symbols/poi_funicular.svg" symbol-width="20"/>
+    </rule>
+  </rule>
+</rendertheme>
