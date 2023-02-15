@@ -7,6 +7,9 @@ __init__.py
 # Intellij
 *.iml
 .idea/
+.gradle/
+local.properties
+android/build
 
 # temp file
 base_output.xml
