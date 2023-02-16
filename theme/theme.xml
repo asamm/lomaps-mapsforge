@@ -582,7 +582,7 @@ version 2.4.0
 					<line stroke="#A07F5F" stroke-width="0.09" curve="cubic"/>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#A07F5F" stroke-width="0.25"/>
+					<line stroke="#A07F5F" stroke-width="0.25" curve="cubic"/>
 				</rule>
 			</rule>
 			<!-- contour lines level 14-->
@@ -621,24 +621,19 @@ version 2.4.0
 		</rule>
 		<!-- EMBANKMENT -->
 		<rule cat="base_topo" e="way" k="natural" v="earth_bank" zoom-min="16">
-			<!--#TODO removed attribute: curve="cubic"-->
-			<line stroke="#797979" stroke-width="0.15"/>
+			<line stroke="#797979" stroke-width="0.15" curve="cubic"/>
 			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
-				<!--#TODO removed attribute: curve="cubic"-->
-				<line stroke="#797979" dy="0.8" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt"/>
+				<line stroke="#797979" dy="0.8" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
-				<!--#TODO removed attribute: curve="cubic"-->
-				<line stroke="#797979" dy="1.0" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt"/>
+				<line stroke="#797979" dy="1.0" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="18">
-				<!--#TODO removed attribute: curve="cubic"-->
-				<line stroke="#797979" dy="1.3" stroke-width="1.1" stroke-dasharray="0.5,4" stroke-linecap="butt"/>
+				<line stroke="#797979" dy="1.3" stroke-width="1.1" stroke-dasharray="0.5,4" stroke-linecap="butt" curve="cubic"/>
 			</rule>
 		</rule>
 		<rule cat="base_topo" e="way" k="barrier|natural" v="ditch|gully" zoom-min="15">
-			<!--#TODO removed attribute: curve="cubic"-->
-			<line stroke="#797979" stroke-width="0.15"/>
+			<line stroke="#797979" stroke-width="0.15" curve="cubic"/>
 		</rule>
 		<!-- WATERS -->
 		<rule e="way" k="leisure" v="swimming_pool" zoom-min="15">
@@ -674,17 +669,14 @@ version 2.4.0
 					</rule>
 					<rule e="way" k="waterway" v="stream" zoom-min="12">
 						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13">
-							<!--#TODO removed attribute: curve="cubic"-->
-							<line stroke="#9CC9E8" stroke-width="0.5"/>
+							<line stroke="#9CC9E8" stroke-width="0.5" curve="cubic"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
-							<!--#TODO removed attribute: curve="cubic"-->
-							<line stroke="#9CC9E8" stroke-width="0.4"/>
+							<line stroke="#9CC9E8" stroke-width="0.4" curve="cubic"/>
 							<pathText k="name" font-style="italic" font-family="serif" dy="-1.8" font-size="10" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="1"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="16">
-							<!--#TODO removed attribute: curve="cubic"-->
-							<line stroke="#9CC9E8" stroke-width="0.4"/>
+							<line stroke="#9CC9E8" stroke-width="0.4" curve="cubic"/>
 							<pathText k="name" font-style="italic" font-family="serif" dy="-1.8" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="1"/>
 						</rule>
 					</rule>
@@ -1188,38 +1180,38 @@ version 2.4.0
 							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="0.608" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
 								<lineSymbol display="ifspace" dy="1.816" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
-								<pathText k="ref" display="ifspace" dy="2.2560000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+								<pathText k="ref" display="ifspace" dy="2.2560000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="0.95" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
 								<lineSymbol display="ifspace" dy="2.1933333333333334" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
-								<pathText k="ref" display="ifspace" dy="2.033333333333333" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+								<pathText k="ref" display="ifspace" dy="2.033333333333333" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="1.1733333333333333" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
 								<lineSymbol display="ifspace" dy="2.64" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
-								<pathText k="ref" display="ifspace" dy="2.48" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+								<pathText k="ref" display="ifspace" dy="2.48" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="18" zoom-max="127" closed="any">
 							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
 									<lineSymbol display="ifspace" dy="1.036" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
-									<pathText k="ref" display="ifspace" dy="1.356" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+									<pathText k="ref" display="ifspace" dy="1.356" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 								</rule>
 								<line dy="0.428" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
 									<lineSymbol display="ifspace" dy="1.5633333333333335" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
-									<pathText k="ref" display="ifspace" dy="1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+									<pathText k="ref" display="ifspace" dy="1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 								</rule>
 								<line dy="0.7833333333333333" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
 									<lineSymbol display="ifspace" dy="2.0100000000000002" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
-									<pathText k="ref" display="ifspace" dy="1.88" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+									<pathText k="ref" display="ifspace" dy="1.88" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 								</rule>
 								<line dy="1.0066666666666668" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
@@ -1250,15 +1242,15 @@ version 2.4.0
 								<rule e="way" k="sac_scale" v="hiking" zoom-min="0" zoom-max="127" closed="any">
 									<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 										<line dy="-0.728" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
-										<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+										<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 									</rule>
 									<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 										<line dy="-0.95" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
-										<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+										<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 									</rule>
 									<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 										<line dy="-1.1733333333333333" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
-										<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+										<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 									</rule>
 								</rule>
 							</rule>
@@ -1268,15 +1260,15 @@ version 2.4.0
 								<rule e="way" k="sac_scale" v="hiking" zoom-min="0" zoom-max="127" closed="any">
 									<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 										<line dy="-0.428" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-										<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+										<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 									</rule>
 									<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 										<line dy="-0.7833333333333333" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-										<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+										<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 									</rule>
 									<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 										<line dy="-1.0066666666666668" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/>
-										<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+										<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 									</rule>
 								</rule>
 							</rule>
@@ -1769,29 +1761,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#EA3200" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -1821,29 +1813,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#330330" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#330330" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#330330" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#330330" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#330330" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#330330" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -1873,29 +1865,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#0026ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#0026ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#0026ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#0026ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#0026ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#0026ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -1925,29 +1917,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#93501B" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#93501B" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#93501B" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#93501B" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#93501B" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#93501B" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -1977,29 +1969,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#575757" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#575757" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#575757" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#575757" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#575757" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#575757" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2034,7 +2026,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-0.728" scale="stroke" stroke="#267f00" stroke-width="0.44999999999999996" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2043,7 +2035,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-0.95" scale="stroke" stroke="#267f00" stroke-width="0.44999999999999996" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2052,7 +2044,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-1.1733333333333333" scale="stroke" stroke="#267f00" stroke-width="0.44999999999999996" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
@@ -2063,7 +2055,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-1.388" scale="stroke" stroke="#267f00" stroke-width="0.44999999999999996" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2072,7 +2064,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-1.5766666666666667" scale="stroke" stroke="#267f00" stroke-width="0.44999999999999996" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2081,7 +2073,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-1.8" scale="stroke" stroke="#267f00" stroke-width="0.44999999999999996" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2141,29 +2133,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#ff9500" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#ff9500" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#ff9500" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#ff9500" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#ff9500" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#ff9500" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2193,29 +2185,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#b399ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#b399ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#b399ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#b399ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#b399ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#b399ff" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2245,29 +2237,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.728" scale="stroke" stroke="#dbbf00" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.95" scale="stroke" stroke="#dbbf00" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.1733333333333333" scale="stroke" stroke="#dbbf00" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.388" scale="stroke" stroke="#dbbf00" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.056" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.5766666666666667" scale="stroke" stroke="#dbbf00" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.3333333333333335" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.8" scale="stroke" stroke="#dbbf00" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-2.7800000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2300,29 +2292,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#EA3200" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#EA3200" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2352,29 +2344,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#330330" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#330330" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#330330" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#330330" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#330330" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#330330" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#330330" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2404,29 +2396,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#0026ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#0026ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#0026ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#0026ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#0026ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#0026ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#0026ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2456,29 +2448,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#93501B" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#93501B" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#93501B" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#93501B" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#93501B" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#93501B" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#93501B" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2508,29 +2500,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#575757" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#575757" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#575757" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#575757" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#575757" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#575757" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#575757" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2565,7 +2557,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-0.428" scale="stroke" stroke="#267f00" stroke-width="0.22499999999999998" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2574,7 +2566,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-0.7833333333333333" scale="stroke" stroke="#267f00" stroke-width="0.22499999999999998" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2583,7 +2575,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-1.0066666666666668" scale="stroke" stroke="#267f00" stroke-width="0.22499999999999998" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
@@ -2594,7 +2586,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-0.706" scale="stroke" stroke="#267f00" stroke-width="0.22499999999999998" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2603,7 +2595,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-1.0666666666666667" scale="stroke" stroke="#267f00" stroke-width="0.22499999999999998" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<rule e="way" k="osmc_foreground" v="~|green_arch|green_bar|green_bowl|green_circle|green_corner|green_cross|green_diamond|green_diamond_line|green_dot|green_drop_line|green_fork|green_hiker|green_L|green_rectangle|green_rectangle_line|green_right|green_round|green_slash|green_stripe|green_triangle|green_triangle_line|green_triangle_turned|green_turned_T|green_x|white_arch|white_backslash|white_bar|white_circle|white_corner|white_cross|white_diamond|white_diamond_line|white_dot|white_fork|white_hiker|white_lower|white_pointer|white_rectangle|white_rectangle_line|white_red_diamond|white_right|white_round|white_slash|white_stripe|white_triangle|white_triangle_line|white_turned_T|white_wheelchair|white_x" zoom-min="0" zoom-max="127" closed="any">
@@ -2612,7 +2604,7 @@ version 2.4.0
 											<rule e="way" k="osmc_foreground" v="green_backslash" zoom-min="0" zoom-max="127" closed="any">
 												<line dy="-1.29" scale="stroke" stroke="#267f00" stroke-width="0.22499999999999998" stroke-dasharray="1,8,8,8" stroke-linecap="round" stroke-linejoin="round"/>
 											</rule>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#267f00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2672,29 +2664,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#ff9500" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#ff9500" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#ff9500" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#ff9500" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#ff9500" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#ff9500" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#ff9500" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2724,29 +2716,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#b399ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#b399ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#b399ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#b399ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#b399ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#b399ff" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#b399ff" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -2776,29 +2768,29 @@ version 2.4.0
 									<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.428" scale="stroke" stroke="#dbbf00" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.156" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.7833333333333333" scale="stroke" stroke="#dbbf00" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0066666666666668" scale="stroke" stroke="#dbbf00" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 										<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-0.706" scale="stroke" stroke="#dbbf00" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-0.856" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.0666666666666667" scale="stroke" stroke="#dbbf00" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="3.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 										</rule>
 										<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 											<line dy="-1.29" scale="stroke" stroke="#dbbf00" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
-											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true"/>
+											<pathText k="name" display="ifspace" dy="-1.88" font-family="default" font-style="bold" font-size="12.0" fill="#dbbf00" priority="200" scale="stroke" stroke="#ffffff" stroke-width="2.5" repeat="true" repeat-gap="300.0" repeat-start="100.0" rotate="true" upright="auto"/>
 										</rule>
 									</rule>
 									<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -4315,13 +4307,13 @@ version 2.4.0
 					<rule e="way" k="highway" v="track" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="tracktype" v="grade1" zoom-min="0" zoom-max="127" closed="any">
 							<rule cat="base_summer" e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
-								<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="normal" font-size="11.0" fill="#000000" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true"/>
+								<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="normal" font-size="11.0" fill="#000000" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 							<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="grade2" zoom-min="0" zoom-max="127" closed="any">
 							<rule cat="base_summer" e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
-								<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="normal" font-size="11.0" fill="#000000" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true"/>
+								<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="normal" font-size="11.0" fill="#000000" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.384" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
@@ -4355,7 +4347,7 @@ version 2.4.0
 					</rule>
 					<rule e="way" k="highway" v="raceway" zoom-min="0" zoom-max="127" closed="any">
 						<line dy="0.0" scale="stroke" stroke="#90fff6e6" stroke-width="0.8333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
-						<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="bold" font-size="10.0" fill="#000000" priority="0" scale="stroke" stroke="#FFFFFF" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true"/>
+						<pathText k="name" display="ifspace" dy="0.0" font-family="default" font-style="bold" font-size="10.0" fill="#000000" priority="0" scale="stroke" stroke="#FFFFFF" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" upright="auto"/>
 					</rule>
 					<rule e="way" k="highway" v="tertiary" zoom-min="0" zoom-max="127" closed="any">
 						<line dy="0.0" scale="stroke" stroke="#90FFFEE6" stroke-width="1.024" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
