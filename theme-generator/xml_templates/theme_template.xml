@@ -683,11 +683,13 @@ version 2.4.0
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 							<line stroke="#9CC9E8" stroke-width="0.4" curve="cubic"/>
-							<pathText k="name" font-style="italic" font-family="serif"  dy="-1.8" font-size="10" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_stream"/>
+							<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
+								<pathText k="name" font-style="italic" font-family="serif"  dy="3" font-size="9" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_stream"/>
+							</rule>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="16" >
 							<line stroke="#9CC9E8" stroke-width="0.4" curve="cubic"/>
-							<pathText k="name" font-style="italic" font-family="serif"  dy="-1.8" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_stream"/>
+							<pathText k="name" font-style="italic" font-family="serif" dy="2" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_stream"/>
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="river">
