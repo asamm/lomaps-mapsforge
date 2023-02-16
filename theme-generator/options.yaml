@@ -1,4 +1,4 @@
 Options:
     android_module_path: ../android/src/main/assets/themes/mapsforgeV4/base/
-    locus_theme_path: /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/lomaps_v4/
+    locus_theme_path: /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/theme/
     output_template: xml_templates/base_output.xml
