@@ -8,7 +8,7 @@ from xsdata.formats.dataclass.serializers import XmlSerializer
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
 from mapsforge.render_theme import Rule, Rendertheme, Symbol
-from poidb.config_apdm import Configuration, SubFolder
+from poidb.config_apdb import Configuration, SubFolder
 
 default_symbol_width = 20
 symbol_directory = 'symbols'

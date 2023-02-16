@@ -1,48 +1,39 @@
-# Generator of Mapsforge LoMaps V4 theme using templates and other variables
 import copy
-import fileinput
-import glob
-import os
-import shutil
-from dataclasses import dataclass
-from distutils.dir_util import copy_tree
 
-from bs4.formatter import XMLFormatter
-from xsdata.formats.dataclass.parsers.config import ParserConfig
-
+import yaml
 from bs4 import BeautifulSoup
-
-from xsdata.formats.dataclass.context import XmlContext
+from bs4.formatter import XMLFormatter
 from xsdata.formats.dataclass.parsers import XmlParser
+from xsdata.formats.dataclass.parsers.config import ParserConfig
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
-from config import TemplateVariables
-from poi_theme import PoiThemeGenerator
-
-from mapsforge.render_theme import Rule, Cap, Line, Linejoin, LineSymbol
+from mapsforge.render_theme import Rule, Cap, Line
+from xml_templates.config import TemplateVariables
 
 
-@dataclass
-class Options:
-    input_template: str
-    output_template: str
-    result_xml: str
-    android_module_path: str = '../android/src/main/assets/themes/mapsforgeV4/base/'
+class Options():
+    def __init__(self,
+                theme_template,
+                apdb_config_xml,
+                template_config,
+                result_xml,
+                copy_to_device,
+                publish_for_android,
+                android_module_path = '',
+                locus_theme_path = '',
+                output_template = ''):
 
+        self.theme_template = theme_template
+        self.apdb_config_xml = apdb_config_xml
+        self.template_config = template_config
+        self.result_xml = result_xml
+        self.android_module_path = android_module_path
+        self.locus_theme_path = locus_theme_path
 
-class SortAttributes(XMLFormatter):
-    def attributes(self, tag):
-        """Reorder a tag's attributes however you want."""
-        attrib_order = ['cat', 'e', 'k', 'v', 'zoom-min', 'zoom-max']
-        new_order = []
-        for element in attrib_order:
-            if element in tag.attrs:
-                new_order.append((element, tag[element]))
-        for pair in tag.attrs.items():
-            if pair not in new_order:
-                new_order.append(pair)
-        return new_order
-
+        self.copy_to_device = copy_to_device
+        self.publish_for_android = publish_for_android
+        self.output_template = output_template
+        
 
 class GeneratorActions:
 
@@ -117,8 +108,9 @@ class GeneratorActions:
                 # convert back xsdata object into soup
                 tunnel_soup = BeautifulSoup(serializer.render(source_rule), 'xml')
 
-                if action_name == TemplateVariables.gen_action_osmc_colors or action_name == TemplateVariables.gen_action_osmc_symbols_order:
-                    # replace all childs in specific section by new child from created rules
+                if action_name == TemplateVariables.gen_action_osmc_colors or \
+                        action_name == TemplateVariables.gen_action_osmc_symbols_order:
+                    # replace all children in specific section by new child from created rules
                     child = tunnel_soup.findChild()
                     section_soup.replaceWith(child)
                 else:
@@ -139,8 +131,9 @@ class GeneratorActions:
 
     def write_to_file(self, output_f, soup):
         """
-        Save resutl into XML file
-        :param output_f:
+        Save result into XML file
+        :param output_f: path to result XML file
+        :param soup: :BeautifulSoup object of prepare theme
         """
         formatter = SortAttributes(indent="\t")
         f = open(output_f, "w")
@@ -377,143 +370,15 @@ class Osmc2SacScale():
         pass
 
 
-class IconValidator():
-
-    def __init__(self, theme_soup, theme_location):
-
-        self.soup = theme_soup
-        self.theme_location = theme_location
-
-    def validate(self):
-        """
-        Check if all icons(symbols) defined in the base xml are available in the theme folder
-        Missing icons are reported in txt file "missing_icons.txt"
-        """
-        icon_paths = self._get_icon_paths()
-        missing_icons = []
-        for icon in icon_paths:
-            full_path = os.path.normpath(os.path.join(os.path.dirname(self.theme_location), icon))
-            if not os.path.exists(full_path):
-                if icon not in missing_icons:
-                    missing_icons.append(icon)
-
-    def _write_missing_icons_to_file(self, missing_icons):
-        log_file = 'missing_icons.txt'
-
-        # remove file if exist
-        if os.path.exists(log_file):
-            os.remove(log_file)
-
-        if len(missing_icons) > 0:
-            # sort alphbetically the icons paths
-            missing_icons.sort()
-            with open(log_file, 'w') as f:
-                f.writelines('\n'.join(missing_icons))
-
-            print("WARNING: the theme contains definition of symbols that doesn't exist in theme folder. Check " +
-                  "missing icons in text file: {}".format(log_file))
-
-    def _get_icon_paths(self) -> list:
-        """
-
-        :return: list of local path used as sources for symbols
-        """
-        tags = self.soup.select('[src]')
-
-        paths = []
-        for tag in self.soup.select('[src]'):
-            if tag['src'].startswith('file:'):
-                paths.append(tag['src'].replace('file:/', '').replace('file:', ''))
-        return paths
-
-
-##################################
-def transform(base_xml, result_xml):
-    """
-    Read input template xml with python variables and replace variables by value using cheetah
-    :param base_xml: path to xml template
-    :param result_xml:
-    """
-    template = TemplateVariables(file=base_xml)
-
-    f = open(result_xml, "w")
-    f.write(str(template))
-    f.close()
-
-def copy_theme_to_android_module(options: Options):
-
-    # remove previous files
-    delete_folder_content(options.android_module_path)
-
-    # copy new generated theme
-    copy_tree(os.path.dirname(options.result_xml), options.android_module_path)
-
-    # replace path in theme files from 'file:' to 'assets:'
-    for filename in os.listdir(options.android_module_path):
-        if not filename.endswith('.xml'): continue
-
-        filename = os.path.join(options.android_module_path, filename)
-
-        with fileinput.FileInput(filename, inplace=True) as file:
-            for line in file:
-                print(line.replace('file:', 'assets:'), end='')
-
-def copy_theme_to_device(result_xml):
-    # copy xml theme file to android device
-    os.popen(
-        "adb push {} /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/lomaps_v4/{}"
-        .format(result_xml, os.path.basename(result_xml)))
-    # os.popen("adb shell am force-stop menion.android.locus")
-    # os.popen("adb shell monkey -p menion.android.locus -c android.intent.category.LAUNCHER 1")
-    os.popen(
-        "adb shell am broadcast -p menion.android.locus -a com.asamm.locus.ACTION_TASK --es tasks '''{ map_reload_theme: {} }'''")
-
-def delete_folder_content(folder):
-    for filename in os.listdir(folder):
-        file_path = os.path.join(folder, filename)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-                os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        except Exception as e:
-            print('Failed to delete {}}. Reason: {}}'.format(file_path, e))
-
-if __name__ == '__main__':
-    # options = parseOptions()
-    options = Options('xml_templates/base.xml',
-                      'xml_templates/base_output.xml',
-                      '../theme/theme.xml')
-
-    # replace colors, width, etc in source XML
-    transform(options.input_template, options.output_template)
-
-    # generate custom parts (bridges, tourist paths)
-    generator_actions = GeneratorActions(options)
-    generator_actions.process_actions()
-
-    # result of generation action in soup object
-    theme_soup = generator_actions.soup
-    icon_validator = IconValidator(theme_soup, options.result_xml)
-    icon_validator.validate()
-
-    # delete temp file
-    os.remove(options.output_template)
-
-    # copy map theme
-    copy_theme_to_device(options.result_xml)
-
-    # Generate custom theme that render only POI icons
-    poi_theme_generator = PoiThemeGenerator('poidb/config_apDb.xml', options.result_xml)
-    poi_theme_files = poi_theme_generator.generate_render_themes()
-    # copy POI themes do device
-    for poi_theme_file in poi_theme_files:
-        # copy poi theme
-        copy_theme_to_device(poi_theme_file)
-
-    # for release
-    copy_theme_to_android_module(options)
-
-
-
-    print("=============  DONE  ================= ")
+class SortAttributes(XMLFormatter):
+    def attributes(self, tag):
+        """Reorder a tag's attributes however you want."""
+        attrib_order = ['cat', 'e', 'k', 'v', 'zoom-min', 'zoom-max']
+        new_order = []
+        for element in attrib_order:
+            if element in tag.attrs:
+                new_order.append((element, tag[element]))
+        for pair in tag.attrs.items():
+            if pair not in new_order:
+                new_order.append(pair)
+        return new_order
