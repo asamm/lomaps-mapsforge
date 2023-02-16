@@ -215,7 +215,7 @@ class TemplateVariables(Template):
     color_house_number_z18 =    '#747474'
 
     text_halo = 4
-    text_wrap_standard = 275
+    text_wrap_standard = 110
     street_text_size_z15 = 11
     street_text_size_z18 = 11 * scale_factor * scale_factor
 
