@@ -602,7 +602,7 @@ version 2.4.0
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
 					<line stroke="#A07F5F" stroke-width="0.15" curve="cubic"/>
 					<rule e="way" k="*" v="*">
-						<pathText k="ele" font-style="bold" font-size="7" fill="#7C583A" stroke="#ffffff" stroke-width="1.5" rotate="false"/>
+						<pathText k="ele" font-style="bold" font-size="8" fill="#7C583A" stroke="#ffffff" stroke-width="1.5" repeat-gap="200" upright="left"/>
 					</rule>
 				</rule>
 			</rule>
@@ -614,7 +614,7 @@ version 2.4.0
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
 					<line stroke="#A07F5F" stroke-width="0.10" curve="cubic"/>
 					<rule e="way" k="*" v="*">
-						<pathText k="ele" font-style="bold" font-size="8" fill="#7C583A" stroke="#ffffff" stroke-width="2" rotate="false"/>
+						<pathText k="ele" font-style="bold" font-size="9" fill="#7C583A" stroke="#ffffff" stroke-width="2" repeat-gap="350" upright="left"/>
 					</rule>
 				</rule>
 			</rule>
