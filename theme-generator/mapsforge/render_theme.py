@@ -629,6 +629,12 @@ class LineSymbol:
             "type": "Attribute",
         }
     )
+    upright: Optional[str] = field(
+        default='auto',
+        metadata={
+            "type": "Attribute",
+        }
+    )
 
 
 @dataclass
@@ -739,6 +745,12 @@ class PathText:
     )
     rotate: bool = field(
         default=True,
+        metadata={
+            "type": "Attribute",
+        }
+    )
+    upright: Optional[str] = field(
+        default='auto',
         metadata={
             "type": "Attribute",
         }

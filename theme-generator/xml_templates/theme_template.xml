@@ -3287,645 +3287,645 @@ version 2.4.0
 
 						<!-- =============== FRG BLACK	 ================ -->
 						<rule e="way" k="osmc_foreground" v="black">
-							<lineSymbol src="file:osmc/frg_black.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right"  repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_arch">
-							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_backslash">
-							<lineSymbol src="file:osmc/frg_black_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_backslash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_bar">
-							<lineSymbol src="file:osmc/frg_black_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_bar.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_bowl">
-							<lineSymbol src="file:osmc/frg_black_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_bowl.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_circle">
-							<lineSymbol src="file:osmc/frg_black_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_corner">
-							<lineSymbol src="file:osmc/frg_black_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_corner.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_crest">
-							<lineSymbol src="file:osmc/frg_black_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_crest.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_cross">
-							<lineSymbol src="file:osmc/frg_black_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_cross.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_diamond">
-							<lineSymbol src="file:osmc/frg_black_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_diamond_line">
-							<lineSymbol src="file:osmc/frg_black_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_diamond_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_dot">
-							<lineSymbol src="file:osmc/frg_black_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_dot.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_drop">
-							<lineSymbol src="file:osmc/frg_black_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_drop.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_drop_line">
-							<lineSymbol src="file:osmc/frg_black_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_drop_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_fork">
-							<lineSymbol src="file:osmc/frg_black_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_fork.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_horse">
-							<lineSymbol src="file:osmc/frg_black_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_horse.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_L">
-							<lineSymbol src="file:osmc/frg_black_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_L.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_lower">
-							<lineSymbol src="file:osmc/frg_black_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_lower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_pointer">
-							<lineSymbol src="file:osmc/frg_black_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_pointer.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_rectangle">
-							<lineSymbol src="file:osmc/frg_black_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_rectangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_rectangle_line">
-							<lineSymbol src="file:osmc/frg_black_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_red_diamond">
-							<lineSymbol src="file:osmc/frg_black_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_red_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_right">
-							<lineSymbol src="file:osmc/frg_black_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_right.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_slash">
-							<lineSymbol src="file:osmc/frg_black_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_slash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_stripe">
-							<lineSymbol src="file:osmc/frg_black_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_stripe.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_triangle">
-							<lineSymbol src="file:osmc/frg_black_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_triangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_triangle_line">
-							<lineSymbol src="file:osmc/frg_black_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_triangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_triangle_turned">
-							<lineSymbol src="file:osmc/frg_black_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_turned_T">
-							<lineSymbol src="file:osmc/frg_black_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_turned_T.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="black_x">
-							<lineSymbol src="file:osmc/frg_black_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_black_x.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<!-- =============== FRG BLUE	 ================ -->
 						<rule e="way" k="osmc_foreground" v="blue_arch">
-							<lineSymbol src="file:osmc/frg_blue_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_arch.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_backslash">
-							<lineSymbol src="file:osmc/frg_blue_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_backslash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_bar">
-							<lineSymbol src="file:osmc/frg_blue_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_bar.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_bowl">
-							<lineSymbol src="file:osmc/frg_blue_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_bowl.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_circle">
-							<lineSymbol src="file:osmc/frg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_corner">
-							<lineSymbol src="file:osmc/frg_blue_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_corner.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_cross">
-							<lineSymbol src="file:osmc/frg_blue_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_cross.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_diamond">
-							<lineSymbol src="file:osmc/frg_blue_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_diamond_line">
-							<lineSymbol src="file:osmc/frg_blue_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_diamond_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_dot">
-							<lineSymbol src="file:osmc/frg_blue_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_dot.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_fork">
-							<lineSymbol src="file:osmc/frg_blue_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_fork.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_hiker">
-							<lineSymbol src="file:osmc/frg_blue_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_hiker.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_horse">
-							<lineSymbol src="file:osmc/frg_blue_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_horse.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_L">
-							<lineSymbol src="file:osmc/frg_blue_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_L.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_lower">
-							<lineSymbol src="file:osmc/frg_blue_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_lower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_pointer">
-							<lineSymbol src="file:osmc/frg_blue_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_pointer.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_rectangle">
-							<lineSymbol src="file:osmc/frg_blue_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_rectangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_rectangle_line">
-							<lineSymbol src="file:osmc/frg_blue_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_right">
-							<lineSymbol src="file:osmc/frg_blue_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_right.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_slash">
-							<lineSymbol src="file:osmc/frg_blue_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_slash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_stripe">
-							<lineSymbol src="file:osmc/frg_blue_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_stripe.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_triangle">
-							<lineSymbol src="file:osmc/frg_blue_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_triangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_triangle_line">
-							<lineSymbol src="file:osmc/frg_blue_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_triangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_triangle_turned">
-							<lineSymbol src="file:osmc/frg_blue_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_turned_T">
-							<lineSymbol src="file:osmc/frg_blue_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_turned_T.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_wheelchair">
-							<lineSymbol src="file:osmc/frg_blue_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_wheelchair.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="blue_x">
-							<lineSymbol src="file:osmc/frg_blue_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_blue_x.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<!-- =============== FRG GREEN ================ -->
 						<rule e="way" k="osmc_foreground" v="green_arch">
-							<lineSymbol src="file:osmc/frg_green_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_arch.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_backslash">
-							<lineSymbol src="file:osmc/frg_green_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_backslash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_bar">
-							<lineSymbol src="file:osmc/frg_green_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_bar.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_bowl">
-							<lineSymbol src="file:osmc/frg_green_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_bowl.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_circle">
-							<lineSymbol src="file:osmc/frg_green_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_corner">
-							<lineSymbol src="file:osmc/frg_green_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_corner.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_crest">
-							<lineSymbol src="file:osmc/frg_green_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_crest.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_cross">
-							<lineSymbol src="file:osmc/frg_green_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_cross.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_diamond">
-							<lineSymbol src="file:osmc/frg_green_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_dot">
-							<lineSymbol src="file:osmc/frg_green_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_dot.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_drop">
-							<lineSymbol src="file:osmc/frg_green_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_drop.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_drop_line">
-							<lineSymbol src="file:osmc/frg_green_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_drop_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_fork">
-							<lineSymbol src="file:osmc/frg_green_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_fork.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_hiker">
-							<lineSymbol src="file:osmc/frg_green_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_hiker.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_horse">
-							<lineSymbol src="file:osmc/frg_green_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_horse.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_L">
-							<lineSymbol src="file:osmc/frg_green_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_L.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_lower">
-							<lineSymbol src="file:osmc/frg_green_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_lower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_pointer">
-							<lineSymbol src="file:osmc/frg_green_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_pointer.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_rectangle">
-							<lineSymbol src="file:osmc/frg_green_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_rectangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_rectangle_line">
-							<lineSymbol src="file:osmc/frg_green_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_right">
-							<lineSymbol src="file:osmc/frg_green_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_right.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_slash">
-							<lineSymbol src="file:osmc/frg_green_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_slash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_stripe">
-							<lineSymbol src="file:osmc/frg_green_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_stripe.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_triangle">
-							<lineSymbol src="file:osmc/frg_green_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_triangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_triangle_line">
-							<lineSymbol src="file:osmc/frg_green_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_triangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_triangle_turned">
-							<lineSymbol src="file:osmc/frg_green_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_turned_T">
-							<lineSymbol src="file:osmc/frg_green_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_turned_T.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="green_x">
-							<lineSymbol src="file:osmc/frg_green_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_green_x.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<!-- =============== FRG ORANGE ================ -->
 						<rule e="way" k="osmc_foreground" v="orange_bar">
-							<lineSymbol src="file:osmc/frg_orange_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_bar.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_cross">
-							<lineSymbol src="file:osmc/frg_orange_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_cross.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_diamond">
-							<lineSymbol src="file:osmc/frg_orange_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_diamond_line">
-							<lineSymbol src="file:osmc/frg_orange_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_diamond_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_dot">
-							<lineSymbol src="file:osmc/frg_orange_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_dot.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_lower">
-							<lineSymbol src="file:osmc/frg_orange_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_lower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_pointer">
-							<lineSymbol src="file:osmc/frg_orange_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_pointer.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_rectangle">
-							<lineSymbol src="file:osmc/frg_orange_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_rectangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_right">
-							<lineSymbol src="file:osmc/frg_orange_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_right.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_stripe">
-							<lineSymbol src="file:osmc/frg_orange_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_stripe.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="orange_triangle">
-							<lineSymbol src="file:osmc/frg_orange_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_orange_triangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<!-- =============== FRG RED ================ -->
 						<rule e="way" k="osmc_foreground" v="red_arch">
-							<lineSymbol src="file:osmc/frg_red_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_arch.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_backslash">
-							<lineSymbol src="file:osmc/frg_red_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_backslash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_bar">
-							<lineSymbol src="file:osmc/frg_red_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_bar.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_bowl">
-							<lineSymbol src="file:osmc/frg_red_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_bowl.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_circle">
-							<lineSymbol src="file:osmc/frg_red_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_corner">
-							<lineSymbol src="file:osmc/frg_red_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_corner.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_crest">
-							<lineSymbol src="file:osmc/frg_red_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_crest.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_cross">
-							<lineSymbol src="file:osmc/frg_red_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_cross.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_diamond">
-							<lineSymbol src="file:osmc/frg_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_diamond_line">
-							<lineSymbol src="file:osmc/frg_red_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_diamond_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_dot">
-							<lineSymbol src="file:osmc/frg_red_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_dot.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_drop">
-							<lineSymbol src="file:osmc/frg_red_drop.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_drop.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_drop_line">
-							<lineSymbol src="file:osmc/frg_red_drop_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_drop_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_fork">
-							<lineSymbol src="file:osmc/frg_red_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_fork.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_hiker">
-							<lineSymbol src="file:osmc/frg_red_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_hiker.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_L">
-							<lineSymbol src="file:osmc/frg_red_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_L.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_lower">
-							<lineSymbol src="file:osmc/frg_red_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_lower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_pointer">
-							<lineSymbol src="file:osmc/frg_red_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_pointer.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_rectangle">
-							<lineSymbol src="file:osmc/frg_red_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_rectangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_rectangle_line">
-							<lineSymbol src="file:osmc/frg_red_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_right">
-							<lineSymbol src="file:osmc/frg_red_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_right.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_slash">
-							<lineSymbol src="file:osmc/frg_red_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_slash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_stripe">
-							<lineSymbol src="file:osmc/frg_red_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_stripe.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_triangle">
-							<lineSymbol src="file:osmc/frg_red_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_triangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_triangle_line">
-							<lineSymbol src="file:osmc/frg_red_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_triangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_triangle_turned">
-							<lineSymbol src="file:osmc/frg_red_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_turned_T">
-							<lineSymbol src="file:osmc/frg_red_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_turned_T.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_wheelchair">
-							<lineSymbol src="file:osmc/frg_red_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_wheelchair.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="red_x">
-							<lineSymbol src="file:osmc/frg_red_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_red_x.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<!-- =============== FRG YELLOW ================ -->
 						<rule e="way" k="osmc_foreground" v="yellow_arch">
-							<lineSymbol src="file:osmc/frg_yellow_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_arch.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_backslash">
-							<lineSymbol src="file:osmc/frg_yellow_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_backslash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_bar">
-							<lineSymbol src="file:osmc/frg_yellow_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_bar.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_bowl">
-							<lineSymbol src="file:osmc/frg_yellow_bowl.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_bowl.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_circle">
-							<lineSymbol src="file:osmc/frg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_corner">
-							<lineSymbol src="file:osmc/frg_yellow_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_corner.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_cross">
-							<lineSymbol src="file:osmc/frg_yellow_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_cross.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_diamond">
-							<lineSymbol src="file:osmc/frg_yellow_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_diamond_line">
-							<lineSymbol src="file:osmc/frg_yellow_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_diamond_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_dot">
-							<lineSymbol src="file:osmc/frg_yellow_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_dot.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_fork">
-							<lineSymbol src="file:osmc/frg_yellow_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_fork.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_hiker">
-							<lineSymbol src="file:osmc/frg_yellow_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_hiker.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_L">
-							<lineSymbol src="file:osmc/frg_yellow_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_L.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_lower">
-							<lineSymbol src="file:osmc/frg_yellow_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_lower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_pointer">
-							<lineSymbol src="file:osmc/frg_yellow_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_pointer.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_rectangle">
-							<lineSymbol src="file:osmc/frg_yellow_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_rectangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_rectangle_line">
-							<lineSymbol src="file:osmc/frg_yellow_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_right">
-							<lineSymbol src="file:osmc/frg_yellow_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_right.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_slash">
-							<lineSymbol src="file:osmc/frg_yellow_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_slash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_stripe">
-							<lineSymbol src="file:osmc/frg_yellow_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_stripe.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_triangle">
-							<lineSymbol src="file:osmc/frg_yellow_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_triangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_triangle_line">
-							<lineSymbol src="file:osmc/frg_yellow_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_triangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_triangle_turned">
-							<lineSymbol src="file:osmc/frg_yellow_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_turned_T">
-							<lineSymbol src="file:osmc/frg_yellow_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_turned_T.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="yellow_x">
-							<lineSymbol src="file:osmc/frg_yellow_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_yellow_x.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<!-- =============== FRG WHITE	 ================ -->
 						<rule e="way" k="osmc_foreground" v="white_arch">
-							<lineSymbol src="file:osmc/frg_white_arch.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_arch.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_backslash">
-							<lineSymbol src="file:osmc/frg_white_backslash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_backslash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_bar">
-							<lineSymbol src="file:osmc/frg_white_bar.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_bar.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_circle">
-							<lineSymbol src="file:osmc/frg_white_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_corner">
-							<lineSymbol src="file:osmc/frg_white_corner.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_corner.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_crest">
-							<lineSymbol src="file:osmc/frg_white_crest.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_crest.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_cross">
-							<lineSymbol src="file:osmc/frg_white_cross.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_cross.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_diamond">
-							<lineSymbol src="file:osmc/frg_white_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_diamond_line">
-							<lineSymbol src="file:osmc/frg_white_diamond_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_diamond_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_dot">
-							<lineSymbol src="file:osmc/frg_white_dot.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_dot.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_fork">
-							<lineSymbol src="file:osmc/frg_white_fork.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_fork.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_hiker">
-							<lineSymbol src="file:osmc/frg_white_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_hiker.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_horse">
-							<lineSymbol src="file:osmc/frg_white_horse.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_horse.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_L">
-							<lineSymbol src="file:osmc/frg_white_L.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_L.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_lower">
-							<lineSymbol src="file:osmc/frg_white_lower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_lower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_pointer">
-							<lineSymbol src="file:osmc/frg_white_pointer.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_pointer.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_rectangle">
-							<lineSymbol src="file:osmc/frg_white_rectangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_rectangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_rectangle_line">
-							<lineSymbol src="file:osmc/frg_white_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_red_diamond">
-							<lineSymbol src="file:osmc/frg_white_red_diamond.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_red_diamond.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_right">
-							<lineSymbol src="file:osmc/frg_white_right.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_right.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_slash">
-							<lineSymbol src="file:osmc/frg_white_slash.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_slash.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_stripe">
-							<lineSymbol src="file:osmc/frg_white_stripe.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_stripe.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_triangle">
-							<lineSymbol src="file:osmc/frg_white_triangle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_triangle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_triangle_line">
-							<lineSymbol src="file:osmc/frg_white_triangle_line.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_triangle_line.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_triangle_turned">
-							<lineSymbol src="file:osmc/frg_white_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_turned_T">
-							<lineSymbol src="file:osmc/frg_white_turned_T.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_turned_T.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_wheelchair">
-							<lineSymbol src="file:osmc/frg_white_wheelchair.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_wheelchair.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="white_x">
-							<lineSymbol src="file:osmc/frg_white_x.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_white_x.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<!-- =============== FRG SYMBOLS	 ================ -->
 						<rule e="way" k="osmc_foreground" v="ammonit">
-							<lineSymbol src="file:osmc/frg_ammonit.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_ammonit.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="bridleway">
-							<lineSymbol src="file:osmc/frg_bridleway.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_bridleway.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="heart">
-							<lineSymbol src="file:osmc/frg_heart.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_heart.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="hiker">
-							<lineSymbol src="file:osmc/frg_hiker.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_hiker.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="mine">
-							<lineSymbol src="file:osmc/frg_mine.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_mine.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="shell">
-							<lineSymbol src="file:osmc/frg_shell.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_shell.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="shell_modern">
-							<lineSymbol src="file:osmc/frg_shell_modern.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_shell_modern.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="tower">
-							<lineSymbol src="file:osmc/frg_tower.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_tower.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 						<rule e="way" k="osmc_foreground" v="wolfshook">
-							<lineSymbol src="file:osmc/frg_wolfshook.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="35"/>
+							<lineSymbol src="file:osmc/frg_wolfshook.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
 						</rule>
 
 
 						<!--  ================= OSMC_BACKGROUND ======================== -->
 						<rule e="way" k="osmc_background" v="*" >
 							<rule e="way" k="osmc_background" v="black">
-								<lineSymbol src="file:osmc/bcg_black.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_black.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_circle">
-								<lineSymbol src="file:osmc/bcg_black_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_black_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue">
-								<lineSymbol src="file:osmc/bcg_blue.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_circle">
-								<lineSymbol src="file:osmc/bcg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_frame">
-								<lineSymbol src="file:osmc/bcg_blue_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue_frame.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_round">
-								<lineSymbol src="file:osmc/bcg_blue_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_blue_round.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown">
-								<lineSymbol src="file:osmc/bcg_brown.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_brown.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green">
-								<lineSymbol src="file:osmc/bcg_green.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_circle">
-								<lineSymbol src="file:osmc/bcg_green_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_frame">
-								<lineSymbol src="file:osmc/bcg_green_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green_frame.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_round">
-								<lineSymbol src="file:osmc/bcg_green_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_green_round.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange">
-								<lineSymbol src="file:osmc/bcg_orange.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_orange.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple">
-								<lineSymbol src="file:osmc/bcg_purple.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_purple.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red">
-								<lineSymbol src="file:osmc/bcg_red.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_circle">
-								<lineSymbol src="file:osmc/bcg_red_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_frame">
-								<lineSymbol src="file:osmc/bcg_red_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red_frame.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_round">
-								<lineSymbol src="file:osmc/bcg_red_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_red_round.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white">
-								<lineSymbol src="file:osmc/bcg_white.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_white.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_circle">
-								<lineSymbol src="file:osmc/bcg_white_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_white_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_round">
-								<lineSymbol src="file:osmc/bcg_white_round.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_white_round.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow">
-								<lineSymbol src="file:osmc/bcg_yellow.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_yellow.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_circle">
-								<lineSymbol src="file:osmc/bcg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_frame">
-								<lineSymbol src="file:osmc/bcg_yellow_frame.svg" dy="-18" scale="none" symbol-width="13" rotate="true" display="always" repeat-gap="400" repeat="true" priority="30"/>
+								<lineSymbol src="file:osmc/bcg_yellow_frame.svg" dy="-18" scale="none" symbol-width="13" upright="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
 							</rule>
 						</rule>
 					</rule>

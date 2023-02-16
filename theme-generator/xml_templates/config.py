@@ -176,6 +176,8 @@ class TemplateVariables(Template):
 
     }
 
+    osmc_symbol_repeat_start = 30
+
     ## MTB && Cyclo
 
     color_cycle_mtb =           '#E588ED'
@@ -242,6 +244,7 @@ class TemplateVariables(Template):
     priority_cyclo_nlbe_junction_number = priority_cyclo_nlbe_junction_circle + 1
 
     priority_tourist_route_name = 200
+    priority_tourist_osmc_symbol = 35
 
     priority_water_area = 395
     priority_river = 390
