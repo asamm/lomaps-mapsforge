@@ -55,7 +55,7 @@ class GeneratorActions:
 
         self.non_supported_attributes = ['poidb']
 
-    def process_actions(self):
+    def process_actions(self) -> BeautifulSoup:
 
         # find places where are required some actions and where results will be placed
         input_sections = []
@@ -128,6 +128,10 @@ class GeneratorActions:
 
         # write results to final XML file
         self.write_to_file(self.options.result_xml, self.soup)
+
+        print("Generator actions performed for base map theme")
+
+        return self.soup
 
     def write_to_file(self, output_f, soup):
         """

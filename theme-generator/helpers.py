@@ -1,25 +1,76 @@
+import fileinput
 import os
 import shutil
+from distutils.dir_util import copy_tree
+
+from xml_templates.config import TemplateVariables
 
 
 ## Set of utils and help method
 
-def copy_theme_to_device(result_xml):
+def transform_cheetah_template(theme_template_xml, cheetah_output_xml):
     """
-    Copy spcific file to the android device
-    :param result_xml:
+    Read input template xml with python variables and replace variables by value using cheetah
+    :param theme_template_xml: path to xml base theme template
+    :param cheetah_output_xml: path to export the input for theme generator
+    """
+    template = TemplateVariables(file=theme_template_xml)
+
+    f = open(cheetah_output_xml, "w")
+    f.write(str(template))
+    f.close()
+
+
+def copy_theme_to_device(result_xml, android_theme_dir):
+    """
+    Copy specific file to the android device
+    :param result_xml: path to generated theme xml
+    :param android_theme_dir: android path into theme folder in Locus working directory
     """
     # copy xml theme file to android device
-    os.popen(
-        "adb push {} /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/lomaps_v4/{}"
-        .format(result_xml, os.path.basename(result_xml)))
+    print('Copy theme {} to the android device'.format(result_xml))
+
+    android_path = os.path.join(android_theme_dir, os.path.basename(result_xml)).replace("\\", "/")
+
+    os.popen("adb push {} {}".format(result_xml, android_path))
 
     # refresf theme for renderer
     os.popen(
         "adb shell am broadcast -p menion.android.locus -a com.asamm.locus.ACTION_TASK --es tasks '''{ map_reload_theme: {} }'''")
 
 
+def publish_theme_to_android_module(result_theme_dir, android_module_dir):
+    """
+    Copy generated theme and all required files into specific project folder with android module
+    The icons paths in the theme are changed from original `file:` to `assets:`
+    Previous data are deleted in #android_module_dir
+
+    :param result_theme_dir: directory with generated theme
+    :param android_module_dir: directory of android module to copy the theme
+    """
+
+    # remove previous files
+    delete_folder_content(android_module_dir)
+
+    # copy new generated theme
+    copy_tree(result_theme_dir, android_module_dir)
+
+    # replace path in theme files from 'file:' to 'assets:'
+    for filename in os.listdir(android_module_dir):
+        if not filename.endswith('.xml'): continue
+
+        filename = os.path.join(android_module_dir, filename)
+
+        with fileinput.FileInput(filename, inplace=True) as file:
+            for line in file:
+                print(line.replace('file:', 'assets:'), end='')
+
+
 def delete_folder_content(folder):
+    """
+    Delete content (files, directories-recursively) of defined folder
+    :param folder: folder to delete its content
+    """
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
         try:
@@ -28,4 +79,4 @@ def delete_folder_content(folder):
             elif os.path.isdir(file_path):
                 shutil.rmtree(file_path)
         except Exception as e:
-            print('Failed to delete {}}. Reason: {}}'.format(file_path, e))
+            print('Failed to delete {}. Reason: {}'.format(file_path, e))
