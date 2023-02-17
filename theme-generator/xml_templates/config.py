@@ -2,9 +2,9 @@ import math
 
 from Cheetah.Template import Template
 
+from actions.composite_op import lighten
 
 class TemplateVariables(Template):
-
     ### HIGHWAYS ###
 
     color_bridge_casing = "#0d0d0d"
@@ -44,7 +44,6 @@ class TemplateVariables(Template):
     color_path = "#747474"
     color_path_case = "#FFFFFF"
     color_pedestrian = "#d0d0d0"
-
 
     scale_factor = 1.2
     scale_factor_high_zoom = 1.75
@@ -110,24 +109,23 @@ class TemplateVariables(Template):
     path_width_z15 = path_width_z14 * scale_factor
     footway_width_z16 = footway_width_z14 / math.pow(1.25, 16 - 14)
 
-
     ## consistent case size
     highway_case_lowlevel = 2
     highway_case = 1.5
     highway_case_z13 = 0.5
     highway_case_z16 = 0.4
 
-    #tunnel dash specification for highways
+    # tunnel dash specification for highways
     highway_tunnel_dash_array = "20,8"
 
     ### RAILWAYS
 
-    color_railway_main_case =           '#4d4d4d'
-    color_railway_abandoned_case =		'#707070'
-    color_railway_service_case =		'#707070'
-    color_railway_tunnel = 			    '#707070'
-    color_railway_tram =				'#707070'
-    color_railway_main =			    '#EDEDED'
+    color_railway_main_case = '#4d4d4d'
+    color_railway_abandoned_case = '#707070'
+    color_railway_service_case = '#707070'
+    color_railway_tunnel = '#707070'
+    color_railway_tram = '#707070'
+    color_railway_main = '#EDEDED'
 
     railway_main_width_z10 = 1
     railway_main_width_z13 = 1.5
@@ -138,12 +136,11 @@ class TemplateVariables(Template):
     railway_service_width_z15 = railway_main_width_z15 * 0.75
     railway_service_width_z17 = railway_main_width_z17 * 0.75
 
-    railway_spur_narrow_width_z16 = 	2
+    railway_spur_narrow_width_z16 = 2
 
     ### AERIALWAYS
-    color_aerialway_core =          "#4d4d4d"
+    color_aerialway_core = "#4d4d4d"
     color_aerialway_cablecar_fill = "#EDEDED"
-
 
     ### OSMC ###
 
@@ -180,10 +177,10 @@ class TemplateVariables(Template):
 
     ## MTB && Cyclo
 
-    color_cycle_mtb =           '#E588ED'
-    color_cycle_standard =      '#d320dc'
-    color_cycle_icn_ncn =       '#A90073'
-    color_cycle_text_ref =      '#B11BB9'
+    color_cycle_mtb = '#E588ED'
+    color_cycle_standard = '#d320dc'
+    color_cycle_icn_ncn = '#A90073'
+    color_cycle_text_ref = '#B11BB9'
 
     text_size_nlbe_junction_z12 = 10
     text_size_nlbe_junction_z14 = text_size_nlbe_junction_z12 * scale_factor
@@ -195,26 +192,25 @@ class TemplateVariables(Template):
     pistes_nordic_width_z13 = 1.6
     pistes_nordic_width_z16 = 0.9
 
-    color_downhill_novice =     '#9940ff40'
-    color_downhill_easy =       '#9952c1fe'
-    color_downhill_intermediate='#99FF4A4A'
-    color_downhill_advanced =   '#90000000'
-    color_downhill_freeride =   '#99f7e337'
+    color_downhill_novice = '#9940ff40'
+    color_downhill_easy = '#9952c1fe'
+    color_downhill_intermediate = '#99FF4A4A'
+    color_downhill_advanced = '#90000000'
+    color_downhill_freeride = '#99f7e337'
 
-    color_nordic_easy =         '#006BD6'
-    color_nordic_advanced =     '#590992'
-    color_piste_hike =          '#326F9E'
-    color_piste_skitour =       '#efa710'
-    color_piste_sled =          '#77BF79'
-
+    color_nordic_easy = '#006BD6'
+    color_nordic_advanced = '#590992'
+    color_piste_hike = '#326F9E'
+    color_piste_skitour = '#efa710'
+    color_piste_sled = '#77BF79'
 
     ##############
     ## TEXT & SYMBOL PRIORITIES
 
-    color_standard_poi_text =   '#303030'
+    color_standard_poi_text = '#303030'
     color_attraction_poi_text = '#5e5146'
-    color_gray_poi_text =       '#747474'
-    color_house_number_z18 =    '#747474'
+    color_gray_poi_text = '#747474'
+    color_house_number_z18 = '#747474'
 
     text_halo = 4
     text_wrap_standard = 110
@@ -234,11 +230,9 @@ class TemplateVariables(Template):
     priority_locality = 420
     priority_street = 400
 
-
     priority_poi_caption_cat1 = 415
     priority_poi_caption_cat2 = 414
     priority_poi_caption_cat3 = 413
-
 
     priority_cyclo_nlbe_junction_circle = 410
     priority_cyclo_nlbe_junction_number = priority_cyclo_nlbe_junction_circle + 1
@@ -250,10 +244,6 @@ class TemplateVariables(Template):
     priority_river = 390
     priority_canal = 385
     priority_stream = 1
-
-
-
-
 
     #### Generator actions
     # Tunnels
@@ -267,11 +257,9 @@ class TemplateVariables(Template):
     # replace osmc by sac scale
     gen_action_sac_scale2lwn = "action_sac_scales_to_lwn"
 
-
     # Duplicate style of RCN to ICN cycle routes to change it's color
     gen_action_cycle_icn = "action_create_cycle_icn"
     gen_action_cycle_basic_to_mtb_scale_0 = "action_create_mtb_scale_0_from_basic"
 
     # Duplicate OSMC symbols part to order symbols along line
     gen_action_osmc_symbols_order = "action_create_osmc_symbols_order"
-

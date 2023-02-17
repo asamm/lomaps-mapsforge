@@ -1,3 +1,4 @@
+#from actions.composite_op import lighten, darken
 <?xml version="1.0" encoding="utf-8"?>
 <rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4"
 			 base-stroke-width="0.7" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -3026,10 +3027,10 @@ version 2.4.0
 					<area fill="$color_downhill_novice"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<area fill="$color_downhill_easy"/>
+					<area fill="${lighten($color_downhill_easy, 20)}" stroke="$color_downhill_easy" stroke-width="0.5"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<area fill="$color_downhill_intermediate"/>
+					<area fill="${lighten($color_downhill_intermediate,65)}"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
 					<area fill="$color_downhill_advanced"/>
@@ -3265,8 +3266,9 @@ version 2.4.0
 				</rule>
 			</rule>
 			<!-- print names of aerial wasy only for SKI -->
-			<rule cat="base_winter" e="way" k="*" v="*" zoom-min="14">
-				<pathText k="name" font-style="italic" font-family="serif" font-size="11" dy="-1.2" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
+			<rule cat="base_winter" e="way" k="*" v="*" zoom-min="16">
+				<pathText k="name" font-style="italic" font-family="serif" font-size="11" dy="-1.5"
+						  fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 			</rule>
 		</rule>
 		<!-- OSMC SYMBOLS and hiking routes without color -->

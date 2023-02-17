@@ -4808,10 +4808,10 @@ version 2.4.0
 					<area fill="#9940ff40"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<area fill="#9952c1fe"/>
+					<area fill="#9974cdfe" stroke="#9952c1fe" stroke-width="0.5"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<area fill="#99FF4A4A"/>
+					<area fill="#99ffbfbf"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
 					<area fill="#90000000"/>
@@ -5038,8 +5038,8 @@ version 2.4.0
 				</rule>
 			</rule>
 			<!-- print names of aerial wasy only for SKI -->
-			<rule cat="base_winter" e="way" k="*" v="*" zoom-min="14">
-				<pathText k="name" font-style="italic" font-family="serif" font-size="11" dy="-1.2" fill="#333333" stroke="#ffffff" stroke-width="2.5"/>
+			<rule cat="base_winter" e="way" k="*" v="*" zoom-min="16">
+				<pathText k="name" font-style="italic" font-family="serif" font-size="11" dy="-1.5" fill="#303030" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 			</rule>
 		</rule>
 		<!-- OSMC SYMBOLS and hiking routes without color -->
