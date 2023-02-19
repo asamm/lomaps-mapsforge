@@ -204,6 +204,10 @@ class TemplateVariables(Template):
     color_piste_skitour = '#efa710'
     color_piste_sled = '#77BF79'
 
+    ## Winter areas
+    color_forest_winter_z13 = '#80a4d4d9'
+    color_park_orchard_winter = '#90b3dbcb'
+
     ##############
     ## TEXT & SYMBOL PRIORITIES
 

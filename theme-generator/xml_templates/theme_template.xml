@@ -204,7 +204,6 @@ version 2.4.0
 					<area fill="#C9DEA6"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
-<!--					<area fill="#80a0ca6c"/>-->
 					<area fill="#80a0ca6c"/>
 					<rule e="way" k="leaf_type" v="*" zoom-min="15">
 						<rule e="way" k="leaf_type" v="needleleaved">
@@ -228,16 +227,16 @@ version 2.4.0
 					<area fill="#30a0ca6c"/>
 				</rule>
 			</rule>
-			<!-- wood for WINTER -->
+			<!-- forest for WINTER -->
 			<rule cat="base_winter" e="way" k="*" v="*" zoom-min="10">
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-max="12">
-					<area fill="#cfdbe1"/>
+					<area fill="#cce0e5"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="13">
-					<area fill="#80a6bec9"/>
+					<area fill="$color_forest_winter_z13"/>
 				</rule>
 			</rule>
-			<!-- wood for CAR -->
+			<!-- forest for CAR -->
 			<rule cat="base_car" e="way" k="*" v="*" zoom-min="13">
 				<rule e="way" k="natural|landuse" v="forest|wood|scrub">
 					<area fill="#80a0ca6c"/>
@@ -335,7 +334,7 @@ version 2.4.0
 			</rule>
 			<!-- park for WINTER -->
 			<rule cat="base_winter" e="way" k="*" v="*">
-				<area fill="#80a6bec9"/>
+				<area fill="$color_park_orchard_winter"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" font-style="bold" font-size="10" fill="#333333" stroke="#60FFFFFF" stroke-width="3"
 							 position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
@@ -376,7 +375,7 @@ version 2.4.0
 
 				</rule>
 				<rule cat="base_winter" e="way" k="landuse" v="cemetery">
-					<area fill="#8096bfbe" stroke="#e4e4e4" stroke-width="0.2"/>
+					<area fill="$color_forest_winter_z13" stroke="${darken($color_forest_winter_z13,30)}" stroke-width="0.2"/>
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 						<area src="file:patterns/graveyard.svg" symbol-width="24"/>
 					</rule>
@@ -395,7 +394,7 @@ version 2.4.0
 						<area fill="#80bdd16c"/>
 					</rule>
 					<rule cat="base_winter" e="way" k="*" v="*">
-						<area fill="#8096bfbe"/>
+						<area fill="$color_park_orchard_winter"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 						<rule e="way" k="landuse" v="vineyard">
@@ -770,6 +769,7 @@ version 2.4.0
 			</rule>
 		</rule>
 		<!-- end of water -->
+
 		<!-- wetland -->
 		<rule cat="base_topo" e="way" k="natural|wetland" v="*" zoom-min="12">
 			<rule e="way" k="wetland" v="~">
@@ -778,12 +778,17 @@ version 2.4.0
 				</rule>
 			</rule>
 			<rule e="way" k="wetland" v="marsh|swamp|bog|fen|wet_meadow|reedbed|saltmarsh">
+				<rule e="way" k="wetland" v="swamp">
+					<area cat="base_summer" fill="#80a0ca6c"/>
+					<area cat="base_winter" fill="$color_forest_winter_z13"/>
+				</rule>
 				<area src="file:patterns/marsh.svg" symbol-width="28"/>
 			</rule>
 			<rule e="way" k="wetland" v="tidalflat">
 				<area src="file:patterns/tidalflat_64.svg" symbol-width="96"/>
 			</rule>
 		</rule>
+
 		<!-- runways casings and areas TODO terminal based -->
 		<rule e="way" k="aeroway" v="*" zoom-min="12">
 			<rule e="way" k="aeroway" v="runway">

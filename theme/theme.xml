@@ -122,8 +122,11 @@ version 2.4.0
 		<rule e="way" k="natural" v="sea">
 			<area fill="#9CC9E8"/>
 		</rule>
-		<rule e="way" k="natural" v="nosea">
+		<rule cat="base_city|base_car|base_summer" e="way" k="natural" v="nosea">
 			<area fill="#ebeade"/>
+		</rule>
+		<rule cat="base_winter" e="way" k="natural" v="nosea">
+			<area fill="#f7fbfe"/>
 		</rule>
 	</rule>
 	<!-- =====================================================
@@ -199,7 +202,6 @@ version 2.4.0
 					<area fill="#C9DEA6"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
-					<!--					<area fill="#80a0ca6c"/>-->
 					<area fill="#80a0ca6c"/>
 					<rule e="way" k="leaf_type" v="*" zoom-min="15">
 						<rule e="way" k="leaf_type" v="needleleaved">
@@ -223,16 +225,16 @@ version 2.4.0
 					<area fill="#30a0ca6c"/>
 				</rule>
 			</rule>
-			<!-- wood for WINTER -->
+			<!-- forest for WINTER -->
 			<rule cat="base_winter" e="way" k="*" v="*" zoom-min="10">
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-max="12">
-					<area fill="#cfdbe1"/>
+					<area fill="#cce0e5"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="13">
-					<area fill="#80a6bec9"/>
+					<area fill="#80a4d4d9"/>
 				</rule>
 			</rule>
-			<!-- wood for CAR -->
+			<!-- forest for CAR -->
 			<rule cat="base_car" e="way" k="*" v="*" zoom-min="13">
 				<rule e="way" k="natural|landuse" v="forest|wood|scrub">
 					<area fill="#80a0ca6c"/>
@@ -4805,28 +4807,28 @@ version 2.4.0
 			<!-- piste areas -->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="13" closed="yes">
 				<rule e="way" k="piste:difficulty" v="novice">
-					<area fill="#9940ff40"/>
+					<area fill="#9466ff66" stroke="#9440ff40" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<area fill="#9974cdfe" stroke="#9952c1fe" stroke-width="0.5"/>
+					<area fill="#9974cdfe" stroke="#9952c1fe" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<area fill="#99ffbfbf"/>
+					<area fill="#99ff6e6e" stroke="#99FF4A4A" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<area fill="#90000000"/>
+					<area fill="#90333333" stroke="#90000000" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
-					<area fill="#99f7e337"/>
+					<area fill="#99f8e85f" stroke="#99f7e337" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<area fill="#9952c1fe"/>
+					<area fill="#9974cdfe" stroke="#9952c1fe" stroke-width="0.4"/>
 				</rule>
 			</rule>
 			<!-- piste ways -->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="13" closed="no">
 				<rule e="way" k="piste:difficulty" v="novice">
-					<line stroke="#9940ff40" stroke-width="3"/>
+					<line stroke="#9440ff40" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
 					<line stroke="#9952c1fe" stroke-width="3"/>
@@ -4847,19 +4849,19 @@ version 2.4.0
 			<!-- Captions for downhill-->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="15">
 				<rule e="way" k="piste:difficulty" v="novice">
-					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#00e900" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="3" fill="#00e900" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#07a6fe" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="3" fill="#07a6fe" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#ff4040" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="3" fill="#ff4040" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#000000" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="3" fill="#000000" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
-					<pathText k="name" font-style="bold" font-size="10" dy="3" fill="#edd509" stroke="#ffffff" stroke-width="2.5" repeat-gap="300"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="3" fill="#99c5b52c" stroke="#ffffff" stroke-width="3" repeat-gap="300"/>
 				</rule>
 			</rule>
 			<!-- Nordic and Backcountry SKI -->
@@ -4923,10 +4925,10 @@ version 2.4.0
 				<!-- Captions for nordic-->
 				<rule e="way" k="*" v="*" zoom-min="14">
 					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate|~">
-						<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#005ebd" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200" scale="none"/>
+						<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#0060c0" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200" scale="none"/>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
-						<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#810EDA" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200"/>
+						<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#500883" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200"/>
 					</rule>
 				</rule>
 			</rule>
@@ -4945,7 +4947,7 @@ version 2.4.0
 					<line stroke="#326F9E" stroke-width="0.9" stroke-dasharray="0.1,2" scale="all"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#2c618b" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200" scale="none"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#2d638e" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200" scale="none"/>
 				</rule>
 			</rule>
 			<!-- Ski Tours -->
@@ -4963,7 +4965,7 @@ version 2.4.0
 					<line stroke="#efa710" stroke-width="0.7200000000000001" stroke-dasharray="2,2" scale="all"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="15">
-					<pathText k="name" font-style="bold" font-size="11" dy="10" fill="#d7960e" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200" scale="none"/>
+					<pathText k="name" font-style="bold" font-size="11" dy="10" fill="#bf850c" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200" scale="none"/>
 				</rule>
 			</rule>
 			<rule e="way" k="piste:type" v="sled" zoom-min="14">
