@@ -192,7 +192,7 @@ class TemplateVariables(Template):
     pistes_nordic_width_z13 = 1.6
     pistes_nordic_width_z16 = 0.9
 
-    color_downhill_novice = '#9940ff40'
+    color_downhill_novice = '#9440ff40'
     color_downhill_easy = '#9952c1fe'
     color_downhill_intermediate = '#99FF4A4A'
     color_downhill_advanced = '#90000000'
