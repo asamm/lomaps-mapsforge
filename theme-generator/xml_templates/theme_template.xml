@@ -1,4 +1,4 @@
-#from actions.composite_op import lighten, darken
+#from actions.composite_op import lighten, darken, opacity
 <?xml version="1.0" encoding="utf-8"?>
 <rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4"
 			 base-stroke-width="0.7" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -321,23 +321,26 @@ version 2.4.0
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a"
-							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text"
+							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1"
+							 text-wrap-width="$text_wrap_standard"/>
 				</rule>
 			</rule>
 			<rule cat="base_summer" e="way" k="*" v="*">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a"
-							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="${darken(opacity('#80a0ca6c',100), 40)}"
+							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1"
+							 text-wrap-width="$text_wrap_standard"/>
 				</rule>
 			</rule>
 			<!-- park for WINTER -->
 			<rule cat="base_winter" e="way" k="*" v="*">
 				<area fill="$color_park_orchard_winter"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" font-style="bold" font-size="10" fill="#333333" stroke="#60FFFFFF" stroke-width="3"
-							 position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="${darken(opacity($color_park_orchard_winter,100), 50)}"
+							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1"
+							 text-wrap-width="$text_wrap_standard"/>
 				</rule>
 			</rule>
 			<rule cat="base_car" e="way" k="leisure" v="park" zoom-min="13">
@@ -531,7 +534,7 @@ version 2.4.0
 				</rule>
 			</rule>
 			<rule e="way" k="leisure" v="stadium|sports_centre|water_park|golf_course|playing_fields|pitch|" zoom-min="15">
-				<caption k="name" font-family="serif" font-size="11" fill="#333333"
+				<caption k="name" dy="15" font-family="sans_serif" font-size="11" fill="$color_standard_poi_text"
 						 stroke="#ffffff" stroke-width="2.5" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
@@ -4114,12 +4117,13 @@ version 2.4.0
 			<rule e="any" k="tourism" v="gallery">
 				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 			</rule>
-			<rule e="any" k="tourism" v="museum">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
-			</rule>
 			<rule e="any" k="tourism" v="zoo">
 				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 			</rule>
+		</rule>
+
+		<rule e="any" k="tourism" v="museum" zoom-min="15">
+			<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 		</rule>
 
 		<!-- guide post summer -->
