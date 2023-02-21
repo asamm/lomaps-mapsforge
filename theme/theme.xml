@@ -4872,6 +4872,17 @@ version 2.4.0
 					<pathText k="name" font-style="bold" font-size="11" dy="3" fill="#99c5b52c" stroke="#ffffff" stroke-width="3" repeat-gap="300"/>
 				</rule>
 			</rule>
+			<!-- Lit for downhill-->
+			<rule e="way" k="piste:type" v="downhill" zoom-min="15">
+				<rule e="way" k="lit|piste:lit" v="yes">
+					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="1.5" upright="left" symbol-width="14" repeat="true" repeat-gap="100" position="above" repeat-start="0" display="ifspace"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="18">
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="1.5" upright="left" symbol-width="14" repeat="true" repeat-gap="175" position="above" repeat-start="0" display="ifspace"/>
+					</rule>
+				</rule>
+			</rule>
 			<!-- Nordic and Backcountry SKI -->
 			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine|nordic;skitour">
 				<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">

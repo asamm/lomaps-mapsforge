@@ -3065,22 +3065,22 @@ version 2.4.0
 			<!-- piste ways -->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="13" closed="no">
 				<rule e="way" k="piste:difficulty" v="novice">
-					<line stroke="$color_downhill_novice" stroke-width="3"/>
+					<line stroke="$color_downhill_novice" stroke-width="$piste_downhill_width"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="easy">
-					<line stroke="$color_downhill_easy" stroke-width="3"/>
+					<line stroke="$color_downhill_easy" stroke-width="$piste_downhill_width"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="intermediate">
-					<line stroke="$color_downhill_intermediate" stroke-width="3"/>
+					<line stroke="$color_downhill_intermediate" stroke-width="$piste_downhill_width"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<line stroke="$color_downhill_advanced" stroke-width="3"/>
+					<line stroke="$color_downhill_advanced" stroke-width="$piste_downhill_width"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
-					<line stroke="$color_downhill_freeride" stroke-width="3"/>
+					<line stroke="$color_downhill_freeride" stroke-width="$piste_downhill_width"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<line stroke="$color_downhill_easy" stroke-width="3"/>
+					<line stroke="$color_downhill_easy" stroke-width="$piste_downhill_width"/>
 				</rule>
 			</rule>
 			<!-- Captions for downhill-->
@@ -3101,6 +3101,21 @@ version 2.4.0
 					<pathText k="name" font-style="bold" font-size="11" dy="3" fill="${darken($color_downhill_freeride, 20)}" stroke="#ffffff" stroke-width="3" repeat-gap="300"/>
 				</rule>
 			</rule>
+
+			<!-- Lit for downhill-->
+			<rule e="way" k="piste:type" v="downhill" zoom-min="15">
+				<rule e="way" k="lit|piste:lit" v="yes" >
+					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$(0.5 * $piste_downhill_width)"
+								upright="left" symbol-width="14" repeat="true" repeat-gap="100"  position="above" repeat-start="0" display="ifspace"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="18" >
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$(0.5 * $piste_downhill_width)"
+								upright="left" symbol-width="14" repeat="true" repeat-gap="175"  position="above" repeat-start="0" display="ifspace"/>
+					</rule>
+				</rule>
+			</rule>
+
 
 			<!-- Nordic and Backcountry SKI -->
 			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine|nordic;skitour">
