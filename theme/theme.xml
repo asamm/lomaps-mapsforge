@@ -317,20 +317,20 @@ version 2.4.0
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule cat="base_summer" e="way" k="*" v="*">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#607940" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<!-- park for WINTER -->
 			<rule cat="base_winter" e="way" k="*" v="*">
-				<area fill="#80a6bec9"/>
+				<area fill="#90b3dbcb"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" font-style="bold" font-size="10" fill="#333333" stroke="#60FFFFFF" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#596d65" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule cat="base_car" e="way" k="leisure" v="park" zoom-min="13">
@@ -365,7 +365,7 @@ version 2.4.0
 					</rule>
 				</rule>
 				<rule cat="base_winter" e="way" k="landuse" v="cemetery">
-					<area fill="#8096bfbe" stroke="#e4e4e4" stroke-width="0.2"/>
+					<area fill="#80a4d4d9" stroke="#80729497" stroke-width="0.2"/>
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 						<area src="file:patterns/graveyard.svg" symbol-width="24"/>
 					</rule>
@@ -384,7 +384,7 @@ version 2.4.0
 						<area fill="#80bdd16c"/>
 					</rule>
 					<rule cat="base_winter" e="way" k="*" v="*">
-						<area fill="#8096bfbe"/>
+						<area fill="#90b3dbcb"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 						<rule e="way" k="landuse" v="vineyard">
@@ -521,7 +521,7 @@ version 2.4.0
 				</rule>
 			</rule>
 			<rule e="way" k="leisure" v="stadium|sports_centre|water_park|golf_course|playing_fields|pitch|" zoom-min="15">
-				<caption k="name" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5" text-wrap-width="110"/>
+				<caption k="name" dy="15" font-family="sans_serif" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="2.5" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<rule cat="base_car" e="way" k="leisure" v="*" zoom-min="13">
@@ -643,8 +643,11 @@ version 2.4.0
 		</rule>
 		<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8">
 			<area fill="#9CC9E8"/>
-			<rule e="way" k="*" v="*" zoom-min="14">
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 				<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" priority="395" text-wrap-width="110"/>
+			</rule>
+			<rule e="way" k="*" v="*" zoom-min="16">
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" priority="395" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<!-- waterways -->
@@ -695,6 +698,7 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<line stroke="#9CC9E8" stroke-width="1.3"/>
 							<pathText k="name" font-style="italic" font-family="serif" font-size="14" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="390"/>
+							<lineSymbol src="file:symbols/poi_one_way_river.svg" dy="0" upright="left" symbol-percent="100" position="center" repeat-gap="300" repeat="true" repeat-start="30" priority="389"/>
 						</rule>
 					</rule>
 				</rule>
@@ -766,6 +770,10 @@ version 2.4.0
 				</rule>
 			</rule>
 			<rule e="way" k="wetland" v="marsh|swamp|bog|fen|wet_meadow|reedbed|saltmarsh">
+				<rule e="way" k="wetland" v="swamp">
+					<area cat="base_summer" fill="#80a0ca6c"/>
+					<area cat="base_winter" fill="#80a4d4d9"/>
+				</rule>
 				<area src="file:patterns/marsh.svg" symbol-width="28"/>
 			</rule>
 			<rule e="way" k="wetland" v="tidalflat">
@@ -1126,7 +1134,7 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
 							<rule e="way" k="osmc_highway" v="track|~">
 								<line stroke="#d320dc" dy="0.608" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="1.816" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="left" dy="1.816" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="2.2560000000000002" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified">
@@ -1136,7 +1144,7 @@ version 2.4.0
 							</rule>
 							<rule e="way" k="osmc_highway" v="class">
 								<line stroke="#d320dc" dy="1.1733333333333333" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="2.64" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="right" dy="2.64" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="2.48" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 						</rule>
@@ -1183,7 +1191,7 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" closed="any">
 							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="0.608" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="1.816" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
+								<lineSymbol display="ifspace" dy="1.816" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="left"/>
 								<pathText k="ref" display="ifspace" dy="2.2560000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
@@ -1193,7 +1201,7 @@ version 2.4.0
 							</rule>
 							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="1.1733333333333333" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="2.64" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
+								<lineSymbol display="ifspace" dy="2.64" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="right"/>
 								<pathText k="ref" display="ifspace" dy="2.48" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 						</rule>
@@ -3721,7 +3729,7 @@ version 2.4.0
 					<!-- highway one-way markers -->
 					<rule e="way" k="highway" v="*" zoom-min="15">
 						<rule e="way" k="oneway" v="yes|true" zoom-min="15">
-							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" position="center"/>
+							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" upright="left" position="center"/>
 						</rule>
 					</rule>
 					<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
@@ -4051,7 +4059,7 @@ version 2.4.0
 					<!-- highway one-way markers -->
 					<rule e="way" k="highway" v="*" zoom-min="15">
 						<rule e="way" k="oneway" v="yes|true" zoom-min="15">
-							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" position="center"/>
+							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="14" upright="left" repeat="true" repeat-gap="300" position="center"/>
 						</rule>
 					</rule>
 				</rule>
@@ -7131,12 +7139,12 @@ version 2.4.0
 			<rule e="any" k="tourism" v="gallery">
 				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
-			<rule e="any" k="tourism" v="museum">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
-			</rule>
 			<rule e="any" k="tourism" v="zoo">
 				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
+		</rule>
+		<rule e="any" k="tourism" v="museum" zoom-min="15">
+			<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<!-- guide post summer -->
 		<rule cat="base_summer" e="any" k="tourism" v="information" zoom-min="15">

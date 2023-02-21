@@ -657,8 +657,13 @@ version 2.4.0
 		</rule>
 		<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8">
 			<area fill="#9CC9E8"/>
-			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" priority="$priority_water_area" text-wrap-width="$text_wrap_standard"/>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#4f9cbf"
+						 stroke="#ffffff" stroke-width="3" priority="$priority_water_area" text-wrap-width="$text_wrap_standard"/>
+			</rule>
+			<rule e="way" k="*" v="*" zoom-min="16">
+				<caption k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#4f9cbf"
+						 stroke="#ffffff" stroke-width="4" priority="$priority_water_area" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
 		<!-- waterways -->
@@ -676,11 +681,13 @@ version 2.4.0
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 							<line stroke="#9CC9E8" stroke-width="0.9"/>
-							<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_canal"/>
+							<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf"
+									  stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_canal"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="16">
 							<line stroke="#9CC9E8" stroke-width="0.9"/>
-							<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_canal"/>
+							<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf"
+									  stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_canal"/>
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="stream" zoom-min="12">
@@ -710,7 +717,6 @@ version 2.4.0
 							<line stroke="#9CC9E8" stroke-width="1.3"/>
 							<pathText k="name" font-style="italic" font-family="serif" font-size="14" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_river"/>
 							<lineSymbol src="file:symbols/poi_one_way_river.svg" dy="0" upright="left" symbol-percent="100" position="center" repeat-gap="300" repeat="true" repeat-start="30" priority="${priority_river -1}"/>
-						</rule>
 						</rule>
 					</rule>
 				</rule>
@@ -1122,17 +1128,18 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" gen_section="osmc_cycle_rcn">
 							<rule e="way" k="osmc_highway" v="track|~">
 								<line stroke="$color_cycle_standard" dy="${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16/1.25 }" stroke-width="$osmc_hiking_width_z16" stroke-linecap="butt" />
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="$($track_grade3_4_width_z15 + 2.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg"  upright="left" dy="$($track_grade3_4_width_z15 + 2.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="$($track_grade3_4_width_z15 + 2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
+
 							<rule e="way" k="osmc_highway" v="unclassified">
 								<line stroke="$color_cycle_standard" dy="${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="$($unclassified_width_z16 + $highway_case_z16 + 1.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg"  dy="$($unclassified_width_z16 + $highway_case_z16 + 1.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center" />
 								<pathText k="ref" font-style="bold" font-size="10" dy="$($unclassified_width_z16 + 1.2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class">
 								<line stroke="$color_cycle_standard" dy="${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-linecap="butt" />
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="$($secondary_width_z16 + $highway_case_z16 + 1.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="right" dy="$($secondary_width_z16 + $highway_case_z16 + 1.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="$($secondary_width_z16 + 1.2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 						</rule>
