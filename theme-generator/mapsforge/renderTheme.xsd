@@ -205,6 +205,7 @@
         <xs:attribute name="repeat-gap" default="200" type="xs:float" use="optional" />
         <xs:attribute name="repeat-start" default="30" type="xs:float" use="optional" />
         <xs:attribute name="rotate" default="true" type="xs:boolean" use="optional" />
+        <xs:attribute name="upright" default="auto" type="xs:boolean" use="optional" />
     </xs:complexType>
 
     <!-- style menu name element -->
@@ -235,6 +236,7 @@
         <xs:attribute name="repeat-gap" default="100" type="xs:float" use="optional" />
         <xs:attribute name="repeat-start" default="10" type="xs:float" use="optional" />
         <xs:attribute name="rotate" default="true" type="xs:boolean" use="optional" />
+        <xs:attribute name="upright" default="auto" type="xs:boolean" use="optional" />
     </xs:complexType>
 
     <xs:complexType name="symbol">
