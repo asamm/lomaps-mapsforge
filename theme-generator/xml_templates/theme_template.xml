@@ -1128,18 +1128,18 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" gen_section="osmc_cycle_rcn">
 							<rule e="way" k="osmc_highway" v="track|~">
 								<line stroke="$color_cycle_standard" dy="${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16/1.25 }" stroke-width="$osmc_hiking_width_z16" stroke-linecap="butt" />
-								<lineSymbol src="file:symbols/poi_bike.svg"  upright="left" dy="$($track_grade3_4_width_z15 + 2.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="left" dy="$($track_grade3_4_width_z15 + 3.25 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="400"  position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="$($track_grade3_4_width_z15 + 2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 
 							<rule e="way" k="osmc_highway" v="unclassified">
 								<line stroke="$color_cycle_standard" dy="${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg"  dy="$($unclassified_width_z16 + $highway_case_z16 + 1.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center" />
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="left"  dy="$($unclassified_width_z16 + $highway_case_z16 + 2.5 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="400"  position="center" />
 								<pathText k="ref" font-style="bold" font-size="10" dy="$($unclassified_width_z16 + 1.2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class">
 								<line stroke="$color_cycle_standard" dy="${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-linecap="butt" />
-								<lineSymbol src="file:symbols/poi_bike.svg" upright="right" dy="$($secondary_width_z16 + $highway_case_z16 + 1.6 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="600"  position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="left" dy="$($secondary_width_z16 + $highway_case_z16 + 2.5 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="400"  position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="$($secondary_width_z16 + 1.2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 						</rule>
@@ -1147,21 +1147,21 @@ version 2.4.0
 							<rule e="way" k="osmc_highway" v="track|~">
 								<line stroke="$color_cycle_standard" dy="${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-linecap="butt" />
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19"> <!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="$($track_grade3_4_width_z15 + 2.6 * $osmc_hiking_width_z18)"  symbol-width="15" repeat="true" repeat-gap="600"  position="center"/>
+									<lineSymbol src="file:symbols/poi_bike.svg" dy="$($track_grade3_4_width_z15 + 3 * $osmc_hiking_width_z18)"  symbol-width="15" repeat="true" repeat-gap="600"  position="center"/>
 									<pathText k="ref" font-style="bold" font-size="12" dy="$($track_grade3_4_width_z15 + 1.1)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 								</rule>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified">
 								<line stroke="$color_cycle_standard" dy="${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19"> <!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="$($unclassified_width_z16 + $highway_case_z16 + 1.1 * $osmc_hiking_width_z18)"  symbol-width="15" repeat="true" repeat-gap="600"  position="center" />
+									<lineSymbol src="file:symbols/poi_bike.svg" dy="$($unclassified_width_z16 + $highway_case_z16 + 1.25 * $osmc_hiking_width_z18)"  symbol-width="15" repeat="true" repeat-gap="600"  position="center" />
 									<pathText k="ref" font-style="bold" font-size="12" dy="$($unclassified_width_z16 + 0.6)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 								</rule>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class">
 								<line stroke="$color_cycle_standard" dy="${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-linecap="butt" />
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19"> <!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="$($secondary_width_z16 + $highway_case_z16 + 1.1 * $osmc_hiking_width_z18)"  symbol-width="15" repeat="true" repeat-gap="600"  position="center"/>
+									<lineSymbol src="file:symbols/poi_bike.svg" dy="$($secondary_width_z16 + $highway_case_z16 + 1.25 * $osmc_hiking_width_z18)"  symbol-width="15" repeat="true" repeat-gap="600"  position="center"/>
 									<pathText k="ref" font-style="bold" font-size="12" dy="$($secondary_width_z16 + 0.6)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 								</rule>
 							</rule>

@@ -1134,17 +1134,17 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
 							<rule e="way" k="osmc_highway" v="track|~">
 								<line stroke="#d320dc" dy="0.608" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" upright="left" dy="1.816" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="left" dy="2.206" symbol-width="14" repeat="true" repeat-gap="400" position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="2.2560000000000002" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified">
 								<line stroke="#d320dc" dy="0.95" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" dy="2.1933333333333334" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="left" dy="2.7333333333333334" symbol-width="14" repeat="true" repeat-gap="400" position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="2.033333333333333" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class">
 								<line stroke="#d320dc" dy="1.1733333333333333" stroke-width="0.6" stroke-linecap="butt"/>
-								<lineSymbol src="file:symbols/poi_bike.svg" upright="right" dy="2.64" symbol-width="14" repeat="true" repeat-gap="600" position="center"/>
+								<lineSymbol src="file:symbols/poi_bike.svg" upright="left" dy="3.18" symbol-width="14" repeat="true" repeat-gap="400" position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="2.48" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 						</rule>
@@ -1153,7 +1153,7 @@ version 2.4.0
 								<line stroke="#d320dc" dy="0.428" stroke-width="0.3" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19">
 									<!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="1.036" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
+									<lineSymbol src="file:symbols/poi_bike.svg" dy="1.156" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
 									<pathText k="ref" font-style="bold" font-size="12" dy="1.356" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 								</rule>
 							</rule>
@@ -1161,7 +1161,7 @@ version 2.4.0
 								<line stroke="#d320dc" dy="0.7833333333333333" stroke-width="0.3" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19">
 									<!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="1.5633333333333335" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
+									<lineSymbol src="file:symbols/poi_bike.svg" dy="1.6083333333333334" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
 									<pathText k="ref" font-style="bold" font-size="12" dy="1.4333333333333333" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 								</rule>
 							</rule>
@@ -1169,7 +1169,7 @@ version 2.4.0
 								<line stroke="#d320dc" dy="1.0066666666666668" stroke-width="0.3" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19">
 									<!--display symbol only in zl 19 because dy scale too rapidly-->
-									<lineSymbol src="file:symbols/poi_bike.svg" dy="2.0100000000000002" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
+									<lineSymbol src="file:symbols/poi_bike.svg" dy="2.055" symbol-width="15" repeat="true" repeat-gap="600" position="center"/>
 									<pathText k="ref" font-style="bold" font-size="12" dy="1.88" fill="#B11BB9" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 								</rule>
 							</rule>
@@ -1191,38 +1191,38 @@ version 2.4.0
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" closed="any">
 							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="0.608" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="1.816" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="left"/>
+								<lineSymbol display="ifspace" dy="2.206" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="400.0" repeat-start="30.0" rotate="true" upright="left"/>
 								<pathText k="ref" display="ifspace" dy="2.2560000000000002" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="0.95" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="2.1933333333333334" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
+								<lineSymbol display="ifspace" dy="2.7333333333333334" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="400.0" repeat-start="30.0" rotate="true" upright="left"/>
 								<pathText k="ref" display="ifspace" dy="2.033333333333333" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="1.1733333333333333" scale="stroke" stroke="#A90073" stroke-width="0.6" stroke-linecap="butt" stroke-linejoin="round"/>
-								<lineSymbol display="ifspace" dy="2.64" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="right"/>
+								<lineSymbol display="ifspace" dy="3.18" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="14" position="center" priority="0" repeat="true" repeat-gap="400.0" repeat-start="30.0" rotate="true" upright="left"/>
 								<pathText k="ref" display="ifspace" dy="2.48" font-family="default" font-style="bold" font-size="10.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 							</rule>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="18" zoom-max="127" closed="any">
 							<rule e="way" k="osmc_highway" v="track|~" zoom-min="0" zoom-max="127" closed="any">
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
-									<lineSymbol display="ifspace" dy="1.036" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
+									<lineSymbol display="ifspace" dy="1.156" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
 									<pathText k="ref" display="ifspace" dy="1.356" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 								</rule>
 								<line dy="0.428" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified" zoom-min="0" zoom-max="127" closed="any">
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
-									<lineSymbol display="ifspace" dy="1.5633333333333335" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
+									<lineSymbol display="ifspace" dy="1.6083333333333334" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
 									<pathText k="ref" display="ifspace" dy="1.4333333333333333" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 								</rule>
 								<line dy="0.7833333333333333" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class" zoom-min="0" zoom-max="127" closed="any">
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19" closed="any">
-									<lineSymbol display="ifspace" dy="2.0100000000000002" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
+									<lineSymbol display="ifspace" dy="2.055" scale="stroke" src="file:symbols/poi_bike.svg" symbol-width="15" position="center" priority="0" repeat="true" repeat-gap="600.0" repeat-start="30.0" rotate="true" upright="auto"/>
 									<pathText k="ref" display="ifspace" dy="1.88" font-family="default" font-style="bold" font-size="12.0" fill="#B11BB9" priority="0" scale="stroke" stroke="#ffffff" stroke-width="2.0" repeat="true" repeat-gap="300.0" repeat-start="10.0" rotate="true" upright="auto"/>
 								</rule>
 								<line dy="1.0066666666666668" scale="stroke" stroke="#A90073" stroke-width="0.3" stroke-linecap="butt" stroke-linejoin="round"/>
