@@ -248,7 +248,7 @@ version 2.4.0
 			</rule>
 			<!-- wood captions only in topo styles -->
 			<rule cat="base_summer" e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="14">
-				<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="11" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
+				<caption k="name" dy="12" font-style="bold" font-family="sans_serif" font-size="11" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<rule cat="base_summer" e="way" k="landuse" v="farm|farmlanf" closed="yes">
@@ -286,7 +286,7 @@ version 2.4.0
 				</rule>
 				<rule e="way" k="natural" v="cliff">
 					<line stroke="#80CCA78B" stroke-width="0.2"/>
-					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="0" symbol-width="20" position="center"/>
+					<!--					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="0" symbol-width="20" position="center"/>-->
 				</rule>
 				<rule e="way" k="natural" v="grassland" zoom-min="15" closed="yes">
 					<area src="file:patterns/medow.svg" symbol-width="24"/>
@@ -317,26 +317,26 @@ version 2.4.0
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule cat="base_summer" e="way" k="*" v="*">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#607940" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#607940" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<!-- park for WINTER -->
 			<rule cat="base_winter" e="way" k="*" v="*">
 				<area fill="#90b3dbcb"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#596d65" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#596d65" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule cat="base_car" e="way" k="leisure" v="park" zoom-min="13">
 				<area fill="#80a0ca6c"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="12" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 				</rule>
 			</rule>
 		</rule>
@@ -361,7 +361,7 @@ version 2.4.0
 						<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 					</rule>
 					<rule e="way" k="*" v="grave_yard" zoom-min="16">
-						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
+						<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 					</rule>
 				</rule>
 				<rule cat="base_winter" e="way" k="landuse" v="cemetery">
@@ -373,7 +373,7 @@ version 2.4.0
 						<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 					</rule>
 					<rule e="way" k="*" v="grave_yard" zoom-min="16">
-						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
+						<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 					</rule>
 				</rule>
 			</rule>
@@ -422,7 +422,7 @@ version 2.4.0
 					<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 				</rule>
 			</rule>
 		</rule>
@@ -437,7 +437,7 @@ version 2.4.0
 					<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 				</rule>
 				<rule e="way" k="*" v="grave_yard" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule cat="base_winter" e="way" k="amenity" v="grave_yard">
@@ -449,7 +449,7 @@ version 2.4.0
 					<area src="file:patterns/graveyard.svg" symbol-width="32"/>
 				</rule>
 				<rule e="way" k="*" v="grave_yard" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="kindergarten|school|college|university">
@@ -521,7 +521,7 @@ version 2.4.0
 				</rule>
 			</rule>
 			<rule e="way" k="leisure" v="stadium|sports_centre|water_park|golf_course|playing_fields|pitch|" zoom-min="15">
-				<caption k="name" dy="15" font-family="sans_serif" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="2.5" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="2.5" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<rule cat="base_car" e="way" k="leisure" v="*" zoom-min="13">
@@ -831,7 +831,7 @@ version 2.4.0
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="15">
 				<!--#TODO removed attribute: scale-font-size="16,1.15"-->
-				<caption k="name" dy="15" font-style="bold" font-size="14" fill="#925e5a" stroke="#ffffff" stroke-width="1" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-style="bold" font-size="14" fill="#925e5a" stroke="#ffffff" stroke-width="1" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<!-- platform cores -->
@@ -877,7 +877,7 @@ version 2.4.0
 		<rule cat="base_car" e="way" k="building" v="*" zoom-min="16">
 			<area fill="#d0d0d0"/>
 			<rule e="way" k="*" v="*" zoom-min="17">
-				<caption k="name" dy="15" font-family="sans_serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<!-- non-physical boundaries -->
@@ -6998,12 +6998,12 @@ version 2.4.0
 	<!-- Tourism attraction before any other pois because lower priority-->
 	<rule cat="tourism_city" e="any" k="tourism" v="*" zoom-min="15">
 		<rule e="any" k="tourism" v="attraction">
-			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
+			<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
 		</rule>
 	</rule>
-	<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="14">
+	<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="15">
 		<rule e="any" k="tourism" v="attraction">
-			<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
+			<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
 		</rule>
 	</rule>
 	<!-- amenity -->
@@ -7016,35 +7016,35 @@ version 2.4.0
 			<rule cat="base_topo" e="any" k="amenity" v="place_of_worship" zoom-min="16">
 				<!-- captions > 16 -->
 				<rule e="any" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 				</rule>
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="*" zoom-min="15">
 			<rule cat="city" e="any" k="amenity" v="*">
 				<rule e="any" k="*" v="hospital">
-					<caption k="name" dy="15" font-style="bold_italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold_italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2.5" text-wrap-width="110"/>
 				</rule>
 				<rule cat="religion_city" e="any" k="amenity" v="place_of_worship" zoom-min="17">
-					<caption k="name" dy="15" font-style="bold_italic" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold_italic" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
 				</rule>
 				<rule e="any" k="amenity" v="university|theatre" zoom-min="16">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
 				</rule>
 				<rule cat="pub_rest_city" e="any" k="*" v="*">
 					<!-- Captions for city pubs > 18 -->
 					<rule e="any" k="amenity" v="pub|bar|restaurant|cafe|fast_food" zoom-min="18">
-						<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" text-wrap-width="110"/>
+						<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" text-wrap-width="110"/>
 					</rule>
 				</rule>
 			</rule>
 			<!--  CAR amenities > 17 -->
 			<rule cat="base_car" e="any" k="amenity" v="*" zoom-min="16">
 				<rule e="any" k="amenity" v="pub|bar|restaurant|cafe|fast_food" zoom-min="18">
-					<caption k="name" dy="15" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="13" fill="#826f60" stroke="#ffffff" text-wrap-width="110"/>
 				</rule>
 				<rule e="any" k="amenity" v="college|university|school|theatre|hospital">
-					<caption k="name" dy="15" font-style="bold" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-style="bold" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 				</rule>
 			</rule>
 		</rule>
@@ -7099,26 +7099,26 @@ version 2.4.0
 		<!-- Historic for topo themes -->
 		<rule cat="tourism_city" e="any" k="historic" v="*" zoom-min="15">
 			<!-- show name only for castle or ruins-->
-			<rule e="any" k="historic" v="castle|ruins" zoom-min="15">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+			<rule e="any" k="historic" v="castle|ruins" zoom-min="16">
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<!-- Historic for topo themes -->
 		<rule cat="tourism_topo" e="any" k="historic" v="*" zoom-min="15">
 			<!-- show name only for castle or ruins-->
-			<rule e="any" k="historic" v="castle|ruins" zoom-min="15">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+			<rule e="any" k="historic" v="castle|ruins" zoom-min="16">
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="historic" v="monument" zoom-min="16">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="historic" v="memorial|aqueduct" zoom-min="17">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="413" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="413" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<rule cat="base_car" e="any" k="historic" v="*" zoom-min="17">
 			<rule e="any" k="historic" v="castle|ruins" zoom-min="17">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
 	</rule>
@@ -7135,43 +7135,45 @@ version 2.4.0
 	<rule e="any" k="man_made|tower:type" v="*" zoom-min="16">
 		<!-- captions -->
 		<rule e="any" k="man_made" v="adit|observation|communication|lighthouse" zoom-min="16">
-			<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="413" text-wrap-width="110"/>
+			<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="413" text-wrap-width="110"/>
 		</rule>
 	</rule>
 	<!-- Tourism-->
 	<rule e="any" k="tourism" v="*" zoom-min="14">
 		<!-- hotels and alpine huts for topo -->
-		<rule cat="accommodation_topo" e="any" k="tourism" v="alpine_hut" zoom-min="15">
-			<caption k="ele" dy="-20" font-family="serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="above" priority="414" text-wrap-width="110"/>
-			<caption k="name" dy="13" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+		<rule cat="accommodation_topo" e="any" k="tourism" v="alpine_hut" zoom-min="14">
+			<rule cat="accommodation_topo" e="any" k="tourism" v="alpine_hut" zoom-min="15">
+				<caption k="ele" dy="-18" font-family="serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="above" priority="414" text-wrap-width="110"/>
+			</rule>
+			<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<!-- musuem, zoo, for CITY -->
 		<rule cat="tourism_city" e="any" k="tourism" v="*" zoom-min="15">
-			<rule e="any" k="tourism" v="gallery">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+			<rule e="any" k="tourism" v="gallery" zoom-min="17">
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="tourism" v="zoo">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
-		<rule e="any" k="tourism" v="museum" zoom-min="15">
-			<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+		<rule e="any" k="tourism" v="museum" zoom-min="16">
+			<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<!-- guide post summer -->
 		<rule cat="base_summer" e="any" k="tourism" v="information" zoom-min="15">
 			<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="18">
-				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-style="normal" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<!-- guide post winter -->
 		<rule cat="pistes_nordic" e="any" k="tourism" v="information" zoom-min="15">
 			<rule e="any" k="information" v="guidepost" zoom-min="15" zoom-max="18">
-				<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-style="normal" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<rule cat="base_car" e="any" k="tourism" v="*" zoom-min="16">
 			<rule e="any" k="tourism" v="attraction|museum|zoo" zoom-min="16">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
 	</rule>
@@ -7185,10 +7187,10 @@ version 2.4.0
 			<symbol src="file:symbols/poi_bunker_pillbox.svg" symbol-width="15"/>
 		</rule>
 		<rule cat="base_topo" e="any" k="mountain_pass" v="yes" zoom-min="14">
-			<caption k="name" dy="12" font-family="sans_serif" font-style="italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
+			<caption k="name" dy="11" font-family="sans_serif" font-style="italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 		</rule>
 		<!-- botanical garden -->
-		<rule e="way" k="garden:type" v="botanical" zoom-min="15">
+		<rule e="way" k="garden:type" v="botanical" zoom-min="16">
 			<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<!-- power tover -->
@@ -7201,17 +7203,17 @@ version 2.4.0
 		<!-- captions for nature -->
 		<rule e="any" k="natural" v="peak|volcano" zoom-min="14">
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-				<caption k="name" dy="11" font-family="sans_serif" font-style="italic" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="10" font-family="sans_serif" font-style="italic" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15">
-				<caption k="ele" dy="-11" font-family="sans_serif" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="3" position="above" priority="414"/>
-				<caption k="name" dy="11" font-family="sans_serif" font-style="italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="ele" dy="-9" font-family="sans_serif" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="3" position="above" priority="414"/>
+				<caption k="name" dy="9" font-family="sans_serif" font-style="italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
-		<rule e="any" k="natural" v="cave_entrance|geyser|sinkhole" zoom-min="15">
+		<rule e="any" k="natural" v="cave_entrance|geyser|sinkhole" zoom-min="17">
 			<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 		</rule>
-		<rule e="any" k="natural" v="hot_spring|drinking_water|" zoom-min="16">
+		<rule e="any" k="natural" v="hot_spring|drinking_water|" zoom-min="17">
 			<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 		</rule>
 		<rule e="any" k="natural" v="fountain|rock|tree" zoom-min="17">
@@ -7219,22 +7221,22 @@ version 2.4.0
 		</rule>
 	</rule>
 	<!-- waterfall -->
-	<rule cat="natural_topo" e="any" k="waterway" v="waterfall" zoom-min="15">
-		<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
+	<rule cat="natural_topo" e="any" k="waterway" v="waterfall" zoom-min="17">
+		<caption k="name" dy="11" font-family="serif" font-size="11" font-style="italic" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 	</rule>
 	<!-- railway city -->
 	<rule cat="transportation_city" e="any" k="railway" v="*" zoom-min="13">
 		<rule e="any" k="railway" v="station" zoom-min="13">
 			<rule e="any" k="station" v="~" zoom-min="13">
-				<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="416" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
 			<circle r="3" fill="#FFFFFF" stroke="#606060" stroke-width="1"/>
-			<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+			<caption k="name" dy="11" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<rule e="any" k="station" v="subway" zoom-min="14">
-			<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+			<caption k="name" dy="11" font-family="sans_serif" font-style="bold_italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<!-- subway entrance -->
 		<rule e="any" k="railway" v="subway_entrance" zoom-min="17">
@@ -7245,15 +7247,15 @@ version 2.4.0
 	<rule cat="transportation_topo" e="any" k="railway" v="*" zoom-min="14">
 		<rule e="any" k="railway" v="station" zoom-min="14">
 			<rule e="any" k="station" v="~" zoom-min="14">
-				<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
 			<circle r="3" fill="#FFFFFF" stroke="#606060" stroke-width="1"/>
-			<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+			<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<rule e="any" k="station" v="subway" zoom-min="15" zoom-max="17">
-			<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+			<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 		</rule>
 		<!-- subway entrance -->
 		<rule e="any" k="railway" v="subway_entrance" zoom-min="17">
@@ -7274,7 +7276,7 @@ version 2.4.0
 	<!-- shop -->
 	<rule cat="shopping" e="any" k="shop" v="department_store|mall|supermarket|organic" zoom-min="17">
 		<rule e="any" k="*" v="*" zoom-min="17">
-			<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
+			<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 		</rule>
 	</rule>
 	<!-- house numbers -->
@@ -7336,7 +7338,7 @@ version 2.4.0
 					<caption k="name" dy="12" text-transform="uppercase" font-family="sans_serif" font-style="bold" font-size="14" fill="#303030" stroke="#FFFFFF" stroke-width="4" priority="500" text-wrap-width="110"/>
 				</rule>
 				<rule e="any" k="capital" v="~">
-					<caption k="name" dy="12" font-family="sans_serif" font-style="bold" font-size="14" fill="#303030" stroke="#FFFFFF" stroke-width="4" priority="500" text-wrap-width="110"/>
+					<caption k="name" dy="11" font-family="sans_serif" font-style="bold" font-size="14" fill="#303030" stroke="#FFFFFF" stroke-width="4" priority="500" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule e="any" k="place" v="city" zoom-min="10">
@@ -7353,10 +7355,10 @@ version 2.4.0
 		</rule>
 		<rule e="any" k="place" v="town" zoom-min="8" zoom-max="15">
 			<rule e="any" k="*" v="*" zoom-min="8" zoom-max="9">
-				<caption k="name" dy="10" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="4" priority="480" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="4" priority="480" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="11">
-				<caption k="name" dy="12" font-family="sans_serif" font-size="16" fill="#303030" stroke="#ffffff" stroke-width="4.4" priority="480" text-wrap-width="110"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="16" fill="#303030" stroke="#ffffff" stroke-width="4.4" priority="480" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="12" zoom-max="14">
 				<caption k="name" font-family="sans_serif" font-style="bold" font-size="22" fill="#303030" stroke="#ffffff" stroke-width="4.8" priority="480" text-wrap-width="165"/>
