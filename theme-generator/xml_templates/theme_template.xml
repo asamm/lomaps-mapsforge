@@ -1540,7 +1540,6 @@ version 2.4.0
 					<rule e="way" k="*" v="*" zoom-min="20">
 						<line dy="1.9" stroke="#e47a00" stroke-width="0.3" stroke-dasharray="8,6" stroke-linecap="butt"/>
 					</rule>
-					<!--#TODO removed attribute: dx="32dp"-->
 					<symbol src="file:symbols/poi_climbing.svg" symbol-width="24" display="always" position="above"/>
 				</rule>
 				<rule cat="highways_topo" e="way" k="assisted_trail|safety_rope|rungs" v="yes" zoom-min="15">
@@ -1603,8 +1602,8 @@ version 2.4.0
 								</rule>
 								<!-- white outline for path-->
 								<rule e="way" k="highway" v="path|via_ferrata|footway">
-									<line stroke="$color_bridge_no_casing" stroke-width="0.1" dy="$footway_width_z14" stroke-linecap="butt" />
-									<line stroke="$color_bridge_no_casing" stroke-width="0.1" dy="-$footway_width_z14" stroke-linecap="butt" />
+									<line stroke="$color_bridge_no_casing" stroke-width="0.1" dy="$path_width_z14" stroke-linecap="butt" />
+									<line stroke="$color_bridge_no_casing" stroke-width="0.1" dy="-$path_width_z14" stroke-linecap="butt" />
 								</rule>
 							</rule>
 
@@ -1851,7 +1850,7 @@ version 2.4.0
 								<!-- white outline for path-->
 								<rule e="way" k="highway" v="path|via_ferrata">
 									<rule e="way" k="sac_scale" v="~">
-										<line stroke="#AAFFFFFF" stroke-width="0.5"/>
+										<line stroke="#AAFFFFFF" stroke-width="${ 1.3 * $path_width_z14}"/>
 									</rule>
 								</rule>
 
@@ -1914,7 +1913,7 @@ version 2.4.0
 							<!-- white outline for path-->
 							<rule e="way" k="highway" v="path|via_ferrata">
 								<rule e="way" k="sac_scale" v="~">
-									<line stroke="#AAFFFFFF" stroke-width="0.5"/>
+									<line stroke="#AAFFFFFF" stroke-width="$path_width_z14"/>
 								</rule>
 							</rule>
 
@@ -2094,12 +2093,7 @@ version 2.4.0
 								</rule>
 							</rule>
 						</rule>
-						<rule e="way" k="highway" v="path|via_ferrata|bridleway">
-							<line stroke="$color_path" stroke-width="0.3" stroke-dasharray="4,3" stroke-linecap="butt"/>
-							<rule e="way" k="*" v="via_ferrata" zoom-min="15">
-								<pathText k="name" dy="-2.3" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="$text_halo"/>
-							</rule>
-						</rule>
+
 						<rule e="way" k="highway" v="cycleway" zoom-max="15">
 							<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
 						</rule>
@@ -2159,6 +2153,11 @@ version 2.4.0
 
 					<!-- === TOPO core highways for 13-15 -->
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" gen_section="to_tunnel">
+
+						<rule e="way" k="highway" v="path|via_ferrata|bridleway" zoom-min="14">
+							<line stroke="$color_path" stroke-width="$path_width_z14" stroke-dasharray="3,2" stroke-linecap="butt" scale="all"/>
+						</rule>
+
 						<rule e="way" k="highway" v="track">
 							<rule e="way" k="tracktype" v="grade1|grade2">
 								<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
@@ -2223,6 +2222,11 @@ version 2.4.0
 					</rule>
 					<!-- === TOPO highway cores 16 >   === -->
 					<rule e="way" k="*" v="*" zoom-min="16" gen_section="to_tunnel" >
+
+						<rule e="way" k="highway" v="path|via_ferrata|bridleway" >
+							<line stroke="$color_path" stroke-width="$path_width_z16" stroke-dasharray="6,4" stroke-linecap="butt"/>
+							<pathText k="name" dy="${$path_width_z16 + 1.2}" fill="$color_standard_poi_text" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="$text_halo"/>
+						</rule>
 
 						<rule e="way" k="highway" v="steps" >
 							<line stroke="$color_steps" stroke-width="$steps_width_z16" stroke-dasharray="2,3" stroke-linecap="butt" />
@@ -4049,7 +4053,7 @@ version 2.4.0
 			</rule>
 			<!-- labels from zl > 17-->
 			<rule e="any" k="amenity" v="college|university|school|theatre|cinema|library">
-				<caption k="name" dy="16" font-family="sans_serif" font-size="12" fill="$color_gray_poi_text" stroke="#ffffff" stroke-width="3" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name" dy="12" font-family="sans_serif" font-size="12" fill="$color_gray_poi_text" position="below" stroke="#ffffff" stroke-width="3" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
 	</rule><!-- end of amenity -->
