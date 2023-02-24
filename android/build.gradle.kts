@@ -17,7 +17,7 @@ android {
 
 dependencies {
     // MapsForge API
-    implementation("org.mapsforge:mapsforge-map-android:0.18.0")
+    compileOnly("org.mapsforge:mapsforge-map-android:0.18.0")
 }
 
 publishing {
