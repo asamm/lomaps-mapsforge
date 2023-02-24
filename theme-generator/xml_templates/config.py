@@ -242,6 +242,9 @@ class TemplateVariables(Template):
     priority_cyclo_nlbe_junction_circle = 410
     priority_cyclo_nlbe_junction_number = priority_cyclo_nlbe_junction_circle + 1
 
+    priority_one_way = 401
+    priority_one_way_cycle_opposite = priority_one_way + 1
+
     priority_tourist_route_name = 200
     priority_tourist_osmc_symbol = 35
 

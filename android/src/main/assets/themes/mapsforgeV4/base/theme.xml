@@ -284,9 +284,9 @@ version 2.4.0
 				<rule e="way" k="natural" v="bare_rock" closed="yes">
 					<area src="assets:patterns/bare_rock.png" symbol-width="96"/>
 				</rule>
-				<rule e="way" k="natural" v="cliff">
+				<rule e="way" k="natural" v="cliff" zoom-min="14">
 					<line stroke="#8a8a8a" stroke-width="0.2"/>
-					<lineSymbol src="assets:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="10" repeat-start="1" symbol-orientation="left" symbol-width="8" position="below"/>
+					<lineSymbol src="assets:symbols/poi_cliff_way.svg" dy="0.1" repeat="true" repeat-gap="5" repeat-start="0" symbol-orientation="left" symbol-width="8" position="below" display="always"/>
 				</rule>
 				<rule e="way" k="natural" v="grassland" zoom-min="15" closed="yes">
 					<area src="assets:patterns/medow.svg" symbol-width="24"/>
@@ -3744,7 +3744,7 @@ version 2.4.0
 								<lineSymbol src="assets:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" symbol-orientation="left" position="center"/>
 							</rule>
 							<rule e="way" k="*" v="*" zoom-min="18">
-								<lineSymbol src="assets:symbols/poi_one_way_cycle_opposite.svg" dy="5" symbol-width="32" repeat="true" repeat-gap="300" symbol-orientation="left" position="center"/>
+								<lineSymbol src="assets:symbols/poi_one_way_cycle_opposite.svg" dy="5" symbol-width="35" repeat="true" repeat-gap="300" symbol-orientation="left" position="center"/>
 							</rule>
 						</rule>
 						<rule e="way" k="oneway:bicycle" v="no" zoom-min="15">
@@ -3752,7 +3752,7 @@ version 2.4.0
 								<lineSymbol src="assets:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" symbol-orientation="left" position="center"/>
 							</rule>
 							<rule e="way" k="*" v="*" zoom-min="18">
-								<lineSymbol src="assets:symbols/poi_one_way_cycle_opposite.svg" dy="0.5" symbol-width="32" repeat="true" repeat-gap="300" symbol-orientation="left" position="center"/>
+								<lineSymbol src="assets:symbols/poi_one_way_cycle_opposite.svg" dy="0.5" symbol-width="35" repeat="true" repeat-gap="300" symbol-orientation="left" position="center"/>
 							</rule>
 						</rule>
 					</rule>
