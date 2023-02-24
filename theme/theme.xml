@@ -3735,9 +3735,25 @@ version 2.4.0
 						</rule>
 					</rule>
 					<!-- highway one-way markers -->
-					<rule e="way" k="highway" v="*" zoom-min="15">
-						<rule e="way" k="oneway" v="yes|true" zoom-min="15">
+					<rule e="way" k="oneway" v="yes|true" zoom-min="15">
+						<rule e="way" k="cycleway|cycleway:left|cycleway:right|oneway:bicycle" v="~" zoom-min="15">
 							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" upright="left" position="center"/>
+						</rule>
+						<rule e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane" zoom-min="15">
+							<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+								<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" upright="left" position="center"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="18">
+								<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" dy="5" symbol-width="32" repeat="true" repeat-gap="300" upright="left" position="center"/>
+							</rule>
+						</rule>
+						<rule e="way" k="oneway:bicycle" v="no" zoom-min="15">
+							<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+								<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" upright="left" position="center"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="18">
+								<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" dy="0.5" symbol-width="32" repeat="true" repeat-gap="300" upright="left" position="center"/>
+							</rule>
 						</rule>
 					</rule>
 					<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
@@ -4501,14 +4517,13 @@ version 2.4.0
 					<line stroke="#797979" stroke-width="1.2" stroke-dasharray="0.3,4" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="subway" zoom-min="13">
-					<!-- workaround how to highlight only the main subway lines, not the depo lines (the main lines have almost defined the name) -->
-					<rule e="way" k="*" v="*" zoom-min="16">
-						<line stroke="#40333333" stroke-width="0.3" stroke-linecap="butt"/>
-						<line stroke="#40333333" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt"/>
+					<rule e="way" k="name" v="*" zoom-min="13" zoom-max="15">
+						<line stroke="#EDEDED" stroke-width="0.5" stroke-linecap="butt"/>
+						<line stroke="#EDEDED" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
 					</rule>
-					<rule e="way" k="name" v="*" zoom-min="13">
-						<line stroke="#508C0000" stroke-width="0.5" stroke-linecap="butt"/>
-						<line stroke="#508C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt"/>
+					<rule e="way" k="*" v="*" zoom-min="16">
+						<line stroke="#EDEDED" stroke-width="0.3" stroke-linecap="butt"/>
+						<line stroke="#EDEDED" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
 					</rule>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|preserved|disused" zoom-min="12">
@@ -4889,12 +4904,13 @@ version 2.4.0
 			</rule>
 			<!-- Lit for downhill-->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="15">
+				<!--				<rule e="way" k="lit|piste:lit" v="yes" >-->
 				<rule e="way" k="lit|piste:lit" v="yes">
 					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
 						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="1.5" upright="left" symbol-width="14" repeat="true" repeat-gap="100" position="above" repeat-start="0" display="ifspace"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="18">
-						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="1.5" upright="left" symbol-width="14" repeat="true" repeat-gap="175" position="above" repeat-start="0" display="ifspace"/>
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="1.5" upright="left" symbol-width="14" repeat="true" repeat-gap="175" position="above" repeat-start="0" display="always"/>
 					</rule>
 				</rule>
 			</rule>
