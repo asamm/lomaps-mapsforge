@@ -285,8 +285,8 @@ version 2.4.0
 					<area src="file:patterns/bare_rock.png" symbol-width="96"/>
 				</rule>
 				<rule e="way" k="natural" v="cliff">
-					<line stroke="#80CCA78B" stroke-width="0.2"/>
-					<!--					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="0" symbol-width="20" position="center"/>-->
+					<line stroke="#8a8a8a" stroke-width="0.2"/>
+					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="10" repeat-start="1" upright="left" symbol-width="8" position="below"/>
 				</rule>
 				<rule e="way" k="natural" v="grassland" zoom-min="15" closed="yes">
 					<area src="file:patterns/medow.svg" symbol-width="24"/>
@@ -4518,12 +4518,12 @@ version 2.4.0
 				</rule>
 				<rule e="way" k="railway" v="subway" zoom-min="13">
 					<rule e="way" k="name" v="*" zoom-min="13" zoom-max="15">
-						<line stroke="#EDEDED" stroke-width="0.5" stroke-linecap="butt"/>
-						<line stroke="#EDEDED" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
+						<line stroke="#508C0000" stroke-width="0.5" stroke-linecap="butt"/>
+						<line stroke="#508C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="16">
-						<line stroke="#EDEDED" stroke-width="0.3" stroke-linecap="butt"/>
-						<line stroke="#EDEDED" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
+						<line stroke="#40333333" stroke-width="0.3" stroke-linecap="butt"/>
+						<line stroke="#40333333" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
 					</rule>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|preserved|disused" zoom-min="12">

@@ -288,8 +288,8 @@ version 2.4.0
 					<area src="file:patterns/bare_rock.png" symbol-width="96"/>
 				</rule>
 				<rule e="way" k="natural" v="cliff">
-					<line stroke="#80CCA78B" stroke-width="0.2"/>
-<!--					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="0" symbol-width="20" position="center"/>-->
+					<line stroke="#8a8a8a" stroke-width="0.2"/>
+					<lineSymbol src="file:symbols/poi_cliff_way.svg" repeat="true" repeat-gap="10" repeat-start="1" upright="left" symbol-width="8" position="below"/>
 				</rule>
 				<rule e="way" k="natural" v="grassland" closed="yes" zoom-min="15">
 					<area src="file:patterns/medow.svg" symbol-width="24"/>
