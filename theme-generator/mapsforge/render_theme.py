@@ -629,10 +629,11 @@ class LineSymbol:
             "type": "Attribute",
         }
     )
-    upright: Optional[str] = field(
-        default='auto',
+    symbol_orientation: Optional[str] = field(
+        default='right',
         metadata={
             "type": "Attribute",
+            "name": "symbol-orientation"
         }
     )
 
@@ -749,10 +750,11 @@ class PathText:
             "type": "Attribute",
         }
     )
-    upright: Optional[str] = field(
+    text_orientation: Optional[str] = field(
         default='auto',
         metadata={
             "type": "Attribute",
+            "name": "text-orientation"
         }
     )
 
