@@ -3246,6 +3246,19 @@ version 2.4.0
 					</rule>
 				</rule>
 
+				<!--OneWay for piste nordic-->
+				<rule e="way" k="piste:oneway" v="yes" zoom-min="15">
+					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+						<lineSymbol src="file:symbols/poi_one_way_ski_nordic.svg" dy="${-1.5 * $pistes_nordic_width_z16}"
+									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="300"
+									position="center" display="ifspace" priority="$priority_one_way"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="18">
+						<lineSymbol src="file:symbols/poi_one_way_ski_nordic.svg" dy="${-1.5 * $pistes_nordic_width_z16 }"
+									symbol-orientation="left" symbol-width="18" repeat="true" repeat-gap="400"
+									position="center" display="ifspace" priority="$priority_one_way"/>
+					</rule>
+				</rule>
 			</rule>
 
 			<!-- Ski Hike -->
