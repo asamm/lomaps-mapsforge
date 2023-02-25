@@ -3738,7 +3738,7 @@ version 2.4.0
 					<rule e="way" k="oneway" v="yes|true" zoom-min="15">
 						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="401"/>
 						<rule e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane" zoom-min="18">
-							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" dy="0.6" symbol-width="30" repeat="true" repeat-gap="288" symbol-orientation="left" position="center" priority="402"/>
+							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="left" position="center" priority="402"/>
 						</rule>
 						<rule e="way" k="oneway:bicycle" v="no" zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="left" position="center" priority="402"/>
@@ -4892,13 +4892,22 @@ version 2.4.0
 			</rule>
 			<!-- Lit for downhill-->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="15">
-				<!--				<rule e="way" k="lit|piste:lit" v="yes" >-->
 				<rule e="way" k="lit|piste:lit" v="yes">
-					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
-						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="100" position="above" repeat-start="0" display="ifspace"/>
+					<rule e="way" k="*" v="*" closed="no">
+						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="100" position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="18">
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="175" position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
 					</rule>
-					<rule e="way" k="*" v="*" zoom-min="18">
-						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="175" position="above" repeat-start="0" display="always"/>
+					<rule e="way" k="*" v="*" closed="yes">
+						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="150" position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="18">
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="200" position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
 					</rule>
 				</rule>
 			</rule>
@@ -4967,6 +4976,15 @@ version 2.4.0
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
 						<pathText k="name" font-style="bold" font-size="11" dy="9" fill="#500883" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200"/>
+					</rule>
+				</rule>
+				<!-- lit for nordic ski-->
+				<rule e="way" k="lit|piste:lit" v="yes" zoom-min="16">
+					<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-0.9" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="150" position="below" repeat-start="0" display="ifspace" scale="all"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="18">
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-0.9" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="250" position="below" repeat-start="0" display="ifspace" scale="all"/>
 					</rule>
 				</rule>
 			</rule>

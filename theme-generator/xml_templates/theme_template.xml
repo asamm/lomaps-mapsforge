@@ -3131,15 +3131,31 @@ version 2.4.0
 
 			<!-- Lit for downhill-->
 			<rule e="way" k="piste:type" v="downhill" zoom-min="15">
-<!--				<rule e="way" k="lit|piste:lit" v="yes" >-->
 				<rule e="way" k="lit|piste:lit" v="yes" >
-					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
-						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$(0.5 * $piste_downhill_width)"
-								symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="100"  position="above" repeat-start="0" display="ifspace"/>
+					<rule e="way" k="*" v="*" closed="no">
+						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$( -0.5 * $piste_downhill_width)"
+									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="100"
+										position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="18" >
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$( -0.5 * $piste_downhill_width)"
+									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="175"
+										position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
 					</rule>
-					<rule e="way" k="*" v="*" zoom-min="18" >
-						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$(0.5 * $piste_downhill_width)"
-								symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="175"  position="above" repeat-start="0" display="always"/>
+
+					<rule e="way" k="*" v="*" closed="yes">
+						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+							<lineSymbol src="file:symbols/poi_lightbulb.svg"
+									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="150"
+										position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="18" >
+							<lineSymbol src="file:symbols/poi_lightbulb.svg"
+									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="200"
+										position="below" repeat-start="0" display="ifspace" scale="all"/>
+						</rule>
 					</rule>
 				</rule>
 			</rule>
@@ -3203,6 +3219,7 @@ version 2.4.0
 						</rule>
 					</rule>
 				</rule>
+
 				<!-- Captions for nordic-->
 				<rule e="way" k="*" v="*" zoom-min="14">
 					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate|~">
@@ -3214,6 +3231,21 @@ version 2.4.0
 								  stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 					</rule>
 				</rule>
+
+				<!-- lit for nordic ski-->
+				<rule e="way" k="lit|piste:lit" v="yes" zoom-min="16">
+					<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-$pistes_nordic_width_z16"
+									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="150"
+									position="below" repeat-start="0" display="ifspace" scale="all"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="18">
+						<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-$pistes_nordic_width_z16"
+									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="250"
+									position="below" repeat-start="0" display="ifspace" scale="all"/>
+					</rule>
+				</rule>
+
 			</rule>
 
 			<!-- Ski Hike -->
