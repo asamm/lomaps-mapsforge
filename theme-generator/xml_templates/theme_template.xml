@@ -3134,14 +3134,16 @@ version 2.4.0
 				<rule e="way" k="lit|piste:lit" v="yes" >
 					<rule e="way" k="*" v="*" closed="no">
 						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
+							<line stroke="${opacity('#fff41d', 60)}" stroke-width="0.75" dy="${ -0.5 * ($piste_downhill_width + 0.75/2)}" />
 							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$( -0.5 * $piste_downhill_width)"
 									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="100"
-										position="below" repeat-start="0" display="ifspace" scale="all"/>
+										position="below" repeat-start="30" display="ifspace" scale="all"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="18" >
+							<line stroke="${opacity('#fff41d', 50)}" stroke-width="0.5" dy="${ -0.5 * ($piste_downhill_width + 0.5/2)}" />
 							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="$( -0.5 * $piste_downhill_width)"
 									symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="175"
-										position="below" repeat-start="0" display="ifspace" scale="all"/>
+										position="below" repeat-start="30" display="ifspace" scale="all"/>
 						</rule>
 					</rule>
 

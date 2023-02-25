@@ -4895,10 +4895,12 @@ version 2.4.0
 				<rule e="way" k="lit|piste:lit" v="yes">
 					<rule e="way" k="*" v="*" closed="no">
 						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
-							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="100" position="below" repeat-start="0" display="ifspace" scale="all"/>
+							<line stroke="#99fff41d" stroke-width="0.75" dy="-1.6875"/>
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="100" position="below" repeat-start="30" display="ifspace" scale="all"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="18">
-							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="175" position="below" repeat-start="0" display="ifspace" scale="all"/>
+							<line stroke="#7ffff41d" stroke-width="0.5" dy="-1.625"/>
+							<lineSymbol src="file:symbols/poi_lightbulb.svg" dy="-1.5" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="175" position="below" repeat-start="30" display="ifspace" scale="all"/>
 						</rule>
 					</rule>
 					<rule e="way" k="*" v="*" closed="yes">
