@@ -2341,12 +2341,12 @@
 						<rule cat="base_summer" e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane"
 							  zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30"
-										repeat="true" repeat-gap="282" symbol-orientation="left" position="center"
+										repeat="true" repeat-gap="282" symbol-orientation="auto" position="center"
 										priority="$priority_one_way_cycle_opposite"/>
 						</rule>
 						<rule cat="base_summer" e="way" k="oneway:bicycle" v="no" zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30"
-										repeat="true" repeat-gap="282" symbol-orientation="left" position="center"
+										repeat="true" repeat-gap="282" symbol-orientation="auto" position="center"
 										priority="$priority_one_way_cycle_opposite"/>
 						</rule>
 					</rule>
@@ -3019,36 +3019,33 @@
 			</rule>
 		</rule>
 		<!-- Snowmobile for WINTER -->
-		<rule cat="snowmobiles" e="way" k="snowmobile" v="designated" zoom-min="12">
-			<lineSymbol src="file:symbols/poi_snowmobile.svg" dy="3.7" repeat="true" repeat-gap="400" symbol-width="27"/>
+		<rule cat="snowmobiles" e="way" k="snowmobile" v="designated" zoom-min="13">
+
 			<rule e="way" k="ice_road" v="yes">
-				<rule e="way" k="*" v="*" zoom-min="12" zoom-max="14">
-					<line stroke="#90ee7e00" stroke-width="1.2" stroke-dasharray="13,9"/>
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+					<line stroke="#90ee7e00" stroke-width="1.7" stroke-dasharray="4,6" scale="all"/>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-					<line stroke="#90ee7e00" stroke-width="1.1" stroke-dasharray="12,10"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-					<line stroke="#90ee7e00" stroke-width="1" stroke-dasharray="13,10"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="18">
-					<line stroke="#90ee7e00" stroke-width="0.9" stroke-dasharray="10,9"/>
+				<rule e="way" k="*" v="*" zoom-min="16" >
+					<line stroke="#90ee7e00" stroke-width="1" stroke-dasharray="2,3" scale="all"/>
 				</rule>
 			</rule>
 			<rule e="way" k="ice_road" v="~">
-				<rule e="way" k="*" v="*" zoom-max="14">
-					<line stroke="#90ee7e00" stroke-width="1.2"/>
+				<rule e="way" k="*" v="*" zoom-max="15">
+					<line stroke="#90ee7e00" stroke-width="1.5"/>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-					<line stroke="#90ee7e00" stroke-width="1.1"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+				<rule e="way" k="*" v="*" zoom-min="16">
 					<line stroke="#90ee7e00" stroke-width="1.0"/>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="18">
-					<line stroke="#90ee7e00" stroke-width="0.9"/>
-				</rule>
 			</rule>
+			<!-- symbols of snowmobiles for both types of ways -->
+				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+					<lineSymbol src="file:symbols/poi_snowmobile.svg" dy="3.5" symbol-width="14" symbol-orientation="auto"
+						position="center" repeat="true" repeat-gap="400" repeat-start="40" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="16" >
+					<lineSymbol src="file:symbols/poi_snowmobile.svg" dy="2" symbol-width="16" symbol-orientation="auto"
+						position="center" repeat="true" repeat-gap="400" repeat-start="40" />
+				</rule>
 		</rule>
 		<!-- pistes for WINTER -->
 		<rule cat="pistes" e="way" k="piste:type" v="*">
