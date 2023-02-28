@@ -2968,22 +2968,10 @@
 					</rule>
 					<!-- End of hiking routes -->
 				</rule>
-				<!-- OFFSET VIA FERRATA-->
+				<!-- Symbols for via ferrata -->
 				<!-- via_ferrata-->
 				<rule cat="via_ferrata_cat" e="way" k="highway" v="via_ferrata" zoom-min="15">
-					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-						<line dy="0.7" stroke="#e47a00" stroke-width="0.6" stroke-dasharray="8,6" stroke-linecap="butt"/>
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-						<line dy="0.9" stroke="#e47a00" stroke-width="0.6" stroke-dasharray="8,6" stroke-linecap="butt"/>
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19">
-						<line dy="1.4" stroke="#e47a00" stroke-width="0.4" stroke-dasharray="8,6" stroke-linecap="butt"/>
-					</rule>
-					<rule e="way" k="*" v="*" zoom-min="20">
-						<line dy="1.9" stroke="#e47a00" stroke-width="0.3" stroke-dasharray="8,6" stroke-linecap="butt"/>
-					</rule>
-					<symbol src="file:symbols/poi_climbing.svg" symbol-width="24" display="always" position="above"/>
+					<lineSymbol src="file:symbols/poi_climbing.svg" symbol-width="18" dy="0.2" repeat="true" symbol-orientation="left" repeat-gap="60" position="below"/>
 				</rule>
 				<rule cat="highways_topo" e="way" k="assisted_trail|safety_rope|rungs" v="yes" zoom-min="15">
 					<lineSymbol src="file:symbols/poi_chain.svg" symbol-width="24" dy="7.4" repeat="true" repeat-gap="20" position="center"/>
