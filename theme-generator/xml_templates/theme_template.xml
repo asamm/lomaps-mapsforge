@@ -2663,8 +2663,8 @@
 					</rule>
 					<rule e="way" k="highway" v="*" zoom-min="15">
 						<rule e="way" k="motor_vehicle" v="no" zoom-min="17">
-							<!--#TODO removed attribute: dx="20dp"-->
-							<lineSymbol src="file:symbols/poi_no_entry.svg" symbol-width="20"/>
+							<lineSymbol src="file:symbols/poi_no_entry.svg" symbol-width="10" position="center"
+										repeat-start="0" repeat="false"/>
 						</rule>
 					</rule>
 					<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
