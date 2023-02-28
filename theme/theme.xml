@@ -782,7 +782,7 @@
 				<area src="file:patterns/tidalflat_64.svg" symbol-width="96"/>
 			</rule>
 		</rule>
-		<!-- runways casings and areas TODO terminal based -->
+		<!-- runways casings and areas -->
 		<rule e="way" k="aeroway" v="*" zoom-min="12">
 			<rule e="way" k="aeroway" v="runway">
 				<area fill="#C1C1C1"/>
@@ -832,7 +832,6 @@
 				<area fill="#25E57A7A"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="15">
-				<!--#TODO removed attribute: scale-font-size="16,1.15"-->
 				<caption k="name" dy="11" font-style="bold" font-size="14" fill="#925e5a" stroke="#ffffff" stroke-width="1" text-wrap-width="110"/>
 			</rule>
 		</rule>
@@ -2969,7 +2968,6 @@
 					<!-- End of hiking routes -->
 				</rule>
 				<!-- Symbols for via ferrata -->
-				<!-- via_ferrata-->
 				<rule cat="via_ferrata_cat" e="way" k="highway" v="via_ferrata" zoom-min="15">
 					<lineSymbol src="file:symbols/poi_climbing.svg" symbol-width="18" dy="0.2" repeat="true" symbol-orientation="left" repeat-gap="60" position="below"/>
 				</rule>
@@ -3397,21 +3395,18 @@
 							<rule e="way" k="highway|toll" v="primary">
 								<line stroke="#ffffff" stroke-width="3.5" stroke-linecap="butt"/>
 								<rule e="way" k="toll" v="yes">
-									<!--#TODO removed attribute: scale-dy-size="13,1.4"-->
 									<line dy="0.7" stroke="#e7740c" stroke-width="1" stroke-dasharray="1,12"/>
 								</rule>
 							</rule>
 							<rule e="way" k="highway|toll" v="trunk">
 								<line stroke="#ffffff" stroke-width="4" stroke-linecap="butt"/>
 								<rule e="way" k="toll" v="yes">
-									<!--#TODO removed attribute: scale-dy-size="13,1.4"-->
 									<line dy="0.7" stroke="#f42a27" stroke-width="1" stroke-dasharray="1,12"/>
 								</rule>
 							</rule>
 							<rule e="way" k="highway|toll" v="motorway">
 								<line stroke="#ffffff" stroke-width="5" stroke-linecap="butt"/>
 								<rule e="way" k="toll" v="yes">
-									<!--#TODO removed attribute: scale-dy-size="13,1.4"-->
 									<line dy="0.9" stroke="#db100c" stroke-width="1" stroke-dasharray="1,12"/>
 								</rule>
 							</rule>
@@ -3447,21 +3442,18 @@
 							</rule>
 							<rule e="way" k="highway|toll" v="primary">
 								<rule e="way" k="toll" v="yes" zoom-max="17">
-									<!--#TODO removed attribute: scale-dy-size="16,1.4"-->
 									<line dy="1.2" stroke="#e7740c" stroke-width="0.6" stroke-dasharray="1,12"/>
 								</rule>
 								<line stroke="#e7740c" stroke-width="1.8" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway|toll" v="trunk">
 								<rule e="way" k="toll" v="yes" zoom-max="17">
-									<!--#TODO removed attribute: scale-dy-size="16,1.4"-->
 									<line dy="1.3" stroke="#f42a27" stroke-width="0.7" stroke-dasharray="1,12"/>
 								</rule>
 								<line stroke="#f42a27" stroke-width="1.9" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway|toll" v="motorway">
 								<rule e="way" k="toll" v="yes" zoom-max="17">
-									<!--#TODO removed attribute: scale-dy-size="16,1.4"-->
 									<line dy="1.4" stroke="#db100c" stroke-width="0.7" stroke-dasharray="1,12"/>
 								</rule>
 								<line stroke="#db100c" stroke-width="2.2" stroke-linecap="butt"/>
@@ -3475,8 +3467,6 @@
 						<rule e="way" k="highway" v="construction">
 							<line stroke="#d0d0d0" stroke-width="0.4"/>
 							<rule e="way" k="*" v="*" zoom-min="14">
-								<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-								<!--#TODO removed attribute: dx="20"-->
 								<pathText k="name" font-style="bold" font-size="15" stroke="#FFFFFF" stroke-width="4.0"/>
 							</rule>
 						</rule>
@@ -3769,29 +3759,24 @@
 							<rule e="way" k="tracktype" v="grade1|grade2">
 								<line stroke="#9f9f9f" stroke-width="0.3"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade2">
 								<line stroke="#9f9f9f" stroke-width="0.2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade3">
 								<line stroke="#9f9f9f" stroke-width="0.3" stroke-dasharray="16,6" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
 								</rule>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="steps" zoom-min="15">
 							<line stroke="#747474" stroke-width="0.4" stroke-dasharray="1,2" stroke-linecap="butt"/>
-							<!--#TODO removed attribute: scale-font-size="17,1.15"-->
-							<!--#TODO removed attribute: dx="20"-->
 							<pathText k="name" font-style="bold" font-size="10" stroke="#FFFFFF" stroke-width="2"/>
 						</rule>
 						<rule e="way" k="highway" v="path|via_ferrata" zoom-min="15">
@@ -3837,8 +3822,6 @@
 							<line stroke="#fff387" stroke-width="2.8" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="highway" v="primary|secondary|tertiary|raceway|residential|living_street|unclassified|service|road" zoom-min="15">
-							<!--#TODO removed attribute: scale-font-size="16,1.15"-->
-							<!--#TODO removed attribute: dx="10dp"-->
 							<pathText k="name" dy="0.7" font-style="bold" font-size="13" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 					</rule>
@@ -3849,8 +3832,6 @@
 						<rule e="way" k="highway" v="construction">
 							<line stroke="#9f9f9f" stroke-width="0.8" stroke-dasharray="5,2"/>
 							<rule e="way" k="*" v="*" zoom-min="14">
-								<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-								<!--#TODO removed attribute: dx="20"-->
 								<pathText k="name" font-style="bold" font-size="15" stroke="#FFFFFF" stroke-width="4.0"/>
 							</rule>
 						</rule>
@@ -3860,15 +3841,12 @@
 							</rule>
 							<rule e="way" k="*" v="*" zoom-min="15">
 								<line stroke="#9c9c9c" stroke-width="0.5"/>
-								<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-								<!--#TODO removed attribute: dx="20"-->
 								<pathText k="name" font-style="bold" font-size="8" stroke="#FFFFFF" stroke-width="4.0"/>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="cycleway|bridleway">
 							<line stroke="#9c9c9c" stroke-width="0.2"/>
 							<rule e="way" k="*" v="*" zoom-min="14">
-								<!--#TODO removed attribute: scale-font-size="15,1.15"-->
 								<pathText k="name" dy="4.7" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="1.5"/>
 							</rule>
 						</rule>
@@ -3910,8 +3888,6 @@
 							<rule e="way" k="highway" v="construction">
 								<line stroke="#9f9f9f" stroke-width="0.8" stroke-dasharray="5,2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-									<!--#TODO removed attribute: dx="20"-->
 									<pathText k="name" font-style="bold" font-size="15" stroke="#FFFFFF" stroke-width="4.0"/>
 								</rule>
 							</rule>
@@ -3923,7 +3899,6 @@
 							<rule e="way" k="highway" v="cycleway|bridleway">
 								<line stroke="#9c9c9c" stroke-width="0.2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="15,1.15"-->
 									<pathText k="name" dy="4.7" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="1.5"/>
 								</rule>
 							</rule>
@@ -3968,21 +3943,18 @@
 							<rule e="way" k="tracktype" v="grade1|grade2">
 								<line stroke="#9f9f9f" stroke-width="0.3"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade2">
 								<line stroke="#9f9f9f" stroke-width="0.2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade3">
 								<line stroke="#9f9f9f" stroke-width="0.3" stroke-dasharray="16,6" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
-									<!--#TODO removed attribute: scale-font-size="17,1.15"-->
 									<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="2.0"/>
 								</rule>
 							</rule>
@@ -3992,8 +3964,6 @@
 						</rule>
 						<rule e="way" k="highway" v="construction">
 							<line stroke="#d2d2d2" stroke-width="0.6"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
-							<!--#TODO removed attribute: dx="20"-->
 							<pathText k="name" font-style="bold" font-size="15" stroke="#FFFFFF" stroke-width="4.0"/>
 						</rule>
 						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road">
@@ -4001,7 +3971,6 @@
 						</rule>
 						<rule e="way" k="highway" v="cycleway|bridleway">
 							<line stroke="#ffffff" stroke-width="0.2"/>
-							<!--#TODO removed attribute: scale-font-size="15,1.15"-->
 							<pathText k="name" dy="4.7" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="1.5"/>
 						</rule>
 						<rule e="way" k="highway" v="tertiary|raceway|tertiary_link">
@@ -7160,9 +7129,9 @@
 	<!-- end of historic -->
 	<!-- leisure -->
 	<rule e="any" k="leisure" v="*" zoom-min="15">
-		<rule e="any" k="leisure" v="sports_centre|swimming_pool|water_park" zoom-min="15">
+		<rule e="any" k="leisure" v="sports_centre|swimming_pool|water_park" zoom-min="17">
 			<rule e="any" k="access" v="yes|customers|permissive|public">
-				<!-- TODO captions for sport centers -->
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 			</rule>
 		</rule>
 	</rule>
