@@ -43,6 +43,7 @@ class GeneratorActions:
         self.soup = self._init_soup(options.output_template)
 
         self.actions = [
+            TemplateVariables.gen_action_copy_section,
             TemplateVariables.gen_action_create_highway_tunnels,
             TemplateVariables.gen_action_create_railway_bridge,
             TemplateVariables.gen_action_osmc_colors,
@@ -53,14 +54,14 @@ class GeneratorActions:
             TemplateVariables.gen_action_osmc_symbols_order,
         ]
 
-        self.non_supported_attributes = ['poidb']
+        self.non_supported_attributes = ['poidb','gen_section']
 
     def process_actions(self) -> BeautifulSoup:
 
         # find places where are required some actions and where results will be placed
         input_sections = []
         for action_name in self.actions:
-            input_sections.extend(self.soup.find_all(f='{}'.format(action_name)))
+            input_sections.extend(self.soup.find_all(action='{}'.format(action_name)))
 
         for input_section in input_sections:
 
@@ -80,7 +81,7 @@ class GeneratorActions:
                 source_rule = parser.from_string(section_soup.prettify(), Rule)
 
                 # convert lines to tunnel style
-                action_name = input_section['f']
+                action_name = input_section['action']
                 if action_name == TemplateVariables.gen_action_create_highway_tunnels:
                     self.convert_to_highway_tunnel(source_rule)
 
@@ -102,6 +103,8 @@ class GeneratorActions:
                 elif action_name == TemplateVariables.gen_action_cycle_basic_to_mtb_scale_0:
                     source_rule = self.create_cycle_sections(source_rule, TemplateVariables.color_cycle_mtb)
 
+                elif action_name == TemplateVariables.gen_action_copy_section:
+                    source_rule = self.copy_section(source_rule)
                 else:
                     print("Warning unsupported action {}".format(action_name))
 
@@ -118,7 +121,7 @@ class GeneratorActions:
                     input_section.parent.extend(tunnel_soup.children)
 
                 # remove attribute defining the source section for generation
-                del section_soup['gen_section']
+                #del section_soup['gen_section']
 
             # remove the input section from the base xml tree
             input_section.extract()
@@ -203,6 +206,11 @@ class GeneratorActions:
             bridge_core = Line(stroke_width=max_width + 0.25, stroke="#F7F7F7", stroke_linecap=Cap.BUTT)
             rule.line.clear()
             rule.line.extend([bridge_case, bridge_core])
+
+    def copy_section (self, rule: Rule):
+        print(rule)
+        #nothing to do with source rule
+        return rule
 
     def add_osmc_colors(self, source_rule):
         """
