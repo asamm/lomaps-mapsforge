@@ -2,12 +2,6 @@
 <rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" base-stroke-width="0.7" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--
 		LOCUS INTERNAL THEME FOR LOMAPS
-				Release July, 2016
-			Distributed under the Apache License
-
-
-version 2.4.0
-
 -->
 	<stylemenu id="r4menu" defaultvalue="hike_bike" defaultlang="en">
 		<!-- LAYER CITY -->
@@ -4405,13 +4399,20 @@ version 2.4.0
 				</rule>
 				<!-- railway bridge casings -->
 				<rule e="way" k="bridge" v="yes|true">
-					<rule e="way" k="railway" v="tram">
-						<line stroke="#000000" stroke-width="0.4" stroke-linecap="butt"/>
+					<rule e="way" k="railway" v="subway" zoom-min="13" zoom-max="127" closed="any">
+						<rule e="way" k="service" v="~" zoom-min="13" zoom-max="15" closed="any">
+							<line dy="0.0" scale="stroke" stroke="#000000" stroke-width="1.7000000000000002" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#F7F7F7" stroke-width="1.4500000000000002" stroke-linecap="butt" stroke-linejoin="round"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
+							<line dy="0.0" scale="stroke" stroke="#000000" stroke-width="0.99152" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#F7F7F7" stroke-width="0.74152" stroke-linecap="butt" stroke-linejoin="round"/>
+						</rule>
 					</rule>
-					<rule e="way" k="railway" v="subway">
-						<line stroke="#000000" stroke-width="0.6" stroke-linecap="butt"/>
+					<rule e="way" k="railway" v="tram|miniature" zoom-min="12" zoom-max="127" closed="any">
+						<line dy="0.0" scale="stroke" stroke="#000000" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#F7F7F7" stroke-width="1.45" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
-					<!-- railway bridge -->
 					<rule e="way" k="railway" v="narrow_gauge|light_rail|preserved|disused" zoom-min="12" zoom-max="127" closed="any">
 						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="14" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#000000" stroke-width="1.4" stroke-linecap="butt" stroke-linejoin="round"/>
@@ -4505,13 +4506,14 @@ version 2.4.0
 					<line stroke="#797979" stroke-width="1.2" stroke-dasharray="0.3,4" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="subway" zoom-min="13">
-					<rule e="way" k="name" v="*" zoom-min="13" zoom-max="15">
-						<line stroke="#508C0000" stroke-width="0.5" stroke-linecap="butt"/>
-						<line stroke="#508C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
+					<!-- workaround how to highlight only the main subway lines, not the depo lines (the main lines have almost defined the name) -->
+					<rule e="way" k="service" v="~" zoom-min="13" zoom-max="15">
+						<line stroke="#4d4d4d" stroke-width="1.2000000000000002" stroke-linecap="butt"/>
+						<line stroke="#EDEDED" stroke-width="0.9600000000000002" stroke-dasharray="4,5" stroke-linecap="round" scale="all"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="16">
-						<line stroke="#40333333" stroke-width="0.3" stroke-linecap="butt"/>
-						<line stroke="#40333333" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
+						<line stroke="#4d4d4d" stroke-width="0.49151999999999996" stroke-linecap="butt"/>
+						<line stroke="#EDEDED" stroke-width="0.39321600000000007" stroke-dasharray="2,3" stroke-linecap="round" scale="all"/>
 					</rule>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|preserved|disused" zoom-min="12">
@@ -4600,11 +4602,11 @@ version 2.4.0
 				</rule>
 			</rule>
 			<!-- End off railway -->
-			<!-- railway tunnel -->
+			<!-- railway tunnel topo -->
 			<rule e="way" k="tunnel" v="true|yes">
-				<rule e="way" k="railway" v="subway" zoom-min="11">
+				<rule e="way" k="railway" v="subway" zoom-min="13">
 					<line stroke="#408C0000" stroke-width="0.5" stroke-linecap="butt"/>
-					<line stroke="#408C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt"/>
+					<line stroke="#408C0000" stroke-width="0.5" stroke-dasharray="2,3" stroke-linecap="round" scale="all"/>
 				</rule>
 				<rule e="way" k="railway" v="tram|miniature">
 					<line stroke="#880f0f4c" stroke-width="0.25" stroke-dasharray="4,4" stroke-linecap="butt"/>
@@ -4649,14 +4651,15 @@ version 2.4.0
 					<line stroke="#b8462e" stroke-width="0.4" stroke-dasharray="0.3,4" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="subway" zoom-min="13">
-					<!-- workaround how to highlight only the main subway lines, not the depo lines (the main lines have almost defined the name) -->
-					<rule e="way" k="*" v="*" zoom-min="16">
-						<line stroke="#40333333" stroke-width="0.3" stroke-linecap="butt"/>
-						<line stroke="#40333333" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt"/>
-					</rule>
-					<rule e="way" k="name" v="*" zoom-min="13">
-						<line stroke="#508C0000" stroke-width="0.5" stroke-linecap="butt"/>
-						<line stroke="#508C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt"/>
+					<rule e="way" k="railway" v="subway" zoom-min="13" zoom-max="127" closed="any">
+						<rule e="way" k="service" v="~" zoom-min="13" zoom-max="15" closed="any">
+							<line dy="0.0" scale="stroke" stroke="#4d4d4d" stroke-width="1.2000000000000002" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="all" stroke="#EDEDED" stroke-width="0.9600000000000002" stroke-dasharray="4,5" stroke-linecap="round" stroke-linejoin="round"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
+							<line dy="0.0" scale="stroke" stroke="#4d4d4d" stroke-width="0.49151999999999996" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="all" stroke="#EDEDED" stroke-width="0.39321600000000007" stroke-dasharray="2,3" stroke-linecap="round" stroke-linejoin="round"/>
+						</rule>
 					</rule>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|funicular" zoom-min="12">
@@ -4712,6 +4715,9 @@ version 2.4.0
 				<!-- tram for car theme -->
 				<rule e="way" k="railway" v="tram" zoom-min="15">
 					<line stroke="#707070" stroke-width="0.1" stroke-linecap="butt"/>
+				</rule>
+				<rule e="way" k="railway" v="subway" zoom-min="14">
+					<line stroke="#707070" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|funicular" zoom-min="12">
 					<line stroke="#707070" stroke-width="0.3" stroke-linecap="butt"/>

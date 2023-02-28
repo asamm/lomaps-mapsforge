@@ -4,12 +4,6 @@
 			 base-stroke-width="0.7" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--
 		LOCUS INTERNAL THEME FOR LOMAPS
-				Release July, 2016
-			Distributed under the Apache License
-
-
-version 2.4.0
-
 -->
 	<stylemenu id="r4menu" defaultvalue="hike_bike" defaultlang="en">
 		<!-- LAYER CITY -->
@@ -1038,7 +1032,7 @@ version 2.4.0
 				<rule cat="cyc_mtb_routes" e="way" k="route|bicycle" v="mtb|yes|designated" zoom-min="12">
 					<rule e="way" k="mtb:scale" v="0" zoom-min="13">
 						<!-- copy style from simple cycle ways for mtb:scale=0 -->
-						<generator f="$gen_action_cycle_basic_to_mtb_scale_0" source_section="basic_cycle_ways"></generator>
+						<generator action="$gen_action_cycle_basic_to_mtb_scale_0" source_section="basic_cycle_ways"></generator>
 					</rule>
 					<rule e="way" k="mtb:scale" v="1|2" zoom-min="13">
 						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
@@ -1181,7 +1175,7 @@ version 2.4.0
 
 					<!-- Create ICN rules fron RCN (different color but same rules) -->
 					<rule e="way" k="network" v="icn|ncn">
-						<generator f="$gen_action_cycle_icn" source_section="osmc_cycle_rcn"></generator>
+						<generator action="$gen_action_cycle_icn" source_section="osmc_cycle_rcn"></generator>
 					</rule>
 				</rule>
 
@@ -1189,7 +1183,7 @@ version 2.4.0
 				<rule cat="hik_routes" e="way" k="route" v="hiking|foot">
 					<rule e="way" k="osmc" v="~">
 						<!-- copy SAC section these routes are drown as red lines-->
-						<generator f="$gen_action_sac_scale2lwn" source_section="sac_scale"></generator>
+						<generator action="$gen_action_sac_scale2lwn" source_section="sac_scale"></generator>
 					</rule>
 				</rule>
 
@@ -1384,7 +1378,7 @@ version 2.4.0
 							</rule>
 
 							<!-- add all OSMC colors -->
-							<generator f="$gen_action_osmc_colors" source_section="osmc_hiking"></generator>
+							<generator action="$gen_action_osmc_colors" source_section="osmc_hiking"></generator>
 						</rule>
 					</rule>
 
@@ -2712,7 +2706,7 @@ version 2.4.0
 					</rule>
 				</rule>
 				<!-- highway tunnel casings -->
-				<generator f="$gen_action_create_highway_tunnels" source_section="to_tunnel"></generator>
+				<generator action="$gen_action_create_highway_tunnels" source_section="to_tunnel"></generator>
 			</rule>
 		</rule>
 		<!-- END tunnels -->
@@ -2725,31 +2719,24 @@ version 2.4.0
 				</rule>
 				<!-- railway bridge casings -->
 				<rule e="way" k="bridge" v="yes|true">
-					<rule e="way" k="railway" v="tram">
-						<line stroke="#000000" stroke-width="0.4" stroke-linecap="butt"/>
-					</rule>
-					<rule e="way" k="railway" v="subway">
-						<line stroke="#000000" stroke-width="0.6" stroke-linecap="butt"/>
-					</rule>
-
-					<!-- railway bridge -->
-					<generator f="$gen_action_create_railway_bridge" source_section="railway_sec">
-
-					</generator>
+					<generator action="$gen_action_create_railway_bridge" source_section="subway_sec"/>
+					<generator action="$gen_action_create_railway_bridge" source_section="railway_sec"/>
 				</rule>
+
 				<!-- railway casings and cores -->
-				<rule e="way" k="railway" v="tram|miniature" zoom-min="12">
+				<rule e="way" k="railway" v="tram|miniature" zoom-min="12" gen_section="railway_sec">
 					<line stroke="#797979" stroke-width="0.3" stroke-linecap="butt"/>
 					<line stroke="#797979" stroke-width="1.2" stroke-dasharray="0.3,4" stroke-linecap="butt"/>
 				</rule>
-				<rule e="way" k="railway" v="subway" zoom-min="13">
-					<rule e="way" k="name" v="*" zoom-min="13" zoom-max="15">
-						<line stroke="#508C0000" stroke-width="0.5" stroke-linecap="butt"/>
-						<line stroke="#508C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
+				<rule e="way" k="railway" v="subway" zoom-min="13" gen_section="subway_sec">
+					<!-- workaround how to highlight only the main subway lines, not the depo lines (the main lines have almost defined the name) -->
+					<rule e="way" k="service" v="~" zoom-min="13" zoom-max="15">
+						<line stroke="$color_railway_main_case" stroke-width="${0.8 * $railway_main_width_z13}" stroke-linecap="butt" />
+						<line stroke="$color_railway_main" stroke-width="${0.8 * 0.8 * $railway_main_width_z13}" stroke-dasharray="4,5" stroke-linecap="round" scale="all"/>
 					</rule>
-					<rule e="way" k="*" v="*" zoom-min="16">
-						<line stroke="#40333333" stroke-width="0.3" stroke-linecap="butt"/>
-						<line stroke="#40333333" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt" scale="all"/>
+					<rule e="way" k="*" v="*" zoom-min="16" >
+						<line stroke="$color_railway_main_case" stroke-width="${0.8 * $railway_main_width_z17}" stroke-linecap="butt" />
+						<line stroke="$color_railway_main" stroke-width="${0.8 * 0.8 * $railway_main_width_z17}" stroke-dasharray="2,3" stroke-linecap="round" scale="all"/>
 					</rule>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|preserved|disused" zoom-min="12" gen_section="railway_sec" >
@@ -2838,11 +2825,12 @@ version 2.4.0
 				</rule>
 			</rule>
 			<!-- End off railway -->
-			<!-- railway tunnel -->
+
+			<!-- railway tunnel topo -->
 			<rule e="way" k="tunnel" v="true|yes">
-				<rule e="way" k="railway" v="subway" zoom-min="11">
-					<line stroke="#408C0000" stroke-width="0.5" stroke-linecap="butt"/>
-					<line stroke="#408C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt"/>
+				<rule e="way" k="railway" v="subway" zoom-min="13">
+					<line stroke="#408C0000" stroke-width="0.5" stroke-linecap="butt" />
+					<line stroke="#408C0000" stroke-width="0.5" stroke-dasharray="2,3" stroke-linecap="round" scale="all"/>
 				</rule>
 				<rule e="way" k="railway" v="tram|miniature">
 					<line stroke="#880f0f4c" stroke-width="0.25" stroke-dasharray="4,4" stroke-linecap="butt"/>
@@ -2887,15 +2875,7 @@ version 2.4.0
 					<line stroke="#b8462e" stroke-width="0.4" stroke-dasharray="0.3,4" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="subway" zoom-min="13">
-					<!-- workaround how to highlight only the main subway lines, not the depo lines (the main lines have almost defined the name) -->
-					<rule e="way" k="*" v="*" zoom-min="16">
-						<line stroke="#40333333" stroke-width="0.3" stroke-linecap="butt"/>
-						<line stroke="#40333333" stroke-width="0.3" stroke-dasharray="8,8" stroke-linecap="butt"/>
-					</rule>
-					<rule e="way" k="name" v="*" zoom-min="13">
-						<line stroke="#508C0000" stroke-width="0.5" stroke-linecap="butt"/>
-						<line stroke="#508C0000" stroke-width="0.5" stroke-dasharray="8,8" stroke-linecap="butt"/>
-					</rule>
+					<generator action="$gen_action_copy_section" source_section="subway_sec"/>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|funicular" zoom-min="12">
 					<line stroke="#707070" stroke-width="0.3" stroke-linecap="butt"/>
@@ -2950,6 +2930,9 @@ version 2.4.0
 				<!-- tram for car theme -->
 				<rule e="way" k="railway" v="tram" zoom-min="15">
 					<line stroke="#707070" stroke-width="0.1" stroke-linecap="butt"/>
+				</rule>
+				<rule e="way" k="railway" v="subway" zoom-min="14">
+					<line stroke="#707070" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|funicular" zoom-min="12">
 					<line stroke="#707070" stroke-width="0.3" stroke-linecap="butt"/>
@@ -4035,7 +4018,7 @@ version 2.4.0
 					</rule>
 				</rule> <!-- end of OSMC foreground -->
 
-				<generator f="$gen_action_osmc_symbols_order" source_section="osmc_symbols"></generator>
+				<generator action="$gen_action_osmc_symbols_order" source_section="osmc_symbols"></generator>
 
 			</rule>
 		</rule>

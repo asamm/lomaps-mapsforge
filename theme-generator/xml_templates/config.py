@@ -271,3 +271,6 @@ class TemplateVariables(Template):
 
     # Duplicate OSMC symbols part to order symbols along line
     gen_action_osmc_symbols_order = "action_create_osmc_symbols_order"
+
+    # Copy section from source to the defined places
+    gen_action_copy_section = "action_copy_section"
