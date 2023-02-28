@@ -468,7 +468,7 @@
 			<!-- Golf, playground summer -->
 			<rule cat="base_summer" e="way" k="leisure" v="*" zoom-min="13" closed="yes">
 				<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
-					<area fill="#e1d5b6"/>
+					<area stroke="#b3a98f" stroke-width="0.3"/>
 				</rule>
 				<rule e="way" k="leisure" v="golf_course|common|green">
 					<area fill="#dbe5b2"/>
@@ -485,7 +485,7 @@
 			<!-- Golf, playground winter -->
 			<rule cat="base_winter" e="way" k="leisure" v="*" zoom-min="13" closed="yes">
 				<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
-					<area fill="#e1d5b6"/>
+					<area stroke="#CECECE" stroke-width="0.3"/>
 				</rule>
 				<rule e="way" k="leisure" v="golf_course|common|green">
 					<area fill="#c7dcdb"/>
