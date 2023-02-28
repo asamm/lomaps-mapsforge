@@ -208,7 +208,6 @@ class GeneratorActions:
             rule.line.extend([bridge_case, bridge_core])
 
     def copy_section (self, rule: Rule):
-        print(rule)
         #nothing to do with source rule
         return rule
 
