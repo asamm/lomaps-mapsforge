@@ -3731,10 +3731,10 @@
 					<!-- highway one-way markers -->
 					<rule e="way" k="oneway" v="yes|true" zoom-min="15">
 						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="401"/>
-						<rule e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane" zoom-min="18">
+						<rule cat="base_summer" e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane" zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="left" position="center" priority="402"/>
 						</rule>
-						<rule e="way" k="oneway:bicycle" v="no" zoom-min="18">
+						<rule cat="base_summer" e="way" k="oneway:bicycle" v="no" zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="left" position="center" priority="402"/>
 						</rule>
 					</rule>
