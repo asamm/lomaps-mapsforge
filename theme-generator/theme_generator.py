@@ -32,7 +32,7 @@ def parse_cmd() -> Options:
 
     parser.add_argument("-tc", "--templateConfig", type=str,
                         help="Path to file with variables for base template. " +
-                             "Cheetah used it to replace the values in base tamplate",
+                             "Cheetah used it to replace the values in base template",
                         default='xml_templates/config.py')
 
     parser.add_argument("-ac", "--apdbConfig", type=str,

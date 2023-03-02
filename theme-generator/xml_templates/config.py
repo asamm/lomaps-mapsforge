@@ -267,6 +267,8 @@ class TemplateVariables(Template):
 
     # Duplicate style of RCN to ICN cycle routes to change it's color
     gen_action_cycle_icn = "action_create_cycle_icn"
+
+    #duplicate style of basic cycle way for MTB trails with mtb:scale=0 and change color to MTB style
     gen_action_cycle_basic_to_mtb_scale_0 = "action_create_mtb_scale_0_from_basic"
 
     # Duplicate OSMC symbols part to order symbols along line

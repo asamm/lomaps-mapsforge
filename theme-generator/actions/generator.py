@@ -1,6 +1,5 @@
 import copy
 
-import yaml
 from bs4 import BeautifulSoup
 from bs4.formatter import XMLFormatter
 from xsdata.formats.dataclass.parsers import XmlParser
@@ -13,16 +12,15 @@ from xml_templates.config import TemplateVariables
 
 class Options():
     def __init__(self,
-                theme_template,
-                apdb_config_xml,
-                template_config,
-                result_xml,
-                copy_to_device,
-                publish_for_android,
-                android_module_path = '',
-                locus_theme_path = '',
-                output_template = ''):
-
+                 theme_template,
+                 apdb_config_xml,
+                 template_config,
+                 result_xml,
+                 copy_to_device,
+                 publish_for_android,
+                 android_module_path='',
+                 locus_theme_path='',
+                 output_template=''):
         self.theme_template = theme_template
         self.apdb_config_xml = apdb_config_xml
         self.template_config = template_config
@@ -33,7 +31,7 @@ class Options():
         self.copy_to_device = copy_to_device
         self.publish_for_android = publish_for_android
         self.output_template = output_template
-        
+
 
 class GeneratorActions:
 
@@ -54,7 +52,7 @@ class GeneratorActions:
             TemplateVariables.gen_action_osmc_symbols_order,
         ]
 
-        self.non_supported_attributes = ['poidb','gen_section']
+        self.non_supported_attributes = ['poidb', 'gen_section']
 
     def process_actions(self) -> BeautifulSoup:
 
@@ -80,8 +78,10 @@ class GeneratorActions:
                 # deserialize XML to mapsforge objects (basically into rule and it's content)
                 source_rule = parser.from_string(section_soup.prettify(), Rule)
 
-                # convert lines to tunnel style
+                # get name of action from attribute
                 action_name = input_section['action']
+
+                # Proccess different action based on it name
                 if action_name == TemplateVariables.gen_action_create_highway_tunnels:
                     self.convert_to_highway_tunnel(source_rule)
 
@@ -120,9 +120,6 @@ class GeneratorActions:
                     # append the created tunnel section into defined place in the tree
                     input_section.parent.extend(tunnel_soup.children)
 
-                # remove attribute defining the source section for generation
-                #del section_soup['gen_section']
-
             # remove the input section from the base xml tree
             input_section.extract()
 
@@ -149,8 +146,8 @@ class GeneratorActions:
 
     def _init_soup(self, output_template):
         """
-        Initialize BeautifulSoup from output of Cheetag XML
-        :param output_template:
+        Initialize BeautifulSoup from output of Cheetah XML
+        :param output_template: path to the xml created by cheetah
         :return: soup instance
         """
         file = open(output_template, "r")
@@ -158,7 +155,7 @@ class GeneratorActions:
 
     def convert_to_highway_tunnel(self, rule: Rule, parent_rules=[], zoom_min=0):
         """
-        Find lines in the rulles and make them dashed
+        Find lines in the rules and make them dashed
         :param rule:
         :param parent_rules:
         :param zoom_min:
@@ -183,7 +180,7 @@ class GeneratorActions:
 
     def convert_to_railway_bridge(self, rule: Rule, parent_rules=[], zoom_min=0):
         """
-        Find lines in the rulles and make them dashed
+        Find lines in the rules and make them dashed
         :param rule:
         :param parent_rules:
         :param zoom_min:
@@ -207,15 +204,15 @@ class GeneratorActions:
             rule.line.clear()
             rule.line.extend([bridge_case, bridge_core])
 
-    def copy_section (self, rule: Rule):
-        #nothing to do with source rule
+    def copy_section(self, rule: Rule):
+        # nothing to do with source rule
         return rule
 
     def add_osmc_colors(self, source_rule):
         """
-        For every defined color use original definition (for red color) and duplicate it
-        :param source_rule:
-        :return:
+        For every defined color use original definition (for red color) and duplicate it for every OSMC color
+        :param source_rule: definition of marked trails for single color (red)
+        :return: rules for all OSMC colors
         """
         color_rules = []
 
@@ -282,7 +279,8 @@ class GeneratorActions:
     def create_cycle_sections(self, source_rule: Rule, cycle_line_color):
         """
         Find lines in the rules and set color for ICN
-        :param rule:
+        :param source_rule: definition for cycle lines to replace color of lines
+        :param cycle_line_color: new color to replace the original colors
                 """
         # iterate child rules
         for child_rule in source_rule.rule:
@@ -296,10 +294,15 @@ class GeneratorActions:
 
     ## OSMC SYMBOLS section ------------------------
     def add_osmc_symbols_order(self, source_rule):
+        """
+        Generate almost identical rules for OSMC lines only offset is increased to create multiple lines along paths
+        :param source_rule: definition for the first line with basic offset
+        :return:
+        """
         symbol_orders_rules = []
 
         for order in range(0, 3):
-            # definition of line width,etc that will be recreated for every osmc color
+            # definition of line width,etc. that will be recreated for every osmc color
             symbol_rule = copy.deepcopy(source_rule.rule[0])
 
             symbol_orders_rules.append(self.create_osmc_symbol_order(symbol_rule, order))
@@ -309,7 +312,11 @@ class GeneratorActions:
         return source_rule
 
     def create_osmc_symbol_order(self, source_rule, order: int):
-
+        """
+        Change offset of lines based on the order value
+        :param source_rule
+        :param order
+        """
         if source_rule.k == 'osmc_order':
             if order == 0:
                 source_rule.v = "~"  # for first order do not print counter
@@ -345,7 +352,10 @@ class GeneratorActions:
         return False
 
     def remove_nonsupported_attributes(self, soup):
-
+        """
+        Remove attributes that aren't supported by renderer
+        :param soup:
+        """
         for attribute_name in self.non_supported_attributes:
             tags = soup.select('[{}]'.format(attribute_name))
             for tag in tags:
@@ -377,13 +387,12 @@ class Osmc2SacScale():
         return rule.k == "osmc_order" and (rule.v == "~" or rule.v == "1")
 
     def _order_rule_2_sac(self, rule):
-
         pass
 
 
 class SortAttributes(XMLFormatter):
     def attributes(self, tag):
-        """Reorder a tag's attributes however you want."""
+        """Reorder a tag's attributes based on this order."""
         attrib_order = ['cat', 'e', 'k', 'v', 'zoom-min', 'zoom-max']
         new_order = []
         for element in attrib_order:
