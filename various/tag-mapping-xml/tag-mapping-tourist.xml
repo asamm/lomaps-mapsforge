@@ -935,11 +935,43 @@
 		<osm-tag key="access" value="yes" renderable="false" />
 
 		<osm-tag key="bridge" value="yes" renderable="false" />
-			
+
 		<osm-tag key="bicycle" value="designated" renderable="false" />
-		<osm-tag key="bicycle" value="yes" renderable="false" />
+		<osm-tag key="bicycle" value="no" equivalent-values="0,false" renderable="false" />
+		<osm-tag key="bicycle" value="permissive" renderable="false" />
+		<osm-tag key="bicycle" value="yes" equivalent-values="1,true" renderable="false" />
+
+		<osm-tag key="foot" value="designated" renderable="false" />
+		<osm-tag key="foot" value="no" equivalent-values="0,false" renderable="false" />
+		<osm-tag key="foot" value="permissive" renderable="false" />
+		<osm-tag key="foot" value="yes" equivalent-values="1,true" renderable="false" />
+
+		<osm-tag key="horse" value="designated" renderable="false" />
+		<osm-tag key="horse" value="no" equivalent-values="0,false" renderable="false" />
+		<osm-tag key="horse" value="permissive" renderable="false" />
+		<osm-tag key="horse" value="yes" equivalent-values="1,true" renderable="false" />
+
+		<osm-tag key="designation" value="public_footpath" renderable="false" />
+		<osm-tag key="designation" value="public_bridleway" renderable="false" />
+		<osm-tag key="designation" value="restricted_byway" renderable="false" />
+		<osm-tag key="designation" value="byway_open_to_all_traffic" renderable="false" />
+		<osm-tag key="designation" value="access_land" renderable="false" />
+		<osm-tag key="designation" value="public_cycleway" renderable="false" />
+		<osm-tag key="designation" value="green_lane" renderable="false" />
+		<osm-tag key="designation" value="core_path" renderable="false" />
+
 		<osm-tag key="car" value="yes" renderable="false" />
 		<osm-tag key="truck" value="yes" renderable="false" />
+
+		<osm-tag key="parking" value="lane" renderable="false" />
+		<osm-tag key="parking" value="layby" renderable="false" />
+		<osm-tag key="parking" value="multi-storey" renderable="false" />
+		<osm-tag key="parking" value="on_kerb" renderable="false" />
+		<osm-tag key="parking" value="street_side" renderable="false" />
+		<osm-tag key="parking" value="surface" renderable="false" />
+		<osm-tag key="parking" value="underground" renderable="false" />
+		<osm-tag key="parking" value="underground" renderable="false" />
+		<osm-tag key="parking" value="yes" renderable="false" />
 
 		<osm-tag key="oneway" value="yes" equivalent-values="1,true" renderable="false" />
 		<osm-tag key="oneway" value="-1" renderable="false" />
