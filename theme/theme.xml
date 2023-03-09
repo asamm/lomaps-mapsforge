@@ -116,7 +116,13 @@
 		<rule e="way" k="natural" v="sea">
 			<area fill="#9CC9E8"/>
 		</rule>
-		<rule cat="base_city|base_car|base_summer" e="way" k="natural" v="nosea">
+		<rule cat="base_car" e="way" k="natural" v="nosea">
+			<area fill="#ebeade"/>
+		</rule>
+		<rule cat="base_city" e="way" k="natural" v="nosea">
+			<area fill="#ebeade"/>
+		</rule>
+		<rule cat="base_summer" e="way" k="natural" v="nosea">
 			<area fill="#ebeade"/>
 		</rule>
 		<rule cat="base_winter" e="way" k="natural" v="nosea">
