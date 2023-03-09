@@ -173,7 +173,8 @@ class TemplateVariables(Template):
 
     }
 
-    osmc_symbol_repeat_start = 30
+    osmc_symbol_repeat_start = 50
+    osmc_routename_repeat_start = 100
 
     ## MTB && Cyclo
 
@@ -272,7 +273,7 @@ class TemplateVariables(Template):
     gen_action_cycle_basic_to_mtb_scale_0 = "action_create_mtb_scale_0_from_basic"
 
     # Duplicate OSMC symbols part to order symbols along line
-    gen_action_osmc_symbols_order = "action_create_osmc_symbols_order"
+    gen_action_osmc_symbols_and_order = "action_create_osmc_symbols_and_order"
 
     # Copy section from source to the defined places
     gen_action_copy_section = "action_copy_section"

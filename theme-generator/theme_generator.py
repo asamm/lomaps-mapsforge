@@ -4,7 +4,7 @@ import os
 
 import yaml
 
-from actions.generator import GeneratorActions, Options
+from actions.generator import GeneratorActions, Options, OsmcSymbolDef
 from actions.icon_validator import IconValidator
 from helpers import copy_theme_to_device, transform_cheetah_template, publish_theme_to_android_module
 from poi_theme import PoiThemeGenerator
@@ -66,6 +66,12 @@ def read_options_yaml(file, option) -> Options:
     option.android_module_path = option_yaml['Options']['android_module_path']
     option.locus_theme_path = option_yaml['Options']['locus_theme_path']
     option.output_template = option_yaml['Options']['output_template']
+
+    option.osmc_symbol = OsmcSymbolDef(
+        option_yaml['OsmcSymbol']['color'],
+        option_yaml['OsmcSymbol']['foreground'],
+        option_yaml['OsmcSymbol']['background']
+    )
 
     return option
 
