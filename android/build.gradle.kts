@@ -16,8 +16,8 @@ android {
 
     // define default parameters
     defaultConfig {
-        minSdkVersion = 21
-        targetSdkVersion = 31
+        minSdk = 21
+        targetSdk = 31
     }
 }
 
