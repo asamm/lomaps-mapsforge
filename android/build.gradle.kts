@@ -13,6 +13,12 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     buildToolsVersion = "33.0.1"
+
+    // define default parameters
+    defaultConfig {
+        minSdkVersion = 21
+        targetSdkVersion = 31
+    }
 }
 
 dependencies {
