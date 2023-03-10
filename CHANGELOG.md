@@ -1,3 +1,9 @@
+## [1.1.2] - 2023-03-10
+
+### Added
+
+- missing minimal and target API for Android module
+
 ## [1.1.1] - 2023-03-09
 
 ### Changed
