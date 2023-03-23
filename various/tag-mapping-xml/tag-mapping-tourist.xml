@@ -208,6 +208,7 @@
 		<osm-tag key="natural" value="gully" zoom-appear="14" />
 		<osm-tag key="natural" value="massif" zoom-appear="12" />
 		<osm-tag key="natural" value="mountain_range" zoom-appear="12" />
+		<osm-tag key="natural" value="mud" zoom-appear="12" />
 		<osm-tag key="natural" value="peak" zoom-appear="12" />
 		<osm-tag key="natural" value="rock" zoom-appear="12" />
 		<osm-tag key="natural" value="sinkhole" zoom-appear="14" />
@@ -447,7 +448,9 @@
 		<osm-tag key="wetland" value="swamp" zoom-appear="12" />
 		<osm-tag key="wetland" value="tidalflat" zoom-appear="12" />
 		<osm-tag key="wetland" value="wet_meadow" zoom-appear="12" />
-		
+
+		<osm-tag key="tidal" value="yes" zoom-appear="12" renderable="false"/>
+
 		<osm-tag key="mountain_pass" value="yes" zoom-appear="14" />
 		<osm-tag key="region:type" value="massif" zoom-appear="12" />
 		<osm-tag key="region:type" value="mountain_area" zoom-appear="12" />
