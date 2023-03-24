@@ -383,6 +383,17 @@
 		
 		<!-- highway restriction -->
 		<osm-tag key="motor_vehicle" value="no" zoom-appear="15" />
+
+		<!-- Surface based on OAM definition -->
+		<osm-tag key="surface" value="paved" equivalent-values="hard" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="asphalt" equivalent-values="concrete,cement,metal_grid,brick,chipseal,interlock,plastic,granite" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="compacted" equivalent-values="fine_gravel" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="smooth_paved" equivalent-values="concrete:plates,concrete:lanes,paving_stones,paving_stones:30,paving_stones:20,bricks,cement,metal,wood" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="rough_paved" equivalent-values="unhewn_cobblestone,cobblestone,stone,grass_paver,cobblestone:flattened,sett" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="gravel" equivalent-values="pebblestone,woodchips" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="raw" equivalent-values="ground,dirt,grass,sand,earth,mud,clay,saltrock,stone,dirt/sand,soil,trail" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="winter" equivalent-values="ice,snow" renderable="false" />
+		<osm-tag key="surface" value="unpaved" equivalent-values="unpaved_minor" renderable="false" zoom-appear="9" />
 	</ways>
 
 	<!-- NATURAL / WATERWAY TAGS -->
@@ -481,6 +492,7 @@
 		<osm-tag key="landuse" value="orchard" zoom-appear="13" />
 		<osm-tag key="landuse" value="quarry" zoom-appear="10" />
 		<osm-tag key="landuse" value="railway" zoom-appear="10" />
+		<osm-tag key="landuse" value="residential" zoom-appear="10" />
 		<osm-tag key="landuse" value="recreation_ground" zoom-appear="14" />
 		<osm-tag key="landuse" value="reservoir" zoom-appear="10" />
 		<osm-tag key="landuse" value="retail" zoom-appear="14" />
