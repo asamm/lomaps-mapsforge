@@ -197,26 +197,27 @@
 		<osm-tag key="leaf_type" value="mixed" renderable="false" />
 		<osm-tag key="leaf_type" value="needleleaved" renderable="false" />
 		
-		<osm-tag key="natural" value="bare_rock" zoom-appear="14" />
-		<osm-tag key="natural" value="beach" zoom-appear="13" />
+		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
+		<osm-tag key="natural" value="beach" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />		
-		<osm-tag key="natural" value="cliff" zoom-appear="12" />
+		<osm-tag key="natural" value="cliff" zoom-appear="9" />
 		<osm-tag key="natural" value="coastline" zoom-appear="0" />
-		<osm-tag key="natural" value="desert" zoom-appear="13" />
-		<osm-tag key="natural" value="earth_bank" zoom-appear="14" />
+		<osm-tag key="natural" value="desert" zoom-appear="12" />
+		<osm-tag key="natural" value="earth_bank" zoom-appear="12" />
 		<osm-tag key="natural" value="glacier" zoom-appear="8" />
 		<osm-tag key="natural" value="gully" zoom-appear="14" />
 		<osm-tag key="natural" value="massif" zoom-appear="12" />
 		<osm-tag key="natural" value="mountain_range" zoom-appear="12" />
+		<osm-tag key="natural" value="mud" zoom-appear="12" />
 		<osm-tag key="natural" value="peak" zoom-appear="12" />
-		<osm-tag key="natural" value="rock" zoom-appear="14" />
+		<osm-tag key="natural" value="rock" zoom-appear="12" />
 		<osm-tag key="natural" value="sinkhole" zoom-appear="14" />
-		<osm-tag key="natural" value="sand" zoom-appear="14" />
+		<osm-tag key="natural" value="sand" zoom-appear="12" />
 		<osm-tag key="natural" value="sea" zoom-appear="0" />
 		<osm-tag key="natural" value="spring" zoom-appear="14" />
 		<osm-tag key="natural" value="stone" zoom-appear="14" />
 		<osm-tag key="natural" value="tree" zoom-appear="16" />
-		<osm-tag key="natural" value="valley" zoom-appear="13" />
+		<osm-tag key="natural" value="valley" zoom-appear="9" />
 		<osm-tag key="natural" value="volcano" zoom-appear="12" />
 		<osm-tag key="natural" value="wood" zoom-appear="10" />
 
@@ -382,6 +383,17 @@
 		
 		<!-- highway restriction -->
 		<osm-tag key="motor_vehicle" value="no" zoom-appear="15" />
+
+		<!-- Surface based on OAM definition -->
+		<osm-tag key="surface" value="paved" equivalent-values="hard" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="asphalt" equivalent-values="concrete,cement,metal_grid,brick,chipseal,interlock,plastic,granite" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="compacted" equivalent-values="fine_gravel" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="smooth_paved" equivalent-values="concrete:plates,concrete:lanes,paving_stones,paving_stones:30,paving_stones:20,bricks,cement,metal,wood" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="rough_paved" equivalent-values="unhewn_cobblestone,cobblestone,stone,grass_paver,cobblestone:flattened,sett" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="gravel" equivalent-values="pebblestone,woodchips" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="raw" equivalent-values="ground,dirt,grass,sand,earth,mud,clay,saltrock,stone,dirt/sand,soil,trail" renderable="false" zoom-appear="9" />
+		<osm-tag key="surface" value="winter" equivalent-values="ice,snow" renderable="false" />
+		<osm-tag key="surface" value="unpaved" equivalent-values="unpaved_minor" renderable="false" zoom-appear="9" />
 	</ways>
 
 	<!-- NATURAL / WATERWAY TAGS -->
@@ -392,27 +404,27 @@
 		
 		<osm-tag key="lock" value="yes" zoom-appear="14" />
 		
-		<osm-tag key="natural" value="bare_rock" zoom-appear="14" />		
-		<osm-tag key="natural" value="beach" zoom-appear="13" />
+		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
+		<osm-tag key="natural" value="beach" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />
-		<osm-tag key="natural" value="cliff" zoom-appear="13" />
+		<osm-tag key="natural" value="cliff" zoom-appear="9" />
 		<osm-tag key="natural" value="coastline" zoom-appear="0" force-polygon-line="true" />
-		<osm-tag key="natural" value="desert" zoom-appear="13" />
-		<osm-tag key="natural" value="earth_bank" zoom-appear="14" />
-		<osm-tag key="natural" value="fell" zoom-appear="13" />
+		<osm-tag key="natural" value="desert" zoom-appear="12" />
+		<osm-tag key="natural" value="earth_bank" zoom-appear="12" />
+		<osm-tag key="natural" value="fell" zoom-appear="12" />
 		<osm-tag key="natural" value="glacier" zoom-appear="8" />
-		<osm-tag key="natural" value="grassland" zoom-appear="14" />
+		<osm-tag key="natural" value="grassland" zoom-appear="12" />
 		<osm-tag key="natural" value="gully" zoom-appear="14" />
-		<osm-tag key="natural" value="heath" zoom-appear="13" />
+		<osm-tag key="natural" value="heath" zoom-appear="12" />
 		<osm-tag key="natural" value="land" zoom-appear="10" />
-		<osm-tag key="natural" value="marsh" zoom-appear="13" />
+		<osm-tag key="natural" value="marsh" zoom-appear="12" />
 		<osm-tag key="natural" value="massif" zoom-appear="12" />
 		<osm-tag key="natural" value="mountain_range" zoom-appear="12" />
 		<osm-tag key="natural" value="nosea" zoom-appear="0" />
 		<osm-tag key="natural" value="peak" zoom-appear="12" />
-		<osm-tag key="natural" value="rock" zoom-appear="14" />
-		<osm-tag key="natural" value="sand" zoom-appear="14" />
-		<osm-tag key="natural" value="scree" zoom-appear="13" />
+		<osm-tag key="natural" value="rock" zoom-appear="12" />
+		<osm-tag key="natural" value="sand" zoom-appear="12" />
+		<osm-tag key="natural" value="scree" zoom-appear="12" />
 		<osm-tag key="natural" value="scrub" zoom-appear="10" />
 		<osm-tag key="natural" value="sea" zoom-appear="0" />
 		<osm-tag key="natural" value="sinkhole" zoom-appear="14" />
@@ -420,10 +432,10 @@
 		<osm-tag key="natural" value="spring" zoom-appear="14" />
 		<osm-tag key="natural" value="stone" zoom-appear="14" />
 		<osm-tag key="natural" value="tree" zoom-appear="16" />
-		<osm-tag key="natural" value="valley" zoom-appear="13" />
+		<osm-tag key="natural" value="valley" zoom-appear="9" />
 		<osm-tag key="natural" value="volcano" zoom-appear="12" />
 		<osm-tag key="natural" value="water" zoom-appear="8" />
-		<osm-tag key="natural" value="wetland" zoom-appear="14" />
+		<osm-tag key="natural" value="wetland" zoom-appear="12" />
 		<osm-tag key="natural" value="wood" zoom-appear="9" />		
 
 		<osm-tag key="waterway" value="canal" zoom-appear="10" />
@@ -439,15 +451,17 @@
 		<osm-tag key="intermittent" value="yes" zoom-appear="14" renderable="false"/>
 		
 		<!-- more detailed natural=wetland -->
-		<osm-tag key="wetland" value="bog" zoom-appear="13" />
-		<osm-tag key="wetland" value="fen" zoom-appear="13" />
-		<osm-tag key="wetland" value="marsh" zoom-appear="13" />
-		<osm-tag key="wetland" value="reedbed" zoom-appear="13" />
-		<osm-tag key="wetland" value="saltmarsh" zoom-appear="13" />
-		<osm-tag key="wetland" value="swamp" zoom-appear="13" />
-		<osm-tag key="wetland" value="tidalflat" zoom-appear="13" />		
-		<osm-tag key="wetland" value="wet_meadow" zoom-appear="13" />
-		
+		<osm-tag key="wetland" value="bog" zoom-appear="12" />
+		<osm-tag key="wetland" value="fen" zoom-appear="12" />
+		<osm-tag key="wetland" value="marsh" zoom-appear="12" />
+		<osm-tag key="wetland" value="reedbed" zoom-appear="12" />
+		<osm-tag key="wetland" value="saltmarsh" zoom-appear="12" />
+		<osm-tag key="wetland" value="swamp" zoom-appear="12" />
+		<osm-tag key="wetland" value="tidalflat" zoom-appear="12" />
+		<osm-tag key="wetland" value="wet_meadow" zoom-appear="12" />
+
+		<osm-tag key="tidal" value="yes" zoom-appear="12" renderable="false"/>
+
 		<osm-tag key="mountain_pass" value="yes" zoom-appear="14" />
 		<osm-tag key="region:type" value="massif" zoom-appear="12" />
 		<osm-tag key="region:type" value="mountain_area" zoom-appear="12" />
@@ -468,7 +482,7 @@
 		<osm-tag key="landuse" value="farmland" zoom-appear="14" />
 		<osm-tag key="landuse" value="farmyard" zoom-appear="14" />
 		<osm-tag key="landuse" value="forest" zoom-appear="10" />
-		<osm-tag key="landuse" value="grass" zoom-appear="14" />
+		<osm-tag key="landuse" value="grass" zoom-appear="12" />
 		<osm-tag key="landuse" value="greenfield" zoom-appear="14" />
 		<osm-tag key="landuse" value="hop_garden" zoom-appear="13" />
 		<osm-tag key="landuse" value="industrial" zoom-appear="12" />
@@ -478,6 +492,7 @@
 		<osm-tag key="landuse" value="orchard" zoom-appear="13" />
 		<osm-tag key="landuse" value="quarry" zoom-appear="10" />
 		<osm-tag key="landuse" value="railway" zoom-appear="10" />
+		<osm-tag key="landuse" value="residential" zoom-appear="10" />
 		<osm-tag key="landuse" value="recreation_ground" zoom-appear="14" />
 		<osm-tag key="landuse" value="reservoir" zoom-appear="10" />
 		<osm-tag key="landuse" value="retail" zoom-appear="14" />
@@ -645,22 +660,25 @@
 		<osm-tag key="building" value="apartments" zoom-appear="15" />
 		<osm-tag key="building" value="bakehouse" zoom-appear="15" />
 		<osm-tag key="building" value="barn" zoom-appear="15" />
+		<osm-tag key="building" value="barracks" zoom-appear="15" />
 		<osm-tag key="building" value="basilica" zoom-appear="15" />
+		<osm-tag key="building" value="beach_hut" zoom-appear="15" />
 		<osm-tag key="building" value="block" zoom-appear="15" />
+		<osm-tag key="building" value="brevery" zoom-appear="15" />
 		<osm-tag key="building" value="brewery" zoom-appear="15" />
 		<osm-tag key="building" value="bridge" zoom-appear="15" />
 		<osm-tag key="building" value="bungalow" zoom-appear="15" />
 		<osm-tag key="building" value="bunker" zoom-appear="15" />
 		<osm-tag key="building" value="cabin" zoom-appear="14" />
-		<osm-tag key="building" value="castle" zoom-appear="15" />
 		<osm-tag key="building" value="carport" zoom-appear="15" />
+		<osm-tag key="building" value="castle" zoom-appear="14" />
 		<osm-tag key="building" value="cathedral" zoom-appear="14" />
 		<osm-tag key="building" value="chapel" zoom-appear="15" />
 		<osm-tag key="building" value="church" zoom-appear="14" />
 		<osm-tag key="building" value="city_hall" zoom-appear="15" />
 		<osm-tag key="building" value="civic" zoom-appear="15" />
-		<osm-tag key="building" value="college" zoom-appear="15" />
 		<osm-tag key="building" value="collapsed" zoom-appear="15" />
+		<osm-tag key="building" value="college" zoom-appear="15" />
 		<osm-tag key="building" value="commercial" zoom-appear="15" />
 		<osm-tag key="building" value="conservatory" zoom-appear="15" />
 		<osm-tag key="building" value="construction" zoom-appear="15" />
@@ -668,6 +686,7 @@
 		<osm-tag key="building" value="cowshed" zoom-appear="15" />
 		<osm-tag key="building" value="detached" zoom-appear="15" />
 		<osm-tag key="building" value="digester" zoom-appear="15" />
+		<osm-tag key="building" value="dog_house" zoom-appear="15" />
 		<osm-tag key="building" value="dormitory" zoom-appear="15" />
 		<osm-tag key="building" value="embassy" zoom-appear="15" />
 		<osm-tag key="building" value="farm" zoom-appear="15" />
@@ -677,9 +696,9 @@
 		<osm-tag key="building" value="garages" zoom-appear="15" />
 		<osm-tag key="building" value="gatehouse" zoom-appear="15" />
 		<osm-tag key="building" value="ger" zoom-appear="15" />
-		<osm-tag key="building" value="government" zoom-appear="14" />
+		<osm-tag key="building" value="government" zoom-appear="15" />
 		<osm-tag key="building" value="grandstand" zoom-appear="15" />
-		<osm-tag key="building" value="greenhouse" zoom-appear="14" />
+		<osm-tag key="building" value="greenhouse" zoom-appear="15" />
 		<osm-tag key="building" value="gym" zoom-appear="15" />
 		<osm-tag key="building" value="hangar" zoom-appear="15" />
 		<osm-tag key="building" value="hospital" zoom-appear="14" />
@@ -689,6 +708,7 @@
 		<osm-tag key="building" value="hut" zoom-appear="15" />
 		<osm-tag key="building" value="industrial" zoom-appear="15" />
 		<osm-tag key="building" value="kindergarten" zoom-appear="15" />
+		<osm-tag key="building" value="kingdom_hall" zoom-appear="15" />
 		<osm-tag key="building" value="kiosk" zoom-appear="15" />
 		<osm-tag key="building" value="library" zoom-appear="15" />
 		<osm-tag key="building" value="manufacture" zoom-appear="15" />
@@ -696,7 +716,7 @@
 		<osm-tag key="building" value="monastery" zoom-appear="15" />
 		<osm-tag key="building" value="monument" zoom-appear="15" />
 		<osm-tag key="building" value="mosque" zoom-appear="15" />
-		<osm-tag key="building" value="museum" zoom-appear="14" />
+		<osm-tag key="building" value="museum" zoom-appear="15" />
 		<osm-tag key="building" value="office" zoom-appear="15" />
 		<osm-tag key="building" value="palace" zoom-appear="15" />
 		<osm-tag key="building" value="parking" zoom-appear="15" />
@@ -708,20 +728,24 @@
 		<osm-tag key="building" value="retail" zoom-appear="15" />
 		<osm-tag key="building" value="riding_hall" zoom-appear="15" />
 		<osm-tag key="building" value="roof" zoom-appear="15" />
-		<osm-tag key="building" value="ruins" zoom-appear="13" />
+		<osm-tag key="building" value="ruins" zoom-appear="14" />
 		<osm-tag key="building" value="school" zoom-appear="15" />
 		<osm-tag key="building" value="semidetached_house" zoom-appear="15" />
 		<osm-tag key="building" value="service" zoom-appear="15" />
 		<osm-tag key="building" value="shed" zoom-appear="15" />
 		<osm-tag key="building" value="shrine" zoom-appear="15" />
+		<osm-tag key="building" value="silo" zoom-appear="15" />
 		<osm-tag key="building" value="slurry_tank" zoom-appear="15" />
 		<osm-tag key="building" value="sports" zoom-appear="15" />
+		<osm-tag key="building" value="sports_centre" zoom-appear="15" />
 		<osm-tag key="building" value="sports_hall" zoom-appear="15" />
 		<osm-tag key="building" value="stable" zoom-appear="15" />
 		<osm-tag key="building" value="stadium" zoom-appear="15" />
 		<osm-tag key="building" value="static_caravan" zoom-appear="15" />
-		<osm-tag key="building" value="sty" zoom-appear="15" />
+		<osm-tag key="building" value="stilt_house" zoom-appear="15" />
+		<osm-tag key="building" value="storage_tank" zoom-appear="15" />
 		<osm-tag key="building" value="store" zoom-appear="15" />
+		<osm-tag key="building" value="sty" zoom-appear="15" />
 		<osm-tag key="building" value="supermarket" zoom-appear="15" />
 		<osm-tag key="building" value="synagogue" zoom-appear="15" />
 		<osm-tag key="building" value="temple" zoom-appear="15" />
@@ -730,9 +754,10 @@
 		<osm-tag key="building" value="toilets" zoom-appear="15" />
 		<osm-tag key="building" value="tower" zoom-appear="15" />
 		<osm-tag key="building" value="train_station" zoom-appear="14" />
-		<osm-tag key="building" value="transformer_tower" zoom-appear="14" />
+		<osm-tag key="building" value="transformer_tower" zoom-appear="15" />
 		<osm-tag key="building" value="transportation" zoom-appear="14" />
-		<osm-tag key="building" value="university" zoom-appear="14" />
+		<osm-tag key="building" value="tree_house" zoom-appear="15" />
+		<osm-tag key="building" value="university" zoom-appear="15" />
 		<osm-tag key="building" value="warehouse" zoom-appear="15" />
 		<osm-tag key="building" value="water_tower" zoom-appear="15" />
 		<osm-tag key="building" value="yes" zoom-appear="15" />
