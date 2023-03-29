@@ -593,16 +593,7 @@
 		<!-- end of tourism areas -->
 		<!-- Contour lines  -->
 		<rule cat="base_topo" e="way" k="contour_ext" v="*">
-			<!-- contour lines level 13 -->
-			<rule e="way" k="contour_ext" v="*" zoom-min="12" zoom-max="12">
-				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#A07F5F" stroke-width="0.09" curve="cubic"/>
-				</rule>
-				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#A07F5F" stroke-width="0.25" curve="cubic"/>
-				</rule>
-			</rule>
-			<!-- contour lines level 14-->
+			<!-- contour lines level 13-->
 			<rule e="way" k="contour_ext" v="*" zoom-min="13" zoom-max="13">
 				<rule e="way" k="contour_ext" v="elevation_minor">
 					<line stroke="#A07F5F" stroke-width="0.09" curve="cubic"/>
@@ -611,7 +602,7 @@
 					<line stroke="#A07F5F" stroke-width="0.18" curve="cubic"/>
 				</rule>
 			</rule>
-			<!-- contour lines level 15-->
+			<!-- contour lines level 14-15-->
 			<rule e="way" k="contour_ext" v="*" zoom-min="14" zoom-max="15">
 				<rule e="way" k="contour_ext" v="elevation_minor">
 					<line stroke="#A07F5F" stroke-width="0.08" curve="cubic"/>
