@@ -1138,9 +1138,9 @@
 	
 	 <!-- Elevation TAGS -->
    <ways>
-      <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="14" force-polygon-line="true" />
-      <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="13" force-polygon-line="true" />
-      <osm-tag key="contour_ext" value="elevation_major" zoom-appear="13" force-polygon-line="true" />
+      <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="12" force-polygon-line="true" />
+      <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="9" force-polygon-line="true" />
+      <osm-tag key="contour_ext" value="elevation_major" zoom-appear="9" force-polygon-line="true" />
       <osm-tag key="ele" value="100" zoom-appear="14" />
       <osm-tag key="ele" value="200" zoom-appear="14" />
       <osm-tag key="ele" value="300" zoom-appear="14" />
