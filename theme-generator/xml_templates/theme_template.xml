@@ -1176,19 +1176,10 @@
 					</rule>
 				</rule>
 
-				<!-- OFFSET HIKING International, regional network that not defined by OSMC symbol or color -->
-				<rule cat="hik_routes" e="way" k="route" v="hiking|foot">
-					<rule e="way" k="osmc" v="~">
-						<!-- copy SAC section these routes are drown as red lines-->
-						<generator action="$gen_action_sac_scale2lwn" source_section="sac_scale"></generator>
-					</rule>
-				</rule>
-
 				<!-- OFFSET HIKING PATH OSMC:SYMBOL before highway core-->
 				<rule e="way" k="route" v="hiking|foot">
 					<rule cat="hik_routes" e="way" k="sac_scale" v="~">
 						<rule cat="hik_routes" e="way" k="osmc" v="yes">
-
 							<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="osmc_hiking" >
 								<rule e="way" k="osmc_color" v="red" >
 									<rule e="way" k="osmc_order" v="~">
@@ -1377,8 +1368,16 @@
 							<!-- add all OSMC colors -->
 							<generator action="$gen_action_osmc_colors" source_section="osmc_hiking"></generator>
 						</rule>
+
+						<!-- offset for hiking international, regional network that not defined by OSMC symbol or color -->
+						<rule e="way" k="osmc" v="~">
+							<rule e="way" k="network" v="iwn|nwn|rwn|lwn">
+								<generator action="$gen_action_osmc_to_iwn_rwn" source_section="osmc_hiking"></generator>
+							</rule>
+						</rule>
 					</rule>
 
+					<!-- offset for hiking routes defined with sac-scale but not with OSMC symbol or color -->
 					<rule cat="hik_routes" e="way" k="sac_scale" v="*">
 						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="sac_scale" >
 							<rule e="way" k="osmc_order" v="~" >
@@ -1520,9 +1519,9 @@
 									</rule>
 								</rule>
 							</rule>
-						</rule><!-- End of SAC highlights -->
-					</rule> <!-- End of hiking routes -->
-				</rule>
+						</rule>
+					</rule><!-- End of SAC highlights -->
+				</rule><!-- End of hiking routes -->
 
 				<!-- Symbols for via ferrata -->
 				<rule cat="via_ferrata_cat" e="way" k="highway" v="via_ferrata" zoom-min="15">

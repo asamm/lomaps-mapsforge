@@ -173,6 +173,10 @@ class TemplateVariables(Template):
 
     }
 
+    color_hiking_iwn_nwn = '#EA3200'
+    #color_hiking_rwn_lwn = '#e06c00' not used
+
+
     osmc_symbol_repeat_start = 30
 
     ## MTB && Cyclo
@@ -262,8 +266,9 @@ class TemplateVariables(Template):
 
     # OSMC colored lines
     gen_action_osmc_colors = "action_create_osmc_colors"
+
     # replace osmc by sac scale
-    gen_action_sac_scale2lwn = "action_sac_scales_to_lwn"
+    gen_action_osmc_to_iwn_rwn = "action_osmc_to_iwn_rwn"
 
     # Duplicate style of RCN to ICN cycle routes to change it's color
     gen_action_cycle_icn = "action_create_cycle_icn"
