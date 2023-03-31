@@ -174,8 +174,6 @@ class TemplateVariables(Template):
     }
 
     color_hiking_iwn_nwn = '#EA3200'
-    #color_hiking_rwn_lwn = '#e06c00' not used
-
 
     osmc_symbol_repeat_start = 30
 

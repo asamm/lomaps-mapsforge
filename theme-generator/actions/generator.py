@@ -346,12 +346,10 @@ class GeneratorActions:
 
     def gen_action_osmc_to_iwn_rwn(self, source_rule: Rule) -> Rule:
         """
-
-        :param source_rule:
-        :return:
+        Use definition of standard hiking routes and convert it for routes in network IWN,NWN,RWN,LWN
+        :param source_rule: definition for offset of hiking routes with OSMC symbol
+        :return: #Rule
         """
-        # filter rules for sac_scale different to "sac_scale=hiking" (only style for hiking sac is used as style for LWN pr IWN)
-
         if source_rule.k == "*" and source_rule.v == "*":
             children = source_rule.rule
             if len(children) != 1:
@@ -359,15 +357,21 @@ class GeneratorActions:
                       'contain only one child of "osmc_color")')
                 return source_rule
 
-            subchildren_rules = children[0].rule
-            source_rule.rule = subchildren_rules
+            # skip rule for osmc_color
+            sub_children_rules = children[0].rule
+            source_rule.rule = sub_children_rules
 
         for child_rule in source_rule.rule:
-            # inherit zoom and parent rules
+            # find lines in the children rules and set IWN/RWN color
             child_rule = self.set_iwn_rwn_line_style(child_rule)
         return source_rule
 
     def set_iwn_rwn_line_style(self, source_rule: Rule):
+        """
+        Recursively find all lines in rules and change color to defined color for IWN/RWN...
+        :param source_rule:
+        :return: #Rule
+        """
         for child_rule in source_rule.rule:
             self.set_iwn_rwn_line_style(child_rule)
 
@@ -375,7 +379,6 @@ class GeneratorActions:
             line.stroke = TemplateVariables.color_hiking_iwn_nwn
 
         return source_rule
-
 
     def remove_nonsupported_attributes(self, soup):
         """
