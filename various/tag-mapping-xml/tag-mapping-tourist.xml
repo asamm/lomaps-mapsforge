@@ -967,11 +967,6 @@
 		<osm-tag key="foot" value="permissive" renderable="false" />
 		<osm-tag key="foot" value="yes" equivalent-values="1,true" renderable="false" />
 
-		<osm-tag key="horse" value="designated" renderable="false" />
-		<osm-tag key="horse" value="no" equivalent-values="0,false" renderable="false" />
-		<osm-tag key="horse" value="permissive" renderable="false" />
-		<osm-tag key="horse" value="yes" equivalent-values="1,true" renderable="false" />
-
 		<osm-tag key="designation" value="public_footpath" renderable="false" />
 		<osm-tag key="designation" value="public_bridleway" renderable="false" />
 		<osm-tag key="designation" value="restricted_byway" renderable="false" />
