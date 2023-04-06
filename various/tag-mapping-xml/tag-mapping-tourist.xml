@@ -196,6 +196,7 @@
 		<osm-tag key="leaf_type" value="needleleaved" renderable="false" />
 		
 		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
+		<osm-tag key="natural" value="bay" zoom-appear="12" />
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />		
 		<osm-tag key="natural" value="cliff" zoom-appear="9" />
@@ -404,6 +405,7 @@
 		
 		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
+		<osm-tag key="natural" value="bay" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />
 		<osm-tag key="natural" value="cliff" zoom-appear="9" />
 		<osm-tag key="natural" value="coastline" zoom-appear="0" force-polygon-line="true" />
