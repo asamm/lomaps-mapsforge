@@ -1,3 +1,19 @@
+## [1.1.3] - 2023-04-06
+
+### Added
+
+- display tidal areas with mud or sand
+
+### Changed
+- improve offset for MTB routes (avoid hidden route by highway)
+- tag-mapping file supports new tags especially for OS theme (surface, residential areas, special 
+  buildings) 
+- from tag-mapping file were removed unused tag (`wheelchair=*`, `oneway=no`, `horse=*`) 
+
+### Fixed
+- display missing IWN, NWN, RWN, LWN hiking routes
+
+
 ## [1.1.2] - 2023-03-10
 
 ### Added
