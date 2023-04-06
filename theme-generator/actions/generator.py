@@ -1,4 +1,5 @@
 import copy
+import sys
 
 from bs4 import BeautifulSoup
 from bs4.formatter import XMLFormatter
@@ -7,6 +8,7 @@ from xsdata.formats.dataclass.parsers.config import ParserConfig
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from mapsforge.render_theme import Rule, Cap, Line
+from xml_templates import config
 from xml_templates.config import TemplateVariables
 
 
@@ -44,11 +46,14 @@ class GeneratorActions:
             TemplateVariables.gen_action_copy_section,
             TemplateVariables.gen_action_create_highway_tunnels,
             TemplateVariables.gen_action_create_railway_bridge,
-            TemplateVariables.gen_action_osmc_colors,
-            TemplateVariables.gen_action_sac_scale2lwn,
+            TemplateVariables.gen_action_osmc_to_iwn_rwn,
 
             TemplateVariables.gen_action_cycle_icn,
             TemplateVariables.gen_action_cycle_basic_to_mtb_scale_0,
+
+            # these two actions has to be last ones and in this order because the OSMC section as source section is
+            # modified during these actions
+            TemplateVariables.gen_action_osmc_colors,
             TemplateVariables.gen_action_osmc_symbols_order,
         ]
 
@@ -63,8 +68,14 @@ class GeneratorActions:
 
         for input_section in input_sections:
 
-            # find all section that should be used as source for converting to tunnel, bridge etc
-            source_sections = self.soup.find_all(gen_section=input_section['source_section'])
+            # find all section that should be used as source for generator action defined in input section
+            source_sections = self.soup.find_all(gen_section='{}'.format(input_section['source_section']))
+
+            if len(source_sections) == 0:
+                print("WARNING - Can not find source section for '{}'. "
+                      "Please check that gen_section=\"{}\" is defined in template".
+                      format(input_section['source_section'], input_section['source_section']))
+                continue
 
             config = ParserConfig(
                 fail_on_unknown_properties=True,
@@ -81,7 +92,7 @@ class GeneratorActions:
                 # get name of action from attribute
                 action_name = input_section['action']
 
-                # Proccess different action based on it name
+                # Process different action based on it name
                 if action_name == TemplateVariables.gen_action_create_highway_tunnels:
                     self.convert_to_highway_tunnel(source_rule)
 
@@ -91,8 +102,8 @@ class GeneratorActions:
                 elif action_name == TemplateVariables.gen_action_osmc_colors:
                     source_rule = self.add_osmc_colors(source_rule)
 
-                elif action_name == TemplateVariables.gen_action_sac_scale2lwn:
-                    source_rule = self.gen_action_sac_scale2lwn(source_rule)
+                elif action_name == TemplateVariables.gen_action_osmc_to_iwn_rwn:
+                    source_rule = self.gen_action_osmc_to_iwn_rwn(source_rule)
 
                 elif action_name == TemplateVariables.gen_action_osmc_symbols_order:
                     source_rule = self.add_osmc_symbols_order(source_rule)
@@ -120,6 +131,7 @@ class GeneratorActions:
                     # append the created tunnel section into defined place in the tree
                     input_section.parent.extend(tunnel_soup.children)
 
+        for input_section in input_sections:
             # remove the input section from the base xml tree
             input_section.extract()
 
@@ -332,24 +344,41 @@ class GeneratorActions:
 
         return source_rule
 
-    def gen_action_sac_scale2lwn(self, source_rule: Rule) -> Rule:
+    def gen_action_osmc_to_iwn_rwn(self, source_rule: Rule) -> Rule:
+        """
+        Use definition of standard hiking routes and convert it for routes in network IWN,NWN,RWN,LWN
+        :param source_rule: definition for offset of hiking routes with OSMC symbol
+        :return: #Rule
+        """
+        if source_rule.k == "*" and source_rule.v == "*":
+            children = source_rule.rule
+            if len(children) != 1:
+                print('WARNING incorrect definition for "osmc_hiking" section at "osmc_color" section. (Parent can '
+                      'contain only one child of "osmc_color")')
+                return source_rule
 
-        # filter rules for sac_scale different to "sac_scale=hiking" (only style for hiking sac is used as style for LWN pr IWN)
-
-        if source_rule.k == "osmc_order":
-            filtered_rules = [child_rule for child_rule in source_rule.rule if self._is_sac_scale_hiking(child_rule)]
-            source_rule.rule = filtered_rules
+            # skip rule for osmc_color
+            sub_children_rules = children[0].rule
+            source_rule.rule = sub_children_rules
 
         for child_rule in source_rule.rule:
-            # inherit zoom and parent rules
-            self.gen_action_sac_scale2lwn(child_rule)
+            # find lines in the children rules and set IWN/RWN color
+            child_rule = self.set_iwn_rwn_line_style(child_rule)
         return source_rule
 
-    def _is_sac_scale_hiking(self, rule: Rule):
-        if rule.k == "sac_scale":
-            return rule.v == "~" or rule.v == "hiking"
+    def set_iwn_rwn_line_style(self, source_rule: Rule):
+        """
+        Recursively find all lines in rules and change color to defined color for IWN/RWN...
+        :param source_rule:
+        :return: #Rule
+        """
+        for child_rule in source_rule.rule:
+            self.set_iwn_rwn_line_style(child_rule)
 
-        return False
+        for line in source_rule.line:
+            line.stroke = TemplateVariables.color_hiking_iwn_nwn
+
+        return source_rule
 
     def remove_nonsupported_attributes(self, soup):
         """
