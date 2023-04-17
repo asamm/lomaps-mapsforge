@@ -4,12 +4,21 @@ import os
 
 import yaml
 
-from actions.generator import GeneratorActions, Options, OsmcSymbolDef
+from actions.generator import GeneratorActions
+from options import Options, OsmcSymbolDef
 from actions.icon_validator import IconValidator
 from helpers import copy_theme_to_device, transform_cheetah_template, publish_theme_to_android_module
+from osmc_symbols.osmc_gen import SvgIconColorizer
 from poi_theme import PoiThemeGenerator
 
 
+def get_osmc_folder_path(result_xml):
+    """
+    Prepare path to folder where are stored osmc symbols
+    :param result_xml: path to result_xml file
+    :return: path to folder where are store osmc symbols
+    """
+    return os.path.join(os.path.dirname(result_xml), 'osmc')
 def parse_cmd() -> Options:
     """
     Parse command line parameters
@@ -39,6 +48,9 @@ def parse_cmd() -> Options:
                         help="Path to file with configuration of Offline POI database",
                         default='xml_templates/config_apDb.xml')
 
+    parser.add_argument("-i", "--generateOsmcSvg", action='store_true', default=False,
+                        help="Generate all types of OSMC svg symbols from black SVG file that contains all icons")
+
     parser.add_argument("-c", "--copyToDevice", action='store_true', default=False,
                         help="Copy theme files to the Android device")
 
@@ -54,6 +66,7 @@ def parse_cmd() -> Options:
                      parser_options.apdbConfig,
                      parser_options.templateConfig,
                      parser_options.resultTheme,
+                     parser_options.generateOsmcSvg,
                      parser_options.copyToDevice,
                      parser_options.publishForAndroid)
 
@@ -83,6 +96,11 @@ if __name__ == '__main__':
 
     # read default parameters from config yaml
     options = read_options_yaml('options.yaml', options)
+
+    # generate OSMC symbols from black SVG file
+    if options.generate_osmc_svg:
+        svg_generator = SvgIconColorizer(get_osmc_folder_path(options.result_xml), options)
+        svg_generator.generate_icons()
 
     # replace colors, width, etc in source XML
     transform_cheetah_template(options.theme_template, options.output_template)

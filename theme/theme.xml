@@ -5076,7 +5076,7 @@
 					<rule e="any" k="*" v="*" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="osmc_order" v="~" zoom-min="0" zoom-max="127" closed="any">
 							<rule e="way" k="osmc_foreground" v="black" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="50.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_arch.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="50.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="red_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_red_arch.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="50.0" rotate="true" symbol-orientation="left"/>
@@ -6521,7 +6521,7 @@
 						</rule>
 						<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
 							<rule e="way" k="osmc_foreground" v="black" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="64.3" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_arch.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="64.3" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="red_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_red_arch.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="64.3" rotate="true" symbol-orientation="left"/>
@@ -7966,7 +7966,7 @@
 						</rule>
 						<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
 							<rule e="way" k="osmc_foreground" v="black" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="78.6" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_arch.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="78.6" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="red_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_red_arch.svg" symbol-width="13" position="below_right" priority="35" repeat="true" repeat-gap="400.0" repeat-start="78.6" rotate="true" symbol-orientation="left"/>

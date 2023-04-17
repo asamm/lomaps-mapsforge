@@ -1,1 +1,7 @@
-<svg enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#267f00" stroke-linecap="round" stroke-width="6"><path d="m5.712 18.288 12.576-12.576"/><path d="m5.712 5.712 12.575 12.575"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg enable-background="new 0 0 24 24" fill="#267f00" height="24" stroke="#267f00" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="6">
+  <path d="m5.712 18.288 12.576-12.576" fill="#267f00" stroke="#267f00"/>
+  <path d="m5.712 5.712 12.575 12.575" fill="#267f00" stroke="#267f00"/>
+ </g>
+</svg>

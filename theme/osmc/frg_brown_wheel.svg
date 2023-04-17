@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg enable-background="new 0 0 24 24" fill="#93501B" height="24px" stroke="#93501B" version="1.1" viewBox="0 0 24 24" width="24px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+ <g fill="#93501B" id="black_x5F_wheel" stroke="#93501B">
+  <rect fill="#93501B" height="1.416" stroke="#93501B" transform="matrix(0.5 0.866 -0.866 0.5 11.0285 -4.3925)" width="8.273" x="5.182" y="6.647"/>
+  <rect fill="#93501B" height="1.417" stroke="#93501B" width="8.273" x="2.5" y="11.292"/>
+  <rect fill="#93501B" height="1.416" stroke="#93501B" transform="matrix(0.5 -0.866 0.866 0.5 -9.7557 16.3926)" width="8.273" x="5.182" y="15.937"/>
+  <rect fill="#93501B" height="1.416" stroke="#93501B" transform="matrix(-0.5 -0.866 0.866 -0.5 7.6087 37.6826)" width="8.273" x="10.545" y="15.937"/>
+  <rect fill="#93501B" height="1.417" stroke="#93501B" width="8.273" x="13.227" y="11.292"/>
+  <rect fill="#93501B" height="1.416" stroke="#93501B" transform="matrix(-0.5 0.866 -0.866 -0.5 28.3923 -1.6818)" width="8.273" x="10.545" y="6.647"/>
+  <path d="M12,22.25C6.348,22.25,1.75,17.652,1.75,12C1.75,6.348,6.348,1.75,12,1.75c5.652,0,10.25,4.598,10.25,10.25   C22.25,17.652,17.652,22.25,12,22.25z M12,3.25c-4.825,0-8.75,3.925-8.75,8.75c0,4.825,3.925,8.75,8.75,8.75   c4.825,0,8.75-3.925,8.75-8.75C20.75,7.175,16.825,3.25,12,3.25z" fill="#93501B" stroke="#93501B"/>
+  <path d="M13.917,12c0,1.059-0.858,1.916-1.917,1.916   S10.083,13.059,10.083,12s0.858-1.917,1.917-1.917S13.917,10.941,13.917,12z" fill="#93501B" stroke="#93501B" stroke-miterlimit="10" stroke-width="1.5"/>
+ </g>
+</svg>

@@ -1,6 +1,4 @@
 import copy
-from dataclasses import dataclass, field
-from typing import List
 
 from bs4 import BeautifulSoup
 from bs4.formatter import XMLFormatter
@@ -8,40 +6,11 @@ from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.parsers.config import ParserConfig
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
-from mapsforge.render_theme import Rule, Cap, Line, LineSymbol
+from mapsforge.render_theme import Rule, Cap, Line
+from options import Options
+from osmc_symbols.osmc_gen import OsmcSymbolGenerator
 from xml_templates.config import TemplateVariables
 
-@dataclass
-class OsmcSymbolDef:
-    color: List[str] = field(default_factory=list)
-    foreground: List[str] = field(default_factory=list)
-    background: List[str] = field(default_factory=list)
-
-class Options():
-    def __init__(self,
-                 theme_template,
-                 apdb_config_xml,
-                 template_config,
-                 result_xml,
-                 copy_to_device,
-                 publish_for_android,
-                 android_module_path='',
-                 locus_theme_path='',
-                 output_template='',
-                 osmc_symbol_def=OsmcSymbolDef()):
-
-        self.theme_template = theme_template
-        self.apdb_config_xml = apdb_config_xml
-        self.template_config = template_config
-        self.result_xml = result_xml
-        self.android_module_path = android_module_path
-        self.locus_theme_path = locus_theme_path
-
-        self.copy_to_device = copy_to_device
-        self.publish_for_android = publish_for_android
-        self.output_template = output_template
-
-        self.osmc_symbol = osmc_symbol_def
 
 class GeneratorActions:
 
@@ -91,7 +60,7 @@ class GeneratorActions:
                 # get name of action from attribute
                 action_name = input_section['action']
 
-                # Proccess different action based on it name
+                # Process different action based on it name
                 if action_name == TemplateVariables.gen_action_create_highway_tunnels:
                     self.convert_to_highway_tunnel(source_rule)
 
@@ -361,114 +330,6 @@ class Osmc2SacScaleGenerator():
     def _order_rule_2_sac(self, rule):
         pass
 
-class OsmcSymbolGenerator():
-
-
-    def __init__(self, options: Options):
-
-        self.options = options
-
-    def generate(self, source_rule:Rule):
-        """
-        :param source_rule: rule for whole osmc_order section
-        :return: :Rule with defined osmc line symbols and orders
-
-        """
-        rule = self._generate_symbols_rules(source_rule)
-
-        rule = self._generate_osmc_symbols_order(rule)
-
-        return rule
-
-    def _generate_symbols_rules(self, source_rule:Rule):
-        """
-        From the basic firs symbol definition generate all possible alternatives for symbol foreground and background
-        :param source_rule: rule for whole osmc_order section
-        :return: :Rule
-        """
-        line_symbol_def = self.get_line_symbol_def(source_rule)
-
-        first_symbol_rule = source_rule.rule[0]
-
-        for color in self.options.osmc_symbol.color:
-            for foreground in self.options.osmc_symbol.foreground:
-                icon_value = '{}_{}'.format(color, foreground)
-                rule = Rule(e=first_symbol_rule.e, cat=first_symbol_rule.cat, k="osmc_foreground", v=icon_value)
-
-                icon_path = 'file:osmc/frg_{}.svg'.format(icon_value)
-                line_symbol = copy.deepcopy(line_symbol_def)
-                line_symbol.src = icon_path
-                rule.line_symbol.append(line_symbol)
-
-                source_rule.rule.append(rule)
-
-            for background in self.options.osmc_symbol.background:
-                if background:
-                    icon_value = '{}_{}'.format(color, background)
-                else:
-                    # special background symbol with rectangle filled with color has the same name as color
-                    icon_value = color
-
-                rule = Rule(e=first_symbol_rule.e, cat=first_symbol_rule.cat, k="osmc_background", v=icon_value)
-
-                icon_path = 'file:osmc/bcg_{}.svg'.format(icon_value)
-                line_symbol = copy.deepcopy(line_symbol_def)
-                line_symbol.src = icon_path
-                line_symbol.priority = line_symbol.priority - 1
-                rule.line_symbol.append(line_symbol)
-
-                source_rule.rule.append(rule)
-
-        return source_rule
-    def _generate_osmc_symbols_order(self, source_rule) -> Rule:
-        """
-        Generate almost identical rules for OSMC symbol only repeat start is change to print multiple symbols next each other
-        :param source_rule: definition for the section with not defined order
-        :return: :Rule containing multiple definition for osmc symbols with different repeat-start for line_symbol
-        """
-        parent_rule = Rule(e="any", k="*", v="*")
-
-        for order in range(0, 3):
-            # definition of line width,etc. that will be recreated for every osmc color
-            symbol_rule = copy.deepcopy(source_rule)
-
-            parent_rule.rule.append(self.create_osmc_symbol_order(symbol_rule, order))
-
-        return parent_rule
-
-    def create_osmc_symbol_order(self, source_rule, order: int):
-        """
-        Change offset of lines based on the order value
-        :param source_rule
-        :param order
-        """
-        if source_rule.k == 'osmc_order':
-            if order == 0:
-                source_rule.v = "~"  # for first order do not print counter
-            else:
-                source_rule.v = str(order)
-
-        for child_rule in source_rule.rule:
-            # inherit zoom and parent rules
-            self.create_osmc_symbol_order(child_rule, order)
-
-        for lineSymb in source_rule.line_symbol:
-            lineSymb.repeat_start = lineSymb.repeat_start + 1.1 * order * lineSymb.symbol_width
-
-        return source_rule
-
-    def get_line_symbol_def(self, source_rule) -> LineSymbol:
-        """
-        Obtain default definition for render style of osmc symbol
-        :param source_rule: section specified line symbol for osm
-        :return: :LineSymbol
-        """
-
-        if len(source_rule.rule) != 1 and source_rule.rule.k != 'osmc_order':
-            raise Exception("Rule for OSMC symbol has to parent for 'osmc_order' section")
-        if len(source_rule.rule[0].line_symbol) != 1:
-            raise Exception("Rule for OSMC symbol has to contain single LineSymbol definition")
-        return source_rule.rule[0].line_symbol[0]
 
 class SortAttributes(XMLFormatter):
     def attributes(self, tag):

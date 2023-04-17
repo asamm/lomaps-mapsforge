@@ -1,1 +1,7 @@
-<svg enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#f2db0a" stroke-width="6"><path d="m12 2.5v16.375"/><path d="m2.5 18.375h19"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg enable-background="new 0 0 24 24" fill="#dbbf00" height="24" stroke="#dbbf00" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-width="6">
+  <path d="m12 2.5v16.375" fill="#dbbf00" stroke="#dbbf00"/>
+  <path d="m2.5 18.375h19" fill="#dbbf00" stroke="#dbbf00"/>
+ </g>
+</svg>

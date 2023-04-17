@@ -3325,7 +3325,7 @@
 				<rule e="way" k="osmc_foreground" v="*">
 					<rule e="way" k="osmc_order" v="~" gen_section="osmc_symbols">
 						<rule e="way" k="osmc_foreground" v="black">
-							<lineSymbol src="file:osmc/frg_black.svg" dy="-18" scale="none" symbol-width="13"
+							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13"
 										symbol-orientation="left" display="always" position="below_right"
 										repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol"
 										repeat-start="$osmc_symbol_repeat_start"/>
