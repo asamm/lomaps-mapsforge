@@ -24,6 +24,7 @@ OsmcSymbol:
         - drop_line
         - fork
         - house
+        - hiker
         - L
         - left
         - left_arrow

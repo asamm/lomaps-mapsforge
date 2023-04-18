@@ -1,13 +1,10 @@
 import copy
 import os
 
-import svgutils
 from bs4 import BeautifulSoup
-from svgutils.compose import SVG
-from svgutils.transform import SVGFigure
 
-from options import Options
 from mapsforge.render_theme import Rule, LineSymbol
+from options import Options
 from xml_templates.config import TemplateVariables
 
 
@@ -27,7 +24,7 @@ class SvgIconColorizer():
         # find all SVG files in resources/osmc
         svg_icons = []
         for file in os.listdir('resources/osmc'):
-            if file.endswith('.svg') :
+            if file.endswith('.svg'):
                 svg_icons.append(os.path.join('resources/osmc', file))
 
         for svg_icon in svg_icons:
@@ -50,8 +47,8 @@ class SvgIconColorizer():
                 # get icon file name from path
                 icon_name = os.path.basename(svg_icon)
 
-                # find occurrence of first '_' in file name and insert color name after it into file name and
-                colorized_icon_name = icon_name[:icon_name.find('_')+1] + color_name + icon_name[icon_name.find('_'):]
+                # replace '_black_ with '_color_' in file name
+                colorized_icon_name = icon_name.replace('_black_', '_' + color_name + '_')
 
                 # remove potential trailing '_' in file name part
                 colorized_icon_name = colorized_icon_name.replace('_.', '.')
@@ -71,23 +68,33 @@ class SvgIconColorizer():
         :param color: color to replace black with
 
         """
+        if svg_icon.endswith("bcg_.svg"):
+            print("debug: " + svg_icon + " (" + color + ")")
 
         with open(svg_icon, 'r') as f:
             soup = BeautifulSoup(f, 'xml')
 
-        black_elements = soup.find_all(lambda tag: tag.has_attr('fill') and tag['fill'] == '#000000' or
-                                              tag.has_attr('stroke') and tag['stroke'] == '#000000')
+        # Find all elements with fill and stroke attributes and append them to black_elements list
+        black_elements_stroke = soup.find_all(lambda tag: tag.has_attr('stroke') and (tag['stroke'] == '#000000' or tag['stroke'] == '#000'))
+        black_elements_fill = soup.find_all(lambda tag: tag.has_attr('fill') and (tag['fill'] == '#000000' or tag['fill'] == '#000'))
 
         # Find all elements without fill and stroke attributes and append them to black_elements list
-        black_elements.extend(soup.find_all(lambda tag: not tag.has_attr('fill') and not tag.has_attr('stroke')))
+        black_elements = soup.find_all(lambda tag: not tag.has_attr('fill') and not tag.has_attr('stroke'))
 
-        for elem in black_elements:
-            elem['fill'] = color
+        for elem in black_elements_stroke:
             elem['stroke'] = color
+        for elem in black_elements_fill:
+            elem['fill'] = color
+        for elem in black_elements:
+            if elem.name != 'svg' and elem.name != 'g':
+                if not elem.has_attr('fill') or elem['fill'] == '#000000' or elem['fill'] == '#000':
+                    elem['fill'] = color
+                if not elem.has_attr('stroke') or elem['fill'] == '#000000' or elem['stroke'] == '#000':
+                    elem['stroke'] = color
 
-        # return string representation of svg file
-        return soup.prettify()
-
+        # return string representation of svg file without XML header (without first line)
+        result = soup.prettify()
+        return ''.join(result.splitlines()[1:])
 
 class OsmcSymbolGenerator():
 
@@ -101,7 +108,6 @@ class OsmcSymbolGenerator():
         :return: :Rule with defined osmc line symbols and orders
 
         """
-
 
         rule = self._generate_symbols_rules(source_rule)
 
@@ -120,6 +126,9 @@ class OsmcSymbolGenerator():
         first_symbol_rule = source_rule.rule[0]
 
         for color in self.options.osmc_symbol.color:
+
+            is_black = color == 'black'
+
             for foreground in self.options.osmc_symbol.foreground:
                 icon_value = '{}_{}'.format(color, foreground)
                 rule = Rule(e=first_symbol_rule.e, cat=first_symbol_rule.cat, k="osmc_foreground", v=icon_value)
@@ -128,6 +137,19 @@ class OsmcSymbolGenerator():
                 line_symbol = copy.deepcopy(line_symbol_def)
                 line_symbol.src = icon_path
                 rule.line_symbol.append(line_symbol)
+
+                if is_black:
+                    if self.is_icon_for_empty_frg_exist(icon_path):
+                         # there is defined special icon for foreground with empty color > create new rule for it
+                        rule_empty = Rule(e=first_symbol_rule.e, cat=first_symbol_rule.cat, k="osmc_foreground", v=foreground)
+                        line_symbol = copy.deepcopy(line_symbol_def)
+                        line_symbol.src = 'file:osmc/frg_{}.svg'.format(foreground)
+                        rule_empty.line_symbol.append(line_symbol)
+
+                        source_rule.rule.append(rule_empty)
+                    else:
+                        # there is no defined special icon for foreground with empty color > use black icon
+                        rule.v = rule.v + '|{}'.format(foreground)
 
                 source_rule.rule.append(rule)
 
@@ -199,3 +221,23 @@ class OsmcSymbolGenerator():
         if len(source_rule.rule[0].line_symbol) != 1:
             raise Exception("Rule for OSMC symbol has to contain single LineSymbol definition")
         return source_rule.rule[0].line_symbol[0]
+
+    def is_icon_for_empty_frg_exist(self, black_icon_path):
+
+        # remove file: from path
+        black_icon_path = black_icon_path.replace('file:', '')
+
+        # remove _black from icon name
+        icon_empty_color = black_icon_path.replace('_black', '')
+
+        # full path is parent folder of resultXml + icon path
+        icon = os.path.join(os.path.dirname(self.options.result_xml), icon_empty_color)
+
+        # check if file for frg icon without color exist
+        return os.path.isfile(icon)
+
+
+
+
+        # combine parent folder of resultXml with osmc folder
+

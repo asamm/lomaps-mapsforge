@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg enable-background="new 0 0 24 24" fill="#fcfcfc" height="24" stroke="#fcfcfc" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
- <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="6">
-  <path d="m5.712 18.288 12.576-12.576" fill="#fcfcfc" stroke="#fcfcfc"/>
-  <path d="m5.712 5.712 12.575 12.575" fill="#fcfcfc" stroke="#fcfcfc"/>
- </g>
-</svg>
+<svg enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <g fill="none" stroke="#fcfcfc" stroke-linecap="round" stroke-width="6">  <path d="m5.712 18.288 12.576-12.576" fill="#fcfcfc" stroke="#fcfcfc"/>  <path d="m5.712 5.712 12.575 12.575" fill="#fcfcfc" stroke="#fcfcfc"/> </g></svg>

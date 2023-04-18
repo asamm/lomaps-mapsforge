@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg enable-background="new 0 0 24 24" fill="#267f00" height="24px" stroke="#267f00" version="1.1" viewBox="0 0 24 24" width="24px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
- <g fill="#267f00" id="black_x5F_right_x5F_pointer" stroke="#267f00">
-  <polygon fill="#267f00" points="21.5,12 2.5,2.5 2.5,21.5  " stroke="#267f00"/>
- </g>
-</svg>
+<svg enable-background="new 0 0 24 24" height="24px" version="1.1" viewBox="0 0 24 24" width="24px" x="0px" y="0px"> <g id="black_x5F_right_x5F_pointer">  <polygon fill="#267f00" points="21.5,12 2.5,2.5 2.5,21.5  " stroke="#267f00"/> </g></svg>

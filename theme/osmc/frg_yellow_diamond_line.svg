@@ -1,4 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg enable-background="new 0 0 24 24" fill="#dbbf00" height="24" stroke="#dbbf00" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
- <path d="m5.174 5.174h13.651v13.652h-13.651z" fill="none" stroke="#000" stroke-width="1.5" transform="matrix(.7071 .7071 -.7071 .7071 11.9992 -4.9701)"/>
-</svg>
+<svg enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="m5.174 5.174h13.651v13.652h-13.651z" fill="none" stroke="#dbbf00" stroke-width="1.5" transform="matrix(.7071 .7071 -.7071 .7071 11.9992 -4.9701)"/></svg>

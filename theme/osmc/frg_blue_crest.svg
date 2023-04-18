@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg enable-background="new 0 0 24 24" fill="#0026ff" height="24" stroke="#0026ff" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
- <path d="m6.028 4.472h11.945v7.528h-11.945z" fill="#0026ff" stroke="#0026ff"/>
- <path d="m14.381 19.529h-4.735l-3.618-7.529h11.946z" fill="#0026ff" stroke="#0026ff"/>
-</svg>
+<svg enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path d="m6.028 4.472h11.945v7.528h-11.945z" fill="#0026ff" stroke="#0026ff"/> <path d="m14.381 19.529h-4.735l-3.618-7.529h11.946z" fill="#0026ff" stroke="#0026ff"/></svg>
