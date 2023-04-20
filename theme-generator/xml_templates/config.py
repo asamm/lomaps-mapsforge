@@ -146,8 +146,8 @@ class TemplateVariables(Template):
 
     # Hiking
 
-    osmc_hiking_width_z13 = 1.1
-    osmc_hiking_width_z16 = 0.6
+    osmc_hiking_width_z13 = 1.3
+    osmc_hiking_width_z16 = 0.7
     osmc_hiking_width_z18 = 0.3
 
     # sac scales
@@ -169,7 +169,7 @@ class TemplateVariables(Template):
         "green": "#267f00",
         "orange": "#ff9500",
         "purple": "#b399ff",
-        "yellow": "#dbbf00",
+        "yellow": "#e2d21d",
 
     }
 

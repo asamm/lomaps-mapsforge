@@ -264,6 +264,19 @@ class GeneratorActions:
                 source_rule.rule.append(rule)
                 source_rule.rule.append(rule_edu)
 
+        # for yellow color make the line with white border to be more visible
+        if color_key == 'yellow':
+            lines_with_bck= []
+            for line in source_rule.line:
+                white_line = copy.deepcopy(line)
+                white_line.stroke = '#ffffbf'
+                white_line.stroke_width = white_line.stroke_width * 1.25
+
+                lines_with_bck.append(white_line)
+                lines_with_bck.append(line)
+            source_rule.line = lines_with_bck
+
+
         return source_rule
 
     def create_cycle_sections(self, source_rule: Rule, cycle_line_color):
