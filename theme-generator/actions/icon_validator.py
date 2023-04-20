@@ -21,6 +21,8 @@ class IconValidator:
                 if icon not in missing_icons:
                     missing_icons.append(icon)
 
+        self._write_missing_icons_to_file(missing_icons)
+
         print("Theme icons validated")
     def _write_missing_icons_to_file(self, missing_icons):
         """

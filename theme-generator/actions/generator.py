@@ -1,5 +1,4 @@
 import copy
-import sys
 
 from bs4 import BeautifulSoup
 from bs4.formatter import XMLFormatter
@@ -8,32 +7,9 @@ from xsdata.formats.dataclass.parsers.config import ParserConfig
 from xsdata.formats.dataclass.serializers import XmlSerializer
 
 from mapsforge.render_theme import Rule, Cap, Line
-from xml_templates import config
+from options import Options
+from osmc_symbols.osmc_gen import OsmcSymbolGenerator
 from xml_templates.config import TemplateVariables
-
-
-class Options():
-    def __init__(self,
-                 theme_template,
-                 apdb_config_xml,
-                 template_config,
-                 result_xml,
-                 copy_to_device,
-                 publish_for_android,
-                 android_module_path='',
-                 locus_theme_path='',
-                 output_template=''):
-        self.theme_template = theme_template
-        self.apdb_config_xml = apdb_config_xml
-        self.template_config = template_config
-        self.result_xml = result_xml
-        self.android_module_path = android_module_path
-        self.locus_theme_path = locus_theme_path
-
-        self.copy_to_device = copy_to_device
-        self.publish_for_android = publish_for_android
-        self.output_template = output_template
-
 
 class GeneratorActions:
 
@@ -54,7 +30,7 @@ class GeneratorActions:
             # these two actions has to be last ones and in this order because the OSMC section as source section is
             # modified during these actions
             TemplateVariables.gen_action_osmc_colors,
-            TemplateVariables.gen_action_osmc_symbols_order,
+            TemplateVariables.gen_action_osmc_symbols_and_order,
         ]
 
         self.non_supported_attributes = ['poidb', 'gen_section']
@@ -92,7 +68,7 @@ class GeneratorActions:
                 # get name of action from attribute
                 action_name = input_section['action']
 
-                # Process different action based on it name
+                # Proccess different action based on it name
                 if action_name == TemplateVariables.gen_action_create_highway_tunnels:
                     self.convert_to_highway_tunnel(source_rule)
 
@@ -105,8 +81,10 @@ class GeneratorActions:
                 elif action_name == TemplateVariables.gen_action_osmc_to_iwn_rwn:
                     source_rule = self.gen_action_osmc_to_iwn_rwn(source_rule)
 
-                elif action_name == TemplateVariables.gen_action_osmc_symbols_order:
-                    source_rule = self.add_osmc_symbols_order(source_rule)
+                elif action_name == TemplateVariables.gen_action_osmc_symbols_and_order:
+
+                    osmc_symbol_gen = OsmcSymbolGenerator(self.options)
+                    source_rule = osmc_symbol_gen.generate(source_rule)
 
                 elif action_name == TemplateVariables.gen_action_cycle_icn:
                     source_rule = self.create_cycle_sections(source_rule, TemplateVariables.color_cycle_icn_ncn)
@@ -122,8 +100,8 @@ class GeneratorActions:
                 # convert back xsdata object into soup
                 tunnel_soup = BeautifulSoup(serializer.render(source_rule), 'xml')
 
-                if action_name == TemplateVariables.gen_action_osmc_colors or \
-                        action_name == TemplateVariables.gen_action_osmc_symbols_order:
+                #if action_name == TemplateVariables.gen_action_osmc_colors :
+                if action_name == TemplateVariables.gen_action_osmc_colors or action_name == TemplateVariables.gen_action_osmc_symbols_and_order:
                     # replace all children in specific section by new child from created rules
                     child = tunnel_soup.findChild()
                     section_soup.replaceWith(child)
@@ -344,6 +322,26 @@ class GeneratorActions:
 
         return source_rule
 
+    def gen_action_sac_scale2lwn(self, source_rule: Rule) -> Rule:
+
+        # filter rules for sac_scale different to "sac_scale=hiking" (only style for hiking sac is used as style for LWN pr IWN)
+
+        if source_rule.k == "osmc_order":
+            filtered_rules = [child_rule for child_rule in source_rule.rule if self._is_sac_scale_hiking(child_rule)]
+            source_rule.rule = filtered_rules
+
+        for child_rule in source_rule.rule:
+            # inherit zoom and parent rules
+            self.gen_action_sac_scale2lwn(child_rule)
+        return source_rule
+
+    def _is_sac_scale_hiking(self, rule: Rule):
+        if rule.k == "sac_scale":
+            return rule.v == "~" or rule.v == "hiking"
+
+        return False
+
+
     def gen_action_osmc_to_iwn_rwn(self, source_rule: Rule) -> Rule:
         """
         Use definition of standard hiking routes and convert it for routes in network IWN,NWN,RWN,LWN
@@ -379,6 +377,7 @@ class GeneratorActions:
             line.stroke = TemplateVariables.color_hiking_iwn_nwn
 
         return source_rule
+
 
     def remove_nonsupported_attributes(self, soup):
         """

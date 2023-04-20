@@ -2,3 +2,67 @@ Options:
     android_module_path: ../android/src/main/assets/themes/mapsforgeV4/base/
     locus_theme_path: /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/theme/
     output_template: xml_templates/base_output.xml
+
+OsmcSymbol:
+    foreground:
+        - arch
+        - arrow
+        - backslash
+        - bar
+        - bowl
+        - circle
+        - corner
+        - corner_left
+        - crest
+        - cross
+        - diamond_line
+        - diamond
+        - diamond_left
+        - diamond_right
+        - dot
+        - drop
+        - drop_line
+        - fork
+        - house
+        - hiker
+        - L
+        - left
+        - left_arrow
+        - left_pointer
+        - lower
+        - right
+        - pointer
+        - rectangle_line
+        - rectangle
+        - red_diamond
+        - right_arrow
+        - right_pointer
+        - slash
+        - stripe
+        - triangle_line
+        - triangle
+        - triangle_turned
+        - turned_T
+        - upper
+        - upper_bowl
+        - x
+        - hexagon
+        - shell
+        - shell_modern
+        - wheel
+    background:
+        - ~
+        - circle
+        - frame
+        - round
+    color:
+        - red
+        - black
+        - blue
+        - brown
+        - gray
+        - green
+        - orange
+        - purple
+        - yellow
+        - white
