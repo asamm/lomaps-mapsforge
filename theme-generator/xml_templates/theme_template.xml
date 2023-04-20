@@ -1781,7 +1781,7 @@
 					<rule cat="highways_topo" e="way" k="bridge" v="~|no|false">
 
 						<!-- TOPO case highways 8 - 10 -->
-						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10">
+						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" gen_section="to_tunnel">
 
 							<rule e="way" k="highway" v="primary">
 								<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z8 + $highway_case_lowlevel}"/>
@@ -2088,7 +2088,7 @@
 					<!-- =========================  TOPO core for higher levels =========================== -->
 
 					<!-- TOPO core highways 8 - 10 -->
-					<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10">
+					<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" gen_section="to_tunnel">
 
 						<rule e="way" k="highway" v="primary">
 							<line stroke="$color_primary_z7_z11" stroke-width="$primary_width_z8"/>
