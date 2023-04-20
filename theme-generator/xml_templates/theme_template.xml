@@ -3257,32 +3257,32 @@
 		<rule cat="base_topo" e="way" k="aerialway" v="*" zoom-min="12">
 			<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13">
 				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
-					<line stroke="#3a3a3a" stroke-width="0.5" stroke-linecap="butt"/>
+					<line stroke="#3a3a3a" stroke-width="0.6" stroke-linecap="butt"/>
 					<line stroke="$color_aerialway_core" stroke-width="2" stroke-dasharray="10,14" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="aerialway" v="cable_car|gondola">
-					<line stroke="$color_aerialway_core" stroke-width="0.6" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="2.75" stroke-dasharray="1,20"/>
-					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.7" stroke-dasharray="1,20"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.8" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="3" stroke-dasharray="1,20"/>
+					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.8" stroke-dasharray="1,20"/>
 				</rule>
 				<rule e="way" k="aerialway" v="goods">
 					<line stroke="$color_aerialway_core" stroke-width="0.5" stroke-linecap="butt"/>
 					<line stroke="$color_aerialway_core" stroke-width="1.5" stroke-dasharray="4,20"/>
 				</rule>
 				<rule e="way" k="aerialway" v="drag_lift">
-					<line stroke="$color_aerialway_core" stroke-width="0.6" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="1.6" stroke-dasharray="0,6,1,6"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.8" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="1.8" stroke-dasharray="0,6,1,6"/>
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
-					<line stroke="$color_aerialway_core" stroke-width="0.40" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="1.25" stroke-dasharray="16,22" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.50" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="1.4" stroke-dasharray="16,22" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="aerialway" v="cable_car|gondola">
-					<line stroke="$color_aerialway_core" stroke-width="0.42" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="2.1" stroke-dasharray="1,26"/>
-					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.2" stroke-dasharray="1,26"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.6" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="2.4" stroke-dasharray="1,26"/>
+					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.5" stroke-dasharray="1,26"/>
 				</rule>
 				<rule e="way" k="aerialway" v="goods">
 					<line stroke="$color_aerialway_core" stroke-width="0.5" stroke-linecap="butt"/>
