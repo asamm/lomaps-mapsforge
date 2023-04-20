@@ -201,7 +201,7 @@
 			<!-- wood for SUMMER -->
 			<rule cat="base_summer" e="way" k="*" v="*" >
 				<rule e="way" k="*" v="*" zoom-max="13">
-					<area fill="#C9DEA6"/>
+					<area fill="#80a0ca6c"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
 					<area fill="#80a0ca6c"/>
