@@ -1,3 +1,18 @@
+## [1.1.4] - 2023-04-24
+
+### Added
+- support for new symbols defined in `osmc:symbol`
+- osmc hiking routes may be rendered as dashed lines when `sac_scale` is defined
+
+### Changed
+- all network types IWN, NWN, RWN, LWN are rendered as red
+- forest are rendered transparent in ZL 9 - 13 (to avoid rendering of forest on top of tunnels)
+- change width of `aerialways` to be more visible
+
+### Fixed
+- fix incorrect rendering of hiking routes when sac_scale in hiking routes
+
+
 ## [1.1.3] - 2023-04-06
 
 ### Added
