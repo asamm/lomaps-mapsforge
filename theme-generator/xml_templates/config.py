@@ -146,8 +146,8 @@ class TemplateVariables(Template):
 
     # Hiking
 
-    osmc_hiking_width_z13 = 1.1
-    osmc_hiking_width_z16 = 0.6
+    osmc_hiking_width_z13 = 1.3
+    osmc_hiking_width_z16 = 0.7
     osmc_hiking_width_z18 = 0.3
 
     # sac scales
@@ -169,13 +169,16 @@ class TemplateVariables(Template):
         "green": "#267f00",
         "orange": "#ff9500",
         "purple": "#b399ff",
-        "yellow": "#dbbf00",
+        "yellow": "#e2d21d",
 
     }
 
+    osmc_symbol_repeat_start = 30
+    osmc_routename_repeat_start = 100
+
     color_hiking_iwn_nwn = '#EA3200'
 
-    osmc_symbol_repeat_start = 30
+
 
     ## MTB && Cyclo
 
@@ -264,7 +267,6 @@ class TemplateVariables(Template):
 
     # OSMC colored lines
     gen_action_osmc_colors = "action_create_osmc_colors"
-
     # replace osmc by sac scale
     gen_action_osmc_to_iwn_rwn = "action_osmc_to_iwn_rwn"
 
@@ -275,7 +277,7 @@ class TemplateVariables(Template):
     gen_action_cycle_basic_to_mtb_scale_0 = "action_create_mtb_scale_0_from_basic"
 
     # Duplicate OSMC symbols part to order symbols along line
-    gen_action_osmc_symbols_order = "action_create_osmc_symbols_order"
+    gen_action_osmc_symbols_and_order = "action_osmc_symbols_and_order"
 
     # Copy section from source to the defined places
     gen_action_copy_section = "action_copy_section"

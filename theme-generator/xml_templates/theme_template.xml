@@ -201,7 +201,7 @@
 			<!-- wood for SUMMER -->
 			<rule cat="base_summer" e="way" k="*" v="*" >
 				<rule e="way" k="*" v="*" zoom-max="13">
-					<area fill="#C9DEA6"/>
+					<area fill="#80a0ca6c"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
 					<area fill="#80a0ca6c"/>
@@ -1024,6 +1024,14 @@
 							<line dy="1.0" stroke="$color_cycle_mtb" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
 						</rule>
 					</rule>
+				</rule>
+
+				<!-- MTB and designated cyclo routes with defined mtb:scale -->
+				<rule cat="cyc_mtb_routes" e="way" k="route|bicycle" v="mtb|yes|designated" zoom-min="12">
+					<rule e="way" k="mtb:scale" v="0" zoom-min="13">
+						<!-- copy style from simple cycle ways for mtb:scale=0 -->
+						<generator action="$gen_action_cycle_basic_to_mtb_scale_0" source_section="basic_cycle_ways"></generator>
+					</rule>
 					<rule e="way" k="mtb:scale" v="1|2" zoom-min="13">
 						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
 							<line dy="1.2" stroke="$color_cycle_mtb" stroke-width="1" stroke-dasharray="15,7" stroke-linecap="butt"/>
@@ -1169,13 +1177,14 @@
 					</rule>
 				</rule>
 
+				<!-- HIKING -->
 				<!-- OFFSET HIKING PATH OSMC:SYMBOL before highway core-->
 				<rule e="way" k="route" v="hiking|foot">
-					<rule cat="hik_routes" e="way" k="sac_scale" v="~">
-						<rule cat="hik_routes" e="way" k="osmc" v="yes">
-							<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="osmc_hiking" >
-								<rule e="way" k="osmc_color" v="red" >
-									<rule e="way" k="osmc_order" v="~">
+					<rule cat="hik_routes" e="way" k="osmc" v="yes">
+						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="osmc_hiking" >
+							<rule e="way" k="osmc_color" v="red" >
+								<rule e="way" k="osmc_order" v="~">
+									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
 											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
@@ -1188,7 +1197,50 @@
 											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="1" >
+
+									<rule e="way" k="sac_scale" v="*">
+										<rule e="way" k="sac_scale" v="hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13"/>
+											</rule>
+
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" />
+											</rule>
+
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" />
+											</rule>
+										</rule>
+										<rule e="way" k="sac_scale" v="mountain_hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12"/>
+											</rule>
+
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
+											</rule>
+
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
+											</rule>
+										</rule>
+										<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
+											</rule>
+
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
+											</rule>
+
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12" />
+											</rule>
+										</rule>
+									</rule>
+								</rule>
+								<rule e="way" k="osmc_order" v="1" >
 										<rule e="way" k="osmc_highway" v="track|~">
 											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + 1.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
@@ -1201,7 +1253,7 @@
 											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + 1.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="2" >
+								<rule e="way" k="osmc_order" v="2" >
 										<rule e="way" k="osmc_highway" v="track|~">
 											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + 2.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
@@ -1214,7 +1266,7 @@
 											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + 2.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="3" >
+								<rule e="way" k="osmc_order" v="3" >
 										<rule e="way" k="osmc_highway" v="track|~">
 											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + 3.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
@@ -1227,13 +1279,14 @@
 											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + 3.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 									</rule>
-								</rule>
 							</rule>
+						</rule>
 
-							<!-- Offset hiking OSMC lines for zoom 16 - 17	-->
-							<rule e="way" k="*" v="*" zoom-min="16"  zoom-max="17" gen_section="osmc_hiking" >
-								<rule e="way" k="osmc_color" v="red" >
-									<rule e="way" k="osmc_order" v="~">
+						<!-- Offset hiking OSMC lines for zoom 16 - 17	-->
+						<rule e="way" k="*" v="*" zoom-min="16"  zoom-max="17" gen_section="osmc_hiking" >
+							<rule e="way" k="osmc_color" v="red" >
+								<rule e="way" k="osmc_order" v="~">
+									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
 											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" />
 											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
@@ -1249,55 +1302,105 @@
 											<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="1">
-										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+
+									<rule e="way" k="sac_scale" v="*">
+										<rule e="way" k="sac_scale" v="hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" />
+												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16"/>
+												<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" />
+												<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+											</rule>
 										</rule>
 
-										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-											<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										<rule e="way" k="sac_scale" v="mountain_hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
+												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
+												<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16"  />
+												<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+											</rule>
 										</rule>
 
-										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
-											<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"  />
+												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"/>
+												<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16" />
+												<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+											</rule>
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="2">
-										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-										</rule>
 
-										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-										</rule>
-
-										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
-										</rule>
+								</rule>
+								<rule e="way" k="osmc_order" v="1">
+									<rule e="way" k="osmc_highway" v="track|~">
+										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
 									</rule>
-									<rule e="way" k="osmc_order" v="3">
-										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 3.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-										</rule>
 
-										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 3.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-										</rule>
+									<rule e="way" k="osmc_highway" v="unclassified">
+										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+										<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+									</rule>
 
-										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 3.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
-										</rule>
+									<rule e="way" k="osmc_highway" v="class">
+										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
+										<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+									</rule>
+								</rule>
+								<rule e="way" k="osmc_order" v="2">
+									<rule e="way" k="osmc_highway" v="track|~">
+										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="unclassified">
+										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="class">
+										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
+									</rule>
+								</rule>
+								<rule e="way" k="osmc_order" v="3">
+									<rule e="way" k="osmc_highway" v="track|~">
+										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 3.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="unclassified">
+										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 3.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="class">
+										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 3.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
 									</rule>
 								</rule>
 							</rule>
+						</rule>
 
-							<!-- Offset hiking OSMC lines for zoom > 18	-->
-							<rule e="way" k="*" v="*" zoom-min="18" gen_section="osmc_hiking" >
-								<rule e="way" k="osmc_color" v="red" >
-									<rule e="way" k="osmc_order" v="~">
+						<!-- Offset hiking OSMC lines for zoom > 18	-->
+						<rule e="way" k="*" v="*" zoom-min="18" gen_section="osmc_hiking" >
+							<rule e="way" k="osmc_color" v="red" >
+								<rule e="way" k="osmc_order" v="~">
+									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
 											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
 											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
@@ -1313,207 +1416,259 @@
 											<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="1">
+
+									<rule e="way" k="sac_scale" v="*">
+										<rule e="way" k="sac_scale" v="hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18"  />
+												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18"  />
+												<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" />
+												<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+											</rule>
+										</rule>
+
+										<rule e="way" k="sac_scale" v="mountain_hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"  />
+												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
+												<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
+												<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+											</rule>
+										</rule>
+
+										<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
+											<rule e="way" k="osmc_highway" v="track|~">
+												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
+												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="unclassified">
+												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18"/>
+												<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											</rule>
+											<rule e="way" k="osmc_highway" v="class">
+												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
+												<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+											</rule>
+										</rule>
+
+									</rule>
+								</rule>
+								<rule e="way" k="osmc_order" v="1">
+									<rule e="way" k="osmc_highway" v="track|~">
+										<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($track_grade3_4_width_z15) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="unclassified">
+										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="class">
+										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+									</rule>
+								</rule>
+								<rule e="way" k="osmc_order" v="2">
+									<rule e="way" k="osmc_highway" v="track|~">
+										<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="unclassified">
+										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="class">
+										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+									</rule>
+								</rule>
+								<rule e="way" k="osmc_order" v="3">
+									<rule e="way" k="osmc_highway" v="track|~">
+										<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 3.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="unclassified">
+										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 3.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+									</rule>
+
+									<rule e="way" k="osmc_highway" v="class">
+										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 3.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+									</rule>
+								</rule>
+							</rule>
+						</rule>
+
+						<!-- add all OSMC colors -->
+						<generator action="$gen_action_osmc_colors" source_section="osmc_hiking"></generator>
+
+					</rule>
+
+					<!-- SAC Scales for way that are not part of OSMC relation -->
+					<rule cat="hik_routes" e="way" k="osmc" v="~">
+						<rule cat="hik_routes" e="way" k="sac_scale" v="*">
+							<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="sac_scale" >
+								<rule e="way" k="osmc_order" v="~" >
+									<rule e="way" k="sac_scale" v="hiking">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-											<pathText k="name" dy="-${($track_grade3_4_width_z15) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13"/>
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-											<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+											<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-											<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="2">
+									<rule e="way" k="sac_scale" v="mountain_hiking">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12"/>
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
 										</rule>
 									</rule>
-									<rule e="way" k="osmc_order" v="3">
+									<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 3.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 3.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 3.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12" />
 										</rule>
 									</rule>
 								</rule>
 							</rule>
 
-							<!-- add all OSMC colors -->
-							<generator action="$gen_action_osmc_colors" source_section="osmc_hiking"></generator>
-						</rule>
+							<rule e="way" k="*" v="*" zoom-min="16"  zoom-max="17" gen_section="sac_scale">
+								<rule e="way" k="osmc_order" v="~" >
+									<rule e="way" k="sac_scale" v="hiking">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16"/>
+											<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" />
+											<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
+									</rule>
 
-						<!-- offset for hiking international, regional network that not defined by OSMC symbol or color -->
-						<rule e="way" k="osmc" v="~">
+									<rule e="way" k="sac_scale" v="mountain_hiking">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
+											<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16"  />
+											<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
+									</rule>
+
+									<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"  />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"/>
+											<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16" />
+											<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
+									</rule>
+								</rule>
+							</rule>
+
+							<rule e="way" k="*" v="*" zoom-min="18" gen_section="sac_scale">
+								<rule e="way" k="osmc_order" v="~">
+									<rule e="way" k="sac_scale" v="hiking">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18"  />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18"  />
+											<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" />
+											<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
+									</rule>
+
+									<rule e="way" k="sac_scale" v="mountain_hiking">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"  />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
+											<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
+											<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
+									</rule>
+
+									<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18"/>
+											<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
+											<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
+									</rule>
+								</rule>
+							</rule>
+						</rule><!-- End of SAC highlights -->
+
+						<!-- Regional or local routes render as red line when sac scale not defined-->
+						<rule cat="hik_routes" e="way" k="sac_scale" v="~">
 							<rule e="way" k="network" v="iwn|nwn|rwn|lwn">
 								<generator action="$gen_action_osmc_to_iwn_rwn" source_section="osmc_hiking"></generator>
 							</rule>
 						</rule>
+
 					</rule>
-
-					<!-- offset for hiking routes defined with sac-scale but not with OSMC symbol or color -->
-					<rule cat="hik_routes" e="way" k="sac_scale" v="*">
-						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="sac_scale" >
-							<rule e="way" k="osmc_order" v="~" >
-								<rule e="way" k="sac_scale" v="hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13"/>
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" />
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" />
-									</rule>
-								</rule>
-								<rule e="way" k="sac_scale" v="mountain_hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12"/>
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
-									</rule>
-								</rule>
-								<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12" />
-									</rule>
-								</rule>
-							</rule>
-						</rule>
-
-						<rule e="way" k="*" v="*" zoom-min="16"  zoom-max="17" gen_section="sac_scale">
-							<rule e="way" k="osmc_order" v="~" >
-								<rule e="way" k="sac_scale" v="hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16"/>
-										<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" />
-										<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
-									</rule>
-								</rule>
-
-								<rule e="way" k="sac_scale" v="mountain_hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
-										<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16"  />
-										<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
-									</rule>
-								</rule>
-
-								<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"  />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"/>
-										<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16" />
-										<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
-									</rule>
-								</rule>
-							</rule>
-						</rule>
-
-						<rule e="way" k="*" v="*" zoom-min="18" gen_section="sac_scale">
-							<rule e="way" k="osmc_order" v="~">
-								<rule e="way" k="sac_scale" v="hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18"  />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18"  />
-										<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" />
-										<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
-									</rule>
-								</rule>
-
-								<rule e="way" k="sac_scale" v="mountain_hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"  />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
-										<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
-										<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
-									</rule>
-								</rule>
-
-								<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18"/>
-										<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
-										<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
-									</rule>
-								</rule>
-							</rule>
-						</rule>
-					</rule><!-- End of SAC highlights -->
 				</rule><!-- End of hiking routes -->
 
 				<!-- Symbols for via ferrata -->
@@ -1769,7 +1924,7 @@
 					<rule cat="highways_topo" e="way" k="bridge" v="~|no|false">
 
 						<!-- TOPO case highways 8 - 10 -->
-						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10">
+						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" gen_section="to_tunnel">
 
 							<rule e="way" k="highway" v="primary">
 								<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z8 + $highway_case_lowlevel}"/>
@@ -2076,7 +2231,7 @@
 					<!-- =========================  TOPO core for higher levels =========================== -->
 
 					<!-- TOPO core highways 8 - 10 -->
-					<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10">
+					<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" gen_section="to_tunnel">
 
 						<rule e="way" k="highway" v="primary">
 							<line stroke="$color_primary_z7_z11" stroke-width="$primary_width_z8"/>
@@ -3245,32 +3400,32 @@
 		<rule cat="base_topo" e="way" k="aerialway" v="*" zoom-min="12">
 			<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13">
 				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
-					<line stroke="#3a3a3a" stroke-width="0.5" stroke-linecap="butt"/>
+					<line stroke="#3a3a3a" stroke-width="0.6" stroke-linecap="butt"/>
 					<line stroke="$color_aerialway_core" stroke-width="2" stroke-dasharray="10,14" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="aerialway" v="cable_car|gondola">
-					<line stroke="$color_aerialway_core" stroke-width="0.6" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="2.75" stroke-dasharray="1,20"/>
-					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.7" stroke-dasharray="1,20"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.8" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="3" stroke-dasharray="1,20"/>
+					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.8" stroke-dasharray="1,20"/>
 				</rule>
 				<rule e="way" k="aerialway" v="goods">
 					<line stroke="$color_aerialway_core" stroke-width="0.5" stroke-linecap="butt"/>
 					<line stroke="$color_aerialway_core" stroke-width="1.5" stroke-dasharray="4,20"/>
 				</rule>
 				<rule e="way" k="aerialway" v="drag_lift">
-					<line stroke="$color_aerialway_core" stroke-width="0.6" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="1.6" stroke-dasharray="0,6,1,6"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.8" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="1.8" stroke-dasharray="0,6,1,6"/>
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
-					<line stroke="$color_aerialway_core" stroke-width="0.40" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="1.25" stroke-dasharray="16,22" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.50" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="1.4" stroke-dasharray="16,22" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="aerialway" v="cable_car|gondola">
-					<line stroke="$color_aerialway_core" stroke-width="0.42" stroke-linecap="butt"/>
-					<line stroke="$color_aerialway_core" stroke-width="2.1" stroke-dasharray="1,26"/>
-					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.2" stroke-dasharray="1,26"/>
+					<line stroke="$color_aerialway_core" stroke-width="0.6" stroke-linecap="butt"/>
+					<line stroke="$color_aerialway_core" stroke-width="2.4" stroke-dasharray="1,26"/>
+					<line stroke="$color_aerialway_cablecar_fill" stroke-width="1.5" stroke-dasharray="1,26"/>
 				</rule>
 				<rule e="way" k="aerialway" v="goods">
 					<line stroke="$color_aerialway_core" stroke-width="0.5" stroke-linecap="butt"/>
@@ -3309,662 +3464,23 @@
 		<!-- OSMC SYMBOLS and hiking routes without color -->
 		<rule cat="hik_routes" e="way" k="route" v="hiking|foot">
 			<!-- HIKING PATH OSMC:SYMBOL-->
-			<rule e="way" k="osmc" v="yes" zoom-min="16">
-				<!--  ================= OSMC_FOREGROUND ======================== -->
-				<rule e="way" k="osmc_foreground" v="*" zoom-min="15" zoom-max="19" gen_section="osmc_symbols">
-					<rule e="way" k="osmc_order" v="~" >
-
-						<!-- =============== FRG BLACK	 ================ -->
+			<rule e="way" k="osmc" v="yes" zoom-min="16" zoom-max="19">
+				<!--display only elements with defined foreground to avoid empty backgroud symbols-->
+				<rule e="way" k="osmc_foreground" v="*">
+					<rule e="way" k="osmc_order" v="~" gen_section="osmc_symbols">
 						<rule e="way" k="osmc_foreground" v="black">
-							<lineSymbol src="file:osmc/frg_black.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right"  repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_arch">
-							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_backslash">
-							<lineSymbol src="file:osmc/frg_black_backslash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_bar">
-							<lineSymbol src="file:osmc/frg_black_bar.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_bowl">
-							<lineSymbol src="file:osmc/frg_black_bowl.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_circle">
-							<lineSymbol src="file:osmc/frg_black_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_corner">
-							<lineSymbol src="file:osmc/frg_black_corner.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_crest">
-							<lineSymbol src="file:osmc/frg_black_crest.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_cross">
-							<lineSymbol src="file:osmc/frg_black_cross.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_diamond">
-							<lineSymbol src="file:osmc/frg_black_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_diamond_line">
-							<lineSymbol src="file:osmc/frg_black_diamond_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_dot">
-							<lineSymbol src="file:osmc/frg_black_dot.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_drop">
-							<lineSymbol src="file:osmc/frg_black_drop.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_drop_line">
-							<lineSymbol src="file:osmc/frg_black_drop_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_fork">
-							<lineSymbol src="file:osmc/frg_black_fork.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_horse">
-							<lineSymbol src="file:osmc/frg_black_horse.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_L">
-							<lineSymbol src="file:osmc/frg_black_L.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_lower">
-							<lineSymbol src="file:osmc/frg_black_lower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_pointer">
-							<lineSymbol src="file:osmc/frg_black_pointer.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_rectangle">
-							<lineSymbol src="file:osmc/frg_black_rectangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_rectangle_line">
-							<lineSymbol src="file:osmc/frg_black_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_red_diamond">
-							<lineSymbol src="file:osmc/frg_black_red_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_right">
-							<lineSymbol src="file:osmc/frg_black_right.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_slash">
-							<lineSymbol src="file:osmc/frg_black_slash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_stripe">
-							<lineSymbol src="file:osmc/frg_black_stripe.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_triangle">
-							<lineSymbol src="file:osmc/frg_black_triangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_triangle_line">
-							<lineSymbol src="file:osmc/frg_black_triangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_triangle_turned">
-							<lineSymbol src="file:osmc/frg_black_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_turned_T">
-							<lineSymbol src="file:osmc/frg_black_turned_T.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="black_x">
-							<lineSymbol src="file:osmc/frg_black_x.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<!-- =============== FRG BLUE	 ================ -->
-						<rule e="way" k="osmc_foreground" v="blue_arch">
-							<lineSymbol src="file:osmc/frg_blue_arch.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_backslash">
-							<lineSymbol src="file:osmc/frg_blue_backslash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_bar">
-							<lineSymbol src="file:osmc/frg_blue_bar.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_bowl">
-							<lineSymbol src="file:osmc/frg_blue_bowl.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_circle">
-							<lineSymbol src="file:osmc/frg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_corner">
-							<lineSymbol src="file:osmc/frg_blue_corner.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_cross">
-							<lineSymbol src="file:osmc/frg_blue_cross.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_diamond">
-							<lineSymbol src="file:osmc/frg_blue_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_diamond_line">
-							<lineSymbol src="file:osmc/frg_blue_diamond_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_dot">
-							<lineSymbol src="file:osmc/frg_blue_dot.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_fork">
-							<lineSymbol src="file:osmc/frg_blue_fork.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_hiker">
-							<lineSymbol src="file:osmc/frg_blue_hiker.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_horse">
-							<lineSymbol src="file:osmc/frg_blue_horse.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_L">
-							<lineSymbol src="file:osmc/frg_blue_L.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_lower">
-							<lineSymbol src="file:osmc/frg_blue_lower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_pointer">
-							<lineSymbol src="file:osmc/frg_blue_pointer.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_rectangle">
-							<lineSymbol src="file:osmc/frg_blue_rectangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_rectangle_line">
-							<lineSymbol src="file:osmc/frg_blue_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_right">
-							<lineSymbol src="file:osmc/frg_blue_right.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_slash">
-							<lineSymbol src="file:osmc/frg_blue_slash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_stripe">
-							<lineSymbol src="file:osmc/frg_blue_stripe.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_triangle">
-							<lineSymbol src="file:osmc/frg_blue_triangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_triangle_line">
-							<lineSymbol src="file:osmc/frg_blue_triangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_triangle_turned">
-							<lineSymbol src="file:osmc/frg_blue_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_turned_T">
-							<lineSymbol src="file:osmc/frg_blue_turned_T.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_wheelchair">
-							<lineSymbol src="file:osmc/frg_blue_wheelchair.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="blue_x">
-							<lineSymbol src="file:osmc/frg_blue_x.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<!-- =============== FRG GREEN ================ -->
-						<rule e="way" k="osmc_foreground" v="green_arch">
-							<lineSymbol src="file:osmc/frg_green_arch.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_backslash">
-							<lineSymbol src="file:osmc/frg_green_backslash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_bar">
-							<lineSymbol src="file:osmc/frg_green_bar.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_bowl">
-							<lineSymbol src="file:osmc/frg_green_bowl.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_circle">
-							<lineSymbol src="file:osmc/frg_green_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_corner">
-							<lineSymbol src="file:osmc/frg_green_corner.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_crest">
-							<lineSymbol src="file:osmc/frg_green_crest.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_cross">
-							<lineSymbol src="file:osmc/frg_green_cross.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_diamond">
-							<lineSymbol src="file:osmc/frg_green_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_dot">
-							<lineSymbol src="file:osmc/frg_green_dot.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_drop">
-							<lineSymbol src="file:osmc/frg_green_drop.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_drop_line">
-							<lineSymbol src="file:osmc/frg_green_drop_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_fork">
-							<lineSymbol src="file:osmc/frg_green_fork.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_hiker">
-							<lineSymbol src="file:osmc/frg_green_hiker.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_horse">
-							<lineSymbol src="file:osmc/frg_green_horse.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_L">
-							<lineSymbol src="file:osmc/frg_green_L.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_lower">
-							<lineSymbol src="file:osmc/frg_green_lower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_pointer">
-							<lineSymbol src="file:osmc/frg_green_pointer.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_rectangle">
-							<lineSymbol src="file:osmc/frg_green_rectangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_rectangle_line">
-							<lineSymbol src="file:osmc/frg_green_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_right">
-							<lineSymbol src="file:osmc/frg_green_right.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_slash">
-							<lineSymbol src="file:osmc/frg_green_slash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_stripe">
-							<lineSymbol src="file:osmc/frg_green_stripe.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_triangle">
-							<lineSymbol src="file:osmc/frg_green_triangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_triangle_line">
-							<lineSymbol src="file:osmc/frg_green_triangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_triangle_turned">
-							<lineSymbol src="file:osmc/frg_green_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_turned_T">
-							<lineSymbol src="file:osmc/frg_green_turned_T.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="green_x">
-							<lineSymbol src="file:osmc/frg_green_x.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<!-- =============== FRG ORANGE ================ -->
-						<rule e="way" k="osmc_foreground" v="orange_bar">
-							<lineSymbol src="file:osmc/frg_orange_bar.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_cross">
-							<lineSymbol src="file:osmc/frg_orange_cross.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_diamond">
-							<lineSymbol src="file:osmc/frg_orange_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_diamond_line">
-							<lineSymbol src="file:osmc/frg_orange_diamond_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_dot">
-							<lineSymbol src="file:osmc/frg_orange_dot.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_lower">
-							<lineSymbol src="file:osmc/frg_orange_lower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_pointer">
-							<lineSymbol src="file:osmc/frg_orange_pointer.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_rectangle">
-							<lineSymbol src="file:osmc/frg_orange_rectangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_right">
-							<lineSymbol src="file:osmc/frg_orange_right.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_stripe">
-							<lineSymbol src="file:osmc/frg_orange_stripe.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="orange_triangle">
-							<lineSymbol src="file:osmc/frg_orange_triangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<!-- =============== FRG RED ================ -->
-						<rule e="way" k="osmc_foreground" v="red_arch">
-							<lineSymbol src="file:osmc/frg_red_arch.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_backslash">
-							<lineSymbol src="file:osmc/frg_red_backslash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_bar">
-							<lineSymbol src="file:osmc/frg_red_bar.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_bowl">
-							<lineSymbol src="file:osmc/frg_red_bowl.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_circle">
-							<lineSymbol src="file:osmc/frg_red_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_corner">
-							<lineSymbol src="file:osmc/frg_red_corner.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_crest">
-							<lineSymbol src="file:osmc/frg_red_crest.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_cross">
-							<lineSymbol src="file:osmc/frg_red_cross.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_diamond">
-							<lineSymbol src="file:osmc/frg_red_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_diamond_line">
-							<lineSymbol src="file:osmc/frg_red_diamond_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_dot">
-							<lineSymbol src="file:osmc/frg_red_dot.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_drop">
-							<lineSymbol src="file:osmc/frg_red_drop.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_drop_line">
-							<lineSymbol src="file:osmc/frg_red_drop_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_fork">
-							<lineSymbol src="file:osmc/frg_red_fork.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_hiker">
-							<lineSymbol src="file:osmc/frg_red_hiker.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_L">
-							<lineSymbol src="file:osmc/frg_red_L.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_lower">
-							<lineSymbol src="file:osmc/frg_red_lower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_pointer">
-							<lineSymbol src="file:osmc/frg_red_pointer.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_rectangle">
-							<lineSymbol src="file:osmc/frg_red_rectangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_rectangle_line">
-							<lineSymbol src="file:osmc/frg_red_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_right">
-							<lineSymbol src="file:osmc/frg_red_right.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_slash">
-							<lineSymbol src="file:osmc/frg_red_slash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_stripe">
-							<lineSymbol src="file:osmc/frg_red_stripe.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_triangle">
-							<lineSymbol src="file:osmc/frg_red_triangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_triangle_line">
-							<lineSymbol src="file:osmc/frg_red_triangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_triangle_turned">
-							<lineSymbol src="file:osmc/frg_red_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_turned_T">
-							<lineSymbol src="file:osmc/frg_red_turned_T.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_wheelchair">
-							<lineSymbol src="file:osmc/frg_red_wheelchair.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="red_x">
-							<lineSymbol src="file:osmc/frg_red_x.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<!-- =============== FRG YELLOW ================ -->
-						<rule e="way" k="osmc_foreground" v="yellow_arch">
-							<lineSymbol src="file:osmc/frg_yellow_arch.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_backslash">
-							<lineSymbol src="file:osmc/frg_yellow_backslash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_bar">
-							<lineSymbol src="file:osmc/frg_yellow_bar.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_bowl">
-							<lineSymbol src="file:osmc/frg_yellow_bowl.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_circle">
-							<lineSymbol src="file:osmc/frg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_corner">
-							<lineSymbol src="file:osmc/frg_yellow_corner.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_cross">
-							<lineSymbol src="file:osmc/frg_yellow_cross.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_diamond">
-							<lineSymbol src="file:osmc/frg_yellow_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_diamond_line">
-							<lineSymbol src="file:osmc/frg_yellow_diamond_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_dot">
-							<lineSymbol src="file:osmc/frg_yellow_dot.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_fork">
-							<lineSymbol src="file:osmc/frg_yellow_fork.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_hiker">
-							<lineSymbol src="file:osmc/frg_yellow_hiker.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_L">
-							<lineSymbol src="file:osmc/frg_yellow_L.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_lower">
-							<lineSymbol src="file:osmc/frg_yellow_lower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_pointer">
-							<lineSymbol src="file:osmc/frg_yellow_pointer.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_rectangle">
-							<lineSymbol src="file:osmc/frg_yellow_rectangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_rectangle_line">
-							<lineSymbol src="file:osmc/frg_yellow_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_right">
-							<lineSymbol src="file:osmc/frg_yellow_right.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_slash">
-							<lineSymbol src="file:osmc/frg_yellow_slash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_stripe">
-							<lineSymbol src="file:osmc/frg_yellow_stripe.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_triangle">
-							<lineSymbol src="file:osmc/frg_yellow_triangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_triangle_line">
-							<lineSymbol src="file:osmc/frg_yellow_triangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_triangle_turned">
-							<lineSymbol src="file:osmc/frg_yellow_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_turned_T">
-							<lineSymbol src="file:osmc/frg_yellow_turned_T.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="yellow_x">
-							<lineSymbol src="file:osmc/frg_yellow_x.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<!-- =============== FRG WHITE	 ================ -->
-						<rule e="way" k="osmc_foreground" v="white_arch">
-							<lineSymbol src="file:osmc/frg_white_arch.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_backslash">
-							<lineSymbol src="file:osmc/frg_white_backslash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_bar">
-							<lineSymbol src="file:osmc/frg_white_bar.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_circle">
-							<lineSymbol src="file:osmc/frg_white_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_corner">
-							<lineSymbol src="file:osmc/frg_white_corner.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_crest">
-							<lineSymbol src="file:osmc/frg_white_crest.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_cross">
-							<lineSymbol src="file:osmc/frg_white_cross.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_diamond">
-							<lineSymbol src="file:osmc/frg_white_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_diamond_line">
-							<lineSymbol src="file:osmc/frg_white_diamond_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_dot">
-							<lineSymbol src="file:osmc/frg_white_dot.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_fork">
-							<lineSymbol src="file:osmc/frg_white_fork.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_hiker">
-							<lineSymbol src="file:osmc/frg_white_hiker.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_horse">
-							<lineSymbol src="file:osmc/frg_white_horse.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_L">
-							<lineSymbol src="file:osmc/frg_white_L.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_lower">
-							<lineSymbol src="file:osmc/frg_white_lower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_pointer">
-							<lineSymbol src="file:osmc/frg_white_pointer.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_rectangle">
-							<lineSymbol src="file:osmc/frg_white_rectangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_rectangle_line">
-							<lineSymbol src="file:osmc/frg_white_rectangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_red_diamond">
-							<lineSymbol src="file:osmc/frg_white_red_diamond.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_right">
-							<lineSymbol src="file:osmc/frg_white_right.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_slash">
-							<lineSymbol src="file:osmc/frg_white_slash.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_stripe">
-							<lineSymbol src="file:osmc/frg_white_stripe.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_triangle">
-							<lineSymbol src="file:osmc/frg_white_triangle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_triangle_line">
-							<lineSymbol src="file:osmc/frg_white_triangle_line.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_triangle_turned">
-							<lineSymbol src="file:osmc/frg_white_triangle_turned.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_turned_T">
-							<lineSymbol src="file:osmc/frg_white_turned_T.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_wheelchair">
-							<lineSymbol src="file:osmc/frg_white_wheelchair.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="white_x">
-							<lineSymbol src="file:osmc/frg_white_x.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<!-- =============== FRG SYMBOLS	 ================ -->
-						<rule e="way" k="osmc_foreground" v="ammonit">
-							<lineSymbol src="file:osmc/frg_ammonit.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="bridleway">
-							<lineSymbol src="file:osmc/frg_bridleway.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="heart">
-							<lineSymbol src="file:osmc/frg_heart.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="hiker">
-							<lineSymbol src="file:osmc/frg_hiker.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="mine">
-							<lineSymbol src="file:osmc/frg_mine.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="shell">
-							<lineSymbol src="file:osmc/frg_shell.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="shell_modern">
-							<lineSymbol src="file:osmc/frg_shell_modern.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="tower">
-							<lineSymbol src="file:osmc/frg_tower.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
-						<rule e="way" k="osmc_foreground" v="wolfshook">
-							<lineSymbol src="file:osmc/frg_wolfshook.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol" repeat-start="$osmc_symbol_repeat_start"/>
-						</rule>
+							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13"
+										symbol-orientation="left" display="always" position="below_right"
+										repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol"
+										repeat-start="$osmc_symbol_repeat_start"/>
 
-
-						<!--  ================= OSMC_BACKGROUND ======================== -->
-						<rule e="way" k="osmc_background" v="*" >
-							<rule e="way" k="osmc_background" v="black">
-								<lineSymbol src="file:osmc/bcg_black.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="black_circle">
-								<lineSymbol src="file:osmc/bcg_black_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="blue">
-								<lineSymbol src="file:osmc/bcg_blue.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="blue_circle">
-								<lineSymbol src="file:osmc/bcg_blue_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="blue_frame">
-								<lineSymbol src="file:osmc/bcg_blue_frame.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="blue_round">
-								<lineSymbol src="file:osmc/bcg_blue_round.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="brown">
-								<lineSymbol src="file:osmc/bcg_brown.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="green">
-								<lineSymbol src="file:osmc/bcg_green.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="green_circle">
-								<lineSymbol src="file:osmc/bcg_green_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="green_frame">
-								<lineSymbol src="file:osmc/bcg_green_frame.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="green_round">
-								<lineSymbol src="file:osmc/bcg_green_round.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="orange">
-								<lineSymbol src="file:osmc/bcg_orange.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="purple">
-								<lineSymbol src="file:osmc/bcg_purple.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="red">
-								<lineSymbol src="file:osmc/bcg_red.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="red_circle">
-								<lineSymbol src="file:osmc/bcg_red_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="red_frame">
-								<lineSymbol src="file:osmc/bcg_red_frame.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="red_round">
-								<lineSymbol src="file:osmc/bcg_red_round.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="white">
-								<lineSymbol src="file:osmc/bcg_white.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="white_circle">
-								<lineSymbol src="file:osmc/bcg_white_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="white_round">
-								<lineSymbol src="file:osmc/bcg_white_round.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="yellow">
-								<lineSymbol src="file:osmc/bcg_yellow.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="yellow_circle">
-								<lineSymbol src="file:osmc/bcg_yellow_circle.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
-							<rule e="way" k="osmc_background" v="yellow_frame">
-								<lineSymbol src="file:osmc/bcg_yellow_frame.svg" dy="-18" scale="none" symbol-width="13" symbol-orientation="left" display="always" position="below_right" repeat-gap="400" repeat="true" priority="${$priority_tourist_osmc_symbol -1}" repeat-start="$osmc_symbol_repeat_start"/>
-							</rule>
 						</rule>
 					</rule>
-				</rule> <!-- end of OSMC foreground -->
-
-				<generator action="$gen_action_osmc_symbols_order" source_section="osmc_symbols"></generator>
-
-			</rule>
+					<generator action="$gen_action_osmc_symbols_and_order" source_section="osmc_symbols"/>
+				</rule>
+			</rule
 		</rule>
-		<!-- END OF OSMC_SYMBOLS FOR HIKING -->
+		<!-- END OF OSMC_SYMBOLS FOR HIKING -->>
 		<!-- Power lines -->
 		<rule cat="base_topo" e="way" k="power" v="*" zoom-min="13">
 			<rule e="way" k="power" v="line" zoom-min="13">

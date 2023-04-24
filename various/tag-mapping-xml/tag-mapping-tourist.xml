@@ -196,6 +196,7 @@
 		<osm-tag key="leaf_type" value="needleleaved" renderable="false" />
 		
 		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
+		<osm-tag key="natural" value="bay" zoom-appear="12" />
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />		
 		<osm-tag key="natural" value="cliff" zoom-appear="9" />
@@ -279,7 +280,6 @@
 		<osm-tag key="military" value="bunker" zoom-appear="14" />
 
 		<osm-tag key="mountain_pass" value="yes" zoom-appear="14" />
-		<osm-tag key="bridge" value="boardwalk" zoom-appear="14" />	
 		<osm-tag key="rungs" value="yes" zoom-appear="14" />		
 		<osm-tag key="assisted_trail" value="yes" zoom-appear="14" />		
 		<osm-tag key="safety_rope" value="yes" zoom-appear="14" />
@@ -404,6 +404,7 @@
 		
 		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
+		<osm-tag key="natural" value="bay" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />
 		<osm-tag key="natural" value="cliff" zoom-appear="9" />
 		<osm-tag key="natural" value="coastline" zoom-appear="0" force-polygon-line="true" />
@@ -920,8 +921,7 @@
 		<!-- embankments -->
 		<osm-tag key="embankment" value="yes" zoom-appear="14" />
 		<osm-tag key="man_made" value="embankment" zoom-appear="14" />
-		
-		<osm-tag key="bridge" value="boardwalk" zoom-appear="14" />				
+
 		<osm-tag key="rungs" value="yes" zoom-appear="14" />		
 		<osm-tag key="assisted_trail" value="yes" zoom-appear="14" />		
 		<osm-tag key="safety_rope" value="yes" zoom-appear="14" />	
@@ -956,6 +956,11 @@
 		<osm-tag key="access" value="yes" renderable="false" />
 
 		<osm-tag key="bridge" value="yes" renderable="false" />
+		<osm-tag key="bridge" value="aqueduct" renderable="false" />
+		<osm-tag key="bridge" value="boardwalk" zoom-appear="14" />
+		<osm-tag key="bridge" value="cantilever" renderable="false" />
+		<osm-tag key="bridge" value="trestle" renderable="false" />
+		<osm-tag key="bridge" value="viaduct" renderable="false" />
 
 		<osm-tag key="bicycle" value="designated" renderable="false" />
 		<osm-tag key="bicycle" value="no" equivalent-values="0,false" renderable="false" />
