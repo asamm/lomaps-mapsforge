@@ -196,8 +196,9 @@
 				</rule>
 			</rule>
 		</rule>
+
 		<!-- forest -->
-		<rule e="way" k="natural|landuse|wood" v="forest|wood|scrub" zoom-min="9" closed="yes">
+		<rule e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="9" closed="yes">
 			<!-- wood for SUMMER -->
 			<rule cat="base_summer" e="way" k="*" v="*" >
 				<rule e="way" k="*" v="*" zoom-max="13">
@@ -254,6 +255,7 @@
 						 stroke="#ffffff" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
+
 		<rule cat="base_summer" e="way" k="landuse" v="farm|farmlanf" closed="yes">
 			<area fill="#f4f3e9"/>
 		</rule>
@@ -3887,7 +3889,7 @@
 
 		<rule e="any" k="place" v="town" zoom-min="8" zoom-max="15">
 			<rule e="any" k="*" v="*" zoom-min="8" zoom-max="9">
-				<caption k="name" dy="11"  font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
+				<caption k="name" dy="11" font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
 						 stroke="#ffffff" stroke-width="${$text_halo}" priority="$priority_town_1" text-wrap-width="$text_wrap_standard"/>
             </rule>
 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="11">
@@ -3951,7 +3953,10 @@
 		</rule>
 
 		<rule e="any" k="place" v="island" zoom-min="8" zoom-max="14">
-			<caption k="name" font-style="bold" font-size="17" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3.0" text-wrap-width="$text_wrap_standard"/>
+			<caption k="name" font-style="italic" font-size="17" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="${$text_halo / 2}" text-wrap-width="$text_wrap_standard" priority="$priority_island"/>
+		</rule>
+		<rule e="any" k="place" v="islet" zoom-min="14" zoom-max="17">
+			<caption k="name" font-style="italic" font-size="12" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="${$text_halo / 2}" text-wrap-width="$text_wrap_standard" priority="$priority_islet"/>
 		</rule>
 		<rule e="any" k="place" v="country" zoom-max="6">
 			<caption k="name" font-style="bold" text-transform="uppercase" font-size="28" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="2.0" text-wrap-width="$text_wrap_standard"/>

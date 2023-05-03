@@ -253,6 +253,8 @@ class TemplateVariables(Template):
     priority_tourist_route_name = 200
     priority_tourist_osmc_symbol = 35
 
+    priority_island = 420
+    priority_islet = 410
     priority_water_area = 395
     priority_river = 390
     priority_canal = 385
