@@ -21,7 +21,7 @@ class SortAttributes(XMLFormatter):
 
 
 # attributes that can't be replaced and it's needed to completely remove
-attr_to_remove = ['render-db-only', 'symbol-color', 'scale-icon-size']
+attr_to_remove = ['render-db-only', 'symbol-color', 'scale-icon-size','sale', 'scale-radius']
 attr_to_comment = ['scale-font-size', 'scale-dy-size', 'dx']
 
 
@@ -46,6 +46,9 @@ def parseOptions():
     return options
 
 
+
+
+
 def transform(input_f, output_f):
     file = open(input_f, "r")
     contents = file.read()
@@ -68,6 +71,8 @@ def transform(input_f, output_f):
     replace_allign_center(soup)
     replace_force_draw(soup)
     replace_uppercase_to_text_transform(soup)
+    replace_symbol_scale(soup)
+
 
     # recompute dp units to pixels
     process_dp_unit(soup)
@@ -107,21 +112,25 @@ def process_dp_unit(soup):
     for attr in attr_to_remove_dp:
         for tag in soup.select('[{}]'.format(attr)):
             value = tag[attr].replace('dp', '')
+            value = float(value) * 0.4
             tag[attr] = value
 
     # remove dp and round to int because symbol-with
     for tag in soup.select('[symbol-width]'):
+        scale_factor = 1.5 if 'dp' in tag['symbol-width']  else 0.5
         value_float = float(tag['symbol-width'].replace('dp', ''))
-        tag['symbol-width'] = round(value_float * 1.5)
+        tag['symbol-width'] = round(value_float * scale_factor)
 
     for tag in soup.select('[symbol-height]'):
+        scale_factor = 1.5 if 'dp' in tag['symbol-height'] else 0.5
         value_float = float(tag['symbol-height'].replace('dp', ''))
-        tag['symbol-height'] = round(value_float * 1.5)
+        tag['symbol-height'] = round(value_float * scale_factor)
 
     # remove dp and resize dp at path-text
     for tag in soup.select('[font-size]'):
+        scale_factor = 1.4 if 'dp' in tag['font-size'] else 0.5
         value_float = float(tag['font-size'].replace('dp', ''))
-        tag['font-size'] = round(1.4 * value_float)
+        tag['font-size'] = round(value_float * scale_factor)
 
 
 def process_dy(soup):
@@ -251,6 +260,14 @@ def replace_uppercase_to_text_transform(soup):
     for element in elements:
         del element['upper-case']
         element['text-transform'] = "uppercase"
+
+def replace_symbol_scale(soup):
+    elements = soup.select('[scale]')
+    for element in elements:
+        if element.name == 'symbol':
+            value_float = float(element['scale'])
+            element['symbol-percent'] = round(100 * value_float)
+            del element['scale']
 
 def replace_allign_center(soup):
     """
