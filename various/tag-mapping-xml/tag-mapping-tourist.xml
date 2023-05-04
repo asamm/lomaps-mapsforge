@@ -1003,6 +1003,9 @@
 		<osm-tag key="cycleway:left" value="opposite_lane" equivalent-values="opposite_track" renderable="false" />
 		<osm-tag key="cycleway:right" value="opposite_lane" equivalent-values="opposite_track" renderable="false" />
 
+		<osm-tag key="oneway:foot" value="yes" equivalent-values="1,true" renderable="false" />
+		<osm-tag key="foot:backward" value="no" equivalent-values="0,false" renderable="false" />
+
 		<osm-tag key="tracktype" value="grade1" renderable="false" />
 		<osm-tag key="tracktype" value="grade2" renderable="false" />
 		<osm-tag key="tracktype" value="grade3" renderable="false" />
