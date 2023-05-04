@@ -14,3 +14,6 @@ android/build
 # temp file
 base_output.xml
 missing_icons.txt
+
+# local work or testing files
+_work/
