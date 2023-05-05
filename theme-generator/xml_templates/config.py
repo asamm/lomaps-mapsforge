@@ -151,14 +151,14 @@ class TemplateVariables(Template):
     osmc_hiking_width_z18 = 0.3
 
     # sac scales
-    sac_scale_T2_dash_z12 = "11,9"
-    sac_scale_T3_dash_z12 = "1,5"
+    sac_scale_T2_dash_z12 = "13,6"
+    sac_scale_T3_dash_z12 = "6,5"
 
-    sac_scale_T2_dash_z16 = "11,9"
-    sac_scale_T3_dash_z16 = "0.5,7"
+    sac_scale_T2_dash_z16 = "15,7"
+    sac_scale_T3_dash_z16 = "7,6"
 
-    sac_scale_T2_dash_z18 = "11,9"
-    sac_scale_T3_dash_z18 = "1,10"
+    sac_scale_T2_dash_z18 = "19,9"
+    sac_scale_T3_dash_z18 = "9,7"
 
     osmc_colors = {
         "red": "#EA3200",
@@ -253,6 +253,8 @@ class TemplateVariables(Template):
     priority_tourist_route_name = 200
     priority_tourist_osmc_symbol = 35
 
+    priority_island = 420
+    priority_islet = 410
     priority_water_area = 395
     priority_river = 390
     priority_canal = 385
