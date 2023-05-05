@@ -5325,14 +5325,24 @@
 						</rule>
 					</rule>
 					<!-- highway one-way markers -->
-					<rule e="way" k="oneway" v="yes|true" zoom-min="15">
+					<rule e="way" k="oneway" v="yes" zoom-min="15">
 						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="401"/>
+						<rule e="way" k="highway" v="path|track|pedestrian">
+							<!-- For path that are rendered as gray line display one way symbol again, little bit bigger with higher priority and defined DY-->
+							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="402"/>
+						</rule>
 						<rule cat="base_summer" e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane" zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="auto" position="center" priority="402"/>
 						</rule>
 						<rule cat="base_summer" e="way" k="oneway:bicycle" v="no" zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="auto" position="center" priority="402"/>
 						</rule>
+					</rule>
+					<rule cat="base_summer" e="way" k="oneway:foot" v="yes" zoom-min="15">
+						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="16" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="402"/>
+					</rule>
+					<rule cat="base_summer" e="way" k="foot:backward" v="no" zoom-min="15">
+						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="16" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="402"/>
 					</rule>
 					<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
 					<rule e="way" k="access" v="private|no">
