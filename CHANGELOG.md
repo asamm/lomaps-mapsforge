@@ -1,3 +1,15 @@
+## [1.2.0] - 2023-05-05
+
+### Added
+- script that helps to convert Locus V3 theme to Mapsforge V4 theme
+- display oneway symbol for pedestrians/hikers
+- display name for `place=islet`
+- tag-mapping file supports: `place=islet`, `oneway:foot`, `foot:backward` for pedestrians/hikers, 
+
+### Fixed
+- improve dashed lines (to be more visible) for routes with defined `sac_scale`
+
+
 ## [1.1.4] - 2023-04-24
 
 ### Added
