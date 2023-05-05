@@ -30,7 +30,7 @@ The script does not copy icons or other resources and it's needed to copy them m
 ## Installation
 - download the repository `git clone https://github.com/asamm/lomaps-mapsforge`
   - `cd lomaps-mapsforge/theme-v3-to-v4-converter`
-  - you can also simple download the script https://github.com/asamm/lomaps-mapsforge/theme-v3-to-v4-converter/theme_V3_to_V4.py
+  - you can also simple download the script https://github.com/asamm/lomaps-mapsforge/blob/main/theme-v3-to-v4-converter/theme_v3_to_v4_converter.py
 - install Python 3 https://www.python.org/downloads/
 - install python packages
     - ```pip instal -r requirements.txt```
