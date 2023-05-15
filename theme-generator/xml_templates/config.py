@@ -174,7 +174,7 @@ class TemplateVariables(Template):
     }
 
     osmc_symbol_repeat_start = 30
-    osmc_routename_repeat_start = 100
+    osmc_route_name_repeat_start = 90
 
     color_hiking_iwn_nwn = '#EA3200'
 
@@ -251,7 +251,7 @@ class TemplateVariables(Template):
     priority_one_way_cycle_opposite = priority_one_way + 1
 
     priority_tourist_route_name = 200
-    priority_tourist_osmc_symbol = 35
+    priority_tourist_osmc_symbol = 210
 
     priority_island = 420
     priority_islet = 410
