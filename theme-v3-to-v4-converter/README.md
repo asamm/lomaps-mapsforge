@@ -1,7 +1,7 @@
 # Locus theme V3 to Mapsforge V4 converter
 
 Locus used for LoMaps vector maps own implementation of render for Mapsforge vector maps.
-This implementation is not compatible with the default Mapsforge rendering. 
+This implementation was not compatible with the default Mapsforge rendering. 
 
 As of May 2023, LoMaps maps are released as Mapsforge V4 maps.  
 Therefore, it is not possible to use the existing "LoMaps V3 Themes" with the new LoMaps V4.
@@ -10,9 +10,9 @@ We have prepared a simple script to help transform an existing Locus V3 theme in
 theme. So if you have a theme that contains special Locus attributes, you can use this script
 to make it easier to create a theme for LoMaps V4.
 
-Please note that the script does not convert the entire theme 1:1. 
-The manual work will still be required but it should save time when editing attributes. 
-The script does not copy icons or other resources and it's needed to copy them manually.
+Please note that the script does not convert the entire topic 1:1. 
+Manual work will still be required, but should save time when editing attributes. 
+The script does not copy icons or other resources and they must be copied manually.
 
 
 ### Script can help with the following
@@ -20,7 +20,7 @@ The script does not copy icons or other resources and it's needed to copy them m
 - removes unsupported attributes (`render-db-only`, `symbol-color`, `scale-icon-size`)
 - comments several unsupported attributes (`scale-font-size`, `scale-dy-size`)
 - converts 'dp' units to 'px' units (this transformation was defined based on the internal LoMaps style 
-  so some additional customization will probably be required) 
+  and for this reason an additional customization will probably be required) 
 - convert old attributes to the new ones:
   - `rotate` to `text-orienation`
   - `force-draw` to `display`
