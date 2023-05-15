@@ -982,6 +982,7 @@
 		<osm-tag key="designation" value="public_cycleway" renderable="false" />
 		<osm-tag key="designation" value="green_lane" renderable="false" />
 		<osm-tag key="designation" value="core_path" renderable="false" />
+		<osm-tag key="designation" value="unclassified_highway" renderable="false" />
 
 		<osm-tag key="car" value="yes" renderable="false" />
 		<osm-tag key="truck" value="yes" renderable="false" />
@@ -1234,7 +1235,7 @@
 	 <!-- OSMC text  -->
 	<ways>
 
-		<osm-tag key="osmc_text" value="%s" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_text" value="%s" zoom-appear="12" />
 		<osm-tag key="osmc_text_length" value="%f" renderable="false" zoom-appear="12" />
 
 		<osm-tag key="osmc_order" value="1" renderable="false" zoom-appear="12" />
