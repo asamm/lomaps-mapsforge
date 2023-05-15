@@ -1,3 +1,13 @@
+## [1.2.1] - 2023-05-15
+
+### Added
+- observation towers to POI DB
+
+### Changed
+- change order of iwn,rwn and osmc routes with defined main color (hiking route without defined) 
+  OSMC color has lower priority
+- change priority of the osmc symbol vs name of route
+
 ## [1.2.0] - 2023-05-05
 
 ### Added

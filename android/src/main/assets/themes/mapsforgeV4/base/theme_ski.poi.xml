@@ -118,7 +118,7 @@
       <symbol src="assets:symbols/poi_grave_yard.svg" symbol-width="20"/>
     </rule>
   </rule>
-  <rule e="any" k="amenity|information|tourism|leisure" v="*" cat="hiking_cycling" zoom-min="15">
+  <rule e="any" k="amenity|information|tourism|leisure|man_made" v="*" cat="hiking_cycling" zoom-min="15">
     <rule e="any" k="amenity" v="bicycle_parking" cat="bicycle_parking" zoom-min="17">
       <symbol src="assets:symbols/poi_bicycle_parking.svg" symbol-width="20"/>
     </rule>
@@ -142,6 +142,9 @@
     </rule>
     <rule e="any" k="tourism" v="viewpoint" cat="viewpoint" zoom-min="16">
       <symbol src="assets:symbols/poi_viewpoint.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="man_made" v="tower" cat="observation_tower" zoom-min="16">
+      <symbol src="assets:symbols/poi_tower_observation.svg" symbol-width="20"/>
     </rule>
   </rule>
   <rule e="any" k="boundary|leisure|natural|mountain_pass|garden:type|waterway|man_made" v="*" cat="nature" zoom-min="13">
