@@ -215,6 +215,11 @@
             <sub-folder name="viewpoint" zoom-min="16" icon="viewpoint" >
                 <tag key="tourism" value="viewpoint" type="poi,way" />
             </sub-folder>
+
+            <sub-folder name="observation_tower" zoom-min="16" icon="tower_observation" >
+                <tag key="man_made" value="tower" type="poi,way" />
+                <filter key="tower:type" value="observation"  />
+            </sub-folder>
         </folder>
 
         <!-- ======= NATURE ======= -->
