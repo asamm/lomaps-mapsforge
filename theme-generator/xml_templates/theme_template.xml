@@ -585,7 +585,7 @@
 		<rule cat="base_topo" e="way" k="tourism" v="*" closed="yes">
 			<rule e="way" k="tourism" v="*" zoom-min="13">
 				<rule e="way" k="tourism" v="camp_site|caravan_site|attraction">
-					<area fill="#e1d5b6"/>
+					<area fill="${opacity('#e1d5b6',60)}"/>
 				</rule>
 			</rule>
 			<rule e="way" k="tourism" v="*" zoom-min="15">
@@ -3482,12 +3482,12 @@
 		<!-- OSMC SYMBOLS and hiking routes without color -->
 		<rule cat="hik_routes" e="way" k="route" v="hiking|foot">
 			<!-- HIKING PATH OSMC:SYMBOL-->
-			<rule e="way" k="osmc" v="yes" zoom-min="16" zoom-max="19">
+			<rule e="way" k="osmc" v="yes" zoom-min="15" zoom-max="19">
 				<!--display only elements with defined foreground to avoid empty backgroud symbols-->
 				<rule e="way" k="osmc_foreground" v="*">
 					<rule e="way" k="osmc_order" v="~" gen_section="osmc_symbols">
 						<rule e="way" k="osmc_foreground" v="black">
-							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="13"
+							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="12"
 										symbol-orientation="left" display="always" position="below_right"
 										repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol"
 										repeat-start="$osmc_symbol_repeat_start"/>
