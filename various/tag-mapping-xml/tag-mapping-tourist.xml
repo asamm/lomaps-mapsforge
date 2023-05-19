@@ -642,7 +642,13 @@
 		<osm-tag key="service" value="siding" zoom-appear="13" />	
 		<osm-tag key="service" value="spur" zoom-appear="13" />
 		<osm-tag key="service" value="yard" zoom-appear="13" />
-		
+
+		<osm-tag key="service" value="alley" zoom-appear="13" />
+		<osm-tag key="service" value="driveway" zoom-appear="13" />
+		<osm-tag key="service" value="emergency_access " zoom-appear="13" />
+		<osm-tag key="service" value="parking_aisle" zoom-appear="13" />
+		<osm-tag key="service" value="slipway" zoom-appear="13" />
+
 		<osm-tag key="station" value="light_rail" zoom-appear="14" />
 		<osm-tag key="station" value="subway" zoom-appear="14" />
 		
@@ -994,15 +1000,11 @@
 		<osm-tag key="parking" value="street_side" renderable="false" />
 		<osm-tag key="parking" value="surface" renderable="false" />
 		<osm-tag key="parking" value="underground" renderable="false" />
-		<osm-tag key="parking" value="underground" renderable="false" />
 		<osm-tag key="parking" value="yes" renderable="false" />
 
 		<osm-tag key="oneway" value="yes" equivalent-values="1,true" renderable="false" />
 		<osm-tag key="piste:oneway" value="yes" equivalent-values="1,true" renderable="false" />
 		<osm-tag key="oneway:bicycle" value="no" equivalent-values="0,false" renderable="false" />
-		<osm-tag key="cycleway" value="opposite" renderable="false" />
-		<osm-tag key="cycleway:left" value="opposite_lane" equivalent-values="opposite_track" renderable="false" />
-		<osm-tag key="cycleway:right" value="opposite_lane" equivalent-values="opposite_track" renderable="false" />
 
 		<osm-tag key="oneway:foot" value="yes" equivalent-values="1,true" renderable="false" />
 		<osm-tag key="foot:backward" value="no" equivalent-values="0,false" renderable="false" />
@@ -1236,12 +1238,18 @@
 	<ways>
 
 		<osm-tag key="osmc_text" value="%s" zoom-appear="12" />
-		<osm-tag key="osmc_text_length" value="%f" renderable="false" zoom-appear="12" />
 
 		<osm-tag key="osmc_order" value="1" renderable="false" zoom-appear="12" />
 		<osm-tag key="osmc_order" value="2" renderable="false" zoom-appear="12" />
 		<osm-tag key="osmc_order" value="3" renderable="false" zoom-appear="12" />
 		<osm-tag key="osmc_order" value="4" renderable="false" zoom-appear="12" />
+
+		<osm-tag key="osmc_symbol_order" value="1" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_symbol_order" value="2" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_symbol_order" value="3" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_symbol_order" value="4" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_symbol_order" value="5" renderable="false" zoom-appear="12" />
+		<osm-tag key="osmc_symbol_order" value="6" renderable="false" zoom-appear="12" />
 
 		<osm-tag key="osmc_highway" value="track" equivalent-values="track,pedestrian,path,via_ferrata,steps,bridleway" renderable="false"/>
 		<osm-tag key="osmc_highway" value="unclassified" equivalent-values="living_street,service,unclassified,road,raceway,residential,cycleway,footway,tertiary_link,tertiary" renderable="false"/>
@@ -1250,6 +1258,7 @@
 		<osm-tag key="lm_highway" value="bridleway" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="byway" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="cycleway" zoom-appear="14" renderable="false" />
+		<osm-tag key="lm_highway" value="construction" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="footway" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="living_street" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="mini_roundabout" zoom-appear="14" renderable="false" />
