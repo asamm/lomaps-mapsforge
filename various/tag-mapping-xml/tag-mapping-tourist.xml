@@ -229,6 +229,8 @@
 		<osm-tag key="waterway" value="drain" zoom-appear="13" />
 		<osm-tag key="waterway" value="waterfall" zoom-appear="13" />
 		<osm-tag key="waterway" value="weir" zoom-appear="14" />
+
+		<osm-tag key="ford" value="yes" zoom-appear="14" />
 	</pois>
 
 	<!-- OTHER POIS -->
@@ -449,6 +451,8 @@
 		<osm-tag key="waterway" value="waterfall" zoom-appear="13" />
 		<osm-tag key="waterway" value="weir" zoom-appear="14" />
 		<osm-tag key="intermittent" value="yes" zoom-appear="14" renderable="false"/>
+
+		<osm-tag key="ford" value="yes" zoom-appear="14" />
 		
 		<!-- more detailed natural=wetland -->
 		<osm-tag key="wetland" value="bog" zoom-appear="12" />
@@ -894,12 +898,16 @@
 		<osm-tag key="man_made" value="lighthouse" zoom-appear="13" />
 		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
 		<osm-tag key="man_made" value="pier" zoom-appear="15" />
+		<osm-tag key="man_made" value="pipeline" zoom-appear="14" />
 		<osm-tag key="man_made" value="spoil_heap" zoom-appear="14" />
 		<osm-tag key="man_made" value="surveillance" zoom-appear="17" />
 		<osm-tag key="man_made" value="survey_point" zoom-appear="14" />
 		<osm-tag key="man_made" value="tower" zoom-appear="13" />
 		<osm-tag key="man_made" value="watermill" zoom-appear="14" />
 		<osm-tag key="man_made" value="windmill" zoom-appear="14" />
+
+		<osm-tag key="location" value="overhead" zoom-appear="14" />
+		<osm-tag key="location" value="overground" zoom-appear="14" />
 
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
