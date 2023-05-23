@@ -1,3 +1,13 @@
+## [1.2.2] - 2023-05-23
+
+### Added
+- [tag-mapping] add elements to display ford and pipelines, and service types
+
+### Changed
+- osmc symbol visible from ZL 15
+- attraction areas semitransparent to avoid problems with incorrect layer definition in OSM
+- increase width of contours lines to be more visible
+
 ## [1.2.1] - 2023-05-15
 
 ### Added
