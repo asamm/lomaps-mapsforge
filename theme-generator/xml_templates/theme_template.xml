@@ -621,10 +621,10 @@
 			<!-- contour lines level 16 and above -->
 			<rule e="way" k="contour_ext" v="*" zoom-min="16">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#A07F5F" stroke-width="0.10" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.09" curve="cubic"/>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#A07F5F" stroke-width="0.18" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.17" curve="cubic"/>
 					<rule e="way" k="*" v="*">
 						<pathText k="ele" font-style="bold" font-size="9" fill="#7C583A" stroke="#ffffff" stroke-width="2" repeat-gap="350"  text-orientation="left"/>
 					</rule>
@@ -961,7 +961,7 @@
 		<!-- turning circles -->
 		<rule e="any" k="highway" v="turning_circle" zoom-min="14">
 			<rule cat="base_topo" e="any" k="*" v="*">
-				<circle r="1.6" scale-radius="true" fill="#4F4F4F"/>
+				<circle r="1.6" scale-radius="true" fill="$color_unclassified_case"/>
 			</rule>
 			<rule cat="highways_city" e="any" k="*" v="*">
 				<circle r="1.6" scale-radius="true" fill="#707070"/>
