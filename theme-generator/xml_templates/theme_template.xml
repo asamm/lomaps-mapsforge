@@ -600,19 +600,19 @@
 			<!-- contour lines level 13-->
 			<rule e="way" k="contour_ext" v="*" zoom-min="13" zoom-max="13">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#A07F5F" stroke-width="0.09" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.20" curve="cubic"/>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#A07F5F" stroke-width="0.18" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.36" curve="cubic"/>
 				</rule>
 			</rule>
 			<!-- contour lines level 14-15-->
 			<rule e="way" k="contour_ext" v="*" zoom-min="14" zoom-max="15">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#A07F5F" stroke-width="0.08" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.16" curve="cubic"/>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#A07F5F" stroke-width="0.15" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.28" curve="cubic"/>
 					<rule e="way" k="*" v="*">
 						<pathText k="ele" font-style="bold" font-size="8" fill="#7C583A" stroke="#ffffff" stroke-width="1.5" repeat-gap="200" text-orientation="left" />
 					</rule>
@@ -621,10 +621,10 @@
 			<!-- contour lines level 16 and above -->
 			<rule e="way" k="contour_ext" v="*" zoom-min="16">
 				<rule e="way" k="contour_ext" v="elevation_minor">
-					<line stroke="#A07F5F" stroke-width="0.05" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.10" curve="cubic"/>
 				</rule>
 				<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-					<line stroke="#A07F5F" stroke-width="0.10" curve="cubic"/>
+					<line stroke="#A07F5F" stroke-width="0.18" curve="cubic"/>
 					<rule e="way" k="*" v="*">
 						<pathText k="ele" font-style="bold" font-size="9" fill="#7C583A" stroke="#ffffff" stroke-width="2" repeat-gap="350"  text-orientation="left"/>
 					</rule>
