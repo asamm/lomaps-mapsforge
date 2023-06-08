@@ -95,6 +95,7 @@
 		<osm-tag key="leisure" value="track" zoom-appear="14" />
 		<osm-tag key="leisure" value="water_park" zoom-appear="14" />
 		
+		<osm-tag key="sport" value="climbing" zoom-appear="14" />
 		<osm-tag key="sport" value="golf" zoom-appear="14" />
 		<osm-tag key="sport" value="shooting" zoom-appear="14" />
 		<osm-tag key="sport" value="soccer" zoom-appear="14" />
@@ -158,6 +159,17 @@
 		<osm-tag key="tourism" value="picnic_table" zoom-appear="16" />
 		<osm-tag key="tourism" value="wilderness_hut" zoom-appear="14" />
 		<osm-tag key="tourism" value="zoo" zoom-appear="13" />
+
+		<!-- section of zoo -->
+		<osm-tag key="zoo" value="aviary" zoom-appear="13" />
+		<osm-tag key="zoo" value="birds" zoom-appear="13" />
+		<osm-tag key="zoo" value="butterfly" zoom-appear="13" />
+		<osm-tag key="zoo" value="enclosure" zoom-appear="13" />
+		<osm-tag key="zoo" value="falconry" zoom-appear="13" />
+		<osm-tag key="zoo" value="petting_zoo" zoom-appear="13" />
+		<osm-tag key="zoo" value="reptile" zoom-appear="13" />
+		<osm-tag key="zoo" value="safari_park" zoom-appear="13" />
+		<osm-tag key="zoo" value="wildlife_park" zoom-appear="13" />
 		
 		<osm-tag key="information" value="board" zoom-appear="14" />
 		<osm-tag key="information" value="guidepost" zoom-appear="14" />
@@ -166,6 +178,7 @@
 		<osm-tag key="tourism" value="museum" zoom-appear="14" />
 		<osm-tag key="tourism" value="viewpoint" zoom-appear="13" />
 
+		<osm-tag key="historic" value="archaeological_site" zoom-appear="14" />
 		<osm-tag key="historic" value="battlefield" zoom-appear="14" />
 		<osm-tag key="historic" value="castle" zoom-appear="13" />
 		<osm-tag key="historic" value="memorial" zoom-appear="15" />
@@ -424,6 +437,7 @@
 		<osm-tag key="natural" value="mountain_range" zoom-appear="12" />
 		<osm-tag key="natural" value="nosea" zoom-appear="0" />
 		<osm-tag key="natural" value="peak" zoom-appear="12" />
+		<osm-tag key="natural" value="ridge" zoom-appear="12" />
 		<osm-tag key="natural" value="rock" zoom-appear="12" />
 		<osm-tag key="natural" value="sand" zoom-appear="12" />
 		<osm-tag key="natural" value="scree" zoom-appear="12" />
@@ -527,6 +541,7 @@
 		<osm-tag key="leisure" value="track" zoom-appear="14" />
 		<osm-tag key="leisure" value="water_park" zoom-appear="14" />
 
+		<osm-tag key="sport" value="climbing" zoom-appear="14" />
 		<osm-tag key="sport" value="golf" zoom-appear="14" />
 		<osm-tag key="sport" value="shooting" zoom-appear="14" />
 		<osm-tag key="sport" value="soccer" zoom-appear="14" />
@@ -553,6 +568,17 @@
 		<osm-tag key="tourism" value="viewpoint" zoom-appear="13" />
 		<osm-tag key="tourism" value="wilderness_hut" zoom-appear="14" />
 		<osm-tag key="tourism" value="zoo" zoom-appear="12" />
+
+		<!-- section of zoo -->
+		<osm-tag key="zoo" value="aviary" zoom-appear="13" />
+		<osm-tag key="zoo" value="birds" zoom-appear="13" />
+		<osm-tag key="zoo" value="butterfly" zoom-appear="13" />
+		<osm-tag key="zoo" value="enclosure" zoom-appear="13" />
+		<osm-tag key="zoo" value="falconry" zoom-appear="13" />
+		<osm-tag key="zoo" value="petting_zoo" zoom-appear="13" />
+		<osm-tag key="zoo" value="reptile" zoom-appear="13" />
+		<osm-tag key="zoo" value="safari_park" zoom-appear="13" />
+		<osm-tag key="zoo" value="wildlife_park" zoom-appear="13" />
 
 		<osm-tag key="amenity" value="atm" zoom-appear="17" />
 		<osm-tag key="amenity" value="bank" zoom-appear="17" />
@@ -767,6 +793,7 @@
 		<osm-tag key="building" value="transportation" zoom-appear="14" />
 		<osm-tag key="building" value="tree_house" zoom-appear="15" />
 		<osm-tag key="building" value="university" zoom-appear="15" />
+		<osm-tag key="building" value="wall" zoom-appear="15" />
 		<osm-tag key="building" value="warehouse" zoom-appear="15" />
 		<osm-tag key="building" value="water_tower" zoom-appear="15" />
 		<osm-tag key="building" value="yes" zoom-appear="15" />
@@ -884,6 +911,7 @@
 		<osm-tag key="boundary" value="national_park" force-polygon-line="true" zoom-appear="12" />
 		<osm-tag key="boundary" value="protected_area" force-polygon-line="true" zoom-appear="12" />
 		
+		<osm-tag key="historic" value="archaeological_site" zoom-appear="14" />
 		<osm-tag key="historic" value="battlefield" zoom-appear="14" />
 		<osm-tag key="historic" value="castle" zoom-appear="13" />
 		<osm-tag key="historic" value="memorial" zoom-appear="15" />
@@ -1085,8 +1113,16 @@
 		<osm-tag key="sac_scale" value="demanding_mountain_hiking" zoom-appear="12" />
 		<osm-tag key="sac_scale" value="alpine_hiking" zoom-appear="12" />
 		<osm-tag key="sac_scale" value="demanding_alpine_hiking" zoom-appear="12" />
-		<osm-tag key="sac_scale" value="difficult_alpine_hiking" zoom-appear="12" />			
-		
+		<osm-tag key="sac_scale" value="difficult_alpine_hiking" zoom-appear="12" />
+
+		<osm-tag key="via_ferrata_scale" value="0" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="1" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="2" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="3" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="4" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="5" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="6" zoom-appear="13" />
+
 		<osm-tag key="network" value="icn" zoom-appear="9" />
 		<osm-tag key="network" value="ncn" zoom-appear="9" />     
 		<osm-tag key="network" value="rcn" zoom-appear="12" />
