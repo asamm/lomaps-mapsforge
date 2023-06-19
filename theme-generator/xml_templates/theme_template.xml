@@ -780,8 +780,11 @@
 				<line stroke="#707070" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="waterway" v="dam" zoom-min="9">
-				<area fill="#90CACAD9"/>
-				<line stroke="#505050" stroke-width="0.2"/>
+				<area fill="#D4D4D4"/>
+				<line stroke="${darken('#D4D4D4', 10)}" stroke-width="0.2"/>
+				<rule e="way" k="*" v="*" zoom-min="15">
+					<caption k="name" dy="11"  font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="$text_wrap_standard"/>
+				</rule>
 			</rule>
 		</rule>
 		<!-- end of water -->

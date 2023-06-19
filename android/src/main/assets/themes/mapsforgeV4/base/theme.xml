@@ -758,8 +758,11 @@
 				<line stroke="#707070" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="waterway" v="dam" zoom-min="9">
-				<area fill="#90CACAD9"/>
-				<line stroke="#505050" stroke-width="0.2"/>
+				<area fill="#D4D4D4"/>
+				<line stroke="#bebebe" stroke-width="0.2"/>
+				<rule e="way" k="*" v="*" zoom-min="15">
+					<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
+				</rule>
 			</rule>
 		</rule>
 		<!-- end of water -->
@@ -977,7 +980,7 @@
 					</rule>
 				</rule>
 				<!-- ==== MTB & Cyclo ==== -->
-				<!-- MTB and designated cyclo routes with defined mtb:scale -->
+				<!-- MTB and designated cyclo routes withot defined mtb:scale -->
 				<rule cat="cyc_mtb_routes" e="way" k="bicycle" v="mtb|designated" zoom-min="12">
 					<rule e="way" k="mtb:scale" v="0" zoom-min="13">
 						<!-- copy style from simple cycle ways for mtb:scale=0 -->
@@ -1016,18 +1019,20 @@
 						</rule>
 					</rule>
 					<!-- MTB Routes without mtb:scale values  -->
-					<rule e="way" k="mtb:scale" v="~" zoom-min="13">
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-							<line dy="1.2" stroke="#E588ED" stroke-width="1" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-							<line dy="1.2" stroke="#E588ED" stroke-width="0.8" stroke-dasharray="14,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-							<line dy="1.0" stroke="#E588ED" stroke-width="0.7" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18">
-							<line dy="1.0" stroke="#E588ED" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
+					<rule cat="cyc_mtb_routes" e="way" k="bicycle" v="mtb" zoom-min="12">
+						<rule e="way" k="mtb:scale" v="~" zoom-min="13">
+							<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
+								<line dy="1.2" stroke="#E588ED" stroke-width="1" stroke-dasharray="15,7" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
+								<line dy="1.2" stroke="#E588ED" stroke-width="0.8" stroke-dasharray="14,7" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+								<line dy="1.0" stroke="#E588ED" stroke-width="0.7" stroke-dasharray="15,7" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="18">
+								<line dy="1.0" stroke="#E588ED" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
+							</rule>
 						</rule>
 					</rule>
 				</rule>
