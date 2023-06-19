@@ -978,7 +978,7 @@
 				</rule>
 				<!-- ==== MTB & Cyclo ==== -->
 				<!-- MTB and designated cyclo routes with defined mtb:scale -->
-				<rule cat="cyc_mtb_routes" e="way" k="route|bicycle" v="mtb|yes|designated" zoom-min="12">
+				<rule cat="cyc_mtb_routes" e="way" k="bicycle" v="mtb|designated" zoom-min="12">
 					<rule e="way" k="mtb:scale" v="0" zoom-min="13">
 						<!-- copy style from simple cycle ways for mtb:scale=0 -->
 						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" closed="any">
