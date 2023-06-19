@@ -1005,7 +1005,7 @@
 				</rule>
 
 				<!-- ==== MTB & Cyclo ==== -->
-				<!-- MTB and designated cyclo routes with defined mtb:scale -->
+				<!-- MTB and designated cyclo routes withot defined mtb:scale -->
 				<rule cat="cyc_mtb_routes" e="way" k="bicycle" v="mtb|designated" zoom-min="12">
 
                     <rule e="way" k="mtb:scale" v="0" zoom-min="13">
@@ -1013,18 +1013,20 @@
 						<generator action="$gen_action_cycle_basic_to_mtb_scale_0" source_section="basic_cycle_ways"></generator>
 					</rule>
 					<!-- MTB Routes without mtb:scale values  -->
-					<rule e="way" k="mtb:scale" v="~" zoom-min="13">
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-							<line dy="1.2" stroke="$color_cycle_mtb" stroke-width="1" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
-							<line dy="1.2" stroke="$color_cycle_mtb" stroke-width="0.8" stroke-dasharray="14,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
-							<line dy="1.0" stroke="$color_cycle_mtb" stroke-width="0.7" stroke-dasharray="15,7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="18">
-							<line dy="1.0" stroke="$color_cycle_mtb" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
+					<rule cat="cyc_mtb_routes" e="way" k="bicycle" v="mtb" zoom-min="12">
+						<rule e="way" k="mtb:scale" v="~" zoom-min="13">
+							<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
+								<line dy="1.2" stroke="$color_cycle_mtb" stroke-width="1" stroke-dasharray="15,7" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
+								<line dy="1.2" stroke="$color_cycle_mtb" stroke-width="0.8" stroke-dasharray="14,7" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+								<line dy="1.0" stroke="$color_cycle_mtb" stroke-width="0.7" stroke-dasharray="15,7" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="*" v="*" zoom-min="18">
+								<line dy="1.0" stroke="$color_cycle_mtb" stroke-width="0.6" stroke-dasharray="12,6" stroke-linecap="butt"/>
+							</rule>
 						</rule>
 					</rule>
 				</rule>
