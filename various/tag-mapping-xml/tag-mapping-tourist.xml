@@ -11,6 +11,7 @@
 		<osm-tag key="highway" value="mini_roundabout" zoom-appear="16" />
 		<osm-tag key="highway" value="motorway_junction" zoom-appear="10" />
 		<osm-tag key="highway" value="traffic_signals" zoom-appear="17" />
+		<osm-tag key="highway" value="trailhead" zoom-appear="13" />
 		<osm-tag key="highway" value="turning_circle" zoom-appear="15" />
 		
 		<osm-tag key="car" value="yes" renderable="false" />
@@ -384,6 +385,7 @@
 		<osm-tag key="highway" value="tertiary_link" zoom-appear="12" />
 		<osm-tag key="highway" value="track" zoom-appear="13" />
 		<osm-tag key="highway" value="traffic_signals" zoom-appear="17" />
+		<osm-tag key="highway" value="trailhead" zoom-appear="13" />
 		<osm-tag key="highway" value="trunk" zoom-appear="6" />
 		<osm-tag key="highway" value="trunk_link" zoom-appear="12" />
 		<osm-tag key="highway" value="turning_circle" zoom-appear="15" />		
@@ -1313,7 +1315,7 @@
 		<osm-tag key="lm_highway" value="motorway_link" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="path" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="pedestrian" zoom-appear="14" renderable="false" />
-		<osm-tag key="lm_highway" value="primary" zoom-appear="4" renderable="false" />
+		<osm-tag key="lm_highway" value="primary" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="primary_link" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="residential" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="road" zoom-appear="14" renderable="false" />
@@ -1326,6 +1328,7 @@
 		<osm-tag key="lm_highway" value="tertiary_link" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="track" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="traffic_signals" zoom-appear="14" renderable="false" />
+		<osm-tag key="lm_highway" value="trailhead" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="trunk" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="trunk_link" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="turning_circle" zoom-appear="14" renderable="false" />
