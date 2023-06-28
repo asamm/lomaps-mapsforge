@@ -3597,18 +3597,38 @@
 		<rule e="any" k="barrier" v="bollard">
 			<circle r="1.5" fill="#707070"/>
 		</rule>
-		<rule e="any" k="barrier" v="gate|lift_gate|swing_gate" zoom-min="15">
-			<symbol src="file:symbols/poi_barrier_liftgate.svg" symbol-width="20"/>
-		</rule>
-		<rule e="any" k="barrier" v="kissing_gate" zoom-min="15">
-			<symbol src="file:symbols/poi_barrier_kissing_gate.svg" symbol-width="20"/>
-		</rule>
-		<rule e="any" k="barrier" v="turnstile|full-height_turnstile" zoom-min="15">
-			<symbol src="file:symbols/poi_barrier_turnstile.svg" symbol-width="20"/>
-		</rule>
-		<rule cat="base_topo" e="any" k="barrier" v="stile" zoom-min="15">
-			<symbol src="file:symbols/poi_ladder.svg" symbol-width="20"/>
-		</rule>
+        <!-- In zoom level 15 set smaller size for gates -->
+        <rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+            <rule e="any" k="barrier" v="gate|lift_gate|swing_gate" >
+                <symbol src="file:symbols/poi_barrier_liftgate.svg" symbol-width="15"/>
+            </rule>
+            <rule e="any" k="barrier" v="kissing_gate" zoom-min="15">
+                <symbol src="file:symbols/poi_barrier_kissing_gate.svg" symbol-width="15"/>
+            </rule>
+            <rule e="any" k="barrier" v="turnstile|full-height_turnstile" >
+                <symbol src="file:symbols/poi_barrier_turnstile.svg" symbol-width="15"/>
+            </rule>
+            <rule cat="base_topo" e="any" k="barrier" v="stile" >
+                <symbol src="file:symbols/poi_ladder.svg" symbol-width="15"/>
+            </rule>
+        </rule>
+
+        <rule e="any" k="*" v="*" zoom-min="17" >
+            <rule e="any" k="barrier" v="gate|lift_gate|swing_gate">
+                <symbol src="file:symbols/poi_barrier_liftgate.svg" symbol-width="20"/>
+            </rule>
+            <rule e="any" k="barrier" v="kissing_gate" >
+                <symbol src="file:symbols/poi_barrier_kissing_gate.svg" symbol-width="20"/>
+            </rule>
+            <rule e="any" k="barrier" v="turnstile|full-height_turnstile" >
+                <symbol src="file:symbols/poi_barrier_turnstile.svg" symbol-width="20"/>
+            </rule>
+            <rule cat="base_topo" e="any" k="barrier" v="stile">
+                <symbol src="file:symbols/poi_ladder.svg" symbol-width="20"/>
+            </rule>
+        </rule>
+
+
 	</rule>
 	<rule cat="base_car" e="any" k="barrier" v="*" zoom-min="17">
 		<rule e="any" k="barrier" v="bollard">
