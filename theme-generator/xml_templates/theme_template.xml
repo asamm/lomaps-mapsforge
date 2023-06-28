@@ -526,7 +526,7 @@
 			<!-- Nature protected areas -->
 			<rule e="way" k="leisure" v="nature_reserve" zoom-min="12">
 				<line stroke="#6fc18e" stroke-width="0.7" stroke-dasharray="2,6" stroke-linecap="square"/>
-                <rule e="any" k="*" v="*" zoom-min="15">
+                <rule e="any" k="*" v="*" zoom-min="16">
                     <caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
                 </rule>
 			</rule>
@@ -932,7 +932,7 @@
 		<rule cat="base_topo" e="way" k="boundary" v="*">
 			<rule e="way" k="boundary" v="protected_area" zoom-min="12">
 				<line stroke="#3FB637" stroke-width="0.6" stroke-dasharray="16,7" stroke-linecap="butt"/>
-				<rule e="way" k="*" v="*" zoom-min="14">
+				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF"
 							 stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 				</rule>
