@@ -978,7 +978,7 @@
 			<!-- highway -->
 			<rule e="way" k="highway|route|mtb:scale|osmc|toll" v="*">
 				<!-- OUTLINE FOR HIGHWAY AREA -->
-				<rule e="way" k="area" v="yes|true">
+				<rule e="way" k="*" v="*" closed="yes">
 					<rule e="way" k="highway" v="footway|footpath|path|unclassified|road" zoom-min="14">
 						<area stroke="#d0d0d0" stroke-width="0.1"/>
 					</rule>
@@ -987,12 +987,13 @@
 					</rule>
 				</rule>
 				<!-- CORE for highway areas  -->
-				<rule e="way" k="area" v="yes|true">
+				<rule e="way" k="*" v="*" closed="yes">
 					<rule e="way" k="highway" v="*" zoom-min="14">
+<!--						EDEDED-->
 						<rule e="way" k="highway" v="footway|footpath|path|pedestrian">
 							<area fill="#EDEDED"/>
 						</rule>
-						<rule e="way" k="highway" v="|residential|living_street">
+						<rule e="way" k="highway" v="residential|living_street">
 							<area fill="#ffffff"/>
 						</rule>
 					</rule>
@@ -1977,7 +1978,7 @@
 
 
 						<!-- === TOPO case highways for 13-15 -->
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" gen_section="to_tunnel">
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" gen_section="to_tunnel" closed="no">
 							<rule e="way" k="highway" v="residential">
 								<line stroke="$color_unclassified_case" stroke-width="${unclassified_width_z13 + $highway_case_z13 * 0.8}"/>
 							</rule>
@@ -2034,7 +2035,7 @@
 						</rule>
 
 						<!-- highway outline for TOPO 16 > -->
-						<rule e="way" k="*" v="*" zoom-min="16" gen_section="to_tunnel">
+						<rule e="way" k="*" v="*" zoom-min="16" gen_section="to_tunnel" closed="no">
 							<rule e="way" k="highway" v="cycleway" >
 								<line stroke="$color_unclassified_case" stroke-width="${track_grade1_width_z16 + $highway_case_z16 * 0.8}" stroke-linecap="butt"/>
 							</rule>
@@ -2213,7 +2214,7 @@
 							</rule>
 						</rule>
 					</rule>
-					<rule e="way" k="*" v="*" zoom-min="14">
+					<rule e="way" k="*" v="*" zoom-min="14" closed="no">
 						<rule e="way" k="highway" v="steps" zoom-max="15">
 							<line stroke="$color_steps" stroke-width="$steps_width_z14" stroke-dasharray="1,2" stroke-linecap="butt" />
 						</rule>
