@@ -3758,6 +3758,13 @@
 		<rule cat="base_topo" e="any" k="power" v="tower" zoom-min="15">
 			<circle r="2" fill="#707070"/>
 		</rule>
+
+        <!-- power wind generator -->
+		<rule cat="base_topo" e="any" k="power" v="generator" zoom-min="14">
+			<rule e="any" k="generator:source" v="wind">
+                <symbol src="file:symbols/poi_power_generator_wind.svg" symbol-width="15"/>
+		    </rule>
+        </rule>
 	</rule>
 
 	<!-- NATURAL -->
