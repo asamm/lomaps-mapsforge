@@ -502,7 +502,7 @@
 		<osm-tag key="landuse" value="farm" zoom-appear="14" />
 		<osm-tag key="landuse" value="farmland" zoom-appear="14" />
 		<osm-tag key="landuse" value="farmyard" zoom-appear="14" />
-		<osm-tag key="landuse" value="forest" zoom-appear="10" />
+		<osm-tag key="landuse" value="forest" zoom-appear="9" />
 		<osm-tag key="landuse" value="grass" zoom-appear="12" />
 		<osm-tag key="landuse" value="greenfield" zoom-appear="14" />
 		<osm-tag key="landuse" value="hop_garden" zoom-appear="13" />
@@ -519,7 +519,7 @@
 		<osm-tag key="landuse" value="retail" zoom-appear="14" />
 		<osm-tag key="landuse" value="village_green" zoom-appear="14" />
 		<osm-tag key="landuse" value="vineyard" zoom-appear="13" />		
-		<osm-tag key="landuse" value="wood" zoom-appear="10" />
+		<osm-tag key="landuse" value="wood" zoom-appear="9" />
 	</ways>
 
 	<!-- LEISURE/SPORT TAGS -->
