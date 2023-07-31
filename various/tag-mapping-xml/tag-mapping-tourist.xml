@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tag-mapping xmlns="http://mapsforge.org/tag-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://mapsforge.org/tag-mapping ../resources/tag-mapping.xsd" default-zoom-appear="14"
-	profile-name="default-profile">
+<tag-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-zoom-appear="14"
+             profile-name="default-profile" xmlns="http://mapsforge.org/tag-mapping"
+             xsi:schemaLocation="http://mapsforge.org/tag-mapping https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/tag-mapping.xsd">
 	
 	<!-- ************* POIS *************** -->
 
@@ -81,6 +81,7 @@
 		
 		<osm-tag key="leisure" value="common" zoom-appear="14" />
 		<osm-tag key="leisure" value="dog_park" zoom-appear="14" />
+		<osm-tag key="leisure" value="fitness_station" zoom-appear="14" />
 		<osm-tag key="leisure" value="firepit" zoom-appear="15" />
 		<osm-tag key="leisure" value="golf_course" zoom-appear="14" />
 		<osm-tag key="leisure" value="marina" zoom-appear="14" />
@@ -210,6 +211,7 @@
 		<osm-tag key="leaf_type" value="mixed" renderable="false" />
 		<osm-tag key="leaf_type" value="needleleaved" renderable="false" />
 		
+		<osm-tag key="natural" value="arete" zoom-appear="12" />
 		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
 		<osm-tag key="natural" value="bay" zoom-appear="12" />
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
@@ -419,7 +421,8 @@
 		<osm-tag key="denotation" value="natural_monument" renderable="false" />
 		
 		<osm-tag key="lock" value="yes" zoom-appear="14" />
-		
+
+		<osm-tag key="natural" value="arete" zoom-appear="12" />
 		<osm-tag key="natural" value="bare_rock" zoom-appear="12" />
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
 		<osm-tag key="natural" value="bay" zoom-appear="12" />
@@ -528,6 +531,7 @@
 		
 		<osm-tag key="leisure" value="common" zoom-appear="12" />
 		<osm-tag key="leisure" value="dog_park" zoom-appear="12" />
+		<osm-tag key="leisure" value="fitness_station" zoom-appear="14" />
 		<osm-tag key="leisure" value="garden" zoom-appear="14" />
 		<osm-tag key="leisure" value="golf_course" zoom-appear="12" />
 		<osm-tag key="leisure" value="marina" zoom-appear="14" />
@@ -940,6 +944,7 @@
 
 		<osm-tag key="location" value="overhead" zoom-appear="14" />
 		<osm-tag key="location" value="overground" zoom-appear="14" />
+		<osm-tag key="location" value="underground" zoom-appear="14" />
 
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
@@ -1137,7 +1142,9 @@
 		<osm-tag key="mtb:scale" value="4" zoom-appear="13" />
 		<osm-tag key="mtb:scale" value="5" zoom-appear="13" />
 		<osm-tag key="mtb:scale" value="6" zoom-appear="13" />
-		
+
+		<osm-tag key="mtb:name" value="%s" zoom-appear="13" />
+
 		<!-- POLAND cyclo colour tags -->
 		<osm-tag key="colour" value="#000000" zoom-appear="12" />
 		<osm-tag key="colour" value="black" zoom-appear="12" />
