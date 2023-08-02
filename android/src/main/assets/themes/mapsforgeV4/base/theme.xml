@@ -510,7 +510,7 @@
 			<!-- Nature protected areas -->
 			<rule e="way" k="leisure" v="nature_reserve" zoom-min="12">
 				<line stroke="#6fc18e" stroke-width="0.7" stroke-dasharray="2,6" stroke-linecap="square"/>
-				<rule e="any" k="*" v="*" zoom-min="15">
+				<rule e="any" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 				</rule>
 			</rule>
@@ -908,7 +908,7 @@
 		<rule cat="base_topo" e="way" k="boundary" v="*">
 			<rule e="way" k="boundary" v="protected_area" zoom-min="12">
 				<line stroke="#3FB637" stroke-width="0.6" stroke-dasharray="16,7" stroke-linecap="butt"/>
-				<rule e="way" k="*" v="*" zoom-min="14">
+				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
 				</rule>
 			</rule>
@@ -951,26 +951,21 @@
 			<!-- highway -->
 			<rule e="way" k="highway|route|mtb:scale|osmc|toll" v="*">
 				<!-- OUTLINE FOR HIGHWAY AREA -->
-				<rule e="way" k="area" v="yes|true">
-					<rule e="way" k="highway" v="footway|footpath|path|unclassified|road" zoom-min="14">
-						<area stroke="#d0d0d0" stroke-width="0.1"/>
-					</rule>
-					<rule e="way" k="highway" v="pedestrian|residential|living_street|service" zoom-min="14">
+				<rule e="way" k="highway" v="footway|footpath|path|pedestrian" zoom-min="14" closed="yes">
+					<area stroke="#d0d0d0" stroke-width="0.1"/>
+				</rule>
+				<rule e="way" k="area" v="yes">
+					<rule e="way" k="highway" v="residential|service|living_street|unclassified|road" zoom-min="14">
 						<area stroke="#d0d0d0" stroke-width="0.1"/>
 					</rule>
 				</rule>
 				<!-- CORE for highway areas  -->
-				<rule e="way" k="area" v="yes|true">
+				<rule e="way" k="highway" v="footway|footpath|path|pedestrian" zoom-min="14" closed="yes">
+					<area stroke="#EDEDED"/>
+				</rule>
+				<rule e="way" k="area" v="yes">
 					<rule e="way" k="highway" v="*" zoom-min="14">
-						<rule e="way" k="highway" v="footway|footpath|path|pedestrian">
-							<area fill="#EDEDED"/>
-						</rule>
-						<rule e="way" k="highway" v="|residential|living_street">
-							<area fill="#ffffff"/>
-						</rule>
-					</rule>
-					<rule e="way" k="highway" v="*" zoom-min="14">
-						<rule e="way" k="highway" v="road|unclassified|service">
+						<rule e="way" k="highway" v="residential|service|living_street|unclassified|road">
 							<area fill="#ffffff"/>
 						</rule>
 					</rule>
@@ -4874,7 +4869,7 @@
 								<rule e="way" k="highway" v="living_street|service|unclassified|road">
 									<line stroke="#8a8a8a" stroke-width="1.5"/>
 								</rule>
-								<rule e="way" k="highway" v="cycleway|pedestrian">
+								<rule e="way" k="highway" v="cycleway|pedestrian" closed="no">
 									<line stroke="#8a8a8a" stroke-width="1"/>
 								</rule>
 								<!-- white outline for path-->
@@ -4934,7 +4929,7 @@
 							<rule e="way" k="highway" v="living_street|service|unclassified|road">
 								<line stroke="#8a8a8a" stroke-width="1.2333333333333334"/>
 							</rule>
-							<rule e="way" k="highway" v="pedestrian">
+							<rule e="way" k="highway" v="pedestrian" closed="no">
 								<line stroke="#8a8a8a" stroke-width="1"/>
 							</rule>
 							<!-- white outline for path-->
@@ -5099,7 +5094,7 @@
 						<rule e="way" k="highway" v="steps" zoom-max="15">
 							<line stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="1,2" stroke-linecap="butt"/>
 						</rule>
-						<rule e="way" k="highway" v="footway|corridor" zoom-max="15">
+						<rule e="way" k="highway" v="footway|corridor" zoom-max="15" closed="no">
 							<rule e="way" k="indoor" v="~|no">
 								<line stroke="#8a8a8a" stroke-width="0.4" stroke-dasharray="0.5,3,2,3"/>
 							</rule>
@@ -5113,7 +5108,7 @@
 						<rule e="way" k="highway" v="cycleway" zoom-max="15">
 							<line stroke="#8a8a8a" stroke-width="1"/>
 						</rule>
-						<rule e="way" k="highway" v="pedestrian">
+						<rule e="way" k="highway" v="pedestrian" closed="no">
 							<line stroke="#d0d0d0" stroke-width="0.3"/>
 							<rule e="way" k="*" v="*" zoom-min="16">
 								<pathText k="name" font-style="bold" font-size="10" stroke="#FFFFFF" stroke-width="4"/>
@@ -5728,7 +5723,7 @@
 						<rule e="way" k="highway" v="living_street|service|unclassified|road" zoom-min="0" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.5" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
-						<rule e="way" k="highway" v="cycleway|pedestrian" zoom-min="0" zoom-max="127" closed="any">
+						<rule e="way" k="highway" v="cycleway|pedestrian" zoom-min="0" zoom-max="127" closed="no">
 							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="highway" v="path|via_ferrata" zoom-min="0" zoom-max="127" closed="any">
@@ -5786,7 +5781,7 @@
 					<rule e="way" k="highway" v="living_street|service|unclassified|road" zoom-min="0" zoom-max="127" closed="any">
 						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.2333333333333334" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
-					<rule e="way" k="highway" v="pedestrian" zoom-min="0" zoom-max="127" closed="any">
+					<rule e="way" k="highway" v="pedestrian" zoom-min="0" zoom-max="127" closed="no">
 						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="path|via_ferrata" zoom-min="0" zoom-max="127" closed="any">
@@ -11286,17 +11281,34 @@
 		<rule e="any" k="barrier" v="bollard">
 			<circle r="1.5" fill="#707070"/>
 		</rule>
-		<rule e="any" k="barrier" v="gate|lift_gate|swing_gate" zoom-min="15">
-			<symbol src="assets:symbols/poi_barrier_liftgate.svg" symbol-width="20"/>
+		<!-- In zoom level 15 set smaller size for gates -->
+		<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+			<rule e="any" k="barrier" v="gate|lift_gate|swing_gate">
+				<symbol src="assets:symbols/poi_barrier_liftgate.svg" symbol-width="15"/>
+			</rule>
+			<rule e="any" k="barrier" v="kissing_gate" zoom-min="15">
+				<symbol src="assets:symbols/poi_barrier_kissing_gate.svg" symbol-width="15"/>
+			</rule>
+			<rule e="any" k="barrier" v="turnstile|full-height_turnstile">
+				<symbol src="assets:symbols/poi_barrier_turnstile.svg" symbol-width="15"/>
+			</rule>
+			<rule cat="base_topo" e="any" k="barrier" v="stile">
+				<symbol src="assets:symbols/poi_ladder.svg" symbol-width="15"/>
+			</rule>
 		</rule>
-		<rule e="any" k="barrier" v="kissing_gate" zoom-min="15">
-			<symbol src="assets:symbols/poi_barrier_kissing_gate.svg" symbol-width="20"/>
-		</rule>
-		<rule e="any" k="barrier" v="turnstile|full-height_turnstile" zoom-min="15">
-			<symbol src="assets:symbols/poi_barrier_turnstile.svg" symbol-width="20"/>
-		</rule>
-		<rule cat="base_topo" e="any" k="barrier" v="stile" zoom-min="15">
-			<symbol src="assets:symbols/poi_ladder.svg" symbol-width="20"/>
+		<rule e="any" k="*" v="*" zoom-min="17">
+			<rule e="any" k="barrier" v="gate|lift_gate|swing_gate">
+				<symbol src="assets:symbols/poi_barrier_liftgate.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="barrier" v="kissing_gate">
+				<symbol src="assets:symbols/poi_barrier_kissing_gate.svg" symbol-width="20"/>
+			</rule>
+			<rule e="any" k="barrier" v="turnstile|full-height_turnstile">
+				<symbol src="assets:symbols/poi_barrier_turnstile.svg" symbol-width="20"/>
+			</rule>
+			<rule cat="base_topo" e="any" k="barrier" v="stile">
+				<symbol src="assets:symbols/poi_ladder.svg" symbol-width="20"/>
+			</rule>
 		</rule>
 	</rule>
 	<rule cat="base_car" e="any" k="barrier" v="*" zoom-min="17">
@@ -11418,6 +11430,12 @@
 		<!-- power tover -->
 		<rule cat="base_topo" e="any" k="power" v="tower" zoom-min="15">
 			<circle r="2" fill="#707070"/>
+		</rule>
+		<!-- power wind generator -->
+		<rule cat="base_topo" e="any" k="power" v="generator" zoom-min="14">
+			<rule e="any" k="generator:source" v="wind">
+				<symbol src="assets:symbols/poi_power_generator_wind.svg" symbol-width="15"/>
+			</rule>
 		</rule>
 	</rule>
 	<!-- NATURAL -->
