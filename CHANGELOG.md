@@ -1,3 +1,21 @@
+## [1.2.3] - 2023-08-02
+
+### Added
+- wind turbines 
+- [tag-mapping] - add man_made breakwater and groyne, underground location
+- [tag-mapping] - add zoo types (aviary, birds, reptile, safari_park, etc...)
+- [tag-mapping] - add highway=trailhead
+- [tag-mapping] - add leisure=fitness_centre, natural=arete
+
+### Changed
+- dams in lighter gray color, add captions for dams
+- gates for zl=15 - 16 in smaller size
+- improve rendering of pedestrian areas (avoid thick stroke line)
+- [tag-mapping] - forest areas available from ZL 9
+
+### Fixed
+- MTB cycle ways were rendered for every bicycle=yes
+
 ## [1.2.2] - 2023-05-23
 
 ### Added
