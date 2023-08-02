@@ -978,27 +978,21 @@
 			<!-- highway -->
 			<rule e="way" k="highway|route|mtb:scale|osmc|toll" v="*">
 				<!-- OUTLINE FOR HIGHWAY AREA -->
-				<rule e="way" k="*" v="*" closed="yes">
-					<rule e="way" k="highway" v="footway|footpath|path|unclassified|road" zoom-min="14">
-						<area stroke="#d0d0d0" stroke-width="0.1"/>
-					</rule>
-					<rule e="way" k="highway" v="pedestrian|residential|living_street|service" zoom-min="14">
+				<rule e="way" k="highway" v="footway|footpath|path|pedestrian" zoom-min="14" closed="yes">
+					<area stroke="#d0d0d0" stroke-width="0.1"/>
+				</rule>
+				<rule e="way" k="area" v="yes">
+					<rule e="way" k="highway" v="residential|service|living_street|unclassified|road" zoom-min="14">
 						<area stroke="#d0d0d0" stroke-width="0.1"/>
 					</rule>
 				</rule>
 				<!-- CORE for highway areas  -->
-				<rule e="way" k="*" v="*" closed="yes">
+				<rule e="way" k="highway" v="footway|footpath|path|pedestrian" zoom-min="14" closed="yes">
+					<area stroke="#EDEDED" />
+				</rule>
+				<rule e="way" k="area" v="yes" >
 					<rule e="way" k="highway" v="*" zoom-min="14">
-<!--						EDEDED-->
-						<rule e="way" k="highway" v="footway|footpath|path|pedestrian">
-							<area fill="#EDEDED"/>
-						</rule>
-						<rule e="way" k="highway" v="residential|living_street">
-							<area fill="#ffffff"/>
-						</rule>
-					</rule>
-					<rule e="way" k="highway" v="*" zoom-min="14">
-						<rule e="way" k="highway" v="road|unclassified|service">
+						<rule e="way" k="highway" v="residential|service|living_street|unclassified|road">
 							<area fill="#ffffff"/>
 						</rule>
 					</rule>
@@ -1978,7 +1972,7 @@
 
 
 						<!-- === TOPO case highways for 13-15 -->
-						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" gen_section="to_tunnel" closed="no">
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" gen_section="to_tunnel" >
 							<rule e="way" k="highway" v="residential">
 								<line stroke="$color_unclassified_case" stroke-width="${unclassified_width_z13 + $highway_case_z13 * 0.8}"/>
 							</rule>
@@ -1988,7 +1982,7 @@
 									<line stroke="$color_unclassified_case" stroke-width="${unclassified_width_z14 + $highway_case_z13}"/>
 								</rule>
 
-								<rule e="way" k="highway" v="cycleway|pedestrian">
+								<rule e="way" k="highway" v="cycleway|pedestrian" closed="no">
 									<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
 								</rule>
 								<!-- white outline for path-->
@@ -2035,7 +2029,7 @@
 						</rule>
 
 						<!-- highway outline for TOPO 16 > -->
-						<rule e="way" k="*" v="*" zoom-min="16" gen_section="to_tunnel" closed="no">
+						<rule e="way" k="*" v="*" zoom-min="16" gen_section="to_tunnel" >
 							<rule e="way" k="highway" v="cycleway" >
 								<line stroke="$color_unclassified_case" stroke-width="${track_grade1_width_z16 + $highway_case_z16 * 0.8}" stroke-linecap="butt"/>
 							</rule>
@@ -2051,7 +2045,7 @@
 								<line stroke="$color_unclassified_case" stroke-width="${unclassified_width_z16 + $highway_case_z16}"/>
 							</rule>
 
-							<rule e="way" k="highway" v="pedestrian">
+							<rule e="way" k="highway" v="pedestrian" closed="no">
 								<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
 							</rule>
 							<!-- white outline for path-->
@@ -2214,11 +2208,11 @@
 							</rule>
 						</rule>
 					</rule>
-					<rule e="way" k="*" v="*" zoom-min="14" closed="no">
+					<rule e="way" k="*" v="*" zoom-min="14" >
 						<rule e="way" k="highway" v="steps" zoom-max="15">
 							<line stroke="$color_steps" stroke-width="$steps_width_z14" stroke-dasharray="1,2" stroke-linecap="butt" />
 						</rule>
-						<rule e="way" k="highway" v="footway|corridor" zoom-max="15">
+						<rule e="way" k="highway" v="footway|corridor" zoom-max="15" closed="no">
 							<rule e="way" k="indoor" v="~|no">
 								<line stroke="$color_footway" stroke-width="$footway_width_z14" stroke-dasharray="0.5,3,2,3"/>
 							</rule>
@@ -2233,7 +2227,7 @@
 						<rule e="way" k="highway" v="cycleway" zoom-max="15">
 							<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
 						</rule>
-						<rule e="way" k="highway" v="pedestrian">
+						<rule e="way" k="highway" v="pedestrian" closed="no">
 							<line stroke="$color_pedestrian" stroke-width="0.3"/>
 							<rule e="way" k="*" v="*" zoom-min="16">
 								<pathText k="name" font-style="bold" font-size="10" stroke="#FFFFFF" stroke-width="$text_halo"/>
