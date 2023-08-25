@@ -1137,9 +1137,9 @@
 		<osm-tag key="via_ferrata_scale" value="5" zoom-appear="13" />
 		<osm-tag key="via_ferrata_scale" value="6" zoom-appear="13" />
 
-		<osm-tag key="network" value="icn" zoom-appear="9" />
-		<osm-tag key="network" value="ncn" zoom-appear="9" />     
-		<osm-tag key="network" value="rcn" zoom-appear="12" />
+		<osm-tag key="network" value="icn" zoom-appear="8" />
+		<osm-tag key="network" value="ncn" zoom-appear="8" />
+		<osm-tag key="network" value="rcn" zoom-appear="10" />
 		<osm-tag key="network" value="lcn" zoom-appear="12" />
 		<!-- MTB ROUTE -->
 		<osm-tag key="mtb:scale" value="0" zoom-appear="13" />
