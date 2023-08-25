@@ -168,7 +168,7 @@ class TemplateVariables(Template):
         "gray": "#575757",
         "green": "#267f00",
         "orange": "#ff9500",
-        "purple": "#b399ff",
+        "purple": "#a78aff",
         "yellow": "#e2d21d",
 
     }
