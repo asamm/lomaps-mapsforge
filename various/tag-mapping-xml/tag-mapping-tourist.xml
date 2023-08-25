@@ -440,6 +440,7 @@
 		<osm-tag key="natural" value="marsh" zoom-appear="12" />
 		<osm-tag key="natural" value="massif" zoom-appear="12" />
 		<osm-tag key="natural" value="mountain_range" zoom-appear="12" />
+		<osm-tag key="natural" value="mud" zoom-appear="12" />
 		<osm-tag key="natural" value="nosea" zoom-appear="0" />
 		<osm-tag key="natural" value="peak" zoom-appear="12" />
 		<osm-tag key="natural" value="ridge" zoom-appear="12" />
