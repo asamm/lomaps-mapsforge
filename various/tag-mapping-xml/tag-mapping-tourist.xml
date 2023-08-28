@@ -1102,7 +1102,7 @@
 		<osm-tag key="osmc_color" value="black" zoom-appear="12" />
 		<osm-tag key="osmc_color" value="white" zoom-appear="12" />
 		<osm-tag key="network" value="iwn" zoom-appear="12" />
-		<osm-tag key="network" value="nwn" zoom-appear="12" />     
+		<osm-tag key="network" value="nwn" zoom-appear="12" />
 		<osm-tag key="network" value="rwn" zoom-appear="12" />
 		<osm-tag key="network" value="lwn" zoom-appear="12" />
 		<osm-tag key="state" value="proposed" zoom-appear="12" />

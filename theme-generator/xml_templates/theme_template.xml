@@ -1,7 +1,7 @@
 #from actions.composite_op import lighten, darken, opacity
 <?xml version="1.0" encoding="utf-8"?>
 <rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="5"
-			 base-stroke-width="0.7" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			 base-stroke-width="0.65" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--
 		LOCUS INTERNAL THEME FOR LOMAPS
 -->
@@ -1117,18 +1117,51 @@
 				</rule>
 
 				<!-- OSMC CYCLE ROUTES -->
+				<!-- low zoom cycle routes -->
+				<rule cat="cyc_routes" e="way" k="route" v="bicycle">
+
+					<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10" >
+						<rule e="way" k="network" v="icn|ncn" >
+
+							<rule e="way" k="osmc_highway" v="unclassified|track|~">
+								<line stroke="$color_cycle_icn_ncn" dy="0" stroke-width="$osmc_cycle_width_z9" stroke-linecap="round"/>
+							</rule>
+							<rule e="way" k="osmc_highway" v="class">
+								<line stroke="$color_cycle_icn_ncn" dy="${($secondary_width_z11 + $highway_case)/2 + $osmc_cycle_width_z11}" stroke-width="$osmc_cycle_width_z9" stroke-linecap="butt" />
+							</rule>
+						</rule>
+					</rule>
+
+					<rule e="way" k="*" v="*" zoom-min="11" zoom-max="12">
+						<rule e="way" k="network" v="rcn" >
+							<rule e="way" k="osmc_highway" v="track|~" gen_section="osmc_cycle_rcn_lz">
+								<line stroke="$color_cycle_standard" dy="0" stroke-width="$osmc_cycle_width_z11" stroke-linecap="round"/>
+							</rule>
+							<rule e="way" k="osmc_highway" v="unclassified" gen_section="osmc_cycle_rcn_lz">
+								<line stroke="$color_cycle_standard" dy="${($unclassified_width_z12 + $highway_case)/2 + $osmc_cycle_width_z11}" stroke-width="$osmc_cycle_width_z11" stroke-linecap="round"/>
+							</rule>
+							<rule e="way" k="osmc_highway" v="class" gen_section="osmc_cycle_rcn_lz">
+								<line stroke="$color_cycle_standard" dy="${($secondary_width_z11 + $highway_case)/2 + $osmc_cycle_width_z11}" stroke-width="$osmc_cycle_width_z11" stroke-linecap="round" />
+							</rule>
+						</rule>
+						<rule e="way" k="network" v="icn|ncn" >
+							<generator action="$gen_action_cycle_icn" source_section="osmc_cycle_rcn_lz"></generator>
+						</rule>
+					</rule>
+
+				</rule>
 
 				<rule cat="cyc_routes" e="way" k="route" v="bicycle">
 					<rule e="way" k="network" v="lcn|rcn" >
-						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="osmc_cycle_rcn">
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" gen_section="osmc_cycle_rcn">
 							<rule e="way" k="osmc_highway" v="track|~">
-								<line stroke="$color_cycle_standard" dy="${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-linecap="butt"/>
+								<line stroke="$color_cycle_standard" dy="${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_cycle_width_z13" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="unclassified">
-								<line stroke="$color_cycle_standard" dy="${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.8}" stroke-width="$osmc_hiking_width_z13" stroke-linecap="butt"/>
+								<line stroke="$color_cycle_standard" dy="${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.8}" stroke-width="$osmc_cycle_width_z13" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="osmc_highway" v="class">
-								<line stroke="$color_cycle_standard" dy="${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-linecap="butt" />
+								<line stroke="$color_cycle_standard" dy="${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_cycle_width_z13" stroke-linecap="butt" />
 							</rule>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" gen_section="osmc_cycle_rcn">
@@ -2262,20 +2295,20 @@
 							<line stroke="$color_tertiary_z11" stroke-width="${$tertiary_width_z11/2}"/>
 						</rule>
 						<rule e="way" k="highway" v="tertiary|tertiary_link" zoom-min="12">
-							<line stroke="$color_tertiary" stroke-width="$tertiary_width_z11"/>
+							<line stroke="$color_tertiary" stroke-width="${$tertiary_width_z11 * 0.9}"/>
 						</rule>
 						<rule e="way" k="highway" v="secondary|secondary_link">
-							<line stroke="$color_secondary" stroke-width="$secondary_width_z11" stroke-linecap="round"/>
+							<line stroke="$color_secondary" stroke-width="${$secondary_width_z11 * 0.9}" stroke-linecap="round"/>
 						</rule>
 						<rule e="way" k="highway" v="primary|primary_link">
-							<line stroke="$color_primary" stroke-width="$primary_width_z11" stroke-linecap="round"/>
+							<line stroke="$color_primary" stroke-width="${$primary_width_z11 * 0.9}" stroke-linecap="round"/>
 						</rule>
 						<rule e="way" k="highway" v="trunk|trunk_link">
-							<line stroke="$color_trunk" stroke-width="$trunk_width_z11" stroke-linecap="round"/>
+							<line stroke="$color_trunk" stroke-width="${$trunk_width_z11 * 0.9}" stroke-linecap="round"/>
 							<!--<caption bg-rect-fill="#E52C2C" bg-rect-over="2.8" bg-rect-rounded="2" bg-rect-stroke="#FFFFFF" bg-rect-stroke-width="2" fill="#FFFFFF" font-size="10dp" font-style="bold" k="ref" scale-font-size="10,1.1"/>-->
 						</rule>
 						<rule e="way" k="highway" v="motorway|motorway_link">
-							<line stroke="$color_motorway" stroke-width="$motorway_width_z11" stroke-linecap="round"/>
+							<line stroke="$color_motorway" stroke-width="${$motorway_width_z11 * 0.75}" stroke-linecap="round"/>
 							<line stroke="$color_motorway_case" stroke-width="0.5" stroke-linecap="round"/>
 							<!--<caption bg-rect-fill="#E52C2C" bg-rect-over="3.5" bg-rect-rounded="3" bg-rect-stroke="#FFFFFF" bg-rect-stroke-width="2" fill="#FFFFFF" font-size="11dp" font-style="bold" k="ref"/>-->
 						</rule>
@@ -2319,34 +2352,34 @@
 						<rule e="way" k="highway" v="tertiary_link">
 							<line stroke="$color_tertiary" stroke-width="${tertiary_width_z13 * 0.8}"/>
 						</rule>
-						<rule e="way" k="highway" v="tertiary" >
-							<line stroke="$color_tertiary" stroke-width="$tertiary_width_z13"/>
-						</rule>
 						<rule e="way" k="highway" v="secondary_link">
 							<line stroke="$color_secondary" stroke-width="${secondary_width_z13 * 0.8}"/>
+						</rule>
+						<rule e="way" k="highway" v="primary_link">
+							<line stroke="$color_primary" stroke-width="${primary_width_z13 * 0.7}"/>
+						</rule>
+						<rule e="way" k="highway" v="trunk_link">
+							<line stroke="$color_trunk" stroke-width="${trunk_width_z13 * 0.7}"/>
+						</rule>
+						<rule e="way" k="highway" v="motorway_link">
+							<line stroke="$color_motorway" stroke-width="${motorway_width_z13 * 0.7}"/>
+						</rule>
+						<rule e="way" k="highway" v="tertiary" >
+							<line stroke="$color_tertiary" stroke-width="${tertiary_width_z13 * 0.8}"/>
 						</rule>
 						<rule e="way" k="highway" v="secondary">
 							<line stroke="$color_secondary" stroke-width="${secondary_width_z13 * 0.8}"/>
 						</rule>
-						<rule e="way" k="highway" v="primary_link">
-							<line stroke="$color_primary" stroke-width="${primary_width_z13 * 0.8}"/>
-						</rule>
 						<rule e="way" k="highway" v="primary">
-							<line stroke="$color_primary" stroke-width="${primary_width_z13}" />
-						</rule>
-
-						<rule e="way" k="highway" v="trunk_link">
-							<line stroke="$color_trunk" stroke-width="${trunk_width_z13 * 0.8}"/>
+							<line stroke="$color_primary" stroke-width="${primary_width_z13 * 0.8}" />
 						</rule>
 						<rule e="way" k="highway" v="trunk">
-							<line stroke="$color_trunk" stroke-width="${trunk_width_z13}"/>
+							<line stroke="$color_trunk" stroke-width="${$trunk_width_z13 * 0.8}"/>
 							<!--<caption bg-rect-fill="#E52C2C" bg-rect-over="2.5dp" bg-rect-rounded="3" bg-rect-stroke="#FFFFFF" bg-rect-stroke-width="1dp" fill="#FFFFFF" font-size="8dp" font-style="bold" k="ref" scale-font-size="13,1.15"/>-->
 						</rule>
-						<rule e="way" k="highway" v="motorway_link">
-							<line stroke="$color_motorway" stroke-width="${motorway_width_z13 * 0.8}"/>
-						</rule>
+
 						<rule e="way" k="highway" v="motorway">
-							<line stroke="$color_motorway" stroke-width="${motorway_width_z13}" stroke-linecap="butt"/>
+							<line stroke="$color_motorway" stroke-width="${$motorway_width_z13 * 0.8}" stroke-linecap="butt"/>
 							<!--<caption bg-rect-fill="#dc1b1b" bg-rect-over="3dp" bg-rect-rounded="4" bg-rect-stroke="#FFFFFF" bg-rect-stroke-width="1dp" fill="#FFFFFF" font-size="9dp" font-style="bold" k="ref" scale-font-size="13,1.15"/>-->
 						</rule>
 					</rule>
@@ -2400,7 +2433,7 @@
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z15" stroke-dasharray="2.5,1.5"  scale="all"/>
 							</rule>
 						</rule>
-						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road|service">
+						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road">
 							<line stroke="#ffffff" stroke-width="$unclassified_width_z16"/>
 						</rule>
 						<rule e="way" k="highway" v="tertiary_link">
@@ -2425,6 +2458,15 @@
 						<rule e="way" k="highway" v="tertiary">
 							<line stroke="$color_tertiary" stroke-width="$tertiary_width_z16"/>
 						</rule>
+							<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
+						<rule e="way" k="access" v="private|no">
+							<rule e="way" k="*" v="*" zoom-min="14">
+								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway">
+									<line stroke="#d5d5d5" stroke-width="${$unclassified_width_z16 * 0.7}"/>
+								</rule>
+							</rule>
+						</rule>
+
 						<rule e="way" k="highway" v="secondary">
 							<line stroke="$color_secondary" stroke-width="$secondary_width_z16"/>
 						</rule>
@@ -2488,14 +2530,6 @@
 					<rule cat="base_summer" e="way" k="foot:backward" v="no" zoom-min="15">
 						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="16" dy="1" repeat="true" repeat-gap="300"
 									symbol-orientation="left" position="center" priority="${$priority_one_way+1}"/>
-					</rule>
-					<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
-					<rule e="way" k="access" v="private|no">
-						<rule e="way" k="*" v="*" zoom-min="14">
-							<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway">
-								<line stroke="#d5d5d5" stroke-width="0.6"/>
-							</rule>
-						</rule>
 					</rule>
 				</rule>
 				<!-- END off no area core for topo highways-->

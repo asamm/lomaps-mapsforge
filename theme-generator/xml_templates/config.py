@@ -33,7 +33,7 @@ class TemplateVariables(Template):
     color_motorway_case = "#E52C2C"
     color_trunk_case = "#E52C2C"
     color_primary_case = "#C6523D"
-    color_secondary_case = "#938C7A"
+    color_secondary_case = "#707070"
     color_tertiary_case = "#707070"
     color_unclassified_case = "#8a8a8a"
     color_footway_area = "#EDEDED"
@@ -63,25 +63,21 @@ class TemplateVariables(Template):
     primary_width_z8 = 3
     secondary_width_z10 = 2.5
 
-    motorway_width_z11 = 5.5
-    trunk_width_z11 = 5
-    primary_width_z11 = 4.5
-    secondary_width_z11 = 3.5
-    tertiary_width_z11 = 3
+    increase_f = 1.75
+    motorway_width_z11 = 5.5 * increase_f
+    trunk_width_z11 = 5 * increase_f
+    primary_width_z11 = 4.5 * increase_f
+    secondary_width_z11 = 3.5 * increase_f
+    tertiary_width_z11 = 3 * increase_f
 
-    motorway_width_z12 = 4
-    trunk_width_z12 = 4
-    primary_width_z12 = 3
-    secondary_width_z12 = 2
-    tertiary_width_z12 = 1.75
-    unclassified_width_z12 = 0.9
+    unclassified_width_z12 = 1.2
 
-    motorway_width_z13 = 3.5
-    trunk_width_z13 = 3.5
-    primary_width_z13 = 3
-    secondary_width_z13 = 2.5
-    tertiary_width_z13 = 2
-    unclassified_width_z13 = 1
+    motorway_width_z13 = 5
+    trunk_width_z13 = 5
+    primary_width_z13 = 4.5
+    secondary_width_z13 = 3.75
+    tertiary_width_z13 = 2.9
+    unclassified_width_z13 = 1.5
 
     # ZL > 14
     unclassified_width_z14 = unclassified_width_z13
@@ -146,8 +142,8 @@ class TemplateVariables(Template):
 
     # Hiking
 
-    osmc_hiking_width_z13 = 1.3
-    osmc_hiking_width_z16 = 0.7
+    osmc_hiking_width_z13 = 1.5
+    osmc_hiking_width_z16 = 0.8
     osmc_hiking_width_z18 = 0.3
 
     # sac scales
@@ -181,6 +177,11 @@ class TemplateVariables(Template):
 
 
     ## MTB && Cyclo
+
+
+    osmc_cycle_width_z9 = 2.5
+    osmc_cycle_width_z11 = 2.1
+    osmc_cycle_width_z13 = 1.6
 
     color_cycle_mtb = '#E588ED'
     color_cycle_standard = '#d320dc'
