@@ -933,6 +933,7 @@
 		<osm-tag key="man_made" value="breakwater" zoom-appear="14" />
 		<osm-tag key="man_made" value="cross" zoom-appear="14" />
 		<osm-tag key="man_made" value="cutline" zoom-appear="14" />
+		<osm-tag key="man_made" value="goods_conveyor" zoom-appear="14" />
 		<osm-tag key="man_made" value="groyne" zoom-appear="14" />
 		<osm-tag key="man_made" value="lighthouse" zoom-appear="13" />
 		<osm-tag key="man_made" value="mineshaft" zoom-appear="14" />
@@ -1131,11 +1132,17 @@
 
 		<osm-tag key="via_ferrata_scale" value="0" zoom-appear="13" />
 		<osm-tag key="via_ferrata_scale" value="1" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="1+" zoom-appear="13" />
 		<osm-tag key="via_ferrata_scale" value="2" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="2+" zoom-appear="13" />
 		<osm-tag key="via_ferrata_scale" value="3" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="3+" zoom-appear="13" />
 		<osm-tag key="via_ferrata_scale" value="4" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="4+" zoom-appear="13" />
 		<osm-tag key="via_ferrata_scale" value="5" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="5+" zoom-appear="13" />
 		<osm-tag key="via_ferrata_scale" value="6" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="6+" zoom-appear="13" />
 
 		<osm-tag key="network" value="icn" zoom-appear="8" />
 		<osm-tag key="network" value="ncn" zoom-appear="8" />
