@@ -3156,6 +3156,14 @@
 			<rule cat="base_topo" e="way" k="man_made" v="cutline" zoom-min="14">
 				<line stroke="#b38d5d" stroke-width="0.3" stroke-dasharray="7,5" stroke-linecap="butt"/>
 			</rule>
+			<rule cat="base_topo" e="way" k="man_made" v="pipeline" zoom-min="14">
+				<rule e="way" k="location" v="overground|overhead" zoom-min="14">
+					<line stroke="#707070" dy="0.2" stroke-width="0.15" />
+					<line stroke="#707070" dy="-0.2" stroke-width="0.15"/>
+					<line stroke="#707070" stroke-width="0.8" stroke-dasharray="0.2,5" scale="all"/>
+					<line stroke="#ebeade" stroke-width="0.6" stroke-dasharray="0.2,5" scale="all"/>
+				</rule>
+			</rule>
 		</rule>
 		<!-- walls barries-->
 		<rule cat="base_topo" e="way" k="barrier" v="*" zoom-min="13">
