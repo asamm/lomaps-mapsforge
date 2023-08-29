@@ -804,7 +804,7 @@
 				<area src="file:patterns/marsh.svg" symbol-width="28"/>
 			</rule>
 			<rule e="way" k="wetland" v="tidalflat">
-				<area fill="#10663300"/>
+				<area fill="#108f5011"/>
 				<area src="file:patterns/tidalflat_64.svg" symbol-width="96"/>
 			</rule>
 		</rule>
