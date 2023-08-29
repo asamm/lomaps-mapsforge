@@ -1706,8 +1706,6 @@
 						<generator action="$gen_action_osmc_colors" source_section="osmc_hiking"></generator>
 
 					</rule>
-
-
 				</rule><!-- End of hiking routes -->
 
 				<!-- Symbols for via ferrata -->
@@ -3162,6 +3160,10 @@
 					<line stroke="#707070" dy="-0.2" stroke-width="0.15"/>
 					<line stroke="#707070" stroke-width="0.8" stroke-dasharray="0.2,5" scale="all"/>
 					<line stroke="#ebeade" stroke-width="0.6" stroke-dasharray="0.2,5" scale="all"/>
+					<rule e="way" k="bridge" v="yes" zoom-min="14">
+						<line stroke="$color_bridge_casing" dy="0.4" stroke-width="0.15" />
+						<line stroke="$color_bridge_casing" dy="-0.4" stroke-width="0.15"/>
+					</rule>
 				</rule>
 			</rule>
 		</rule>
