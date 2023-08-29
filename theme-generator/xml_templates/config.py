@@ -5,6 +5,9 @@ from Cheetah.Template import Template
 from actions.composite_op import lighten
 
 class TemplateVariables(Template):
+
+    color_map_background_land = "#ebeade"
+
     ### HIGHWAYS ###
 
     color_bridge_casing = "#0d0d0d"

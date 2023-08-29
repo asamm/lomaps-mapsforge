@@ -1,7 +1,7 @@
 #from actions.composite_op import lighten, darken, opacity
 <?xml version="1.0" encoding="utf-8"?>
 <rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="5"
-			 base-stroke-width="0.65" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			 base-stroke-width="0.65" map-background="$color_map_background_land" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--
 		LOCUS INTERNAL THEME FOR LOMAPS
 -->
@@ -1833,6 +1833,7 @@
 							</rule>
 
 							<rule e="way" k="highway" v="path|via_ferrata|footway">
+								<line stroke="$color_map_background_land" stroke-width="${2 * $footway_width_z16}" stroke-linecap="butt" />
 								<line stroke="$color_bridge_no_casing" stroke-width="0.1" dy="$footway_width_z16" stroke-linecap="butt" />
 								<line stroke="$color_bridge_no_casing" stroke-width="0.1" dy="-$footway_width_z16" stroke-linecap="butt" />
 							</rule>
