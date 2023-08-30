@@ -291,7 +291,7 @@
 				</rule>
 				<rule e="way" k="natural" v="cliff" zoom-min="14">
 					<line stroke="#8a8a8a" stroke-width="0.2"/>
-					<lineSymbol src="file:symbols/poi_cliff_way.svg" dy="0.1" repeat="true" repeat-gap="5" repeat-start="0" symbol-orientation="left" symbol-width="8" position="below" display="always"/>
+					<lineSymbol src="file:symbols/poi_cliff_way.svg" dy="0.1" repeat="true" repeat-gap="5" repeat-start="0" symbol-orientation="left" symbol-width="8" position="below" display="always" />
 				</rule>
 				<rule e="way" k="natural" v="grassland" closed="yes" zoom-min="15">
 					<area src="file:patterns/medow.svg" symbol-width="24"/>
@@ -2532,6 +2532,39 @@
 					</rule>
 				</rule>
 				<!-- END off no area core for topo highways-->
+
+				<!-- Road numbers for all themes-->
+				<rule e="way" k="*" v="*" zoom-min="10" zoom-max="18">
+					<rule e="way" k="highway" v="primary|secondary" zoom-min="11">
+						<rule e="way" k="highway" v="primary" zoom-min="11" zoom-max="11">
+							<pathText k="ref" font-family="sans_serif" font-size="9" fill="#FFFFFF" stroke="${opacity($color_highway_label_primary,80)}" stroke-width="6" repeat-start="30"
+									  text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_primary"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="12">
+							<pathText k="ref" font-family="sans_serif" font-size="9" fill="#FFFFFF" stroke="${opacity($color_highway_label_primary,80)}" stroke-width="6" repeat-start="50" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_primary"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+							<pathText k="ref" font-family="sans_serif" font-size="9" fill="#FFFFFF" stroke="${opacity($color_highway_label_primary,80)}" stroke-width="6" repeat-start="100" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_primary"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="18">
+							<pathText k="ref" font-family="sans_serif" font-size="11" fill="#FFFFFF" stroke="${opacity($color_highway_label_primary,80)}" stroke-width="6" repeat-start="160" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_primary"/>
+						</rule>
+					</rule>
+					<rule e="way" k="highway" v="motorway|trunk" zoom-min="10">
+						<rule e="way" k="highway" v="motorway" zoom-min="10" zoom-max="10">
+							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="${opacity($color_highway_label_motorway,80)}" stroke-width="6" repeat-start="30" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_motorway"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="11" zoom-max="12">
+							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="${opacity($color_highway_label_motorway,80)}" stroke-width="6" repeat-start="40" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_motorway"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+							<pathText k="ref" font-family="sans_serif" font-size="11" fill="#FFFFFF" stroke="${opacity($color_highway_label_motorway,80)}" stroke-width="6" repeat-start="100" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_motorway"/>
+						</rule>
+						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="18">
+							<pathText k="ref" font-family="sans_serif" font-size="12" fill="#FFFFFF" stroke="${opacity($color_highway_label_motorway,80)}" stroke-width="6" repeat-start="160" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_motorway"/>
+						</rule>
+					</rule>
+				</rule>
 
 				<!-- CITY Highways core   -->
 				<rule cat="highways_city" e="way" k="area" v="~|no|false">

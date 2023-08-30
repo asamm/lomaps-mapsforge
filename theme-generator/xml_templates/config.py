@@ -48,6 +48,9 @@ class TemplateVariables(Template):
     color_path_case = "#FFFFFF"
     color_pedestrian = "#d0d0d0"
 
+    color_highway_label_primary = "#005fb9"
+    color_highway_label_motorway = "#dc1b1b"
+
     scale_factor = 1.2
     scale_factor_high_zoom = 1.75
 
@@ -243,6 +246,8 @@ class TemplateVariables(Template):
     priority_hamlet = 430
     priority_locality = 420
     priority_street = 400
+    priority_highway_label_primary = 352
+    priority_highway_label_motorway = 354
 
     priority_poi_caption_cat1 = 415
     priority_poi_caption_cat2 = 414
