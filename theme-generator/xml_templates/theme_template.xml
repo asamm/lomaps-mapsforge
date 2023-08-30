@@ -497,7 +497,7 @@
 				<rule e="way" k="leisure" v="golf_course|common|green">
 					<area fill="#dbe5b2"/>
 				</rule>
-				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park">
+				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park|fitness_station">
 					<area fill="#cdeca7" stroke="#9ccf5e" stroke-width="0.1"/>
 				</rule>
 				<rule e="way" k="leisure" v="track">
@@ -514,7 +514,7 @@
 				<rule e="way" k="leisure" v="golf_course|common|green">
 					<area fill="#c7dcdb"/>
 				</rule>
-				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park">
+				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park|fitness_station">
 					<area fill="#a5e4da" stroke="#8bb7b5" stroke-width="0.15"/>
 				</rule>
 				<rule e="way" k="leisure" v="track">
@@ -3738,7 +3738,7 @@
 			<rule e="any" k="historic" v="monument" zoom-min="16">
 				<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat2" text-wrap-width="$text_wrap_standard"/>
 			</rule>
-			<rule e="any" k="historic" v="memorial|aqueduct" zoom-min="17">
+			<rule e="any" k="historic" v="memorial|aqueduct|archaeological_site" zoom-min="17">
 				<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat3" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
