@@ -3200,6 +3200,16 @@
 					</rule>
 				</rule>
 			</rule>
+			<rule cat="base_topo" e="way" k="man_made" v="goods_conveyor" zoom-min="14">
+				<rule e="way" k="tunnel" v="no|~">
+					<line stroke="#707070" stroke-width="0.15" />
+					<line stroke="#707070" stroke-width="0.7" stroke-dasharray="2,2.5" scale="all" stroke-linecap="butt"/>
+					<rule e="way" k="bridge" v="yes" zoom-min="14">
+						<line stroke="$color_bridge_casing" dy="0.6" stroke-width="0.15" />
+						<line stroke="$color_bridge_casing" dy="-0.6" stroke-width="0.15"/>
+					</rule>
+				</rule>
+			</rule>
 		</rule>
 		<!-- walls barries-->
 		<rule cat="base_topo" e="way" k="barrier" v="*" zoom-min="13">
