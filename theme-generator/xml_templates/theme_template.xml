@@ -119,13 +119,13 @@
 			<area fill="#9CC9E8"/>
 		</rule>
 		<rule cat="base_car" e="way" k="natural" v="nosea">
-			<area fill="#ebeade"/>
+			<area fill="$color_map_background_land"/>
 		</rule>
 		<rule cat="base_city" e="way" k="natural" v="nosea">
-			<area fill="#ebeade"/>
+			<area fill="$color_map_background_land"/>
 		</rule>
 		<rule cat="base_summer" e="way" k="natural" v="nosea">
-			<area fill="#ebeade"/>
+			<area fill="$color_map_background_land"/>
 		</rule>
 		<rule cat="base_winter" e="way" k="natural" v="nosea">
 			<area fill="#f7fbfe"/>
@@ -312,6 +312,27 @@
 				<pathText k="name" dy="4.7" font-style="italic" font-family="default" font-size="17" fill="#797979" stroke="#ffffff" stroke-width="1.5"/>
 			</rule>
 		</rule>
+
+		<!-- Add water bariers, piers, etc	-->
+		<rule e="way" k="man_made" v="*" zoom-min="13">
+			<rule e="way" k="man_made" v="pier" zoom-min="14">
+				<rule e="way" k="*" v="*" closed="no">
+					<line stroke="$color_map_background_land" stroke-width="0.3" stroke-linecap="butt"/>
+				</rule>
+				<rule e="way" k="*" v="*" closed="yes">
+					<area fill="$color_map_background_land"/>
+				</rule>
+			</rule>
+			<rule e="way" k="man_made" v="breakwater|groyne" zoom-min="14">
+				<rule e="way" k="*" v="*" closed="no">
+					<line stroke="$opacity('#707070', 45)" stroke-width="0.3" stroke-linecap="butt"/>
+				</rule>
+				<rule e="way" k="*" v="*" closed="yes">
+					<area fill="$opacity('#707070', 45)"/>
+				</rule>
+			</rule>
+		</rule>
+
 		<!-- Power areals-->
 		<rule cat="base_summer" e="way" k="power" v="generator|station|sub_station|substation" zoom-min="12" closed="yes">
 			<area fill="#D6D6E1"/>
@@ -3177,14 +3198,6 @@
 		</rule>
 		<!-- man_made features -->
 		<rule e="way" k="man_made" v="*" zoom-min="13">
-			<rule e="way" k="man_made" v="pier" zoom-min="14">
-				<rule e="way" k="*" v="*" closed="no">
-					<line stroke="#ebeade" stroke-width="0.3" stroke-linecap="butt"/>
-				</rule>
-				<rule e="way" k="*" v="*" closed="yes">
-					<area fill="#ebeade"/>
-				</rule>
-			</rule>
 			<rule cat="base_topo" e="way" k="man_made" v="cutline" zoom-min="14">
 				<line stroke="#b38d5d" stroke-width="0.3" stroke-dasharray="7,5" stroke-linecap="butt"/>
 			</rule>
