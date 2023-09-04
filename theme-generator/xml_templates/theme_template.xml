@@ -912,14 +912,15 @@
 		<rule cat="base_topo" e="way" k="building" v="*" zoom-min="15">
 			<!--Buildings for -->
 			<rule cat="base_summer" e="way" k="building" v="*">
-				<area fill="#d6bfa2" stroke="#C1A074" stroke-width="0.1"/>
+				<area fill="#d6bfa2" stroke="#C1A074" stroke-width="0.1" />
 			</rule>
 			<!--Buildings for SKI		-->
 			<rule cat="base_winter" e="way" k="building" v="*">
 				<area fill="#b8b8b8" stroke="#A8A8A8" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="18">
-				<caption k="name" font-style="italic" font-family="serif" font-size="11" fill="#333333" stroke="#ffffff" stroke-width="1" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name" font-family="sans_serif" font-style="italic" font-size="11" fill="$color_gray_poi_text"
+							 stroke="#ffffff" stroke-width="2" position="center" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
 		<!-- building for CAR -->
@@ -3627,9 +3628,10 @@
 			<caption k="name" dy="11"  font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="$text_wrap_standard"/>
 		</rule>
 	</rule>
-	<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="15">
+	<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="16">
 		<rule e="any" k="tourism" v="attraction">
-			<caption k="name" dy="11"  font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="$text_wrap_standard"/>
+			<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text"
+							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat3" text-wrap-width="$text_wrap_standard" text-transform="capitalize"/>
 		</rule>
 	</rule>
 	<!-- amenity -->
@@ -3796,10 +3798,19 @@
 			</rule>
 			<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 		</rule>
+		<!-- Zoo for topo -->
+		<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="15">
+			<rule e="any" k="tourism" v="zoo">
+				<line stroke="${opacity('#6e5036',40)}" dy="0.4" stroke-width="0.4" stroke-linecap="butt" stroke-linejoin="round"/>
+				<line stroke="${opacity('#6e5036',70)}" stroke-width="0.4" stroke-linecap="butt" stroke-linejoin="round"/>
+				<caption k="name" dy="11"  font-family="sans_serif" font-size="14" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+			</rule>
+		</rule>
+
 		<!-- musuem, zoo, for CITY -->
 		<rule cat="tourism_city" e="any" k="tourism" v="*" zoom-min="15">
 			<rule e="any" k="tourism" v="gallery" zoom-min="17">
-				<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat3" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 			<rule e="any" k="tourism" v="zoo">
 				<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
