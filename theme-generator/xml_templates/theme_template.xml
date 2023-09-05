@@ -3856,6 +3856,16 @@
 		<rule cat="base_topo" e="any" k="ladder" v="*" zoom-min="15">
 			<symbol src="file:symbols/poi_ladder.svg" symbol-width="20" position="above"/>
 		</rule>
+		<!-- Symbol of climber for ways marked as climbing	-->
+		<rule cat="via_ferrata_cat" e="way" k="sport" v="climbing" zoom-min="16" closed="no">
+			<lineSymbol src="file:symbols/poi_climbing.svg" symbol-width="16" dy="0.2" repeat="true"
+						symbol-orientation="left" repeat-gap="60" position="below" />
+		</rule>
+		<!-- Label for trailhead	-->
+		<rule cat="base_topo" e="node" k="highway" v="trailhead" zoom-min="15" zoom-max="19">
+				<caption k="name" dy="11"  font-family="sans_serif" font-style="normal" font-size="12"
+						 fill="$color_attraction_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+		</rule>
 
 		<rule cat="base_topo" e="any" k="military" v="bunker">
 			<symbol src="file:symbols/poi_bunker_pillbox.svg" symbol-width="15"/>
