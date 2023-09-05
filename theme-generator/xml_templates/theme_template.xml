@@ -2972,6 +2972,15 @@
 						<line stroke="$color_railway_main" stroke-width="0.75" stroke-dasharray="1.3,0,12,22.7"/>
 					</rule>
 				</rule>
+				<rule e="way" k="railway" v="monorail" zoom-min="13" gen_section="railway_sec">
+					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="16">
+						<line stroke="$color_railway_tram" stroke-width="0.9" stroke-dasharray="0.2,0.9" scale="all"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="17">
+						<line stroke="$color_railway_tram" stroke-width="0.7" stroke-dasharray="0.1,0.7" scale="all"/>
+					</rule>
+				</rule>
+
 				<rule e="way" k="railway" v="abandoned" zoom-min="12" gen_section="railway_sec">
 					<rule e="way" k="railway" v="*" zoom-min="12" zoom-max="14">
 						<line stroke="#FF707070" stroke-width="1" stroke-dasharray="1,3" stroke-linecap="butt"/>
