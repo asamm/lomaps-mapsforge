@@ -1729,14 +1729,14 @@
 					<rule e="way" k="*" v="*" zoom-min="17" zoom-max="18">
 						<lineSymbol src="file:symbols/poi_via_ferrata.svg" symbol-width="7" dy="1.1" repeat="true"
 								symbol-orientation="auto" repeat-gap="3" repeat-start="0" position="center" scale="all" display="always" />
-						<caption k="via_ferrata_scale" font-style="bold" font-family="sans_serif" font-size="11" fill="#ffffff" stroke="${darken($color_hiking_iwn_nwn,-20)}" stroke-width="7"
-								 text-wrap-width="$text_wrap_standard" priority="$priority_tourist_via_ferrata_scale" position="center" display="ifspace" />
+						<pathText k="via_ferrata_scale" font-style="bold" font-family="sans_serif" font-size="11" fill="#ffffff" stroke="${darken($color_hiking_iwn_nwn,-20)}" stroke-width="7"
+								  dy="1" repeat-start="0" repeat-gap="600" repeat="false" display="always" text-orientation="right" priority="$priority_tourist_via_ferrata_scale"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="19" >
 						<lineSymbol src="file:symbols/poi_via_ferrata.svg" symbol-width="9" dy="0.8" repeat="true"
 								symbol-orientation="auto" repeat-gap="4" repeat-start="0" position="center" scale="all" display="always" />
-						<caption k="via_ferrata_scale" font-style="bold" font-family="sans_serif" font-size="13" fill="#ffffff" stroke="${darken($color_hiking_iwn_nwn,-20)}" stroke-width="9"
-								 text-wrap-width="$text_wrap_standard" priority="$priority_tourist_via_ferrata_scale" position="center" display="always" />
+						<pathText k="via_ferrata_scale" font-style="bold" font-family="sans_serif" font-size="13" fill="#ffffff" stroke="${darken($color_hiking_iwn_nwn,-20)}" stroke-width="9"
+								  dy="1" repeat-start="0" repeat-gap="600" repeat="false" display="always" text-orientation="right" priority="$priority_tourist_via_ferrata_scale"/>
 					</rule>
 
 
