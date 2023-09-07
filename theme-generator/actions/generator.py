@@ -1,5 +1,6 @@
 import copy
 
+import bs4.element
 from bs4 import BeautifulSoup
 from bs4.formatter import XMLFormatter
 from xsdata.formats.dataclass.parsers import XmlParser
@@ -10,6 +11,7 @@ from mapsforge.render_theme import Rule, Cap, Line
 from options import Options
 from osmc_symbols.osmc_gen import OsmcSymbolGenerator
 from xml_templates.config import TemplateVariables
+
 
 class GeneratorActions:
 
@@ -22,6 +24,7 @@ class GeneratorActions:
             TemplateVariables.gen_action_copy_section,
             TemplateVariables.gen_action_create_highway_tunnels,
             TemplateVariables.gen_action_create_railway_bridge,
+            TemplateVariables.gen_action_osmc_sac_order,
             TemplateVariables.gen_action_osmc_to_iwn_rwn,
 
             TemplateVariables.gen_action_cycle_icn,
@@ -29,6 +32,7 @@ class GeneratorActions:
 
             # these two actions has to be last ones and in this order because the OSMC section as source section is
             # modified during these actions
+
             TemplateVariables.gen_action_osmc_colors,
             TemplateVariables.gen_action_osmc_symbols_and_order,
         ]
@@ -75,6 +79,9 @@ class GeneratorActions:
                 elif action_name == TemplateVariables.gen_action_create_railway_bridge:
                     self.convert_to_railway_bridge(source_rule)
 
+                elif action_name == TemplateVariables.gen_action_osmc_sac_order:
+                    source_rule = self.add_osmc_sac_scale(source_rule, input_section)
+
                 elif action_name == TemplateVariables.gen_action_osmc_colors:
                     source_rule = self.add_osmc_colors(source_rule)
 
@@ -100,11 +107,13 @@ class GeneratorActions:
                 # convert back xsdata object into soup
                 tunnel_soup = BeautifulSoup(serializer.render(source_rule), 'xml')
 
-                #if action_name == TemplateVariables.gen_action_osmc_colors :
+                # if action_name == TemplateVariables.gen_action_osmc_colors :
                 if action_name == TemplateVariables.gen_action_osmc_colors or action_name == TemplateVariables.gen_action_osmc_symbols_and_order:
                     # replace all children in specific section by new child from created rules
                     child = tunnel_soup.findChild()
                     section_soup.replaceWith(child)
+                elif action_name == TemplateVariables.gen_action_osmc_sac_order:
+                    input_section.parent.replaceWith(tunnel_soup.findChild())
                 else:
                     # append the created tunnel section into defined place in the tree
                     input_section.parent.extend(tunnel_soup.children)
@@ -266,7 +275,7 @@ class GeneratorActions:
 
         # for yellow color make the line with white border to be more visible
         if color_key == 'yellow':
-            lines_with_bck= []
+            lines_with_bck = []
             for line in source_rule.line:
                 white_line = copy.deepcopy(line)
                 white_line.stroke = '#ffffbf'
@@ -275,7 +284,6 @@ class GeneratorActions:
                 lines_with_bck.append(white_line)
                 lines_with_bck.append(line)
             source_rule.line = lines_with_bck
-
 
         return source_rule
 
@@ -354,7 +362,6 @@ class GeneratorActions:
 
         return False
 
-
     def gen_action_osmc_to_iwn_rwn(self, source_rule: Rule) -> Rule:
         """
         Use definition of standard hiking routes and convert it for routes in network IWN,NWN,RWN,LWN
@@ -391,6 +398,41 @@ class GeneratorActions:
 
         return source_rule
 
+    def add_osmc_sac_scale(self, source_rule: Rule, input_section: bs4.element.Tag) -> Rule:
+        """
+        Ass source rules are used the SAC defintion for order=0. Obtain current zoom level and order to offset the line
+        :param input_section: Rule as soup object where result will be placed
+        :param source_rule:
+        :return:
+        """
+        parent_tag = input_section.parent.parent
+        order = int(parent_tag['v'])
+        zoom_min = int(self.find_first_parent_with_attribute(input_section, 'zoom-min'))
+
+        # if zoom_min is in range 16 - 17
+        if zoom_min in range(12, 15):
+            self.increase_osmc_sac_dy(source_rule, TemplateVariables.osmc_hiking_width_z13 * 1.1 * order)
+        elif zoom_min in range(16, 17):
+            self.increase_osmc_sac_dy(source_rule, TemplateVariables.osmc_hiking_width_z16 * 1.1 * order)
+        elif zoom_min >= 18:
+            self.increase_osmc_sac_dy(source_rule, TemplateVariables.osmc_hiking_width_z18 * 1.1 * order)
+        return source_rule;
+
+    def increase_osmc_sac_dy(self, rule: Rule, line_offset, pathtext_offset = 0):
+        for child_rule in rule.rule:
+            self.increase_osmc_sac_dy(child_rule, line_offset, pathtext_offset)
+
+        for line in rule.line:
+            if line.dy >= 0:
+                line.dy = line.dy + line_offset
+            else:
+                line.dy = line.dy - line_offset
+
+        for path_text in rule.path_text:
+            if path_text.dy >= 0:
+                path_text.dy = path_text.dy + pathtext_offset
+            else:
+                path_text.dy = path_text.dy - pathtext_offset
 
     def remove_nonsupported_attributes(self, soup):
         """
@@ -401,6 +443,17 @@ class GeneratorActions:
             tags = soup.select('[{}]'.format(attribute_name))
             for tag in tags:
                 del tag[attribute_name]
+
+    def find_first_parent_with_attribute(self, tag: bs4.element.Tag, key):
+        """
+        Iterate parents of soup tag object and search for any parent with defined attribute key.
+        It can be used to find parent with defined zoom that's ingerited for children
+        :param key: attribute key to find
+        """
+
+        if tag.has_attr(key):
+            return tag[key];
+        return self.find_first_parent_with_attribute(tag.parent, key)
 
 
 class Osmc2SacScale():

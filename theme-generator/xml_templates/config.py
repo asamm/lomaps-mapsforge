@@ -150,17 +150,17 @@ class TemplateVariables(Template):
 
     osmc_hiking_width_z13 = 1.5
     osmc_hiking_width_z16 = 0.8
-    osmc_hiking_width_z18 = 0.3
+    osmc_hiking_width_z18 = 0.4
 
     # sac scales
-    sac_scale_T2_dash_z12 = "13,6"
-    sac_scale_T3_dash_z12 = "6,5"
+    sac_scale_T2_dash_z12 = "17,7"
+    sac_scale_T3_dash_z12 = "4,4"
 
     sac_scale_T2_dash_z16 = "15,7"
-    sac_scale_T3_dash_z16 = "7,6"
+    sac_scale_T3_dash_z16 = "5,6"
 
     sac_scale_T2_dash_z18 = "19,9"
-    sac_scale_T3_dash_z18 = "9,7"
+    sac_scale_T3_dash_z18 = "7,7"
 
     osmc_colors = {
         "red": "#EA3200",
@@ -174,6 +174,14 @@ class TemplateVariables(Template):
         "yellow": "#e2d21d",
 
     }
+
+    dy_osmc_track_z13 = track_grade1_width_z14 + osmc_hiking_width_z13/2
+    dy_osmc_unclassified_z13 = (unclassified_width_z14 + highway_case_z13)/2 + osmc_hiking_width_z13/2
+    dy_osmc_class_z13 = (secondary_width_z13 + highway_case_z13)/2 + osmc_hiking_width_z13/1.5
+
+    dy_osmc_track_z16 = track_grade3_4_width_z15 + osmc_hiking_width_z16 / 2
+    dy_osmc_unclassified_z16 = (unclassified_width_z16 + highway_case_z16) /2 + osmc_hiking_width_z16/1.8
+    dy_osmc_class_z16 = (secondary_width_z16 + highway_case_z16) / 2 + osmc_hiking_width_z16/1.8
 
     osmc_symbol_repeat_start = 30
     osmc_route_name_repeat_start = 90
@@ -275,6 +283,9 @@ class TemplateVariables(Template):
 
     # Bridges
     gen_action_create_railway_bridge = "action_create_railway_bridge"
+
+    # OSMC SAC order offser
+    gen_action_osmc_sac_order = "action_create_osmc_sac_order"
 
     # OSMC colored lines
     gen_action_osmc_colors = "action_create_osmc_colors"

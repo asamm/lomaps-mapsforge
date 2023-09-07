@@ -1400,99 +1400,97 @@
 								<rule e="way" k="osmc_order" v="~">
 									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" />
+											<line stroke="#EA3200" dy="-$dy_osmc_track_z13" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13"/>
+											<line stroke="#EA3200" dy="-$dy_osmc_unclassified_z13" stroke-width="$osmc_hiking_width_z13"/>
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" />
+											<line stroke="#EA3200" dy="-$dy_osmc_class_z13" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 									</rule>
 
-									<rule e="way" k="sac_scale" v="*">
+									<rule e="way" k="sac_scale" v="*" gen_section="osmc_sac_scale_order_0_zl13">
 										<rule e="way" k="sac_scale" v="hiking">
 											<rule e="way" k="osmc_highway" v="track|~">
-												<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13"/>
+												<line stroke="#EA3200" dy="-$dy_osmc_track_z13" stroke-width="$osmc_hiking_width_z13"/>
 											</rule>
 
 											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" />
+												<line stroke="#EA3200" dy="-$dy_osmc_unclassified_z13" stroke-width="$osmc_hiking_width_z13" />
 											</rule>
 
 											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" />
+												<line stroke="#EA3200" dy="-$dy_osmc_class_z13" stroke-width="$osmc_hiking_width_z13" />
 											</rule>
 										</rule>
 										<rule e="way" k="sac_scale" v="mountain_hiking">
-											<rule e="way" k="osmc_highway" v="track|~">
-												<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12"/>
-											</rule>
-
-											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
-											</rule>
-
-											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
+											<rule e="way" k="osmc_highway" v="*">
+												<line stroke="#EA3200" dy="-$dy_osmc_track_z13" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12"/>
 											</rule>
 										</rule>
 										<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
-											<rule e="way" k="osmc_highway" v="track|~">
-												<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
-											</rule>
-
-											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
-											</rule>
-
-											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12" />
+											<rule e="way" k="osmc_highway" v="*">
+												<line stroke="#EA3200" dy="-$dy_osmc_track_z13" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T3_dash_z12"/>
 											</rule>
 										</rule>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="1" >
+									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + 1.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
+											<line stroke="#EA3200" dy="-${$dy_osmc_track_z13 + 1.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13)/2 + 1.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13" />
+											<line stroke="#EA3200" dy="-${$dy_osmc_unclassified_z13 + 1.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + 1.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
+											<line stroke="#EA3200" dy="-${$dy_osmc_class_z13 + 1.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 									</rule>
+									<rule e="way" k="sac_scale" v="*">
+										<!-- from SAC scale definition for order 0 create offset for current order -->
+										<generator action="$gen_action_osmc_sac_order" source_section="osmc_sac_scale_order_0_zl13"></generator>
+									</rule>
+								</rule>
 								<rule e="way" k="osmc_order" v="2" >
+									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + 2.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
+											<line stroke="#EA3200" dy="-${$dy_osmc_track_z13 + 2.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13) /2 + 2.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13" />
+											<line stroke="#EA3200" dy="-${$dy_osmc_unclassified_z13 + 2.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + 2.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
+											<line stroke="#EA3200" dy="-${$dy_osmc_class_z13 + 2.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 									</rule>
+									<rule e="way" k="sac_scale" v="*">
+										<!-- from SAC scale definition for order 0 create offset for current order -->
+										<generator action="$gen_action_osmc_sac_order" source_section="osmc_sac_scale_order_0_zl13"></generator>
+									</rule>
+								</rule>
 								<rule e="way" k="osmc_order" v="3" >
+									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${$track_grade1_width_z14 + 3.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
+											<line stroke="#EA3200" dy="-${$dy_osmc_track_z13+ 3.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z14 + $highway_case_z13) /2 + 3.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13" />
+											<line stroke="#EA3200" dy="-${$dy_osmc_unclassified_z13 + 3.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z13 + $highway_case_z13)/2 + 3.6 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
+											<line stroke="#EA3200" dy="-${$dy_osmc_class_z13 + 3.1 * $osmc_hiking_width_z13}" stroke-width="$osmc_hiking_width_z13"  />
 										</rule>
 									</rule>
+								</rule>`
 							</rule>
 						</rule>
 
@@ -1502,96 +1500,92 @@
 								<rule e="way" k="osmc_order" v="~">
 									<rule e="way" k="sac_scale" v="~">
 										<rule e="way" k="osmc_highway" v="track|~">
-											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" />
-											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+											<line stroke="#EA3200" dy="-${$dy_osmc_track_z16}" stroke-width="$osmc_hiking_width_z16" />
+											<pathText k="name" dy="-${($dy_osmc_track_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="unclassified">
-											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16"/>
-											<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+											<line stroke="#EA3200" dy="-${$dy_osmc_unclassified_z16}" stroke-width="$osmc_hiking_width_z16"/>
+											<pathText k="name" dy="-${($unclassified_width_z16) + 2 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 										</rule>
 
 										<rule e="way" k="osmc_highway" v="class">
-											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16"/>
-											<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+											<line stroke="#EA3200" dy="-${$dy_osmc_class_z16}" stroke-width="$osmc_hiking_width_z16"/>
+											<pathText k="name" dy="-${($secondary_width_z16) + 2 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 										</rule>
 									</rule>
 
-									<rule e="way" k="sac_scale" v="*">
+									<rule e="way" k="sac_scale" v="*" gen_section="osmc_sac_scale_order_0_zl16" >
 										<rule e="way" k="sac_scale" v="hiking">
 											<rule e="way" k="osmc_highway" v="track|~">
-												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" />
-												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+												<line stroke="#EA3200" dy="-${$dy_osmc_track_z16}" stroke-width="$osmc_hiking_width_z16" />
+												<pathText k="name" dy="-${($dy_osmc_track_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 											</rule>
 											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16"/>
-												<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+												<line stroke="#EA3200" dy="-${$dy_osmc_unclassified_z16}" stroke-width="$osmc_hiking_width_z16"/>
+												<pathText k="name" dy="-${($unclassified_width_z16) + 2 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 											</rule>
 											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" />
-												<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+												<line stroke="#EA3200" dy="-${$dy_osmc_class_z16}" stroke-width="$osmc_hiking_width_z16" />
+												<pathText k="name" dy="-${($secondary_width_z16) + 2 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 											</rule>
 										</rule>
 
 										<rule e="way" k="sac_scale" v="mountain_hiking">
-											<rule e="way" k="osmc_highway" v="track|~">
-												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
-												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
-											</rule>
-											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
-												<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
-											</rule>
-											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16"  />
-												<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+											<rule e="way" k="osmc_highway" v="*">
+												<line stroke="#EA3200" dy="-${$dy_osmc_track_z16}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T2_dash_z16" />
+												<pathText k="name" dy="-${($dy_osmc_track_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 											</rule>
 										</rule>
 
 										<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
-											<rule e="way" k="osmc_highway" v="track|~">
-												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16 }" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"  />
-												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
-											</rule>
-											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) /2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"/>
-												<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
-											</rule>
-											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16" />
-												<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+											<rule e="way" k="osmc_highway" v="*">
+												<line stroke="#EA3200" dy="-${$dy_osmc_track_z16}" stroke-width="$osmc_hiking_width_z16" stroke-dasharray="$sac_scale_T3_dash_z16"  />
+												<pathText k="name" dy="-${($dy_osmc_track_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 											</rule>
 										</rule>
 									</rule>
-
 								</rule>
 								<rule e="way" k="osmc_order" v="1">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+									<rule e="way" k="sac_scale" v="~">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 3.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+										</rule>
+
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+											<pathText k="name" dy="-${($unclassified_width_z16) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+										</rule>
+
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
+											<pathText k="name" dy="-${($secondary_width_z16) + 3 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+										</rule>
 									</rule>
 
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-										<pathText k="name" dy="-${($unclassified_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
-										<pathText k="name" dy="-${($secondary_width_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+									<rule e="way" k="sac_scale" v="*">
+										<!-- from SAC scale definition for order 0 create offset for current order -->
+										<generator action="$gen_action_osmc_sac_order" source_section="osmc_sac_scale_order_0_zl16"></generator>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="2">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-									</rule>
+									<rule e="way" k="sac_scale" v="~">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 + $osmc_hiking_width_z16)/2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+										</rule>
 
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
-									</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16" />
+										</rule>
 
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.6 * $osmc_hiking_width_z16}" stroke-width="$osmc_hiking_width_z16"  />
+										</rule>
+									</rule>
+									<rule e="way" k="sac_scale" v="*">
+										<!-- from SAC scale definition for order 0 create offset for current order -->
+										<generator action="$gen_action_osmc_sac_order" source_section="osmc_sac_scale_order_0_zl16"></generator>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="3">
@@ -1631,7 +1625,7 @@
 										</rule>
 									</rule>
 
-									<rule e="way" k="sac_scale" v="*">
+									<rule e="way" k="sac_scale" v="*" gen_section="osmc_sac_scale_order_0_zl18">
 										<rule e="way" k="sac_scale" v="hiking">
 											<rule e="way" k="osmc_highway" v="track|~">
 												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18"  />
@@ -1648,64 +1642,60 @@
 										</rule>
 
 										<rule e="way" k="sac_scale" v="mountain_hiking">
-											<rule e="way" k="osmc_highway" v="track|~">
+											<rule e="way" k="osmc_highway" v="*">
 												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"  />
 												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-											</rule>
-											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
-												<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-											</rule>
-											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T2_dash_z18"/>
-												<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
 											</rule>
 										</rule>
 
 										<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">
-											<rule e="way" k="osmc_highway" v="track|~">
+											<rule e="way" k="osmc_highway" v="*">
 												<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
 												<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 											</rule>
-											<rule e="way" k="osmc_highway" v="unclassified">
-												<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18/1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18"/>
-												<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
-											</rule>
-											<rule e="way" k="osmc_highway" v="class">
-												<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" stroke-dasharray="$sac_scale_T3_dash_z18" />
-												<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
-											</rule>
 										</rule>
-
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="1">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-										<pathText k="name" dy="-${($track_grade3_4_width_z15) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+									<rule e="way" k="sac_scale" v="~">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
+										</rule>
+
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+											<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
 									</rule>
 
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-										<pathText k="name" dy="-${($unclassified_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="3" repeat-gap="300" priority="$priority_tourist_route_name"/>
-									</rule>
-
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 1.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-										<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+									<rule e="way" k="sac_scale" v="*">
+										<!-- from SAC scale definition for order 0 create offset for current order -->
+										<generator action="$gen_action_osmc_sac_order" source_section="osmc_sac_scale_order_0_zl18"></generator>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="2">
-									<rule e="way" k="osmc_highway" v="track|~">
-										<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-									</rule>
+									<rule e="way" k="sac_scale" v="~">
+										<rule e="way" k="osmc_highway" v="track|~">
+											<line stroke="#EA3200" dy="-${$track_grade3_4_width_z15 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										</rule>
 
-									<rule e="way" k="osmc_highway" v="unclassified">
-										<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
-									</rule>
+										<rule e="way" k="osmc_highway" v="unclassified">
+											<line stroke="#EA3200" dy="-${($unclassified_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										</rule>
 
-									<rule e="way" k="osmc_highway" v="class">
-										<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										<rule e="way" k="osmc_highway" v="class">
+											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + 2.5 * $osmc_hiking_width_z18}" stroke-width="$osmc_hiking_width_z18" />
+										</rule>
+									</rule>
+									<rule e="way" k="sac_scale" v="*">
+										<!-- from SAC scale definition for order 0 create offset for current order -->
+										<generator action="$gen_action_osmc_sac_order" source_section="osmc_sac_scale_order_0_zl18"></generator>
 									</rule>
 								</rule>
 								<rule e="way" k="osmc_order" v="3">
