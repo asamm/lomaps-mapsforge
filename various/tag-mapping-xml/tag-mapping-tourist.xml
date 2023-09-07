@@ -1126,19 +1126,19 @@
 		<osm-tag key="sac_scale" value="demanding_alpine_hiking" zoom-appear="12" />
 		<osm-tag key="sac_scale" value="difficult_alpine_hiking" zoom-appear="12" />
 
-		<osm-tag key="via_ferrata_scale" value="0" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="1" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="1+" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="2" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="2+" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="3" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="3+" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="4" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="4+" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="5" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="5+" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="6" zoom-appear="13" />
-		<osm-tag key="via_ferrata_scale" value="6+" zoom-appear="13" />
+		<osm-tag key="via_ferrata_scale" value="0" zoom-appear="13" equivalent-values="" />
+		<osm-tag key="via_ferrata_scale" value="A" zoom-appear="13" equivalent-values="1"/>
+		<osm-tag key="via_ferrata_scale" value="A-B" zoom-appear="13" equivalent-values="1+,1.5,2-,1-2"/>
+		<osm-tag key="via_ferrata_scale" value="B" zoom-appear="13" equivalent-values="2"/>
+		<osm-tag key="via_ferrata_scale" value="B-C" zoom-appear="13" equivalent-values="2+,2.5,3-,2-3"/>
+		<osm-tag key="via_ferrata_scale" value="C" zoom-appear="13" equivalent-values="3"/>
+		<osm-tag key="via_ferrata_scale" value="C-D" zoom-appear="13" equivalent-values="3+,3.5,4-,3-4"/>
+		<osm-tag key="via_ferrata_scale" value="D" zoom-appear="13" equivalent-values="4"/>
+		<osm-tag key="via_ferrata_scale" value="D-E" zoom-appear="13" equivalent-values="4+,4.5"/>
+		<osm-tag key="via_ferrata_scale" value="E" zoom-appear="13" equivalent-values="5"/>
+		<osm-tag key="via_ferrata_scale" value="E-F" zoom-appear="13" equivalent-values="5+,5.5"/>
+		<osm-tag key="via_ferrata_scale" value="F" zoom-appear="13" equivalent-values="6"/>
+		<osm-tag key="via_ferrata_scale" value="F+" zoom-appear="13" equivalent-values="6+"/>
 
 		<osm-tag key="network" value="icn" zoom-appear="8" />
 		<osm-tag key="network" value="ncn" zoom-appear="8" />
@@ -1316,6 +1316,7 @@
 		<osm-tag key="osmc_symbol_order" value="5" renderable="false" zoom-appear="12" />
 		<osm-tag key="osmc_symbol_order" value="6" renderable="false" zoom-appear="12" />
 
+		<osm-tag key="osmc_highway" value="via_ferrata" equivalent-values="via_ferrata" renderable="false"/>
 		<osm-tag key="osmc_highway" value="track" equivalent-values="track,pedestrian,path,via_ferrata,steps,bridleway" renderable="false"/>
 		<osm-tag key="osmc_highway" value="unclassified" equivalent-values="living_street,service,unclassified,road,raceway,residential,cycleway,footway,tertiary_link,tertiary" renderable="false"/>
 		<osm-tag key="osmc_highway" value="class" equivalent-values="secondary_link,secondary,primary,primary_link,trunk_link,trunk" renderable="false"/>

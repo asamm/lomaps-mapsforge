@@ -269,6 +269,7 @@ class TemplateVariables(Template):
 
     priority_tourist_route_name = 200
     priority_tourist_osmc_symbol = 210
+    priority_tourist_via_ferrata_scale = 211
 
     priority_island = 420
     priority_islet = 410
