@@ -493,14 +493,6 @@
 			<rule e="way" k="*" v="kindergarten|school|college|university">
 				<area fill="#DBD1C7"/>
 			</rule>
-			<rule e="any" k="amenity" v="parking">
-				<area fill="#f4f4f4" stroke="#8a8a8a" stroke-width="0.15"/>
-			</rule>
-		</rule>
-		<rule cat="base_car" e="way" k="amenity" v="*" zoom-min="15" closed="yes">
-			<rule e="any" k="amenity" v="parking">
-				<area fill="#f4f4f4" stroke="#8a8a8a" stroke-width="0.15"/>
-			</rule>
 		</rule>
 		<!-- sport -->
 		<rule cat="no_car" e="way" k="sport" v="*" zoom-min="14">
@@ -995,11 +987,15 @@
 				<circle r="1.7" scale-radius="true" fill="#707070"/>
 			</rule>
 		</rule>
+
 		<!-- Highways -->
 		<rule e="way" k="tunnel" v="~|no|false">
 			<!-- highway -->
-			<rule e="way" k="highway|route|mtb:scale|osmc|toll" v="*">
+			<rule e="way" k="highway|route|mtb:scale|osmc|toll|amenity" v="*">
 				<!-- OUTLINE FOR HIGHWAY AREA -->
+				<rule e="any" k="amenity" v="parking" zoom-min="14" closed="yes">
+					<area stroke="$color_unclassified_case" stroke-width="$highway_case_z16"/>
+				</rule>
 				<rule e="way" k="highway" v="footway|footpath|path|pedestrian" zoom-min="14" closed="yes">
 					<area stroke="#d0d0d0" stroke-width="0.1"/>
 				</rule>
@@ -1738,8 +1734,6 @@
 						<pathText k="via_ferrata_scale" font-style="bold" font-family="sans_serif" font-size="13" fill="#ffffff" stroke="${darken($color_hiking_iwn_nwn,-20)}" stroke-width="9"
 								  dy="1" repeat-start="0" repeat-gap="600" repeat="false" display="always" text-orientation="right" priority="$priority_tourist_via_ferrata_scale"/>
 					</rule>
-
-
 				</rule>
 				<rule cat="highways_topo" e="way" k="safety_rope|rungs" v="yes" zoom-min="15">
 					<lineSymbol src="file:symbols/poi_chain.svg" symbol-width="18" dy="2" repeat="true" repeat-gap="10" position="center" display="always"/>
@@ -2259,6 +2253,10 @@
 				</rule>
 
 				<!-- =========================  Highways TOPO core =========================== -->
+				<!-- OUTLINE FOR HIGHWAY AREA -->
+				<rule e="any" k="amenity" v="parking" zoom-min="14" closed="yes">
+					<area fill="$color_unclassified"/>
+				</rule>
 				<rule cat="highways_topo" e="way" k="area" v="~|no|false">
 					<rule e="way" k="*" v="*" zoom-min="11">
 						<rule e="way" k="highway" v="construction">
