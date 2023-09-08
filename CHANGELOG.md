@@ -1,3 +1,35 @@
+## [1.3.0] - 2023-09-08
+
+### Added
+- add purple color to be supported as OSMC color
+- railway miniature, monorail in tag mapping
+- background color for tidal-flats
+- overground pipelines, goods_conveyor
+- bridges for paths, footways have inner color
+- add road numbers (BETA)
+- display areas for archaeological sites, fitness
+- breakwaters, groynes
+- borders and captions of zoo areas
+- monorail railways
+- name of trailheads
+- zip lines
+- [tag-mapping] - add railway miniature, monorail in tag mapping
+- [tag-mapping] - add natural=mud
+
+### Changed
+- lift gate in same symbol as online LoMaps (smaller size and more decent)
+- add cycling routes into zl 9 - 12 
+- make highways wider to be more similar to online maps
+- better SAC scales for osmc routes
+- via ferrata with difficulty
+- case line of highways is no more visible inside of parking areas
+- [tag-mapping] -  cycling routes ICN & NCN available from zl=8 and RCN available from zl=10
+- [tag-mapping] -  better support of difficulty level of via ferrata
+- [tag-mapping] -  merge alternative type of bridges into 'bridge=yes' value
+
+### Fixed
+- incorrect position for piers (were above roads)
+
 ## [1.2.3] - 2023-08-02
 
 ### Added
