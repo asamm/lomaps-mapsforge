@@ -878,7 +878,7 @@
 		<osm-tag key="aerialway" value="chair_lift" zoom-appear="12" />
 		<osm-tag key="aerialway" value="gondola" zoom-appear="12" />
 		<osm-tag key="aerialway" value="mixed_lift" zoom-appear="12" />
-		<!-- vleky pozemni -->
+		<!-- aerialway ground_level -->
 		<osm-tag key="aerialway" value="drag_lift" zoom-appear="12" />
 		<osm-tag key="aerialway" value="j-bar" zoom-appear="12" />
 		<osm-tag key="aerialway" value="magic_carpet" zoom-appear="12" />

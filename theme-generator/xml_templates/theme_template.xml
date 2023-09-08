@@ -3571,6 +3571,12 @@
 					<line stroke="$color_aerialway_core" stroke-width="0.4" stroke-linecap="butt"/>
 					<line stroke="$color_aerialway_core" stroke-width="1.1" stroke-dasharray="0,8,1,8"/>
 				</rule>
+				<rule e="way" k="aerialway" v="zip_line">
+					<line stroke="${opacity('#ffffff',60)}" stroke-width="1" stroke-linecap="butt"/>
+					<line stroke="${opacity($color_aerialway_zipline,80)}" stroke-width="0.6" stroke-linecap="butt"/>
+					<lineSymbol src="file:symbols/poi_zip_line.svg" symbol-width="8" dy="0" repeat="true"
+								symbol-orientation="auto" repeat-gap="50" repeat-start="20" position="center" scale="all" display="always" />
+				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="16">
 				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
@@ -3589,6 +3595,22 @@
 				<rule e="way" k="aerialway" v="drag_lift|t-bar|j-bar|platter|rope_tow">
 					<line stroke="$color_aerialway_core" stroke-width="0.26" stroke-linecap="butt"/>
 					<line stroke="$color_aerialway_core" stroke-width="0.7" stroke-dasharray="0,11,1,11"/>
+				</rule>
+				<rule e="way" k="aerialway" v="zip_line">
+
+					<rule e="way" k="*" v="*" zoom-max="17" >
+						<line stroke="${opacity('#ffffff',60)}" stroke-width="0.7" stroke-linecap="butt"/>
+						<line stroke="${opacity($color_aerialway_zipline,80)}" stroke-width="0.4" stroke-linecap="butt"/>
+						<lineSymbol src="file:symbols/poi_zip_line.svg" symbol-width="8" dy="0" repeat="true"
+								symbol-orientation="auto" repeat-gap="60" repeat-start="50" position="center" scale="all" display="always" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="18">
+						<line stroke="${opacity('#ffffff',60)}" stroke-width="0.4" stroke-linecap="butt"/>
+						<line stroke="${opacity($color_aerialway_zipline,80)}" stroke-width="0.2" stroke-linecap="butt"/>
+						<lineSymbol src="file:symbols/poi_zip_line.svg" symbol-width="11" dy="0" repeat="true"
+								symbol-orientation="auto" repeat-gap="80" repeat-start="60" position="center" scale="all" display="always" />
+						<pathText k="name" font-family="sans_serif" font-size="10" dy="-1.1" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="2" repeat-gap="300" priority="$priority_poi_caption_cat2"/>
+					</rule>
 				</rule>
 			</rule>
 			<!-- print names of aerial wasy only for SKI -->

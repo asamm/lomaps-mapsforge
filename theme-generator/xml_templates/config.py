@@ -142,6 +142,7 @@ class TemplateVariables(Template):
 
     ### AERIALWAYS
     color_aerialway_core = "#4d4d4d"
+    color_aerialway_zipline = "#707070"
     color_aerialway_cablecar_fill = "#EDEDED"
 
     ### OSMC ###
