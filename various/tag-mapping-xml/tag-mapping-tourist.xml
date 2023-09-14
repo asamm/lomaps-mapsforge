@@ -966,6 +966,7 @@
 		<osm-tag key="generator:source" value="wave" zoom-appear="13" />
 		<osm-tag key="generator:source" value="wind" zoom-appear="13" />
 		<osm-tag key="power" value="line" zoom-appear="14" />
+		<osm-tag key="power" value="minor_line" zoom-appear="14" />
 		<osm-tag key="power" value="generator" zoom-appear="13" />
 		<osm-tag key="power" value="station" zoom-appear="13" />
 		<osm-tag key="power" value="sub_station" zoom-appear="13" />		
