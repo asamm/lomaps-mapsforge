@@ -1317,7 +1317,7 @@
 		<osm-tag key="osmc_symbol_order" value="6" renderable="false" zoom-appear="12" />
 
 		<osm-tag key="osmc_highway" value="via_ferrata" equivalent-values="via_ferrata" renderable="false"/>
-		<osm-tag key="osmc_highway" value="track" equivalent-values="track,pedestrian,path,via_ferrata,steps,bridleway" renderable="false"/>
+		<osm-tag key="osmc_highway" value="track" equivalent-values="track,pedestrian,path,steps,bridleway" renderable="false"/>
 		<osm-tag key="osmc_highway" value="unclassified" equivalent-values="living_street,service,unclassified,road,raceway,residential,cycleway,footway,tertiary_link,tertiary" renderable="false"/>
 		<osm-tag key="osmc_highway" value="class" equivalent-values="secondary_link,secondary,primary,primary_link,trunk_link,trunk" renderable="false"/>
 

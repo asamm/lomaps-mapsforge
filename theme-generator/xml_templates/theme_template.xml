@@ -1717,7 +1717,8 @@
 				</rule><!-- End of hiking routes -->
 
 				<!-- Symbols for via ferrata -->
-				<rule cat="via_ferrata_cat" e="way" k="highway|assisted_trail" v="via_ferrata|yes" zoom-min="15">
+				<rule cat="via_ferrata_cat" e="way" k="highway" v="via_ferrata" zoom-min="15">
+
 					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
 						<lineSymbol src="file:symbols/poi_via_ferrata.svg" symbol-width="8" dy="1" repeat="true"
 								symbol-orientation="auto" repeat-gap="1" repeat-start="0" position="center" scale="all" display="always" />
@@ -1726,17 +1727,25 @@
 						<lineSymbol src="file:symbols/poi_via_ferrata.svg" symbol-width="7" dy="1.1" repeat="true"
 								symbol-orientation="auto" repeat-gap="3" repeat-start="0" position="center" scale="all" display="always" />
 						<pathText k="via_ferrata_scale" font-style="bold" font-family="sans_serif" font-size="11" fill="#ffffff" stroke="${darken($color_hiking_iwn_nwn,-20)}" stroke-width="7"
-								  dy="1" repeat-start="0" repeat-gap="600" repeat="false" display="always" text-orientation="right" priority="$priority_tourist_via_ferrata_scale"/>
+								  dy="1" repeat-start="0" repeat-gap="600" repeat="false" display="always" text-orientation="auto" priority="$priority_tourist_via_ferrata_scale"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="19" >
 						<lineSymbol src="file:symbols/poi_via_ferrata.svg" symbol-width="9" dy="0.8" repeat="true"
 								symbol-orientation="auto" repeat-gap="4" repeat-start="0" position="center" scale="all" display="always" />
 						<pathText k="via_ferrata_scale" font-style="bold" font-family="sans_serif" font-size="13" fill="#ffffff" stroke="${darken($color_hiking_iwn_nwn,-20)}" stroke-width="9"
-								  dy="1" repeat-start="0" repeat-gap="600" repeat="false" display="always" text-orientation="right" priority="$priority_tourist_via_ferrata_scale"/>
+								  dy="1" repeat-start="0" repeat-gap="600" repeat="false" display="always" text-orientation="auto" priority="$priority_tourist_via_ferrata_scale"/>
 					</rule>
 				</rule>
 				<rule cat="highways_topo" e="way" k="safety_rope|rungs" v="yes" zoom-min="15">
-					<lineSymbol src="file:symbols/poi_chain.svg" symbol-width="18" dy="2" repeat="true" repeat-gap="10" position="center" display="always"/>
+					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
+						<lineSymbol src="file:symbols/poi_chain_path.svg" symbol-width="13" symbol-orientation="up" repeat="true" repeat-gap="50" repeat-start="40" position="above_right" display="always"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
+						<lineSymbol src="file:symbols/poi_chain_path.svg"  symbol-width="15" symbol-orientation="up" repeat="true" repeat-gap="150" repeat-start="70" position="above_right" display="ifspace"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="18">
+						<lineSymbol src="file:symbols/poi_chain_path.svg" symbol-width="16" symbol-orientation="up" repeat="true" repeat-gap="150" repeat-start="70" position="above_right" display="ifspace"/>
+					</rule>
 				</rule>
 
 				<!-- no area -->
@@ -3760,9 +3769,8 @@
                 <symbol src="file:symbols/poi_ladder.svg" symbol-width="20"/>
             </rule>
         </rule>
-
-
 	</rule>
+
 	<rule cat="base_car" e="any" k="barrier" v="*" zoom-min="17">
 		<rule e="any" k="barrier" v="bollard">
 			<circle r="2" fill="#488bc2"/>
@@ -3778,6 +3786,10 @@
 		</rule>
 		<rule e="any" k="highway" v="turning_circle" zoom-min="14">
 			<circle r="1.4" scale-radius="true" fill="#ffffff"/>
+		</rule>
+
+		<rule cat="base_topo" e="node" k="safety_rope|rungs" v="yes" zoom-min="15">
+			<symbol src="file:symbols/poi_chain.svg" symbol-width="18" position="below" />
 		</rule>
 	</rule>
 	<!-- Historic -->
@@ -3878,7 +3890,7 @@
 
 	<!-- OTHER 	 -->
 	<rule e="any" k="*" v="*" zoom-min="14">
-		<!-- Ladders for via ferrata and other hiking -->
+		<!-- Ladders in topo -->
 		<rule cat="base_topo" e="any" k="ladder" v="*" zoom-min="15">
 			<symbol src="file:symbols/poi_ladder.svg" symbol-width="20" position="above"/>
 		</rule>
