@@ -1424,7 +1424,7 @@
 										</rule>
 										<rule e="way" k="sac_scale" v="mountain_hiking">
 											<rule e="way" k="osmc_highway" v="*">
-												<line stroke="#EA3200" dy="-$dy_osmc_track_z13" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12"/>
+												<line stroke="#EA3200" dy="-$dy_osmc_track_z13" stroke-width="$osmc_hiking_width_z13" stroke-dasharray="$sac_scale_T2_dash_z12" />
 											</rule>
 										</rule>
 										<rule e="way" k="sac_scale" v="demanding_mountain_hiking|alpine_hiking|demanding_alpine_hiking|difficult_alpine_hiking">

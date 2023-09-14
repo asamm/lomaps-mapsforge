@@ -166,7 +166,7 @@ class TemplateVariables(Template):
     osmc_colors = {
         "red": "#EA3200",
         "black": "#330330",
-        "blue": "#0026ff",
+        "blue": "#021cbc",
         "brown": "#93501B",
         "gray": "#575757",
         "green": "#267f00",
