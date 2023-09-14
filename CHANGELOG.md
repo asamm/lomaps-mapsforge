@@ -1,3 +1,13 @@
+## [1.3.1] - 2023-09-14
+
+### Added
+- assisted trails are marked with red chain symbols
+- render power poles
+- [tag-mapping] - add power=minor_line
+
+### Changed
+- osmc blue color is a bit darker
+
 ## [1.3.0] - 2023-09-08
 
 ### Added
