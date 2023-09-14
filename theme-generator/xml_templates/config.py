@@ -184,7 +184,7 @@ class TemplateVariables(Template):
     dy_osmc_unclassified_z16 = (unclassified_width_z16 + highway_case_z16) /2 + osmc_hiking_width_z16/1.8
     dy_osmc_class_z16 = (secondary_width_z16 + highway_case_z16) / 2 + osmc_hiking_width_z16/1.8
 
-    osmc_symbol_repeat_start = 30
+    osmc_symbol_repeat_start = 40
     osmc_route_name_repeat_start = 90
 
     color_hiking_iwn_nwn = '#EA3200'
