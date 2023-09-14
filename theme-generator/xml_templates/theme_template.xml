@@ -538,7 +538,7 @@
 			</rule>
 			<!-- Nature protected areas -->
 			<rule e="way" k="leisure" v="nature_reserve" zoom-min="12">
-				<line stroke="#6fc18e" stroke-width="0.7" stroke-dasharray="2,6" stroke-linecap="square"/>
+				<line stroke="${opacity('#3FB637',50)}" stroke-width="0.7" stroke-dasharray="2,6" stroke-linecap="square"/>
                 <rule e="any" k="*" v="*" zoom-min="16">
                     <caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
                 </rule>
@@ -945,8 +945,11 @@
 		<!-- NATIONAL PARK  -->
 		<rule cat="base_topo" e="way" k="boundary" v="*">
 			<rule e="way" k="boundary" v="protected_area" zoom-min="12">
-				<line stroke="#3FB637" stroke-width="0.6" stroke-dasharray="16,7" stroke-linecap="butt"/>
+				<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">
+					<line stroke="${opacity('#3FB637',50)}" stroke-width="2" dy="-1" stroke-dasharray="8,4" stroke-linecap="butt" scale="all"/>
+				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
+					<line stroke="${opacity('#3FB637',40)}" stroke-width="1" dy="-0.5" stroke-dasharray="5,2" stroke-linecap="butt" scale="all"/>
 					<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF"
 							 stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 				</rule>
@@ -3647,11 +3650,11 @@
 		</rule>
 		<!-- END OF OSMC_SYMBOLS FOR HIKING -->>
 		<!-- Power lines -->
-		<rule cat="base_topo" e="any" k="power" v="*" zoom-min="13">
+		<rule cat="base_topo" e="any" k="power|minor_line" v="*" zoom-min="13">
 			<rule e="way" k="power" v="line" zoom-min="13" zoom-max="15">
 				<line stroke="#707070" stroke-width="0.25" stroke-dasharray="10,3,1,3"/>
 			</rule>
-			<rule e="way" k="power" v="line" zoom-min="16">
+			<rule e="way" k="power" v="line|minor_line" zoom-min="16">
 				<line stroke="#707070" stroke-width="0.15" stroke-dasharray="15,6,1,6"/>
 			</rule>
 			<rule e="node" k="power" v="tower" zoom-min="15">
