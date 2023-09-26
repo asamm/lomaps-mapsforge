@@ -261,6 +261,7 @@
 		</rule>
 		<!-- natural -->
 		<rule cat="base_topo" e="way" k="natural" v="*">
+
 			<rule e="way" k="natural" v="*" zoom-min="8" closed="yes">
 				<rule e="way" k="natural" v="glacier">
 					<area fill="#50D3E9FF"/>
@@ -285,6 +286,18 @@
 					<area src="file:patterns/beach.png" symbol-width="96"/>
 				</rule>
 			</rule>
+
+			<rule e="way" k="natural" v="arete" zoom-min="12">
+				<rule e="way" k="natural" v="arete" zoom-min="12" zoom-max="14">
+					<line stroke="${$opacity('#8a8a8a',60)}" stroke-width="0.4"/>
+					<line stroke="${$opacity('#8a8a8a',40)}" stroke-width="1.2" stroke-dasharray="0.5,2"/>
+					<lineSymbol src="file:symbols/poi_arete.svg" repeat="true" repeat-gap="0" repeat-start="0" symbol-width="16" position="center" display="always" />
+				</rule>
+				<rule e="way" k="natural" v="arete" zoom-min="15" >
+					<lineSymbol src="file:symbols/poi_arete.svg" repeat="true" repeat-gap="0" repeat-start="0" symbol-width="20" position="center" display="always" />
+				</rule>
+			</rule>
+
 			<rule e="way" k="natural" v="*" zoom-min="13">
 				<rule e="way" k="natural" v="bare_rock" closed="yes">
 					<area src="file:patterns/bare_rock.png" symbol-width="96"/>
