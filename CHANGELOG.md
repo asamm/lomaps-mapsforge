@@ -1,3 +1,8 @@
+## [1.3.3] - 2023-09-26
+
+### Changed
+-  improve visibility of national borders in day and also night mode https://help.locusmap.eu/agent/object/31979
+
 ## [1.3.2] - 2023-09-26
 
 ### Added
