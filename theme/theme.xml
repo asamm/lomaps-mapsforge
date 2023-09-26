@@ -280,6 +280,16 @@
 					<area src="file:patterns/beach.png" symbol-width="96"/>
 				</rule>
 			</rule>
+			<rule e="way" k="natural" v="arete" zoom-min="12">
+				<rule e="way" k="natural" v="arete" zoom-min="12" zoom-max="14">
+					<line stroke="#998a8a8a" stroke-width="0.4"/>
+					<line stroke="#668a8a8a" stroke-width="1.2" stroke-dasharray="0.5,2"/>
+					<lineSymbol src="file:symbols/poi_arete.svg" repeat="true" repeat-gap="0" repeat-start="0" symbol-width="16" position="center" display="always"/>
+				</rule>
+				<rule e="way" k="natural" v="arete" zoom-min="15">
+					<lineSymbol src="file:symbols/poi_arete.svg" repeat="true" repeat-gap="0" repeat-start="0" symbol-width="20" position="center" display="always"/>
+				</rule>
+			</rule>
 			<rule e="way" k="natural" v="*" zoom-min="13">
 				<rule e="way" k="natural" v="bare_rock" closed="yes">
 					<area src="file:patterns/bare_rock.png" symbol-width="96"/>
@@ -6838,10 +6848,10 @@
 					</rule>
 					<rule e="way" k="highway" v="motorway|trunk" zoom-min="10">
 						<rule e="way" k="highway" v="motorway" zoom-min="10" zoom-max="10">
-							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="#ccdc1b1b" stroke-width="6" repeat-start="30" text-orientation="auto" repeat-gap="600" priority="354"/>
+							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="#ccdc1b1b" stroke-width="6" repeat-start="27" text-orientation="auto" repeat-gap="600" priority="354"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="11" zoom-max="12">
-							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="#ccdc1b1b" stroke-width="6" repeat-start="40" text-orientation="auto" repeat-gap="600" priority="354"/>
+							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="#ccdc1b1b" stroke-width="6" repeat-start="45" text-orientation="auto" repeat-gap="600" priority="354"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 							<pathText k="ref" font-family="sans_serif" font-size="11" fill="#FFFFFF" stroke="#ccdc1b1b" stroke-width="6" repeat-start="100" text-orientation="auto" repeat-gap="600" priority="354"/>
@@ -12997,6 +13007,9 @@
 		</rule>
 		<rule cat="base_topo" e="any" k="military" v="bunker">
 			<symbol src="file:symbols/poi_bunker_pillbox.svg" symbol-width="15"/>
+		</rule>
+		<rule cat="base_topo" e="any" k="ford" v="yes" zoom-min="15">
+			<symbol src="file:symbols/poi_ford.svg" symbol-width="15" position="above" display="always" priority="414"/>
 		</rule>
 		<rule cat="base_topo" e="any" k="mountain_pass" v="yes" zoom-min="14">
 			<caption k="name" dy="11" font-family="sans_serif" font-style="italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>

@@ -1,3 +1,9 @@
+## [1.3.2] - 2023-09-26
+
+### Added
+- mountain ridge (natural=arete)
+- icon for ford
+
 ## [1.3.1] - 2023-09-14
 
 ### Added
