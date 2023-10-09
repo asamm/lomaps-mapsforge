@@ -173,7 +173,7 @@ class TemplateVariables(Template):
         "orange": "#ff9500",
         "purple": "#a78aff",
         "yellow": "#e2d21d",
-
+        "white": "#fcfcfc"
     }
 
     dy_osmc_track_z13 = track_grade1_width_z14 + osmc_hiking_width_z13/2
