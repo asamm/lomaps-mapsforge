@@ -1319,6 +1319,7 @@
 		<osm-tag key="osmc_symbol_order" value="6" renderable="false" zoom-appear="12" />
 
 		<osm-tag key="osmc_highway" value="via_ferrata" equivalent-values="via_ferrata" renderable="false"/>
+		<osm-tag key="osmc_highway" value="ferry" renderable="false"/>
 		<osm-tag key="osmc_highway" value="track" equivalent-values="track,pedestrian,path,steps,bridleway" renderable="false"/>
 		<osm-tag key="osmc_highway" value="unclassified" equivalent-values="living_street,service,unclassified,road,raceway,residential,cycleway,footway,tertiary_link,tertiary" renderable="false"/>
 		<osm-tag key="osmc_highway" value="class" equivalent-values="secondary_link,secondary,primary,primary_link,trunk_link,trunk" renderable="false"/>
@@ -1328,6 +1329,7 @@
 		<osm-tag key="lm_highway" value="cycleway" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="construction" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="footway" zoom-appear="14" renderable="false" />
+		<osm-tag key="lm_highway" value="ferry" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="living_street" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="mini_roundabout" zoom-appear="14" renderable="false" />
 		<osm-tag key="lm_highway" value="motorway" zoom-appear="14" renderable="false" />
