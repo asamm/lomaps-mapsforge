@@ -3713,6 +3713,9 @@
 			<rule e="way" k="power" v="line|minor_line" zoom-min="16">
 				<line stroke="#707070" stroke-width="0.15" stroke-dasharray="15,6,1,6"/>
 			</rule>
+			<rule e="node" k="power" v="pole" zoom-min="15">
+				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="4" display="always" position="center" />
+			</rule>
 			<rule e="node" k="power" v="tower" zoom-min="15">
 				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="6" display="always" position="center" />
 			</rule>
