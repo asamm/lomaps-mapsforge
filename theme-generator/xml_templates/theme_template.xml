@@ -995,10 +995,10 @@
 		</rule>
 		<!-- ferry routes -->
 		<rule e="way" k="route" v="ferry" zoom-max="12">
-			<line stroke="#707070" stroke-width="0.6" stroke-dasharray="15,10" stroke-linecap="butt"/>
+			<line stroke="#707070" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
 		</rule>
 		<rule e="way" k="route" v="ferry" zoom-min="13">
-			<line stroke="#707070" stroke-width="0.2" stroke-dasharray="15,10" stroke-linecap="butt"/>
+			<line stroke="#707070" stroke-width="0.5" stroke-dasharray="15,10" stroke-linecap="butt"/>
 		</rule>
 		<!-- turning circles -->
 		<rule e="any" k="highway" v="turning_circle" zoom-min="14">
@@ -1166,6 +1166,9 @@
 							<rule e="way" k="osmc_highway" v="class">
 								<line stroke="$color_cycle_icn_ncn" dy="${($secondary_width_z11 + $highway_case)/2 + $osmc_cycle_width_z11}" stroke-width="$osmc_cycle_width_z9" stroke-linecap="butt" />
 							</rule>
+							<rule e="way" k="osmc_highway" v="ferry">
+								<line stroke="$color_cycle_icn_ncn" dy="0.5" stroke-width="$osmc_cycle_width_z9" stroke-linecap="round" stroke-dasharray="17,7"/>
+							</rule>
 						</rule>
 					</rule>
 
@@ -1179,6 +1182,9 @@
 							</rule>
 							<rule e="way" k="osmc_highway" v="class" gen_section="osmc_cycle_rcn_lz">
 								<line stroke="$color_cycle_standard" dy="${($secondary_width_z11 + $highway_case)/2 + $osmc_cycle_width_z11}" stroke-width="$osmc_cycle_width_z11" stroke-linecap="round" />
+							</rule>
+							<rule e="way" k="osmc_highway" v="ferry" gen_section="osmc_cycle_rcn_lz">
+								<line stroke="$color_cycle_standard" dy="0.5" stroke-width="${$osmc_cycle_width_z11 * $osmc_ferry_scale_factor}" stroke-linecap="round" stroke-dasharray="15,7"/>
 							</rule>
 						</rule>
 						<rule e="way" k="network" v="icn|ncn" >
@@ -1200,6 +1206,9 @@
 							<rule e="way" k="osmc_highway" v="class">
 								<line stroke="$color_cycle_standard" dy="${($secondary_width_z13 + $highway_case_z13)/2 + $osmc_hiking_width_z13/1.5}" stroke-width="$osmc_cycle_width_z13" stroke-linecap="butt" />
 							</rule>
+							<rule e="way" k="osmc_highway" v="ferry">
+								<line stroke="$color_cycle_standard" dy="${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="${$osmc_cycle_width_z13 * $osmc_ferry_scale_factor}" stroke-dasharray="14,7" stroke-linecap="butt"/>
+							</rule>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" gen_section="osmc_cycle_rcn">
 							<rule e="way" k="osmc_highway" v="track|~">
@@ -1217,6 +1226,10 @@
 								<line stroke="$color_cycle_standard" dy="${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z16/1.8}" stroke-width="$osmc_hiking_width_z16" stroke-linecap="butt" />
 								<lineSymbol src="file:symbols/poi_bike.svg" symbol-orientation="left" dy="$($secondary_width_z16 + $highway_case_z16 + 2.5 * $osmc_hiking_width_z16)"  symbol-width="14" repeat="true" repeat-gap="400"  position="center"/>
 								<pathText k="ref" font-style="bold" font-size="10" dy="$($secondary_width_z16 + 1.2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
+							</rule>
+							<rule e="way" k="osmc_highway" v="ferry">
+								<line stroke="$color_cycle_standard" dy="${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z16/1.25 }" stroke-width="${$osmc_hiking_width_z16 * $osmc_ferry_scale_factor}" stroke-dasharray="15,9" stroke-linecap="butt" />
+								<pathText k="ref" font-style="bold" font-size="10" dy="$($track_grade3_4_width_z15 + 2)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 							</rule>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="18" gen_section="osmc_cycle_rcn">
@@ -1239,6 +1252,12 @@
 								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19"> <!--display symbol only in zl 19 because dy scale too rapidly-->
 									<lineSymbol src="file:symbols/poi_bike.svg" dy="$($secondary_width_z16 + $highway_case_z16 + 1.25 * $osmc_hiking_width_z18)"  symbol-width="15" repeat="true" repeat-gap="600"  position="center"/>
 									<pathText k="ref" font-style="bold" font-size="12" dy="$($secondary_width_z16 + 0.6)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
+								</rule>
+							</rule>
+							<rule e="way" k="osmc_highway" v="ferry">
+								<line stroke="$color_cycle_standard" dy="${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="${$osmc_hiking_width_z18 * $osmc_ferry_scale_factor}" stroke-dasharray="12,12" stroke-linecap="butt" />
+								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="19"> <!--display symbol only in zl 19 because dy scale too rapidly-->
+									<pathText k="ref" font-style="bold" font-size="12" dy="$($track_grade3_4_width_z15 + 1.1)" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="2" repeat-gap="300"/>
 								</rule>
 							</rule>
 						</rule>
@@ -1425,6 +1444,10 @@
 										<rule e="way" k="osmc_highway" v="class">
 											<line stroke="#EA3200" dy="-$dy_osmc_class_z13" stroke-width="$osmc_hiking_width_z13" />
 										</rule>
+
+										<rule e="way" k="osmc_highway" v="ferry">
+											<line stroke="#EA3200" dy="-$dy_osmc_track_z13" stroke-width="${$osmc_hiking_width_z13  * $osmc_ferry_scale_factor}" stroke-dasharray="$sac_scale_T2_dash_z12"  />
+										</rule>
 									</rule>
 
 									<rule e="way" k="sac_scale" v="*" gen_section="osmc_sac_scale_order_0_zl13">
@@ -1527,6 +1550,11 @@
 										<rule e="way" k="osmc_highway" v="class">
 											<line stroke="#EA3200" dy="-${$dy_osmc_class_z16}" stroke-width="$osmc_hiking_width_z16"/>
 											<pathText k="name" dy="-${($secondary_width_z16) + 2 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
+										</rule>
+
+										<rule e="way" k="osmc_highway" v="ferry">
+											<line stroke="#EA3200" dy="-${$dy_osmc_track_z16}" stroke-width="${$osmc_hiking_width_z16 * $osmc_ferry_scale_factor}" stroke-dasharray="$sac_scale_T2_dash_z16" />
+											<pathText k="ref" dy="-${($dy_osmc_track_z16) + 2.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="10" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="$osmc_route_name_repeat_start" priority="$priority_tourist_route_name"/>
 										</rule>
 									</rule>
 
@@ -1637,6 +1665,11 @@
 										<rule e="way" k="osmc_highway" v="class">
 											<line stroke="#EA3200" dy="-${($secondary_width_z16 + $highway_case_z16) / 2 + $osmc_hiking_width_z18 /1.8}" stroke-width="$osmc_hiking_width_z18" />
 											<pathText k="name" dy="-${($secondary_width_z16) + $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" repeat-start="100" priority="$priority_tourist_route_name"/>
+										</rule>
+
+										<rule e="way" k="osmc_highway" v="ferry">
+											<line stroke="#EA3200" dy="-${($track_grade3_4_width_z15 /2) + $osmc_hiking_width_z18}" stroke-width="${$osmc_hiking_width_z18 * $osmc_ferry_scale_factor}" stroke-dasharray="$sac_scale_T2_dash_z18" />
+											<pathText k="name" dy="-${($track_grade3_4_width_z15) + 1.5 * $osmc_hiking_width_z16 }" font-style="bold" font-size="12" fill="#EA3200" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="$priority_tourist_route_name"/>
 										</rule>
 									</rule>
 

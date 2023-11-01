@@ -1013,7 +1013,8 @@
 		<osm-tag key="access" value="public" renderable="false" />
 		<osm-tag key="access" value="yes" renderable="false" />
 
-		<osm-tag key="bridge" value="yes" equivalent-values="boardwalk|cantilever,covered,movable,trestle,viaduct" renderable="false" />
+		<osm-tag key="bridge" value="yes" equivalent-values="cantilever,covered,movable,trestle,viaduct" renderable="false" />
+		<osm-tag key="bridge" value="boardwalk" renderable="false" />
 		<osm-tag key="bridge" value="aqueduct" renderable="false" />
 
 		<osm-tag key="bicycle" value="designated" renderable="false" />

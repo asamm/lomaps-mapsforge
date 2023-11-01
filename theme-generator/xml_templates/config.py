@@ -189,10 +189,10 @@ class TemplateVariables(Template):
 
     color_hiking_iwn_nwn = '#EA3200'
 
-
+    # smaller width for hiking routes along the ferry routes
+    osmc_ferry_scale_factor = 0.7
 
     ## MTB && Cyclo
-
 
     osmc_cycle_width_z9 = 2.5
     osmc_cycle_width_z11 = 2.1
