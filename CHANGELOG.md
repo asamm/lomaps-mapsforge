@@ -1,3 +1,18 @@
+## [1.4.0] - 2023-11-01
+
+### Added
+- borderline in `admin_level = 3` because Cyprus
+- power poles
+
+### Changed
+- rendering white marked trails as red with a red outline
+- marked trails along ferry routes are rendered as dashed lines
+  - [tag-mapping] - add special combination  `highway=ferry`
+
+### Fixed
+- missing MTB routes
+
+
 ## [1.3.3] - 2023-09-26
 
 ### Changed
