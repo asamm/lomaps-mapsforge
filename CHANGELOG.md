@@ -1,3 +1,8 @@
+## [1.4.1] - 2023-12-21
+
+### Changed
+- [tag-mapping] - mainly changes in zoom-levels for rendering of some elements in OS Map theme
+
 ## [1.4.0] - 2023-11-01
 
 ### Added

@@ -532,7 +532,7 @@
 			<rule e="way" k="leisure" v="nature_reserve" zoom-min="12">
 				<line stroke="#7f3fb637" stroke-width="0.7" stroke-dasharray="2,6" stroke-linecap="square"/>
 				<rule e="any" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="415" text-wrap-width="110"/>
+					<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="center" priority="415" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<!-- Marina -->
