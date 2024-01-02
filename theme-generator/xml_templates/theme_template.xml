@@ -3710,13 +3710,14 @@
 			<rule e="way" k="power" v="line" zoom-min="13" zoom-max="15">
 				<line stroke="#707070" stroke-width="0.25" stroke-dasharray="10,3,1,3"/>
 			</rule>
-			<rule e="way" k="power" v="line|minor_line" zoom-min="16">
+			<rule e="way" k="power" v="line|minor_line" zoom-min="15">
 				<line stroke="#707070" stroke-width="0.15" stroke-dasharray="15,6,1,6"/>
 			</rule>
-			<rule e="node" k="power" v="pole" zoom-min="15">
+			<rule e="node" k="power" v="pole" zoom-min="16">
 				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="4" display="always" position="center" />
 			</rule>
-			<rule e="node" k="power" v="tower" zoom-min="15">
+			<rule e="node" k="power" v="tower" zoom-min="16">
+				<circle r="2" fill="#90707070"/>
 				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="6" display="always" position="center" />
 			</rule>
 		</rule>
@@ -3899,6 +3900,10 @@
 	</rule>
 	<!-- man_made -->
 	<rule e="any" k="man_made|tower:type" v="*" zoom-min="16">
+		<!-- symbol for communicaiton tower -->
+		<rule e="any" k="tower:type" v="communication" zoom-min="16">
+			<symbol src="file:symbols/poi_tower_communication.svg" symbol-width="14" display="always" position="center" />
+		</rule>
 		<!-- captions -->
 		<rule e="any" k="man_made" v="adit|observation|communication|lighthouse" zoom-min="16">
 			<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat3" text-wrap-width="$text_wrap_standard"/>
@@ -3988,10 +3993,6 @@
 			<caption k="name" dy="12" font-style="bold_italic" font-size="13" fill="#34972D" stroke="#FFFFFF" stroke-width="3" position="below" priority="$priority_poi_caption_cat1"  text-wrap-width="$text_wrap_standard"/>
 		</rule>
 
-		<!-- power tover -->
-		<rule cat="base_topo" e="any" k="power" v="tower" zoom-min="15">
-			<circle r="2" fill="#707070"/>
-		</rule>
 
         <!-- power wind generator -->
 		<rule cat="base_topo" e="any" k="power" v="generator" zoom-min="14">
