@@ -1,3 +1,9 @@
+## [1.4.2] - 2024-01-23
+
+### Added
+- add minor power lines and customize the power tower/poles
+- [tag-mapping] - add bicycle parking
+
 ## [1.4.1] - 2023-12-21
 
 ### Changed
@@ -12,7 +18,7 @@
 ### Changed
 - rendering white marked trails as red with a red outline
 - marked trails along ferry routes are rendered as dashed lines
-  - [tag-mapping] - add special combination  `highway=ferry`
+- [tag-mapping] - add special combination  `highway=ferry`
 
 ### Fixed
 - missing MTB routes
