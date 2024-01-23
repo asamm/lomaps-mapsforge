@@ -27,6 +27,7 @@
 		<osm-tag key="amenity" value="atm" zoom-appear="17" />
 		<osm-tag key="amenity" value="bar" zoom-appear="15" />
 		<osm-tag key="amenity" value="bbq" zoom-appear="15" />
+		<osm-tag key="amenity" value="bicycle_parking" zoom-appear="15" />
 		<osm-tag key="amenity" value="bench" zoom-appear="17" />
 		<osm-tag key="amenity" value="bicycle_rental" zoom-appear="16" />
 		<osm-tag key="amenity" value="bus_station" zoom-appear="15" />
@@ -592,6 +593,7 @@
 		<osm-tag key="amenity" value="bank" zoom-appear="17" />
 		<osm-tag key="amenity" value="bar" zoom-appear="15" />
 		<osm-tag key="amenity" value="bbq" zoom-appear="15" />
+		<osm-tag key="amenity" value="bicycle_parking" zoom-appear="15" />
 		<osm-tag key="amenity" value="bench" zoom-appear="17" />
 		<osm-tag key="amenity" value="bicycle_rental" zoom-appear="16" />
 		<osm-tag key="amenity" value="bus_station" zoom-appear="15" />
