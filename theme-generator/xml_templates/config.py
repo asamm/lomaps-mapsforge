@@ -192,6 +192,10 @@ class TemplateVariables(Template):
     # smaller width for hiking routes along the ferry routes
     osmc_ferry_scale_factor = 0.7
 
+    ### BORDER ###
+    color_country_border_low_z ='#777777'
+    color_country_border = '#b58cb5'
+
     ## MTB && Cyclo
 
     osmc_cycle_width_z9 = 2.5

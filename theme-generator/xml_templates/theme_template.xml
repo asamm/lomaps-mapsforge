@@ -937,31 +937,39 @@
 		</rule>
 		<!-- non-physical boundaries -->
 		<rule e="way" k="admin_level" v="*">
-			<rule cat="base_topo" e="way" k="admin_level" v="*">
-				<rule e="way" k="admin_level" v="4|5|6" zoom-max="13">
-					<line stroke="#60FC81DF" stroke-width="1.5" stroke-linecap="butt"/>
-				</rule>
-			</rule>
-			<rule e="way" k="admin_level" v="3" zoom-min="4">
-				<rule e="way" k="*" v="*" zoom-max="14">
-					<line stroke="#80fb4fd2" stroke-width="3" stroke-dasharray="6, 4" stroke-linecap="butt" scale="all"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15">
-					<line stroke="#70fb4fd2" stroke-width="1.7" stroke-dasharray="3, 2" stroke-linecap="butt" scale="all"/>
-				</rule>
+
+			<rule e="way" k="admin_level" v="3|4" zoom-min="10">
+
+				<rule e="way" k="*" v="*" zoom-min="11" zoom-max="13">
+					<line stroke="$color_country_border" stroke-width="1" stroke-linecap="round"/>
+					<line stroke="${opacity($color_country_border,25)}" stroke-width="6" stroke-linecap="butt" />
+                </rule>
+				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+					<line stroke="$color_country_border" stroke-width="0.5" stroke-linecap="round"/>
+					<line stroke="${opacity($color_country_border,25)}" stroke-width="4" stroke-linecap="butt" />
+                </rule>
+				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="30">
+					<line stroke="$color_country_border" stroke-width="0.25" stroke-linecap="round"/>
+					<line stroke="${opacity($color_country_border,20)}" stroke-width="1.5" stroke-linecap="butt" />
+                </rule>
 			</rule>
 
 			<rule e="way" k="admin_level" v="2">
-				<rule e="way" k="*" v="*" zoom-max="14">
-					<line stroke="#60FC81DF" stroke-width="6" stroke-linecap="butt"/>
-					<line stroke="#fb4fd2" stroke-width="1.5" stroke-dasharray="15, 5, 4, 5" stroke-linecap="butt"/>
-					<line stroke="#fb4fd2" stroke-width="3" stroke-dasharray="1, 13, 1, 14" stroke-linecap="butt"/>
-				</rule>
-				<rule e="way" k="*" v="*" zoom-min="15">
-					<line stroke="#60FC81DF" stroke-width="3" stroke-linecap="butt"/>
-					<line stroke="#fb4fd2" stroke-width="0.75" stroke-dasharray="15, 5, 2, 5" stroke-linecap="butt"/>
-					<line stroke="#fb4fd2" stroke-width="2" stroke-dasharray="0.5, 14, 0.5, 12" stroke-linecap="butt"/>
-				</rule>
+                <rule e="way" k="*" v="*" zoom-min="1" zoom-max="9">
+					<line stroke="$color_country_border" stroke-width="2" stroke-linecap="round" />
+                </rule>
+				<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
+					<line stroke="$color_country_border" stroke-width="2" stroke-linecap="round"/>
+					<line stroke="${opacity($color_country_border,30)}" stroke-width="15" stroke-linecap="butt" />
+                </rule>
+				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+					<line stroke="$color_country_border" stroke-width="1" stroke-linecap="round"/>
+					<line stroke="${opacity($color_country_border,30)}" stroke-width="7" stroke-linecap="butt" />
+                </rule>
+				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="30">
+					<line stroke="$color_country_border" stroke-width="0.5" stroke-linecap="round"/>
+					<line stroke="${opacity($color_country_border,20)}" stroke-width="3" stroke-linecap="butt" />
+                </rule>
 			</rule>
 		</rule>
 		<!-- NATIONAL PARK  -->
