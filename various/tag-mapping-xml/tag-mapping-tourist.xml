@@ -784,6 +784,7 @@
 		<osm-tag key="building" value="silo" zoom-appear="14" />
 		<osm-tag key="building" value="slurry_tank" zoom-appear="14" />
 		<osm-tag key="building" value="sports" zoom-appear="14" />
+		<osm-tag key="building" value="sport" zoom-appear="14" />
 		<osm-tag key="building" value="sports_centre" zoom-appear="14" />
 		<osm-tag key="building" value="sports_hall" zoom-appear="14" />
 		<osm-tag key="building" value="stable" zoom-appear="14" />
