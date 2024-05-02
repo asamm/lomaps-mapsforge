@@ -42,12 +42,15 @@
       <symbol src="assets:symbols/poi_post_box.svg" symbol-width="20"/>
     </rule>
   </rule>
-  <rule e="any" k="information|tourism|amenity|historic|man_made" v="*" cat="culture_tourism" zoom-min="13">
+  <rule e="any" k="information|tourism|amenity|historic|memorial|artwork_type|man_made|building|bridge" v="*" cat="culture_tourism" zoom-min="13">
     <rule e="any" k="information" v="office" cat="info" zoom-min="15">
       <symbol src="assets:symbols/poi_info-square.svg" symbol-width="20"/>
     </rule>
     <rule e="any" k="information" v="board" cat="info_board" zoom-min="17">
       <symbol src="assets:symbols/poi_infoboard.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="information" v="map" cat="info_board_map" zoom-min="17">
+      <symbol src="assets:symbols/poi_infoboard_map.svg" symbol-width="20"/>
     </rule>
     <rule e="any" k="tourism" v="museum" cat="museum" zoom-min="15">
       <symbol src="assets:symbols/poi_museum.svg" symbol-width="20"/>
@@ -64,6 +67,9 @@
     <rule e="any" k="historic" v="castle" cat="castle" zoom-min="15">
       <symbol src="assets:symbols/poi_castle.svg" symbol-width="20"/>
     </rule>
+    <rule e="any" k="memorial|artwork_type" v="statue|sculpture" cat="sculpture" zoom-min="17">
+      <symbol src="assets:symbols/poi_statue_abstract.svg" symbol-width="20"/>
+    </rule>
     <rule e="any" k="historic" v="memorial" cat="memorial" zoom-min="15">
       <symbol src="assets:symbols/poi_memorial.svg" symbol-width="20"/>
     </rule>
@@ -73,6 +79,9 @@
     <rule e="any" k="historic" v="ruins" cat="ruin" zoom-min="13">
       <symbol src="assets:symbols/poi_castle_ruin.svg" symbol-width="20"/>
     </rule>
+    <rule e="any" k="historic" v="wreck" cat="shipwreck" zoom-min="14">
+      <symbol src="assets:symbols/poi_wreck.svg" symbol-width="20"/>
+    </rule>
     <rule e="any" k="tourism" v="attraction|artwork" cat="attraction" zoom-min="15">
       <symbol src="assets:symbols/poi_attraction.svg" symbol-width="20"/>
     </rule>
@@ -81,6 +90,12 @@
     </rule>
     <rule e="any" k="man_made" v="watermill" cat="watermill" zoom-min="14">
       <symbol src="assets:symbols/poi_watermill.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="man_made|building" v="water_tower" cat="water_tower" zoom-min="15">
+      <symbol src="assets:symbols/poi_water_tower.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="historic|bridge|building|man_made" v="bridge|covered" cat="bridge" zoom-min="16">
+      <symbol src="assets:symbols/poi_bridge.svg" symbol-width="20"/>
     </rule>
     <rule e="any" k="historic" v="aqueduct" cat="aqueduct" zoom-min="17">
       <symbol src="assets:symbols/poi_aqueduct.svg" symbol-width="20"/>
@@ -118,9 +133,15 @@
       <symbol src="assets:symbols/poi_grave_yard.svg" symbol-width="20"/>
     </rule>
   </rule>
-  <rule e="any" k="amenity|information|tourism|leisure|man_made" v="*" cat="hiking_cycling" zoom-min="15">
+  <rule e="any" k="amenity|service:bicycle:repair|bicycle:repair|information|tourism|leisure|highway|man_made" v="*" cat="hiking_cycling" zoom-min="15">
+    <rule e="any" k="amenity|service:bicycle:repair|bicycle:repair" v="bicycle_repair_station|yes|only|yes" cat="bike_repair" zoom-min="16">
+      <symbol src="assets:symbols/poi_bike_repair.svg" symbol-width="20"/>
+    </rule>
     <rule e="any" k="amenity" v="bicycle_parking" cat="bicycle_parking" zoom-min="17">
       <symbol src="assets:symbols/poi_bicycle_parking.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="charging_station" cat="charging_station_bikes" zoom-min="16">
+      <symbol src="assets:symbols/poi_charging_station_bikes.svg" symbol-width="20"/>
     </rule>
     <rule e="any" k="information" v="guidepost" cat="guidepost" zoom-min="15">
       <symbol src="assets:symbols/poi_guidepost.svg" symbol-width="20"/>
@@ -139,6 +160,9 @@
     </rule>
     <rule e="any" k="amenity" v="hunting_stand" cat="hunting_stand" zoom-min="16">
       <symbol src="assets:symbols/poi_hunting_post.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="highway" v="trailhead" cat="trailhead" zoom-min="16">
+      <symbol src="assets:symbols/poi_trail_head.svg" symbol-width="20"/>
     </rule>
     <rule e="any" k="tourism" v="viewpoint" cat="viewpoint" zoom-min="16">
       <symbol src="assets:symbols/poi_viewpoint.svg" symbol-width="20"/>
