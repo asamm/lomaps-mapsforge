@@ -97,7 +97,8 @@
 		<osm-tag key="leisure" value="swimming_pool" zoom-appear="14" />
 		<osm-tag key="leisure" value="track" zoom-appear="14" />
 		<osm-tag key="leisure" value="water_park" zoom-appear="14" />
-		
+
+		<osm-tag key="sport" value="bmx" zoom-appear="14" renderable="false"/>
 		<osm-tag key="sport" value="climbing" zoom-appear="14" />
 		<osm-tag key="sport" value="golf" zoom-appear="14" />
 		<osm-tag key="sport" value="shooting" zoom-appear="14" />
@@ -550,6 +551,10 @@
 		<osm-tag key="leisure" value="track" zoom-appear="14" />
 		<osm-tag key="leisure" value="water_park" zoom-appear="14" />
 
+		<osm-tag key="cycling" value="pump_track" zoom-appear="14" renderable="false" />
+
+		<osm-tag key="sport" value="bmx" zoom-appear="14" renderable="false"/>
+		<osm-tag key="sport" value="cycling" zoom-appear="14" renderable="false"/>
 		<osm-tag key="sport" value="climbing" zoom-appear="14" />
 		<osm-tag key="sport" value="golf" zoom-appear="14" />
 		<osm-tag key="sport" value="shooting" zoom-appear="14" />

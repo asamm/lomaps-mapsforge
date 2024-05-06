@@ -515,7 +515,7 @@
 		<!-- leisure -->
 		<rule cat="base_topo" e="way" k="leisure" v="*" zoom-min="12">
 
-			<!-- Golf, playground summer -->
+			<!-- Closed Golf, playground summer -->
 			<rule cat="base_summer" e="way" k="leisure" v="*" zoom-min="13" closed="yes">
 				<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
 					<area stroke="$darken('#e0d4b3',20)" stroke-width="0.3"/>
@@ -523,16 +523,20 @@
 				<rule e="way" k="leisure" v="golf_course|common|green">
 					<area fill="#dbe5b2"/>
 				</rule>
-				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park|fitness_station">
-					<area fill="#cdeca7" stroke="#9ccf5e" stroke-width="0.1"/>
-				</rule>
-				<rule e="way" k="leisure" v="track">
-					<rule e="way" k="area" v="yes|true">
-						<area fill="#cdeca7" stroke="#9ccf5e" stroke-width="0.15"/>
-					</rule>
+				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park|fitness_station|track">
+					<area fill="#cdeca7" />
+					<line stroke="#9ccf5e" stroke-width="0.15" />
 				</rule>
 			</rule>
-			<!-- Golf, playground winter -->
+			<!-- Non Closed Golf, playground summer , pumptrack -->
+			<rule cat="base_summer" e="way" k="leisure" v="*" zoom-min="13" closed="no">
+				<rule e="way" k="leisure" v="track" zoom-min="15">
+					<line stroke="$darken('#9ccf5e',10)" stroke-width="0.6" stroke-linecap="butt"/>
+					<line stroke="$darken('#cdeca7',10)" stroke-width="0.45" stroke-linecap="butt"/>
+				</rule>
+			</rule>
+
+			<!-- Closed Golf, playground winter -->
 			<rule cat="base_winter" e="way" k="leisure" v="*" zoom-min="13" closed="yes">
 				<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
 					<area stroke="#CECECE" stroke-width="0.3"/>
@@ -540,15 +544,19 @@
 				<rule e="way" k="leisure" v="golf_course|common|green">
 					<area fill="#c7dcdb"/>
 				</rule>
-				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park|fitness_station">
-					<area fill="#a5e4da" stroke="#8bb7b5" stroke-width="0.15"/>
-				</rule>
-				<rule e="way" k="leisure" v="track">
-					<rule e="way" k="area" v="yes|true">
-						<area fill="#a5e4da" stroke="#8bb7b5" stroke-width="0.15"/>
-					</rule>
+				<rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park|fitness_station|track">
+					<area fill="#a5e4da" />
+					<line stroke="#8bb7b5" stroke-width="0.15" />
 				</rule>
 			</rule>
+			<!-- Non  closed leisure  -->
+			<rule cat="base_winter" e="way" k="leisure" v="*" zoom-min="13" closed="no">
+				<rule e="way" k="leisure" v="track">
+					<line stroke="$darken('#8bb7b5',10)" stroke-width="0.6" stroke-linecap="butt"/>
+					<line stroke="$darken('#a5e4da',10)" stroke-width="0.45" stroke-linecap="butt"/>
+				</rule>
+			</rule>
+
 			<!-- Nature protected areas -->
 			<rule e="way" k="leisure" v="nature_reserve" zoom-min="12">
 				<line stroke="${opacity('#3FB637',50)}" stroke-width="0.7" stroke-dasharray="2,6" stroke-linecap="square"/>
