@@ -1,9 +1,22 @@
+## [1.5.0] - 2024-05-06
+
+### Added
+- new offline POIs (shipwrecks, bridges, aqueduct, bicycle repair station)
+- add support for pump-tracks
+
+### Changed
+- unify style of country and state borders with online style
+
+### Fixed
+- add missing `building=sport`
+- extend a list of osmc_foreground for straight green osmc line to fix a problem when green route may not be visible because not known osmc_foreground
+- missing `leisure=track` when mapped as multipolygon
+
 ## [1.4.2] - 2024-01-23
 
 ### Added
 - add minor power lines and customize the power tower/poles
 - [tag-mapping] - add bicycle parking
-
 ## [1.4.1] - 2023-12-21
 
 ### Changed
