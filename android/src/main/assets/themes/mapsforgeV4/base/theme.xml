@@ -7039,7 +7039,7 @@
 							</rule>
 							<rule e="way" k="highway" v="track">
 								<rule e="way" k="tracktype" v="grade1">
-									<line stroke="#8a8a8a" stroke-width="1.1533333333333333"/>
+									<line stroke="#8a8a8a" stroke-width="4.033333333333333"/>
 								</rule>
 							</rule>
 							<rule e="way" k="highway" v="residential">
@@ -7926,7 +7926,7 @@
 					</rule>
 					<rule e="way" k="highway" v="track" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="tracktype" v="grade1" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="1.1533333333333333" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="4.033333333333333" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="residential" zoom-min="0" zoom-max="127" closed="any">

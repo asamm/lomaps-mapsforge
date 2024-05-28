@@ -842,6 +842,10 @@
 				<area src="file:patterns/tidalflat_64.svg" symbol-width="96"/>
 			</rule>
 		</rule>
+		<!-- parking areas -->
+		<rule e="any" k="amenity" v="parking" zoom-min="14" closed="yes">
+			<area fill="${lighten('#C1C1C1', 75)}" stroke="$color_unclassified_case" stroke-width="${$highway_case_z16/2}" />
+		</rule>
 
 		<!-- runways casings and areas -->
 		<rule e="way" k="aeroway" v="*" zoom-min="12">
@@ -1034,9 +1038,6 @@
 			<!-- highway -->
 			<rule e="way" k="highway|route|mtb:scale|osmc|toll|amenity" v="*">
 				<!-- OUTLINE FOR HIGHWAY AREA -->
-				<rule e="any" k="amenity" v="parking" zoom-min="14" closed="yes">
-					<area stroke="$color_unclassified_case" stroke-width="$highway_case_z16"/>
-				</rule>
 				<rule e="way" k="highway" v="footway|footpath|path|pedestrian" zoom-min="14" closed="yes">
 					<area stroke="#d0d0d0" stroke-width="0.1"/>
 				</rule>
@@ -2331,9 +2332,6 @@
 
 				<!-- =========================  Highways TOPO core =========================== -->
 				<!-- OUTLINE FOR HIGHWAY AREA -->
-				<rule e="any" k="amenity" v="parking" zoom-min="14" closed="yes">
-					<area fill="$color_unclassified"/>
-				</rule>
 				<rule cat="highways_topo" e="way" k="area" v="~|no|false">
 					<rule e="way" k="*" v="*" zoom-min="11">
 						<rule e="way" k="highway" v="construction">
@@ -2430,7 +2428,7 @@
 							<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="14">
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z14" stroke-dasharray="15,7" stroke-linecap="butt"/>
 							</rule>
-							<rule e="way" k="tracktype" v="~|no|false">
+							<rule e="way" k="tracktype" v="~">
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z14" stroke-dasharray="15,7" stroke-linecap="butt"/>
 							</rule>
 						</rule>
@@ -2531,7 +2529,7 @@
 							<rule e="way" k="tracktype" v="grade5">
 								<line stroke="$color_track" stroke-width="$track_grade5_width_z15" stroke-dasharray="1.5,1" scale="all"/>
 							</rule>
-							<rule e="way" k="tracktype" v="~|no|false">
+							<rule e="way" k="tracktype" v="~">
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z15" stroke-dasharray="2.5,1.5"  scale="all"/>
 							</rule>
 						</rule>
