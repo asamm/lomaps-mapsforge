@@ -45,7 +45,7 @@
 		<osm-tag key="amenity" value="hunting_stand" zoom-appear="15" />
 		<osm-tag key="amenity" value="kindergarten" zoom-appear="17" />
 		<osm-tag key="amenity" value="library" zoom-appear="17" />
-		<osm-tag key="amenity" value="parking" zoom-appear="15" />
+		<osm-tag key="amenity" value="parking" zoom-appear="14" />
 		<osm-tag key="amenity" value="pharmacy" zoom-appear="15" />
 		<osm-tag key="amenity" value="place_of_worship" zoom-appear="13" />
 		<osm-tag key="amenity" value="police" zoom-appear="15" />
@@ -616,7 +616,7 @@
 		<osm-tag key="amenity" value="hunting_stand" zoom-appear="15" />
 		<osm-tag key="amenity" value="kindergarten" zoom-appear="17" />
 		<osm-tag key="amenity" value="library" zoom-appear="17" />
-		<osm-tag key="amenity" value="parking" zoom-appear="15" />
+		<osm-tag key="amenity" value="parking" zoom-appear="14" />
 		<osm-tag key="amenity" value="pharmacy" zoom-appear="15" />
 		<osm-tag key="amenity" value="place_of_worship" zoom-appear="13" />
 		<osm-tag key="amenity" value="police" zoom-appear="15" />
