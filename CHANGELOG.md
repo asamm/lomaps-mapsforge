@@ -1,3 +1,8 @@
+## [1.5.1] - 2024-06-03
+
+### Changed
+- parking as a light-gray area
+
 ## [1.5.0] - 2024-05-06
 
 ### Added
