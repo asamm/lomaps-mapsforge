@@ -636,7 +636,7 @@
 				<rule e="way" k="contour_ext" v="elevation_minor">
 					<line stroke="#A07F5F" stroke-width="0.20" curve="cubic"/>
 				</rule>
-				<rule e="way" k="contour_ext" v="elevation_major">
+				<rule e="way" k="contour_ext" v="elevation_major|elevation_medium">
 					<line stroke="#A07F5F" stroke-width="0.36" curve="cubic"/>
 				</rule>
 			</rule>
@@ -645,7 +645,7 @@
 				<rule e="way" k="contour_ext" v="elevation_minor">
 					<line stroke="#A07F5F" stroke-width="0.16" curve="cubic"/>
 				</rule>
-				<rule e="way" k="contour_ext" v="elevation_major">
+				<rule e="way" k="contour_ext" v="elevation_major|elevation_medium">
 					<line stroke="#A07F5F" stroke-width="0.34" curve="cubic"/>
 					<rule e="way" k="*" v="*">
 						<pathText k="ele" font-style="bold" font-size="8" fill="#7C583A" stroke="#ffffff" stroke-width="1.5" repeat-gap="200" text-orientation="left" />
@@ -657,7 +657,7 @@
 				<rule e="way" k="contour_ext" v="elevation_minor">
 					<line stroke="#A07F5F" stroke-width="0.11" curve="cubic"/>
 				</rule>
-				<rule e="way" k="contour_ext" v="elevation_major">
+				<rule e="way" k="contour_ext" v="elevation_major|elevation_medium">
 					<line stroke="#A07F5F" stroke-width="0.22" curve="cubic"/>
 					<rule e="way" k="*" v="*">
 						<pathText k="ele" font-style="bold" font-size="9" fill="#7C583A" stroke="#ffffff" stroke-width="2" repeat-gap="350"  text-orientation="left"/>
