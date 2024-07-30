@@ -4017,11 +4017,11 @@
 	</rule>
 
 	<!-- NATURAL -->
-	<rule cat="natural_topo" e="any" k="natural" v="*" zoom-min="14">
+	<rule cat="natural_topo" e="any" k="natural" v="*" zoom-min="13">
 		<!-- captions for nature -->
-		<rule e="any" k="natural" v="peak|volcano" zoom-min="14">
+		<rule e="any" k="natural" v="peak|volcano" zoom-min="13">
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-				<caption k="name" dy="10"  font-family="sans_serif" font-style="italic" font-size="11" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name" dy="10"  font-family="sans_serif" font-style="italic" font-size="11" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat3" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="15">
 				<caption k="ele" dy="-9" font-family="sans_serif" font-size="11" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3" position="above" priority="$priority_poi_caption_cat2"/>
