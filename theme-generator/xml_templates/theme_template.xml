@@ -116,7 +116,7 @@
 	<!-- Render sea -->
 	<rule e="way" k="*" v="*">
 		<rule e="way" k="natural" v="sea">
-			<area fill="#9CC9E8"/>
+			<area fill="#94C3E6"/>
 		</rule>
 		<rule cat="base_car" e="way" k="natural" v="nosea">
 			<area fill="$color_map_background_land"/>
@@ -683,11 +683,11 @@
 		</rule>
 		<!-- WATERS -->
 		<rule e="way" k="leisure" v="swimming_pool" zoom-min="15">
-			<area fill="#9CC9E8" stroke="#2797DD" stroke-width="0.1"/>
+			<area fill="#94C3E6" stroke="#2797DD" stroke-width="0.1"/>
 		</rule>
 		<rule e="way" k="intermittent" v="~|no|false">
 			<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8">
-				<area fill="#9CC9E8"/>
+				<area fill="#94C3E6"/>
 				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
 					<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#4f9cbf"
 							 stroke="#ffffff" stroke-width="3" priority="$priority_water_area" text-wrap-width="$text_wrap_standard"/>
@@ -712,48 +712,45 @@
 				<!-- standard rivers, stream, etc -->
 				<rule e="way" k="intermittent" v="~|no|false">
 					<rule e="way" k="waterway" v="drain|ditch">
-						<line stroke="#9CC9E8" stroke-width="0.6"/>
+						<line stroke="#94C3E6" stroke-width="0.6"/>
 					</rule>
 					<rule e="way" k="waterway" v="canal">
 						<rule e="way" k="*" v="*" zoom-min="9" zoom-max="12">
-							<line stroke="#9CC9E8" stroke-width="0.8"/>
+							<line stroke="#94C3E6" stroke-width="1.1"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
-							<line stroke="#9CC9E8" stroke-width="0.9"/>
+							<line stroke="#94C3E6" stroke-width="1"/>
 							<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf"
 									  stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_canal"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="16">
-							<line stroke="#9CC9E8" stroke-width="0.9"/>
+							<line stroke="#94C3E6" stroke-width="0.9"/>
 							<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf"
 									  stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_canal"/>
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="stream" zoom-min="12">
-						<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13">
-							<line stroke="#9CC9E8" stroke-width="0.5" curve="cubic"/>
-						</rule>
-						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
-							<line stroke="#9CC9E8" stroke-width="0.4" curve="cubic"/>
+						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+							<line stroke="#94C3E6" stroke-width="0.8" curve="cubic"/>
 							<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15">
 								<pathText k="name" font-style="italic" font-family="serif"  dy="3" font-size="9" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_stream"/>
 							</rule>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="16" >
-							<line stroke="#9CC9E8" stroke-width="0.4" curve="cubic"/>
+							<line stroke="#94C3E6" stroke-width="0.5" curve="cubic"/>
 							<pathText k="name" font-style="italic" font-family="serif" dy="2" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_stream"/>
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="river">
 						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="12">
-							<line stroke="#9CC9E8" stroke-width="0.8"/>
+							<line stroke="#94C3E6" stroke-width="1.6"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-							<line stroke="#9CC9E8" stroke-width="1.3"/>
+							<line stroke="#94C3E6" stroke-width="1.4"/>
 							<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_river"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="15" >
-							<line stroke="#9CC9E8" stroke-width="1.3"/>
+							<line stroke="#94C3E6" stroke-width="1.3"/>
 							<pathText k="name" font-style="italic" font-family="serif" font-size="14" fill="#4f9cbf" stroke="#ffffff" stroke-width="4" repeat-gap="400" priority="$priority_river"/>
 							<lineSymbol src="file:symbols/poi_one_way_river.svg" dy="0" symbol-orientation="left" symbol-percent="100" position="center" repeat-gap="300" repeat="true" repeat-start="30" priority="${priority_river -1}"/>
 						</rule>
@@ -762,15 +759,15 @@
 				<!-- Intermittent waterways -->
 				<rule e="way" k="intermittent" v="yes">
 					<rule e="way" k="waterway" v="drain|ditch|stream">
-						<line stroke="#9CC9E8" stroke-width="0.3" stroke-dasharray="5,5" stroke-linecap="butt"/>
+						<line stroke="#94C3E6" stroke-width="0.3" stroke-dasharray="5,5" stroke-linecap="butt"/>
 					</rule>
 					<rule e="way" k="waterway" v="river|canal">
 						<rule e="way" k="*" v="*" zoom-min="13">
 							<rule e="way" k="*" v="*" zoom-max="15">
-								<line stroke="#9CC9E8" stroke-width="0.6" stroke-dasharray="7,6" stroke-linecap="butt"/>
+								<line stroke="#94C3E6" stroke-width="0.6" stroke-dasharray="7,6" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="*" v="*" zoom-min="16">
-								<line stroke="#9CC9E8" stroke-width="0.6" stroke-dasharray="10,9" stroke-linecap="butt"/>
+								<line stroke="#94C3E6" stroke-width="0.6" stroke-dasharray="10,9" stroke-linecap="butt"/>
 							</rule>
 							<pathText k="name" font-style="italic" font-family="serif" font-size="14" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400"/>
 						</rule>
@@ -781,33 +778,33 @@
 			<rule e="way" k="bridge" v="yes|aqueduct|movable" zoom-min="14">
 				<rule e="way" k="waterway" v="ditch|drain|stream">
 					<line stroke="#333333" stroke-width="0.5" stroke-linecap="butt"/>
-					<line stroke="#9CC9E8" stroke-width="0.3" stroke-linecap="butt"/>
+					<line stroke="#94C3E6" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="waterway" v="canal|river">
 					<line stroke="#333333" stroke-width="1.5" stroke-linecap="butt"/>
-					<line stroke="#9CC9E8" stroke-width="1.2" stroke-linecap="butt"/>
+					<line stroke="#94C3E6" stroke-width="1.2" stroke-linecap="butt"/>
 				</rule>
 			</rule>
 			<!-- waterway tunnel -->
 			<rule e="way" k="tunnel" v="true|yes|culvert">
 				<rule e="way" k="waterway" v="drain|ditch|stream">
-					<line stroke="#9CC9E8" stroke-width="0.3" stroke-dasharray="1,5"/>
+					<line stroke="#94C3E6" stroke-width="0.3" stroke-dasharray="1,5"/>
 				</rule>
 				<rule e="way" k="waterway" v="river|canal">
 					<rule e="way" k="*" v="*" zoom-min="13">
-						<line stroke="#9CC9E8" stroke-width="0.6" stroke-dasharray="1,7"/>
+						<line stroke="#94C3E6" stroke-width="0.6" stroke-dasharray="1,7"/>
 						<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#4f9cbf" stroke="#ffffff" stroke-width="3" repeat-gap="400" priority="$priority_river"/>
 					</rule>
 				</rule>
 			</rule>
 			<rule e="way" k="waterway" v="dock">
-				<area fill="#9CC9E8"/>
+				<area fill="#94C3E6"/>
 			</rule>
 			<rule e="way" k="waterway" v="riverbank" closed="yes">
-				<area fill="#9CC9E8" stroke="#9CC9E8" stroke-width="0.1"/>
+				<area fill="#94C3E6" stroke="#94C3E6" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="waterway" v="riverbank" closed="no">
-				<line stroke="#9CC9E8" stroke-width="1"/>
+				<line stroke="#94C3E6" stroke-width="1"/>
 			</rule>
 			<rule e="way" k="waterway" v="weir">
 				<line stroke="#707070" stroke-width="0.5" stroke-dasharray="0.2,2" stroke-linecap="butt"/>
