@@ -1,3 +1,13 @@
+## [1.5.2] - 2024-06-03
+
+### Added
+- [tag-mapping] - add `tourism=theme_park`
+
+### Changed
+- changing the color of the water feature and the thickness of rivers, canals and streams to 
+  make them more visible.
+- remove the Foot & Drink category as it cannot affect the points of interest in the new V4 styles.
+
 ## [1.5.1] - 2024-06-03
 
 ### Changed
