@@ -32,10 +32,6 @@
 			<name lang="en" value="via_ferrata"/>
 			<cat id="via_ferrata_cat"/>
 		</layer>
-		<layer id="pub_rest_topo" enabled="true" visible="false">
-			<name lang="en" value="food_drink"/>
-			<cat id="pub_rest_topo"/>
-		</layer>
 		<layer id="pistes_nordic" enabled="true" visible="false">
 			<name lang="en" value="nordic_ski_trails"/>
 			<cat id="pistes_nordic"/>
