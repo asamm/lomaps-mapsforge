@@ -4119,7 +4119,42 @@
 		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="$color_house_number_z18" stroke="$color_house_number_z18" />
 	</rule>
 
-	<!-- BELGIUM CYCLE CROSS -->
+	<!-- NETHERLAND & BELGIUM NETWORK JUNCTIONS -->
+
+	<rule  e="node" k="network:type" v="node_network">
+
+		<rule cat="cyc_routes" e="node" k="rcn_ref" v="*">
+			<rule e="node" k="rcn_ref" v="*" zoom-min="12" zoom-max="13">
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rcn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+			</rule>
+			<rule e="node" k="rcn_ref" v="*" zoom-min="14" zoom-max="16">
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rcn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+			</rule>
+			<rule e="node" k="rcn_ref" v="*" zoom-min="17" zoom-max="19">
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rcn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+			</rule>
+		</rule>
+
+		<rule cat="hik_routes" e="node" k="rwn_ref" v="*">
+			<rule e="node" k="*" v="*" zoom-min="12" zoom-max="13">
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rwn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+			</rule>
+			<rule e="node" k="*" v="*" zoom-min="14" zoom-max="16">
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rwn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+			</rule>
+			<rule e="node" k="*" v="*" zoom-min="17" zoom-max="19">
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rwn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+			</rule>
+		</rule>
+	</rule>
+
+	<!-- For old maps till 2025.02.01 -->
 	<rule cat="cyc_routes" e="node" k="cycle_node" v="NLBE">
 		<rule e="node" k="cycle_node" v="*" zoom-min="12" zoom-max="13">
 			<rule e="node" k="cycle_node" v="*">
@@ -4140,6 +4175,7 @@
 			</rule>
 		</rule>
 	</rule>
+
 	<rule cat="hik_routes" e="node" k="hiking_node" v="NLBE">
 		<rule e="node" k="hiking_node" v="*" zoom-min="12" zoom-max="13">
 			<rule e="node" k="hiking_node" v="*">
@@ -4160,7 +4196,7 @@
 			</rule>
 		</rule>
 	</rule>
-
+	<!-- END of section for old maps till 2025.02.01 -->
 
 	<!-- PLACE  -->
 	<rule e="any" k="place" v="*">
