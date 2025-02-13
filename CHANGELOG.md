@@ -1,3 +1,17 @@
+## [1.5.3] - 2025-02-15
+
+### Added
+- tree_row as a new natural feature
+- [tag-mapping] - add `trail_visibility=excellent,good,intermediate,bad,horrible`
+- [tag-mapping] - add `natural=tree_row`
+- [tag-mapping] - add `network:type=node_network`, `rcn_ref=%h`, `rwn_ref=%h`
+
+### Changed
+- in 2025 comes LoMaps with a new definition of Belgium and Netherlands network junctions where 
+  junction is defined as `network:type=node_network` and number of junction is defined as 
+  `rcn_ref`, `rwn_ref`
+- reduce visibility of the `highway=path` for paths with `trail_visibility=bad|horrible|no`
+
 ## [1.5.2] - 2024-06-03
 
 ### Added
