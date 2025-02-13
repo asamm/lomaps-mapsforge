@@ -212,10 +212,10 @@
 			<!-- wood for SUMMER -->
 			<rule cat="base_summer" e="way" k="*" v="*" >
 				<rule e="way" k="*" v="*" zoom-max="13">
-					<area fill="#80a0ca6c"/>
+					<area fill="$color_forest_summer_z13"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
-					<area fill="#80a0ca6c"/>
+					<area fill="$color_forest_summer_z13"/>
 					<rule e="way" k="leaf_type" v="*" zoom-min="15">
 						<rule e="way" k="leaf_type" v="needleleaved">
 							<area src="file:patterns/wood_coniferous_transparent.svg" symbol-width="48"/>
@@ -250,13 +250,13 @@
 			<!-- forest for CAR -->
 			<rule cat="base_car" e="way" k="*" v="*" zoom-min="13">
 				<rule e="way" k="natural|landuse" v="forest|wood|scrub">
-					<area fill="#80a0ca6c"/>
+					<area fill="$color_forest_summer_z13"/>
 				</rule>
 			</rule>
 			<!-- wood for CITY -->
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
 				<rule e="way" k="natural|landuse" v="forest|wood|scrub">
-					<area fill="#80a0ca6c"/>
+					<area fill="$color_forest_summer_z13"/>
 				</rule>
 			</rule>
 			<!-- wood captions only in topo styles -->
@@ -367,7 +367,7 @@
 		<rule e="way" k="leisure|landuse" v="park|village_green|recreation_ground" zoom-min="12" closed="yes">
 			<!-- parks City -->
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
-				<area fill="#80a0ca6c"/>
+				<area fill="$color_park_orchard_summer"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text"
 							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat2"
@@ -375,9 +375,9 @@
 				</rule>
 			</rule>
 			<rule cat="base_summer" e="way" k="*" v="*">
-				<area fill="#80a0ca6c"/>
+				<area fill="$color_park_orchard_summer"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="${darken(opacity('#80a0ca6c',100), 40)}"
+					<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="${darken(opacity($color_park_orchard_summer,100), 40)}"
 							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat2"
 							 text-wrap-width="$text_wrap_standard"/>
 				</rule>
@@ -392,7 +392,7 @@
 				</rule>
 			</rule>
 			<rule cat="base_car" e="way" k="leisure" v="park" zoom-min="13">
-				<area fill="#80a0ca6c"/>
+				<area fill="$color_park_orchard_summer"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="12" font-style="bold" font-family="sans_serif" font-size="17" fill="#39761a"
 							 stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat2" text-wrap-width="$text_wrap_standard"/>
@@ -839,7 +839,7 @@
 			</rule>
 			<rule e="way" k="wetland" v="marsh|swamp|bog|fen|wet_meadow|reedbed|saltmarsh">
 				<rule e="way" k="wetland" v="swamp">
-					<area cat="base_summer" fill="#80a0ca6c"/>
+					<area cat="base_summer" fill="$color_forest_summer_z13"/>
 					<area cat="base_winter" fill="$color_forest_winter_z13"/>
 				</rule>
 				<area src="file:patterns/marsh.svg" symbol-width="28"/>
@@ -2124,13 +2124,6 @@
 								<rule e="way" k="highway" v="cycleway|pedestrian" closed="no">
 									<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
 								</rule>
-								<!-- white outline for path-->
-								<rule e="way" k="highway" v="path|via_ferrata">
-									<rule e="way" k="sac_scale" v="~">
-										<line stroke="#AAFFFFFF" stroke-width="${ 1.3 * $path_width_z14}"/>
-									</rule>
-								</rule>
-
 							</rule>
 							<rule e="way" k="highway" v="raceway">
 								<line stroke="$color_unclassified_case" stroke-width="${unclassified_width_z14 + $highway_case_z13}"/>
@@ -2187,13 +2180,6 @@
 							<rule e="way" k="highway" v="pedestrian" closed="no">
 								<line stroke="$color_track" stroke-width="$track_grade1_width_z14"/>
 							</rule>
-							<!-- white outline for path-->
-							<rule e="way" k="highway" v="path|via_ferrata">
-								<rule e="way" k="sac_scale" v="~">
-									<line stroke="#AAFFFFFF" stroke-width="$path_width_z14"/>
-								</rule>
-							</rule>
-
 							<rule e="way" k="highway" v="raceway">
 								<line stroke="$color_unclassified_case" stroke-width="${unclassified_width_z16 + $highway_case_z16}" stroke-linecap="butt"/>
 							</rule>
@@ -2424,8 +2410,19 @@
 					<!-- === TOPO core highways for 13-15 -->
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" gen_section="to_tunnel">
 
-						<rule e="way" k="highway" v="path|via_ferrata|bridleway" zoom-min="14">
-							<line stroke="$color_path" stroke-width="$path_width_z14" stroke-dasharray="3,2" stroke-linecap="butt" scale="all"/>
+						<rule e="way" k="highway" v="via_ferrata|bridleway" zoom-min="14">
+							<line stroke="$color_path" stroke-width="$path_width_z14" stroke-dasharray="4,3" stroke-linecap="butt" scale="all"/>
+						</rule>
+
+						<rule e="way" k="highway" v="path" >
+							<rule e="way" k="trail_visibility" v="~">
+								<!-- standard visibility for path -->
+								<line stroke="#AAFFFFFF" stroke-width="$path_width_z14"/>
+								<line stroke="$color_path" stroke-width="$path_width_z14" stroke-dasharray="4,3" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="trail_visibility" v="bad|horrible|no">
+								<line stroke="${lighten($color_path, 20)}" stroke-width="$path_width_z14" stroke-dasharray="3,4" stroke-linecap="butt"/>
+							</rule>
 						</rule>
 
 						<rule e="way" k="highway" v="track">
@@ -2493,8 +2490,20 @@
 					<!-- === TOPO highway cores 16 >   === -->
 					<rule e="way" k="*" v="*" zoom-min="16" gen_section="to_tunnel" >
 
-						<rule e="way" k="highway" v="path|via_ferrata|bridleway" >
+						<rule e="way" k="highway" v="via_ferrata|bridleway" >
 							<line stroke="$color_path" stroke-width="$path_width_z16" stroke-dasharray="6,4" stroke-linecap="butt"/>
+							<pathText k="name" dy="${$path_width_z16 + 1.2}" fill="$color_standard_poi_text" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="$text_halo"/>
+						</rule>
+
+						<rule e="way" k="highway" v="path" >
+							<rule e="way" k="trail_visibility" v="~">
+								<!-- standard visibility for path -->
+								<line stroke="#AAFFFFFF" stroke-width="$path_width_z14"/>
+								<line stroke="$color_path" stroke-width="$path_width_z16" stroke-dasharray="6,4" stroke-linecap="butt"/>
+							</rule>
+							<rule e="way" k="trail_visibility" v="bad|horrible|no">
+								<line stroke="${lighten($color_path, 20)}" stroke-width="$path_width_z16" stroke-dasharray="4,6" stroke-linecap="butt"/>
+							</rule>
 							<pathText k="name" dy="${$path_width_z16 + 1.2}" fill="$color_standard_poi_text" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="$text_halo"/>
 						</rule>
 
@@ -3339,6 +3348,13 @@
 				<line stroke="#666666" stroke-width="0.15" stroke-linecap="butt"/>
 				<line stroke="#666666" dy="0.12" stroke-width="0.4" stroke-dasharray="0.1,1.5" stroke-linecap="butt" scale="all"/>
 			</rule>
+		</rule>
+		<!-- tree row -->
+		<rule cat="base_summer" e="way" k="natural" v="tree_row" zoom-min="14">
+			<line stroke="$color_forest_summer_z13" stroke-width="1" stroke-linecap="round"/>
+		</rule>
+		<rule cat="base_winter" e="way" k="natural" v="tree_row" zoom-min="14">
+			<line stroke="$color_forest_winter_z13" stroke-width="1" stroke-linecap="round"/>
 		</rule>
 		<!-- Snowmobile for WINTER -->
 		<rule cat="snowmobiles" e="way" k="snowmobile" v="designated" zoom-min="13">
