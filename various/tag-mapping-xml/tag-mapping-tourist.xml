@@ -458,6 +458,7 @@
 		<osm-tag key="natural" value="spring" zoom-appear="14" />
 		<osm-tag key="natural" value="stone" zoom-appear="14" />
 		<osm-tag key="natural" value="tree" zoom-appear="16" />
+		<osm-tag key="natural" value="tree_row" zoom-appear="14" />
 		<osm-tag key="natural" value="valley" zoom-appear="9" />
 		<osm-tag key="natural" value="volcano" zoom-appear="12" />
 		<osm-tag key="natural" value="water" zoom-appear="8" />
@@ -1090,6 +1091,13 @@
 		<osm-tag key="cycle_node" value="NLBE" zoom-appear="13" />
 		<osm-tag key="hiking_node" value="NLBE" zoom-appear="13" />
 	</pois>	
+		
+	<!-- NODE NETWORK TAGS -->
+	<pois>
+		<osm-tag key="network:type" value="node_network" />
+		<osm-tag key="rcn_ref" value="%h" zoom-appear="12" renderable="false"  />
+		<osm-tag key="rwn_ref" value="%h" zoom-appear="12" renderable="false" />
+	</pois>
 	
 	<!-- HIKING ROUTE --> 
 	<ways>
