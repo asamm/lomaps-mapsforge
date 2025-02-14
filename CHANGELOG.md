@@ -1,4 +1,10 @@
-## [1.5.3] - 2025-02-15
+## [1.6.0] - 2025-02-14
+
+### Changed
+- `osmc=yes` is no longer generated with new tourist generator, `osmc_color` is used for recognition 
+  if route data ware created from `osmc:symbol` tag
+
+## [1.5.3] - 2025-02-13
 
 ### Added
 - tree_row as a new natural feature
