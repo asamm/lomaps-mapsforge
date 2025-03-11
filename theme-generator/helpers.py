@@ -1,6 +1,7 @@
 import fileinput
 import os
 import shutil
+from datetime import datetime
 from distutils.dir_util import copy_tree
 
 from xml_templates.config import TemplateVariables
@@ -37,6 +38,37 @@ def copy_theme_to_device(result_xml, android_theme_dir):
     # refresf theme for renderer
     os.popen(
         "adb shell am broadcast -p menion.android.locus -a com.asamm.locus.ACTION_TASK --es tasks '''{ map_reload_theme: {} }'''")
+
+def create_theme_zip_for_publish(result_theme_dir, zip_file):
+    """
+    Create zip file with generated theme
+    :param result_theme_dir: directory with generated theme
+    :param zip_file: path to zip file to export
+    """
+    # remove extension from the path
+    if zip_file.endswith('.zip'):
+        zip_file = zip_file[:-4]
+    shutil.make_archive(zip_file, 'zip', result_theme_dir)
+
+    zip_file = zip_file + '.zip'
+    zip_file_size = os.path.getsize(zip_file)
+    date = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    filename = os.path.basename(zip_file)
+
+    xml = """<?xml version="1.0" encoding="utf-8"?>
+<locusActions>
+  <download>
+    <source size="{}" date="{}">
+      <![CDATA[{}]>
+    </source>
+    <dest><![CDATA[/_themes/{}]]></dest>
+    <after>refreshMap</after>
+  </download>
+</locusActions>""".format(zip_file_size, date, filename, filename)
+
+    # write xml to file
+    with open(zip_file.replace('.zip', '.xml'), 'w') as f:
+        f.write(xml)
 
 
 def publish_theme_to_android_module(result_theme_dir, android_module_dir):

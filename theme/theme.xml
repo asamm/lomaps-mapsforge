@@ -7280,12 +7280,12 @@
 							<line stroke="#747474" stroke-width="0.4" stroke-dasharray="4,3" stroke-linecap="butt" scale="all"/>
 						</rule>
 						<rule e="way" k="highway" v="path">
-							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes">
+							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
 								<line stroke="#AAFFFFFF" stroke-width="0.4"/>
 								<line stroke="#747474" stroke-width="0.4" stroke-dasharray="4,3" stroke-linecap="butt"/>
 							</rule>
-							<rule e="way" k="trail_visibility" v="bad|horrible|no">
+							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
 								<line stroke="#8f8f8f" stroke-width="0.4" stroke-dasharray="3,4" stroke-linecap="butt"/>
 							</rule>
 						</rule>
@@ -7356,12 +7356,12 @@
 							<pathText k="name" dy="1.5333333333333332" fill="#303030" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
 						</rule>
 						<rule e="way" k="highway" v="path">
-							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes">
+							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
 								<line stroke="#AAFFFFFF" stroke-width="0.4"/>
 								<line stroke="#747474" stroke-width="0.33333333333333337" stroke-dasharray="6,4" stroke-linecap="butt"/>
 							</rule>
-							<rule e="way" k="trail_visibility" v="bad|horrible|no">
+							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
 								<line stroke="#8f8f8f" stroke-width="0.33333333333333337" stroke-dasharray="4,6" stroke-linecap="butt"/>
 							</rule>
 							<pathText k="name" dy="1.5333333333333332" fill="#303030" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
@@ -8023,11 +8023,11 @@
 						<line dy="0.0" scale="all" stroke="#90747474" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="path" zoom-min="0" zoom-max="127" closed="any">
-						<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes" zoom-min="0" zoom-max="127" closed="any">
+						<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low" zoom-min="0" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#AAFFFFFF" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 							<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
-						<rule e="way" k="trail_visibility" v="bad|horrible|no" zoom-min="0" zoom-max="127" closed="any">
+						<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no" zoom-min="0" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#908f8f8f" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
@@ -8095,11 +8095,11 @@
 						<pathText k="name" display="ifspace" dy="1.5333333333333332" font-family="default" font-style="bold" font-size="10.0" fill="#303030" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" text-orientation="auto"/>
 					</rule>
 					<rule e="way" k="highway" v="path" zoom-min="0" zoom-max="127" closed="any">
-						<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes" zoom-min="0" zoom-max="127" closed="any">
+						<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low" zoom-min="0" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#AAFFFFFF" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 							<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.33333333333333337" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
-						<rule e="way" k="trail_visibility" v="bad|horrible|no" zoom-min="0" zoom-max="127" closed="any">
+						<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no" zoom-min="0" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#908f8f8f" stroke-width="0.33333333333333337" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<pathText k="name" display="ifspace" dy="1.5333333333333332" font-family="default" font-style="bold" font-size="10.0" fill="#303030" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" text-orientation="auto"/>

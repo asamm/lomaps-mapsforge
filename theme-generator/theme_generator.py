@@ -1,13 +1,15 @@
 # Generator of Mapsforge LoMaps V4 theme using templates and other variables
 import argparse
 import os
+from venv import create
 
 import yaml
 
 from actions.generator import GeneratorActions
 from options import Options, OsmcSymbolDef
 from actions.icon_validator import IconValidator
-from helpers import copy_theme_to_device, transform_cheetah_template, publish_theme_to_android_module
+from helpers import copy_theme_to_device, transform_cheetah_template, publish_theme_to_android_module, \
+    create_theme_zip_for_publish
 from osmc_symbols.osmc_gen import SvgIconColorizer
 from poi_theme import PoiThemeGenerator
 
@@ -79,6 +81,7 @@ def read_options_yaml(file, option) -> Options:
     option.android_module_path = option_yaml['Options']['android_module_path']
     option.locus_theme_path = option_yaml['Options']['locus_theme_path']
     option.output_template = option_yaml['Options']['output_template']
+    option.locus_action_zip = option_yaml['Options']['locus_action_zip']
 
     option.osmc_symbol = OsmcSymbolDef(
         option_yaml['OsmcSymbol']['color'],
@@ -130,5 +133,8 @@ if __name__ == '__main__':
 
     if options.publish_for_android:
         publish_theme_to_android_module(os.path.dirname(options.result_xml), options.android_module_path)
+
+        # NOT USED create archive that can be downloaded from github for direct usage on android device
+        #create_theme_zip_for_publish(os.path.dirname(options.result_xml), options.locus_action_zip)
 
     print("=============  DONE  ================= ")

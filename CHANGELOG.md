@@ -1,3 +1,8 @@
+## [1.6.1] - 2025-03-11
+
+### Fix
+- patha with defined good `trail_visibility` are not displayd
+
 ## [1.6.0] - 2025-02-14
 
 ### Changed
