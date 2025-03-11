@@ -2415,12 +2415,12 @@
 						</rule>
 
 						<rule e="way" k="highway" v="path" >
-							<rule e="way" k="trail_visibility" v="~">
+							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
 								<line stroke="#AAFFFFFF" stroke-width="$path_width_z14"/>
 								<line stroke="$color_path" stroke-width="$path_width_z14" stroke-dasharray="4,3" stroke-linecap="butt"/>
 							</rule>
-							<rule e="way" k="trail_visibility" v="bad|horrible|no">
+							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
 								<line stroke="${lighten($color_path, 20)}" stroke-width="$path_width_z14" stroke-dasharray="3,4" stroke-linecap="butt"/>
 							</rule>
 						</rule>
@@ -2496,12 +2496,12 @@
 						</rule>
 
 						<rule e="way" k="highway" v="path" >
-							<rule e="way" k="trail_visibility" v="~">
+							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
 								<line stroke="#AAFFFFFF" stroke-width="$path_width_z14"/>
 								<line stroke="$color_path" stroke-width="$path_width_z16" stroke-dasharray="6,4" stroke-linecap="butt"/>
 							</rule>
-							<rule e="way" k="trail_visibility" v="bad|horrible|no">
+							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
 								<line stroke="${lighten($color_path, 20)}" stroke-width="$path_width_z16" stroke-dasharray="4,6" stroke-linecap="butt"/>
 							</rule>
 							<pathText k="name" dy="${$path_width_z16 + 1.2}" fill="$color_standard_poi_text" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="$text_halo"/>

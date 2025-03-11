@@ -662,9 +662,13 @@
 		<osm-tag key="trail_visibility" value="excellent" renderable="false" />
 		<osm-tag key="trail_visibility" value="good" renderable="false" />
 		<osm-tag key="trail_visibility" value="intermediate" renderable="false" />
+		<osm-tag key="trail_visibility" value="medium" renderable="false" />
 		<osm-tag key="trail_visibility" value="bad" renderable="false" />
 		<osm-tag key="trail_visibility" value="horrible" renderable="false" />
 		<osm-tag key="trail_visibility" value="no" renderable="false" />	
+		<osm-tag key="trail_visibility" value="very_bad" renderable="false" />
+		<osm-tag key="trail_visibility" value="poor" renderable="false" />
+		<osm-tag key="trail_visibility" value="low" renderable="false" />
 	</ways>
 
 	<!-- PUBLIC TRANSPORT -->
