@@ -20,4 +20,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lomaps_theme
-          path: lomaps_theme.zip
+          path: locus_actions/lomaps_theme.zip
