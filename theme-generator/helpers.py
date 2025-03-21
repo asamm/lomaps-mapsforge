@@ -59,7 +59,7 @@ def create_theme_zip_for_publish(result_theme_dir, zip_file):
 <locusActions>
   <download>
     <source size="{}" date="{}">
-      <![CDATA[ https://github.com/asamm/lomaps-mapsforge/tree/DEV/locus_actions/lomaps_theme.zip ]>
+      <![CDATA[ https://asamm.github.io/lomaps-mapsforge/lomaps_theme.zip ]>
     </source>
     <dest><![CDATA[ /mapsVector/_themes/LoMaps_theme.zip ]]></dest>
     <after>refreshMap</after>
