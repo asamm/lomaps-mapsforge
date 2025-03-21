@@ -134,7 +134,7 @@ if __name__ == '__main__':
     if options.publish_for_android:
         publish_theme_to_android_module(os.path.dirname(options.result_xml), options.android_module_path)
 
-        # NOT USED create archive that can be downloaded from github for direct usage on android device
-        #create_theme_zip_for_publish(os.path.dirname(options.result_xml), options.locus_action_zip)
+        # create archive that can be downloaded from github for direct usage on android device
+        create_theme_zip_for_publish(os.path.dirname(options.result_xml), options.locus_action_zip)
 
     print("=============  DONE  ================= ")

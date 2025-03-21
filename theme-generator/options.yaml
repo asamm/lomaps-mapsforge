@@ -2,7 +2,7 @@ Options:
     android_module_path: ../android/src/main/assets/themes/mapsforgeV4/base/
     locus_theme_path: /sdcard/Android/data/menion.android.locus/files/Locus/mapsVector/_themes/theme/
     output_template: xml_templates/base_output.xml
-    locus_action_zip: locus_actions/lomaps_theme.zip
+    locus_action_zip: ../locus_actions/lomaps_theme.zip
 
 OsmcSymbol:
     foreground:
