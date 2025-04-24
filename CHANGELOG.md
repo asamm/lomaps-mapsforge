@@ -1,7 +1,12 @@
+## [1.6.2] - 2025-04-24
+
+### Fix
+- incorrect orientation of one way opposite cycling symbols
+
 ## [1.6.1] - 2025-03-11
 
 ### Fix
-- patha with defined good `trail_visibility` are not displayd
+- paths with defined good `trail_visibility` are not displayed
 
 ## [1.6.0] - 2025-02-14
 
