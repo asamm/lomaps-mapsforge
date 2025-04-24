@@ -7478,10 +7478,10 @@
 							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="402"/>
 						</rule>
 						<rule cat="base_summer" e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane" zoom-min="18">
-							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="auto" position="center" priority="402"/>
+							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="left" position="center" priority="402"/>
 						</rule>
 						<rule cat="base_summer" e="way" k="oneway:bicycle" v="no" zoom-min="18">
-							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="auto" position="center" priority="402"/>
+							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="left" position="center" priority="402"/>
 						</rule>
 					</rule>
 					<rule cat="base_summer" e="way" k="oneway:foot" v="yes" zoom-min="15">
