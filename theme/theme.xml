@@ -1130,7 +1130,7 @@
 					</rule>
 				</rule>
 				<!-- Basic cycleway -->
-				<rule cat="cyc_routes" e="way" k="highway" v="cycleway">
+				<rule cat="cyc_routes" e="way" k="highway|bicycle" v="cycleway|designated">
 					<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">
 						<rule e="way" k="osmc_highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~">
 							<line stroke="#d320dc" dy="1.75" stroke-width="1.5" stroke-linecap="butt"/>

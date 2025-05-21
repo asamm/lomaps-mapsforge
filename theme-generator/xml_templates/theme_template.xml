@@ -1141,7 +1141,7 @@
 				</rule>
 
 				<!-- Basic cycleway -->
-				<rule cat="cyc_routes" e="way" k="highway" v="cycleway">
+				<rule cat="cyc_routes" e="way" k="highway|bicycle" v="cycleway|designated">
 					<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15" gen_section="basic_cycle_ways">
 						<rule e="way" k="osmc_highway" v="track|pedestrian|path|via_ferrata|steps|bridleway|~">
 							<line stroke="$color_cycle_standard" dy="${$track_grade1_width_z14 + $osmc_hiking_width_z13/2}" stroke-width="$osmc_hiking_width_z13" stroke-linecap="butt" />
