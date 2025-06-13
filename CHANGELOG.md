@@ -1,3 +1,9 @@
+## [1.6.3] - 2025-06-13
+
+### Changed
+- tracks with `tracktype=grade5` visible from zl 15
+- mark paths `bicycle=designated` as cycleways
+
 ## [1.6.2] - 2025-04-24
 
 ### Fix

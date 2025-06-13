@@ -7296,6 +7296,9 @@
 							<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="14">
 								<line stroke="#8a8a8a" stroke-width="0.75" stroke-dasharray="15,7" stroke-linecap="butt"/>
 							</rule>
+							<rule e="way" k="tracktype" v="grade5" zoom-min="15">
+								<line stroke="#8a8a8a" stroke-width="0.36" stroke-dasharray="15,12"/>
+							</rule>
 							<rule e="way" k="tracktype" v="~">
 								<line stroke="#8a8a8a" stroke-width="0.75" stroke-dasharray="15,7" stroke-linecap="butt"/>
 							</rule>
@@ -7401,7 +7404,7 @@
 								<line stroke="#8a8a8a" stroke-width="0.48" stroke-dasharray="2.5,1.5" scale="all"/>
 							</rule>
 							<rule e="way" k="tracktype" v="grade5">
-								<line stroke="#8a8a8a" stroke-width="0.36" stroke-dasharray="1.5,1" scale="all"/>
+								<line stroke="#8a8a8a" stroke-width="0.36" stroke-dasharray="4,3.5" scale="all"/>
 							</rule>
 							<rule e="way" k="tracktype" v="~">
 								<line stroke="#8a8a8a" stroke-width="0.48" stroke-dasharray="2.5,1.5" scale="all"/>
@@ -8037,6 +8040,9 @@
 						</rule>
 						<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="14" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.75" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						</rule>
+						<rule e="way" k="tracktype" v="grade5" zoom-min="15" zoom-max="127" closed="any">
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.36" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="~" zoom-min="0" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.75" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
