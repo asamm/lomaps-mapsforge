@@ -2432,6 +2432,9 @@
 							<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="14">
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z14" stroke-dasharray="15,7" stroke-linecap="butt"/>
 							</rule>
+							<rule e="way" k="tracktype" v="grade5" zoom-min="15">
+								<line stroke="$color_track" stroke-width="$track_grade5_width_z15" stroke-dasharray="15,12" />
+							</rule>
 							<rule e="way" k="tracktype" v="~">
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z14" stroke-dasharray="15,7" stroke-linecap="butt"/>
 							</rule>
@@ -2543,7 +2546,7 @@
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z15" stroke-dasharray="2.5,1.5" scale="all"/>
 							</rule>
 							<rule e="way" k="tracktype" v="grade5">
-								<line stroke="$color_track" stroke-width="$track_grade5_width_z15" stroke-dasharray="1.5,1" scale="all"/>
+								<line stroke="$color_track" stroke-width="$track_grade5_width_z15" stroke-dasharray="4,3.5" scale="all"/>
 							</rule>
 							<rule e="way" k="tracktype" v="~">
 								<line stroke="$color_track" stroke-width="$track_grade3_4_width_z15" stroke-dasharray="2.5,1.5"  scale="all"/>
