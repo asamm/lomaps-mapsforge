@@ -2420,7 +2420,7 @@
 								<line stroke="#AAFFFFFF" stroke-width="$path_width_z14"/>
 								<line stroke="$color_path" stroke-width="$path_width_z14" stroke-dasharray="4,3" stroke-linecap="butt"/>
 							</rule>
-							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
+							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible">
 								<line stroke="${lighten($color_path, 20)}" stroke-width="$path_width_z14" stroke-dasharray="3,4" stroke-linecap="butt"/>
 							</rule>
 						</rule>
