@@ -90,9 +90,9 @@ class TemplateVariables(Template):
     track_grade1_width_z14 = 1
     track_grade2_width_z14 = track_grade1_width_z14
     track_grade3_4_width_z14 = track_grade1_width_z14 * 0.75
-    path_width_z14 = 0.4
-    footway_width_z14 = 0.4
-    steps_width_z14 = 0.6
+    path_width_z14 = 0.6
+    footway_width_z14 = 0.6
+    steps_width_z14 = 0.7
     construction_width_z14 = 0.4
 
     # ZL > 16
@@ -104,12 +104,12 @@ class TemplateVariables(Template):
     secondary_width_z16 = secondary_width_z13 / scale_factor_z16
     tertiary_width_z16 = tertiary_width_z13 / scale_factor_z16
     unclassified_width_z16 = unclassified_width_z13 / scale_factor
-    path_width_z16 = path_width_z14 / scale_factor
+    path_width_z16 = path_width_z14 / math.pow(1.25, 2)
     track_grade1_width_z16 = track_grade1_width_z14 / scale_factor
     track_grade2_width_z15 = track_grade2_width_z14 / math.pow(1.25, 16 - 14)
     track_grade3_4_width_z15 = track_grade3_4_width_z14 / math.pow(1.25, 16 - 14)
     track_grade5_width_z15 = track_grade3_4_width_z15 * 0.75
-    footway_width_z16 = footway_width_z14 / math.pow(1.25, 16 - 14)
+    footway_width_z16 = footway_width_z14 / math.pow(1.4, 2)
 
     ## consistent case size
     highway_case_lowlevel = 2

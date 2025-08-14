@@ -2340,7 +2340,7 @@
 						</rule>
 						<rule e="way" k="highway" v="footway|corridor" zoom-max="15" closed="no">
 							<rule e="way" k="indoor" v="~|no">
-								<line stroke="$color_footway" stroke-width="$footway_width_z14" stroke-dasharray="0.5,3,2,3"/>
+								<line stroke="$color_path" stroke-width="$footway_width_z14" stroke-dasharray="0.5,3,2,3"/> <!--for zoom 14-15 has footway darker color same as path-->
 							</rule>
 							<!-- indor paths -->
 							<rule e="way" k="indoor" v="yes">
