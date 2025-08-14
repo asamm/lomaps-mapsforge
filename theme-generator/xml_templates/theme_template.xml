@@ -2580,6 +2580,15 @@
 							<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
 						<rule e="way" k="access" v="private|no">
 							<rule e="way" k="*" v="*" zoom-min="14">
+								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway|path|track|pedestrian" zoom-min="16">
+									<!-- Display symbol of private access-->
+									<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+										<symbol src="file:symbols/poi_private_path.svg" symbol-width="9" position="center" priority="$priority_private_access" display="ifspace"/>
+									</rule>
+									<rule e="way" k="*" v="*" zoom-min="18" >
+										<symbol src="file:symbols/poi_private_path.svg" symbol-width="13" position="center" priority="$priority_private_access" display="ifspace"/>
+									</rule>
+								</rule>
 								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway">
 									<line stroke="#d5d5d5" stroke-width="${$unclassified_width_z16 * 0.7}"/>
 								</rule>
