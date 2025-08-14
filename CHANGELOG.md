@@ -1,3 +1,11 @@
+## [1.6.4] - 2025-08-14
+
+### Added
+- signalization for paths and tracks with `access=private` or `access=no`
+
+### Changed
+- footways are now visible from zoom level 14 with darker color (to better represent countryside paths commonly used in some countries)
+
 ## [1.6.3] - 2025-06-13
 
 ### Changed

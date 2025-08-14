@@ -6770,8 +6770,8 @@
 								</rule>
 								<!-- white outline for path-->
 								<rule e="way" k="highway" v="path|via_ferrata|footway">
-									<line stroke="#4d4d4d" stroke-width="0.1" dy="0.4" stroke-linecap="butt"/>
-									<line stroke="#4d4d4d" stroke-width="0.1" dy="-0.4" stroke-linecap="butt"/>
+									<line stroke="#4d4d4d" stroke-width="0.1" dy="0.6" stroke-linecap="butt"/>
+									<line stroke="#4d4d4d" stroke-width="0.1" dy="-0.6" stroke-linecap="butt"/>
 								</rule>
 							</rule>
 							<rule e="way" k="highway" v="raceway">
@@ -6828,9 +6828,9 @@
 								<line stroke="#8a8a8a" stroke-width="1" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="path|via_ferrata|footway">
-								<line stroke="#ebeade" stroke-width="0.512" stroke-linecap="butt"/>
-								<line stroke="#4d4d4d" stroke-width="0.1" dy="0.256" stroke-linecap="butt"/>
-								<line stroke="#4d4d4d" stroke-width="0.1" dy="-0.256" stroke-linecap="butt"/>
+								<line stroke="#ebeade" stroke-width="0.6122448979591837" stroke-linecap="butt"/>
+								<line stroke="#4d4d4d" stroke-width="0.1" dy="0.30612244897959184" stroke-linecap="butt"/>
+								<line stroke="#4d4d4d" stroke-width="0.1" dy="-0.30612244897959184" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="raceway">
 								<line stroke="#0d0d0d" stroke-width="1.65" stroke-linecap="butt"/>
@@ -7208,16 +7208,17 @@
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="14">
 						<rule e="way" k="highway" v="steps" zoom-max="15">
-							<line stroke="#8a8a8a" stroke-width="0.6" stroke-dasharray="1,2" stroke-linecap="butt"/>
+							<line stroke="#8a8a8a" stroke-width="0.7" stroke-dasharray="1,2" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="highway" v="footway|corridor" zoom-max="15" closed="no">
 							<rule e="way" k="indoor" v="~|no">
-								<line stroke="#8a8a8a" stroke-width="0.4" stroke-dasharray="0.5,3,2,3"/>
+								<line stroke="#747474" stroke-width="0.6" stroke-dasharray="0.5,3,2,3"/>
+								<!--for zoom 14-15 has footway darker color same as path-->
 							</rule>
 							<!-- indor paths -->
 							<rule e="way" k="indoor" v="yes">
 								<rule e="way" k="highway" v="corridor|footway">
-									<line stroke="#ffffff" stroke-width="0.4" stroke-dasharray="0.5,3,2,3"/>
+									<line stroke="#ffffff" stroke-width="0.6" stroke-dasharray="0.5,3,2,3"/>
 								</rule>
 							</rule>
 						</rule>
@@ -7277,16 +7278,16 @@
 					<!-- === TOPO core highways for 13-15 -->
 					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 						<rule e="way" k="highway" v="via_ferrata|bridleway" zoom-min="14">
-							<line stroke="#747474" stroke-width="0.4" stroke-dasharray="4,3" stroke-linecap="butt" scale="all"/>
+							<line stroke="#747474" stroke-width="0.6" stroke-dasharray="4,3" stroke-linecap="butt" scale="all"/>
 						</rule>
 						<rule e="way" k="highway" v="path">
 							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
-								<line stroke="#AAFFFFFF" stroke-width="0.4"/>
-								<line stroke="#747474" stroke-width="0.4" stroke-dasharray="4,3" stroke-linecap="butt"/>
+								<line stroke="#AAFFFFFF" stroke-width="0.6"/>
+								<line stroke="#747474" stroke-width="0.6" stroke-dasharray="4,3" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible">
-								<line stroke="#8f8f8f" stroke-width="0.4" stroke-dasharray="3,4" stroke-linecap="butt"/>
+								<line stroke="#8f8f8f" stroke-width="0.6" stroke-dasharray="3,4" stroke-linecap="butt"/>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="track">
@@ -7355,32 +7356,32 @@
 					<!-- === TOPO highway cores 16 >   === -->
 					<rule e="way" k="*" v="*" zoom-min="16">
 						<rule e="way" k="highway" v="via_ferrata|bridleway">
-							<line stroke="#747474" stroke-width="0.33333333333333337" stroke-dasharray="6,4" stroke-linecap="butt"/>
-							<pathText k="name" dy="1.5333333333333332" fill="#303030" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
+							<line stroke="#747474" stroke-width="0.384" stroke-dasharray="6,4" stroke-linecap="butt"/>
+							<pathText k="name" dy="1.584" fill="#303030" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
 						</rule>
 						<rule e="way" k="highway" v="path">
 							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
-								<line stroke="#AAFFFFFF" stroke-width="0.4"/>
-								<line stroke="#747474" stroke-width="0.33333333333333337" stroke-dasharray="6,4" stroke-linecap="butt"/>
+								<line stroke="#AAFFFFFF" stroke-width="0.6"/>
+								<line stroke="#747474" stroke-width="0.384" stroke-dasharray="6,4" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
-								<line stroke="#8f8f8f" stroke-width="0.33333333333333337" stroke-dasharray="4,6" stroke-linecap="butt"/>
+								<line stroke="#8f8f8f" stroke-width="0.384" stroke-dasharray="4,6" stroke-linecap="butt"/>
 							</rule>
-							<pathText k="name" dy="1.5333333333333332" fill="#303030" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
+							<pathText k="name" dy="1.584" fill="#303030" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="4"/>
 						</rule>
 						<rule e="way" k="highway" v="steps">
-							<line stroke="#8a8a8a" stroke-width="0.48" stroke-dasharray="2,3" stroke-linecap="butt"/>
+							<line stroke="#8a8a8a" stroke-width="0.5599999999999999" stroke-dasharray="2,3" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="highway" v="footway|corridor">
 							<rule e="way" k="indoor" v="~|no">
-								<line stroke="#40FFFFFF" stroke-width="0.256"/>
-								<line stroke="#8a8a8a" stroke-width="0.256" stroke-dasharray="1,6,4,6"/>
+								<line stroke="#40FFFFFF" stroke-width="0.30612244897959184"/>
+								<line stroke="#8a8a8a" stroke-width="0.30612244897959184" stroke-dasharray="1,6,4,6"/>
 							</rule>
 							<!-- indor paths -->
 							<rule e="way" k="indoor" v="yes">
 								<rule e="way" k="highway" v="corridor|footway">
-									<line stroke="#ffffff" stroke-width="0.256" stroke-dasharray="1,6,4,6"/>
+									<line stroke="#ffffff" stroke-width="0.30612244897959184" stroke-dasharray="1,6,4,6"/>
 								</rule>
 							</rule>
 						</rule>
@@ -7438,6 +7439,15 @@
 						<!-- Private access - ugly hack to set core to gray. The thickness is universal average -->
 						<rule e="way" k="access" v="private|no">
 							<rule e="way" k="*" v="*" zoom-min="14">
+								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway|path|track|pedestrian" zoom-min="16">
+									<!-- Display symbol of private access-->
+									<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+										<symbol src="file:symbols/poi_private_path.svg" symbol-width="9" position="center" priority="401" display="ifspace"/>
+									</rule>
+									<rule e="way" k="*" v="*" zoom-min="18">
+										<symbol src="file:symbols/poi_private_path.svg" symbol-width="13" position="center" priority="401" display="ifspace"/>
+									</rule>
+								</rule>
 								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway">
 									<line stroke="#d5d5d5" stroke-width="0.875"/>
 								</rule>
@@ -7475,10 +7485,10 @@
 					</rule>
 					<!-- highway one-way markers -->
 					<rule e="way" k="oneway" v="yes" zoom-min="15">
-						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="401"/>
+						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="403"/>
 						<rule e="way" k="highway" v="path|track|pedestrian">
 							<!-- For path that are rendered as gray line display one way symbol again, little bit bigger with higher priority and defined DY-->
-							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="402"/>
+							<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="12" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="404"/>
 						</rule>
 						<rule cat="base_summer" e="way" k="cycleway|cycleway:left|cycleway:right" v="opposite|opposite_lane" zoom-min="18">
 							<lineSymbol src="file:symbols/poi_one_way_cycle_opposite.svg" symbol-width="30" repeat="true" repeat-gap="282" symbol-orientation="left" position="center" priority="402"/>
@@ -7488,10 +7498,10 @@
 						</rule>
 					</rule>
 					<rule cat="base_summer" e="way" k="oneway:foot" v="yes" zoom-min="15">
-						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="16" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="402"/>
+						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="16" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="404"/>
 					</rule>
 					<rule cat="base_summer" e="way" k="foot:backward" v="no" zoom-min="15">
-						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="16" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="402"/>
+						<lineSymbol src="file:symbols/poi_one_way.svg" symbol-width="16" dy="1" repeat="true" repeat-gap="300" symbol-orientation="left" position="center" priority="404"/>
 					</rule>
 				</rule>
 				<!-- END off no area core for topo highways-->
@@ -8023,15 +8033,15 @@
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15" closed="any">
 					<rule e="way" k="highway" v="via_ferrata|bridleway" zoom-min="14" zoom-max="127" closed="any">
-						<line dy="0.0" scale="all" stroke="#90747474" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="all" stroke="#90747474" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="path" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#AAFFFFFF" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
-							<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#AAFFFFFF" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#908f8f8f" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908f8f8f" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 					</rule>
 					<rule e="way" k="highway" v="track" zoom-min="0" zoom-max="127" closed="any">
@@ -8097,30 +8107,30 @@
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16" zoom-max="127" closed="any">
 					<rule e="way" k="highway" v="via_ferrata|bridleway" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.33333333333333337" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
-						<pathText k="name" display="ifspace" dy="1.5333333333333332" font-family="default" font-style="bold" font-size="10.0" fill="#303030" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" text-orientation="auto"/>
+						<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.384" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<pathText k="name" display="ifspace" dy="1.584" font-family="default" font-style="bold" font-size="10.0" fill="#303030" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" text-orientation="auto"/>
 					</rule>
 					<rule e="way" k="highway" v="path" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#AAFFFFFF" stroke-width="0.4" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
-							<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.33333333333333337" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#AAFFFFFF" stroke-width="0.6" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#90747474" stroke-width="0.384" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#908f8f8f" stroke-width="0.33333333333333337" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908f8f8f" stroke-width="0.384" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
-						<pathText k="name" display="ifspace" dy="1.5333333333333332" font-family="default" font-style="bold" font-size="10.0" fill="#303030" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" text-orientation="auto"/>
+						<pathText k="name" display="ifspace" dy="1.584" font-family="default" font-style="bold" font-size="10.0" fill="#303030" priority="0" scale="stroke" stroke="#ffffff" stroke-width="4.0" repeat="true" repeat-gap="100.0" repeat-start="10.0" rotate="true" text-orientation="auto"/>
 					</rule>
 					<rule e="way" k="highway" v="steps" zoom-min="0" zoom-max="127" closed="any">
-						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.48" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+						<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.5599999999999999" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 					<rule e="way" k="highway" v="footway|corridor" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="indoor" v="~|no" zoom-min="0" zoom-max="127" closed="any">
-							<line dy="0.0" scale="stroke" stroke="#40FFFFFF" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
-							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#40FFFFFF" stroke-width="0.30612244897959184" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.30612244897959184" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="indoor" v="yes" zoom-min="0" zoom-max="127" closed="any">
 							<rule e="way" k="highway" v="corridor|footway" zoom-min="0" zoom-max="127" closed="any">
-								<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.256" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
+								<line dy="0.0" scale="stroke" stroke="#90ffffff" stroke-width="0.30612244897959184" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
 						</rule>
 					</rule>
@@ -8177,6 +8187,14 @@
 					</rule>
 					<rule e="way" k="access" v="private|no" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="127" closed="any">
+							<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway|path|track|pedestrian" zoom-min="16" zoom-max="127" closed="any">
+								<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" closed="any">
+									<symbol display="ifspace" priority="401" src="file:symbols/poi_private_path.svg" symbol-width="9" position="center"/>
+								</rule>
+								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="127" closed="any">
+									<symbol display="ifspace" priority="401" src="file:symbols/poi_private_path.svg" symbol-width="13" position="center"/>
+								</rule>
+							</rule>
 							<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway" zoom-min="0" zoom-max="127" closed="any">
 								<line dy="0.0" scale="stroke" stroke="#90d5d5d5" stroke-width="0.875" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 							</rule>
@@ -8632,6 +8650,7 @@
 		<rule cat="base_topo" e="way" k="barrier" v="*" zoom-min="13">
 			<rule e="way" k="barrier" v="fence|wall|chain">
 				<line stroke="#666666" stroke-width="0.10" stroke-linecap="butt"/>
+				<line stroke="#666666" stroke-width="0.3" stroke-dasharray="0.1,1.1" stroke-linecap="butt" scale="all"/>
 			</rule>
 			<rule e="way" k="barrier" v="hedge">
 				<line stroke="#3FB637" stroke-width="0.15" stroke-linecap="butt"/>
@@ -8838,10 +8857,10 @@
 				<!--OneWay for piste nordic-->
 				<rule e="way" k="piste:oneway" v="yes" zoom-min="15">
 					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="17">
-						<lineSymbol src="file:symbols/poi_one_way_ski_nordic.svg" dy="-1.35" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="300" position="center" display="ifspace" priority="401"/>
+						<lineSymbol src="file:symbols/poi_one_way_ski_nordic.svg" dy="-1.35" symbol-orientation="left" symbol-width="14" repeat="true" repeat-gap="300" position="center" display="ifspace" priority="403"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="18">
-						<lineSymbol src="file:symbols/poi_one_way_ski_nordic.svg" dy="-1.35" symbol-orientation="left" symbol-width="18" repeat="true" repeat-gap="400" position="center" display="ifspace" priority="401"/>
+						<lineSymbol src="file:symbols/poi_one_way_ski_nordic.svg" dy="-1.35" symbol-orientation="left" symbol-width="18" repeat="true" repeat-gap="400" position="center" display="ifspace" priority="403"/>
 					</rule>
 				</rule>
 			</rule>
@@ -9122,16 +9141,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_red_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="black_arch|arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -9278,16 +9297,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="blue_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_blue_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -9425,16 +9444,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_blue_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="brown_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_brown_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -9572,16 +9591,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_brown_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="gray_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_gray_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -9719,16 +9738,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_gray_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_green_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -9866,16 +9885,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_green_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="orange_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_orange_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -10013,16 +10032,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_orange_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="purple_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_purple_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -10160,16 +10179,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_purple_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="yellow_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_yellow_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -10307,16 +10326,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_yellow_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="white_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_white_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
@@ -10454,16 +10473,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_white_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="40.0" rotate="true" symbol-orientation="left"/>
 							</rule>
 						</rule>
 						<rule e="way" k="osmc_order" v="1" zoom-min="0" zoom-max="127" closed="any">
@@ -10606,16 +10625,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_red_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="black_arch|arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -10762,16 +10781,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="blue_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_blue_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -10909,16 +10928,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_blue_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="brown_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_brown_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -11056,16 +11075,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_brown_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="gray_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_gray_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -11203,16 +11222,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_gray_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_green_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -11350,16 +11369,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_green_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="orange_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_orange_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -11497,16 +11516,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_orange_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="purple_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_purple_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -11644,16 +11663,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_purple_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="yellow_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_yellow_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -11791,16 +11810,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_yellow_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="white_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_white_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
@@ -11938,16 +11957,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_white_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="53.2" rotate="true" symbol-orientation="left"/>
 							</rule>
 						</rule>
 						<rule e="way" k="osmc_order" v="2" zoom-min="0" zoom-max="127" closed="any">
@@ -12090,16 +12109,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_red_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="red_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_red_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_red_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="black_arch|arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -12246,16 +12265,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_black_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="black_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_black_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_black_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="blue_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_blue_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -12393,16 +12412,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_blue_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="blue_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_blue_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_blue_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="brown_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_brown_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -12540,16 +12559,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_brown_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="brown_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_brown_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_brown_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="gray_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_gray_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -12687,16 +12706,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_gray_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="gray_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_gray_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_gray_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="green_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_green_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -12834,16 +12853,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_green_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="green_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_green_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_green_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="orange_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_orange_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -12981,16 +13000,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_orange_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="orange_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_orange_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_orange_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="purple_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_purple_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -13128,16 +13147,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_purple_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="purple_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_purple_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_purple_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="yellow_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_yellow_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -13275,16 +13294,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_yellow_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="yellow_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_yellow_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_foreground" v="white_arch" zoom-min="0" zoom-max="127" closed="any">
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_white_arch.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
@@ -13422,16 +13441,16 @@
 								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/frg_white_wheel.svg" symbol-width="12" position="below_right" priority="210" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_circle" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_circle.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_frame" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_frame.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 							<rule e="way" k="osmc_background" v="white_round" zoom-min="0" zoom-max="127" closed="any">
-								<lineSymbol display="ifspace" dy="-18.0" scale="none" src="file:osmc/bcg_white_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
+								<lineSymbol display="always" dy="-18.0" scale="none" src="file:osmc/bcg_white_round.svg" symbol-width="12" position="below_right" priority="209" repeat="true" repeat-gap="400.0" repeat-start="66.4" rotate="true" symbol-orientation="left"/>
 							</rule>
 						</rule>
 					</rule>
