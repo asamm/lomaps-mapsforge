@@ -276,6 +276,15 @@
 				<rule e="way" k="natural" v="glacier">
 					<area fill="#50D3E9FF"/>
 					<area src="file:patterns/glacier.svg" symbol-width="20"/>
+
+					<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
+						<caption k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#4f9cbf"
+								 stroke="#ffffff" stroke-width="3" priority="$priority_water_area" text-wrap-width="$text_wrap_standard"/>
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="16">
+						<caption k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#4f9cbf"
+								 stroke="#ffffff" stroke-width="4" priority="$priority_water_area" text-wrap-width="$text_wrap_standard"/>
+					</rule>
 				</rule>
 			</rule>
 			<rule e="way" k="natural" v="*" zoom-min="11" closed="yes">
