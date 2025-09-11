@@ -1,3 +1,12 @@
+## [1.7.0] - 2025-09-11
+
+### Added
+- labels for glaciers
+
+### Changed
+- change `display=always` to `display=forced` because changed begavior of `display=always` in latest version of Mapsforge library 
+  https://github.com/mapsforge/mapsforge/pull/1586
+
 ## [1.6.4] - 2025-08-14
 
 ### Added
