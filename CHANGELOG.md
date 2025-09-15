@@ -1,3 +1,8 @@
+## [1.7.2] - 2025-09-15
+
+### Fixed
+- incomplete revert of `display=always` vs `display=forced`
+
 ## [1.7.1] - 2025-09-15
 
 ### Changed
