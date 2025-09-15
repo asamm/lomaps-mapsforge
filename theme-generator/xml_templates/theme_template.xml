@@ -1823,7 +1823,7 @@
 				</rule>
 				<rule cat="highways_topo" e="way" k="safety_rope|rungs" v="yes" zoom-min="15">
 					<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
-						<lineSymbol src="file:symbols/poi_chain_path.svg" symbol-width="13" symbol-orientation="up" repeat="true" repeat-gap="50" repeat-start="40" position="above_right" display="forced"/>
+						<lineSymbol src="file:symbols/poi_chain_path.svg" symbol-width="13" symbol-orientation="up" repeat="true" repeat-gap="50" repeat-start="40" position="above_right" display="always"/>
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
 						<lineSymbol src="file:symbols/poi_chain_path.svg"  symbol-width="15" symbol-orientation="up" repeat="true" repeat-gap="150" repeat-start="70" position="above_right" display="ifspace"/>
@@ -3700,7 +3700,7 @@
 					<line stroke="${opacity('#ffffff',60)}" stroke-width="1" stroke-linecap="butt"/>
 					<line stroke="${opacity($color_aerialway_zipline,80)}" stroke-width="0.6" stroke-linecap="butt"/>
 					<lineSymbol src="file:symbols/poi_zip_line.svg" symbol-width="8" dy="0" repeat="true"
-								symbol-orientation="auto" repeat-gap="50" repeat-start="20" position="center" scale="all" display="forced" />
+								symbol-orientation="auto" repeat-gap="50" repeat-start="20" position="center" scale="all" display="always" />
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="16">
@@ -3727,13 +3727,13 @@
 						<line stroke="${opacity('#ffffff',60)}" stroke-width="0.7" stroke-linecap="butt"/>
 						<line stroke="${opacity($color_aerialway_zipline,80)}" stroke-width="0.4" stroke-linecap="butt"/>
 						<lineSymbol src="file:symbols/poi_zip_line.svg" symbol-width="8" dy="0" repeat="true"
-								symbol-orientation="auto" repeat-gap="60" repeat-start="50" position="center" scale="all" display="forced" />
+								symbol-orientation="auto" repeat-gap="60" repeat-start="50" position="center" scale="all" display="always" />
 					</rule>
 					<rule e="way" k="*" v="*" zoom-min="18">
 						<line stroke="${opacity('#ffffff',60)}" stroke-width="0.4" stroke-linecap="butt"/>
 						<line stroke="${opacity($color_aerialway_zipline,80)}" stroke-width="0.2" stroke-linecap="butt"/>
 						<lineSymbol src="file:symbols/poi_zip_line.svg" symbol-width="11" dy="0" repeat="true"
-								symbol-orientation="auto" repeat-gap="80" repeat-start="60" position="center" scale="all" display="forced" />
+								symbol-orientation="auto" repeat-gap="80" repeat-start="60" position="center" scale="all" display="always" />
 						<pathText k="name" font-family="sans_serif" font-size="10" dy="-1.1" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="2" repeat-gap="300" priority="$priority_poi_caption_cat2"/>
 					</rule>
 				</rule>
@@ -3753,7 +3753,7 @@
 					<rule e="way" k="osmc_order" v="~" gen_section="osmc_symbols">
 						<rule e="way" k="osmc_foreground" v="black">
 							<lineSymbol src="file:osmc/frg_black_arch.svg" dy="-18" scale="none" symbol-width="12"
-										symbol-orientation="left" display="forced" position="below_right"
+										symbol-orientation="left" display="always" position="below_right"
 										repeat-gap="400" repeat="true" priority="$priority_tourist_osmc_symbol"
 										repeat-start="$osmc_symbol_repeat_start"/>
 
@@ -3773,11 +3773,11 @@
 				<line stroke="#707070" stroke-width="0.15" stroke-dasharray="15,6,1,6"/>
 			</rule>
 			<rule e="node" k="power" v="pole" zoom-min="16">
-				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="4" display="forced" position="center" />
+				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="4" display="always" position="center" />
 			</rule>
 			<rule e="node" k="power" v="tower" zoom-min="16">
 				<circle r="2" fill="#90707070"/>
-				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="6" display="forced" position="center" />
+				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="6" display="always" position="center" />
 			</rule>
 		</rule>
 	</rule>
@@ -4163,31 +4163,31 @@
 
 		<rule cat="cyc_routes" e="node" k="rcn_ref" v="*">
 			<rule e="node" k="rcn_ref" v="*" zoom-min="12" zoom-max="13">
-				<symbol src="file:symbols/poi_junction_nlbe.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="rcn_ref" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rcn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 			<rule e="node" k="rcn_ref" v="*" zoom-min="14" zoom-max="16">
-				<symbol src="file:symbols/poi_junction_nlbe.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="rcn_ref" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rcn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 			<rule e="node" k="rcn_ref" v="*" zoom-min="17" zoom-max="19">
-				<symbol src="file:symbols/poi_junction_nlbe.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="rcn_ref" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rcn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 
 		<rule cat="hik_routes" e="node" k="rwn_ref" v="*">
 			<rule e="node" k="*" v="*" zoom-min="12" zoom-max="13">
-				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="rwn_ref" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rwn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 			<rule e="node" k="*" v="*" zoom-min="14" zoom-max="16">
-				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="rwn_ref" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rwn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 			<rule e="node" k="*" v="*" zoom-min="17" zoom-max="19">
-				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="rwn_ref" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="rwn_ref" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 	</rule>
@@ -4196,20 +4196,20 @@
 	<rule cat="cyc_routes" e="node" k="cycle_node" v="NLBE">
 		<rule e="node" k="cycle_node" v="*" zoom-min="12" zoom-max="13">
 			<rule e="node" k="cycle_node" v="*">
-				<symbol src="file:symbols/poi_junction_nlbe.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="name" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 		<rule e="node" k="cycle_node" v="*" zoom-min="14" zoom-max="16">
 			<rule e="node" k="cycle_node" v="*">
-				<symbol src="file:symbols/poi_junction_nlbe.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="name" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 		<rule e="node" k="cycle_node" v="*" zoom-min="17" zoom-max="19">
 			<rule e="node" k="cycle_node" v="*">
-				<symbol src="file:symbols/poi_junction_nlbe.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="name" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="$color_cycle_text_ref" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 	</rule>
@@ -4217,20 +4217,20 @@
 	<rule cat="hik_routes" e="node" k="hiking_node" v="NLBE">
 		<rule e="node" k="hiking_node" v="*" zoom-min="12" zoom-max="13">
 			<rule e="node" k="hiking_node" v="*">
-				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="name" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z12 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z12" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 		<rule e="node" k="hiking_node" v="*" zoom-min="14" zoom-max="16">
 			<rule e="node" k="hiking_node" v="*">
-				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="name" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z14 * 1.7)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z14" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 		<rule e="node" k="hiking_node" v="*" zoom-min="17" zoom-max="19">
 			<rule e="node" k="hiking_node" v="*">
-				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="forced" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
-				<caption k="name" position="center" display="forced" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
+				<symbol src="file:symbols/poi_junction_nlbe_hike.svg" display="always" symbol-width="${round($text_size_nlbe_junction_z17 * 1.8)}" priority="$priority_cyclo_nlbe_junction_circle"/>
+				<caption k="name" position="center" display="always" font-style="bold" font-size="$text_size_nlbe_junction_z17" fill="#EA3200" stroke="#ffffff" stroke-width="1.5" priority="$priority_cyclo_nlbe_junction_number"/>
 			</rule>
 		</rule>
 	</rule>
