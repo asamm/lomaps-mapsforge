@@ -4046,6 +4046,9 @@
 		<rule cat="base_topo" e="any" k="mountain_pass" v="yes" zoom-min="14">
 			<caption k="name" dy="11"  font-family="sans_serif" font-style="italic" font-size="12" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat2" text-wrap-width="$text_wrap_standard"/>
 		</rule>
+		<rule cat="base_topo" e="any" k="natural" v="sinkhole" zoom-min="15">
+			<symbol src="file:symbols/poi_sinkhole.svg" symbol-width="15" display="always" priority="$priority_poi_caption_cat2" />
+		</rule>
 
 		<!-- botanical garden -->
 		<rule e="way" k="garden:type" v="botanical" zoom-min="16">
