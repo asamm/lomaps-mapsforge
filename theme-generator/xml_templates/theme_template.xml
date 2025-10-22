@@ -3427,7 +3427,7 @@
 					<area fill="${lighten($color_downhill_freeride, 20)}" stroke="$color_downhill_freeride" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<area fill="${lighten($color_downhill_easy, 20)}" stroke="$color_downhill_easy" stroke-width="0.4"/>
+					<area fill="${lighten($color_downhill_intermediate, 20)}" stroke="$color_downhill_easy" stroke-width="0.4"/>
 				</rule>
 			</rule>
 			<!-- piste ways -->
@@ -3448,7 +3448,7 @@
 					<line stroke="$color_downhill_freeride" stroke-width="$piste_downhill_width"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<line stroke="$color_downhill_easy" stroke-width="$piste_downhill_width"/>
+					<line stroke="$color_downhill_intermediate" stroke-width="$piste_downhill_width"/>
 				</rule>
 			</rule>
 			<!-- Captions for downhill-->
@@ -3503,21 +3503,17 @@
 				</rule>
 			</rule>
 
-
 			<!-- Nordic and Backcountry SKI -->
 			<rule cat="pistes_nordic" e="way" k="piste:type" v="nordic|alpine|nordic;skitour">
 				<rule e="way" k="*" v="*" zoom-min="12" zoom-max="15">
 					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate|~">
-						<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
+							<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
 							<line stroke="#FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z13}"/>
 							<line stroke="$color_nordic_easy" stroke-width="$pistes_nordic_width_z13" />
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
 							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="4,3" stroke-linecap="round" scale="all"/>
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z13}"/>
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
@@ -3525,11 +3521,8 @@
 							<line stroke="#FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z13}"/>
 							<line stroke="$color_nordic_advanced" stroke-width="$pistes_nordic_width_z13"/>
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
-							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="5,4" stroke-linecap="round" scale="all"/>
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
 							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="5,4" stroke-linecap="round" scale="all"/>
 						</rule>
 					</rule>
@@ -3540,12 +3533,9 @@
 							<line stroke="#90FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_easy" stroke-width="$pistes_nordic_width_z16"/>
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z16}" stroke-dasharray="2.5,2" stroke-linecap="round" scale="all" />
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z16}"/>
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
@@ -3553,12 +3543,9 @@
 							<line stroke="#90FFFFFF" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_advanced" stroke-width="$pistes_nordic_width_z16"/>
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z16}" stroke-dasharray="9,5" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z16}"/>
 						</rule>
 					</rule>
 				</rule>
@@ -3644,8 +3631,8 @@
 				</rule>
 			</rule>
 
-			<rule e="way" k="piste:type" v="sled" zoom-min="14">
-				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+			<rule e="way" k="piste:type" v="sled" zoom-min="13">
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 					<line stroke="#CCFFFFFF" stroke-width="${1.6 * 0.6 * $pistes_nordic_width_z13}"/>
 					<line stroke="$color_piste_sled" stroke-width="${0.6 * $pistes_nordic_width_z13}"/>
 				</rule>
@@ -4046,8 +4033,12 @@
 		<rule cat="base_topo" e="any" k="mountain_pass" v="yes" zoom-min="14">
 			<caption k="name" dy="11"  font-family="sans_serif" font-style="italic" font-size="12" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="3" position="below" priority="$priority_poi_caption_cat2" text-wrap-width="$text_wrap_standard"/>
 		</rule>
-		<rule cat="base_topo" e="any" k="natural" v="sinkhole" zoom-min="15">
-			<symbol src="file:symbols/poi_sinkhole.svg" symbol-width="15" display="always" priority="$priority_poi_caption_cat2" />
+		<rule cat="base_topo" e="any" k="natural" v="sinkhole" zoom-min="16">
+			<symbol src="file:symbols/poi_sinkhole.svg" symbol-width="15" display="ifspace" priority="$priority_poi_caption_cat2" />
+		</rule>
+
+		<rule cat="base_topo" e="any" k="man_made" v="adit" zoom-min="16">
+			<symbol src="file:symbols/poi_mineshaft.svg" symbol-width="15" display="ifspace" priority="$priority_poi_caption_cat2" />
 		</rule>
 
 		<!-- botanical garden -->
