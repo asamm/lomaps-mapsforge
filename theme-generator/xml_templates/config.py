@@ -221,7 +221,7 @@ class TemplateVariables(Template):
     color_downhill_novice = '#9440ff40'
     color_downhill_easy = '#9952c1fe'
     color_downhill_intermediate = '#99FF4A4A'
-    color_downhill_advanced = '#90000000'
+    color_downhill_advanced = '#90242424'
     color_downhill_freeride = '#99f7e337'
 
     color_nordic_easy = '#006BD6'
