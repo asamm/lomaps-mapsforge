@@ -1,7 +1,17 @@
+## [1.7.3] - 2025-10-22
+
+### Added
+- support for `man_made=adict` and `natural=sinkhole` symbols at detailed zoom levels
+
+### Changed
+- backcountry routes without defined grooming are now rendered as simple backcountry routes
+- downhill pistes without specified difficulty are now displayed as intermediate (red)
+
 ## [1.7.2] - 2025-09-15
 
 ### Fixed
 - incomplete revert of `display=always` vs `display=forced`
+
 
 ## [1.7.1] - 2025-09-15
 

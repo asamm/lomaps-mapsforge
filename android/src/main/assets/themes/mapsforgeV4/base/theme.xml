@@ -8713,13 +8713,13 @@
 					<area fill="#99ff6e6e" stroke="#99FF4A4A" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<area fill="#90333333" stroke="#90000000" stroke-width="0.4"/>
+					<area fill="#904f4f4f" stroke="#90242424" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
 					<area fill="#99f8e85f" stroke="#99f7e337" stroke-width="0.4"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<area fill="#9974cdfe" stroke="#9952c1fe" stroke-width="0.4"/>
+					<area fill="#99ff6e6e" stroke="#9952c1fe" stroke-width="0.4"/>
 				</rule>
 			</rule>
 			<!-- piste ways -->
@@ -8734,13 +8734,13 @@
 					<line stroke="#99FF4A4A" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="advanced|expert">
-					<line stroke="#90000000" stroke-width="3"/>
+					<line stroke="#90242424" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="freeride">
 					<line stroke="#99f7e337" stroke-width="3"/>
 				</rule>
 				<rule e="way" k="piste:difficulty" v="~">
-					<line stroke="#9952c1fe" stroke-width="3"/>
+					<line stroke="#99FF4A4A" stroke-width="3"/>
 				</rule>
 			</rule>
 			<!-- Captions for downhill-->
@@ -8792,12 +8792,9 @@
 							<line stroke="#FFFFFF" stroke-width="2.4000000000000004"/>
 							<line stroke="#006BD6" stroke-width="1.6"/>
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="1.44"/>
 							<line stroke="#006BD6" stroke-width="0.96" stroke-dasharray="4,3" stroke-linecap="round" scale="all"/>
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="#006BD6" stroke-width="0.96"/>
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
@@ -8805,11 +8802,8 @@
 							<line stroke="#FFFFFF" stroke-width="2.4000000000000004"/>
 							<line stroke="#590992" stroke-width="1.6"/>
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="1.44"/>
-							<line stroke="#590992" stroke-width="0.96" stroke-dasharray="5,4" stroke-linecap="round" scale="all"/>
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
 							<line stroke="#590992" stroke-width="0.96" stroke-dasharray="5,4" stroke-linecap="round" scale="all"/>
 						</rule>
 					</rule>
@@ -8820,12 +8814,9 @@
 							<line stroke="#90FFFFFF" stroke-width="1.35"/>
 							<line stroke="#006BD6" stroke-width="0.9"/>
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="0.8099999999999999"/>
 							<line stroke="#006BD6" stroke-width="0.54" stroke-dasharray="2.5,2" stroke-linecap="round" scale="all"/>
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="#006BD6" stroke-width="0.54"/>
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
@@ -8833,12 +8824,9 @@
 							<line stroke="#90FFFFFF" stroke-width="1.35"/>
 							<line stroke="#590992" stroke-width="0.9"/>
 						</rule>
-						<rule e="way" k="piste:grooming" v="backcountry">
+						<rule e="way" k="piste:grooming" v="backcountry|~">
 							<line stroke="#90FFFFFF" stroke-width="0.8099999999999999"/>
 							<line stroke="#590992" stroke-width="0.54" stroke-dasharray="9,5" stroke-linecap="butt"/>
-						</rule>
-						<rule e="way" k="piste:grooming" v="~">
-							<line stroke="#590992" stroke-width="0.54"/>
 						</rule>
 					</rule>
 				</rule>
@@ -8906,8 +8894,8 @@
 					<pathText k="name" font-style="bold" font-size="11" dy="10" fill="#bf850c" stroke="#ffffff" stroke-width="2.5" repeat-gap="300" priority="200" scale="none"/>
 				</rule>
 			</rule>
-			<rule e="way" k="piste:type" v="sled" zoom-min="14">
-				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15">
+			<rule e="way" k="piste:type" v="sled" zoom-min="13">
+				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
 					<line stroke="#CCFFFFFF" stroke-width="1.536"/>
 					<line stroke="#77BF79" stroke-width="0.96"/>
 				</rule>
@@ -13730,6 +13718,12 @@
 		</rule>
 		<rule cat="base_topo" e="any" k="mountain_pass" v="yes" zoom-min="14">
 			<caption k="name" dy="11" font-family="sans_serif" font-style="italic" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
+		</rule>
+		<rule cat="base_topo" e="any" k="natural" v="sinkhole" zoom-min="16">
+			<symbol src="assets:symbols/poi_sinkhole.svg" symbol-width="15" display="ifspace" priority="414"/>
+		</rule>
+		<rule cat="base_topo" e="any" k="man_made" v="adit" zoom-min="16">
+			<symbol src="assets:symbols/poi_mineshaft.svg" symbol-width="15" display="ifspace" priority="414"/>
 		</rule>
 		<!-- botanical garden -->
 		<rule e="way" k="garden:type" v="botanical" zoom-min="16">
