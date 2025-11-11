@@ -87,11 +87,11 @@ class TemplateVariables(Template):
 
     # ZL > 14
     unclassified_width_z14 = unclassified_width_z13
-    track_grade1_width_z14 = 1
+    track_grade1_width_z14 = 1.1
     track_grade2_width_z14 = track_grade1_width_z14
-    track_grade3_4_width_z14 = track_grade1_width_z14 * 0.75
-    path_width_z14 = 0.6
-    footway_width_z14 = 0.6
+    track_grade3_4_width_z14 = track_grade1_width_z14 * 0.8
+    path_width_z14 = 0.7
+    footway_width_z14 = 0.7
     steps_width_z14 = 0.7
     construction_width_z14 = 0.4
 
@@ -104,7 +104,7 @@ class TemplateVariables(Template):
     secondary_width_z16 = secondary_width_z13 / scale_factor_z16
     tertiary_width_z16 = tertiary_width_z13 / scale_factor_z16
     unclassified_width_z16 = unclassified_width_z13 / scale_factor
-    path_width_z16 = path_width_z14 / math.pow(1.25, 2)
+    path_width_z16 = path_width_z14 / math.pow(1.2, 2)
     track_grade1_width_z16 = track_grade1_width_z14 / scale_factor
     track_grade2_width_z15 = track_grade2_width_z14 / math.pow(1.25, 16 - 14)
     track_grade3_4_width_z15 = track_grade3_4_width_z14 / math.pow(1.25, 16 - 14)
