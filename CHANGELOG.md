@@ -1,3 +1,9 @@
+## [1.7.4] - 2025-11-11
+
+### Changed
+- bridleways and paths use a shorter dash pattern to better differentiate them from standard tracks.
+- valley names are now shown only on non-closed way
+
 ## [1.7.3] - 2025-10-22
 
 ### Added
