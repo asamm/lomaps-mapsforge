@@ -328,7 +328,7 @@
 			<rule e="way" k="natural" v="heath|marsh|wetland|cliff" zoom-min="15">
 				<caption k="name" font-style="normal" font-family="default" font-size="11" fill="#797979" stroke="#ffffff" stroke-width="2" text-wrap-width="110"/>
 			</rule>
-			<rule e="way" k="natural" v="valley" zoom-min="14" zoom-max="17">
+			<rule e="way" k="natural" v="valley" zoom-min="14" zoom-max="17" closed="no">
 				<pathText k="name" dy="4.7" font-style="italic" font-family="default" font-size="17" fill="#797979" stroke="#ffffff" stroke-width="1.5"/>
 			</rule>
 		</rule>
