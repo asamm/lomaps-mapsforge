@@ -7373,6 +7373,7 @@
 							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
 								<line cat="base_summer" stroke="#AAFFFFFF" stroke-width="0.7"/>
+								<!-- winter without white halo -->
 								<line stroke="#747474" stroke-width="0.4861111111111111" stroke-dasharray="4,4" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
@@ -13495,9 +13496,12 @@
 			<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="14" fill="#826f60" stroke="#ffffff" stroke-width="1.5" text-wrap-width="110"/>
 		</rule>
 	</rule>
-	<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="16">
-		<rule e="any" k="tourism" v="attraction">
-			<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="413" text-wrap-width="110" text-transform="capitalize"/>
+	<rule cat="tourism_topo" e="any" k="tourism" v="*" zoom-min="15">
+		<rule e="any" k="tourism" v="theme_park" zoom-min="14">
+			<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="14" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="415" text-wrap-width="110" text-transform="capitalize"/>
+		</rule>
+		<rule e="any" k="tourism" v="attraction" zoom-min="15">
+			<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="413" text-wrap-width="110" text-transform="capitalize"/>
 		</rule>
 	</rule>
 	<!-- amenity -->
@@ -13626,7 +13630,7 @@
 			<rule e="any" k="historic" v="monument" zoom-min="16">
 				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="414" text-wrap-width="110"/>
 			</rule>
-			<rule e="any" k="historic" v="memorial|aqueduct|archaeological_site" zoom-min="17">
+			<rule e="any" k="historic" v="memorial|aqueduct|archaeological_site|tomb" zoom-min="17">
 				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#5e5146" stroke="#ffffff" stroke-width="3" position="below" priority="413" text-wrap-width="110"/>
 			</rule>
 		</rule>
