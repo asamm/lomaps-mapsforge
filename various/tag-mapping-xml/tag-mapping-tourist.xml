@@ -189,6 +189,7 @@
 		<osm-tag key="historic" value="memorial" zoom-appear="15" />
 		<osm-tag key="historic" value="monument" zoom-appear="15" />
 		<osm-tag key="historic" value="ruins" zoom-appear="13" />
+		<osm-tag key="historic" value="tomb" zoom-appear="15" />
 	</pois>
 
 	<!-- PLACES TAGS -->
