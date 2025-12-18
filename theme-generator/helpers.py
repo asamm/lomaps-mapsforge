@@ -2,7 +2,6 @@ import fileinput
 import os
 import shutil
 from datetime import datetime
-from distutils.dir_util import copy_tree
 
 from xml_templates.config import TemplateVariables
 
@@ -85,7 +84,7 @@ def publish_theme_to_android_module(result_theme_dir, android_module_dir):
     delete_folder_content(android_module_dir)
 
     # copy new generated theme
-    copy_tree(result_theme_dir, android_module_dir)
+    shutil.copytree(result_theme_dir, android_module_dir, dirs_exist_ok=True)
 
     # replace path in theme files from 'file:' to 'assets:'
     for filename in os.listdir(android_module_dir):
