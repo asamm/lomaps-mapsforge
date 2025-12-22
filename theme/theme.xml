@@ -7452,11 +7452,14 @@
 							<rule e="way" k="*" v="*" zoom-min="14">
 								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway|path|track|pedestrian" zoom-min="16">
 									<!-- Display symbol of private access-->
-									<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17">
+									<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
 										<symbol src="file:symbols/poi_private_path.svg" symbol-width="9" position="center" priority="401" display="ifspace"/>
 									</rule>
-									<rule e="way" k="*" v="*" zoom-min="18">
+									<rule e="way" k="*" v="*" zoom-min="17" zoom-max="18">
 										<symbol src="file:symbols/poi_private_path.svg" symbol-width="13" position="center" priority="401" display="ifspace"/>
+									</rule>
+									<rule e="way" k="*" v="*" zoom-min="19">
+										<symbol src="file:symbols/poi_private_path.svg" symbol-width="19" position="center" priority="401" display="ifspace"/>
 									</rule>
 								</rule>
 								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway">
@@ -8202,11 +8205,14 @@
 					<rule e="way" k="access" v="private|no" zoom-min="0" zoom-max="127" closed="any">
 						<rule e="way" k="*" v="*" zoom-min="14" zoom-max="127" closed="any">
 							<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway|path|track|pedestrian" zoom-min="16" zoom-max="127" closed="any">
-								<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17" closed="any">
+								<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16" closed="any">
 									<symbol display="ifspace" priority="401" src="file:symbols/poi_private_path.svg" symbol-width="9" position="center"/>
 								</rule>
-								<rule e="way" k="*" v="*" zoom-min="18" zoom-max="127" closed="any">
+								<rule e="way" k="*" v="*" zoom-min="17" zoom-max="18" closed="any">
 									<symbol display="ifspace" priority="401" src="file:symbols/poi_private_path.svg" symbol-width="13" position="center"/>
+								</rule>
+								<rule e="way" k="*" v="*" zoom-min="19" zoom-max="127" closed="any">
+									<symbol display="ifspace" priority="401" src="file:symbols/poi_private_path.svg" symbol-width="19" position="center"/>
 								</rule>
 							</rule>
 							<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway" zoom-min="0" zoom-max="127" closed="any">
