@@ -2,6 +2,7 @@
 import argparse
 import os
 
+import chardet
 from bs4 import BeautifulSoup, Comment
 from bs4.formatter import XMLFormatter
 
@@ -50,8 +51,13 @@ def parseOptions():
 
 
 def transform(input_f, output_f):
-    file = open(input_f, "r")
-    contents = file.read()
+    with open(input_f, "rb") as file:
+        raw_data = file.read()
+
+    detected = chardet.detect(raw_data)
+    encoding = detected.get('encoding') or 'utf-8'
+
+    contents = raw_data.decode(encoding)
     soup = BeautifulSoup(contents, 'xml')
 
     # update render theme header
@@ -321,9 +327,8 @@ def write_to_file(output_f, soup):
     :param output_f:
     """
     formatter = SortAttributes(indent="\t")
-    f = open(output_f, "w")
-    f.write(soup.prettify(formatter=formatter).replace("&", "&amp;"))
-    f.close()
+    with open(output_f, "w", encoding="utf-8") as f:
+        f.write(soup.prettify(formatter=formatter).replace("&", "&amp;"))
 
 
 if __name__ == '__main__':
