@@ -8,13 +8,30 @@ class TemplateVariables(Template):
 
     color_map_background_land = "#ebeade"
 
+    ### LANDUSE - Natural areas
+    color_desert_z0               = '#F4ECD9'
+    color_flooded_grassland_z0    = '#C9E5BD'
+    color_grassland_z0            = '#D4E2B7'
+    color_ice_z0                  = '#FDFDFD'
+    color_mangrove_z0             = '#8DCCA9'
+    color_mediter_forest_z0       = '#F2ECCF'
+    color_montane_grassland_z0    = '#D4E2B7'
+    color_savannas_z0             = '#E9E5C2'
+    color_taiga_z0                = '#C1DBBD'
+    color_tempr_conifer_forest_z0 = '#C1DBBD'
+    color_tempr_mixed_forest_z0   = '#DBE7CB'
+    color_trop_conif_forest_z0    = '#9BC595'
+    color_trop_dry_forest_z0      = '#C6D3A9'
+    color_trop_moist_forest_z0    = '#A9CDAC'
+    color_tundra_z0               = '#DFDED8'
+
     ### HIGHWAYS ###
 
     color_bridge_casing = "#0d0d0d"
     color_bridge_no_casing = "#4d4d4d"
 
-    color_motorway_z6 = "#ff8c00"
-    color_motorway_z7 = "#ff6200"
+    color_motorway_z6 = "#FF8C00"
+    color_motorway_z7 = "#FF4500"
 
     color_motorway_z8_z11 = "#FF4500"
     color_trunk_z7 = "#ff8c00"
@@ -58,11 +75,11 @@ class TemplateVariables(Template):
 
     ## --- WIDTHS ---
 
-    motorway_width_z6 = 1
+    motorway_width_z6 = 1.5
 
-    motorway_width_z7 = 2
-    trunk_width_z7 = 1
-    primary_width_z7 = 1
+    motorway_width_z7 = 3
+    trunk_width_z7 = 2
+    primary_width_z7 = 1.5
 
     motorway_width_z8 = 4
     trunk_width_z8 = 3

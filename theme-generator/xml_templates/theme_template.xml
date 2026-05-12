@@ -123,6 +123,7 @@
 			<overlay id="snowmobiles"/>
 		</layer>
 	</stylemenu>
+
 	<!-- Render sea -->
 	<rule e="way" k="*" v="*">
 		<rule e="way" k="natural" v="sea">
@@ -141,6 +142,222 @@
 			<area fill="#f7fbfe"/>
 		</rule>
 	</rule>
+
+
+	<!-- =====================================================
+				    OVERVIEW LOW ZOOMS
+	====================================================== -->
+
+	<!-- Natural landuse classification areas (class-based) -->
+	<rule cat="base_topo" e="way" k="ne_landtype" v="*" closed="yes" zoom-max="5">
+		<rule e="way" k="ne_landtype" v="desert">
+			<area fill="$color_desert_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="flooded_grassland">
+			<area fill="$color_flooded_grassland_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="grassland">
+			<area fill="$color_grassland_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="ice">
+			<area fill="$color_ice_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mangrove">
+			<area fill="$color_mangrove_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mediter_forest">
+			<area fill="$color_mediter_forest_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="montane_grassland">
+			<area fill="$color_montane_grassland_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="savannas">
+			<area fill="$color_savannas_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="taiga">
+			<area fill="$color_taiga_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_conifer_forest">
+			<area fill="$color_tempr_conifer_forest_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_mixed_forest">
+			<area fill="$color_tempr_mixed_forest_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_conif_forest">
+			<area fill="$color_trop_conif_forest_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_dry_forest">
+			<area fill="$color_trop_dry_forest_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_moist_forest">
+			<area fill="$color_trop_moist_forest_z0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tundra">
+			<area fill="$color_tundra_z0"/>
+		</rule>
+	</rule>
+
+
+	<rule e="way" k="ne_waterway" v="river" >
+		<rule e="way" k="ne_min_zoom" v="0" zoom-min="1" zoom-max="3">
+			<line stroke="#94C3E6" stroke-width="1"/>
+		</rule>
+		<rule e="way" k="ne_min_zoom" v="4" zoom-min="4" zoom-max="9">
+			<line stroke="#94C3E6" stroke-width="1.5"/>
+		</rule>
+	</rule>
+
+	<rule e="way" k="ne_natural" v="water" >
+		<rule e="way" k="ne_min_zoom" v="0|3" zoom-min="0" zoom-max="4">
+			<area fill="#94C3E6"/>
+		</rule>
+		<rule e="way" k="ne_min_zoom" v="5" zoom-min="5" zoom-max="9">
+			<area fill="#94C3E6"/>
+		</rule>
+	</rule>
+
+	<rule e="way" k="ne_bathymetry" v="yes" >
+		<rule e="way" k="depth" v="0" zoom-min="0" zoom-max="5">
+			<area fill="#94C3E6"/>
+		</rule>
+		<rule e="way" k="depth" v="200" zoom-min="0" zoom-max="5">
+			<area fill="#92C1E4"/>
+		</rule>
+		<rule e="way" k="depth" v="1000" zoom-min="0" zoom-max="5">
+			<area fill="#88B7DA"/>
+		</rule>
+		<rule e="way" k="depth" v="2000" zoom-min="0" zoom-max="5">
+			<area fill="#7BABCD"/>
+		</rule>
+		<rule e="way" k="depth" v="3000" zoom-min="0" zoom-max="5">
+			<area fill="#6F9EC1"/>
+		</rule>
+		<rule e="way" k="depth" v="4000" zoom-min="0" zoom-max="5">
+			<area fill="#6392B5"/>
+		</rule>
+		<rule e="way" k="depth" v="5000" zoom-min="0" zoom-max="5">
+			<area fill="#5786A9"/>
+		</rule>
+		<rule e="way" k="depth" v="6000" zoom-min="0" zoom-max="5">
+			<area fill="#4A7A9C"/>
+		</rule>
+		<rule e="way" k="depth" v="7000" zoom-min="0" zoom-max="5">
+			<area fill="#3E6E90"/>
+		</rule>
+		<rule e="way" k="depth" v="8000" zoom-min="0" zoom-max="5">
+			<area fill="#326284"/>
+		</rule>
+		<rule e="way" k="depth" v="9000" zoom-min="0" zoom-max="5">
+			<area fill="#265578"/>
+		</rule>
+		<rule e="way" k="depth" v="10000" zoom-min="0" zoom-max="5">
+			<area fill="#19496B"/>
+		</rule>
+		<rule e="way" k="depth" v="11000" zoom-min="0" zoom-max="5">
+			<area fill="#0d3d5f"/>
+		</rule>
+	</rule>
+
+
+
+<!--	&lt;!&ndash; Oceans and other water&ndash;&gt;-->
+<!--	<rule e="way" k="ne_natural" v="water" closed="yes">-->
+<!--		<area fill="#94C3E6"/>-->
+<!--	</rule>-->
+
+
+	<rule e="way" k="ne_geography_marine" v="yes" closed="no">
+		<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="1" text-transform="uppercase" repeat-gap="600" priority="$priority_stream"/>
+	</rule>
+
+	<!--	Highways outline-->
+	<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9" >
+<!--		<rule e="way" k="ne_highway" v="other">-->
+<!--			<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z8 + $highway_case_lowlevel}"/>-->
+<!--		</rule>-->
+		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">
+			<rule e="way" k="ne_highway" v="motorway">
+				<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z6 + $highway_case_lowlevel}" stroke-linejoin="round"/>
+			</rule>
+		</rule>
+		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">
+			<rule e="way" k="ne_highway" v="primary" zoom-min="7">
+				<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z7 + $highway_case_lowlevel}"/>
+			</rule>
+			<rule e="way" k="ne_highway" v="motorway">
+				<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z7 + $highway_case_lowlevel}" stroke-linejoin="round"/>
+			</rule>
+		</rule>
+	</rule>
+
+	<!--	Highways core-->
+		<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9" >
+		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">
+			<rule e="way" k="ne_highway" v="motorway">
+				<line stroke="$color_motorway_z6" stroke-width="${motorway_width_z6}" stroke-linejoin="round"/>
+			</rule>
+		</rule>
+		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">
+			<rule e="way" k="ne_highway" v="primary" zoom-min="7">
+				<line stroke="$color_primary_z7_z11" stroke-width="${primary_width_z7}"/>
+			</rule>
+			<rule e="way" k="ne_highway" v="motorway">
+				<line stroke="$color_motorway_z8_z11" stroke-width="${motorway_width_z7}" stroke-linejoin="round"/>
+			</rule>
+		</rule>
+	</rule>
+
+	<rule e="way" k="boundary" v="ne_administrative" >
+			<rule e="way" k="admin_level" v="2" >
+				<rule e="way" k="ne_min_zoom" v="0" zoom-min="0" zoom-max="1">
+					<line stroke="$color_country_border_low_z" stroke-width="0.5" stroke-linecap="round" />
+                </rule>
+				<rule e="way" k="ne_min_zoom" v="2" zoom-min="2" zoom-max="4">
+					<line stroke="$color_country_border_low_z" stroke-width="1" stroke-linecap="round" />
+                </rule>
+				<rule e="way" k="ne_min_zoom" v="5" zoom-min="5" zoom-max="9">
+					<line stroke="$color_country_border_low_z" stroke-width="2" stroke-linecap="round" />
+                </rule>
+			</rule>
+	</rule>
+
+	<rule e="any" k="ne_place" v="*" zoom-max="9">
+
+		<rule e="any" k="ne_place" v="town" zoom-min="7" zoom-max="8">
+			<rule e="any" k="*" v="*" zoom-min="7" zoom-max="9">
+				<circle r="3" stroke="#626262" stroke-width="1"/>
+				<caption k="name" dy="11"  font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
+						 stroke="#ffffff" stroke-width="${0.4*$text_halo}" priority="$priority_town_1" text-wrap-width="$text_wrap_standard"/>
+			</rule>
+		</rule>
+
+
+		<rule e="any" k="ne_place" v="city" zoom-min="5" zoom-max="8">
+			<rule e="any" k="*" v="*" zoom-min="5" zoom-max="6">
+				<circle r="3" stroke="#626262" stroke-width="1"/>
+				<caption k="name" dy="11"  font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
+						 stroke="#ffffff" stroke-width="${0.4*$text_halo}" priority="$priority_town_1" text-wrap-width="$text_wrap_standard"/>
+            </rule>
+			<rule e="any" k="*" v="*" zoom-min="7" zoom-max="9">
+				<circle r="4" stroke="#626262" stroke-width="1"/>
+				<caption k="name" dy="11" font-style="bold" font-family="sans_serif"  font-size="16" fill="$color_standard_poi_text"
+						 stroke="#ffffff" stroke-width="${0.7*$text_halo}" priority="$priority_town_1" text-wrap-width="$text_wrap_standard"/>
+			</rule>
+		</rule>
+
+
+		<rule e="any" k="ne_place" v="country" zoom-min="2" zoom-max="5">
+
+			<rule e="any" k="ne_place" v="country" zoom-min="3" zoom-max="3">
+				<caption k="name" font-style="bold" text-transform="uppercase" font-size="10" fill="$color_gray_poi_text" stroke="#ffffff" stroke-width="${0.3*$text_halo}" text-wrap-width="$text_wrap_standard"/>
+			</rule>
+			<rule e="any" k="ne_place" v="country" zoom-min="4" zoom-max="4">
+				<caption k="name" font-style="bold" text-transform="uppercase" font-size="12" fill="$color_gray_poi_text" stroke="#ffffff" stroke-width="${0.25*$text_halo}" text-wrap-width="$text_wrap_standard"/>
+			</rule>
+		</rule>
+
+	</rule>
+
 	<!-- =====================================================
 						AREALS AND LINES
 	====================================================== -->
@@ -266,11 +483,11 @@
 			</rule>
 		</rule>
 
-		<rule cat="base_summer" e="way" k="landuse" v="farm|farmlanf" closed="yes">
-			<area fill="#f4f3e9"/>
-		</rule>
-		<!-- natural -->
-		<rule cat="base_topo" e="way" k="natural" v="*">
+	<rule cat="base_summer" e="way" k="landuse" v="farm|farmlanf" closed="yes">
+		<area fill="#f4f3e9"/>
+	</rule>
+	<!-- natural -->
+	<rule cat="base_topo" e="way" k="natural" v="*">
 
 			<rule e="way" k="natural" v="*" zoom-min="8" closed="yes">
 				<rule e="way" k="natural" v="glacier">
@@ -970,39 +1187,42 @@
 		</rule>
 		<!-- non-physical boundaries -->
 		<rule e="way" k="admin_level" v="*">
+			<rule e="way" k="ne_min_zoom" v="~"><!--to avoid duplicated boundaries from low zoom inhereted from Overview map-->
 
-			<rule e="way" k="admin_level" v="3|4" zoom-min="10">
+				<rule e="way" k="admin_level" v="3|4" zoom-min="10">
 
-				<rule e="way" k="*" v="*" zoom-min="11" zoom-max="13">
-					<line stroke="$color_country_border" stroke-width="1" stroke-linecap="round"/>
-					<line stroke="${opacity($color_country_border,25)}" stroke-width="6" stroke-linecap="butt" />
-                </rule>
-				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
-					<line stroke="$color_country_border" stroke-width="0.5" stroke-linecap="round"/>
-					<line stroke="${opacity($color_country_border,25)}" stroke-width="4" stroke-linecap="butt" />
-                </rule>
-				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="30">
-					<line stroke="$color_country_border" stroke-width="0.25" stroke-linecap="round"/>
-					<line stroke="${opacity($color_country_border,20)}" stroke-width="1.5" stroke-linecap="butt" />
-                </rule>
-			</rule>
+					<rule e="way" k="*" v="*" zoom-min="11" zoom-max="13">
+						<line stroke="$color_country_border" stroke-width="1" stroke-linecap="round"/>
+						<line stroke="${opacity($color_country_border,25)}" stroke-width="6" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+						<line stroke="$color_country_border" stroke-width="0.5" stroke-linecap="round"/>
+						<line stroke="${opacity($color_country_border,25)}" stroke-width="4" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="17" zoom-max="30">
+						<line stroke="$color_country_border" stroke-width="0.25" stroke-linecap="round"/>
+						<line stroke="${opacity($color_country_border,20)}" stroke-width="1.5" stroke-linecap="butt" />
+					</rule>
+				</rule>
 
-			<rule e="way" k="admin_level" v="2">
-                <rule e="way" k="*" v="*" zoom-min="1" zoom-max="9">
-					<line stroke="$color_country_border" stroke-width="2" stroke-linecap="round" />
-                </rule>
-				<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
-					<line stroke="$color_country_border" stroke-width="2" stroke-linecap="round"/>
-					<line stroke="${opacity($color_country_border,30)}" stroke-width="15" stroke-linecap="butt" />
-                </rule>
-				<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
-					<line stroke="$color_country_border" stroke-width="1" stroke-linecap="round"/>
-					<line stroke="${opacity($color_country_border,30)}" stroke-width="7" stroke-linecap="butt" />
-                </rule>
-				<rule e="way" k="*" v="*" zoom-min="17" zoom-max="30">
-					<line stroke="$color_country_border" stroke-width="0.5" stroke-linecap="round"/>
-					<line stroke="${opacity($color_country_border,20)}" stroke-width="3" stroke-linecap="butt" />
-                </rule>
+
+				<rule e="way" k="admin_level" v="2">
+	<!--                <rule e="way" k="*" v="*" zoom-min="1" zoom-max="9">-->
+	<!--					<line stroke="$color_country_border" stroke-width="2" stroke-linecap="round" />-->
+	<!--                </rule>-->
+					<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
+						<line stroke="$color_country_border" stroke-width="2" stroke-linecap="round"/>
+						<line stroke="${opacity($color_country_border,30)}" stroke-width="15" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+						<line stroke="$color_country_border" stroke-width="1" stroke-linecap="round"/>
+						<line stroke="${opacity($color_country_border,30)}" stroke-width="7" stroke-linecap="butt" />
+					</rule>
+					<rule e="way" k="*" v="*" zoom-min="17" zoom-max="30">
+						<line stroke="$color_country_border" stroke-width="0.5" stroke-linecap="round"/>
+						<line stroke="${opacity($color_country_border,20)}" stroke-width="3" stroke-linecap="butt" />
+					</rule>
+				</rule>
 			</rule>
 		</rule>
 		<!-- NATIONAL PARK  -->
@@ -4346,8 +4566,8 @@
 		<rule e="any" k="place" v="islet" zoom-min="14" zoom-max="17">
 			<caption k="name" font-style="italic" font-size="12" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="${$text_halo / 2}" text-wrap-width="$text_wrap_standard" priority="$priority_islet"/>
 		</rule>
-		<rule e="any" k="place" v="country" zoom-max="6">
-			<caption k="name" font-style="bold" text-transform="uppercase" font-size="28" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="2.0" text-wrap-width="$text_wrap_standard"/>
-		</rule>
+<!--		<rule e="any" k="place" v="country" zoom-max="6">-->
+<!--			<caption k="name" font-style="bold" text-transform="uppercase" font-size="28" fill="$color_standard_poi_text" stroke="#ffffff" stroke-width="2.0" text-wrap-width="$text_wrap_standard"/>-->
+<!--		</rule>-->
 	</rule>
 </rendertheme>
