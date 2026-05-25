@@ -1287,8 +1287,6 @@
 		<osm-tag key="mtb:scale" value="5" zoom-appear="13" />
 		<osm-tag key="mtb:scale" value="6" zoom-appear="13" />
 
-		<osm-tag key="mtb:name" value="%s" zoom-appear="13" />
-
 		<!-- POLAND cyclo colour tags -->
 		<osm-tag key="colour" value="#000000" zoom-appear="12" />
 		<osm-tag key="colour" value="black" zoom-appear="12" />
