@@ -383,61 +383,61 @@
 
 		<!-- LOW ZOOMS OVERVIEW MAP -->
 	<ways>
-		<osm-tag key="ne_min_zoom" value="0" zoom-appear="0" />
-		<osm-tag key="ne_min_zoom" value="1" zoom-appear="1" />
-		<osm-tag key="ne_min_zoom" value="2" zoom-appear="2" />
-		<osm-tag key="ne_min_zoom" value="3" zoom-appear="3" />
-		<osm-tag key="ne_min_zoom" value="4" zoom-appear="4" />
-		<osm-tag key="ne_min_zoom" value="5" zoom-appear="5" />
-		<osm-tag key="ne_min_zoom" value="6" zoom-appear="6" />
-		<osm-tag key="ne_min_zoom" value="7" zoom-appear="7" />
-		<osm-tag key="ne_min_zoom" value="8" zoom-appear="8" />
-		<osm-tag key="ne_min_zoom" value="9" zoom-appear="9" />
+		<osm-tag key="ne_min_zoom" value="0" zoom-appear="0" zoom-disappear="8"/>
+		<osm-tag key="ne_min_zoom" value="1" zoom-appear="1" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="2" zoom-appear="2" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="3" zoom-appear="3" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="4" zoom-appear="4" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="5" zoom-appear="5" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="6" zoom-appear="6" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="7" zoom-appear="7" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="8" zoom-appear="8" zoom-disappear="8" />
+		<osm-tag key="ne_min_zoom" value="9" zoom-appear="9" zoom-disappear="8" />
 
-		<osm-tag key="ne_max_zoom" value="0" zoom-appear="0" />
-		<osm-tag key="ne_max_zoom" value="1" zoom-appear="1" />
-		<osm-tag key="ne_max_zoom" value="2" zoom-appear="2" />
-		<osm-tag key="ne_max_zoom" value="3" zoom-appear="3" />
-		<osm-tag key="ne_max_zoom" value="4" zoom-appear="4" />
-		<osm-tag key="ne_max_zoom" value="5" zoom-appear="5" />
-		<osm-tag key="ne_max_zoom" value="6" zoom-appear="6" />
-		<osm-tag key="ne_max_zoom" value="7" zoom-appear="7" />
-		<osm-tag key="ne_max_zoom" value="8" zoom-appear="8" />
-		<osm-tag key="ne_max_zoom" value="9" zoom-appear="9" />
+		<osm-tag key="ne_max_zoom" value="0" zoom-appear="0" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="1" zoom-appear="1" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="2" zoom-appear="2" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="3" zoom-appear="3" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="4" zoom-appear="4" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="5" zoom-appear="5" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="6" zoom-appear="6" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="7" zoom-appear="7" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="8" zoom-appear="8" zoom-disappear="8" />
+		<osm-tag key="ne_max_zoom" value="9" zoom-appear="9" zoom-disappear="8" />
 
-		<osm-tag key="depth" value="%h" zoom-appear="0" />
-		<osm-tag key="ne_bathymetry" value="yes" zoom-appear="0" />
+		<osm-tag key="depth" value="%h" zoom-appear="0" zoom-disappear="8" />
+		<osm-tag key="ne_bathymetry" value="yes" zoom-appear="0" zoom-disappear="8" />
 
-		<osm-tag key="ne_natural" value="land" />
-		<osm-tag key="ne_natural" value="glacier" />
-		<osm-tag key="ne_water" value="ocean" />
-		<osm-tag key="ne_waterway" value="river" />
-		<osm-tag key="ne_natural" value="water" />
-		<osm-tag key="rank" value="%h" />
-		<osm-tag key="ne_geography_marine" value="yes" />
-		<osm-tag key="ne_geography_regions" value="yes" />
-		<osm-tag key="boundary" value="ne_administrative" renderable="false"/>
-		<osm-tag key="ne_railway" value="rail" />
-		<osm-tag key="ne_highway" value="motorway" />
-		<osm-tag key="ne_highway" value="primary" />
-		<osm-tag key="ne_highway" value="other" />
-		<osm-tag key="ne_place" value="country" />
+		<osm-tag key="ne_natural" value="land" zoom-disappear="8" />
+		<osm-tag key="ne_natural" value="glacier" zoom-disappear="8" />
+		<osm-tag key="ne_water" value="ocean" zoom-disappear="8" />
+		<osm-tag key="ne_waterway" value="river" zoom-disappear="8" />
+		<osm-tag key="ne_natural" value="water" zoom-disappear="8" />
+		<osm-tag key="rank" value="%h" zoom-disappear="8" />
+		<osm-tag key="ne_geography_marine" value="yes" zoom-disappear="8" />
+		<osm-tag key="ne_geography_regions" value="yes" zoom-disappear="8" />
+		<osm-tag key="boundary" value="ne_administrative" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_railway" value="rail" zoom-disappear="8" />
+		<osm-tag key="ne_highway" value="motorway" zoom-disappear="8" />
+		<osm-tag key="ne_highway" value="primary" zoom-disappear="8" />
+		<osm-tag key="ne_highway" value="other" zoom-disappear="8" />
+		<osm-tag key="ne_place" value="country" zoom-disappear="8" />
 
-		<osm-tag key="ne_landtype" value="desert" renderable="false"/>
-		<osm-tag key="ne_landtype" value="flooded_grassland" renderable="false"/>
-		<osm-tag key="ne_landtype" value="grassland" renderable="false"/>
-		<osm-tag key="ne_landtype" value="ice" renderable="false"/>
-		<osm-tag key="ne_landtype" value="mangrove" renderable="false"/>
-		<osm-tag key="ne_landtype" value="mediter_forest" renderable="false"/>
-		<osm-tag key="ne_landtype" value="montane_grassland" renderable="false"/>
-		<osm-tag key="ne_landtype" value="savannas" renderable="false"/>
-		<osm-tag key="ne_landtype" value="taiga" renderable="false"/>
-		<osm-tag key="ne_landtype" value="tempr_conifer_forest" renderable="false"/>
-		<osm-tag key="ne_landtype" value="tempr_mixed_forest" renderable="false"/>
-		<osm-tag key="ne_landtype" value="trop_conif_forest" renderable="false"/>
-		<osm-tag key="ne_landtype" value="trop_dry_forest" renderable="false"/>
-		<osm-tag key="ne_landtype" value="trop_moist_forest" renderable="false"/>
-		<osm-tag key="ne_landtype" value="tundra" renderable="false"/>
+		<osm-tag key="ne_landtype" value="desert" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="flooded_grassland" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="grassland" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="ice" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="mangrove" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="mediter_forest" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="montane_grassland" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="savannas" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="taiga" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="tempr_conifer_forest" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="tempr_mixed_forest" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="trop_conif_forest" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="trop_dry_forest" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="trop_moist_forest" renderable="false" zoom-disappear="8" />
+		<osm-tag key="ne_landtype" value="tundra" renderable="false" zoom-disappear="8" />
 
 
 		<!-- marine -->
