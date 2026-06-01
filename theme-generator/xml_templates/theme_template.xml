@@ -126,7 +126,7 @@
 
 	<!-- Render sea -->
 	<rule e="way" k="*" v="*">
-		<rule e="way" k="natural" v="sea">
+		<rule e="way" k="natural" v="sea" >
 			<area fill="#94C3E6"/>
 		</rule>
 		<rule cat="base_car" e="way" k="natural" v="nosea">
@@ -149,7 +149,7 @@
 	====================================================== -->
 
 	<!-- Natural landuse classification areas (class-based) -->
-	<rule cat="base_topo" e="way" k="ne_landtype" v="*" closed="yes" zoom-max="5">
+	<rule cat="base_topo" e="way" k="ne_landtype" v="*" closed="yes" zoom-max="4">
 		<rule e="way" k="ne_landtype" v="desert">
 			<area fill="$color_desert_z0"/>
 		</rule>
@@ -197,24 +197,71 @@
 		</rule>
 	</rule>
 
-
-	<rule e="way" k="ne_waterway" v="river" >
-		<rule e="way" k="ne_min_zoom" v="0" zoom-min="1" zoom-max="3">
-			<line stroke="#94C3E6" stroke-width="1"/>
+	<rule cat="base_topo" e="way" k="ne_landtype" v="*" closed="yes" zoom-min="5" zoom-max="6">
+		<rule e="way" k="ne_landtype" v="desert">
+			<area fill="${lighten($color_desert_z0, 40)}"/>
 		</rule>
-		<rule e="way" k="ne_min_zoom" v="4" zoom-min="4" zoom-max="9">
-			<line stroke="#94C3E6" stroke-width="1.5"/>
+		<rule e="way" k="ne_landtype" v="flooded_grassland">
+			<area fill="${lighten($color_flooded_grassland_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="grassland">
+			<area fill="${lighten($color_grassland_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="ice">
+			<area fill="${lighten($color_ice_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mangrove">
+			<area fill="${lighten($color_mangrove_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mediter_forest">
+			<area fill="${lighten($color_mediter_forest_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="montane_grassland">
+			<area fill="${lighten($color_montane_grassland_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="savannas">
+			<area fill="${lighten($color_savannas_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="taiga">
+			<area fill="${lighten($color_taiga_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_conifer_forest">
+			<area fill="${lighten($color_tempr_conifer_forest_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_mixed_forest">
+			<area fill="${lighten($color_tempr_mixed_forest_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_conif_forest">
+			<area fill="${lighten($color_trop_conif_forest_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_dry_forest">
+			<area fill="${lighten($color_trop_dry_forest_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_moist_forest">
+			<area fill="${lighten($color_trop_moist_forest_z0, 40)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tundra">
+			<area fill="${lighten($color_tundra_z0, 40)}"/>
 		</rule>
 	</rule>
 
-	<rule e="way" k="ne_natural" v="water" >
-		<rule e="way" k="ne_min_zoom" v="0|3" zoom-min="0" zoom-max="4">
-			<area fill="#94C3E6"/>
-		</rule>
-		<rule e="way" k="ne_min_zoom" v="5" zoom-min="5" zoom-max="9">
-			<area fill="#94C3E6"/>
-		</rule>
+	<!-- NE Water areas -->
+	<rule e="way" k="ne_natural" v="water" zoom-max="9">
+		<area fill="#94C3E6"/>
 	</rule>
+
+	<!-- NE Rivers -->
+	<rule e="way" k="ne_waterway" v="river" zoom-min="0" zoom-max="9" closed="no">
+		<rule e="way" k="ne_waterway" v="river" zoom-min="0" zoom-max="4" closed="no">
+		<line stroke="#94C3E6" stroke-width="1.5"/>
+	</rule>
+		<rule e="way" k="ne_waterway" v="river" zoom-min="5" zoom-max="9" closed="no">
+		<line stroke="#94C3E6" stroke-width="2"/>
+	</rule>
+	</rule>
+
+
+	<!-- NE Bathymetry -->
 
 	<rule e="way" k="ne_bathymetry" v="yes" >
 		<rule e="way" k="depth" v="0" zoom-min="0" zoom-max="5">
@@ -922,7 +969,7 @@
 			<area fill="#94C3E6" stroke="#2797DD" stroke-width="0.1"/>
 		</rule>
 		<rule e="way" k="intermittent" v="~|no|false">
-			<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="8" >
+			<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="7" >
 				<rule e="way" k="*" v="*" closed="yes">
 					<area fill="#94C3E6"/>
 				</rule>
@@ -983,7 +1030,7 @@
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="river">
-						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="12">
+						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="12"> <!-- TODO change to zoom-min to 9 after penetration of new users -->
 							<line stroke="#94C3E6" stroke-width="1.6"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
