@@ -34,6 +34,8 @@
 		<osm-tag key="ne_place" value="city" />
 		<osm-tag key="ne_place" value="town"/>
 		<osm-tag key="ne_place" value="village"/>
+
+		<osm-tag key="rank" value="%h" />
 	</pois>
 	<!-- HIGHWAY TAGS -->
 	<pois>

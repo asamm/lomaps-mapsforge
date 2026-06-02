@@ -292,84 +292,117 @@
 			<area fill="#0d3d5f"/>
 		</rule>
 	</rule>
-	<!--	&lt;!&ndash; Oceans and other water&ndash;&gt;-->
-	<!--	<rule e="way" k="ne_natural" v="water" closed="yes">-->
-	<!--		<area fill="#94C3E6"/>-->
-	<!--	</rule>-->
+	<!-- NE Ocean , sea, bay names-->
 	<rule e="way" k="ne_geography_marine" v="yes" closed="no">
-		<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="1" text-transform="uppercase" repeat-gap="600" priority="1"/>
+		<rule e="way" k="type" v="ocean" zoom-min="1" zoom-max="2">
+			<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="1" text-transform="uppercase" repeat-gap="600"/>
+		</rule>
+		<rule e="way" k="rank" v="1|2|3" zoom-min="3" zoom-max="4">
+			<rule e="way" k="rank" v="1|2|3">
+				<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="1" display="always" text-transform="uppercase" repeat="false" repeat-gap="600" repeat-start="10"/>
+			</rule>
+		</rule>
+		<rule e="way" k="rank" v="*" zoom-min="5" zoom-max="6">
+			<rule e="way" k="rank" v="1|2|3">
+				<pathText k="name" font-style="italic" font-family="serif" font-size="16" fill="#4f9cbf" stroke="#ffffff" stroke-width="1" display="always" text-transform="uppercase" repeat="false" repeat-gap="600" repeat-start="10"/>
+			</rule>
+			<rule e="way" k="rank" v="4|5|6">
+				<pathText k="name" font-style="italic" font-family="serif" font-size="12" fill="#4f9cbf" stroke="#ffffff" stroke-width="1" display="always" text-transform="uppercase" repeat="false" repeat-gap="600" repeat-start="10"/>
+			</rule>
+		</rule>
 	</rule>
 	<!--	Highways outline-->
-	<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9">
-		<!--		<rule e="way" k="ne_highway" v="other">-->
-		<!--			<line stroke="#FFFFFF" stroke-width="5"/>-->
-		<!--		</rule>-->
-		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">
-			<rule e="way" k="ne_highway" v="motorway">
-				<line stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round"/>
-			</rule>
-		</rule>
-		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">
-			<rule e="way" k="ne_highway" v="primary" zoom-min="7">
-				<line stroke="#FFFFFF" stroke-width="3.5"/>
-			</rule>
-			<rule e="way" k="ne_highway" v="motorway">
-				<line stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
-			</rule>
-		</rule>
-	</rule>
-	<!--	Highways core-->
-	<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9">
-		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">
-			<rule e="way" k="ne_highway" v="motorway">
-				<line stroke="#FF8C00" stroke-width="1.5" stroke-linejoin="round"/>
-			</rule>
-		</rule>
-		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">
-			<rule e="way" k="ne_highway" v="primary" zoom-min="7">
-				<line stroke="#ff8c00" stroke-width="1.5"/>
-			</rule>
-			<rule e="way" k="ne_highway" v="motorway">
-				<line stroke="#FF4500" stroke-width="3" stroke-linejoin="round"/>
-			</rule>
-		</rule>
-	</rule>
-	<rule e="way" k="boundary" v="ne_administrative">
+	<!--	<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9" >-->
+	<!--&lt;!&ndash;		<rule e="way" k="ne_highway" v="other">&ndash;&gt;-->
+	<!--&lt;!&ndash;			<line stroke="#FFFFFF" stroke-width="5"/>&ndash;&gt;-->
+	<!--&lt;!&ndash;		</rule>&ndash;&gt;-->
+	<!--		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">-->
+	<!--			<rule e="way" k="ne_highway" v="motorway">-->
+	<!--				<line stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round"/>-->
+	<!--			</rule>-->
+	<!--		</rule>-->
+	<!--		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">-->
+	<!--			<rule e="way" k="ne_highway" v="primary" zoom-min="7">-->
+	<!--				<line stroke="#FFFFFF" stroke-width="3.5"/>-->
+	<!--			</rule>-->
+	<!--			<rule e="way" k="ne_highway" v="motorway">-->
+	<!--				<line stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>-->
+	<!--			</rule>-->
+	<!--		</rule>-->
+	<!--	</rule>-->
+	<!--	&lt;!&ndash;	Highways core&ndash;&gt;-->
+	<!--		<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9" >-->
+	<!--		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">-->
+	<!--			<rule e="way" k="ne_highway" v="motorway">-->
+	<!--				<line stroke="#FF8C00" stroke-width="1.5" stroke-linejoin="round"/>-->
+	<!--			</rule>-->
+	<!--		</rule>-->
+	<!--		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">-->
+	<!--			<rule e="way" k="ne_highway" v="primary" zoom-min="7">-->
+	<!--				<line stroke="#ff8c00" stroke-width="1.5"/>-->
+	<!--			</rule>-->
+	<!--			<rule e="way" k="ne_highway" v="motorway">-->
+	<!--				<line stroke="#FF4500" stroke-width="3" stroke-linejoin="round"/>-->
+	<!--			</rule>-->
+	<!--		</rule>-->
+	<!--	</rule>-->
+	<rule e="way" k="ne_boundary" v="administrative">
 		<rule e="way" k="admin_level" v="2">
-			<rule e="way" k="ne_min_zoom" v="0" zoom-min="0" zoom-max="1">
+			<rule e="way" k="*" v="*" zoom-min="0" zoom-max="1">
 				<line stroke="#777777" stroke-width="0.5" stroke-linecap="round"/>
 			</rule>
-			<rule e="way" k="ne_min_zoom" v="2" zoom-min="2" zoom-max="4">
+			<rule e="way" k="*" v="*" zoom-min="2" zoom-max="6">
 				<line stroke="#777777" stroke-width="1" stroke-linecap="round"/>
 			</rule>
-			<rule e="way" k="ne_min_zoom" v="5" zoom-min="5" zoom-max="9">
+			<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">
 				<line stroke="#777777" stroke-width="2" stroke-linecap="round"/>
 			</rule>
 		</rule>
 	</rule>
+	<!-- OVERVIEW MAP PLACES -->
 	<rule e="any" k="ne_place" v="*" zoom-max="9">
-		<rule e="any" k="ne_place" v="town" zoom-min="7" zoom-max="8">
-			<rule e="any" k="*" v="*" zoom-min="7" zoom-max="9">
-				<circle r="3" stroke="#626262" stroke-width="1"/>
-				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="480" text-wrap-width="110"/>
-			</rule>
-		</rule>
-		<rule e="any" k="ne_place" v="city" zoom-min="5" zoom-max="8">
-			<rule e="any" k="*" v="*" zoom-min="5" zoom-max="6">
-				<circle r="3" stroke="#626262" stroke-width="1"/>
-				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="480" text-wrap-width="110"/>
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="7" zoom-max="9">
-				<circle r="4" stroke="#626262" stroke-width="1"/>
-				<caption k="name" dy="11" font-style="bold" font-family="sans_serif" font-size="16" fill="#303030" stroke="#ffffff" stroke-width="2.8" priority="480" text-wrap-width="110"/>
-			</rule>
-		</rule>
-		<rule e="any" k="ne_place" v="country" zoom-min="2" zoom-max="5">
-			<rule e="any" k="ne_place" v="country" zoom-min="3" zoom-max="3">
+		<rule e="any" k="ne_place" v="country" zoom-min="1" zoom-max="7">
+			<rule e="any" k="rank" v="1|2" zoom-min="1" zoom-max="2">
 				<caption k="name" font-style="bold" text-transform="uppercase" font-size="10" fill="#747474" stroke="#ffffff" stroke-width="1.2" text-wrap-width="110"/>
 			</rule>
-			<rule e="any" k="ne_place" v="country" zoom-min="4" zoom-max="4">
-				<caption k="name" font-style="bold" text-transform="uppercase" font-size="12" fill="#747474" stroke="#ffffff" stroke-width="1.0" text-wrap-width="110"/>
+			<rule e="any" k="rank" v="1|2|3|4" zoom-min="3" zoom-max="4">
+				<caption k="name" font-style="bold" text-transform="uppercase" font-size="11" fill="#747474" stroke="#ffffff" stroke-width="1.2" text-wrap-width="110"/>
+			</rule>
+			<rule e="any" k="rank" v="*" zoom-min="5" zoom-max="5">
+				<caption k="name" font-style="bold" text-transform="uppercase" font-size="14" fill="#747474" stroke="#ffffff" stroke-width="1.0" text-wrap-width="110"/>
+			</rule>
+			<rule e="any" k="rank" v="*" zoom-min="6" zoom-max="7">
+				<caption k="name" text-transform="uppercase" font-size="18" fill="#747474" stroke="#ffffff" stroke-width="1.0" display="always" text-wrap-width="110"/>
+			</rule>
+		</rule>
+		<rule e="any" k="ne_place" v="city" zoom-min="5" zoom-max="7">
+			<rule e="any" k="rank" v="1|2" zoom-min="5" zoom-max="5">
+				<circle r="3" stroke="#626262" stroke-width="1"/>
+				<rule e="any" k="capital" v="yes">
+					<caption k="name" dy="11" text-transform="uppercase" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="620" text-wrap-width="110"/>
+				</rule>
+				<rule e="any" k="capital" v="~">
+					<caption k="name" dy="11" font-family="sans_serif" font-size="11" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="619" text-wrap-width="110"/>
+				</rule>
+			</rule>
+			<rule e="any" k="rank" v="1|2|3|4|5|6|7|8" zoom-min="6" zoom-max="7">
+				<circle r="3" stroke="#626262" stroke-width="1"/>
+				<rule e="any" k="capital" v="yes">
+					<caption k="name" dy="11" text-transform="uppercase" font-family="sans_serif" font-size="13" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="620" text-wrap-width="110"/>
+				</rule>
+				<rule e="any" k="capital" v="~">
+					<caption k="name" dy="11" font-family="sans_serif" font-size="13" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="619" text-wrap-width="110"/>
+				</rule>
+			</rule>
+		</rule>
+		<rule e="node" k="ne_place" v="town" zoom-min="6" zoom-max="7">
+			<rule e="any" k="rank" v="1|2|3|4" zoom-min="6" zoom-max="6">
+				<circle r="3" stroke="#626262" stroke-width="1"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="10" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="610" text-wrap-width="110"/>
+			</rule>
+			<rule e="node" k="rank" v="1|2|3|4|5|6|7|8" zoom-min="7" zoom-max="7">
+				<circle r="3" stroke="#626262" stroke-width="1"/>
+				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="610" text-wrap-width="110"/>
 			</rule>
 		</rule>
 	</rule>
@@ -968,7 +1001,7 @@
 						</rule>
 					</rule>
 					<rule e="way" k="waterway" v="river">
-						<rule e="way" k="*" v="*" zoom-min="9" zoom-max="12">
+						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="12">
 							<!-- TODO change to zoom-min to 9 after penetration of new users -->
 							<line stroke="#94C3E6" stroke-width="1.6"/>
 						</rule>

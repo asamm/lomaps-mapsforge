@@ -271,6 +271,10 @@ class TemplateVariables(Template):
 
     # Priorities
 
+    priority_ne_city_capital = 620
+    priority_ne_city = 619
+    priority_ne_town = 610
+
     priority_city_1 = 500
     priority_city_2 = 490
     priority_town_1 = 480
