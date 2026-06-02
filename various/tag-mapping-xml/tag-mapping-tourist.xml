@@ -1074,9 +1074,8 @@
 		<osm-tag key="man_made" value="watermill" zoom-appear="14" />
 		<osm-tag key="man_made" value="windmill" zoom-appear="14" />
 
-		<osm-tag key="location" value="overhead" zoom-appear="14" />
-		<osm-tag key="location" value="overground" zoom-appear="14" />
-		<osm-tag key="location" value="underground" zoom-appear="14" />
+		<osm-tag key="location" value="overhead" zoom-appear="14" renderable="false" />
+		<osm-tag key="location" value="overground" zoom-appear="14" renderable="false" />
 
 		<osm-tag key="military" value="airfield" zoom-appear="12" />
 		<osm-tag key="military" value="barracks" zoom-appear="12" />
