@@ -360,7 +360,7 @@
 				<caption k="name"  font-style="bold" text-transform="uppercase" font-size="14" fill="$color_gray_poi_text" stroke="#ffffff" stroke-width="${0.25*$text_halo}" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 			<rule e="any" k="rank" v="*" zoom-min="6" zoom-max="7">
-				<caption k="name"  text-transform="uppercase" font-size="18" fill="$color_gray_poi_text" stroke="#ffffff" stroke-width="${0.25*$text_halo}" display="always" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name"  text-transform="uppercase" font-size="18" fill="$color_gray_poi_text" stroke="#ffffff" stroke-width="${0.25*$text_halo}"  text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
 
@@ -4517,12 +4517,12 @@
 		<rule e="any" k="place" v="city" zoom-max="13">
 			<rule e="any" k="place" v="city" zoom-min="6" zoom-max="9">
                 <rule e="any" k="capital" v="yes" >
-				    <caption k="name" dy="12" text-transform="uppercase" font-family="sans_serif" font-style="bold" font-size="14" fill="$color_standard_poi_text" stroke="#FFFFFF" stroke-width="$text_halo" priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
-                </rule>
+				    <caption k="name" dy="11"  text-transform="uppercase" font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
+						 stroke="#ffffff" stroke-width="${0.4*$text_halo}" priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
+				</rule>
                 <rule e="any" k="capital" v="~" >
-				    <caption k="name" dy="11"  font-family="sans_serif" font-style="bold"
-							 font-size="14" fill="$color_standard_poi_text" stroke="#FFFFFF" stroke-width="$text_halo"
-							 priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
+					<caption k="name" dy="11"  font-family="sans_serif"  font-size="13" fill="$color_standard_poi_text"
+						 stroke="#ffffff" stroke-width="${0.4*$text_halo}" priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
                 </rule>
 			</rule>
 			<rule e="any" k="place" v="city" zoom-min="10" >
@@ -4559,7 +4559,6 @@
 				<caption k="name" text-transform="uppercase" font-family="sans_serif" font-style="bold" font-size="26" fill="$color_standard_poi_text"
 						 stroke="#ffffff" stroke-width="${$text_halo*1.2}" priority="$priority_town_1" text-wrap-width="${round(2 * $text_wrap_standard)}"/>
 			</rule>
-
 
 			<!-- circles for towns -->
 			<rule e="any" k="place" v="town" zoom-min="9" zoom-max="9">
