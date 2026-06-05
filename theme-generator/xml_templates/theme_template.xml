@@ -421,17 +421,15 @@
 		</rule>
 	</rule>
 
-	<rule e="way" k="highway" v="*" zoom-min="7" zoom-max="7">
-
+	<rule e="way" k="highway" v="*" zoom-min="7" zoom-max="8">
+		<!-- Primary and motorway case lines -->
 		<rule e="way" k="highway" v="primary" zoom-min="7"	zoom-max="7">
 			<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
 		<rule e="way" k="highway" v="motorway" zoom-min="7"	zoom-max="7">
 			<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
-
-
-
+		<!-- Primary and motorway cores -->
 		<rule e="way" k="highway" v="primary">
 			<line stroke="$color_primary_z7_z11" stroke-width="$primary_width_z7" stroke-linejoin="round"  stroke-linecap="round"/>
 		</rule>
@@ -439,6 +437,11 @@
 			<line stroke="$color_motorway_z7" stroke-width="$motorway_width_z7" stroke-linejoin="round"  stroke-linecap="round"/>
 		</rule>
 
+	</rule>
+
+	<!-- OVERVIEW MAP FERRY -->
+	<rule e="way" k="route" v="ferry" zoom-min="7" zoom-max="9">
+		<line stroke="#707070" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
 	</rule>
 
 	<!-- OVERVIEW MAP PLACES -->
@@ -2445,8 +2448,8 @@
 
 					<rule cat="highways_topo" e="way" k="bridge" v="~|no|false">
 
-						<!-- TOPO case highways 8 - 10 -->
-						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" gen_section="to_tunnel">
+						<!-- TOPO case highways 9 - 10 -->
+						<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10" gen_section="to_tunnel">
 
 							<rule e="way" k="highway" v="primary">
 								<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z8 + $highway_case_lowlevel}"/>
@@ -2739,8 +2742,8 @@
 					</rule>
 					<!-- =========================  TOPO core for higher levels =========================== -->
 
-					<!-- TOPO core highways 8 - 10 -->
-					<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" gen_section="to_tunnel">
+					<!-- TOPO core highways 9 - 10 -->
+					<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10" gen_section="to_tunnel">
 
 						<rule e="way" k="highway" v="primary">
 							<line stroke="$color_primary_z7_z11" stroke-width="$primary_width_z8"/>
