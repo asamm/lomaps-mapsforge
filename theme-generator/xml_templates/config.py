@@ -6,7 +6,7 @@ from actions.composite_op import lighten
 
 class TemplateVariables(Template):
 
-    color_map_background_land = "#ebeade"
+    color_map_background_land = "#EBEADE"
 
     ### LANDUSE - Natural areas
     color_desert_z0               = '#F4ECD9'

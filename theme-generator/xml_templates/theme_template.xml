@@ -197,52 +197,105 @@
 		</rule>
 	</rule>
 
-	<rule cat="base_topo" e="way" k="ne_landtype" v="*" closed="yes" zoom-min="5" zoom-max="6">
+	<rule cat="base_topo" e="way" k="ne_landtype" v="*" closed="yes" zoom-min="5" zoom-max="5">
 		<rule e="way" k="ne_landtype" v="desert">
-			<area fill="${lighten($color_desert_z0, 40)}"/>
+			<area fill="${lighten($color_desert_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="flooded_grassland">
-			<area fill="${lighten($color_flooded_grassland_z0, 40)}"/>
+			<area fill="${lighten($color_flooded_grassland_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="grassland">
-			<area fill="${lighten($color_grassland_z0, 40)}"/>
+			<area fill="${lighten($color_grassland_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="ice">
-			<area fill="${lighten($color_ice_z0, 40)}"/>
+			<area fill="${lighten($color_ice_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="mangrove">
-			<area fill="${lighten($color_mangrove_z0, 40)}"/>
+			<area fill="${lighten($color_mangrove_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="mediter_forest">
-			<area fill="${lighten($color_mediter_forest_z0, 40)}"/>
+			<area fill="${lighten($color_mediter_forest_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="montane_grassland">
-			<area fill="${lighten($color_montane_grassland_z0, 40)}"/>
+			<area fill="${lighten($color_montane_grassland_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="savannas">
-			<area fill="${lighten($color_savannas_z0, 40)}"/>
+			<area fill="${lighten($color_savannas_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="taiga">
-			<area fill="${lighten($color_taiga_z0, 40)}"/>
+			<area fill="${lighten($color_taiga_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="tempr_conifer_forest">
-			<area fill="${lighten($color_tempr_conifer_forest_z0, 40)}"/>
+			<area fill="${lighten($color_tempr_conifer_forest_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="tempr_mixed_forest">
-			<area fill="${lighten($color_tempr_mixed_forest_z0, 40)}"/>
+			<area fill="${lighten($color_tempr_mixed_forest_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="trop_conif_forest">
-			<area fill="${lighten($color_trop_conif_forest_z0, 40)}"/>
+			<area fill="${lighten($color_trop_conif_forest_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="trop_dry_forest">
-			<area fill="${lighten($color_trop_dry_forest_z0, 40)}"/>
+			<area fill="${lighten($color_trop_dry_forest_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="trop_moist_forest">
-			<area fill="${lighten($color_trop_moist_forest_z0, 40)}"/>
+			<area fill="${lighten($color_trop_moist_forest_z0, 45)}"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="tundra">
-			<area fill="${lighten($color_tundra_z0, 40)}"/>
+			<area fill="${lighten($color_tundra_z0, 45)}"/>
 		</rule>
+	</rule>
+
+	<rule cat="base_topo" e="way" k="ne_landtype" v="*" closed="yes" zoom-min="6" zoom-max="6">
+		<rule e="way" k="ne_landtype" v="desert">
+			<area fill="${lighten($color_desert_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="flooded_grassland">
+			<area fill="${lighten($color_flooded_grassland_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="grassland">
+			<area fill="${lighten($color_grassland_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="ice">
+			<area fill="${lighten($color_ice_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mangrove">
+			<area fill="${lighten($color_mangrove_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mediter_forest">
+			<area fill="${lighten($color_mediter_forest_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="montane_grassland">
+			<area fill="${lighten($color_montane_grassland_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="savannas">
+			<area fill="${lighten($color_savannas_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="taiga">
+			<area fill="${lighten($color_taiga_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_conifer_forest">
+			<area fill="${lighten($color_tempr_conifer_forest_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_mixed_forest">
+			<area fill="${lighten($color_tempr_mixed_forest_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_conif_forest">
+			<area fill="${lighten($color_trop_conif_forest_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_dry_forest">
+			<area fill="${lighten($color_trop_dry_forest_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_moist_forest">
+			<area fill="${lighten($color_trop_moist_forest_z0, 70)}"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tundra">
+			<area fill="${lighten($color_tundra_z0, 70)}"/>
+		</rule>
+	</rule>
+
+	<!-- NE Landuse areas -->
+	<rule e="way" k="ne_landuse" v="residential" closed="yes" zoom-min="7" zoom-max="9">
+		<area fill="#c9c9c9"/>
 	</rule>
 
 	<!-- NE Water areas -->
