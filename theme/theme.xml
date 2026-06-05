@@ -16,7 +16,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="5" base-stroke-width="0.65" map-background="#ebeade" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<rendertheme xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="5" base-stroke-width="0.65" map-background="#EBEADE" xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<stylemenu id="r4menu" defaultvalue="hike_bike" defaultlang="en">
 		<!-- LAYER CITY -->
 		<layer id="pub_rest_city" enabled="true" visible="false">
@@ -127,13 +127,13 @@
 			<area fill="#94C3E6"/>
 		</rule>
 		<rule cat="base_car" e="way" k="natural" v="nosea">
-			<area fill="#ebeade"/>
+			<area fill="#EBEADE"/>
 		</rule>
 		<rule cat="base_city" e="way" k="natural" v="nosea">
-			<area fill="#ebeade"/>
+			<area fill="#EBEADE"/>
 		</rule>
 		<rule cat="base_summer" e="way" k="natural" v="nosea">
-			<area fill="#ebeade"/>
+			<area fill="#EBEADE"/>
 		</rule>
 		<rule cat="base_winter" e="way" k="natural" v="nosea">
 			<area fill="#f7fbfe"/>
@@ -190,52 +190,103 @@
 			<area fill="#DFDED8"/>
 		</rule>
 	</rule>
-	<rule cat="base_topo" e="way" k="ne_landtype" v="*" zoom-min="5" zoom-max="6" closed="yes">
+	<rule cat="base_topo" e="way" k="ne_landtype" v="*" zoom-min="5" zoom-max="5" closed="yes">
 		<rule e="way" k="ne_landtype" v="desert">
-			<area fill="#f8f3e8"/>
+			<area fill="#f8f4ea"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="flooded_grassland">
-			<area fill="#deefd7"/>
+			<area fill="#e1f0da"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="grassland">
-			<area fill="#e5edd3"/>
+			<area fill="#e7efd7"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="ice">
 			<area fill="#fdfdfd"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="mangrove">
-			<area fill="#bae0cb"/>
+			<area fill="#c0e2cf"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="mediter_forest">
-			<area fill="#f7f3e2"/>
+			<area fill="#f7f4e4"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="montane_grassland">
-			<area fill="#e5edd3"/>
+			<area fill="#e7efd7"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="savannas">
-			<area fill="#f1efda"/>
+			<area fill="#f2f0dd"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="taiga">
-			<area fill="#d9e9d7"/>
+			<area fill="#dcebda"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="tempr_conifer_forest">
-			<area fill="#d9e9d7"/>
+			<area fill="#dcebda"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="tempr_mixed_forest">
-			<area fill="#e9f0df"/>
+			<area fill="#ebf1e2"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="trop_conif_forest">
-			<area fill="#c3dcbf"/>
+			<area fill="#c8dfc4"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="trop_dry_forest">
-			<area fill="#dce4cb"/>
+			<area fill="#dfe6cf"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="trop_moist_forest">
-			<area fill="#cbe1cd"/>
+			<area fill="#cfe3d1"/>
 		</rule>
 		<rule e="way" k="ne_landtype" v="tundra">
-			<area fill="#ebebe7"/>
+			<area fill="#edece9"/>
 		</rule>
+	</rule>
+	<rule cat="base_topo" e="way" k="ne_landtype" v="*" zoom-min="6" zoom-max="6" closed="yes">
+		<rule e="way" k="ne_landtype" v="desert">
+			<area fill="#fbf9f3"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="flooded_grassland">
+			<area fill="#eef7eb"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="grassland">
+			<area fill="#f2f6e9"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="ice">
+			<area fill="#fefefe"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mangrove">
+			<area fill="#dcefe5"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="mediter_forest">
+			<area fill="#fbf9f0"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="montane_grassland">
+			<area fill="#f2f6e9"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="savannas">
+			<area fill="#f8f7ec"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="taiga">
+			<area fill="#ecf4eb"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_conifer_forest">
+			<area fill="#ecf4eb"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tempr_mixed_forest">
+			<area fill="#f4f7ef"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_conif_forest">
+			<area fill="#e1eddf"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_dry_forest">
+			<area fill="#edf1e5"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="trop_moist_forest">
+			<area fill="#e5f0e6"/>
+		</rule>
+		<rule e="way" k="ne_landtype" v="tundra">
+			<area fill="#f5f5f3"/>
+		</rule>
+	</rule>
+	<!-- NE Landuse areas -->
+	<rule e="way" k="ne_landuse" v="residential" zoom-min="7" zoom-max="9" closed="yes">
+		<area fill="#c9c9c9"/>
 	</rule>
 	<!-- NE Water areas -->
 	<rule e="way" k="ne_natural" v="water" zoom-max="9">
@@ -311,41 +362,6 @@
 			</rule>
 		</rule>
 	</rule>
-	<!--	Highways outline-->
-	<!--	<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9" >-->
-	<!--&lt;!&ndash;		<rule e="way" k="ne_highway" v="other">&ndash;&gt;-->
-	<!--&lt;!&ndash;			<line stroke="#FFFFFF" stroke-width="5"/>&ndash;&gt;-->
-	<!--&lt;!&ndash;		</rule>&ndash;&gt;-->
-	<!--		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">-->
-	<!--			<rule e="way" k="ne_highway" v="motorway">-->
-	<!--				<line stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round"/>-->
-	<!--			</rule>-->
-	<!--		</rule>-->
-	<!--		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">-->
-	<!--			<rule e="way" k="ne_highway" v="primary" zoom-min="7">-->
-	<!--				<line stroke="#FFFFFF" stroke-width="3.5"/>-->
-	<!--			</rule>-->
-	<!--			<rule e="way" k="ne_highway" v="motorway">-->
-	<!--				<line stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>-->
-	<!--			</rule>-->
-	<!--		</rule>-->
-	<!--	</rule>-->
-	<!--	&lt;!&ndash;	Highways core&ndash;&gt;-->
-	<!--		<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="9" >-->
-	<!--		<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">-->
-	<!--			<rule e="way" k="ne_highway" v="motorway">-->
-	<!--				<line stroke="#FF8C00" stroke-width="1.5" stroke-linejoin="round"/>-->
-	<!--			</rule>-->
-	<!--		</rule>-->
-	<!--		<rule e="way" k="*" v="*" zoom-min="7" zoom-max="9">-->
-	<!--			<rule e="way" k="ne_highway" v="primary" zoom-min="7">-->
-	<!--				<line stroke="#ff8c00" stroke-width="1.5"/>-->
-	<!--			</rule>-->
-	<!--			<rule e="way" k="ne_highway" v="motorway">-->
-	<!--				<line stroke="#FF4500" stroke-width="3" stroke-linejoin="round"/>-->
-	<!--			</rule>-->
-	<!--		</rule>-->
-	<!--	</rule>-->
 	<rule e="way" k="ne_boundary" v="administrative">
 		<rule e="way" k="admin_level" v="2">
 			<rule e="way" k="*" v="*" zoom-min="0" zoom-max="1">
@@ -358,9 +374,44 @@
 				<line stroke="#777777" stroke-width="2" stroke-linecap="round"/>
 			</rule>
 		</rule>
+		<rule e="way" k="admin_level" v="4">
+			<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">
+				<line stroke="#777777" stroke-width="0.3" stroke-linecap="round"/>
+			</rule>
+			<rule e="way" k="*" v="*" zoom-min="7" zoom-max="7">
+				<line stroke="#777777" stroke-width="0.6" stroke-linecap="round"/>
+			</rule>
+			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="9">
+				<line stroke="#777777" stroke-width="1" stroke-linecap="round"/>
+			</rule>
+		</rule>
+	</rule>
+	<!-- OVERVIEW MAP MOTORWAY -->
+	<rule e="way" k="ne_highway" v="*" zoom-min="5" zoom-max="6">
+		<rule e="way" k="ne_highway" v="motorway" zoom-min="5" zoom-max="6">
+			<line stroke="#FFFFFF" stroke-width="2.0" stroke-linejoin="round"/>
+		</rule>
+		<rule e="way" k="ne_highway" v="motorway">
+			<line stroke="#FF8C00" stroke-width="1" stroke-linejoin="round"/>
+		</rule>
+	</rule>
+	<rule e="way" k="highway" v="*" zoom-min="7" zoom-max="8">
+		<rule e="way" k="highway" v="primary" zoom-min="7" zoom-max="7">
+			<line stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+		</rule>
+		<rule e="way" k="highway" v="motorway" zoom-min="7" zoom-max="7">
+			<line stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+		</rule>
+		<rule e="way" k="highway" v="primary">
+			<line stroke="#ff8c00" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+		</rule>
+		<rule e="way" k="highway" v="motorway">
+			<line stroke="#FF4500" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+		</rule>
 	</rule>
 	<!-- OVERVIEW MAP PLACES -->
 	<rule e="any" k="ne_place" v="*" zoom-max="9">
+		<!-- Country names -->
 		<rule e="any" k="ne_place" v="country" zoom-min="1" zoom-max="7">
 			<rule e="any" k="rank" v="1|2" zoom-min="1" zoom-max="2">
 				<caption k="name" font-style="bold" text-transform="uppercase" font-size="10" fill="#747474" stroke="#ffffff" stroke-width="1.2" text-wrap-width="110"/>
@@ -372,9 +423,10 @@
 				<caption k="name" font-style="bold" text-transform="uppercase" font-size="14" fill="#747474" stroke="#ffffff" stroke-width="1.0" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="rank" v="*" zoom-min="6" zoom-max="7">
-				<caption k="name" text-transform="uppercase" font-size="18" fill="#747474" stroke="#ffffff" stroke-width="1.0" display="always" text-wrap-width="110"/>
+				<caption k="name" text-transform="uppercase" font-size="18" fill="#747474" stroke="#ffffff" stroke-width="1.0" text-wrap-width="110"/>
 			</rule>
 		</rule>
+		<!-- City names -->
 		<rule e="any" k="ne_place" v="city" zoom-min="5" zoom-max="7">
 			<rule e="any" k="rank" v="1|2" zoom-min="5" zoom-max="5">
 				<circle r="3" stroke="#626262" stroke-width="1"/>
@@ -395,6 +447,7 @@
 				</rule>
 			</rule>
 		</rule>
+		<!-- Town names -->
 		<rule e="node" k="ne_place" v="town" zoom-min="6" zoom-max="7">
 			<rule e="any" k="rank" v="1|2|3|4" zoom-min="6" zoom-max="6">
 				<circle r="3" stroke="#626262" stroke-width="1"/>
@@ -472,7 +525,7 @@
 			</rule>
 		</rule>
 		<!-- forest -->
-		<rule e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="9" closed="yes">
+		<rule e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="7" closed="yes">
 			<!-- wood for SUMMER -->
 			<rule cat="base_summer" e="way" k="*" v="*">
 				<rule e="way" k="*" v="*" zoom-max="13">
@@ -603,10 +656,10 @@
 		<rule e="way" k="man_made" v="*" zoom-min="13">
 			<rule e="way" k="man_made" v="pier" zoom-min="14">
 				<rule e="way" k="*" v="*" closed="no">
-					<line stroke="#ebeade" stroke-width="0.3" stroke-linecap="butt"/>
+					<line stroke="#EBEADE" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="*" v="*" closed="yes">
-					<area fill="#ebeade"/>
+					<area fill="#EBEADE"/>
 				</rule>
 			</rule>
 			<rule e="way" k="man_made" v="breakwater|groyne" zoom-min="14">
@@ -7110,7 +7163,7 @@
 								<line stroke="#8a8a8a" stroke-width="1.1" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="path|via_ferrata|footway">
-								<line stroke="#ebeade" stroke-width="0.7142857142857143" stroke-linecap="butt"/>
+								<line stroke="#EBEADE" stroke-width="0.7142857142857143" stroke-linecap="butt"/>
 								<line stroke="#4d4d4d" stroke-width="0.1" dy="0.35714285714285715" stroke-linecap="butt"/>
 								<line stroke="#4d4d4d" stroke-width="0.1" dy="-0.35714285714285715" stroke-linecap="butt"/>
 							</rule>
@@ -7231,8 +7284,8 @@
 					</rule>
 					<!-- ==================== HIGHWAY TOPO OUTLINE ========================== -->
 					<rule cat="highways_topo" e="way" k="bridge" v="~|no|false">
-						<!-- TOPO case highways 8 - 10 -->
-						<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10">
+						<!-- TOPO case highways 9 - 10 -->
+						<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10">
 							<rule e="way" k="highway" v="primary">
 								<line stroke="#FFFFFF" stroke-width="5"/>
 							</rule>
@@ -7515,8 +7568,8 @@
 						</rule>
 					</rule>
 					<!-- =========================  TOPO core for higher levels =========================== -->
-					<!-- TOPO core highways 8 - 10 -->
-					<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10">
+					<!-- TOPO core highways 9 - 10 -->
+					<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10">
 						<rule e="way" k="highway" v="primary">
 							<line stroke="#ff8c00" stroke-width="3"/>
 						</rule>
@@ -7583,7 +7636,7 @@
 							<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="14">
 								<line stroke="#8a8a8a" stroke-width="0.8800000000000001" stroke-dasharray="15,7" stroke-linecap="butt"/>
 							</rule>
-							<rule e="way" k="tracktype" v="grade5" zoom-min="15">
+							<rule e="way" k="tracktype" v="grade5" zoom-min="14">
 								<line stroke="#8a8a8a" stroke-width="0.4224" stroke-dasharray="15,12"/>
 							</rule>
 							<rule e="way" k="tracktype" v="~">
@@ -7796,7 +7849,7 @@
 				</rule>
 				<!-- END off no area core for topo highways-->
 				<!-- Road numbers for all themes-->
-				<rule e="way" k="*" v="*" zoom-min="10" zoom-max="18">
+				<rule e="way" k="*" v="*" zoom-min="8" zoom-max="18">
 					<rule e="way" k="highway" v="primary|secondary" zoom-min="11">
 						<rule e="way" k="highway" v="primary" zoom-min="11" zoom-max="11">
 							<pathText k="ref" font-family="sans_serif" font-size="9" fill="#FFFFFF" stroke="#cc005fb9" stroke-width="6" repeat-start="30" text-orientation="auto" repeat-gap="600" priority="352"/>
@@ -7811,8 +7864,11 @@
 							<pathText k="ref" font-family="sans_serif" font-size="11" fill="#FFFFFF" stroke="#cc005fb9" stroke-width="6" repeat-start="160" text-orientation="auto" repeat-gap="600" priority="352"/>
 						</rule>
 					</rule>
-					<rule e="way" k="highway" v="motorway|trunk" zoom-min="10">
-						<rule e="way" k="highway" v="motorway" zoom-min="10" zoom-max="10">
+					<rule e="way" k="highway" v="motorway|trunk" zoom-min="8">
+						<rule e="way" k="highway" v="motorway" zoom-min="8" zoom-max="8">
+							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="#ccdc1b1b" stroke-width="6" repeat-start="8" text-orientation="auto" repeat-gap="400" priority="601"/>
+						</rule>
+						<rule e="way" k="highway" v="motorway" zoom-min="9" zoom-max="10">
 							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="#ccdc1b1b" stroke-width="6" repeat-start="27" text-orientation="auto" repeat-gap="600" priority="354"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="11" zoom-max="12">
@@ -8150,7 +8206,7 @@
 					</rule>
 				</rule>
 				<!-- highway tunnel casings -->
-				<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" closed="any">
+				<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10" closed="any">
 					<rule e="way" k="highway" v="primary" zoom-min="0" zoom-max="127" closed="any">
 						<line dy="0.0" scale="stroke" stroke="#90FFFFFF" stroke-width="5.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
@@ -8284,7 +8340,7 @@
 						<line dy="0.0" scale="stroke" stroke="#90E52C2C" stroke-width="3.3600000000000003" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
 				</rule>
-				<rule e="way" k="*" v="*" zoom-min="8" zoom-max="10" closed="any">
+				<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10" closed="any">
 					<rule e="way" k="highway" v="primary" zoom-min="0" zoom-max="127" closed="any">
 						<line dy="0.0" scale="stroke" stroke="#90ff8c00" stroke-width="3.0" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 					</rule>
@@ -8344,7 +8400,7 @@
 						<rule e="way" k="tracktype" v="grade3|grade4" zoom-min="14" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.8800000000000001" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
-						<rule e="way" k="tracktype" v="grade5" zoom-min="15" zoom-max="127" closed="any">
+						<rule e="way" k="tracktype" v="grade5" zoom-min="14" zoom-max="127" closed="any">
 							<line dy="0.0" scale="stroke" stroke="#908a8a8a" stroke-width="0.4224" stroke-dasharray="20,8" stroke-linecap="butt" stroke-linejoin="round"/>
 						</rule>
 						<rule e="way" k="tracktype" v="~" zoom-min="0" zoom-max="127" closed="any">
@@ -14195,10 +14251,12 @@
 		<rule e="any" k="place" v="city" zoom-max="13">
 			<rule e="any" k="place" v="city" zoom-min="6" zoom-max="9">
 				<rule e="any" k="capital" v="yes">
-					<caption k="name" dy="12" text-transform="uppercase" font-family="sans_serif" font-style="bold" font-size="14" fill="#303030" stroke="#FFFFFF" stroke-width="4" priority="500" text-wrap-width="110"/>
+					<circle r="3.5" stroke="#8E8E8E" stroke-width="1.5"/>
+					<caption k="name" dy="11" text-transform="uppercase" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="500" text-wrap-width="110"/>
 				</rule>
-				<rule e="any" k="capital" v="~">
-					<caption k="name" dy="11" font-family="sans_serif" font-style="bold" font-size="14" fill="#303030" stroke="#FFFFFF" stroke-width="4" priority="500" text-wrap-width="110"/>
+				<rule e="any" k="capital" v="~" zoom-min="7">
+					<circle r="3.5" stroke="#8E8E8E" stroke-width="1.5"/>
+					<caption k="name" dy="11" font-family="sans_serif" font-size="13" fill="#303030" stroke="#ffffff" stroke-width="1.6" priority="500" text-wrap-width="110"/>
 				</rule>
 			</rule>
 			<rule e="any" k="place" v="city" zoom-min="10">
@@ -14208,13 +14266,11 @@
 				<rule e="any" k="capital" v="~">
 					<caption k="name" text-transform="uppercase" font-family="sans_serif" font-style="bold" font-size="24" fill="#303030" stroke="#FFFFFF" stroke-width="4.8" priority="500" text-wrap-width="165"/>
 				</rule>
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="6" zoom-max="9">
 				<circle r="3.5" stroke="#8E8E8E" stroke-width="1.5"/>
 			</rule>
 		</rule>
 		<rule e="any" k="place" v="town" zoom-min="8" zoom-max="15">
-			<rule e="any" k="*" v="*" zoom-min="8" zoom-max="9">
+			<rule e="any" k="*" v="*" zoom-min="9" zoom-max="9">
 				<caption k="name" dy="11" font-family="sans_serif" font-size="12" fill="#303030" stroke="#ffffff" stroke-width="4" priority="480" text-wrap-width="110"/>
 			</rule>
 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="11">

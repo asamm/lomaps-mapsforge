@@ -227,7 +227,7 @@
 	<!-- PLACES TAGS -->
 	<pois>
 		<osm-tag key="place" value="city" zoom-appear="6" />
-		<osm-tag key="place" value="country" zoom-appear="3" />
+<!--		<osm-tag key="place" value="country" zoom-appear="3" />-->
 		<osm-tag key="place" value="hamlet" zoom-appear="13" />
 		<osm-tag key="place" value="island" zoom-appear="10" />
 		<osm-tag key="place" value="islet" zoom-appear="12" />
@@ -253,7 +253,7 @@
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />		
 		<osm-tag key="natural" value="cliff" zoom-appear="9" />
-		<osm-tag key="natural" value="coastline" zoom-appear="0" />
+		<osm-tag key="natural" value="coastline" zoom-appear="12" />
 		<osm-tag key="natural" value="desert" zoom-appear="12" />
 		<osm-tag key="natural" value="earth_bank" zoom-appear="12" />
 		<osm-tag key="natural" value="glacier" zoom-appear="8" />
@@ -545,7 +545,7 @@
 		<osm-tag key="natural" value="beach" zoom-appear="12" />
 		<osm-tag key="natural" value="bay" zoom-appear="12" />
 		<osm-tag key="natural" value="cave_entrance" zoom-appear="13" />
-		<osm-tag key="natural" value="cliff" zoom-appear="9" />
+		<osm-tag key="natural" value="cliff" zoom-appear="12" />
 		<osm-tag key="natural" value="coastline" zoom-appear="0" force-polygon-line="true" />
 		<osm-tag key="natural" value="desert" zoom-appear="12" />
 		<osm-tag key="natural" value="earth_bank" zoom-appear="12" />
@@ -572,7 +572,7 @@
 		<osm-tag key="natural" value="stone" zoom-appear="14" />
 		<osm-tag key="natural" value="tree" zoom-appear="16" />
 		<osm-tag key="natural" value="tree_row" zoom-appear="14" />
-		<osm-tag key="natural" value="valley" zoom-appear="9" />
+		<osm-tag key="natural" value="valley" zoom-appear="12" />
 		<osm-tag key="natural" value="volcano" zoom-appear="12" />
 		<osm-tag key="natural" value="water" zoom-appear="8" />
 		<osm-tag key="natural" value="wetland" zoom-appear="12" />
@@ -1342,8 +1342,8 @@
  <!-- Elevation TAGS -->
    <ways>
       <osm-tag key="contour_ext" value="elevation_minor" zoom-appear="12" force-polygon-line="true" />
-      <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="9" force-polygon-line="true" />
-      <osm-tag key="contour_ext" value="elevation_major" zoom-appear="9" force-polygon-line="true" />
+      <osm-tag key="contour_ext" value="elevation_medium" zoom-appear="10" force-polygon-line="true" />
+      <osm-tag key="contour_ext" value="elevation_major" zoom-appear="10" force-polygon-line="true" />
       <osm-tag key="ele" value="100" zoom-appear="14" />
       <osm-tag key="ele" value="200" zoom-appear="14" />
       <osm-tag key="ele" value="300" zoom-appear="14" />

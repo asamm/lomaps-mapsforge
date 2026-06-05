@@ -79,7 +79,7 @@ class TemplateVariables(Template):
 
     motorway_width_z7 = 2.5
     trunk_width_z7 = 2
-    primary_width_z7 = 1.25
+    primary_width_z7 = 1.5
 
     motorway_width_z8 = 4
     trunk_width_z8 = 3
