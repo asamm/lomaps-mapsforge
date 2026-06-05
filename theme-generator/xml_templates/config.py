@@ -75,11 +75,11 @@ class TemplateVariables(Template):
 
     ## --- WIDTHS ---
 
-    motorway_width_z6 = 1.5
+    motorway_width_z6 = 1
 
-    motorway_width_z7 = 3
+    motorway_width_z7 = 2.5
     trunk_width_z7 = 2
-    primary_width_z7 = 1.5
+    primary_width_z7 = 1.25
 
     motorway_width_z8 = 4
     trunk_width_z8 = 3
@@ -274,6 +274,8 @@ class TemplateVariables(Template):
     priority_ne_city_capital = 620
     priority_ne_city = 619
     priority_ne_town = 610
+
+    priority_highway_label_motorway_z8 = 601
 
     priority_city_1 = 500
     priority_city_2 = 490

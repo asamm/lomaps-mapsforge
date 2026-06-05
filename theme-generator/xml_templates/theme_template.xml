@@ -343,6 +343,49 @@
 					<line stroke="$color_country_border_low_z" stroke-width="2" stroke-linecap="round" />
                 </rule>
 			</rule>
+
+        	<rule e="way" k="admin_level" v="4" >
+				<rule e="way" k="*" v="*" zoom-min="5" zoom-max="6">
+					<line stroke="$color_country_border_low_z" stroke-width="0.3" stroke-linecap="round" />
+                </rule>
+				<rule e="way" k="*" v="*" zoom-min="7" zoom-max="7">
+					<line stroke="$color_country_border_low_z" stroke-width="0.6" stroke-linecap="round" />
+                </rule>
+				<rule e="way" k="*" v="*" zoom-min="8" zoom-max="9">
+					<line stroke="$color_country_border_low_z" stroke-width="1" stroke-linecap="round" />
+                </rule>
+			</rule>
+	</rule>
+
+	<!-- OVERVIEW MAP MOTORWAY -->
+	<rule e="way" k="ne_highway" v="*" zoom-min="5"	zoom-max="6">
+
+		<rule e="way" k="ne_highway" v="motorway" zoom-min="5"	zoom-max="6">
+			<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z6 + $highway_case_lowlevel/2}" stroke-linejoin="round"/>
+		</rule>
+		<rule e="way" k="ne_highway" v="motorway">
+			<line stroke="$color_motorway_z6" stroke-width="$motorway_width_z6" stroke-linejoin="round"/>
+		</rule>
+	</rule>
+
+	<rule e="way" k="highway" v="*" zoom-min="7" zoom-max="7">
+
+		<rule e="way" k="highway" v="primary" zoom-min="7"	zoom-max="7">
+			<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
+		</rule>
+		<rule e="way" k="highway" v="motorway" zoom-min="7"	zoom-max="7">
+			<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
+		</rule>
+
+
+
+		<rule e="way" k="highway" v="primary">
+			<line stroke="$color_primary_z7_z11" stroke-width="$primary_width_z7" stroke-linejoin="round"  stroke-linecap="round"/>
+		</rule>
+		<rule e="way" k="highway" v="motorway">
+			<line stroke="$color_motorway_z7" stroke-width="$motorway_width_z7" stroke-linejoin="round"  stroke-linecap="round"/>
+		</rule>
+
 	</rule>
 
 	<!-- OVERVIEW MAP PLACES -->
@@ -472,7 +515,7 @@
 		</rule>
 
 		<!-- forest -->
-		<rule e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="9" closed="yes">
+		<rule e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="7" closed="yes">
 			<!-- wood for SUMMER -->
 			<rule cat="base_summer" e="way" k="*" v="*" >
 				<rule e="way" k="*" v="*" zoom-max="13">
@@ -2952,7 +2995,7 @@
 				<!-- END off no area core for topo highways-->
 
 				<!-- Road numbers for all themes-->
-				<rule e="way" k="*" v="*" zoom-min="10" zoom-max="18">
+				<rule e="way" k="*" v="*" zoom-min="8" zoom-max="18">
 					<rule e="way" k="highway" v="primary|secondary" zoom-min="11">
 						<rule e="way" k="highway" v="primary" zoom-min="11" zoom-max="11">
 							<pathText k="ref" font-family="sans_serif" font-size="9" fill="#FFFFFF" stroke="${opacity($color_highway_label_primary,80)}"
@@ -2971,8 +3014,12 @@
                                       stroke-width="6" repeat-start="160" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_primary"/>
 						</rule>
 					</rule>
-					<rule e="way" k="highway" v="motorway|trunk" zoom-min="10">
-						<rule e="way" k="highway" v="motorway" zoom-min="10" zoom-max="10">
+					<rule e="way" k="highway" v="motorway|trunk" zoom-min="8">
+						<rule e="way" k="highway" v="motorway" zoom-min="8" zoom-max="8">
+							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="${opacity($color_highway_label_motorway,80)}"
+                                      stroke-width="6" repeat-start="8" text-orientation="auto" repeat-gap="400" priority="$priority_highway_label_motorway_z8"/>
+						</rule>
+						<rule e="way" k="highway" v="motorway" zoom-min="9" zoom-max="10">
 							<pathText k="ref" font-family="sans_serif" font-size="10" fill="#FFFFFF" stroke="${opacity($color_highway_label_motorway,80)}"
                                       stroke-width="6" repeat-start="27" text-orientation="auto" repeat-gap="600" priority="$priority_highway_label_motorway"/>
 						</rule>
@@ -4517,10 +4564,12 @@
 		<rule e="any" k="place" v="city" zoom-max="13">
 			<rule e="any" k="place" v="city" zoom-min="6" zoom-max="9">
                 <rule e="any" k="capital" v="yes" >
+					<circle r="3.5"  stroke="#8E8E8E" stroke-width="1.5" />
 				    <caption k="name" dy="11"  text-transform="uppercase" font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
 						 stroke="#ffffff" stroke-width="${0.4*$text_halo}" priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
 				</rule>
-                <rule e="any" k="capital" v="~" >
+                <rule e="any" k="capital" v="~" zoom-min="7">
+					<circle r="3.5"  stroke="#8E8E8E" stroke-width="1.5" />
 					<caption k="name" dy="11"  font-family="sans_serif"  font-size="13" fill="$color_standard_poi_text"
 						 stroke="#ffffff" stroke-width="${0.4*$text_halo}" priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
                 </rule>
@@ -4536,16 +4585,14 @@
 							 font-size="24" fill="$color_standard_poi_text" stroke="#FFFFFF"
 							 stroke-width="${$text_halo*1.2}" priority="$priority_city_1" text-wrap-width="${round(1.5 * $text_wrap_standard)}"/>
                 </rule>
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="6" zoom-max="9">
 				<circle r="3.5"  stroke="#8E8E8E" stroke-width="1.5" />
 			</rule>
 		</rule>
 
 		<rule e="any" k="place" v="town" zoom-min="8" zoom-max="15">
-			<rule e="any" k="*" v="*" zoom-min="8" zoom-max="9">
+			<rule e="any" k="*" v="*" zoom-min="9" zoom-max="9">
 				<caption k="name" dy="11" font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
-						 stroke="#ffffff" stroke-width="${$text_halo}" priority="$priority_town_1" text-wrap-width="$text_wrap_standard"/>
+						 stroke="#ffffff" stroke-width="${$text_halo}" priority="$priority_town_1" text-wrap-width="$text_wrap_standard" />
             </rule>
 			<rule e="any" k="*" v="*" zoom-min="10" zoom-max="11">
 				<caption k="name" dy="11"  font-family="sans_serif"  font-size="16" fill="$color_standard_poi_text"
