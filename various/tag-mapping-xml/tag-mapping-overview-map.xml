@@ -180,6 +180,7 @@
 		<osm-tag key="highway" value="primary" zoom-appear="7" mergeable="true" min-pixel-size="0.5"/>
 
 		<osm-tag key="ne_highway" value="motorway" renderable="false"/>
+		<osm-tag key="ne_route" value="ferry" renderable="false"/>
 	</ways>
 
 	<!-- NATURAL / WATERWAY TAGS -->
