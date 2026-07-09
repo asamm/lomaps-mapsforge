@@ -440,7 +440,7 @@
 	</rule>
 
 	<!-- OVERVIEW MAP FERRY -->
-	<rule e="way" k="route" v="ferry" zoom-min="7" zoom-max="9">
+	<rule e="way" k="ne_route" v="ferry" zoom-min="7" zoom-max="9">
 		<line stroke="#707070" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
 	</rule>
 
@@ -1069,7 +1069,7 @@
 		</rule>
 		<rule e="way" k="intermittent" v="~|no|false">
 			<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="7" >
-				<rule e="way" k="*" v="*" closed="yes">
+				<rule e="way" k="ne_min_zoom" v="~" closed="yes">
 					<area fill="#94C3E6"/>
 				</rule>
 				<rule e="way" k="*" v="*" closed="no">

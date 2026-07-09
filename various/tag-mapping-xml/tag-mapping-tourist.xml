@@ -417,16 +417,42 @@
 		<osm-tag key="ne_max_zoom" value="8" zoom-disappear="8" />
 		<osm-tag key="ne_max_zoom" value="9" zoom-disappear="9" />
 
-		<osm-tag key="depth" value="%h"  />
-		<osm-tag key="ne_bathymetry" value="yes"  />
+		<osm-tag key="depth" value="200" renderable="false"  />
+		<osm-tag key="depth" value="1000" renderable="false"  />
+		<osm-tag key="depth" value="2000" renderable="false"  />
+		<osm-tag key="depth" value="3000" renderable="false"  />
+		<osm-tag key="depth" value="4000" renderable="false"  />
+		<osm-tag key="depth" value="5000" renderable="false"  />
+		<osm-tag key="depth" value="6000" renderable="false"  />
+		<osm-tag key="depth" value="7000" renderable="false"  />
+		<osm-tag key="depth" value="8000" renderable="false"  />
+		<osm-tag key="depth" value="9000" renderable="false"  />
+		<osm-tag key="depth" value="10000" renderable="false"  />
 
-		<osm-tag key="ne_natural" value="glacier" />
-		<osm-tag key="ne_waterway" value="river" />
-		<osm-tag key="ne_natural" value="water" />
-		<osm-tag key="rank" value="%h" />
+		<osm-tag key="ne_bathymetry" value="yes" min-pixel-size="5" />
+
+		<osm-tag key="ne_natural" value="glacier" renderable="false" />
+		<osm-tag key="ne_waterway" value="river" renderable="false"/>
+		<osm-tag key="ne_natural" value="water" renderable="false"/>
+
+		<osm-tag key="rank" value="0" renderable="false" />
+		<osm-tag key="rank" value="1" renderable="false" />
+		<osm-tag key="rank" value="2" renderable="false" />
+		<osm-tag key="rank" value="3" renderable="false" />
+		<osm-tag key="rank" value="4" renderable="false" />
+		<osm-tag key="rank" value="5" renderable="false" />
+		<osm-tag key="rank" value="6" renderable="false" />
+		<osm-tag key="rank" value="7" renderable="false" />
+		<osm-tag key="rank" value="8" renderable="false" />
+		<osm-tag key="rank" value="9" renderable="false" />
+		<osm-tag key="rank" value="10" renderable="false"  />
+		<osm-tag key="rank" value="11" renderable="false"  />
+		<osm-tag key="rank" value="12" renderable="false"  />
+
 		<osm-tag key="ne_geography_marine" value="yes" />
 		<osm-tag key="ne_geography_regions" value="yes" />
 		<osm-tag key="ne_boundary" value="administrative" renderable="false" />
+		<osm-tag key="ne_landuse" value="residential" renderable="false" />
 		<osm-tag key="ne_place" value="country" />
 
 		<osm-tag key="ne_landtype" value="desert" renderable="false" />
@@ -486,12 +512,12 @@
 		<osm-tag key="highway" value="footway" zoom-appear="13" />
 		<osm-tag key="highway" value="living_street" zoom-appear="12" />
 		<osm-tag key="highway" value="mini_roundabout" zoom-appear="16" />
-		<osm-tag key="highway" value="motorway" zoom-appear="5" />
+		<osm-tag key="highway" value="motorway" zoom-appear="6" mergeable="true" min-pixel-size="0.5"/>
 		<osm-tag key="highway" value="motorway_junction" zoom-appear="10" />
 		<osm-tag key="highway" value="motorway_link" zoom-appear="12" />
 		<osm-tag key="highway" value="path" zoom-appear="12" />
 		<osm-tag key="highway" value="pedestrian" zoom-appear="14" />
-		<osm-tag key="highway" value="primary" zoom-appear="7" />
+		<osm-tag key="highway" value="primary" zoom-appear="7" mergeable="true" min-pixel-size="0.5"/>
 		<osm-tag key="highway" value="primary_link" zoom-appear="12" />
 		<osm-tag key="highway" value="raceway" zoom-appear="12" />
 		<osm-tag key="highway" value="residential" zoom-appear="12" />
@@ -506,7 +532,7 @@
 		<osm-tag key="highway" value="track" zoom-appear="13" />
 		<osm-tag key="highway" value="traffic_signals" zoom-appear="17" />
 		<osm-tag key="highway" value="trailhead" zoom-appear="13" />
-		<osm-tag key="highway" value="trunk" zoom-appear="6" />
+		<osm-tag key="highway" value="trunk" zoom-appear="6" mergeable="true" min-pixel-size="0.5"/>
 		<osm-tag key="highway" value="trunk_link" zoom-appear="12" />
 		<osm-tag key="highway" value="turning_circle" zoom-appear="15" />		
 		<osm-tag key="highway" value="unclassified" zoom-appear="12" />
@@ -516,7 +542,11 @@
 		<osm-tag key="ice_road" value="yes" zoom-appear="13" />
 		<osm-tag key="toll" value="yes" zoom-appear="13" />
 		<osm-tag key="winter_road" value="yes" zoom-appear="13" />
-		
+
+		<!-- Natural Earth roads / ferry routes (overview map) -->
+		<osm-tag key="ne_highway" value="motorway" renderable="false"/>
+		<osm-tag key="ne_route" value="ferry" renderable="false"/>
+
 		<!-- highway restriction -->
 		<osm-tag key="motor_vehicle" value="no" zoom-appear="15" />
 
@@ -574,9 +604,9 @@
 		<osm-tag key="natural" value="tree_row" zoom-appear="14" />
 		<osm-tag key="natural" value="valley" zoom-appear="12" />
 		<osm-tag key="natural" value="volcano" zoom-appear="12" />
-		<osm-tag key="natural" value="water" zoom-appear="8" />
+		<osm-tag key="natural" value="water" zoom-appear="7" min-pixel-size="2" />
 		<osm-tag key="natural" value="wetland" zoom-appear="12" />
-		<osm-tag key="natural" value="wood" zoom-appear="9" />		
+		<osm-tag key="natural" value="wood" zoom-appear="10" />
 
 		<osm-tag key="waterway" value="canal" zoom-appear="10" />
 		<osm-tag key="waterway" value="dam" zoom-appear="12" />
@@ -624,7 +654,7 @@
 		<osm-tag key="landuse" value="farm" zoom-appear="14" />
 		<osm-tag key="landuse" value="farmland" zoom-appear="14" />
 		<osm-tag key="landuse" value="farmyard" zoom-appear="14" />
-		<osm-tag key="landuse" value="forest" zoom-appear="7" />
+		<osm-tag key="landuse" value="forest" zoom-appear="7" min-pixel-size="9"/>
 		<osm-tag key="landuse" value="grass" zoom-appear="12" />
 		<osm-tag key="landuse" value="greenfield" zoom-appear="14" />
 		<osm-tag key="landuse" value="hop_garden" zoom-appear="13" />
@@ -641,7 +671,7 @@
 		<osm-tag key="landuse" value="retail" zoom-appear="13" />
 		<osm-tag key="landuse" value="village_green" zoom-appear="14" />
 		<osm-tag key="landuse" value="vineyard" zoom-appear="13" />		
-		<osm-tag key="landuse" value="wood" zoom-appear="9" />
+		<osm-tag key="landuse" value="wood" zoom-appear="10" />
 	</ways>
 
 	<!-- LEISURE/SPORT TAGS -->
@@ -804,7 +834,7 @@
 		<osm-tag key="railway" value="tram_stop" zoom-appear="15" />
 		<osm-tag key="railway" value="turntable" zoom-appear="13" />
 		
-		<osm-tag key="route" value="ferry" zoom-appear="8" />
+		<osm-tag key="route" value="ferry" zoom-appear="10" />
 				
 		<osm-tag key="service" value="siding" zoom-appear="13" />
 		<osm-tag key="service" value="spur" zoom-appear="13" />

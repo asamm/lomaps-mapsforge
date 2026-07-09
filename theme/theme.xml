@@ -396,18 +396,24 @@
 		</rule>
 	</rule>
 	<rule e="way" k="highway" v="*" zoom-min="7" zoom-max="8">
+		<!-- Primary and motorway case lines -->
 		<rule e="way" k="highway" v="primary" zoom-min="7" zoom-max="7">
 			<line stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
 		<rule e="way" k="highway" v="motorway" zoom-min="7" zoom-max="7">
 			<line stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
+		<!-- Primary and motorway cores -->
 		<rule e="way" k="highway" v="primary">
 			<line stroke="#ff8c00" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
 		<rule e="way" k="highway" v="motorway">
 			<line stroke="#FF4500" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
+	</rule>
+	<!-- OVERVIEW MAP FERRY -->
+	<rule e="way" k="ne_route" v="ferry" zoom-min="7" zoom-max="9">
+		<line stroke="#707070" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
 	</rule>
 	<!-- OVERVIEW MAP PLACES -->
 	<rule e="any" k="ne_place" v="*" zoom-max="9">
@@ -999,7 +1005,7 @@
 		</rule>
 		<rule e="way" k="intermittent" v="~|no|false">
 			<rule e="way" k="landuse|natural" v="reservoir|basin|water" zoom-min="7">
-				<rule e="way" k="*" v="*" closed="yes">
+				<rule e="way" k="ne_min_zoom" v="~" closed="yes">
 					<area fill="#94C3E6"/>
 				</rule>
 				<rule e="way" k="*" v="*" closed="no">
