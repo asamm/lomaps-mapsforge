@@ -414,7 +414,7 @@
 	<rule e="way" k="ne_highway" v="*" zoom-min="5"	zoom-max="6">
 
 		<rule e="way" k="ne_highway" v="motorway" zoom-min="5"	zoom-max="6">
-			<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z6 + $highway_case_lowlevel/2}" stroke-linejoin="round"/>
+			<line stroke="$color_white" stroke-width="${motorway_width_z6 + $highway_case_lowlevel/2}" stroke-linejoin="round"/>
 		</rule>
 		<rule e="way" k="ne_highway" v="motorway">
 			<line stroke="$color_motorway_z6" stroke-width="$motorway_width_z6" stroke-linejoin="round"/>
@@ -424,10 +424,10 @@
 	<rule e="way" k="highway" v="*" zoom-min="7" zoom-max="8">
 		<!-- Primary and motorway case lines -->
 		<rule e="way" k="highway" v="primary" zoom-min="7"	zoom-max="7">
-			<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
+			<line stroke="$color_white" stroke-width="${primary_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
 		<rule e="way" k="highway" v="motorway" zoom-min="7"	zoom-max="7">
-			<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
+			<line stroke="$color_white" stroke-width="${motorway_width_z7 + $highway_case_lowlevel/2}" stroke-linejoin="round" stroke-linecap="round"/>
 		</rule>
 		<!-- Primary and motorway cores -->
 		<rule e="way" k="highway" v="primary">
@@ -441,7 +441,7 @@
 
 	<!-- OVERVIEW MAP FERRY -->
 	<rule e="way" k="ne_route" v="ferry" zoom-min="7" zoom-max="9">
-		<line stroke="$color_gray_707070" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
+		<line stroke="$color_gray_medium" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
 	</rule>
 
 	<!-- OVERVIEW MAP PLACES -->
@@ -466,7 +466,7 @@
 		<!-- City names -->
 		<rule e="any" k="ne_place" v="city" zoom-min="5" zoom-max="7">
 			<rule e="any" k="rank" v="1|2" zoom-min="5" zoom-max="5">
-				<circle r="3" stroke="$color_gray_626262" stroke-width="1"/>
+				<circle r="3" stroke="$color_gray" stroke-width="1"/>
 				<rule e="any" k="capital" v="yes" >
 					<caption k="name" dy="11"  text-transform="uppercase" font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
 						 stroke="$color_white" stroke-width="${0.4*$text_halo}" priority="$priority_ne_city_capital" text-wrap-width="$text_wrap_standard"/>
@@ -477,7 +477,7 @@
 				</rule>
             </rule>
 			<rule e="any" k="rank" v="1|2|3|4|5|6|7|8" zoom-min="6" zoom-max="7">
-				<circle r="3" stroke="$color_gray_626262" stroke-width="1"/>
+				<circle r="3" stroke="$color_gray" stroke-width="1"/>
 				<rule e="any" k="capital" v="yes" >
 					<caption k="name" dy="11" text-transform="uppercase" font-family="sans_serif"  font-size="13" fill="$color_standard_poi_text"
 						 stroke="$color_white" stroke-width="${0.4*$text_halo}" priority="$priority_ne_city_capital" text-wrap-width="$text_wrap_standard"/>
@@ -492,12 +492,12 @@
 		<!-- Town names -->
 		<rule e="node" k="ne_place" v="town" zoom-min="6" zoom-max="7">
 			<rule e="any" k="rank" v="1|2|3|4" zoom-min="6" zoom-max="6">
-				<circle r="3" stroke="$color_gray_626262" stroke-width="1"/>
+				<circle r="3" stroke="$color_gray" stroke-width="1"/>
 					<caption k="name" dy="11"  font-family="sans_serif"  font-size="10" fill="$color_standard_poi_text"
 						 stroke="$color_white" stroke-width="${0.4*$text_halo}" priority="$priority_ne_town" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 			<rule e="node" k="rank" v="1|2|3|4|5|6|7|8" zoom-min="7" zoom-max="7">
-				<circle r="3" stroke="$color_gray_626262" stroke-width="1"/>
+				<circle r="3" stroke="$color_gray" stroke-width="1"/>
 				<caption k="name" dy="11"  font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
 						 stroke="$color_white" stroke-width="${0.4*$text_halo}" priority="$priority_ne_town" text-wrap-width="$text_wrap_standard"/>
 			</rule>
@@ -537,7 +537,7 @@
 				<rule e="way" k="landuse" v="quarry">
 					<area fill="$color_landuse_quarry"/>
 					<rule e="way" k="*" v="*" zoom-min="14">
-						<line stroke="$color_gray_797979" dy="0.7" stroke-width="1.5" stroke-dasharray="0.5,3" stroke-linecap="butt"/>
+						<line stroke="$color_gray_medium" dy="0.7" stroke-width="1.5" stroke-dasharray="0.5,3" stroke-linecap="butt"/>
 					</rule>
 				</rule>
 			</rule>
@@ -565,7 +565,7 @@
 					<area fill="$color_landuse_residential_win"/>
 				</rule>
 				<rule e="way" k="landuse" v="quarry|farmyard|industrial|brownfield|railway|construction|greenfield|brownfield">
-					<area fill="$color_gray_cecece"/>
+					<area fill="$color_gray_ultra_light"/>
 				</rule>
 			</rule>
 		</rule>
@@ -575,10 +575,10 @@
 			<!-- wood for SUMMER -->
 			<rule cat="base_summer" e="way" k="*" v="*" >
 				<rule e="way" k="*" v="*" zoom-max="13">
-					<area fill="$opacity($color_forest_summer_z13, 50)"/>
+					<area fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 				</rule>
 				<rule e="way" k="natural|landuse" v="forest|wood" zoom-min="14">
-					<area fill="$opacity($color_forest_summer_z13, 50)"/>
+					<area fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 					<rule e="way" k="leaf_type" v="*" zoom-min="15">
 						<rule e="way" k="leaf_type" v="needleleaved">
 							<area src="file:patterns/wood_coniferous_transparent.svg" symbol-width="48"/>
@@ -613,13 +613,13 @@
 			<!-- forest for CAR -->
 			<rule cat="base_car" e="way" k="*" v="*" zoom-min="13">
 				<rule e="way" k="natural|landuse" v="forest|wood|scrub">
-					<area fill="$opacity($color_forest_summer_z13, 50)"/>
+					<area fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 				</rule>
 			</rule>
 			<!-- wood for CITY -->
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
 				<rule e="way" k="natural|landuse" v="forest|wood|scrub">
-					<area fill="$opacity($color_forest_summer_z13, 50)"/>
+					<area fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 				</rule>
 			</rule>
 			<!-- wood captions only in topo styles -->
@@ -671,8 +671,8 @@
 
 			<rule e="way" k="natural" v="arete" zoom-min="12">
 				<rule e="way" k="natural" v="arete" zoom-min="12" zoom-max="14">
-					<line stroke="${$opacity($color_gray_8a8a8a,60)}" stroke-width="0.4"/>
-					<line stroke="${$opacity($color_gray_8a8a8a,40)}" stroke-width="1.2" stroke-dasharray="0.5,2"/>
+					<line stroke="${$opacity($color_gray_light,60)}" stroke-width="0.4"/>
+					<line stroke="${$opacity($color_gray_light,40)}" stroke-width="1.2" stroke-dasharray="0.5,2"/>
 					<lineSymbol src="file:symbols/poi_arete.svg" repeat="true" repeat-gap="0" repeat-start="0" symbol-width="16" position="center" display="always" />
 				</rule>
 				<rule e="way" k="natural" v="arete" zoom-min="15" >
@@ -685,7 +685,7 @@
 					<area src="file:patterns/bare_rock.png" symbol-width="96"/>
 				</rule>
 				<rule e="way" k="natural" v="cliff" zoom-min="14">
-					<line stroke="$color_gray_8a8a8a" stroke-width="0.2"/>
+					<line stroke="$color_gray_light" stroke-width="0.2"/>
 					<lineSymbol src="file:symbols/poi_cliff_way.svg" dy="0.1" repeat="true" repeat-gap="5" repeat-start="0" symbol-orientation="left" symbol-width="8" position="below" display="always" />
 				</rule>
 				<rule e="way" k="natural" v="grassland" closed="yes" zoom-min="15">
@@ -700,11 +700,11 @@
 			</rule>
 			<!-- Natural captions -->
 			<rule e="way" k="natural" v="heath|marsh|wetland|cliff" zoom-min="15">
-				<caption k="name" font-style="normal" font-family="default" font-size="11" fill="$color_gray_797979"
+				<caption k="name" font-style="normal" font-family="default" font-size="11" fill="$color_gray_medium"
 						 stroke="$color_white" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 			<rule e="way" k="natural" v="valley" zoom-min="14" zoom-max="17" closed="no">
-				<pathText k="name" dy="4.7" font-style="italic" font-family="default" font-size="17" fill="$color_gray_797979" stroke="$color_white" stroke-width="1.5"/>
+				<pathText k="name" dy="4.7" font-style="italic" font-family="default" font-size="17" fill="$color_gray_medium" stroke="$color_white" stroke-width="1.5"/>
 			</rule>
 		</rule>
 
@@ -720,10 +720,10 @@
 			</rule>
 			<rule e="way" k="man_made" v="breakwater|groyne" zoom-min="14">
 				<rule e="way" k="*" v="*" closed="no">
-					<line stroke="$opacity($color_gray_707070, 45)" stroke-width="0.3" stroke-linecap="butt"/>
+					<line stroke="$opacity($color_gray_medium, 45)" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="*" v="*" closed="yes">
-					<area fill="$opacity($color_gray_707070, 45)"/>
+					<area fill="$opacity($color_gray_medium, 45)"/>
 				</rule>
 			</rule>
 		</rule>
@@ -733,13 +733,13 @@
 			<area fill="$color_landuse_quarry"/>
 		</rule>
 		<rule cat="base_winter" e="way" k="power" v="generator|station|sub_station|substation" zoom-min="12" closed="yes">
-			<area fill="$color_gray_cecece"/>
+			<area fill="$color_gray_ultra_light"/>
 		</rule>
 		<!-- parks render after citi areas -->
 		<rule e="way" k="leisure|landuse" v="park|village_green|recreation_ground" zoom-min="12" closed="yes">
 			<!-- parks City -->
 			<rule cat="base_city" e="way" k="*" v="*" zoom-min="13">
-				<area fill="$opacity($color_park_orchard_summer, 50)"/>
+				<area fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="$color_attraction_poi_text"
 							 stroke="$color_white" stroke-width="3" position="below" priority="$priority_poi_caption_cat2"
@@ -747,9 +747,9 @@
 				</rule>
 			</rule>
 			<rule cat="base_summer" e="way" k="*" v="*">
-				<area fill="$opacity($color_park_orchard_summer, 50)"/>
+				<area fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="${darken(opacity($color_park_orchard_summer,100), 40)}"
+					<caption k="name" dy="11"  font-family="sans_serif" font-size="12" fill="${darken(opacity($color_forest_summer_orchard_z13,100), 40)}"
 							 stroke="$color_white" stroke-width="3" position="below" priority="$priority_poi_caption_cat2"
 							 text-wrap-width="$text_wrap_standard"/>
 				</rule>
@@ -764,7 +764,7 @@
 				</rule>
 			</rule>
 			<rule cat="base_car" e="way" k="leisure" v="park" zoom-min="13">
-				<area fill="$opacity($color_park_orchard_summer, 50)"/>
+				<area fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<caption k="name" dy="12" font-style="bold" font-family="sans_serif" font-size="17" fill="$color_wood_label"
 							 stroke="$color_white" stroke-width="3" position="below" priority="$priority_poi_caption_cat2" text-wrap-width="$text_wrap_standard"/>
@@ -921,7 +921,7 @@
 			<!-- Closed Golf, playground winter -->
 			<rule cat="base_winter" e="way" k="leisure" v="*" zoom-min="13" closed="yes">
 				<rule e="way" k="leisure" v="stadium|sports_centre|water_park">
-					<area stroke="$color_gray_cecece" stroke-width="0.3"/>
+					<area stroke="$color_gray_ultra_light" stroke-width="0.3"/>
 				</rule>
 				<rule e="way" k="leisure" v="golf_course|common|green">
 					<area fill="$color_leisure_green_winter"/>
@@ -1049,19 +1049,19 @@
 		</rule>
 		<!-- EMBANKMENT -->
 		<rule cat="base_topo" e="way" k="natural" v="earth_bank" zoom-min="16">
-			<line stroke="$color_gray_797979" stroke-width="0.15" curve="cubic"/>
+			<line stroke="$color_gray_medium" stroke-width="0.15" curve="cubic"/>
 			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16">
-				<line stroke="$color_gray_797979" dy="0.8" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic"/>
+				<line stroke="$color_gray_medium" dy="0.8" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
-				<line stroke="$color_gray_797979" dy="1.0" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic"/>
+				<line stroke="$color_gray_medium" dy="1.0" stroke-width="1" stroke-dasharray="0.5,3" stroke-linecap="butt" curve="cubic"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="18">
-				<line stroke="$color_gray_797979" dy="1.3" stroke-width="1.1" stroke-dasharray="0.5,4" stroke-linecap="butt" curve="cubic"/>
+				<line stroke="$color_gray_medium" dy="1.3" stroke-width="1.1" stroke-dasharray="0.5,4" stroke-linecap="butt" curve="cubic"/>
 			</rule>
 		</rule>
 		<rule cat="base_topo" e="way" k="barrier|natural" v="ditch|gully" zoom-min="15">
-			<line stroke="$color_gray_797979" stroke-width="0.15" curve="cubic"/>
+			<line stroke="$color_gray_medium" stroke-width="0.15" curve="cubic"/>
 		</rule>
 		<!-- WATERS -->
 		<rule e="way" k="leisure" v="swimming_pool" zoom-min="15">
@@ -1164,11 +1164,11 @@
 			<!-- waterway bridges-->
 			<rule e="way" k="bridge" v="yes|aqueduct|movable" zoom-min="14">
 				<rule e="way" k="waterway" v="ditch|drain|stream">
-					<line stroke="$color_gray_333333" stroke-width="0.5" stroke-linecap="butt"/>
+					<line stroke="$color_gray_dark" stroke-width="0.5" stroke-linecap="butt"/>
 					<line stroke="$color_sea" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="waterway" v="canal|river">
-					<line stroke="$color_gray_333333" stroke-width="1.5" stroke-linecap="butt"/>
+					<line stroke="$color_gray_dark" stroke-width="1.5" stroke-linecap="butt"/>
 					<line stroke="$color_sea" stroke-width="1.2" stroke-linecap="butt"/>
 				</rule>
 			</rule>
@@ -1194,12 +1194,12 @@
 				<line stroke="$color_sea" stroke-width="1"/>
 			</rule>
 			<rule e="way" k="waterway" v="weir">
-				<line stroke="$color_gray_707070" stroke-width="0.5" stroke-dasharray="0.2,2" stroke-linecap="butt"/>
-				<line stroke="$color_gray_707070" stroke-width="0.1"/>
+				<line stroke="$color_gray_medium" stroke-width="0.5" stroke-dasharray="0.2,2" stroke-linecap="butt"/>
+				<line stroke="$color_gray_medium" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="waterway" v="dam" zoom-min="9">
-				<area fill="$color_gray_d4d4d4"/>
-				<line stroke="${darken($color_gray_d4d4d4, 10)}" stroke-width="0.2"/>
+				<area fill="$color_gray_ultra_light"/>
+				<line stroke="${darken($color_gray_ultra_light, 10)}" stroke-width="0.2"/>
 				<rule e="way" k="*" v="*" zoom-min="15">
 					<caption k="name" dy="11"  font-style="bold" font-family="sans_serif" font-size="14" fill="$color_tourism_poi_text" stroke="$color_white" stroke-width="1.5" text-wrap-width="$text_wrap_standard"/>
 				</rule>
@@ -1216,7 +1216,7 @@
 			</rule>
 			<rule e="way" k="wetland" v="marsh|swamp|bog|fen|wet_meadow|reedbed|saltmarsh">
 				<rule e="way" k="wetland" v="swamp">
-					<area cat="base_summer" fill="$opacity($color_forest_summer_z13, 50)"/>
+					<area cat="base_summer" fill="$opacity($color_forest_summer_orchard_z13, 50)"/>
 					<area cat="base_winter" fill="$opacity($color_forest_winter_z13, 50)"/>
 				</rule>
 				<area src="file:patterns/marsh.svg" symbol-width="28"/>
@@ -1228,40 +1228,40 @@
 		</rule>
 		<!-- parking areas -->
 		<rule e="any" k="amenity" v="parking" zoom-min="14" closed="yes">
-			<area fill="${lighten($color_gray_c1c1c1, 75)}" stroke="$color_unclassified_case" stroke-width="${$highway_case_z16/2}" />
+			<area fill="${lighten($color_gray_ultra_light, 75)}" stroke="$color_unclassified_case" stroke-width="${$highway_case_z16/2}" />
 		</rule>
 
 		<!-- runways casings and areas -->
 		<rule e="way" k="aeroway" v="*" zoom-min="12">
 			<rule e="way" k="aeroway" v="runway">
-				<area fill="$color_gray_c1c1c1"/>
+				<area fill="$color_gray_ultra_light"/>
 			</rule>
 			<rule e="way" k="aeroway" v="*" closed="yes">
 				<rule e="way" k="aeroway" v="aerodrome">
 					<area fill="$opacity($color_aerodrome_area, 15)"/>
 				</rule>
 				<rule e="way" k="aeroway" v="taxiway">
-					<area fill="$color_gray_c1c1c1"/>
+					<area fill="$color_gray_ultra_light"/>
 				</rule>
 			</rule>
 			<rule e="way" k="aeroway" v="*" closed="no">
 				<rule e="way" k="aeroway" v="runway" zoom-min="9">
-					<line stroke="$color_gray_c1c1c1" stroke-width="5" stroke-linecap="square"/>
+					<line stroke="$color_gray_ultra_light" stroke-width="5" stroke-linecap="square"/>
 				</rule>
 				<rule e="way" k="aeroway" v="taxiway" zoom-min="11">
-					<line stroke="$color_gray_c1c1c1" stroke-width="2" stroke-linecap="butt"/>
+					<line stroke="$color_gray_ultra_light" stroke-width="2" stroke-linecap="butt"/>
 				</rule>
 			</rule>
 			<rule e="way" k="aeroway" v="*" closed="no">
 			</rule>
 			<rule e="way" k="aeroway" v="apron" zoom-min="12">
-				<area fill="$color_gray_d7d7d7"/>
+				<area fill="$color_gray_ultra_light"/>
 			</rule>
 			<rule e="way" k="aeroway" v="terminal" zoom-min="14">
 				<area fill="$color_sport_area"/>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="15">
-				<caption k="name" font-style="italic" font-family="serif" font-size="14" fill="$color_gray_333333" stroke="$color_white" stroke-width="2.5" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name" font-style="italic" font-family="serif" font-size="14" fill="$color_gray_dark" stroke="$color_white" stroke-width="2.5" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
 		<!-- military -->
@@ -1269,10 +1269,10 @@
 			<rule e="way" k="*" v="*">
 				<area fill="$opacity($color_military_fill, 14.7)"/>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-					<line stroke="$opacity($color_military_case2, 55)" stroke-width="1" stroke-dasharray="9,3" stroke-linecap="butt"/>
+					<line stroke="$opacity($color_military_fill, 55)" stroke-width="1" stroke-dasharray="9,3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<line stroke="$opacity($color_military_case, 45)" stroke-width="0.8" stroke-dasharray="12,5" stroke-linecap="butt"/>
+					<line stroke="$opacity($color_military_fill, 45)" stroke-width="0.8" stroke-dasharray="12,5" stroke-linecap="butt"/>
 				</rule>
 			</rule>
 		</rule>
@@ -1287,26 +1287,26 @@
 		<!-- platform cores -->
 		<rule cat="no_car" e="way" k="highway|railway|public_transport" v="platform" zoom-min="14">
 			<rule e="way" k="*" v="*" closed="yes">
-				<area fill="$color_gray_c1c1c1"/>
+				<area fill="$color_gray_ultra_light"/>
 			</rule>
 			<rule e="way" k="*" v="*" closed="no">
-				<line stroke="$color_gray_c1c1c1" stroke-width="0.2"/>
+				<line stroke="$color_gray_ultra_light" stroke-width="0.2"/>
 			</rule>
 		</rule>
 		<!-- building for CITY -->
 		<rule cat="base_city" e="way" k="building|historic" v="*" zoom-min="15">
 			<area fill="$color_building_city_fill" stroke-width="0.1"/>
 			<rule e="way" k="building|amenity" v="commercial|industrial|retail|warehouse">
-				<area fill="$color_gray_d0d0d0" stroke="$color_gray_d4d4d4" stroke-width="0.1"/>
+				<area fill="$color_gray_ultra_light" stroke="$color_gray_ultra_light" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="building|amenity|historic" v="place_of_worship|cathedral|chapel|church|mosque|temple|synagogue|shrine|stadium|theatre|library|castle|monument">
-				<area fill="$color_building_worship_fill" stroke="$color_gray_d4d4d4" stroke-width="0.1"/>
+				<area fill="$color_building_worship_fill" stroke="$color_gray_ultra_light" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="building|amenity" v="train_station|transportation|bus_station">
-				<area fill="$color_building_station_fill" stroke="$color_gray_d4d4d4" stroke-width="0.1"/>
+				<area fill="$color_building_station_fill" stroke="$color_gray_ultra_light" stroke-width="0.1"/>
 			</rule>
 			<rule e="way" k="building|amenity" v="hospital">
-				<area fill="$color_building_hospital_fill" stroke="$color_gray_d4d4d4" stroke-width="0.1"/>
+				<area fill="$color_building_hospital_fill" stroke="$color_gray_ultra_light" stroke-width="0.1"/>
 			</rule>
 		</rule>
 		<!-- building for topo maps-->
@@ -1326,9 +1326,9 @@
 		</rule>
 		<!-- building for CAR -->
 		<rule cat="base_car" e="way" k="building" v="*" zoom-min="16">
-			<area fill="$color_gray_d0d0d0"/>
+			<area fill="$color_gray_ultra_light"/>
 			<rule e="way" k="*" v="*" zoom-min="17">
-				<caption k="name" dy="11"  font-family="sans_serif" font-size="11" fill="$color_gray_333333" stroke="$color_white" stroke-width="1" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name" dy="11"  font-family="sans_serif" font-size="11" fill="$color_gray_dark" stroke="$color_white" stroke-width="1" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 		</rule>
 		<!-- non-physical boundaries -->
@@ -1385,13 +1385,13 @@
 			</rule>
 			<rule e="way" k="boundary" v="national_park" zoom-min="10">
 				<rule e="way" k="*" v="*" zoom-min="10" zoom-max="13">
-					<line stroke="$opacity($color_national_park_border2, 80)" stroke-width="5" stroke-dasharray="20, 12" stroke-linecap="butt"/>
+					<line stroke="$opacity($color_national_park_case, 80)" stroke-width="5" stroke-dasharray="20, 12" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-					<line stroke="$opacity($color_national_park_border, 55)" stroke-width="3" stroke-dasharray="22, 12" stroke-linecap="butt"/>
+					<line stroke="$opacity($color_national_park_case, 55)" stroke-width="3" stroke-dasharray="22, 12" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16" >
-					<line stroke="$opacity($color_national_park_border, 55)" stroke-width="1.5" stroke-dasharray="22, 12" stroke-linecap="butt"/>
+					<line stroke="$opacity($color_national_park_case, 55)" stroke-width="1.5" stroke-dasharray="22, 12" stroke-linecap="butt"/>
 				</rule>
 
 				<rule e="way" k="*" v="*" zoom-max="15">
@@ -1402,10 +1402,10 @@
 		</rule>
 		<!-- ferry routes -->
 		<rule e="way" k="route" v="ferry" zoom-max="12">
-			<line stroke="$color_gray_707070" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
+			<line stroke="$color_gray_medium" stroke-width="1" stroke-dasharray="15,10" stroke-linecap="butt"/>
 		</rule>
 		<rule e="way" k="route" v="ferry" zoom-min="13">
-			<line stroke="$color_gray_707070" stroke-width="0.5" stroke-dasharray="15,10" stroke-linecap="butt"/>
+			<line stroke="$color_gray_medium" stroke-width="0.5" stroke-dasharray="15,10" stroke-linecap="butt"/>
 		</rule>
 		<!-- turning circles -->
 		<rule e="any" k="highway" v="turning_circle" zoom-min="14">
@@ -1413,10 +1413,10 @@
 				<circle r="1.6" scale-radius="true" fill="$color_unclassified_case"/>
 			</rule>
 			<rule cat="highways_city" e="any" k="*" v="*">
-				<circle r="1.6" scale-radius="true" fill="$color_gray_707070"/>
+				<circle r="1.6" scale-radius="true" fill="$color_gray_medium"/>
 			</rule>
 			<rule cat="highways_car" e="any" k="*" v="*">
-				<circle r="1.7" scale-radius="true" fill="$color_gray_707070"/>
+				<circle r="1.7" scale-radius="true" fill="$color_gray_medium"/>
 			</rule>
 		</rule>
 
@@ -1426,11 +1426,11 @@
 			<rule e="way" k="highway|route|mtb:scale|osmc_color|toll|amenity" v="*">
 				<!-- OUTLINE FOR HIGHWAY AREA -->
 				<rule e="way" k="highway" v="footway|footpath|path|pedestrian" zoom-min="14" closed="yes">
-					<area stroke="$color_gray_d0d0d0" stroke-width="0.1"/>
+					<area stroke="$color_gray_ultra_light" stroke-width="0.1"/>
 				</rule>
 				<rule e="way" k="area" v="yes">
 					<rule e="way" k="highway" v="residential|service|living_street|unclassified|road" zoom-min="14">
-						<area stroke="$color_gray_d0d0d0" stroke-width="0.1"/>
+						<area stroke="$color_gray_ultra_light" stroke-width="0.1"/>
 					</rule>
 				</rule>
 				<!-- CORE for highway areas  -->
@@ -2212,7 +2212,7 @@
 							<line stroke="$color_black" stroke-width="0.3" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="highway" v="unclassified|service|residential|living_street|road" zoom-max="15">
-							<line stroke="$color_gray_d0d0d0" stroke-width="0.3" stroke-linecap="butt"/>
+							<line stroke="$color_gray_ultra_light" stroke-width="0.3" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="highway" v="cycleway" zoom-min="14">
 							<line stroke="$color_black" stroke-width="0.5" stroke-linecap="butt"/>
@@ -2414,31 +2414,31 @@
 								<line stroke="$color_white" stroke-width="0.4"/>
 							</rule>
 							<rule e="way" k="highway" v="cycleway|pedestrian" zoom-min="15">
-								<line stroke="$color_gray_707070" stroke-width="0.5"/>
+								<line stroke="$color_gray_medium" stroke-width="0.5"/>
 							</rule>
 							<rule e="way" k="highway" v="unclassified|service|road" zoom-min="15">
-								<line stroke="$color_gray_707070" stroke-width="0.9"/>
+								<line stroke="$color_gray_medium" stroke-width="0.9"/>
 							</rule>
 							<rule e="way" k="highway" v="residential|living_street" zoom-min="15">
-								<line stroke="$color_gray_707070" stroke-width="1.1"/>
+								<line stroke="$color_gray_medium" stroke-width="1.1"/>
 							</rule>
 							<rule e="way" k="highway" v="tertiary_link|secondary_link|primary_link">
-								<line stroke="$color_gray_707070" stroke-width="1.3" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="1.3" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="trunk_link|motorway_link">
-								<line stroke="$color_gray_707070" stroke-width="1.5" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="1.5" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="tertiary|raceway">
-								<line stroke="$color_gray_707070" stroke-width="1.5" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="1.5" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="secondary">
-								<line stroke="$color_gray_707070" stroke-width="1.8" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="1.8" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="primary">
-								<line stroke="$color_gray_707070" stroke-width="2.3" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="2.3" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="trunk|motorway">
-								<line stroke="$color_gray_707070" stroke-width="3" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="3" stroke-linecap="butt"/>
 							</rule>
 						</rule>
 					</rule>
@@ -2452,17 +2452,17 @@
 						<rule e="way" k="*" v="*" zoom-min="9" zoom-max="10" gen_section="to_tunnel">
 
 							<rule e="way" k="highway" v="primary">
-								<line stroke="$color_highway_lowzoom_case" stroke-width="${primary_width_z8 + $highway_case_lowlevel}"/>
+								<line stroke="$color_white" stroke-width="${primary_width_z8 + $highway_case_lowlevel}"/>
 							</rule>
 							<rule e="way" k="highway" v="trunk">
-								<line stroke="$color_highway_lowzoom_case" stroke-width="${trunk_width_z8 + $highway_case_lowlevel}"/>
+								<line stroke="$color_white" stroke-width="${trunk_width_z8 + $highway_case_lowlevel}"/>
 							</rule>
 							<rule e="way" k="highway" v="motorway">
-								<line stroke="$color_highway_lowzoom_case" stroke-width="${motorway_width_z8 + $highway_case_lowlevel}" stroke-linejoin="round"/>
+								<line stroke="$color_white" stroke-width="${motorway_width_z8 + $highway_case_lowlevel}" stroke-linejoin="round"/>
 							</rule>
 							<rule e="way" k="*" v="*" zoom-min="10" >
 								<rule e="way" k="highway" v="secondary_link|secondary">
-									<line stroke="$color_highway_lowzoom_case" stroke-width="${secondary_width_z10 + $highway_case_lowlevel}"/>
+									<line stroke="$color_white" stroke-width="${secondary_width_z10 + $highway_case_lowlevel}"/>
 								</rule>
 							</rule>
 						</rule>
@@ -2655,19 +2655,19 @@
 						<!-- === CAR outline highways > 16 -->
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<rule e="way" k="highway" v="cycleway|bridleway">
-								<line stroke="$color_gray_707070" stroke-width="0.4"/>
+								<line stroke="$color_gray_medium" stroke-width="0.4"/>
 							</rule>
 							<rule e="way" k="highway" v="construction">
-								<line stroke="$color_gray_707070" stroke-width="0.8" stroke-dasharray="5,2"/>
+								<line stroke="$color_gray_medium" stroke-width="0.8" stroke-dasharray="5,2"/>
 							</rule>
 							<rule e="way" k="highway" v="residential|living_street|service|unclassified|road">
-								<line stroke="$color_gray_707070" stroke-width="0.8"/>
+								<line stroke="$color_gray_medium" stroke-width="0.8"/>
 							</rule>
 							<rule e="way" k="highway" v="tertiary|raceway|tertiary_link">
-								<line stroke="$color_gray_707070" stroke-width="0.9" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="0.9" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="secondary_link">
-								<line stroke="$color_gray_707070" stroke-width="0.9" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="0.9" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="primary_link">
 								<line stroke="$color_primary_toll_case" stroke-width="1" stroke-linecap="butt"/>
@@ -2679,7 +2679,7 @@
 								<line stroke="$color_motorway_toll_case" stroke-width="1" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway" v="secondary">
-								<line stroke="$color_gray_707070" stroke-width="1.4" stroke-linecap="butt"/>
+								<line stroke="$color_gray_medium" stroke-width="1.4" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="highway|toll" v="primary">
 								<rule e="way" k="toll" v="yes" zoom-max="17">
@@ -2797,7 +2797,7 @@
 						<rule cat="base_summer" e="way" k="highway" v="path" >
 							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
-								<line stroke="$opacity($color_path_halo_translucent, 70)" stroke-width="$path_width_z14"/>
+								<line stroke="$opacity($color_white, 70)" stroke-width="$path_width_z14"/>
 								<line stroke="$color_path" stroke-width="$path_width_z14" stroke-dasharray="3,3" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible">
@@ -2825,7 +2825,7 @@
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="residential">
-							<line stroke="$color_unclassified" stroke-width="$unclassified_width_z13"/>
+							<line stroke="$color_white" stroke-width="$unclassified_width_z13"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="13" zoom-max="13" >
 							<rule e="way" k="highway" v="living_street|service|unclassified|road|service">
@@ -2835,7 +2835,7 @@
 
 						<rule e="way" k="*" v="*" zoom-min="14" >
 							<rule e="way" k="highway" v="living_street|service|unclassified|road|service">
-								<line stroke="$color_unclassified" stroke-width="$unclassified_width_z14"/>
+								<line stroke="$color_white" stroke-width="$unclassified_width_z14"/>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="raceway" zoom-min="13">
@@ -2886,7 +2886,7 @@
 						<rule e="way" k="highway" v="path" >
 							<rule e="way" k="trail_visibility" v="~|excellent|good|intermediate|yes|medium|low">
 								<!-- standard visibility for path -->
-								<line cat="base_summer" stroke="$opacity($color_path_halo_translucent, 70)" stroke-width="$path_width_z14"/> <!-- winter without white halo -->
+								<line cat="base_summer" stroke="$opacity($color_white, 70)" stroke-width="$path_width_z14"/> <!-- winter without white halo -->
 								<line stroke="$color_path" stroke-width="$path_width_z16" stroke-dasharray="4,4" stroke-linecap="butt"/>
 							</rule>
 							<rule e="way" k="trail_visibility" v="poor|very_bad|bad|horrible|no">
@@ -2901,7 +2901,7 @@
 
 						<rule e="way" k="highway" v="footway|corridor">
 							<rule e="way" k="indoor" v="~|no">
-								<line stroke="$opacity($color_footway_halo_winter, 25)" stroke-width="$footway_width_z16" />
+								<line stroke="$opacity($color_white, 25)" stroke-width="$footway_width_z16" />
 								<line stroke="$color_footway" stroke-width="$footway_width_z16" stroke-dasharray="1,6,4,6" />
 							</rule>
 							<!-- indor paths -->
@@ -2978,7 +2978,7 @@
 									</rule>
 								</rule>
 								<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway">
-									<line stroke="$color_gray_d5d5d5" stroke-width="${$unclassified_width_z16 * 0.7}"/>
+									<line stroke="$color_gray_ultra_light" stroke-width="${$unclassified_width_z16 * 0.7}"/>
 								</rule>
 							</rule>
 						</rule>
@@ -3104,7 +3104,7 @@
 					<!-- === CITY highways 9 - 13 -->
 					<rule e="way" k="*" v="*" zoom-min="8" zoom-max="12">
 						<rule e="way" k="highway" v="tertiary" zoom-min="12">
-							<line stroke="$color_gray_d5d5d5" stroke-width="0.8"/>
+							<line stroke="$color_gray_ultra_light" stroke-width="0.8"/>
 						</rule>
 						<rule e="way" k="highway" v="secondary" zoom-min="11">
 							<line stroke="$color_secondary_primary_city" stroke-width="0.7"/>
@@ -3125,34 +3125,34 @@
 					<rule e="way" k="*" v="*" zoom-min="13">
 						<rule e="way" k="highway" v="track" zoom-min="15">
 							<rule e="way" k="tracktype" v="grade1|grade2">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.3"/>
+								<line stroke="$color_gray_light" stroke-width="0.3"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" font-style="bold" font-size="10" stroke="$color_white" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade2">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.2"/>
+								<line stroke="$color_gray_light" stroke-width="0.2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" font-style="bold" font-size="10" stroke="$color_white" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade3">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.3" stroke-dasharray="16,6" stroke-linecap="butt"/>
+								<line stroke="$color_gray_light" stroke-width="0.3" stroke-dasharray="16,6" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" font-style="bold" font-size="10" stroke="$color_white" stroke-width="2.0"/>
 								</rule>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="steps" zoom-min="15">
-							<line stroke="$color_gray_747474" stroke-width="0.4" stroke-dasharray="1,2" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.4" stroke-dasharray="1,2" stroke-linecap="butt"/>
 							<pathText k="name" font-style="bold" font-size="10" stroke="$color_white" stroke-width="2"/>
 						</rule>
 						<rule e="way" k="highway" v="path|via_ferrata" zoom-min="15">
-							<line stroke="$color_gray_747474" stroke-width="0.2" stroke-dasharray="0.5,3,2,3"/>
+							<line stroke="$color_gray_medium" stroke-width="0.2" stroke-dasharray="0.5,3,2,3"/>
 						</rule>
 						<rule e="way" k="highway" v="footway|corridor" zoom-min="15">
 							<rule e="way" k="indoor" v="~|no">
-								<line stroke="$color_gray_747474" stroke-width="0.2" stroke-dasharray="0.5,3,2,3"/>
+								<line stroke="$color_gray_medium" stroke-width="0.2" stroke-dasharray="0.5,3,2,3"/>
 							</rule>
 							<!-- indor paths -->
 							<rule e="way" k="indoor|highway" v="yes|corridor">
@@ -3198,22 +3198,22 @@
 				<rule cat="highways_car" e="way" k="area" v="~|no|false">
 					<rule e="way" k="*" v="*" zoom-min="13">
 						<rule e="way" k="highway" v="construction">
-							<line stroke="$color_gray_9f9f9f" stroke-width="0.8" stroke-dasharray="5,2"/>
+							<line stroke="$color_gray_light" stroke-width="0.8" stroke-dasharray="5,2"/>
 							<rule e="way" k="*" v="*" zoom-min="14">
 								<pathText k="name" font-style="bold" font-size="15" stroke="$color_white" stroke-width="4.0"/>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road">
 							<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.2"/>
+								<line stroke="$color_gray_light" stroke-width="0.2"/>
 							</rule>
 							<rule e="way" k="*" v="*" zoom-min="15">
-								<line stroke="$color_gray_9c9c9c" stroke-width="0.5"/>
+								<line stroke="$color_gray_light" stroke-width="0.5"/>
 								<pathText k="name" font-style="bold" font-size="8" stroke="$color_white" stroke-width="4.0"/>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="cycleway|bridleway">
-							<line stroke="$color_gray_9c9c9c" stroke-width="0.2"/>
+							<line stroke="$color_gray_light" stroke-width="0.2"/>
 							<rule e="way" k="*" v="*" zoom-min="14">
 								<pathText k="name" dy="4.7" font-style="bold" font-size="10" stroke="$color_white" stroke-width="1.5"/>
 							</rule>
@@ -3254,18 +3254,18 @@
 					<rule e="way" k="*" v="*" zoom-min="12" zoom-max="14">
 						<rule e="way" k="*" v="*" zoom-min="13">
 							<rule e="way" k="highway" v="construction">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.8" stroke-dasharray="5,2"/>
+								<line stroke="$color_gray_light" stroke-width="0.8" stroke-dasharray="5,2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" font-style="bold" font-size="15" stroke="$color_white" stroke-width="4.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="highway" v="residential|living_street|service|unclassified|road">
 								<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-									<line stroke="$color_gray_9f9f9f" stroke-width="0.2"/>
+									<line stroke="$color_gray_light" stroke-width="0.2"/>
 								</rule>
 							</rule>
 							<rule e="way" k="highway" v="cycleway|bridleway">
-								<line stroke="$color_gray_9c9c9c" stroke-width="0.2"/>
+								<line stroke="$color_gray_light" stroke-width="0.2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" dy="4.7" font-style="bold" font-size="10" stroke="$color_white" stroke-width="1.5"/>
 								</rule>
@@ -3309,29 +3309,29 @@
 					<rule e="way" k="*" v="*" zoom-min="15">
 						<rule e="way" k="highway" v="track">
 							<rule e="way" k="tracktype" v="grade1|grade2">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.3"/>
+								<line stroke="$color_gray_light" stroke-width="0.3"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" font-style="bold" font-size="10" stroke="$color_white" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade2">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.2"/>
+								<line stroke="$color_gray_light" stroke-width="0.2"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" font-style="bold" font-size="10" stroke="$color_white" stroke-width="2.0"/>
 								</rule>
 							</rule>
 							<rule e="way" k="tracktype" v="grade3">
-								<line stroke="$color_gray_9f9f9f" stroke-width="0.3" stroke-dasharray="16,6" stroke-linecap="butt"/>
+								<line stroke="$color_gray_light" stroke-width="0.3" stroke-dasharray="16,6" stroke-linecap="butt"/>
 								<rule e="way" k="*" v="*" zoom-min="14">
 									<pathText k="name" font-style="bold" font-size="10" stroke="$color_white" stroke-width="2.0"/>
 								</rule>
 							</rule>
 						</rule>
 						<rule e="way" k="highway" v="footway|pedestrian">
-							<line stroke="$color_gray_9f9f9f" stroke-width="0.1"/>
+							<line stroke="$color_gray_light" stroke-width="0.1"/>
 						</rule>
 						<rule e="way" k="highway" v="construction">
-							<line stroke="$color_gray_d2d2d2" stroke-width="0.6"/>
+							<line stroke="$color_gray_ultra_light" stroke-width="0.6"/>
 							<pathText k="name" font-style="bold" font-size="15" stroke="$color_white" stroke-width="4.0"/>
 						</rule>
 						<rule e="way" k="highway" v="residential|living_street|service|unclassified|road">
@@ -3383,7 +3383,7 @@
 					<rule e="way" k="access" v="private|no">
 						<rule e="way" k="*" v="*" zoom-min="15">
 							<rule e="way" k="*" v="residential|living_street|service|unclassified|road|tertiary|raceway">
-								<line stroke="$color_gray_d5d5d5" stroke-width="0.6"/>
+								<line stroke="$color_gray_ultra_light" stroke-width="0.6"/>
 							</rule>
 						</rule>
 					</rule>
@@ -3428,7 +3428,7 @@
 		<rule cat="base_topo" e="way" k="railway" v="*">
 			<rule e="way" k="tunnel" v="~|false|no">
 				<rule e="way" k="railway" v="station" zoom-min="12">
-					<area fill="$color_railway_station_topo" stroke="$color_gray_707070" stroke-width="0.2"/>
+					<area fill="$color_railway_station_topo" stroke="$color_gray_medium" stroke-width="0.2"/>
 				</rule>
 				<!-- railway bridge casings -->
 				<rule e="way" k="bridge" v="yes|true">
@@ -3438,8 +3438,8 @@
 
 				<!-- railway casings and cores -->
 				<rule e="way" k="railway" v="tram|miniature" zoom-min="12" gen_section="railway_sec">
-					<line stroke="$color_gray_797979" stroke-width="0.3" stroke-linecap="butt"/>
-					<line stroke="$color_gray_797979" stroke-width="1.2" stroke-dasharray="0.3,4" stroke-linecap="butt"/>
+					<line stroke="$color_gray_medium" stroke-width="0.3" stroke-linecap="butt"/>
+					<line stroke="$color_gray_medium" stroke-width="1.2" stroke-dasharray="0.3,4" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="subway" zoom-min="13" gen_section="subway_sec">
 					<!-- workaround how to highlight only the main subway lines, not the depo lines (the main lines have almost defined the name) -->
@@ -3588,7 +3588,7 @@
 		<rule cat="base_city" e="way" k="railway" v="*">
 			<rule e="way" k="tunnel" v="~|false|no">
 				<rule e="way" k="railway" v="station" zoom-min="12">
-					<area fill="$color_railway_station_city" stroke="$color_gray_707070" stroke-width="0.2"/>
+					<area fill="$color_railway_station_city" stroke="$color_gray_medium" stroke-width="0.2"/>
 				</rule>
 				<!-- railway cores -->
 				<!-- tram for city theme -->
@@ -3600,26 +3600,26 @@
 					<generator action="$gen_action_copy_section" source_section="subway_sec"/>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|funicular" zoom-min="12">
-					<line stroke="$color_gray_707070" stroke-width="0.3" stroke-linecap="butt"/>
+					<line stroke="$color_gray_medium" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="rail">
 					<rule e="way" k="usage" v="branch|main">
 						<rule e="way" k="*" v="*" zoom-max="11">
-							<line stroke="$color_gray_d2d2d2" stroke-width="1" stroke-linecap="butt"/>
+							<line stroke="$color_gray_ultra_light" stroke-width="1" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="12">
-							<line stroke="$color_gray_707070" stroke-width="0.3" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.3" stroke-linecap="butt"/>
 						</rule>
 					</rule>
 					<rule e="way" k="service" v="*">
 						<rule e="way" k="*" v="*" zoom-min="16">
-							<line stroke="$color_gray_707070" stroke-width="0.1" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.1" stroke-linecap="butt"/>
 						</rule>
 					</rule>
 					<!-- fallback for railways without usage and service tags -->
 					<rule e="way" k="usage|service" v="~">
 						<rule e="way" k="*" v="*" zoom-min="11">
-							<line stroke="$color_gray_707070" stroke-width="0.3" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.3" stroke-linecap="butt"/>
 						</rule>
 					</rule>
 				</rule>
@@ -3646,50 +3646,50 @@
 		<rule cat="base_car" e="way" k="railway" v="*">
 			<rule e="way" k="tunnel" v="~|false|no">
 				<rule e="way" k="railway" v="station" zoom-min="12">
-					<area fill="$color_railway_station_city" stroke="$color_gray_707070" stroke-width="0.2"/>
+					<area fill="$color_railway_station_city" stroke="$color_gray_medium" stroke-width="0.2"/>
 				</rule>
 				<!-- railway cores -->
 				<!-- tram for car theme -->
 				<rule e="way" k="railway" v="tram" zoom-min="15">
-					<line stroke="$color_gray_707070" stroke-width="0.1" stroke-linecap="butt"/>
+					<line stroke="$color_gray_medium" stroke-width="0.1" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="subway" zoom-min="14">
-					<line stroke="$color_gray_707070" stroke-width="0.3" stroke-linecap="butt"/>
+					<line stroke="$color_gray_medium" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="narrow_gauge|light_rail|funicular" zoom-min="12">
-					<line stroke="$color_gray_707070" stroke-width="0.3" stroke-linecap="butt"/>
+					<line stroke="$color_gray_medium" stroke-width="0.3" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="railway" v="rail">
 					<rule e="way" k="usage" v="branch|main">
 						<rule e="way" k="*" v="*" zoom-min="11" zoom-max="14">
-							<line stroke="$color_gray_707070" stroke-width="1.5" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="1.5" stroke-linecap="butt"/>
 							<line stroke="$color_gray_ededed" stroke-width="1.1" stroke-linecap="butt"/>
-							<line stroke="$color_gray_707070" stroke-width="1.1" stroke-dasharray="13,13" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="1.1" stroke-dasharray="13,13" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="15">
-							<line stroke="$color_gray_707070" stroke-width="1.1" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="1.1" stroke-linecap="butt"/>
 							<line stroke="$color_gray_ededed" stroke-width="0.6" stroke-linecap="butt"/>
-							<line stroke="$color_gray_707070" stroke-width="0.6" stroke-dasharray="12,12" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.6" stroke-dasharray="12,12" stroke-linecap="butt"/>
 						</rule>
 					</rule>
 					<rule e="way" k="service" v="*">
 						<rule e="way" k="*" v="*" zoom-min="17">
-							<line stroke="$color_gray_707070" stroke-width="0.6" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.6" stroke-linecap="butt"/>
 							<line stroke="$color_gray_ededed" stroke-width="0.3" stroke-linecap="butt"/>
-							<line stroke="$color_gray_707070" stroke-width="0.3" stroke-dasharray="12,12" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.3" stroke-dasharray="12,12" stroke-linecap="butt"/>
 						</rule>
 					</rule>
 					<!-- fallback for railways without usage and service tags -->
 					<rule e="way" k="usage|service" v="~">
 						<rule e="way" k="*" v="*" zoom-min="11" zoom-max="14">
-							<line stroke="$color_gray_707070" stroke-width="1.5" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="1.5" stroke-linecap="butt"/>
 							<line stroke="$color_gray_ededed" stroke-width="1.1" stroke-linecap="butt"/>
-							<line stroke="$color_gray_707070" stroke-width="1.1" stroke-dasharray="13,13" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="1.1" stroke-dasharray="13,13" stroke-linecap="butt"/>
 						</rule>
 						<rule e="way" k="*" v="*" zoom-min="15">
-							<line stroke="$color_gray_707070" stroke-width="1.1" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="1.1" stroke-linecap="butt"/>
 							<line stroke="$color_gray_ededed" stroke-width="0.6" stroke-linecap="butt"/>
-							<line stroke="$color_gray_707070" stroke-width="0.6" stroke-dasharray="12,12" stroke-linecap="butt"/>
+							<line stroke="$color_gray_medium" stroke-width="0.6" stroke-dasharray="12,12" stroke-linecap="butt"/>
 						</rule>
 					</rule>
 				</rule>
@@ -3719,9 +3719,9 @@
 			</rule>
 			<rule cat="base_topo" e="way" k="man_made" v="pipeline" zoom-min="14">
 				<rule e="way" k="location" v="overground|overhead" zoom-min="14">
-					<line stroke="$color_gray_707070" dy="0.2" stroke-width="0.15" />
-					<line stroke="$color_gray_707070" dy="-0.2" stroke-width="0.15"/>
-					<line stroke="$color_gray_707070" stroke-width="0.8" stroke-dasharray="0.2,5" scale="all"/>
+					<line stroke="$color_gray_medium" dy="0.2" stroke-width="0.15" />
+					<line stroke="$color_gray_medium" dy="-0.2" stroke-width="0.15"/>
+					<line stroke="$color_gray_medium" stroke-width="0.8" stroke-dasharray="0.2,5" scale="all"/>
 					<line stroke="$color_map_background_land" stroke-width="0.6" stroke-dasharray="0.2,5" scale="all"/>
 					<rule e="way" k="bridge" v="yes" zoom-min="14">
 						<line stroke="$color_bridge_casing" dy="0.4" stroke-width="0.15" />
@@ -3731,8 +3731,8 @@
 			</rule>
 			<rule cat="base_topo" e="way" k="man_made" v="goods_conveyor" zoom-min="14">
 				<rule e="way" k="tunnel" v="no|~">
-					<line stroke="$color_gray_707070" stroke-width="0.15" />
-					<line stroke="$color_gray_707070" stroke-width="0.7" stroke-dasharray="2,2.5" scale="all" stroke-linecap="butt"/>
+					<line stroke="$color_gray_medium" stroke-width="0.15" />
+					<line stroke="$color_gray_medium" stroke-width="0.7" stroke-dasharray="2,2.5" scale="all" stroke-linecap="butt"/>
 					<rule e="way" k="bridge" v="yes" zoom-min="14">
 						<line stroke="$color_bridge_casing" dy="0.6" stroke-width="0.15" />
 						<line stroke="$color_bridge_casing" dy="-0.6" stroke-width="0.15"/>
@@ -3743,20 +3743,20 @@
 		<!-- walls barries-->
 		<rule cat="base_topo" e="way" k="barrier" v="*" zoom-min="13">
 			<rule e="way" k="barrier" v="fence|wall|chain">
-				<line stroke="$color_gray_666666" stroke-width="0.10" stroke-linecap="butt"/>
-				<line stroke="$color_gray_666666" stroke-width="0.3" stroke-dasharray="0.1,1.1" stroke-linecap="butt" scale="all"/>
+				<line stroke="$color_gray" stroke-width="0.10" stroke-linecap="butt"/>
+				<line stroke="$color_gray" stroke-width="0.3" stroke-dasharray="0.1,1.1" stroke-linecap="butt" scale="all"/>
 			</rule>
 			<rule e="way" k="barrier" v="hedge">
 				<line stroke="$color_national_park_case" stroke-width="0.15" stroke-linecap="butt"/>
 			</rule>
 			<rule cat="base_topo" e="way" k="barrier" v="retaining_wall|city_wall">
-				<line stroke="$color_gray_666666" stroke-width="0.15" stroke-linecap="butt"/>
-				<line stroke="$color_gray_666666" dy="0.12" stroke-width="0.4" stroke-dasharray="0.1,1.5" stroke-linecap="butt" scale="all"/>
+				<line stroke="$color_gray" stroke-width="0.15" stroke-linecap="butt"/>
+				<line stroke="$color_gray" dy="0.12" stroke-width="0.4" stroke-dasharray="0.1,1.5" stroke-linecap="butt" scale="all"/>
 			</rule>
 		</rule>
 		<!-- tree row -->
 		<rule cat="base_summer" e="way" k="natural" v="tree_row" zoom-min="14">
-			<line stroke="$opacity($color_forest_summer_z13, 50)" stroke-width="1" stroke-linecap="round"/>
+			<line stroke="$opacity($color_forest_summer_orchard_z13, 50)" stroke-width="1" stroke-linecap="round"/>
 		</rule>
 		<rule cat="base_winter" e="way" k="natural" v="tree_row" zoom-min="14">
 			<line stroke="$opacity($color_forest_winter_z13, 50)" stroke-width="1" stroke-linecap="round"/>
@@ -3895,7 +3895,7 @@
 							<line stroke="$color_nordic_easy" stroke-width="$pistes_nordic_width_z13" />
 						</rule>
 						<rule e="way" k="piste:grooming" v="backcountry|~">
-							<line stroke="$opacity($color_ski_nordic_halo, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
+							<line stroke="$opacity($color_white, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
 							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="4,3" stroke-linecap="round" scale="all"/>
 						</rule>
 					</rule>
@@ -3905,7 +3905,7 @@
 							<line stroke="$color_nordic_advanced" stroke-width="$pistes_nordic_width_z13"/>
 						</rule>
 						<rule e="way" k="piste:grooming" v="backcountry|~">
-							<line stroke="$opacity($color_ski_nordic_halo, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
+							<line stroke="$opacity($color_white, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z13}"/>
 							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z13}" stroke-dasharray="5,4" stroke-linecap="round" scale="all"/>
 						</rule>
 					</rule>
@@ -3913,21 +3913,21 @@
 				<rule e="way" k="*" v="*" zoom-min="16">
 					<rule e="way" k="piste:difficulty" v="novice|easy|intermediate|~">
 						<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="$opacity($color_ski_nordic_halo, 55)" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
+							<line stroke="$opacity($color_white, 55)" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_easy" stroke-width="$pistes_nordic_width_z16"/>
 						</rule>
 						<rule e="way" k="piste:grooming" v="backcountry|~">
-							<line stroke="$opacity($color_ski_nordic_halo, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
+							<line stroke="$opacity($color_white, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_easy" stroke-width="${0.6 * $pistes_nordic_width_z16}" stroke-dasharray="2.5,2" stroke-linecap="round" scale="all" />
 						</rule>
 					</rule>
 					<rule e="way" k="piste:difficulty" v="advanced|expert">
 						<rule e="way" k="piste:grooming" v="classic|classic+skating|classic;skating|skating">
-							<line stroke="$opacity($color_ski_nordic_halo, 55)" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
+							<line stroke="$opacity($color_white, 55)" stroke-width="${1.5 *  $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_advanced" stroke-width="$pistes_nordic_width_z16"/>
 						</rule>
 						<rule e="way" k="piste:grooming" v="backcountry|~">
-							<line stroke="$opacity($color_ski_nordic_halo, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
+							<line stroke="$opacity($color_white, 55)" stroke-width="${1.5 * 0.6 * $pistes_nordic_width_z16}"/>
 							<line stroke="$color_nordic_advanced" stroke-width="${0.6 * $pistes_nordic_width_z16}" stroke-dasharray="9,5" stroke-linecap="butt"/>
 						</rule>
 					</rule>
@@ -3977,7 +3977,7 @@
 			<!-- Ski Hike -->
 			<rule e="way" k="piste:type" v="hike" zoom-min="13">
 				<rule e="way" k="*" v="*" zoom-min="13">
-					<line stroke="$opacity($color_ski_nordic_halo, 55)" stroke-width="1.7"/>
+					<line stroke="$opacity($color_white, 55)" stroke-width="1.7"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
 					<line stroke="$color_piste_hike" stroke-width="${1.3 * $pistes_nordic_width_z13}" stroke-dasharray="0.1,5" scale="all"/>
@@ -3997,15 +3997,15 @@
 			<!-- Ski Tours -->
 			<rule e="way" k="piste:type" v="skitour">
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="14">
-					<line stroke="$opacity($color_ski_tour_halo, 80)" stroke-width="${1.6 * 0.9 * $pistes_nordic_width_z13}"/>
+					<line stroke="$opacity($color_white, 80)" stroke-width="${1.6 * 0.9 * $pistes_nordic_width_z13}"/>
 					<line stroke="$color_piste_skitour" stroke-width="${ 0.9 *$pistes_nordic_width_z13}" stroke-dasharray="5,4" scale="all"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
-					<line stroke="$opacity($color_ski_tour_halo, 80)" stroke-width="${1.6 * 0.7 * $pistes_nordic_width_z13}"/>
+					<line stroke="$opacity($color_white, 80)" stroke-width="${1.6 * 0.7 * $pistes_nordic_width_z13}"/>
 					<line stroke="$color_piste_skitour" stroke-width="${ 0.7 * $pistes_nordic_width_z13}" stroke-dasharray="4,3.2" scale="all"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="17" >
-					<line stroke="$opacity($color_ski_tour_halo, 80)" stroke-width="${1.6 * 0.8 * $pistes_nordic_width_z16}"/>
+					<line stroke="$opacity($color_white, 80)" stroke-width="${1.6 * 0.8 * $pistes_nordic_width_z16}"/>
 					<line stroke="$color_piste_skitour" stroke-width="${ 0.8 * $pistes_nordic_width_z16}" stroke-dasharray="2,2" scale="all"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="15">
@@ -4016,11 +4016,11 @@
 
 			<rule e="way" k="piste:type" v="sled" zoom-min="13">
 				<rule e="way" k="*" v="*" zoom-min="13" zoom-max="15">
-					<line stroke="$opacity($color_ski_tour_halo, 80)" stroke-width="${1.6 * 0.6 * $pistes_nordic_width_z13}"/>
+					<line stroke="$opacity($color_white, 80)" stroke-width="${1.6 * 0.6 * $pistes_nordic_width_z13}"/>
 					<line stroke="$color_piste_sled" stroke-width="${0.6 * $pistes_nordic_width_z13}"/>
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16" >
-					<line stroke="$opacity($color_ski_tour_halo, 80)" stroke-width="${1.6 * 0.6 * $pistes_nordic_width_z16}"/>
+					<line stroke="$opacity($color_white, 80)" stroke-width="${1.6 * 0.6 * $pistes_nordic_width_z16}"/>
 					<line stroke="$color_piste_sled" stroke-width="${0.6 * $pistes_nordic_width_z16}"/>
 				</rule>
 			</rule>
@@ -4031,7 +4031,7 @@
 		<rule cat="base_topo" e="way" k="aerialway" v="*" zoom-min="12">
 			<rule e="way" k="*" v="*" zoom-min="12" zoom-max="13">
 				<rule e="way" k="aerialway" v="chair_lift|mixed_lift">
-					<line stroke="$color_gray_3a3a3a" stroke-width="0.6" stroke-linecap="butt"/>
+					<line stroke="$color_gray_dark" stroke-width="0.6" stroke-linecap="butt"/>
 					<line stroke="$color_aerialway_core" stroke-width="2" stroke-dasharray="10,14" stroke-linecap="butt"/>
 				</rule>
 				<rule e="way" k="aerialway" v="cable_car|gondola">
@@ -4137,10 +4137,10 @@
 		<!-- Power lines -->
 		<rule cat="base_topo" e="any" k="power|minor_line" v="*" zoom-min="13">
 			<rule e="way" k="power" v="line" zoom-min="13" zoom-max="15">
-				<line stroke="$color_gray_707070" stroke-width="0.25" stroke-dasharray="10,3,1,3"/>
+				<line stroke="$color_gray_medium" stroke-width="0.25" stroke-dasharray="10,3,1,3"/>
 			</rule>
 			<rule e="way" k="power" v="line|minor_line" zoom-min="15">
-				<line stroke="$color_gray_707070" stroke-width="0.15" stroke-dasharray="15,6,1,6"/>
+				<line stroke="$color_gray_medium" stroke-width="0.15" stroke-dasharray="15,6,1,6"/>
 			</rule>
 			<rule e="node" k="power" v="pole" zoom-min="16">
 				<symbol src="file:symbols/poi_power_tower.svg" symbol-width="4" display="always" position="center" />
@@ -4200,7 +4200,7 @@
 		<rule e="any" k="amenity" v="*" zoom-min="15">
 			<rule cat="city" e="any" k="amenity" v="*">
 				<rule e="any" k="*" v="hospital" >
-					<caption k="name" dy="11"  font-style="bold_italic" font-family="serif" font-size="11" fill="$color_gray_333333" stroke="$color_white" stroke-width="2.5" text-wrap-width="$text_wrap_standard"/>
+					<caption k="name" dy="11"  font-style="bold_italic" font-family="serif" font-size="11" fill="$color_gray_dark" stroke="$color_white" stroke-width="2.5" text-wrap-width="$text_wrap_standard"/>
 				</rule>
 				<rule cat="religion_city" e="any" k="amenity" v="place_of_worship" zoom-min="17">
 					<caption k="name" dy="11"  font-style="bold_italic" font-family="sans_serif" font-size="13" fill="$color_tourism_poi_text" stroke="$color_white" stroke-width="1.5" text-wrap-width="$text_wrap_standard"/>
@@ -4221,13 +4221,13 @@
 					<caption k="name" dy="11"  font-style="bold" font-family="sans_serif" font-size="13" fill="$color_tourism_poi_text" stroke="$color_white" text-wrap-width="$text_wrap_standard"/>
 				</rule>
 				<rule e="any" k="amenity" v="college|university|school|theatre|hospital">
-					<caption k="name" dy="11"  font-style="bold" font-family="serif" font-size="11" fill="$color_gray_333333" stroke="$color_white" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
+					<caption k="name" dy="11"  font-style="bold" font-family="serif" font-size="11" fill="$color_gray_dark" stroke="$color_white" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
 				</rule>
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="*" zoom-min="17">
 			<rule e="any" k="amenity" v="bus_station">
-				<caption k="name" dy="20" font-style="bold" font-size="11" fill="$color_gray_333333" stroke="$color_white" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
+				<caption k="name" dy="20" font-style="bold" font-size="11" fill="$color_gray_dark" stroke="$color_white" stroke-width="2" text-wrap-width="$text_wrap_standard"/>
 			</rule>
 			<!-- labels from zl > 17-->
 			<rule e="any" k="amenity" v="college|university|school|theatre|cinema|library">
@@ -4239,7 +4239,7 @@
 	<!-- barrier -->
 	<rule cat="base_topo" e="any" k="barrier" v="*" zoom-min="15">
 		<rule e="any" k="barrier" v="bollard">
-			<circle r="1.5" fill="$color_gray_707070"/>
+			<circle r="1.5" fill="$color_gray_medium"/>
 		</rule>
         <!-- In zoom level 15 set smaller size for gates -->
         <rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
@@ -4475,7 +4475,7 @@
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
-			<circle r="3" fill="$color_white" stroke="$color_gray_606060" stroke-width="1"/>
+			<circle r="3" fill="$color_white" stroke="$color_gray" stroke-width="1"/>
 			<caption k="name" dy="11"  font-family="sans_serif" font-style="bold_italic" font-size="12" fill="$color_standard_poi_text" stroke="$color_white" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 		</rule>
 		<rule e="any" k="station" v="subway" zoom-min="14">
@@ -4495,7 +4495,7 @@
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
-			<circle r="3" fill="$color_white" stroke="$color_gray_606060" stroke-width="1"/>
+			<circle r="3" fill="$color_white" stroke="$color_gray" stroke-width="1"/>
 			<caption k="name" dy="12" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="$color_standard_poi_text" stroke="$color_white" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 		</rule>
 		<rule e="any" k="station" v="subway" zoom-min="15" zoom-max="17">
@@ -4513,7 +4513,7 @@
 			</rule>
 		</rule>
 		<rule e="any" k="railway" v="halt" zoom-min="16">
-			<circle r="2" fill="$color_white" stroke="$color_gray_606060" stroke-width="1"/>
+			<circle r="2" fill="$color_white" stroke="$color_gray" stroke-width="1"/>
 			<caption k="name" dy="14" font-family="sans_serif" font-style="bold_italic" font-size="14" fill="$color_standard_poi_text" stroke="$color_white" stroke-width="3" position="below" priority="$priority_poi_caption_cat1" text-wrap-width="$text_wrap_standard"/>
 		</rule>
 	</rule>
@@ -4526,13 +4526,13 @@
 
 	<!-- house numbers -->
 	<rule cat="base_city" e="any" k="*" v="*" zoom-min="18">
-		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="$color_house_number_z18" stroke="$color_house_number_z18" />
+		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="$color_gray_poi_text" stroke="$color_gray_poi_text" />
 	</rule>
 	<rule cat="base_topo" e="any" k="*" v="*" zoom-min="18">
-		<caption k="addr:housenumber" font-family="sans_serif" font-size="9" fill="$color_house_number_z18" stroke="$color_house_number_z18" />
+		<caption k="addr:housenumber" font-family="sans_serif" font-size="9" fill="$color_gray_poi_text" stroke="$color_gray_poi_text" />
 	</rule>
 	<rule cat="base_car" e="any" k="*" v="*" zoom-min="18">
-		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="$color_house_number_z18" stroke="$color_house_number_z18" />
+		<caption k="addr:housenumber" font-style="bold" font-size="10" fill="$color_gray_poi_text" stroke="$color_gray_poi_text" />
 	</rule>
 
 	<!-- NETHERLAND & BELGIUM NETWORK JUNCTIONS -->
@@ -4620,12 +4620,12 @@
 		<rule e="any" k="place" v="city" zoom-max="13">
 			<rule e="any" k="place" v="city" zoom-min="6" zoom-max="9">
                 <rule e="any" k="capital" v="yes" >
-					<circle r="3.5"  stroke="$color_gray_8e8e8e" stroke-width="1.5" />
+					<circle r="3.5"  stroke="$color_gray_light" stroke-width="1.5" />
 				    <caption k="name" dy="11"  text-transform="uppercase" font-family="sans_serif"  font-size="12" fill="$color_standard_poi_text"
 						 stroke="$color_white" stroke-width="${0.4*$text_halo}" priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
 				</rule>
                 <rule e="any" k="capital" v="~" zoom-min="7">
-					<circle r="3.5"  stroke="$color_gray_8e8e8e" stroke-width="1.5" />
+					<circle r="3.5"  stroke="$color_gray_light" stroke-width="1.5" />
 					<caption k="name" dy="11"  font-family="sans_serif"  font-size="13" fill="$color_standard_poi_text"
 						 stroke="$color_white" stroke-width="${0.4*$text_halo}" priority="$priority_city_1" text-wrap-width="$text_wrap_standard"/>
                 </rule>
@@ -4641,7 +4641,7 @@
 							 font-size="24" fill="$color_standard_poi_text" stroke="$color_white"
 							 stroke-width="${$text_halo*1.2}" priority="$priority_city_1" text-wrap-width="${round(1.5 * $text_wrap_standard)}"/>
                 </rule>
-				<circle r="3.5"  stroke="$color_gray_8e8e8e" stroke-width="1.5" />
+				<circle r="3.5"  stroke="$color_gray_light" stroke-width="1.5" />
 			</rule>
 		</rule>
 
@@ -4666,12 +4666,12 @@
 			<!-- circles for towns -->
 			<rule e="any" k="place" v="town" zoom-min="9" zoom-max="9">
 				<rule e="any" k="*" v="*" zoom-min="9" zoom-max="9">
-					<circle r="3" fill="$color_town_circle_fill" stroke="$color_gray_9b9b9b" stroke-width="1"/>
-					<circle r="1.1" stroke="$color_gray_9b9b9b" stroke-width="1"/>
+					<circle r="3" fill="$color_town_circle_fill" stroke="$color_gray_light" stroke-width="1"/>
+					<circle r="1.1" stroke="$color_gray_light" stroke-width="1"/>
 				</rule>
 				<rule e="any" k="*" v="*" zoom-min="10" zoom-max="10">
-					<circle r="4" fill="$color_town_circle_fill" stroke="$color_gray_9b9b9b" stroke-width="1"/>
-					<circle r="1.6" stroke="$color_gray_9b9b9b" stroke-width="1"/>
+					<circle r="4" fill="$color_town_circle_fill" stroke="$color_gray_light" stroke-width="1"/>
+					<circle r="1.6" stroke="$color_gray_light" stroke-width="1"/>
 				</rule>
 			</rule>
 		</rule>

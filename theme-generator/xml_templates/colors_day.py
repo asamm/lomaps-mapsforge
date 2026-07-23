@@ -30,13 +30,11 @@ class ColorsDay:
     color_primary_z7_z11            = "#ff8c00"
     color_secondary_z10_z11         = "#dab614"
     color_tertiary_z11              = "#B4B4B4"
-    color_highway_lowzoom_case      = '#FFFFFF'
     color_motorway                  = "#F7F008"
     color_trunk                     = "#E5DA1A"
     color_primary                   = "#FCC57C"
     color_secondary                 = "#ffee54"
     color_tertiary                  = "#FFFEE6"
-    color_unclassified              = "#ffffff"
     color_construction              = "#d0d0d0"
     color_motorway_case             = "#E52C2C"
     color_trunk_case                = "#E52C2C"
@@ -49,7 +47,6 @@ class ColorsDay:
     color_steps                     = "#8a8a8a"
     color_footway                   = "#8a8a8a"
     color_path                      = "#747474"
-    color_path_case                 = "#FFFFFF"
     color_pedestrian                = "#d0d0d0"
     color_highway_label_primary     = "#005fb9"
     color_highway_label_motorway    = "#dc1b1b"
@@ -108,14 +105,11 @@ class ColorsDay:
     color_downhill_easy_label       = '#07a6fe'  # downhill easy caption
     color_downhill_intermediate_lbl = '#ff4040'  # downhill intermediate caption
     color_piste_lit                 = '#fff41d'  # lit downhill (via $opacity)
-    color_ski_nordic_halo           = '#ffffff'  # nordic/backcountry/hike halo  |  was #90ffffff; apply $opacity(56.7%)
-    color_ski_tour_halo             = '#ffffff'  # skitour/sled halo  |  was #ccffffff; apply $opacity(80%)
 
     color_snowmobile                = '#ee7e00'  # snowmobile designated  |  was #90ee7e00; apply $opacity(56.7%)
 
     ## Summer areas
-    color_forest_summer_z13         = '#a0ca6c'  # was #80a0ca6c; apply $opacity(50.4%)
-    color_park_orchard_summer       = '#a0ca6c'  # was #80a0ca6c; apply $opacity(50.4%)
+    color_forest_summer_orchard_z13 = '#a0ca6c'  # was #80a0ca6c; apply $opacity(50.4%)
     ## Winter areas
     color_forest_winter_z13         = '#a4d4d9'  # was #80a4d4d9; apply $opacity(50.4%)
     color_park_orchard_winter       = '#b3dbcb'  # was #90b3dbcb; apply $opacity(56.7%)
@@ -126,33 +120,17 @@ class ColorsDay:
     color_standard_poi_text         = '#303030'
     color_attraction_poi_text       = '#5e5146'
     color_gray_poi_text             = '#747474'
-    color_house_number_z18          = '#747474'
 
     ### neutral / grayscale (light -> dark) ###
     color_white                     = '#ffffff'  # was #ffffff - generic white text-halo / stroke (300x)
     color_gray_ededed               = '#ededed'  # was #ededed - railway main fill / footway area / aerialway cablecar (6x)
-    color_gray_d7d7d7               = '#d7d7d7'  # aeroway apron
-    color_gray_d5d5d5               = '#d5d5d5'  # tertiary CITY / private-access core
-    color_gray_d4d4d4               = '#d4d4d4'  # dam / CITY building (via $darken)
-    color_gray_d2d2d2               = '#d2d2d2'  # construction core >16 / tram branch
-    color_gray_d0d0d0               = '#d0d0d0'  # was #d0d0d0 - highway-area outline / CITY building (5x)
-    color_gray_cecece               = '#cecece'  # winter industrial / power areal / leisure stadium winter case
-    color_gray_c1c1c1               = '#c1c1c1'  # parking/runway/taxiway/platform (via $lighten)
+    color_gray_ultra_light          = '#d0d0d0'  # merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
     color_gray_b8b8b8               = '#b8b8b8'  # SKI building fill
     color_gray_a8a8a8               = '#a8a8a8'  # SKI building stroke
-    color_gray_9f9f9f               = '#9f9f9f'  # track/construction/footway casing
-    color_gray_9c9c9c               = '#9c9c9c'  # residential highway stroke
-    color_gray_9b9b9b               = '#9b9b9b'  # place=town circle stroke
-    color_gray_8e8e8e               = '#8e8e8e'  # place=city circle stroke
-    color_gray_8a8a8a               = '#8a8a8a'  # was #8a8a8a - natural area stroke + $opacity gully/embankment (3x)
-    color_gray_797979               = '#797979'  # quarry / natural caption / embankment / tram tunnel
-    color_gray_747474               = '#747474'  # was #747474 - shield bg-rect / abandoned-railway area (3x)
-    color_gray_707070               = '#707070'  # was #707070 - mid-gray road/railway casing + $opacity wraps (52x)
-    color_gray_666666               = '#666666'  # barrier fence/wall/chain/retaining_wall
-    color_gray_626262               = '#626262'  # NE city/town name circle stroke
-    color_gray_606060               = '#606060'  # railway halt stroke
-    color_gray_3a3a3a               = '#3a3a3a'  # aerialway chair/mixed lift topo
-    color_gray_333333               = '#333333'  # waterway-bridge stroke; runway text; CAR building fill; hospital/school captions
+    color_gray_light                = '#969696'  # merged light grays (track/construction/footway casing, residential highway stroke, place town+city circle stroke, natural area stroke)
+    color_gray_medium               = '#747474'  # merged medium grays (quarry/natural caption/embankment/tram tunnel, shield bg-rect/abandoned railway, road+railway casing + $opacity wraps)
+    color_gray                      = '#636363'  # merged dark-mid grays (barrier fence/wall/chain, NE city/town circle stroke, railway halt stroke)
+    color_gray_dark                 = '#373737'  # merged dark grays (aerialway chair/mixed lift topo, waterway-bridge stroke/runway text/CAR building/hospital+school captions)
     color_black                     = '#000000'  # bridge casing city/car; street-name text; downhill-advanced label
 
     ### sea / water ###
@@ -202,9 +180,7 @@ class ColorsDay:
     color_wetland_tidalflat         = '#8f5011'  # wetland=tidalflat  |  was #108f5011; apply $opacity(6.5%)
     color_meadow                    = '#34972d'  # meadow/nature_reserve/national_park/botanical (5x)
     color_wood_label                = '#39761a'  # wood/park/cemetery captions (7x)
-    color_national_park_case        = '#3fb637'  # protected_area/nature_reserve/hedge stroke (via $opacity)
-    color_national_park_border      = '#40be39'  # national_park stroke  |  was #9040be39; apply $opacity(56.7%)
-    color_national_park_border2     = '#40be39'  # national_park stroke  |  was #cc40be39; apply $opacity(80%)
+    color_national_park_case        = '#3fb637'  # protected_area/nature_reserve/hedge stroke (
 
     ### leisure ###
     color_leisure_green_summer      = '#dbe5b2'  # golf/common/green SUMMER
@@ -231,8 +207,6 @@ class ColorsDay:
 
     ### military ###
     color_military_fill             = '#e57a7a'  # landuse/military airfield fill  |  was #25e57a7a; apply $opacity(14.7%)
-    color_military_case             = '#e57a7a'  # military stroke  |  was #70e57a7a; apply $opacity(44%)
-    color_military_case2            = '#e57a7a'  # military stroke  |  was #90e57a7a; apply $opacity(56.7%)
     color_military_label            = '#925e5a'  # military label
 
     ### buildings ###
@@ -275,8 +249,6 @@ class ColorsDay:
     color_motorway_junction_case    = '#ff5b58'  # motorway_junction stroke
 
     ### path halos ###
-    color_path_halo_translucent     = '#ffffff'  # path standard/winter halo  |  was #aaffffff; apply $opacity(67%)
-    color_footway_halo_winter       = '#ffffff'  # footway/corridor winter (no white halo)  |  was #40ffffff; apply $opacity(25.3%)
 
     ### railways ###
     color_railway_station_city      = '#cc6c49'  # railway=station fill CITY/CAR
