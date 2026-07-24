@@ -267,3 +267,19 @@ class ColorsDay:
 
     ### place circles ###
     color_town_circle_fill          = '#f4f3e9'  # town circle fill + landuse=farm captions
+
+    ### PATTERN ICONS (day) ###
+    pattern_wood_coniferous         = 'patterns/wood_coniferous_transparent.svg'
+    pattern_wood_deciduous          = 'patterns/wood_deciduous_transparent.svg'
+    pattern_wood_mixed              = 'patterns/wood_mixed_transparent.svg'
+    pattern_scrub                   = 'patterns/scrub.svg'
+    pattern_glacier                 = 'patterns/glacier.svg'
+    pattern_heath                   = 'patterns/heath.svg'
+    pattern_medow                   = 'patterns/medow.svg'
+    pattern_graveyard               = 'patterns/graveyard.svg'
+    pattern_vineyard                = 'patterns/vineyard.svg'
+    pattern_orchard                 = 'patterns/orchard.svg'
+    pattern_hop_garden              = 'patterns/hop_garden.svg'
+    pattern_intermittent_water      = 'patterns/intermittent_water.svg'
+    pattern_marsh                   = 'patterns/marsh.svg'
+    pattern_tidalflat               = 'patterns/tidalflat_64.svg'

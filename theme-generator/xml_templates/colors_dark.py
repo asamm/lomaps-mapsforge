@@ -207,3 +207,19 @@ class ColorsDark(ColorsDay):
         "yellow": "#d8ca27",   # day #e2d21d
         "white": "#c6a9a9",   # day #fcfcfc
     }
+
+    ### PATTERN ICONS (dark = _dark.svg) ###
+    pattern_wood_coniferous         = 'patterns/wood_coniferous_transparent_dark.svg'
+    pattern_wood_deciduous          = 'patterns/wood_deciduous_transparent_dark.svg'
+    pattern_wood_mixed              = 'patterns/wood_mixed_transparent_dark.svg'
+    pattern_scrub                   = 'patterns/scrub_dark.svg'
+    pattern_glacier                 = 'patterns/glacier_dark.svg'
+    pattern_heath                   = 'patterns/heath_dark.svg'
+    pattern_medow                   = 'patterns/medow_dark.svg'
+    pattern_graveyard               = 'patterns/graveyard_dark.svg'
+    pattern_vineyard                = 'patterns/vineyard_dark.svg'
+    pattern_orchard                 = 'patterns/orchard_dark.svg'
+    pattern_hop_garden              = 'patterns/hop_garden_dark.svg'
+    pattern_intermittent_water      = 'patterns/intermittent_water_dark.svg'
+    pattern_marsh                   = 'patterns/marsh_dark.svg'
+    pattern_tidalflat               = 'patterns/tidalflat_64_dark.svg'
