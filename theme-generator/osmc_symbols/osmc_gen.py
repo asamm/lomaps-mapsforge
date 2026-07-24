@@ -9,8 +9,9 @@ from xml_templates.config import TemplateVariables
 
 class OsmcLineGenerator():
 
-    def __init__(self, options: Options):
+    def __init__(self, options: Options, variables=TemplateVariables):
         self.options = options
+        self.variables = variables   # day or dark colour set (osmc route colours)
 
     def add_osmc_colors(self, source_rule):
         """
@@ -20,7 +21,7 @@ class OsmcLineGenerator():
         """
         color_rules = []
 
-        for key in TemplateVariables.osmc_colors:
+        for key in self.variables.osmc_colors:
             # definition of line width,etc that will be recreated for every osmc color
             color_rule = copy.deepcopy(source_rule.rule[0])
 
@@ -45,14 +46,14 @@ class OsmcLineGenerator():
             self.create_osmc_color_definition(child_rule, color_key)
 
         for pathText in source_rule.path_text:
-            pathText.fill = TemplateVariables.osmc_colors[color_key]
+            pathText.fill = self.variables.osmc_colors[color_key]
             if color_key == 'white':
                 # for white color set text fill color to red
-                pathText.fill = TemplateVariables.osmc_colors['red']
+                pathText.fill = self.variables.osmc_colors['red']
 
         for line in source_rule.line:
 
-            line.stroke = TemplateVariables.osmc_colors[color_key]
+            line.stroke = self.variables.osmc_colors[color_key]
             line.stroke_linecap = Cap.BUTT
 
             if color_key == 'green':
@@ -99,7 +100,7 @@ class OsmcLineGenerator():
             for line in source_rule.line:
                 line.stroke_width = line.stroke_width * 0.4
                 red_outline = copy.deepcopy(line)
-                red_outline.stroke = TemplateVariables.osmc_colors['red']
+                red_outline.stroke = self.variables.osmc_colors['red']
                 red_outline.stroke_width = red_outline.stroke_width * 1/0.4
 
                 lines_with_bck.append(red_outline)
@@ -197,9 +198,10 @@ class SvgIconColorizer():
 
 class OsmcSymbolGenerator():
 
-    def __init__(self, options: Options):
+    def __init__(self, options: Options, variables=TemplateVariables):
 
         self.options = options
+        self.variables = variables
 
     def generate(self, source_rule: Rule):
         """

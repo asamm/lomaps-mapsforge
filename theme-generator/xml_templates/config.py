@@ -2,7 +2,7 @@ from Cheetah.Template import Template
 
 from xml_templates.config_common import CommonConfig
 from xml_templates.colors_day import ColorsDay
-from xml_templates.colors_night import ColorsNight
+from xml_templates.colors_dark import ColorsDark
 
 
 # Cheetah seeds a template's namespace from the instantiated class's OWN __dict__
@@ -28,7 +28,7 @@ def _compose(name, colors_cls, common_cls):
 
 
 ThemeVariablesDay = _compose('ThemeVariablesDay', ColorsDay, CommonConfig)
-ThemeVariablesNight = _compose('ThemeVariablesNight', ColorsNight, CommonConfig)
+ThemeVariablesDark = _compose('ThemeVariablesDark', ColorsDark, CommonConfig)
 
 # Backward-compatible default (day). Existing `from xml_templates.config import
 # TemplateVariables` keeps working and resolves to the day color set.
@@ -36,5 +36,5 @@ TemplateVariables = ThemeVariablesDay
 
 MODES = {
     'day': ThemeVariablesDay,
-    'night': ThemeVariablesNight,
+    'dark': ThemeVariablesDark,
 }

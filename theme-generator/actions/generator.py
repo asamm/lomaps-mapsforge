@@ -15,9 +15,10 @@ from xml_templates.config import TemplateVariables
 
 class GeneratorActions:
 
-    def __init__(self, options: Options):
+    def __init__(self, options: Options, variables=TemplateVariables):
 
         self.options = options
+        self.variables = variables   # day or dark colour set (gen_action_* are mode-independent)
         self.soup = self._init_soup(options.output_template)
 
         self.actions = [
@@ -83,7 +84,7 @@ class GeneratorActions:
                     source_rule = self.add_osmc_sac_scale(source_rule, input_section)
 
                 elif action_name == TemplateVariables.gen_action_osmc_colors:
-                    osmc_line_gen = OsmcLineGenerator(self.options)
+                    osmc_line_gen = OsmcLineGenerator(self.options, self.variables)
                     source_rule = osmc_line_gen.add_osmc_colors(source_rule)
 
                 elif action_name == TemplateVariables.gen_action_osmc_to_iwn_rwn:
@@ -91,14 +92,14 @@ class GeneratorActions:
 
                 elif action_name == TemplateVariables.gen_action_osmc_symbols_and_order:
 
-                    osmc_symbol_gen = OsmcSymbolGenerator(self.options)
+                    osmc_symbol_gen = OsmcSymbolGenerator(self.options, self.variables)
                     source_rule = osmc_symbol_gen.generate(source_rule)
 
                 elif action_name == TemplateVariables.gen_action_cycle_icn:
-                    source_rule = self.create_cycle_sections(source_rule, TemplateVariables.color_cycle_icn_ncn)
+                    source_rule = self.create_cycle_sections(source_rule, self.variables.color_cycle_icn_ncn)
 
                 elif action_name == TemplateVariables.gen_action_cycle_basic_to_mtb_scale_0:
-                    source_rule = self.create_cycle_sections(source_rule, TemplateVariables.color_cycle_mtb)
+                    source_rule = self.create_cycle_sections(source_rule, self.variables.color_cycle_mtb)
 
                 elif action_name == TemplateVariables.gen_action_copy_section:
                     source_rule = self.copy_section(source_rule)

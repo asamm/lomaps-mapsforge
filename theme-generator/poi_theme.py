@@ -16,14 +16,16 @@ symbol_directory = 'symbols'
 
 class PoiThemeGenerator:
 
-    def __init__(self, config_poi_db_f, map_theme_f):
+    def __init__(self, config_poi_db_f, map_theme_f, map_background="#ebeade"):
         """
 
         :param config_poi_db_f: configuration file that is used for generation of POI DB
         :param map_theme_f: path to location of map theme
+        :param map_background: map background colour for the POI theme (day or dark)
         """
         self.config_poi_db_f = config_poi_db_f
         self.map_theme_f = map_theme_f
+        self.map_background = map_background
 
         self.cat_4_folder = {}
         # Map apdb config XML into objects
@@ -228,7 +230,7 @@ class PoiThemeGenerator:
         render_theme = Rendertheme()
         render_theme.version = 4
         render_theme.base_stroke_width = 0.8
-        render_theme.map_background = "#ebeade"
+        render_theme.map_background = self.map_background
 
         return render_theme
 

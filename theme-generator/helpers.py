@@ -8,13 +8,14 @@ from xml_templates.config import TemplateVariables
 
 ## Set of utils and help method
 
-def transform_cheetah_template(theme_template_xml, cheetah_output_xml):
+def transform_cheetah_template(theme_template_xml, cheetah_output_xml, variables=TemplateVariables):
     """
     Read input template xml with python variables and replace variables by value using cheetah
     :param theme_template_xml: path to xml base theme template
     :param cheetah_output_xml: path to export the input for theme generator
+    :param variables: Cheetah TemplateVariables subclass providing the values (day or dark colour set)
     """
-    template = TemplateVariables(file=theme_template_xml)
+    template = variables(file=theme_template_xml)
 
     f = open(cheetah_output_xml, "w")
     f.write(str(template))

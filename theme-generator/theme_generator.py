@@ -100,41 +100,62 @@ if __name__ == '__main__':
     # read default parameters from config yaml
     options = read_options_yaml('options.yaml', options)
 
-    # generate OSMC symbols from black SVG file
+    # colour sets to generate: day -> theme.xml, dark -> theme_dark.xml
+    from xml_templates.config import MODES
+
+    # generate OSMC symbols from black SVG file (shared assets, day colours)
     if options.generate_osmc_svg:
         svg_generator = SvgIconColorizer(get_osmc_folder_path(options.result_xml), options)
         svg_generator.generate_icons()
 
-    # replace colors, width, etc in source XML
-    transform_cheetah_template(options.theme_template, options.output_template)
+    day_result = options.result_xml
+    theme_dir = os.path.dirname(day_result)
+    mode_result_xml = {
+        'day': day_result,
+        'dark': os.path.join(theme_dir, 'theme_dark.xml'),
+    }
+    base_output_template = options.output_template
+    all_result_files = []
+    all_poi_files = []
 
-    # generate custom parts (bridges, tourist paths), write results to final XML theme file
-    generator_actions = GeneratorActions(options)
-    theme_soup_generated = generator_actions.process_actions()  # in this method is result exported in to the result xml
+    for mode, variables in MODES.items():
+        result_xml = mode_result_xml[mode]
+        # per-mode temp file for the cheetah export (avoid collisions between modes)
+        root, ext = os.path.splitext(base_output_template)
+        options.output_template = '{}_{}{}'.format(root, mode, ext)
+        options.result_xml = result_xml
 
-    # result of generation action in soup object for validation if required icons exists
-    icon_validator = IconValidator(theme_soup_generated, options.result_xml)
-    icon_validator.validate()
+        print('-------------  generating {} theme -> {}'.format(mode, result_xml))
 
-    # delete temp file (export from cheetah)
-    os.remove(options.output_template)
+        # replace colors, width, etc in source XML using this mode's colour set
+        transform_cheetah_template(options.theme_template, options.output_template, variables)
 
-    # POI THEMES - generate custom theme that render only POI icons
-    poi_theme_generator = PoiThemeGenerator(options.apdb_config_xml, options.result_xml)
-    poi_theme_files = poi_theme_generator.generate_render_themes()
+        # generate custom parts (bridges, tourist paths), write results to final XML theme file
+        generator_actions = GeneratorActions(options, variables)
+        theme_soup_generated = generator_actions.process_actions()
+
+        # validate required icons exist
+        icon_validator = IconValidator(theme_soup_generated, result_xml)
+        icon_validator.validate()
+
+        # delete temp file (export from cheetah)
+        os.remove(options.output_template)
+
+        # POI THEMES - generate custom theme that render only POI icons (mode-specific background)
+        poi_theme_generator = PoiThemeGenerator(options.apdb_config_xml, result_xml,
+                                                variables.color_map_background_land)
+        all_poi_files.extend(poi_theme_generator.generate_render_themes())
+        all_result_files.append(result_xml)
 
     if options.copy_to_device:
-        # copy map theme to phone
-        copy_theme_to_device(options.result_xml, options.locus_theme_path)
-        # copy POI themes do device
-        for poi_theme_file in poi_theme_files:
-            # copy poi theme
-            copy_theme_to_device(poi_theme_file, options.locus_theme_path)
+        # copy map themes + POI themes (day & dark) to phone
+        for theme_file in all_result_files + all_poi_files:
+            copy_theme_to_device(theme_file, options.locus_theme_path)
 
     if options.publish_for_android:
-        publish_theme_to_android_module(os.path.dirname(options.result_xml), options.android_module_path)
+        publish_theme_to_android_module(theme_dir, options.android_module_path)
 
         # create archive that can be downloaded from github for direct usage on android device
-        create_theme_zip_for_publish(os.path.dirname(options.result_xml), options.locus_action_zip)
+        create_theme_zip_for_publish(theme_dir, options.locus_action_zip)
 
     print("=============  DONE  ================= ")

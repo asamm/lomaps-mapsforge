@@ -23,8 +23,7 @@ class ColorsDay:
     color_bridge_casing             = "#0d0d0d"
     color_bridge_no_casing          = "#4d4d4d"
     color_motorway_z6               = "#FF8C00"
-    color_motorway_z7               = "#FF4500"
-    color_motorway_z8_z11           = "#FF4500"
+    color_motorway_z7_z11           = "#FF4500"
     color_trunk_z7                  = "#ff8c00"
     color_trunk_z8_z11              = "#FF4500"
     color_primary_z7_z11            = "#ff8c00"
@@ -37,15 +36,13 @@ class ColorsDay:
     color_tertiary                  = "#FFFEE6"
     color_construction              = "#d0d0d0"
     color_motorway_case             = "#E52C2C"
-    color_trunk_case                = "#E52C2C"
+    color_trunk_case                = color_motorway_case
     color_primary_case              = "#C6523D"
     color_secondary_case            = "#707070"
-    color_tertiary_case             = "#707070"
-    color_unclassified_case         = "#8a8a8a"
+    color_tertiary_case             = color_secondary_case
     color_footway_area              = "#EDEDED"
-    color_track                     = "#8a8a8a"
-    color_steps                     = "#8a8a8a"
-    color_footway                   = "#8a8a8a"
+    color_track_footway             = "#8a8a8a"  # track / steps / footway
+    color_unclassified_case         = color_track_footway
     color_path                      = "#747474"
     color_pedestrian                = "#d0d0d0"
     color_highway_label_primary     = "#005fb9"
@@ -53,10 +50,7 @@ class ColorsDay:
 
     ### RAILWAYS
     color_railway_main_case         = '#4d4d4d'
-    color_railway_abandoned_case    = '#707070'
-    color_railway_service_case      = '#707070'
-    color_railway_tunnel            = '#707070'
-    color_railway_tram              = '#707070'
+    color_railway_light_gray        = '#707070'  # railway abandoned/service casing, tunnel, tram
     color_railway_main              = '#EDEDED'
 
 
@@ -123,6 +117,8 @@ class ColorsDay:
 
     ### neutral / grayscale (light -> dark) ###
     color_white                     = '#ffffff'  # was #ffffff - generic white text-halo / stroke (300x)
+    color_text_stroke               = '#ffffff'  # text halo/outline (white for day theme)
+    color_road_casing               = '#ffffff'  # road/path casing (white for day theme)
     color_gray_ededed               = '#ededed'  # was #ededed - railway main fill / footway area / aerialway cablecar (6x)
     color_gray_ultra_light          = '#d0d0d0'  # merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
     color_gray_b8b8b8               = '#b8b8b8'  # SKI building fill
