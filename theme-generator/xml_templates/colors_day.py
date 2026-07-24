@@ -119,6 +119,8 @@ class ColorsDay:
     color_white                     = '#ffffff'  # was #ffffff - generic white text-halo / stroke (300x)
     color_text_stroke               = '#ffffff'  # text halo/outline (white for day theme)
     color_road_casing               = '#ffffff'  # road/path casing (white for day theme)
+    color_bridge_gen_case           = "#000000"  # generated bridge casing (day)
+    color_bridge_gen_core           = "#F7F7F7"  # generated bridge core/deck (day)
     color_gray_ededed               = '#ededed'  # was #ededed - railway main fill / footway area / aerialway cablecar (6x)
     color_gray_ultra_light          = '#d0d0d0'  # merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
     color_gray_b8b8b8               = '#b8b8b8'  # SKI building fill

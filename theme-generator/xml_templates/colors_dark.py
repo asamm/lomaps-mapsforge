@@ -49,8 +49,8 @@ class ColorsDark(ColorsDay):
     color_track_footway             = '#938181'  # day #8a8a8a | track / steps / footway
     color_path                      = '#847171'  # day #747474
     color_pedestrian                = '#d4cccc'  # day #d0d0d0
-    color_highway_label_primary     = '#d0dfed'  # day #005fb9
-    color_highway_label_motorway    = '#e6c1c1'  # day #dc1b1b
+    color_highway_label_primary     = '#206db6'  # day #005fb9
+    color_highway_label_motorway    = '#bf3838'  # day #dc1b1b
     color_railway_main_case         = '#2e2e2e'  # day #4d4d4d
     color_railway_light_gray        = '#525252'  # day #707070 | railway abandoned/service casing, tunnel, tram
     color_railway_main              = '#767676'  # day #EDEDED
@@ -63,7 +63,7 @@ class ColorsDark(ColorsDay):
     color_cycle_mtb                 = '#e286ea'  # day #E588ED
     color_cycle_standard            = '#cf25d7'  # day #d320dc
     color_cycle_icn_ncn             = '#db0697'  # day #A90073
-    color_cycle_text_ref            = '#e8cbe9'  # day #B11BB9
+    color_cycle_text_ref            = '#9d33a3'  # day #B11BB9
     color_downhill_novice           = '#45fa45'  # day #40ff40 | was #9440ff40; apply $opacity(58.2%)
     color_downhill_easy             = '#56c0fa'  # day #52c1fe | was #9952c1fe; apply $opacity(60%)
     color_downhill_intermediate     = '#fa4f4f'  # day #ff4a4a | was #99ff4a4a; apply $opacity(60%)
@@ -88,6 +88,8 @@ class ColorsDark(ColorsDay):
     color_white                     = '#e6e6e6'  # day #ffffff | was #ffffff - generic white text-halo / stroke (300x)
     color_text_stroke               = '#000000'  # text halo/outline (black for dark theme)
     color_road_casing               = '#000000'  # road/path casing (dark for dark theme)
+    color_bridge_gen_case           = '#000000'  # generated bridge casing (dark)
+    color_bridge_gen_core           = '#2e2e2e'  # generated bridge core/deck (dark)
     color_gray_ededed               = '#141414'  # day #ededed | was #ededed - railway main fill / footway area / aerialway cablecar (6x)
     color_gray_ultra_light          = '#2f2f2f'  # day #d0d0d0 | merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
     color_gray_b8b8b8               = '#474747'  # day #b8b8b8 | SKI building fill
@@ -167,13 +169,13 @@ class ColorsDark(ColorsDay):
     color_primary_core_car          = '#c08e35'  # day #ed9a06 | primary core CAR (5x)
     color_primary_trunk_link_core   = '#ccae59'  # day #f3c032 | primary_link/trunk_link core >16
     color_primary_toll_case         = '#46301b'  # day #e7740c | primary toll/link outline
-    color_hw_shield_primary_bg      = '#dbe6f1'  # day #01498e | primary/trunk shield bg-rect-fill
+    color_hw_shield_primary_bg      = '#216db5'  # day #01498e | primary/trunk shield bg-rect-fill
     color_secondary_core_car        = '#b79d3d'  # day #daaf14 | secondary CAR
     color_secondary_primary_city    = '#d5c27f'  # day #f1d263 | secondary/primary CITY
     color_secondary_link_core_hi    = '#decc90'  # day #f8da76 | secondary/secondary_link core >16
-    color_secondary_shield          = '#e7e0c0'  # day #e3c015 | secondary caption stroke
-    color_secondary_link_shield     = '#e7e2c0'  # day #e3c715 | secondary_link caption stroke
-    color_hw_shield_secondary_bg    = '#cde0ec'  # day #017dc5 | secondary shield bg-rect-fill
+    color_secondary_shield          = '#c4ac34'  # day #e3c015 | secondary caption stroke
+    color_secondary_link_shield     = '#c4b034'  # day #e3c715 | secondary_link caption stroke
+    color_hw_shield_secondary_bg    = '#217fb5'  # day #017dc5 | secondary shield bg-rect-fill
     color_tertiary_core_hi          = '#eadcb8'  # day #fcecc2 | tertiary/raceway/tertiary_link core >16
     color_tertiary_case_car         = '#463e3b'  # day #b29a91 | tertiary/raceway stroke
     color_raceway_winter            = '#edd9b6'  # day #fff6e6 | raceway winter/indoor
