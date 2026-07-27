@@ -39,7 +39,7 @@ class CommonConfig:
     primary_width_z13 = 4.5
     secondary_width_z13 = 3.75
     tertiary_width_z13 = 2.9
-    unclassified_width_z13 = 1.5
+    unclassified_width_z13 = 1.3
 
     # ZL > 14
 

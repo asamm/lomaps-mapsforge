@@ -1,13 +1,31 @@
 # Simple operation with colors, thickness etc...
 
+# When rendering the DARK theme the map background is dark, so "lighten" - which fades a
+# colour toward the (light) day background - has to fade toward the DARK background instead,
+# i.e. it must darken. The generator flips this flag per mode via set_dark_mode(); darken()
+# and opacity() keep their normal meaning in both modes.
+_DARK_MODE = False
+
+
+def set_dark_mode(enabled: bool):
+    """Enable/disable dark-theme behaviour for lighten() (maps lighten -> darken)."""
+    global _DARK_MODE
+    _DARK_MODE = bool(enabled)
+
+
 def lighten(color: str, lighten_percent: int):
     """
-    Make color lighter for specific percentage
+    Make color lighter for specific percentage.
+    In dark mode (see set_dark_mode) this fades toward the dark background instead,
+    i.e. it delegates to darken() with the same percentage.
     :type color: color in #RGB or #ARGB hex
     :type lighten_percent: percentage to lighten the color
     :rtype: color in #RGB or #ARGB hex
 
     """
+    if _DARK_MODE:
+        return darken(color, lighten_percent)
+
     if abs(lighten_percent) > 100:
         raise Exception("Invalid percente value for lighten {}. Set value between 0 - 100".format(lighten_percent))
 

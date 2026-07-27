@@ -41,16 +41,21 @@ class ColorsDay:
     color_secondary_case            = "#707070"
     color_tertiary_case             = color_secondary_case
     color_footway_area              = "#EDEDED"
-    color_track_footway             = "#8a8a8a"  # track / steps / footway
-    color_unclassified_case         = color_track_footway
+    color_path_track                = "#8a8a8a"  # track / steps / footway
+    color_unclassified_case         = color_path_track
+    color_road                      = '#ffffff'
     color_path                      = "#747474"
     color_pedestrian                = "#d0d0d0"
+    color_parking_area              = "#EDEDED"
+    color_road_core_light           = '#ffffff'
+
     color_highway_label_primary     = "#005fb9"
     color_highway_label_motorway    = "#dc1b1b"
+    color_highway_label_text        = '#ffffff'
 
     ### RAILWAYS
     color_railway_main_case         = '#4d4d4d'
-    color_railway_light_gray        = '#707070'  # railway abandoned/service casing, tunnel, tram
+    color_railway_line_light        = '#707070'  # railway abandoned/service casing, tunnel, tram
     color_railway_main              = '#EDEDED'
 
 
@@ -113,23 +118,24 @@ class ColorsDay:
     ## TEXT & SYMBOL PRIORITIES
     color_standard_poi_text         = '#303030'
     color_attraction_poi_text       = '#5e5146'
-    color_gray_poi_text             = '#747474'
+    color_label_poi                 = '#747474'
 
     ### neutral / grayscale (light -> dark) ###
-    color_white                     = '#ffffff'  # was #ffffff - generic white text-halo / stroke (300x)
     color_text_stroke               = '#ffffff'  # text halo/outline (white for day theme)
-    color_road_casing               = '#ffffff'  # road/path casing (white for day theme)
+
+    color_road_halo_lz              = '#ffffff'  # low-zoom (z<10) road halo/border, not a true casing
     color_bridge_gen_case           = "#000000"  # generated bridge casing (day)
     color_bridge_gen_core           = "#F7F7F7"  # generated bridge core/deck (day)
-    color_gray_ededed               = '#ededed'  # was #ededed - railway main fill / footway area / aerialway cablecar (6x)
-    color_gray_ultra_light          = '#d0d0d0'  # merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
-    color_gray_b8b8b8               = '#b8b8b8'  # SKI building fill
-    color_gray_a8a8a8               = '#a8a8a8'  # SKI building stroke
-    color_gray_light                = '#969696'  # merged light grays (track/construction/footway casing, residential highway stroke, place town+city circle stroke, natural area stroke)
-    color_gray_medium               = '#747474'  # merged medium grays (quarry/natural caption/embankment/tram tunnel, shield bg-rect/abandoned railway, road+railway casing + $opacity wraps)
-    color_gray                      = '#636363'  # merged dark-mid grays (barrier fence/wall/chain, NE city/town circle stroke, railway halt stroke)
-    color_gray_dark                 = '#373737'  # merged dark grays (aerialway chair/mixed lift topo, waterway-bridge stroke/runway text/CAR building/hospital+school captions)
-    color_black                     = '#000000'  # bridge casing city/car; street-name text; downhill-advanced label
+    color_railway_fill_light        = '#ededed'  # was #ededed - railway main fill / footway area / aerialway cablecar (6x)
+    color_area_fill_light           = '#d0d0d0'  # merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
+    color_building_ski_fill         = '#b8b8b8'  # SKI building fill
+    color_building_ski_outline      = '#a8a8a8'  # SKI building stroke
+    color_place_circle              = '#969696'  # place town/city circle stroke
+    color_road_soft                 = '#969696'  # minor-road/path/track/natural line (soft casing)
+    color_railway_line              = '#747474'  # merged medium grays (quarry/natural caption/embankment/tram tunnel, shield bg-rect/abandoned railway, road+railway casing + $opacity wraps)
+    color_barrier_circle            = '#636363'  # merged dark-mid grays (barrier fence/wall/chain, NE city/town circle stroke, railway halt stroke)
+    color_label_amenity_dark        = '#373737'  # merged dark grays (aerialway chair/mixed lift topo, waterway-bridge stroke/runway text/CAR building/hospital+school captions)
+    color_road_core_dark            = '#000000'  # bridge casing city/car; street-name text; downhill-advanced label
 
     ### sea / water ###
     color_sea                       = '#94c3e6'  # sea + NE water/rivers + all standard water fill/stroke + bathymetry depth=0 (28x)
@@ -198,7 +204,7 @@ class ColorsDay:
     color_tourism_picnic            = '#c7f1a3'  # tourism=picnic_site
     color_tourism_poi_text          = '#826f60'  # attraction + amenity captions + waterway=dam label (6x)
     color_zoo_case                  = '#6e5036'  # zoo topo stroke (via $opacity)
-    color_sport_area                = '#d6bfa2'  # sport=* / aeroway terminal / default building fill
+    color_sport_area                = '#d6bfa2'  # sport=* / aeroway terminal
 
     ### aeroway ###
     color_aerodrome_area            = '#cdeca7'  # aeroway=aerodrome translucent  |  was #20cdeca7; apply $opacity(12.7%)
@@ -209,6 +215,7 @@ class ColorsDay:
 
     ### buildings ###
     color_building_default_case     = '#c1a074'  # building stroke
+    color_building                  = '#d6bfa2'
     color_building_city_fill        = '#d9c3c3'  # CITY building fill
     color_building_worship_fill     = '#f6c141'  # place_of_worship/church/... fill
     color_building_station_fill     = '#b178a6'  # train_station/transportation/bus_station fill

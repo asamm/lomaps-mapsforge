@@ -127,6 +127,10 @@ if __name__ == '__main__':
 
         print('-------------  generating {} theme -> {}'.format(mode, result_xml))
 
+        # dark theme: make the template's $lighten() fade toward the dark background (-> darken)
+        from actions.composite_op import set_dark_mode
+        set_dark_mode(mode == 'dark')
+
         # replace colors, width, etc in source XML using this mode's colour set
         transform_cheetah_template(options.theme_template, options.output_template, variables)
 
