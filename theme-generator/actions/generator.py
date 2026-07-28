@@ -200,8 +200,8 @@ class GeneratorActions:
         if len(rule.line) > 0:
             # railway style can consist from multiple line > find the max width to know the width for bridge
             max_width = max(line.stroke_width for line in rule.line)
-            bridge_case = Line(stroke_width=max_width + 0.5, stroke=self.variables.color_bridge_gen_case, stroke_linecap=Cap.BUTT)
-            bridge_core = Line(stroke_width=max_width + 0.25, stroke=self.variables.color_bridge_gen_core, stroke_linecap=Cap.BUTT)
+            bridge_case = Line(stroke_width=max_width + 0.5, stroke=self.variables.color_bridge_casing, stroke_linecap=Cap.BUTT)
+            bridge_core = Line(stroke_width=max_width + 0.25, stroke=self.variables.color_bridge_core, stroke_linecap=Cap.BUTT)
             rule.line.clear()
             rule.line.extend([bridge_case, bridge_core])
 

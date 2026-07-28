@@ -194,7 +194,7 @@ class ColorsDark(ColorsDay):
     color_wetland_tidalflat         = '#1c2518'  # day #8f5011 | wetland=tidalflat  |  was #108f5011; apply $opacity(6.5%)
     color_meadow                    = '#0e2f29'  # day #34972d | meadow/nature_reserve/national_park/botanical (5x)
     color_wood_label                = '#e3efdd'  # day #39761a | wood/park/cemetery captions (7x)
-    color_national_park_case        = '#42b33a'  # day #3fb637 | protected_area/nature_reserve/hedge stroke (
+    color_national_park_case        = '#236543'  # day #3fb637 | protected_area/nature_reserve/hedge stroke (
 
     ### leisure ###
     color_leisure_green_summer      = '#17432d'  # day #dbe5b2 | golf/common/green SUMMER
@@ -300,3 +300,4 @@ class ColorsDark(ColorsDay):
     pattern_intermittent_water      = 'patterns/intermittent_water_dark.svg'
     pattern_marsh                   = 'patterns/marsh_dark.svg'
     pattern_tidalflat               = 'patterns/tidalflat_64_dark.svg'
+    pattern_bare_rock               = 'patterns/bare_rock_dark.png'  # #3b3835 stipple (same alpha texture as day)

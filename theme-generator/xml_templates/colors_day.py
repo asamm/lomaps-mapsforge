@@ -290,3 +290,4 @@ class ColorsDay:
     pattern_intermittent_water      = 'patterns/intermittent_water.svg'
     pattern_marsh                   = 'patterns/marsh.svg'
     pattern_tidalflat               = 'patterns/tidalflat_64.svg'
+    pattern_bare_rock               = 'patterns/bare_rock.png'  # raster stipple (single colour + alpha noise)
