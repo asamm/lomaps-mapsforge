@@ -22,6 +22,7 @@ class ColorsDay:
     ### HIGHWAYS ###
     color_bridge_casing             = "#0d0d0d"
     color_bridge_no_casing          = "#4d4d4d"
+    color_bridge_core               = "#F7F7F7"
     color_motorway_z6               = "#FF8C00"
     color_motorway_z7_z11           = "#FF4500"
     color_trunk_z7                  = "#ff8c00"
@@ -124,8 +125,6 @@ class ColorsDay:
     color_text_stroke               = '#ffffff'  # text halo/outline (white for day theme)
 
     color_road_halo_lz              = '#ffffff'  # low-zoom (z<10) road halo/border, not a true casing
-    color_bridge_gen_case           = "#000000"  # generated bridge casing (day)
-    color_bridge_gen_core           = "#F7F7F7"  # generated bridge core/deck (day)
     color_railway_fill_light        = '#ededed'  # was #ededed - railway main fill / footway area / aerialway cablecar (6x)
     color_area_fill_light           = '#d0d0d0'  # merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
     color_building_ski_fill         = '#b8b8b8'  # SKI building fill
@@ -135,7 +134,8 @@ class ColorsDay:
     color_railway_line              = '#747474'  # merged medium grays (quarry/natural caption/embankment/tram tunnel, shield bg-rect/abandoned railway, road+railway casing + $opacity wraps)
     color_barrier_circle            = '#636363'  # merged dark-mid grays (barrier fence/wall/chain, NE city/town circle stroke, railway halt stroke)
     color_label_amenity_dark        = '#373737'  # merged dark grays (aerialway chair/mixed lift topo, waterway-bridge stroke/runway text/CAR building/hospital+school captions)
-    color_road_core_dark            = '#000000'  # bridge casing city/car; street-name text; downhill-advanced label
+    color_road_labels_fill            = '#000000'  # street-name text; downhill-advanced label
+    color_road_bridge               = '#000000'
 
     ### sea / water ###
     color_sea                       = '#94c3e6'  # sea + NE water/rivers + all standard water fill/stroke + bathymetry depth=0 (28x)

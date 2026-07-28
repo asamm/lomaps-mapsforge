@@ -31,8 +31,10 @@ class ColorsDark(ColorsDay):
 
 
     ### HIGHWAYS ###
-    color_bridge_casing             = '#2e2e2e'  # day #0d0d0d
-    color_bridge_no_casing          = '#2e2e2e'  # day #4d4d4d
+    color_bridge_casing             = "#2e2e2e"
+    color_bridge_no_casing          = "#4d4d4d"
+    color_bridge_core               = "#0d0d0d"
+
     color_motorway_z6               = '#cc8733'  # day #FF8C00
     color_motorway_z7_z11           = '#cc5c33'  # day #FF4500
     color_trunk_z7                  = '#cc8733'  # day #ff8c00
@@ -134,8 +136,6 @@ class ColorsDark(ColorsDay):
     ### neutral / grayscale (light -> dark) ###
     color_text_stroke               = '#000000'  # text halo/outline (black for dark theme)
     color_road_halo_lz              = '#131c26'  # low-zoom (z<10) road halo/border, not a true casing
-    color_bridge_gen_case           = '#000000'  # generated bridge casing (dark)
-    color_bridge_gen_core           = '#2e2e2e'  # generated bridge core/deck (dark)
     color_area_fill_light           = '#2f2f2f'  # day #d0d0d0 | merged ultra-light grays (aeroway apron, tertiary CITY, dam, CITY building, construction>16, tram, winter industrial, power, leisure stadium winter, parking/runway/platform)
     color_building_ski_fill         = '#474747'  # day #b8b8b8 | SKI building fill
     color_building_ski_outline      = '#575757'  # day #a8a8a8 | SKI building stroke
@@ -145,7 +145,7 @@ class ColorsDark(ColorsDay):
     color_railway_line              = '#8b8b8b'  # day #747474 | merged medium grays (quarry/natural caption/embankment/tram tunnel, shield bg-rect/abandoned railway, road+railway casing + $opacity wraps)
     color_barrier_circle            = '#9c9c9c'  # day #636363 | merged dark-mid grays (barrier fence/wall/chain, NE city/town circle stroke, railway halt stroke)
     color_label_amenity_dark        = '#c8c8c8'  # day #373737 | merged dark grays (aerialway chair/mixed lift topo, waterway-bridge stroke/runway text/CAR building/hospital+school captions)
-    color_road_core_dark            = '#e0e0e0'  # day #000000 | bridge casing city/car; street-name text; downhill-advanced label
+    color_road_labels_fill          = '#e0e0e0'  # day #000000 | bridge casing city/car; street-name text; downhill-advanced label
 
     ### sea / water ###
     color_sea                       = '#1a4a6e'  # day #94c3e6 | sea + NE water/rivers + all standard water fill/stroke + bathymetry depth=0 (28x)
