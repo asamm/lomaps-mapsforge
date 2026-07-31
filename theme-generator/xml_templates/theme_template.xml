@@ -682,7 +682,7 @@
 
 			<rule e="way" k="natural" v="*" zoom-min="13">
 				<rule e="way" k="natural" v="bare_rock" closed="yes">
-					<area src="file:patterns/bare_rock.png" symbol-width="96"/>
+					<area src="file:${pattern_bare_rock}" symbol-width="96"/>
 				</rule>
 				<rule e="way" k="natural" v="cliff" zoom-min="14">
 					<line stroke="$color_road_soft" stroke-width="0.2"/>

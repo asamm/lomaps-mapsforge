@@ -1,4 +1,4 @@
-<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" map-background="#EBEADE" base-stroke-width="0.8">
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" map-background="#12151c" base-stroke-width="0.8">
   <rule e="any" k="tourism" v="*" cat="accommodation" zoom-min="15">
     <rule e="any" k="tourism" v="alpine_hut" cat="alpine_hut" zoom-min="15">
       <symbol src="file:symbols/poi_alpine_hut.svg" symbol-width="20"/>
@@ -368,8 +368,23 @@
     <rule e="any" k="leisure" v="stadium" cat="stadium" zoom-min="16">
       <symbol src="file:symbols/poi_stadium.svg" symbol-width="20"/>
     </rule>
+    <rule e="any" k="aerialway" v="magic_carpet|rope_tow|platter|drag_lift|t-bar|j-bar" cat="drag_lift" zoom-min="16">
+      <symbol src="file:symbols/poi_drag_lift.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="aerialway" v="chair_lift|mixed_lift" cat="chair_lift" zoom-min="16">
+      <symbol src="file:symbols/poi_chair_lift.svg" symbol-width="20"/>
+    </rule>
     <rule e="any" k="sport|piste:type|man_made" v="ski_jumping|ski_jump" cat="ski_jumping" zoom-min="16">
       <symbol src="file:symbols/poi_skijumping.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="landuse" v="winter_sports" cat="ski_resort" zoom-min="13">
+      <symbol src="file:symbols/poi_skiing.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="amenity" v="ski_school" cat="ski_school" zoom-min="17">
+      <symbol src="file:symbols/poi_skiing_school.svg" symbol-width="20"/>
+    </rule>
+    <rule e="any" k="shop|ski:rental|ski:repair" v="ski|*" cat="ski_services" zoom-min="17">
+      <symbol src="file:symbols/poi_skiing_shop.svg" symbol-width="20"/>
     </rule>
     <rule e="any" k="leisure" v="marina" cat="marina" zoom-min="16">
       <symbol src="file:symbols/poi_marina.svg" symbol-width="20"/>

@@ -1,4 +1,4 @@
-<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" map-background="#ebeade" base-stroke-width="0.8">
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" version="4" map-background="#EBEADE" base-stroke-width="0.8">
   <rule e="any" k="tourism" v="*" cat="accommodation" zoom-min="15">
     <rule e="any" k="tourism" v="alpine_hut" cat="alpine_hut" zoom-min="15">
       <symbol src="file:symbols/poi_alpine_hut.svg" symbol-width="20"/>
