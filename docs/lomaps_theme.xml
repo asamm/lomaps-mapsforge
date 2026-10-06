@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <locusActions>
   <download>
-    <source size="368258" date="2025-11-11_10-26-03">
+    <source size="451743" date="2026-10-06_12-34-23">
       <![CDATA[ https://asamm.github.io/lomaps-mapsforge/lomaps_theme.zip ]]>
     </source>
     <dest><![CDATA[ /mapsVector/_themes/LoMaps_theme.zip ]]></dest>
