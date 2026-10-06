@@ -1,3 +1,23 @@
+## [1.8.0] - 2026-10-06
+
+### Added
+- dark (night) theme `theme_dark.xml` including dark variants of area patterns
+- new styling for low zoom levels (overview map): places, country names, oceans and seas, bathymetry, urban areas, highways and ferry routes
+- labels for `tourism=theme_park` and names for `historic=tomb`
+
+### Changed
+- new style of administrative boundaries
+- forests visible from zoom level 7, motorway labels from zoom level 8
+- tracks with `tracktype=grade5` visible from zoom level 14
+- paths visible from zoom level 15 in ski theme
+- boardwalks are rendered as bridges, bridges have their own colors
+- labels for attractions are more visible
+- bigger private access symbol
+- ford symbols removed from map (available as POIs)
+
+### Fixed
+- broken reservoir borders (e.g. in Laos)
+
 ## [1.7.4] - 2025-11-11
 
 ### Changed
